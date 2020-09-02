@@ -1,0 +1,72 @@
+[
+  {
+    "name": "google-maps-locales",
+    "repo": {
+      "gitURL": "https://github.com/wix/google-maps-locales",
+      "gitCommit": "6867a4bc6066977fa3c2dc1c34e68bc59b046499"
+    }
+  },
+  {
+    "name": "storage",
+    "repo": {
+      "gitURL": "https://github.com/screeps/storage",
+      "gitCommit": "d570d18d13d0cdfd1c3b5efc4a1d82ce6011165e"
+    }
+  },
+  {
+    "name": "convert-rich-text",
+    "repo": {
+      "gitURL": "https://github.com/voxmedia/convert-rich-text",
+      "gitCommit": "7952ac73b04936f17250b24f1ef3521ccb6661de"
+    }
+  },
+  {
+    "name": "Metadata-Handler",
+    "repo": {
+      "gitURL": "https://github.com/DigiByte-Core/Metadata-Handler",
+      "gitCommit": "947f289abbbd5a60a015c0eccf48aa0dab4b8b21"
+    }
+  },
+  {
+    "name": "utils",
+    "repo": {
+      "gitURL": "https://github.com/entrinsik-org/utils",
+      "gitCommit": "465150c34419f3e17069a7f49b9f8e52786dc8eb"
+    }
+  },
+  {
+    "name": "paper",
+    "repo": {
+      "gitURL": "https://github.com/bigcommerce/paper",
+      "gitCommit": "bb2f0cf1ff2a77f377cc5015ad2be3c70726170e"
+    }
+  },
+  {
+    "name": "hapi-sequelize",
+    "repo": {
+      "gitURL": "https://github.com/entrinsik-org/hapi-sequelize",
+      "gitCommit": "3ebc29337f7d2e65f295b3524145b7058c48e430"
+    }
+  },
+  {
+    "name": "kcv-theme-boldstatement",
+    "repo": {
+      "gitURL": "https://github.com/karmacv/kcv-theme-boldstatement",
+      "gitCommit": "8ddcd211791bea14f8954f8799fdf80c504b5a49"
+    }
+  },
+  {
+    "name": "g-analytics",
+    "repo": {
+      "gitURL": "https://github.com/calibr/g-analytics",
+      "gitCommit": "0ec38f295e7b93eb90aada92238226969e32f595"
+    }
+  },
+  {
+    "name": "drivers",
+    "repo": {
+      "gitURL": "https://github.com/entrinsik-org/drivers",
+      "gitCommit": "cde8156be1d2afff6256aa53204a5429e3dd0354"
+    }
+  }
+]

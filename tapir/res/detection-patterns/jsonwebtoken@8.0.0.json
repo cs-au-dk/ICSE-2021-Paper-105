@@ -1,0 +1,30 @@
+[
+  {
+    "pattern": "call <jsonwebtoken>.{sign,verify} [3, 4]",
+    "question": "Can validation errors arise?",
+    "id": "1",
+    "changelogDescription": "JOI validation library has been removed. The errors raised for input validation on sign function have changed, previously we raised ValidationError, now it is a plain Error. Error messages have also changed.",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <jsonwebtoken>.{sign,verify} [4, 4]",
+    "id": "3",
+    "benign": true,
+    "changelogDescription": "process.nextTick() execution before calling the verification callback has been removed. If you pass a callback function it will get called right away, if you expected the next tick behavior, you may want to call nextTick in your code.",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call <jsonwebtoken>.verify [3, 4]",
+    "question": "Did you supply the maxAge verification option in milliseconds?",
+    "id": "4",
+    "changelogDescription": "maxAge verification option expects seconds or a string describing a time span (i.e: '2 days'). It accepted milliseconds in v7, which did not make sense since JWTs times are expressed in seconds.",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "call <jsonwebtoken>.sign [2, 4]",
+    "question": "Is the first argument a Stream?",
+    "id": "5",
+    "changelogDescription": "Unintentionally removed support for Streams on payload for signing.",
+    "changelogId": "4"
+  }
+]

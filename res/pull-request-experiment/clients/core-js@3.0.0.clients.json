@@ -1,0 +1,73 @@
+[
+  {
+    "name": "coreui_react_ssr",
+    "repo": {
+      "gitURL": "https://github.com/barslev/coreui-react",
+      "gitCommit": "300fc6101344e79e0a55822f304d24a6490a8361"
+    }
+  },
+  {
+    "name": "ubp-crs-adapter",
+    "repo": {
+      "gitURL": "https://github.com/tourstream/tstr-crs-adapter",
+      "gitCommit": "be42c717393eb217a5463f623601292540097150"
+    }
+  },
+  {
+    "name": "@bitriver/recharts",
+    "repo": {
+      "gitURL": "https://github.com/bitriverjp/recharts",
+      "gitCommit": "7393988f8a3d858b7b2e728e69985b1fbc7104ad"
+    }
+  },
+  {
+    "name": "@adobe/coral-spectrum",
+    "repo": {
+      "gitURL": "https://github.com/adobe/coral-spectrum",
+      "gitCommit": "4c5bfc886524c1a5133b3326cd884b61ceec5016"
+    }
+  },
+  {
+    "name": "@dependencytrack/frontend",
+    "repo": {
+      "gitURL": "https://github.com/DependencyTrack/frontend",
+      "gitCommit": "f7e696ce92d7c2dfc9e5a8f863a17d18b9036898"
+    }
+  },
+  {
+    "name": "swagger-editor",
+    "excludedFolders": ["dist"],
+    "repo": {
+      "gitURL": "https://github.com/swagger-api/swagger-editor",
+      "gitCommit": "04e1d5fa94a6657b024b3a6a690e72cc88ee6ef4"
+    }
+  },
+  {
+    "name": "prebid.js",
+    "repo": {
+      "gitURL": "https://github.com/prebid/Prebid.js",
+      "gitCommit": "3513d38c120072380c0f4a2376b95f50bb957224"
+    }
+  },
+  {
+    "name": "appgine",
+    "repo": {
+      "gitURL": "https://github.com/appgine/appgine",
+      "gitCommit": "560cf63eed28525a79f7a7eaad001cc33b35067c"
+    }
+  },
+  {
+    "name": "odca-form",
+    "repo": {
+      "gitURL": "https://github.com/THCLab/odca-form",
+      "gitCommit": "e58d217c8224d136a79a90b45376d57f5c683e2b"
+    }
+  },
+  {
+    "name": "js-xdr",
+    "repo": {
+      "gitURL": "https://github.com/stellar/js-xdr",
+      "gitCommit": "71d7a4f86e0569edaa540cca2c3bc31f168d2665"
+    }
+  }
+]

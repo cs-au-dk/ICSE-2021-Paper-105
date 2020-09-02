@@ -1,0 +1,10 @@
+{
+  "[26a]src/commands/install.js_CallExpression_21:9:21:111MaybeExplicitQuestionMatch": {
+    "questionText": "[26a] src/commands/install.js, CallExpression at 21:9:21:111: Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "answer": "No",
+    "patternId": "26a",
+    "fileName": "src/commands/install.js",
+    "lineNumber": 21,
+    "columnNumber": 9
+  }
+}

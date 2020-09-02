@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FILE_NAME=$(basename -- "$1")
+OS="$(uname)"
+  if [[ $OS == "Darwin" ]]; then
+    echo $(stat -f '%Su' ${FILE_NAME})
+  else
+    echo $(stat -c '%U' ${FILE_NAME})
+fi

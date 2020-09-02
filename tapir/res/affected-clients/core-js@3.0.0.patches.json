@@ -1,0 +1,203 @@
+{
+    "funk-lib": {
+        "excludedFolders": ["dist"],
+        "repo": {
+            "gitCommit": "ea5e0f620024306e130fd08b385ff3b434ea9792",
+            "gitURL": "https://github.com/colbydauph/funk-lib"
+        },
+        "patches": [
+            {
+                "file": "src/is/index.js",
+                "lineNumber": 8,
+                "classification": "37c"
+            },
+            {
+                "file": "src/iterable/async.js",
+                "lineNumber": 17,
+                "classification": "37c"
+            }
+        ]
+    },
+    "inject-dependency": {
+        "excludedFolders": ["dist/docs/assets/js"],
+        "install": true,
+        "repo": {
+            "gitCommit": "eba39e7992bc9cc2f5d63ad717afa3d56a8c9028",
+            "gitURL": "https://github.com/GaburakMykhailo/inject-dependency"
+        },
+        "patches": [
+            {
+                "file": "dist/lib/inject-dependency.js",
+                "lineNumber": 6,
+                "classification": "37"
+            }
+        ]
+    },
+    "gd-sprest-react": {
+        "install": true,
+        "repo": {
+            "gitCommit": "c68ce4e98091c52003ad6638a7b860e3b1c94351",
+            "gitURL": "https://github.com/gunjandatta/sprest-react"
+        },
+        "patches": [
+            {
+                "file": "build/index.js",
+                "lineNumber": 3,
+                "classification": "37"
+            },
+            {
+                "file": "build/index.js",
+                "lineNumber": 4,
+                "classification": "37"
+            },
+            {
+                "file": "build/index.js",
+                "lineNumber": 5,
+                "classification": "37"
+            }
+        ]
+    },
+    "@netology-group/wc-reaction": {
+        "excludedFolders": ["dist", "es", "lib", "public/node_modules"],
+        "repo": {
+            "gitCommit": "69f9cdf96d6504fd7dd9d2948bb59af084b290e3",
+            "gitURL": "https://github.com/netology-group/wc-reaction"
+        },
+        "patches": [
+            {
+                "file": "src/polyfill.js",
+                "lineNumber": 1,
+                "classification": "29"
+            },
+            {
+                "file": "src/polyfill.js",
+                "lineNumber": 2,
+                "classification": "29"
+            },
+            {
+                "file": "src/organisms/reaction-list.js",
+                "lineNumber": 39,
+                "classification": "10"
+            }
+        ]
+    },
+    "@yeutech-lab/react-router-dom-utils": {
+        "repo": {
+            "gitCommit": "5997f3683e820eff89682c1ff0863a48383ea818",
+            "gitURL": "https://github.com/yeutech-lab/react-router-dom-utils"
+        },
+        "patches": [
+            {
+                "file": "internals/testing/test-bundler.js",
+                "lineNumber": 1,
+                "classification": "37"
+            },
+            {
+                "file": "src/getRoutesMap.js",
+                "lineNumber": 1,
+                "classification": "37"
+            },
+            {
+                "file": "src/getRoutesMap.js",
+                "lineNumber": 2,
+                "classification": "39"
+            }
+        ]
+    },
+    "kewt": {
+        "repo": {
+            "gitCommit": "c502d76a18977526eca94b1bb6735ae90d07c750",
+            "gitURL": "https://github.com/flipactual/kewt"
+        },
+        "patches": [
+            {
+                "file": "src/Kewt.js",
+                "lineNumber": 1,
+                "classification": "39"
+            },
+            {
+                "file": "src/KewtStore.js",
+                "lineNumber": 1,
+                "classification": "39"
+            }
+        ]
+    },
+    "schema-entity": {
+        "repo": {
+            "gitCommit": "8aefd00ac6351495aabd5c5bf56181d969e18e4c",
+            "gitURL": "https://github.com/henit/schema-entity"
+        },
+        "patches": [
+            {
+                "file": "src/Entity.js",
+                "lineNumber": 1,
+                "classification": "39"
+            },
+            {
+                "file": "src/Entity.js",
+                "lineNumber": 2,
+                "classification": "39"
+            }
+        ]
+    },
+    "@monastic.panic/react-live": {
+        "repo": {
+            "gitCommit": "c4eee2cf08cb3600f62025f88016d8e2b3b9d3e5",
+            "gitURL": "https://github.com/philpl/react-live"
+        },
+        "patches": [
+            {
+                "file": "src/utils/transpile/transform.js",
+                "lineNumber": 2,
+                "classification": "39"
+            }
+        ]
+    },
+    "styled-transition-group-animation": {
+        "repo": {
+            "gitCommit": "f90fec52756d3a64a9a6cd448bb6712ac80bf836",
+            "gitURL": "https://github.com/SanderV1992/Styled-Transition-Group"
+        },
+        "patches": [
+            {
+                "file": "config/polyfills.js",
+                "lineNumber": 21,
+                "classification": "37"
+            },
+            {
+                "file": "config/polyfills.js",
+                "lineNumber": 22,
+                "classification": "37"
+            }
+        ],
+        "excludedFolders": ["public/storybook/static"]
+    },
+    "domain-gfx": {
+      "repo": {
+        "gitCommit": "49879fb721e1f4afff7747eb3796c19007495b08",
+        "gitURL": "https://github.com/ProteinsWebTeam/domain_gfx"
+      },
+      "patches": [
+          {
+              "file": "src/polyfills.js",
+              "lineNumber": 1,
+              "classification": "37c"
+          },
+          {
+              "file": "src/polyfills.js",
+              "lineNumber": 3,
+              "classification": "37c"
+          },
+          {
+              "file": "src/polyfills.js",
+              "lineNumber": 4,
+              "classification": "37c"
+          },
+          {
+              "file": "src/polyfills.js",
+              "lineNumber": 2,
+              "classification": "46"
+          }
+      ]
+    }
+}

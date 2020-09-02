@@ -1,0 +1,18 @@
+{
+  "[31]lib/export/to_internal_html.js_CallExpression_7:22:7:52MaybeArgTypeMatch": {
+    "questionText": "[31] lib/export/to_internal_html.js, CallExpression at 7:22:7:52: is arg formats of type function",
+    "answer": "No",
+    "patternId": "31",
+    "fileName": "lib/export/to_internal_html.js",
+    "lineNumber": 7,
+    "columnNumber": 22
+  },
+  "[31]lib/export/to_public_html.js_CallExpression_7:22:7:50MaybeArgTypeMatch": {
+    "questionText": "[31] lib/export/to_public_html.js, CallExpression at 7:22:7:50: is arg formats of type function",
+    "answer": "No",
+    "patternId": "31",
+    "fileName": "lib/export/to_public_html.js",
+    "lineNumber": 7,
+    "columnNumber": 22
+  }
+}

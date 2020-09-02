@@ -1,0 +1,63 @@
+[
+  {
+    "pattern": "import node-fetch/lib/**/*",
+    "id": "2",
+    "changelogDescription": "Major: require('node-fetch/lib/response') etc. is now unsupported; use require('node-fetch').Response or ES6 module imports",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <node-fetch>?**.text",
+    "question": "Is the response text not encoded in UTF-8?",
+    "id": "3",
+    "benign": true,
+    "changelogDescription": "Major: response.text() no longer attempts to detect encoding, instead always opting for UTF-8 (per spec); use response.textConverted() for the v1 behavior",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call <node-fetch>?**.json",
+    "question": "Can the response code be 204?",
+    "id": "4",
+    "benign": true,
+    "changelogDescription": "Major: make response.json() throw error instead of returning an empty object on 204 no-content respose (per spec; reverts behavior changed in v1.6.2)",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "call <node-fetch>.{_clone,_decode,_convert}",
+    "id": "5",
+    "changelogDescription": "Major: internal methods are no longer exposed",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <node-fetch> [2, 2]",
+    "id": "6",
+    "question": "Is the second argument a GET or HEAD Request with non-null body?",
+    "changelogDescription": "Major: throw error when a GET or HEAD Request is constructed with a non-null body (per spec)",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <node-fetch>?**.getAll",
+    "id": "7",
+    "changelogDescription": "Major: remove headers.getAll(); make get() return all headers delimited by commas (per spec)",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "call <node-fetch>?**.{set,append,has,delete} [1, 2] 0:string",
+    "question": "Is the header name valid?",
+    "id": "8",
+    "benign": true,
+    "changelogDescription": "Enhance: make sure header names and values are valid in HTTP",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "read <node-fetch>?**.arrayBuffer",
+    "id": "9",
+    "changelogDescription": "Enhance: add response.arrayBuffer() (also applies to Requests)",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "write <node-fetch>?**.url",
+    "id": "100",
+    "changelogDescription": "request.url can no longer be written in a property write",
+    "changelogId": "9"
+  }
+]

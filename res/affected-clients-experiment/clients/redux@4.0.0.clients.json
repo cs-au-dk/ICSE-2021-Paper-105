@@ -1,0 +1,31 @@
+[
+  {
+    "name": "bound-compose",
+    "repo": {
+      "gitCommit": "061e886cfb0068cdf44d3d93da186f0b6f9b8792",
+      "gitURL": "https://github.com/sugarshin/bound-compose"
+    }
+  },
+  {
+    "name": "dnd-core",
+    "repo": {
+      "gitCommit": "d80cf23877861cc28b24eb5af7aaf52daaf4be7b",
+      "gitURL": "https://github.com/gaearon/dnd-core"
+    }
+  },
+  {
+    "name": "redux-bind-action-groups",
+    "repo": {
+      "gitCommit": "3322f231a48e4318dbd48d6866e17db959419f64",
+      "gitURL": "https://github.com/eyasliu/redux-bind-action-groups"
+    }
+  },
+  {
+    "name": "mickey",
+    "repo": {
+      "gitCommit": "06394f312289f30f4fb0110ee3115def4ad4ae77",
+      "gitURL": "https://github.com/bubkoo/mickey"
+    },
+    "excludedFolders": ["lib"]
+  }
+]

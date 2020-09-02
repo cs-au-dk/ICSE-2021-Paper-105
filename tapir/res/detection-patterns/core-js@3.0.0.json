@@ -1,0 +1,215 @@
+[
+  {
+    "pattern": "import core-js/**/*asap",
+    "id": "1a",
+    "changelogDescription": "update: asap (old stage 0 proposal) replaced by queueMicrotask (a part of HTML spec)",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "read {<core-js>,<global>}.asap",
+    "id": "1b",
+    "changelogDescription": "update: asap (old stage 0 proposal) replaced by queueMicrotask (a part of HTML spec)",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <core-js/**/*observable>",
+    "question": "Are you affected by the breaking change: Update Observable (#257, #276, etc.)?",
+    "id": "2",
+    "changelogDescription": "update: Update Observable (#257, #276, etc.)",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "import core-js/**/flatten",
+    "id": "3a",
+    "changelogDescription": "update: Update Array#flatten -> Array#flat and Array#flatMap",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "read {<core-js>?,<Array>?}**.flatten",
+    "id": "3b",
+    "changelogDescription": "update: Update Array#flatten -> Array#flat and Array#flatMap",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "call {<core-js>?,<String>?}**.matchAll",
+    "question": "Are you affected by the breaking change: Update String#matchAll (proposal-string-matchall#17, proposal-string-matchall#38, proposal-string-matchall#41, etc.) and move to the stage 3?",
+    "id": "5",
+    "benign": true,
+    "changelogDescription": "update: Update String#matchAll (proposal-string-matchall#17, proposal-string-matchall#38, proposal-string-matchall#41, etc.) and move to the stage 3",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "import core-js/**/*{trim-left,trim-right}",
+    "id": "6",
+    "changelogDescription": "update: Update .name properties of String#{trimStart, trimEnd , trimLeft, trimRight}, move to the stage 3",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "import core-js/**/is-error",
+    "id": "8a",
+    "changelogDescription": "remove obsolete: Error.isError (withdrawn)",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "read <Error>.isError",
+    "id": "8b",
+    "changelogDescription": "remove obsolete: Error.isError (withdrawn)",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "read <System>.global",
+    "id": "9",
+    "changelogDescription": "remove obsolete: System.global and global (replaced by globalThis)",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "read {<Set>,<Map>}?**.toJSON",
+    "id": "10",
+    "changelogDescription": "remove obsolete: Map#toJSON and Set#toJSON (rejected)",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "import core-js/**/escape",
+    "id": "11a",
+    "changelogDescription": "remove obsolete: RegExp.escape (rejected)",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "read <RegExp>.escape",
+    "id": "11b",
+    "changelogDescription": "remove obsolete: RegExp.escape (rejected)",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "read <Reflect>.enumerate",
+    "id": "12",
+    "changelogDescription": "remove obsolete: Reflect.enumerate (removed from the spec)",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "call <Dict>",
+    "id": "14",
+    "changelogDescription": "remove: Dict",
+    "changelogId": "11"
+  },
+  {
+    "pattern": "import core-js/**/object/{classof,is-object,define,make}",
+    "id": "15a",
+    "changelogDescription": "remove: Object.{classof, isObject, define, make}",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "read <Object>.{classof,isObject,define,make}",
+    "id": "15b",
+    "changelogDescription": "remove: Object.{classof, isObject, define, make}",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "import core-js/**/part",
+    "id": "16a",
+    "changelogDescription": "remove: Function#part",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "read {<core-js>?,<Function>?}**.part",
+    "id": "16b",
+    "changelogDescription": "remove: Function#part",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "import core-js/**/*{escape-html,unescape-html}",
+    "id": "18a",
+    "changelogDescription": "remove: String#{escapeHTML, unescapeHTML}",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "read <String>?**.{escapeHTML,unescapeHTML}",
+    "id": "18b",
+    "changelogDescription": "remove: String#{escapeHTML, unescapeHTML}",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "import core-js/**/delay",
+    "id": "19",
+    "changelogDescription": "remove: delay",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "read <core-js/**/>.delay",
+    "id": "19b",
+    "changelogDescription": "remove: delay",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "call <core-js/**/delay>",
+    "id": "19c",
+    "changelogDescription": "remove: delay",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "import core-js/{client,client/**/*}",
+    "id": "29",
+    "changelogDescription": "Package-related: Leave only one pair of bundles (global, with all polyfills) and move it to core-js-bundle package.",
+    "changelogId": "16"
+  },
+  {
+    "pattern": "import core-js/library/{es5,es6,es7}/*",
+    "id": "35",
+    "changelogDescription": "Commonjs API/namespace: Move core-js/library to separate core-js-pure package.",
+    "changelogId": "17"
+  },
+  {
+    "pattern": "import core-js/{shim,shim/**/*}",
+    "id": "36",
+    "changelogDescription": "Commonjs API/namespace: Because of removing all non-standard features, we no longer need core-js/shim entry point, replace it just with core-js.",
+    "changelogId": "18"
+  },
+  {
+    "pattern": "import core-js/{es5,es6,es7,es5/**/*,es6/**/*,es7/**/*}",
+    "id": "37",
+    "changelogDescription": "Commonjs API/namespace: Move all features from ES5, ES2015, ES2016, ES2017, ES2018 and ES2019 to one namespace for stable ES - it's available as core-js/es, all those features in modules folder has es. prefix.",
+    "changelogId": "19"
+  },
+  {
+    "pattern": "import core-js/modules/{es6.array.copy-within,es6.array.every,es6.array.fill,es6.array.filter,es6.array.find-index,es6.array.find,es6.array.for-each,es6.array.from,es6.array.index-of,es6.array.is-array,es6.array.iterator,es6.array.join,es6.array.last-index-of,es6.array.map,es6.array.of,es6.array.reduce-right,es6.array.reduce,es6.array.slice,es6.array.some,es6.array.sort,es6.array.species,es6.date.now,es6.date.to-iso-string,es6.date.to-json,es6.date.to-primitive,es6.date.to-string,es6.function.bind,es6.function.has-instance,es6.function.name,es6.map,es6.math.acosh,es6.math.asinh,es6.math.atanh,es6.math.cbrt,es6.math.clz32,es6.math.cosh,es6.math.expm1,es6.math.fround,es6.math.hypot,es6.math.imul,es6.math.log1p,es6.math.log2,es6.math.log10,es6.math.sign,es6.math.sinh,es6.math.tanh,es6.math.trunc,es6.number.constructor,es6.number.epsilon,es6.number.is-finite,es6.number.is-integer,es6.number.is-nan,es6.number.is-safe-integer,es6.number.max-safe-integer,es6.number.min-safe-integer,es6.number.parse-float,es6.number.parse-int,es6.number.to-fixed,es6.number.to-precision,es6.object.assign,es6.object.create,es6.object.define-properties,es6.object.define-property,es6.object.freeze,es6.object.get-own-property-descriptor,es6.object.get-own-property-names,es6.object.get-prototype-of,es6.object.is-extensible,es6.object.is-frozen,es6.object.is-sealed,es6.object.is,es6.object.keys,es6.object.prevent-extensions,es6.object.seal,es6.object.set-prototype-of,es6.object.to-string,es6.parse-float,es6.parse-int,es6.promise,es6.reflect.apply,es6.reflect.construct,es6.reflect.define-property,es6.reflect.delete-property,es6.reflect.get-own-property-descriptor,es6.reflect.get-prototype-of,es6.reflect.get,es6.reflect.has,es6.reflect.is-extensible,es6.reflect.own-keys,es6.reflect.prevent-extensions,es6.reflect.set-prototype-of,es6.reflect.set,es6.regexp.constructor,es6.regexp.exec,es6.regexp.flags,es6.regexp.to-string,es6.set,es6.string.anchor,es6.string.big,es6.string.blink,es6.string.bold,es6.string.code-point-at,es6.string.ends-with,es6.string.fixed,es6.string.fontcolor,es6.string.fontsize,es6.string.from-code-point,es6.string.includes,es6.string.italics,es6.string.iterator,es6.string.link,es6.string.raw,es6.string.repeat,es6.string.small,es6.string.starts-with,es6.string.strike,es6.string.sub,es6.string.sup,es6.string.trim,es6.symbol,es6.typed.array-buffer,es6.typed.data-view,es6.typed.float32-array,es6.typed.float64-array,es6.typed.int8-array,es6.typed.int16-array,es6.typed.int32-array,es6.typed.uint8-array,es6.typed.uint8-clamped-array,es6.typed.uint16-array,es6.typed.uint32-array,es6.weak-map,es6.weak-set,es7.array.flat-map,es7.array.flatten,es7.array.includes,es7.object.define-getter,es7.object.define-setter,es7.object.entries,es7.object.get-own-property-descriptors,es7.object.lookup-getter,es7.object.lookup-setter,es7.object.values,es7.promise.finally,es7.string.pad-end,es7.string.pad-start,es7.string.trim-left,es7.string.trim-right,es7.symbol.async-iterator}",
+    "id": "37c",
+    "changelogDescription": "Commonjs API/namespace: Move all features from ES5, ES2015, ES2016, ES2017, ES2018 and ES2019 to one namespace for stable ES - it's available as core-js/es, all those features in modules folder has es. prefix.",
+    "changelogId": "19"
+  },
+  {
+    "pattern": "import core-js/modules/{es7.map.from,es7.map.of,es7.math.clamp,es7.math.deg-per-rad,es7.math.degrees,es7.math.fscale,es7.math.iaddh,es7.math.imulh,es7.math.isubh,es7.math.rad-per-deg,es7.math.radians,es7.math.scale,es7.math.signbit,es7.math.umulh,es7.observable,es7.promise.try,es7.reflect.define-metadata,es7.reflect.delete-metadata,es7.reflect.get-metadata,es7.reflect.get-metadata-keys,es7.reflect.get-own-metadata,es7.reflect.get-own-metadata-keys,es7.reflect.has-metadata,es7.reflect.has-own-metadata,es7.reflect.metadata,es7.set.of,es7.string.at,es7.string.match-all,es7.symbol.observable,es7.weak-map.from,es7.weak-map.of,es7.weak-set.from,es7.weak-set.of}",
+    "id": "38",
+    "changelogDescription": "Commonjs API/namespace: Change prefix for ES proposals from es7. to esnext., they no longer available in core-js/es7, use core-js/stage/* instead of that.",
+    "changelogId": "20"
+  },
+  {
+    "pattern": "import core-js/{,library/}fn{,/**/*}",
+    "id": "39",
+    "changelogDescription": "Commonjs API/namespace: Rename core-js(/library)/fn to core-js(-pure)/features for improve readability.",
+    "changelogId": "21"
+  },
+  {
+    "pattern": "import core-js/modules/web.dom.*",
+    "id": "46",
+    "changelogDescription": "Commonjs API/namespace: Rename web.dom namespace to web.dom-collections.",
+    "changelogId": "22"
+  },
+  {
+    "pattern": "import core-js/modules/_*",
+    "id": "48",
+    "changelogDescription": "Commonjs API/namespace: Relax /modules/ directory by moving internal modules to /internals/ directory.",
+    "changelogId": "23"
+  },
+  {
+    "pattern": "import core-js{/library/,/}fn/array/{pop,push,reverse,shift,unshift}",
+    "id": "49",
+    "changelogDescription": "Commonjs API/namespace: Remove deprecated array entry points: core-js(/library)/fn/array/{pop, push, reverse, shift, unshift}.",
+    "changelogId": "24"
+  },
+  {
+    "pattern": "read <global>.core",
+    "id": "50",
+    "changelogDescription": "Commonjs API/namespace: core object no longer available in the global version, entry points which previously returned it now returns globalThis object. Also, don't set global core property.",
+    "changelogId": "25"
+  }
+]

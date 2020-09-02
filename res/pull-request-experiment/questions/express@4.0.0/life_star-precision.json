@@ -1,0 +1,74 @@
+{
+  "[13]lib/subservers.js_MemberExpression_78:15:78:25UncertainAccPathMatch": {
+    "questionText": "[13] lib/subservers.js, MemberExpression at 78:15:78:25: Is the receiver an express app?",
+    "answer": "No",
+    "patternId": "13",
+    "fileName": "lib/subservers.js",
+    "lineNumber": 78,
+    "columnNumber": 15
+  },
+  "[13]lib/subservers.js_MemberExpression_91:14:91:24UncertainAccPathMatch": {
+    "questionText": "[13] lib/subservers.js, MemberExpression at 91:14:91:24: Is the receiver an express app?",
+    "answer": "No",
+    "patternId": "13",
+    "fileName": "lib/subservers.js",
+    "lineNumber": 91,
+    "columnNumber": 14
+  },
+  "[13]lib/subservers.js_MemberExpression_127:65:127:75UncertainAccPathMatch": {
+    "questionText": "[13] lib/subservers.js, MemberExpression at 127:65:127:75: Is the receiver an express app?",
+    "answer": "No",
+    "patternId": "13",
+    "fileName": "lib/subservers.js",
+    "lineNumber": 127,
+    "columnNumber": 65
+  },
+  "[100]lib/subservers.js_MemberExpression_49:17:49:27UncertainAccPathMatch": {
+    "questionText": "[100] lib/subservers.js, MemberExpression at 49:17:49:27: Is the receiver an express app?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "lib/subservers.js",
+    "lineNumber": 49,
+    "columnNumber": 17
+  },
+  "[100]lib/subservers.js_MemberExpression_49:61:49:71UncertainAccPathMatch": {
+    "questionText": "[100] lib/subservers.js, MemberExpression at 49:61:49:71: Is the receiver an express app?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "lib/subservers.js",
+    "lineNumber": 49,
+    "columnNumber": 61
+  },
+  "[100]lib/subservers.js_MemberExpression_54:17:54:27UncertainAccPathMatch": {
+    "questionText": "[100] lib/subservers.js, MemberExpression at 54:17:54:27: Is the receiver an express app?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "lib/subservers.js",
+    "lineNumber": 54,
+    "columnNumber": 17
+  },
+  "[100]lib/subservers.js_MemberExpression_55:4:55:14UncertainAccPathMatch": {
+    "questionText": "[100] lib/subservers.js, MemberExpression at 55:4:55:14: Is the receiver an express app?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "lib/subservers.js",
+    "lineNumber": 55,
+    "columnNumber": 4
+  },
+  "[100]lib/subservers.js_MemberExpression_64:15:64:25UncertainAccPathMatch": {
+    "questionText": "[100] lib/subservers.js, MemberExpression at 64:15:64:25: Is the receiver an express app?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "lib/subservers.js",
+    "lineNumber": 64,
+    "columnNumber": 15
+  },
+  "[100]lib/subservers.js_MemberExpression_105:17:105:27UncertainAccPathMatch": {
+    "questionText": "[100] lib/subservers.js, MemberExpression at 105:17:105:27: Is the receiver an express app?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "lib/subservers.js",
+    "lineNumber": 105,
+    "columnNumber": 17
+  }
+}

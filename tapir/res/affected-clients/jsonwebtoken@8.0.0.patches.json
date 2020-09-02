@@ -1,0 +1,54 @@
+{
+  "jwt-wrapper": {
+    "excludedFolders": [
+      "src"
+    ],
+    "patches": [
+      {
+        "file": "dist/src/JwtHandlerSpec.spec.js",
+        "lineNumber": 131,
+        "classification": "1"
+      },
+      {
+        "file": "dist/src/JwtHandlerSpec.spec.js",
+        "lineNumber": 131,
+        "classification": "5"
+      }
+    ],
+    "repo": {
+      "gitCommit": "ab50e988163d70833e29e2d719227731fee176b6",
+      "gitURL": "https://github.com/mtorp/node-jwt-wrapper-compile-tests"
+    }
+  },
+  "jsonwebtokencli": {
+    "excludedFolders": [
+      "src"
+    ],
+    "patches": [
+      {
+        "file": "convert.js",
+        "lineNumber": 15,
+        "classification": "1"
+      },
+      {
+        "file": "convert.js",
+        "lineNumber": 15,
+        "classification": "4"
+      },
+      {
+        "file": "convert.js",
+        "lineNumber": 30,
+        "classification": "1"
+      },
+      {
+        "file": "convert.js",
+        "lineNumber": 30,
+        "classification": "5"
+      }
+    ],
+    "repo": {
+      "gitCommit": "283268ba5205a1a9e470262c73199c40413bde63",
+      "gitURL": "https://github.com/mattroberts297/jsonwebtokencli"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "[29]src/utils/logger.js_NewExpression_25:6:28:8UncertainAccPathMatch": {
+    "questionText": "[29] src/utils/logger.js, NewExpression at 25:6:28:8: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "src/utils/logger.js",
+    "lineNumber": 25,
+    "columnNumber": 6
+  },
+  "[29]src/utils/logger.js_NewExpression_25:6:28:8MaybeExplicitQuestionMatch": {
+    "questionText": "[29] src/utils/logger.js, NewExpression at 25:6:28:8: Does the options argument include formatting options?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "src/utils/logger.js",
+    "lineNumber": 25,
+    "columnNumber": 6
+  }
+}

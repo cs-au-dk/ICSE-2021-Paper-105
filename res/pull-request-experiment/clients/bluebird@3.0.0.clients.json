@@ -1,0 +1,72 @@
+[
+  {
+    "name": "lora-styleguide",
+    "repo": {
+      "gitURL": "https://github.com/cxq/aigis",
+      "gitCommit": "65e11fdd313c51e959bac0a1946aa0f1c7ae255a"
+    }
+  },
+  {
+    "name": "facebook-chat-api",
+    "repo": {
+      "gitURL": "https://github.com/Schmavery/facebook-chat-api",
+      "gitCommit": "42acfce40ce62004da9cd099c3a39395f46bc3ad"
+    }
+  },
+  {
+    "name": "fhirball",
+    "repo": {
+      "gitURL": "https://github.com/BlackPearSw/fhirball",
+      "gitCommit": "6946677a2742d10584fcf729a582bf203720fbf5"
+    }
+  },
+  {
+    "name": "viewdb_persistence_store_mongodb",
+    "repo": {
+      "gitURL": "https://github.com/surikaterna/viewdb_persistence_store_mongodb",
+      "gitCommit": "4f4a51d2129bc876521917faeef075f40c67563e"
+    }
+  },
+  {
+    "name": "flare-gun",
+    "repo": {
+      "gitURL": "https://github.com/Zolmeister/flare-gun",
+      "gitCommit": "a9bfafbbb11528fe6855076d2d9efe765250b1cc"
+    }
+  },
+  {
+    "name": "asana",
+    "repo": {
+      "gitURL": "https://github.com/Asana/node-asana",
+      "gitCommit": "e16c110ec5de9708b37ce0ca946ab76c9381b70c"
+    }
+  },
+  {
+    "name": "vdsr-libs",
+    "repo": {
+      "gitURL": "https://github.com/stw-technic/vdsr-libs",
+      "gitCommit": "203a9fc8512257419723e6d59aed4e88bf5bfdef"
+    }
+  },
+  {
+    "name": "viewdb_persistence_store_remote",
+    "repo": {
+      "gitURL": "https://github.com/surikaterna/viewdb_persistence_store_remote",
+      "gitCommit": "3405f10114f6092750095750781272436c8c27fc"
+    }
+  },
+  {
+    "name": "probo",
+    "repo": {
+      "gitURL": "https://github.com/ProboCI/probo",
+      "gitCommit": "59af0fed337432a8093803f1fd7136afbfc739a4"
+    }
+  },
+  {
+    "name": "forest-express-sequelize",
+    "repo": {
+      "gitURL": "https://github.com/ForestAdmin/forest-express-sequelize",
+      "gitCommit": "b522eb4f4725758e0be461a5806b9e7ea01b177f"
+    }
+  }
+]

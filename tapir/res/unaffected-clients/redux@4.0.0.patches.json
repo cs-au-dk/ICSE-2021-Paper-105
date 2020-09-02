@@ -1,0 +1,298 @@
+{
+  "websocket-for-redux-saga": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/tignear/websocket-for-redux-saga",
+      "gitCommit": "f1430180d410f02663b753f957e04afb0b25fdc2"
+    }
+  },
+  "awesome-connect": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/d9767192/awesome-connect",
+      "gitCommit": "27111dc431e2af7640f02fa0411922aba9f3974c"
+    }
+  },
+  "global-state": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/lfsmoura/global-state",
+      "gitCommit": "9d3cad43721a8547dda2b5fd31c30f2697b9465a"
+    }
+  },
+  "@stevefan1999/spectacle": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["dist", "es", "lib"],
+    "patches": [
+      {
+        "file": "src/utils/warn.js",
+        "lineNumber": 9,
+        "classification": "8",
+        "truePositive": false
+      },
+      {
+        "file": "src/store/index.js",
+        "lineNumber": 12,
+        "classification": "16",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/FormidableLabs/spectacle",
+      "gitCommit": "9c2fdcbf17ff964ca868943cad7915307260185d"
+    }
+  },
+  "redux-jive": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/robbymurphy/redux-jive",
+      "gitCommit": "32a17e7e4477eeadc4aa33996637b40e2c36ce7f"
+    }
+  },
+  "redux-easy-async": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "dist/middleware.js",
+        "lineNumber": 89,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "dist/middleware.js",
+        "lineNumber": 94,
+        "classification": "8",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/evanhobbs/redux-easy-async",
+      "gitCommit": "1ba37c0b486dde87ef80b2df4ec4a21417a50dd4"
+    }
+  },
+  "redux-cablecar": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["build"],
+    "patches": [
+      {
+        "file": "src/middleware.js",
+        "lineNumber": 21,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "src/middleware.js",
+        "lineNumber": 25,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "src/middleware.js",
+        "lineNumber": 29,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "src/middleware.js",
+        "lineNumber": 42,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "src/middleware.js",
+        "lineNumber": 44,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/integration/integration_spec.js",
+        "lineNumber": 68,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/integration/integration_spec.js",
+        "lineNumber": 80,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 53,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 55,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 60,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 62,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 67,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 69,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 76,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 78,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 85,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/unit/middleware_spec.js",
+        "lineNumber": 87,
+        "classification": "8",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/ndhays/redux-cablecar",
+      "gitCommit": "64aef7e0c4acb3040c6355736966c6f468145072"
+    }
+  },
+  "emoji-finder": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["lib"],
+    "patches": [
+      {
+        "file": "src/test/selectors.test.js",
+        "lineNumber": 198,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 81,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 87,
+        "classification": "8",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/dematerializer/emoji-finder",
+      "gitCommit": "4fd0469cb427dd8999b943a672b503fa311e307e"
+    }
+  },
+  "us-forms-system": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/usds/us-forms-system",
+      "gitCommit": "f405d9fdea452c84d04b1c4921614dac7bb84c61"
+    }
+  },
+  "tableschema-ui": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "test/stores/editorSchema.js",
+        "lineNumber": 14,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/stores/editorSchema.js",
+        "lineNumber": 15,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/stores/editorSchema.js",
+        "lineNumber": 47,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/stores/editorSchema.js",
+        "lineNumber": 48,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/stores/editorSchema.js",
+        "lineNumber": 115,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/stores/editorSchema.js",
+        "lineNumber": 135,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/stores/editorSchema.js",
+        "lineNumber": 156,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/stores/editorSchema.js",
+        "lineNumber": 178,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "test/stores/editorSchema.js",
+        "lineNumber": 203,
+        "classification": "8",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/frictionlessdata/tableschema-ui",
+      "gitCommit": "82e254b6d3c84033ca7cf2f525e0bd0e7285fe8c"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "pattern": "write {<async>.{queue,priorityQueue,cargo,cargoQueue},<async/{queue,priorityQueue,cargo,cargoQueue}>}()?.{drain,saturated,unsaturated,empty,error}",
+    "uncertainAccPathQuestion": "Is the receiver to the write a async queue or cargo?",
+    "transform": {
+      "pattern": "$base.$prop($value)"
+    },
+    "id": "3",
+    "changelogDescription": "In queue, priorityQueue, cargo and cargoQueue, the \"event\"-style methods, like q.drain and q.saturated are now methods that register a callback, rather than properties you assign a callback to. They are now of the form q.drain(callback). If you do not pass a callback a Promise will be returned for the next occurrence of the event, making them await-able, e.g. await q.drain(). (#1586, #1641)",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "read <async>.{during,doDuring}",
+    "uncertainAccPathQuestion": "Is the receiver async?",
+    "transform": {
+      "pattern": "$base.$prop[during => whilst, doDuring => doWhilst]"
+    },
+    "id": "5a",
+    "changelogDescription": "during and doDuring have been removed, and instead whilst, doWhilst, until and doUntil now have asynchronous test functions. (#850, #1557)",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "import async/{during,doDuring}",
+    "transform": {
+      "pattern": "async/#new1",
+      "replacements": [
+        {
+          "source": "#1",
+          "newName": "#new1",
+          "substitutes": [
+            "during => whilst",
+            "doDuring => doWhilst"
+          ]
+        }
+      ]
+    },
+    "id": "5d",
+    "changelogDescription": "during and doDuring have been removed, and instead whilst, doWhilst, until and doUntil now have asynchronous test functions. (#850, #1557)",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call {<async>.{doWhilst,doUntil},<async/{doWhilst,doUntil}>}",
+    "uncertainAccPathQuestion": "Is the function being called from async?",
+    "transform": {
+      "pattern": "$callee(\n\t$1,\n\tfunction() {\n\t\tconst cb = arguments[arguments.length - 1];\n\t\tconst args = Array.prototype.slice.call(arguments, 0, arguments.length - 1);\n\t\tconst f = $2;\n\t\ttry {\n\t\t\tcb(null, f.apply(this, args));\n\t\t} catch (e) {\n\t\t\tcb(e, null);\n\t\t}\n\t},\n\t$3)"
+    },
+    "id": "5b",
+    "changelogDescription": "during and doDuring have been removed, and instead whilst, doWhilst, until and doUntil now have asynchronous test functions. (#850, #1557)",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call {<async>.{whilst,until},<async/{whilst,until}>}",
+    "uncertainAccPathQuestion": "Is the function being called from async?",
+    "transform": {
+      "pattern": "$callee(\n\tfunction() {\n\t\tconst cb = arguments[arguments.length - 1];\n\t\tconst args = Array.prototype.slice.call(arguments, 0, arguments.length - 1);\n\t\tconst f = $1;\n\t\ttry {\n\t\t\tcb(null, f.apply(this, args));\n\t\t} catch (e) {\n\t\t\tcb(e, null);\n\t\t}\n\t},\n\t$2,\n\t$3)"
+    },
+    "id": "5c",
+    "changelogDescription": "during and doDuring have been removed, and instead whilst, doWhilst, until and doUntil now have asynchronous test functions. (#850, #1557)",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call {<async>.memoize,<async/memoize>}",
+    "uncertainAccPathQuestion": "Is the function being called from async?",
+    "question": "Can the function to be memoized throw errors?",
+    "transform": {
+      "status": "UNEXPRESSIBLE_PATCH",
+      "comment": "The patch would have to wrap the argument in async.reflect and then patch every use of the function returned by the patch to read the value correctly"
+    },
+    "id": "7",
+    "benign": true,
+    "changelogDescription": "memoize no longer memoizes errors (#1465, #1466)",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "call {<async>.{applyEach,applyEachSeries},<async/{applyEach,applyEachSeries}>} [2, 99]",
+    "uncertainAccPathQuestion": "Is the function being called from async?",
+    "transform": {
+      "pattern": "$callee($args[0, -1])($-1)"
+    },
+    "id": "8",
+    "changelogDescription": "applyEach/applyEachSeries have a simpler interface, to make them more easily type-able. It always returns a function that takes in a single callback argument. If that callback is omitted, a promise is returned, making it awaitable. (#1228, #1640)",
+    "changelogId": "4"
+  }
+]

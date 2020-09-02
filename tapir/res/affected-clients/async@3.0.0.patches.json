@@ -1,0 +1,147 @@
+{
+    "dispensary": {
+        "patches": [
+            {
+                "file": "src/dispensary.js",
+                "lineNumber": 173,
+                "classification": "3"
+            }
+        ],
+        "repo": {
+            "gitCommit": "c489ed7212b79956ce3250cbd311a0af5a75a7d4",
+            "gitURL": "https://github.com/mozilla/dispensary"
+        }
+    },
+    "simplecrawler": {
+        "patches": [
+            {
+                "file": "test/conditions.js",
+                "lineNumber": 482,
+                "classification": "4"
+            },
+            {
+                "file": "test/conditions.js",
+                "lineNumber": 515,
+                "classification": "4"
+            }
+        ],
+        "repo": {
+            "gitCommit": "81ee1cb7047585332ee06e248d5231bbb8536282",
+            "gitURL": "https://github.com/simplecrawler/simplecrawler"
+        }
+    },
+    "gulp-expect-file": {
+        "patches": [
+            {
+                "file": "lib/string-tester.js",
+                "lineNumber": 20,
+                "classification": "8"
+            }
+        ],
+        "repo": {
+            "gitCommit": "429e6514248f5d4b0ba5416042c0bf5144c3f975",
+            "gitURL": "https://github.com/pioug/gulp-expect-file"
+        }
+    },
+    "citgm": {
+        "patches": [
+            {
+                "file": "bin/citgm-all.js",
+                "lineNumber": 208,
+                "classification": "3"
+            },
+            {
+                "file": "bin/citgm-all.js",
+                "lineNumber": 242,
+                "classification": "3"
+            }
+        ],
+        "repo": {
+            "gitCommit": "6f0a524dffcfcdc5a2d2f888cc791ee0c4873633",
+            "gitURL": "https://github.com/nodejs/citgm"
+        }
+    },
+    "complexity-report-ext": {
+        "patches": [
+            {
+                "file": "src/lib.js",
+                "lineNumber": 108,
+                "classification": "3"
+            }
+        ],
+        "repo": {
+            "gitCommit": "0e56f52f9b8330df1bfdde904aec4fc19e894ac8",
+            "gitURL": "https://github.com/prantlf/complexity-report"
+        }
+    },
+    "ask-cli-x": {
+        "patches": [
+            {
+                "file": "lib/clients/smapi-client/index.js",
+                "lineNumber": 104,
+                "classification": "5b"
+            },
+            {
+                "file": "lib/utils/retry-utility.js",
+                "lineNumber": 36,
+                "classification": "5b"
+            }
+        ],
+        "repo": {
+            "gitCommit": "524a951b7ebef15f9e318db59325d761cca2f070",
+            "gitURL": "https://github.com/alexa-labs/ask-cli"
+        }
+    },
+    "htmly": {
+        "patches": [
+          {
+            "file": "test/conditions.js",
+            "lineNumber": 85,
+            "classification": "4"
+          }
+        ],
+        "repo": {
+            "gitCommit": "6fe6ddc200195e7232e5d58ebd70e26f363893db",
+            "gitURL": "https://github.com/nodys/htmly"
+        }
+    },
+    "gulp-connect-ssi": {
+        "patches": [
+            {
+                "file": "index.js",
+                "lineNumber": 128,
+                "classification": "5b"
+            }
+        ],
+        "repo": {
+            "gitCommit": "c0c2ef39a61214cef257963ce73c7a4a79652255",
+            "gitURL": "https://github.com/fanyegong/gulp-connect-ssi"
+        }
+    },
+    "@alertlogic/al-azure-collector-js": {
+        "patches": [
+            {
+                "file": "appstats.js",
+                "lineNumber": 288,
+                "classification": "5b"
+            }
+        ],
+        "repo": {
+            "gitCommit": "476bad4d9c203bfce608a2f4eefc9396baa52be8",
+            "gitURL": "https://github.com/alertlogic/al-azure-collector-js"
+        }
+    },
+    "bulk-html-loader": {
+        "patches": [
+            {
+                "file": "lib/BulkHtmlLoader.js",
+                "lineNumber": 131,
+                "classification": "3"
+            }
+        ],
+        "repo": {
+            "gitCommit": "7e0589768c9d789394283726ae25741f3adf0b47",
+            "gitURL": "https://github.com/ChristianRich/bulk-html-loader"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "[7]test/index.js_CallExpression_263:23:263:60UncertainAccPathMatch": {
+    "questionText": "[7] test/index.js, CallExpression at 263:23:263:60: Is the receiver a node-fetch headers object?",
+    "answer": "Yes",
+    "patternId": "7",
+    "fileName": "test/index.js",
+    "lineNumber": 263,
+    "columnNumber": 23
+  },
+  "[7]test/index.js_CallExpression_290:23:290:60UncertainAccPathMatch": {
+    "questionText": "[7] test/index.js, CallExpression at 290:23:290:60: Is the receiver a node-fetch headers object?",
+    "answer": "Yes",
+    "patternId": "7",
+    "fileName": "test/index.js",
+    "lineNumber": 290,
+    "columnNumber": 23
+  },
+  "[7]test/index.js_CallExpression_312:23:312:60UncertainAccPathMatch": {
+    "questionText": "[7] test/index.js, CallExpression at 312:23:312:60: Is the receiver a node-fetch headers object?",
+    "answer": "Yes",
+    "patternId": "7",
+    "fileName": "test/index.js",
+    "lineNumber": 312,
+    "columnNumber": 23
+  },
+  "[7]index.js_CallExpression_13:18:13:55UncertainAccPathMatch": {
+    "questionText": "[7] index.js, CallExpression at 13:18:13:55: Is the receiver a node-fetch headers object?",
+    "answer": "Yes",
+    "patternId": "7",
+    "fileName": "index.js",
+    "lineNumber": 13,
+    "columnNumber": 18
+  }
+}

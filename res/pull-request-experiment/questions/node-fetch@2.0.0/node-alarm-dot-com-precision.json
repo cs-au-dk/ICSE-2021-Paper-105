@@ -1,0 +1,58 @@
+{
+  "[4]index.js_CallExpression_465:43:465:53UncertainAccPathMatch": {
+    "questionText": "[4] index.js, CallExpression at 465:43:465:53: Is the receiver a node-fetch response?",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "index.js",
+    "lineNumber": 465,
+    "columnNumber": 43
+  },
+  "[4]index.js_CallExpression_465:43:465:53MaybeExplicitQuestionMatch": {
+    "questionText": "[4] index.js, CallExpression at 465:43:465:53: Can the response code be 204?",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "index.js",
+    "lineNumber": 465,
+    "columnNumber": 43
+  },
+  "[4]index.js_CallExpression_494:13:494:23UncertainAccPathMatch": {
+    "questionText": "[4] index.js, CallExpression at 494:13:494:23: Is the receiver a node-fetch response?",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "index.js",
+    "lineNumber": 494,
+    "columnNumber": 13
+  },
+  "[4]index.js_CallExpression_494:13:494:23MaybeExplicitQuestionMatch": {
+    "questionText": "[4] index.js, CallExpression at 494:13:494:23: Can the response code be 204?",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "index.js",
+    "lineNumber": 494,
+    "columnNumber": 13
+  },
+  "[6]index.js_CallExpression_119:13:128:10MaybeExplicitQuestionMatch": {
+    "questionText": "[6] index.js, CallExpression at 119:13:128:10: Is the second argument a GET or HEAD Request with non-null body?",
+    "answer": "No",
+    "patternId": "6",
+    "fileName": "index.js",
+    "lineNumber": 119,
+    "columnNumber": 13
+  },
+  "[6]index.js_CallExpression_455:9:459:6MaybeExplicitQuestionMatch": {
+    "questionText": "[6] index.js, CallExpression at 455:9:459:6: Is the second argument a GET or HEAD Request with non-null body?",
+    "answer": "No",
+    "patternId": "6",
+    "fileName": "index.js",
+    "lineNumber": 455,
+    "columnNumber": 9
+  },
+  "[6]index.js_CallExpression_485:9:490:6MaybeExplicitQuestionMatch": {
+    "questionText": "[6] index.js, CallExpression at 485:9:490:6: Is the second argument a GET or HEAD Request with non-null body?",
+    "answer": "No",
+    "patternId": "6",
+    "fileName": "index.js",
+    "lineNumber": 485,
+    "columnNumber": 9
+  }
+}

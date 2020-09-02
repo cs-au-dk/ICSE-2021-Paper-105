@@ -1,0 +1,10 @@
+{
+  "[100]lib/resource.js_AssignmentExpression_321:6:321:50UncertainAccPathMatch": {
+    "questionText": "[100] lib/resource.js, AssignmentExpression at 321:6:321:50: Is the receiver a node-fetch request?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "lib/resource.js",
+    "lineNumber": 321,
+    "columnNumber": 6
+  }
+}

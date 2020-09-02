@@ -1,0 +1,18 @@
+{
+  "[29]index.js_NewExpression_201:52:201:102UncertainAccPathMatch": {
+    "questionText": "[29] index.js, NewExpression at 201:52:201:102: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "index.js",
+    "lineNumber": 201,
+    "columnNumber": 52
+  },
+  "[29]index.js_NewExpression_201:52:201:102MaybeExplicitQuestionMatch": {
+    "questionText": "[29] index.js, NewExpression at 201:52:201:102: Does the options argument include formatting options?",
+    "answer": "No",
+    "patternId": "29",
+    "fileName": "index.js",
+    "lineNumber": 201,
+    "columnNumber": 52
+  }
+}

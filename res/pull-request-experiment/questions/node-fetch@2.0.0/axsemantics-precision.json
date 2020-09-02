@@ -1,0 +1,18 @@
+{
+  "[4]src/index.js_CallExpression_69:19:69:34UncertainAccPathMatch": {
+    "questionText": "[4] src/index.js, CallExpression at 69:19:69:34: Is the receiver a node-fetch response?",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "src/index.js",
+    "lineNumber": 69,
+    "columnNumber": 19
+  },
+  "[4]src/index.js_CallExpression_69:19:69:34MaybeExplicitQuestionMatch": {
+    "questionText": "[4] src/index.js, CallExpression at 69:19:69:34: Can the response code be 204?",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "src/index.js",
+    "lineNumber": 69,
+    "columnNumber": 19
+  }
+}

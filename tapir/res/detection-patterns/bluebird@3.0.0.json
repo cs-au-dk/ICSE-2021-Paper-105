@@ -1,0 +1,96 @@
+[
+  {
+    "pattern": "read <bluebird>.settle",
+    "id": "1",
+    "deprecation": true,
+    "changelogDescription": "Promise.settle has been deprecated. Use .reflect instead."
+  },
+  {
+    "pattern": "read <bluebird>.spawn",
+    "id": "2",
+    "deprecation": true,
+    "changelogDescription": "Promise.spawn has been deprecated. Use Promise.coroutine instead."
+  },
+  {
+    "pattern": "call <bluebird>.try [2, 3]",
+    "id": "3",
+    "deprecation": true,
+    "changelogDescription": "Promise.try's ctx and arg arguments have been deprecated."
+  },
+  {
+    "pattern": "read <bluebird>?**.nodeify",
+    "id": "4",
+    "deprecation": true,
+    "changelogDescription": ".nodeify is now better known as .asCallback"
+  },
+  {
+    "pattern": "read <bluebird>.fromNode",
+    "id": "5",
+    "deprecation": true,
+    "changelogDescription": ".fromNode is now better known as Promise.fromCallback"
+  },
+  {
+    "pattern": "call <bluebird>.{promisify,promisifyAll,asCallback} [2, 2]",
+    "id": "6",
+    "changelogDescription": "If a second argument is passed to Promise.promisify, Promise.promisifyAll or Promise.asCallback, it should be wrapped inside an object, i.e., if the second argument is arg2, then the patch should make the second argument into the object {context: arg2}.",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <bluebird>.{promisify,asCallback}",
+    "question": "Is the first argument a function that calls its callback with more than two arguments?",
+    "id": "7",
+    "changelogDescription": "Previously if the callback to be promisified was with  multiple values the resolved value was an array off all the arguments and just the value in the case of the callback only being called with one argument. Now by default the resolved value is always a single even though the callback is called multiple times. There is however an option that can be enabled, such that the resolved value always is an array (multiArgs). The patch could then use this option and in the case of a single element array, resolve with the single value.",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call <bluebird>.promisifyAll",
+    "question": "Is the first argument an object with functions that calls their callback with more than two arguments?",
+    "id": "7b",
+    "changelogDescription": "Previously if the callback to be promisified was with  multiple values the resolved value was an array off all the arguments and just the value in the case of the callback only being called with one argument. Now by default the resolved value is always a single even though the callback is called multiple times. There is however an option that can be enabled, such that the resolved value always is an array (multiArgs). The patch could then use this option and in the case of a single element array, resolve with the single value.",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "read <bluebird>?**.{cancellable,uncancellable}",
+    "id": "8",
+    "changelogDescription": "Cancellation redesign.",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "read <bluebird>?**.{progressed,progress}",
+    "id": "9a",
+    "changelogDescription": "Promise progression has been completely removed.",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <bluebird>?**.{then,done,fork} [3, 3]",
+    "id": "9b",
+    "changelogDescription": "Promise progression has been completely removed.",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <bluebird>?**.spread [2, 2]",
+    "id": "10",
+    "changelogDescription": ".spread's second argument has been removed.",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <bluebird>?**.done",
+    "question": "Does the promise chain have unhandled rejections?",
+    "id": "11",
+    "changelogDescription": ".done causes an irrecoverable fatal error in Node.js environments now. See #471 for rationale.",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "call <bluebird>?**.error [1, 1] 0:function",
+    "question": "Is this errorhandler used to catch errors created with Promise.reject or reject callback of new Promise",
+    "id": "12",
+    "changelogDescription": "Errors created with Promise.reject or reject callback of new Promise are no longer marked as OperationalErrors.",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "import bluebird/js/main/*",
+    "id": "100",
+    "changelogDescription": "Submodules moved from folder 'main' to folder 'release'",
+    "changelogId": "8"
+  }
+]

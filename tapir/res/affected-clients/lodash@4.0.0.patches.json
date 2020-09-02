@@ -1,0 +1,541 @@
+{
+  "postal": {
+    "excludedFolders": ["src"],
+    "patches": [
+      {
+        "file": "lib/postal.js",
+        "lineNumber": 596,
+        "classification": "7b"
+      },
+      {
+        "file": "lib/postal.js",
+        "lineNumber": 250,
+        "classification": "56"
+      },
+      {
+        "file": "lib/postal.js",
+        "lineNumber": 109,
+        "classification": "61"
+      },
+      {
+        "file": "lib/postal.lodash.js",
+        "lineNumber": 273,
+        "classification": "56b"
+      },
+      {
+        "file": "lib/postal.lodash.js",
+        "lineNumber": 14,
+        "classification": "5"
+      },
+      {
+        "file": "lib/postal.lodash.js",
+        "lineNumber": 19,
+        "classification": "5"
+      },
+      {
+        "file": "lib/postal.lodash.js",
+        "lineNumber": 26,
+        "classification": "5"
+      },
+      {
+        "file": "lib/postal.lodash.js",
+        "lineNumber": 27,
+        "classification": "5"
+      },
+      {
+        "file": "lib/postal.lodash.js",
+        "lineNumber": 29,
+        "classification": "5"
+      }
+    ],
+    "repo": {
+      "gitCommit": "4f743670f3d6af30959b3ded4e736aae44cf55f2",
+      "gitURL": "https://github.com/postaljs/postal.js"
+    }
+  },
+  "bracket-data": {
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 1,
+        "classification": "5"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 2,
+        "classification": "5"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 3,
+        "classification": "5"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 33,
+        "classification": "7e"
+      },
+      {
+        "file": "data/index.js",
+        "lineNumber": 1,
+        "classification": "5"
+      },
+      {
+        "file": "lib/constants.js",
+        "lineNumber": 1,
+        "classification": "5"
+      },
+      {
+        "file": "lib/constants.js",
+        "lineNumber": 2,
+        "classification": "5"
+      },
+      {
+        "file": "lib/bracket.js",
+        "lineNumber": 1,
+        "classification": "5"
+      },
+      {
+        "file": "build/normalizeTeamNames.js",
+        "lineNumber": 64,
+        "classification": "45"
+      },
+      {
+        "file": "build/normalizeTeamNames.js",
+        "lineNumber": 67,
+        "classification": "43"
+      },
+      {
+        "file": "test/multiple.js",
+        "lineNumber": 13,
+        "classification": "6"
+      },
+      {
+        "file": "test/multiple.js",
+        "lineNumber": 17,
+        "classification": "6"
+      },
+      {
+        "file": "build/normalizeTeamNames.js",
+        "lineNumber": 59,
+        "classification": "61"
+      },
+      {
+        "file": "data/index.js",
+        "lineNumber": 27,
+        "classification": "42b"
+      },
+      {
+        "file": "data/index.js",
+        "lineNumber": 27,
+        "classification": "30b"
+      }
+    ],
+    "repo": {
+      "gitCommit": "4560b6bb232d6904b1b5e4c452bd5b0c40762ce0",
+      "gitURL": "https://github.com/bracketclub/bracket-data"
+    }
+  },
+  "grunt-atomizer": {
+    "patches": [
+      {
+        "file": "tasks/atomizer.js",
+        "lineNumber": 55,
+        "classification": "52a"
+      }
+    ],
+    "repo": {
+      "gitCommit": "7449d5e2a9b379f8f040831caedccc002f5bcc33",
+      "gitURL": "https://github.com/acss-io/grunt-atomizer"
+    }
+  },
+  "network-config": {
+    "patches": [
+      {
+        "file": "src/ifconfig.configure.js",
+        "lineNumber": 52,
+        "classification": "61"
+      },
+      {
+        "file": "src/ifconfig.interfaces.js",
+        "lineNumber": 75,
+        "classification": "61"
+      },
+      {
+        "file": "src/ifconfig.interfaces.js",
+        "lineNumber": 98,
+        "classification": "61"
+      },
+      {
+        "file": "src/ifconfig.interfaces.js",
+        "lineNumber": 114,
+        "classification": "61"
+      },
+      {
+        "file": "src/ifconfig.interfaces.js",
+        "lineNumber": 126,
+        "classification": "61"
+      },
+      {
+        "file": "src/ifconfig.interfaces.js",
+        "lineNumber": 153,
+        "classification": "61"
+      }
+    ],
+    "repo": {
+      "gitCommit": "765d1b03748d20ef154a1cf08068d36cfbd35cfb",
+      "gitURL": "https://github.com/FGRibreau/network-config"
+    }
+  },
+  "netiam": {
+    "patches": [
+      {
+        "file": "src/netiam.js",
+        "lineNumber": 1,
+        "classification": "5"
+      },
+      {
+        "file": "src/netiam.js",
+        "lineNumber": 2,
+        "classification": "5"
+      },
+      {
+        "file": "src/netiam.js",
+        "lineNumber": 3,
+        "classification": "5"
+      }
+    ],
+    "repo": {
+      "gitCommit": "01d91c5de476035ac246e920b84bafb67db2e28b",
+      "gitURL": "https://github.com/netiam/netiam"
+    }
+  },
+  "waterfall-then": {
+    "patches": [
+      {
+        "file": "lib/index.js",
+        "lineNumber": 3,
+        "classification": "5"
+      }
+    ],
+    "repo": {
+      "gitCommit": "d5b144434b8744db8e7e7f0083a453ac17f1235b",
+      "gitURL": "https://github.com/thenables/waterfall-then"
+    }
+  },
+  "kyper-matter": {
+    "excludedFolders": ["lib", "dist"],
+    "patches": [
+      {
+        "file": "src/index.js",
+        "lineNumber": 8,
+        "classification": "61"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 743,
+        "classification": "61"
+      },
+      {
+        "file": "src/utils/cookies.js",
+        "lineNumber": 20,
+        "classification": "61"
+      },
+      {
+        "file": "src/config.js",
+        "lineNumber": 46,
+        "classification": "42"
+      },
+      {
+        "file": "src/config.js",
+        "lineNumber": 83,
+        "classification": "42"
+      }
+    ],
+    "repo": {
+      "gitCommit": "9682df3efc83d53406917d83c3fbdff6922aead6",
+      "gitURL": "https://github.com/KyperTech/matter"
+    }
+  },
+  "generator-phaser-plus": {
+    "patches": [
+      {
+        "file": "generators/app/questions.js",
+        "lineNumber": 3,
+        "classification": "5"
+      },
+      {
+        "file": "generators/app/questions.js",
+        "lineNumber": 4,
+        "classification": "5"
+      },
+      {
+        "file": "generators/state/questions.js",
+        "lineNumber": 3,
+        "classification": "5"
+      },
+      {
+        "file": "generators/state/questions.js",
+        "lineNumber": 4,
+        "classification": "5"
+      },
+      {
+        "file": "lib/classify.js",
+        "lineNumber": 3,
+        "classification": "5"
+      },
+      {
+        "file": "lib/classify.js",
+        "lineNumber": 3,
+        "classification": "61b"
+      },
+      {
+        "file": "lib/classify.js",
+        "lineNumber": 4,
+        "classification": "5"
+      },
+      {
+        "file": "lib/classify.js",
+        "lineNumber": 5,
+        "classification": "5"
+      },
+      {
+        "file": "generators/plugin/questions.js",
+        "lineNumber": 3,
+        "classification": "5"
+      },
+      {
+        "file": "generators/plugin/questions.js",
+        "lineNumber": 4,
+        "classification": "5"
+      },
+      {
+        "file": "generators/object/questions.js",
+        "lineNumber": 3,
+        "classification": "5"
+      },
+      {
+        "file": "generators/object/questions.js",
+        "lineNumber": 4,
+        "classification": "5"
+      }
+    ],
+    "repo": {
+      "gitCommit": "399671ef8c1354dfdb04e727c877424bbd855c01",
+      "gitURL": "https://github.com/rblopes/generator-phaser-plus"
+    }
+  },
+  "common-env": {
+    "patches": [
+      {
+        "file": "test/getOrElseAll.test.js",
+        "lineNumber": 270,
+        "classification": "6"
+      },
+      {
+        "file": "test/getOrElseAll.test.js",
+        "lineNumber": 270,
+        "classification": "6"
+      },
+      {
+        "file": "test/withLogger.test.js",
+        "lineNumber": 16,
+        "classification": "54"
+      }
+    ],
+    "repo": {
+      "gitCommit": "e2245638f2dd18c0ed67929e64f34ff34faedfe8",
+      "gitURL": "https://github.com/FGRibreau/common-env"
+    }
+  },
+  "contentful-space-sync": {
+    "patches": [
+      {
+        "file": "lib/run-space-sync.js",
+        "lineNumber": 49,
+        "classification": "41a"
+      },
+      {
+        "file": "lib/run-space-sync.js",
+        "lineNumber": 52,
+        "classification": "41a"
+      },
+      {
+        "file": "lib/get-transformed-destination-response.js",
+        "lineNumber": 2,
+        "classification": "6"
+      },
+      {
+        "file": "lib/get-transformed-destination-response.js",
+        "lineNumber": 20,
+        "classification": "6"
+      },
+      {
+        "file": "lib/get-transformed-destination-response.js",
+        "lineNumber": 21,
+        "classification": "6"
+      }
+    ],
+    "repo": {
+      "gitCommit": "7fbb4200e320173c533b2c74e812f74cf05a57b1",
+      "gitURL": "https://github.com/contentful/contentful-space-sync"
+    }
+  },
+  "lowdb-recursive": {
+    "patches": [
+      {
+        "file": "src/index.js",
+        "lineNumber": 38,
+        "classification": "11"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 44,
+        "classification": "11"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 60,
+        "classification": "11"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 67,
+        "classification": "11"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 73,
+        "classification": "11"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 56,
+        "classification": "42"
+      }
+    ],
+    "repo": {
+      "gitCommit": "a55f11bccbdcdf1020506b981d21ee6cbb925d3e",
+      "gitURL": "https://github.com/ghondar/lowdb-recursive"
+    }
+  },
+  "@resin/odata-to-abstract-sql": {
+    "patches": [
+      {
+        "file": "test/expand.coffee",
+        "lineNumber": 156,
+        "classification": "61"
+      },
+      {
+        "file": "test/expand.coffee",
+        "lineNumber": 205,
+        "classification": "61"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 42,
+        "classification": "61"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 130,
+        "classification": "18"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 308,
+        "classification": "61"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 332,
+        "classification": "61"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 331,
+        "classification": "7d"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 341,
+        "classification": "61"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 738,
+        "classification": "7b"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 740,
+        "classification": "7b"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 786,
+        "classification": "61"
+      },
+      {
+        "file": "odata-to-abstract-sql.js",
+        "lineNumber": 505,
+        "classification": "45"
+      }
+    ],
+    "repo": {
+      "gitCommit": "95fb6ce6d63a81ffc5cfb074204876e54418b776",
+      "gitURL": "https://github.com/balena-io-modules/odata-to-abstract-sql"
+    }
+  },
+  "sass-graph": {
+    "patches": [
+      {
+        "file": "sass-graph.js",
+        "lineNumber": 46,
+        "classification": "4"
+      },
+      {
+        "file": "sass-graph.js",
+        "lineNumber": 71,
+        "classification": "61"
+      },
+      {
+        "file": "sass-graph.js",
+        "lineNumber": 118,
+        "classification": "61"
+      }
+    ],
+    "repo": {
+      "gitCommit": "c0c8c25fff0c148aa13bc8eaef04ee0bfae753be",
+      "gitURL": "https://github.com/xzyfer/sass-graph"
+    }
+  },
+  "atomizer": {
+    "patches": [
+      {
+        "file": "src/lib/utils.js",
+        "lineNumber": 37,
+        "classification": "30"
+      },
+      {
+        "file": "src/atomizer.js",
+        "lineNumber": 518,
+        "classification": "42"
+      },
+      {
+        "file": "src/lib/utils.js",
+        "lineNumber": 37,
+        "classification": "42"
+      },
+      {
+        "file": "src/lib/utils.js",
+        "lineNumber": 37,
+        "classification": "7h"
+      }
+    ],
+    "repo": {
+      "gitCommit": "2dedf2663af2f4fd09c5fa0c78c17416dbea504b",
+      "gitURL": "https://github.com/acss-io/atomizer"
+    }
+  }
+}

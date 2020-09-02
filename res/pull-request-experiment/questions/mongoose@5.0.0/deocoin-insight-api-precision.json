@@ -1,0 +1,90 @@
+{
+  "[26a]components/Db.js_CallExpression_17:11:28:6UncertainAccPathMatch": {
+    "questionText": "[26a] components/Db.js, CallExpression at 17:11:28:6: Is the receiver mongoose?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "components/Db.js",
+    "lineNumber": 17,
+    "columnNumber": 11
+  },
+  "[26a]components/Db.js_CallExpression_17:11:28:6MaybeExplicitQuestionMatch": {
+    "questionText": "[26a] components/Db.js, CallExpression at 17:11:28:6: Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "components/Db.js",
+    "lineNumber": 17,
+    "columnNumber": 11
+  },
+  "[26a]components/Db.js_CallExpression_17:11:28:6TransformQuestion": {
+    "questionText": "[26a] components/Db.js, CallExpression at 17:11:28:6: Is the option useMongoClient enabled?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "components/Db.js",
+    "lineNumber": 17,
+    "columnNumber": 11
+  },
+  "[18]lib/index.js_CallExpression_417:2:417:60UncertainAccPathMatch": {
+    "questionText": "[18] lib/index.js, CallExpression at 417:2:417:60: Is the receiver a mongoose schema?",
+    "answer": "No",
+    "patternId": "18",
+    "fileName": "lib/index.js",
+    "lineNumber": 417,
+    "columnNumber": 2
+  },
+  "[18]lib/index.js_CallExpression_461:2:461:62UncertainAccPathMatch": {
+    "questionText": "[18] lib/index.js, CallExpression at 461:2:461:62: Is the receiver a mongoose schema?",
+    "answer": "No",
+    "patternId": "18",
+    "fileName": "lib/index.js",
+    "lineNumber": 461,
+    "columnNumber": 2
+  },
+  "[39]repositories/AddressBalanceRepository.js_CallExpression_15:11:17:6UncertainAccPathMatch": {
+    "questionText": "[39] repositories/AddressBalanceRepository.js, CallExpression at 15:11:17:6: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "39",
+    "fileName": "repositories/AddressBalanceRepository.js",
+    "lineNumber": 15,
+    "columnNumber": 11
+  },
+  "[39]repositories/AddressBalanceRepository.js_CallExpression_15:11:17:6MaybeExplicitQuestionMatch": {
+    "questionText": "[39] repositories/AddressBalanceRepository.js, CallExpression at 15:11:17:6: Is the resolved value of the returned promise used?",
+    "answer": "No",
+    "patternId": "39",
+    "fileName": "repositories/AddressBalanceRepository.js",
+    "lineNumber": 15,
+    "columnNumber": 11
+  },
+  "[48a]repositories/AddressBalanceRepository.js_CallExpression_39:11:48:6UncertainAccPathMatch": {
+    "questionText": "[48a] repositories/AddressBalanceRepository.js, CallExpression at 39:11:48:6: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "48a",
+    "fileName": "repositories/AddressBalanceRepository.js",
+    "lineNumber": 39,
+    "columnNumber": 11
+  },
+  "[39]repositories/Erc20BalanceRepository.js_CallExpression_43:11:45:6UncertainAccPathMatch": {
+    "questionText": "[39] repositories/Erc20BalanceRepository.js, CallExpression at 43:11:45:6: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "39",
+    "fileName": "repositories/Erc20BalanceRepository.js",
+    "lineNumber": 43,
+    "columnNumber": 11
+  },
+  "[39]repositories/Erc20BalanceRepository.js_CallExpression_43:11:45:6MaybeExplicitQuestionMatch": {
+    "questionText": "[39] repositories/Erc20BalanceRepository.js, CallExpression at 43:11:45:6: Is the resolved value of the returned promise used?",
+    "answer": "No",
+    "patternId": "39",
+    "fileName": "repositories/Erc20BalanceRepository.js",
+    "lineNumber": 43,
+    "columnNumber": 11
+  },
+  "[48a]repositories/Erc20BalanceRepository.js_CallExpression_20:11:31:10UncertainAccPathMatch": {
+    "questionText": "[48a] repositories/Erc20BalanceRepository.js, CallExpression at 20:11:31:10: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "48a",
+    "fileName": "repositories/Erc20BalanceRepository.js",
+    "lineNumber": 20,
+    "columnNumber": 11
+  }
+}

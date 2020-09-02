@@ -1,0 +1,34 @@
+{
+  "[13a]src/index.js_CallExpression_144:2:144:44UncertainAccPathMatch": {
+    "questionText": "[13a] src/index.js, CallExpression at 144:2:144:44: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "src/index.js",
+    "lineNumber": 144,
+    "columnNumber": 2
+  },
+  "[13a]src/index.js_CallExpression_144:2:144:44MaybeArgTypeMatch": {
+    "questionText": "[13a] src/index.js, CallExpression at 144:2:144:44: is arg reason.stack of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "src/index.js",
+    "lineNumber": 144,
+    "columnNumber": 2
+  },
+  "[29]src/logger.js_NewExpression_33:27:37:4UncertainAccPathMatch": {
+    "questionText": "[29] src/logger.js, NewExpression at 33:27:37:4: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "src/logger.js",
+    "lineNumber": 33,
+    "columnNumber": 27
+  },
+  "[29]src/logger.js_NewExpression_33:27:37:4MaybeExplicitQuestionMatch": {
+    "questionText": "[29] src/logger.js, NewExpression at 33:27:37:4: Does the options argument include formatting options?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "src/logger.js",
+    "lineNumber": 33,
+    "columnNumber": 27
+  }
+}

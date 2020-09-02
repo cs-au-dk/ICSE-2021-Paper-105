@@ -1,0 +1,439 @@
+{
+  "linebot": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "examples/echo-express-long.js",
+        "lineNumber": 24,
+        "classification": "4",
+        "truePositive": false
+      },
+      {
+        "file": "test/linebot.test.js",
+        "lineNumber": 128,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 107,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 124,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 138,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 151,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 169,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 178,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 188,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 205,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 214,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 224,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 241,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 272,
+        "classification": "4",
+        "truePositive": false
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 250,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "lib/linebot.js",
+        "lineNumber": 256,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "test/linebot.test.js",
+        "lineNumber": 126,
+        "classification": "6",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/boybundit/linebot",
+      "gitCommit": "21893e4db250e75819a2f9547aa3f61cc1b0e365"
+    }
+  },
+  "tensorboard-mux": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/4Catalyzer/tensorboard-mux",
+      "gitCommit": "1b06e8c1f0218b3b78089474561610533f23db74"
+    }
+  },
+  "http2human": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 33,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 44,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 66,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 30,
+        "classification": "6",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/superseriouscompany/http2human",
+      "gitCommit": "e969c6c5b012c85dbc9030d781d94cab2498bda3"
+    }
+  },
+  "@fresh8/copacetic": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/middleware.js",
+        "lineNumber": 28,
+        "classification": "4",
+        "truePositive": false
+      },
+      {
+        "file": "lib/dependency.js",
+        "lineNumber": 47,
+        "classification": "100",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/fresh8/copacetic",
+      "gitCommit": "670dcd58d1ea1d8bbbb7d6d74dfc29343e2a87f7"
+    }
+  },
+  "vainglory": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["dist"],
+    "patches": [
+      {
+        "file": "src/api/index.js",
+        "lineNumber": 15,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "src/models/asset.js",
+        "lineNumber": 37,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "src/Http.js",
+        "lineNumber": 144,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "src/Http.js",
+        "lineNumber": 136,
+        "classification": "6",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/seripap/vainglory",
+      "gitCommit": "e2e516e1c3868113cf28faaea8f2ebc847374130"
+    }
+  },
+  "svg-term-cli": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/cli.js",
+        "lineNumber": 273,
+        "classification": "3",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/marionebl/svg-term-cli",
+      "gitCommit": "8cd31d3b88f8bb96399a1ea92a6644438131b69e"
+    }
+  },
+  "xcode-build-tools": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/slack.js",
+        "lineNumber": 83,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "create-release.js",
+        "lineNumber": 96,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "upload-apk.js",
+        "lineNumber": 87,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "upload-ipa.js",
+        "lineNumber": 89,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "upload-apk.js",
+        "lineNumber": 91,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "upload-ipa.js",
+        "lineNumber": 93,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/slack.js",
+        "lineNumber": 74,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "create-release.js",
+        "lineNumber": 85,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "upload-apk.js",
+        "lineNumber": 76,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "upload-ipa.js",
+        "lineNumber": 78,
+        "classification": "6",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/ekreative/xcode-build-tools",
+      "gitCommit": "394d51c053d0f1ddc783db35a1aad67bd7f8dc9f"
+    }
+  },
+  "@financial-times/n-spoor-client": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["lib"],
+    "patches": [
+      {
+        "file": "src/index.js",
+        "lineNumber": 115,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 99,
+        "classification": "6",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/Financial-Times/spoor-client",
+      "gitCommit": "4e5c803121bf62a76291672952dd1da4552c8b11"
+    }
+  },
+  "n-health": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/checks/responseCompare.check.js",
+        "lineNumber": 42,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/pingdom.check.js",
+        "lineNumber": 23,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/graphiteSpike.check.js",
+        "lineNumber": 72,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/graphiteSpike.check.js",
+        "lineNumber": 74,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/graphiteThreshold.check.js",
+        "lineNumber": 44,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/graphiteWorking.check.js",
+        "lineNumber": 40,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/json.check.js",
+        "lineNumber": 23,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/pingdom.check.js",
+        "lineNumber": 22,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/responseCompare.check.js",
+        "lineNumber": 41,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/string.check.js",
+        "lineNumber": 26,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/checks/graphiteWorking.check.js",
+        "lineNumber": 33,
+        "classification": "100",
+        "truePositive": false
+      },
+      {
+        "file": "src/checks/json.check.js",
+        "lineNumber": 12,
+        "classification": "100",
+        "truePositive": false
+      },
+      {
+        "file": "src/checks/pingdom.check.js",
+        "lineNumber": 11,
+        "classification": "100",
+        "truePositive": false
+      },
+      {
+        "file": "src/checks/string.check.js",
+        "lineNumber": 12,
+        "classification": "100",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/Financial-Times/n-health",
+      "gitCommit": "575f98b1775b493ef0202d9b5229d584f1564c3e"
+    }
+  },
+  "baidu-segmentation": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 41,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 36,
+        "classification": "6",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/xialeistudio/node-baidu-segmentation",
+      "gitCommit": "65ead07cbccf0cead86c2842bcc99b1fd7796371"
+    }
+  }
+}

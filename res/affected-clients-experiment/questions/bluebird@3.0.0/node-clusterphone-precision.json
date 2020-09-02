@@ -1,0 +1,66 @@
+{
+  "[7b]test/test.js_CallExpression_5:14:5:50MaybeExplicitQuestionMatch": {
+    "questionText": "[7b] test/test.js, CallExpression at 5:14:5:50: Is the first argument an object with functions that calls their callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7b",
+    "fileName": "test/test.js",
+    "lineNumber": 5,
+    "columnNumber": 14
+  },
+  "[7b]test/test.js_CallExpression_28:15:28:55MaybeExplicitQuestionMatch": {
+    "questionText": "[7b] test/test.js, CallExpression at 28:15:28:55: Is the first argument an object with functions that calls their callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7b",
+    "fileName": "test/test.js",
+    "lineNumber": 28,
+    "columnNumber": 15
+  },
+  "[12]test/test.js_CallExpression_243:11:247:6UncertainAccPathMatch": {
+    "questionText": "[12] test/test.js, CallExpression at 243:11:247:6: Is the receiver a Bluebird promise?",
+    "answer": "Yes",
+    "patternId": "12",
+    "fileName": "test/test.js",
+    "lineNumber": 243,
+    "columnNumber": 11
+  },
+  "[12]test/test.js_CallExpression_243:11:247:6MaybeExplicitQuestionMatch": {
+    "questionText": "[12] test/test.js, CallExpression at 243:11:247:6: Is this errorhandler used to catch errors created with Promise.reject or reject callback of new Promise",
+    "answer": "Yes",
+    "patternId": "12",
+    "fileName": "test/test.js",
+    "lineNumber": 243,
+    "columnNumber": 11
+  },
+  "[12]test/test.js_CallExpression_385:11:389:6UncertainAccPathMatch": {
+    "questionText": "[12] test/test.js, CallExpression at 385:11:389:6: Is the receiver a Bluebird promise?",
+    "answer": "Yes",
+    "patternId": "12",
+    "fileName": "test/test.js",
+    "lineNumber": 385,
+    "columnNumber": 11
+  },
+  "[12]test/test.js_CallExpression_385:11:389:6MaybeExplicitQuestionMatch": {
+    "questionText": "[12] test/test.js, CallExpression at 385:11:389:6: Is this errorhandler used to catch errors created with Promise.reject or reject callback of new Promise",
+    "answer": "Yes",
+    "patternId": "12",
+    "fileName": "test/test.js",
+    "lineNumber": 385,
+    "columnNumber": 11
+  },
+  "[12]test/test.js_CallExpression_394:13:398:8UncertainAccPathMatch": {
+    "questionText": "[12] test/test.js, CallExpression at 394:13:398:8: Is the receiver a Bluebird promise?",
+    "answer": "Yes",
+    "patternId": "12",
+    "fileName": "test/test.js",
+    "lineNumber": 394,
+    "columnNumber": 13
+  },
+  "[12]test/test.js_CallExpression_394:13:398:8MaybeExplicitQuestionMatch": {
+    "questionText": "[12] test/test.js, CallExpression at 394:13:398:8: Is this errorhandler used to catch errors created with Promise.reject or reject callback of new Promise",
+    "answer": "Yes",
+    "patternId": "12",
+    "fileName": "test/test.js",
+    "lineNumber": 394,
+    "columnNumber": 13
+  }
+}

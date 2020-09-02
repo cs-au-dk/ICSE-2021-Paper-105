@@ -1,0 +1,24 @@
+[
+  {
+    "pattern": "call <commander>.on [2, 2] 0:string 1:function",
+    "question": "Is the prefix of the string 'option:'?",
+    "id": "2",
+    "benign": true,
+    "changelogDescription": "Breaking custom event listeners: --no-foo on cli now emits option:no-foo (previously option:foo)",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <commander>**.parse",
+    "id": "4",
+    "benign": true,
+    "changelogDescription": "Change to use straight quotes around strings in error messages (like 'this' instead of `this')",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call <commander>**.parse",
+    "id": "5",
+    "benign": true,
+    "changelogDescription": "Output format of --help changed",
+    "changelogId": "3"
+  }
+]

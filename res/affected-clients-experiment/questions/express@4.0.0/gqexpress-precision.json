@@ -1,0 +1,10 @@
+{
+  "[8]main.js_MemberExpression_150:12:150:22UncertainAccPathMatch": {
+    "questionText": "[8] main.js, MemberExpression at 150:12:150:22: Is the receiver an express app?",
+    "answer": "Yes",
+    "patternId": "8",
+    "fileName": "main.js",
+    "lineNumber": 150,
+    "columnNumber": 12
+  }
+}

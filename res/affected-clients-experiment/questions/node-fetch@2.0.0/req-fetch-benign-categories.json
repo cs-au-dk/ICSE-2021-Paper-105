@@ -1,0 +1,12 @@
+{
+  "3": {
+    "questionText": "Should we patch the breaking change: Major: response.text() no longer attempts to detect encoding, instead always opting for UTF-8 (per spec); use response.textConverted() for the v1 behavior",
+    "answer": "No",
+    "patternId": "3"
+  },
+  "8": {
+    "questionText": "Should we patch the breaking change: Enhance: make sure header names and values are valid in HTTP",
+    "answer": "No",
+    "patternId": "8"
+  }
+}

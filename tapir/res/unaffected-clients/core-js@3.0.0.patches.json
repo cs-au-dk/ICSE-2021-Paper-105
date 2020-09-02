@@ -1,0 +1,276 @@
+{
+  "@rrijnberk/core": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/rrijnberk-nl/core",
+      "gitCommit": "3bd7ec800a429fa17e14d2d7e037ee2aa78cac15"
+    }
+  },
+  "@lindgr3n/lindgr3n-ds": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/lindgr3n/lindgr3n-design-system",
+      "gitCommit": "66b724503e8cf74eddbcec2a7a64f1cbdcc387e9"
+    }
+  },
+  "@cargo-eth/js": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/cargo-eth/cargo-js",
+      "gitCommit": "98702d2dcc1a6687bc70d34e54c18dd43cd1a78b"
+    }
+  },
+  "react-toolbox-reelio-fork": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 1,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 2,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 3,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 4,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 5,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 6,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 7,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 3,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 5,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 7,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 9,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 11,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 13,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 15,
+        "classification": "39",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/react-toolbox/react-toolbox",
+      "gitCommit": "50b523821cfa116b5e13b9296e0f3d60677f90e1"
+    }
+  },
+  "steam-game-ui": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/meishaFE/steam-game-ui",
+      "gitCommit": "bce8ba3305ed97521f22b9aea0c8edf259f5e51f"
+    }
+  },
+  "cordova-ravey": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/rave-init.js",
+        "lineNumber": 3,
+        "classification": "37",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/impactmass/cordova-rave",
+      "gitCommit": "f63a378d69d223184fc6ac00f3068597b3f62fb5"
+    }
+  },
+  "vue-music-notation": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/jherr/vue-music-notation",
+      "gitCommit": "2236943ffc0c699086fac2be38f7dc6b4f6ab6f0"
+    }
+  },
+  "@cdssnc/gcui": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/cds-snc/gcui",
+      "gitCommit": "2c5e0df23bc1d9260d3a0d3f58c2577438c6314e"
+    }
+  },
+  "react-toolbox-gmdb": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 1,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 2,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 3,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 4,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 5,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 6,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "components/utils/polyfills.js",
+        "lineNumber": 7,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 3,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 5,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 7,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 9,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 11,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 13,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/polyfills.js",
+        "lineNumber": 15,
+        "classification": "39",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/react-toolbox/react-toolbox",
+      "gitCommit": "50b523821cfa116b5e13b9296e0f3d60677f90e1"
+    }
+  },
+  "fa-normalize": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "dist/lib/fa-normalize.js",
+        "lineNumber": 4,
+        "classification": "39",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/arta-tm/fa-normalize",
+      "gitCommit": "033c9a2e81ba857d93e69987dee5378724127f77"
+    }
+  }
+}

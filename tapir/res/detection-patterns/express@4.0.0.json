@@ -1,0 +1,132 @@
+[
+  {
+    "pattern": "read <express>?**.headerSent",
+    "id": "2a",
+    "changelogDescription": "remove connect and connect's patches except for charset handling",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <express>?**.on [2, 2] 0:\"header\" 1:function",
+    "id": "2b",
+    "changelogDescription": "remove connect and connect's patches except for charset handling",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <express>?**.setHeader 0:\"Set-Cookie\" 1:{string,array}",
+    "id": "2c",
+    "changelogDescription": "remove connect and connect's patches except for charset handling",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <express>.{bodyParser,json,urlencoded}",
+    "id": "3a",
+    "changelogDescription": "remove bodyParser middelware",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call <express>.{compress,timeout,cookieParser,cookieSession,csrf,errorHandler,session,methodOverride,logger,responseTime,favicon,directory,vhost}",
+    "id": "4",
+    "changelogDescription": "remove all bundled middleware except static",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "read <express>.createServer",
+    "id": "6",
+    "changelogDescription": "remove express.createServer() - it has been deprecated for a long time. Use express()",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <express>?**.configure [1, 1]",
+    "id": "7",
+    "changelogDescription": "remove app.configure - use logic in your own app code",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <express>?**.configure [2, 2]",
+    "id": "7b",
+    "changelogDescription": "remove app.configure - use logic in your own app code",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "read <express>?**.router",
+    "id": "8",
+    "changelogDescription": "remove app.router - is removed",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "read <express>.basicAuth",
+    "id": "9",
+    "changelogDescription": "remove req.auth - use basic-auth instead",
+    "comment": "Couldn't find req.auth in documentation for express 3, but found basicAuth middleware which was removed in the update",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "read <express>?**.{acceptedCharsets,acceptedLanguages}",
+    "id": "10",
+    "changelogDescription": "remove req.accepted* - use req.accepts*() instead",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "call <express>?.location [1, 1] 0:string",
+    "question": "Is the argument a relative URL?",
+    "id": "11",
+    "changelogDescription": "res.location - relative URL resolution is removed",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "write <express>?**.charset",
+    "id": "12",
+    "changelogDescription": "remove res.charset - include the charset in the content type when using res.set()",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "read <express>()?**.route",
+    "id": "13",
+    "changelogDescription": "change app.route -> app.mountpath when mounting an express app in another express app",
+    "changelogId": "11"
+  },
+  {
+    "pattern": "read <express>?**.{acceptsEncoding,acceptsCharset,acceptsLanguage}",
+    "id": "15",
+    "changelogDescription": "change req.accepts* -> req.accepts*s - i.e. req.acceptsEncoding -> req.acceptsEncodings",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "read <express>?**.params",
+    "id": "16",
+    "benign": true,
+    "changelogDescription": "change req.params is now an object instead of an array",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "call <express>?**.locals",
+    "id": "17",
+    "changelogDescription": "change res.locals is no longer a function. It is a plain js object. Treat it as such.",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "call <express>?**.{acceptsCharset,acceptsLanguage}",
+    "id": "19",
+    "changelogDescription": "refactor req.accepts* with accepts",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "call <express>?**.is",
+    "id": "20",
+    "benign": true,
+    "changelogDescription": "refactor req.is with type-is",
+    "changelogId": "16"
+  },
+  {
+    "pattern": "read <express>?**.routes",
+    "id": "100",
+    "changelogDescription": "Removed app.routes",
+    "changelogId": "17"
+  },
+  {
+    "pattern": "read <express>.mime",
+    "id": "101",
+    "changelogDescription": "express.mime is removed. Use express.static.mime",
+    "changelogId": "18"
+  }
+]

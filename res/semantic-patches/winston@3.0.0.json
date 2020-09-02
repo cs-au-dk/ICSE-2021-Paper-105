@@ -1,0 +1,313 @@
+[
+  {
+    "pattern": "call <winston>.Logger",
+    "uncertainAccPathQuestion": "Is the function being called winston.Logger?",
+    "transform": {
+      "pattern": "$base.createLogger($args)"
+    },
+    "id": "1",
+    "changelogDescription": "winston.Logger has been replaced with winston.createLogger.",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "readO <winston>.Logger",
+    "uncertainAccPathQuestion": "Is the property being read winston.Logger?",
+    "transform": {
+      "pattern": "$base.createLogger().constructor.__proto__"
+    },
+    "id": "1b",
+    "changelogDescription": "winston.Logger has been replaced with winston.createLogger.",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <winston>.setLevels",
+    "uncertainAccPathQuestion": "Is the receiver a winston logger?",
+    "transform": {
+      "status": "NO_GENERAL_PATCH"
+    },
+    "id": "2",
+    "changelogDescription": "winston.setLevels has been removed. Levels are frozen at the time of Logger creation.",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "readO <winston>.transports.Memory",
+    "uncertainAccPathQuestion": "Is the receiver winston.transports?",
+    "transform": {
+      "pattern": "$base.Stream"
+    },
+    "id": "4a",
+    "changelogDescription": "winston.transports.Memory was removed. Use any Node.js stream.Writeable with a large highWaterMark instance instead.",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "call <winston>.transports.Memory [0, 0]",
+    "uncertainAccPathQuestion": "Is the receiver winston.transports?",
+    "transform": {
+      "pattern": "$base.Stream({stream: new <stream>.Writable()})"
+    },
+    "id": "4b",
+    "changelogDescription": "winston.transports.Memory was removed. Use any Node.js stream.Writeable with a large highWaterMark instance instead.",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "call <winston>.transports.Memory [1, 1]",
+    "uncertainAccPathQuestion": "Is the receiver winston.transports?",
+    "transform": {
+      "pattern": "$base.Stream(Object.assign({stream: new <stream>.Writable()}), (function(opts) {\n      const newOpts = {};\n      const formatArray = [];\n      const formatOptions = {\n        stringify: () => <winston>.format((info) => { info.message = JSON.stringify(info.message); })(),\n        formatter: () => <winston>.format((info) => { info.message = opts.formatter(Object.assign(info, opts)); })(),\n        json: () => <winston>.format.json(),\n        raw: () => <winston>.format.json(),\n        label: () => <winston>.format.label(opts.label),\n        logstash: () => <winston>.format.logstash(),\n        prettyPrint: () => <winston>.format.prettyPrint({depth: opts.depth || 2}),\n        colorize: () => <winston>.format.colorize({level: opts.colorize === true || opts.colorize === 'level', all: opts.colorize === 'all', message: opts.colorize === 'message'}),\n        timestamp: () => <winston>.format.timestamp(),\n        align: () => <winston>.format.align(),\n        showLevel: () => <winston>.format((info) => { info.message = info.level + ': ' + info.message; })()\n      }\n      Object.keys(opts).filter(k => !formatOptions.hasOwnProperty(k)).forEach((k) => { newOpts[k] = opts[k]; });\n      Object.keys(opts).filter(k => formatOptions.hasOwnProperty(k) && formatOptions[k]).forEach(k => formatArray.push(formatOptions[k]()));\n      newOpts.format = <winston>.format.combine(...formatArray);\n      return newOpts;\n    })($1))"
+    },
+    "id": "4c",
+    "changelogDescription": "winston.transports.Memory was removed. Use any Node.js stream.Writeable with a large highWaterMark instance instead.",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "read <winston>.Transport",
+    "uncertainAccPathQuestion": "Is the receiver winston?",
+    "transform": {
+      "pattern": "<winston-transport>"
+    },
+    "id": "5",
+    "changelogDescription": "When writing transports use winston-transport instead of winston.Transport.",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <winston>.transports.Console [0, 0]",
+    "uncertainAccPathQuestion": "Is the receiver winston.transports?",
+    "transform": {
+      "pattern": "$callee({stderrLevels: ['error', 'debug']})"
+    },
+    "id": "7",
+    "benign": true,
+    "changelogDescription": "In winston.transports.Console, output for all log levels are now sent to stdout by default. - stderrLevels option now defaults to []. - debugStdout option has been removed.",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <winston>.transports.Console [1, 1]",
+    "uncertainAccPathQuestion": "Is the receiver winston.transports?",
+    "transform": {
+      "pattern": "$callee(((opts) => Object.assign({}, opts, opts.stderrLevels ? {} : {stderrLevels: opts.debugStdout ? ['error'] : ['error', 'debug']}))($1))"
+    },
+    "id": "7b",
+    "benign": true,
+    "changelogDescription": "In winston.transports.Console, output for all log levels are now sent to stdout by default. - stderrLevels option now defaults to []. - debugStdout option has been removed.",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <winston>.transports.Console [2, 2]",
+    "uncertainAccPathQuestion": "Is the receiver winston.transports?",
+    "transform": {
+      "pattern": "$callee(((opts) => Object.assign({}, opts, opts.stderrLevels ? {} : {stderrLevels: opts.debugStdout ? ['error'] : ['error', 'debug']}))($1), $2)"
+    },
+    "id": "7c",
+    "benign": true,
+    "changelogDescription": "In winston.transports.Console, output for all log levels are now sent to stdout by default. - stderrLevels option now defaults to []. - debugStdout option has been removed.",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <winston>.Container [0, 0]",
+    "uncertainAccPathQuestion": "Is the receiver winston?",
+    "transform": {
+      "pattern": "$callee({\n    transports: [\n      new winston.transports.Console({\n        level: 'silly',\n        colorize: false\n      })\n    ]\n  })"
+    },
+    "id": "10",
+    "changelogDescription": "winston.Container instances no longer have default Console transports",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "call <winston>.Container [1, 1]",
+    "uncertainAccPathQuestion": "Is the receiver winston?",
+    "question": "Does the options object NOT include transports?",
+    "transform": {
+      "pattern": "$callee(Object.assign($1, {\n    transports: [\n      new winston.transports.Console({\n        level: 'silly',\n        colorize: false\n      })\n    ]\n  }))"
+    },
+    "id": "10a",
+    "changelogDescription": "winston.Container instances no longer have default Console transports",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "read <winston>.Container()?**.add",
+    "uncertainAccPathQuestion": "Is the receiver a winston Container?",
+    "transform": {
+      "pattern": "$callee($1, (((opts) => {\n  const existing = opts.transports || $base.options.transports;\n  opts.transports = existing ? existing.slice() : [];\n  Object.keys(opts).forEach(function (key) {\n    if (key === 'transports' || key === 'filters' || key === 'rewriters') {\n      return;\n    }\n\n    var name = key[0].toUpperCase() + key.slice(1);\n\n    if (!<winston>.transports[name]) {\n      throw new Error('Cannot add unknown transport: ' + name);\n    }\n\n    var namedOptions = opts[key];\n    namedOptions.id = $1;\n    opts.transports.push(new (<winston>.transports[name])(namedOptions));\n  });\n})()))"
+    },
+    "id": "11",
+    "changelogDescription": "winston.Container.prototype.add no longer does crazy options parsing. Implementation inspired by segmentio/winston-logger",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "call <winston>?**.{info,warn,error} [2, 2] 1:function",
+    "uncertainAccPathQuestion": "Is the receiver a winston logger?",
+    "transform": {
+      "status": "NO_GENERAL_PATCH"
+    },
+    "id": "13a",
+    "changelogDescription": "winston.Logger.log and level-specific methods (.info, .error, etc) no longer accepts a callback. The vast majority of use cases for this feature was folks awaiting all logging to complete, not just a single logging message. To accomplish this:",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "call <winston>?**.log [3, 3] 2:function",
+    "uncertainAccPathQuestion": "Is the receiver a winston logger?",
+    "transform": {
+      "status": "NO_GENERAL_PATCH"
+    },
+    "id": "13b",
+    "changelogDescription": "winston.Logger.log and level-specific methods (.info, .error, etc) no longer accepts a callback. The vast majority of use cases for this feature was folks awaiting all logging to complete, not just a single logging message. To accomplish this:",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "call <winston>?**.add [1, 1] 0:function",
+    "uncertainAccPathQuestion": "Is the receiver a winston logger?",
+    "transform": {
+      "pattern": "$callee(new $1())"
+    },
+    "id": "14",
+    "changelogDescription": "winston.Logger.add no longer accepts prototypes / classes. Pass an instance of our transport instead.",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "call <winston>?**.add [2, 2] 0:function",
+    "uncertainAccPathQuestion": "Is the receiver a winston logger?",
+    "transformQuestion": "Is the first argument one of winston.transports.{File,Console,Http} and the second argument an object containing formatting options?",
+    "transform": {
+      "pattern": {
+        "Yes": "$callee(new $1((function(opts) {\n      const newOpts = {};\n      const formatArray = [];\n      const formatOptions = {\n        stringify: () => <winston>.format((info) => { info.message = JSON.stringify(info.message); })(),\n        formatter: () => <winston>.format((info) => { info.message = opts.formatter(Object.assign(info, opts)); })(),\n        json: () => <winston>.format.json(),\n        raw: () => <winston>.format.json(),\n        label: () => <winston>.format.label(opts.label),\n        logstash: () => <winston>.format.logstash(),\n        prettyPrint: () => <winston>.format.prettyPrint({depth: opts.depth || 2}),\n        colorize: () => <winston>.format.colorize({level: opts.colorize === true || opts.colorize === 'level', all: opts.colorize === 'all', message: opts.colorize === 'message'}),\n        timestamp: () => <winston>.format.timestamp(),\n        align: () => <winston>.format.align(),\n        showLevel: () => <winston>.format((info) => { info.message = info.level + ': ' + info.message; })()\n      }\n      Object.keys(opts).filter(k => !formatOptions.hasOwnProperty(k)).forEach((k) => { newOpts[k] = opts[k]; });\n      Object.keys(opts).filter(k => formatOptions.hasOwnProperty(k) && formatOptions[k]).forEach(k => formatArray.push(formatOptions[k]()));\n      newOpts.format = <winston>.format.combine(...formatArray);\n      return newOpts;\n    })($2)))",
+        "No": "$callee(new $1($2))"
+      }
+    },
+    "id": "14a",
+    "changelogDescription": "winston.Logger.add no longer accepts prototypes / classes. Pass an instance of our transport instead.",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "call <winston>?**.stream [1, 1]",
+    "uncertainAccPathQuestion": "Is the receiver a winston logger?",
+    "question": "Is the transport option set?",
+    "transform": {
+      "pattern": "(((opts) => {\n    const transport = $base.transports[opts.transport]\n    delete opts.transport;\n    if (transport && transport.stream)\n        return transport.stream(opts);\n    return $callee(opts);\n})())"
+    },
+    "id": "18",
+    "changelogDescription": "Logger.prototype.stream - options.transport is removed. Use the transport instance on the logger directly.",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "call <winston>?**.query [2, 2] 1:function",
+    "uncertainAccPathQuestion": "Is the receiver a winston logger?",
+    "question": "Is the transport option set?",
+    "transform": {
+      "pattern": "(((opts) => {\n    const transport = $base.transports[opts.transport.toLowerCase()]\n    if (opts.query) {\n        opts.query = transport.formatQuery(Object.assign({}, opts.query));\n    }\n\n    transport.query(opts, function (err, results) {\n        if (err) {\n            return $2(err);\n        }\n        $2(null, transport.formatResults(results, opts.format));\n    });\n})($1))"
+    },
+    "id": "19",
+    "changelogDescription": "Logger.prototype.query - options.transport is removed. Use the transport instance on the logger directly.",
+    "changelogId": "11"
+  },
+  {
+    "pattern": "read <winston>.exception",
+    "uncertainAccPathQuestion": "Is the receiver winston?",
+    "transform": {
+      "pattern": "$base.ExceptionHandler()"
+    },
+    "id": "21",
+    "changelogDescription": "winston.exception has been removed. Use: const exception = winston.ExceptionHandler();",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "readO <winston>.hash",
+    "uncertainAccPathQuestion": "Is the receiver winston?",
+    "transform": {
+      "pattern": "((str) => <crypto>.createHash('sha1').update(str).digest('hex'))"
+    },
+    "id": "24a",
+    "changelogDescription": "winston.hash was removed.",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "call <winston>.hash",
+    "uncertainAccPathQuestion": "Is the receiver winston?",
+    "transform": {
+      "pattern": "<crypto>.createHash('sha1').update($1).digest('hex')"
+    },
+    "id": "24b",
+    "changelogDescription": "winston.hash was removed.",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "readO <winston>.common.pad",
+    "uncertainAccPathQuestion": "Is the receiver winston.common?",
+    "transform": {
+      "pattern": "((n) => n < 10 ? '0' + n.toString(10) : n.toString(10))"
+    },
+    "id": "25a",
+    "changelogDescription": "winston.common.pad was removed.",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "call <winston>.common.pad",
+    "uncertainAccPathQuestion": "Is the receiver winston.common?",
+    "transform": {
+      "pattern": "($1 < 10 ? '0' + $1.toString(10) : $1.toString(10))"
+    },
+    "id": "25b",
+    "changelogDescription": "winston.common.pad was removed.",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "read <winston>.common.serialize",
+    "uncertainAccPathQuestion": "Is the receiver winston.common?",
+    "transform": {
+      "pattern": "<winston-compat>.serialize"
+    },
+    "id": "26",
+    "changelogDescription": "winston.common.serialized was removed (use winston-compat).",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "read <winston>.common.log",
+    "uncertainAccPathQuestion": "Is the receiver winston.common?",
+    "transform": {
+      "pattern": "<winston-compat>.log"
+    },
+    "id": "27",
+    "changelogDescription": "winston.common.log was removed (use winston-compat).",
+    "changelogId": "16"
+  },
+  {
+    "pattern": "call <winston>.transports.{File,Console,Http} [1, 1]",
+    "uncertainAccPathQuestion": "Is the receiver winston.transports?",
+    "question": "Does the options argument include formatting options?",
+    "id": "29",
+    "transform": {
+      "pattern": "new $callee((function(opts) {\n      const newOpts = {};\n      const formatArray = [];\n      const formatOptions = {\n        stringify: () => <winston>.format((info) => { info.message = JSON.stringify(info.message); })(),\n        formatter: () => <winston>.format((info) => { info.message = opts.formatter(Object.assign(info, opts)); })(),\n        json: () => <winston>.format.json(),\n        raw: () => <winston>.format.json(),\n        label: () => <winston>.format.label(opts.label),\n        logstash: () => <winston>.format.logstash(),\n        prettyPrint: () => <winston>.format.prettyPrint({depth: opts.depth || 2}),\n        colorize: () => <winston>.format.colorize({level: opts.colorize === true || opts.colorize === 'level', all: opts.colorize === 'all', message: opts.colorize === 'message'}),\n        timestamp: () => <winston>.format.timestamp(),\n        align: () => <winston>.format.align(),\n        showLevel: () => <winston>.format((info) => { info.message = info.level + ': ' + info.message; })()\n      }\n      Object.keys(opts).filter(k => !formatOptions.hasOwnProperty(k)).forEach((k) => { newOpts[k] = opts[k]; });\n      Object.keys(opts).filter(k => formatOptions.hasOwnProperty(k) && formatOptions[k]).forEach(k => formatArray.push(formatOptions[k]()));\n      newOpts.format = <winston>.format.combine(...formatArray);\n      return newOpts;\n    })($1))"
+    },
+    "changelogDescription": "Removed winston.transports.{File,Console,Http} formatting options",
+    "changelogId": "17"
+  },
+  {
+    "pattern": "read <winston>?**.{rewriters,filters}",
+    "uncertainAccPathQuestion": "Is the receiver a winston logger?",
+    "transform": {
+      "status": "UNEXPRESSIBLE_PATCH"
+    },
+    "id": "30",
+    "changelogDescription": "Migrating filters and rewriters to formats in winston@3",
+    "changelogId": "18"
+  },
+  {
+    "pattern": "read <winston>?**.console",
+    "uncertainAccPathQuestion": "Is the receiver the transports object of a winston logger?",
+    "transform": {
+      "pattern": "$base.filter(transport => transport instanceof <winston>.transports.Console)[0]"
+    },
+    "id": "100",
+    "changelogDescription": "Removed console property from transports",
+    "changelogId": "19"
+  },
+  {
+    "pattern": "read <winston>.config.colorize",
+    "uncertainAccPathQuestion": "Is the receiver winston.config?",
+    "transform": {
+      "pattern": "winston.format.colorize().colorize"
+    },
+    "id": "101",
+    "changelogDescription": "winston.config.colorize is removed",
+    "changelogId": "20"
+  }
+]

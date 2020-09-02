@@ -1,0 +1,18 @@
+{
+  "[26a]lib/database.js_CallExpression_36:19:38:8MaybeExplicitQuestionMatch": {
+    "questionText": "[26a] lib/database.js, CallExpression at 36:19:38:8: Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "lib/database.js",
+    "lineNumber": 36,
+    "columnNumber": 19
+  },
+  "[26a]lib/database.js_CallExpression_36:19:38:8TransformQuestion": {
+    "questionText": "[26a] lib/database.js, CallExpression at 36:19:38:8: Is the option useMongoClient enabled?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "lib/database.js",
+    "lineNumber": 36,
+    "columnNumber": 19
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "[44b]lib/predicate.js_CallExpression_47:84:47:95MaybeExplicitQuestionMatch": {
+    "questionText": "[44b] lib/predicate.js, CallExpression at 47:84:47:95: Is the the first argument NOT a collection of numbers?",
+    "answer": "Yes",
+    "patternId": "44b",
+    "fileName": "lib/predicate.js",
+    "lineNumber": 47,
+    "columnNumber": 84
+  },
+  "[44b]lib/predicate.js_CallExpression_47:134:47:145MaybeExplicitQuestionMatch": {
+    "questionText": "[44b] lib/predicate.js, CallExpression at 47:134:47:145: Is the the first argument NOT a collection of numbers?",
+    "answer": "Yes",
+    "patternId": "44b",
+    "fileName": "lib/predicate.js",
+    "lineNumber": 47,
+    "columnNumber": 134
+  },
+  "[48]lib/predicate.js_CallExpression_47:134:47:145MaybeExplicitQuestionMatch": {
+    "questionText": "[48] lib/predicate.js, CallExpression at 47:134:47:145: Can the function be called with an empty array?",
+    "answer": "No",
+    "patternId": "48",
+    "fileName": "lib/predicate.js",
+    "lineNumber": 47,
+    "columnNumber": 134
+  },
+  "[48a]lib/predicate.js_CallExpression_47:84:47:95MaybeExplicitQuestionMatch": {
+    "questionText": "[48a] lib/predicate.js, CallExpression at 47:84:47:95: Can the function be called with an empty array?",
+    "answer": "No",
+    "patternId": "48a",
+    "fileName": "lib/predicate.js",
+    "lineNumber": 47,
+    "columnNumber": 84
+  },
+  "[59a]lib/predicate.js_CallExpression_47:84:47:95DisjunctionMatchResult": {
+    "questionText": "[59a] lib/predicate.js, CallExpression at 47:84:47:95: is arg opts of type string OR is arg opts of type object",
+    "answer": "No",
+    "patternId": "59a",
+    "fileName": "lib/predicate.js",
+    "lineNumber": 47,
+    "columnNumber": 84
+  },
+  "[59a]lib/predicate.js_CallExpression_47:134:47:145DisjunctionMatchResult": {
+    "questionText": "[59a] lib/predicate.js, CallExpression at 47:134:47:145: is arg opts of type string OR is arg opts of type object",
+    "answer": "No",
+    "patternId": "59a",
+    "fileName": "lib/predicate.js",
+    "lineNumber": 47,
+    "columnNumber": 134
+  },
+  "[7b]lib/validated-map.js_CallExpression_38:11:38:50UncertainAccPathMatch": {
+    "questionText": "[7b] lib/validated-map.js, CallExpression at 38:11:38:50: Is the receiver lodash?",
+    "answer": "Yes",
+    "patternId": "7b",
+    "fileName": "lib/validated-map.js",
+    "lineNumber": 38,
+    "columnNumber": 11
+  },
+  "[7b]lib/validated-map.js_CallExpression_38:11:38:50MaybeArgTypeMatch": {
+    "questionText": "[7b] lib/validated-map.js, CallExpression at 38:11:38:50: is arg iteratee of type function",
+    "answer": "Yes",
+    "patternId": "7b",
+    "fileName": "lib/validated-map.js",
+    "lineNumber": 38,
+    "columnNumber": 11
+  },
+  "[7j]lib/validated-map.js_CallExpression_42:11:42:67UncertainAccPathMatch": {
+    "questionText": "[7j] lib/validated-map.js, CallExpression at 42:11:42:67: Is the function being called from lodash?",
+    "answer": "Yes",
+    "patternId": "7j",
+    "fileName": "lib/validated-map.js",
+    "lineNumber": 42,
+    "columnNumber": 11
+  },
+  "[41a]lib/validated-map.js_CallExpression_38:11:38:50UncertainAccPathMatch": {
+    "questionText": "[41a] lib/validated-map.js, CallExpression at 38:11:38:50: Is the function being called from lodash?",
+    "answer": "Yes",
+    "patternId": "41a",
+    "fileName": "lib/validated-map.js",
+    "lineNumber": 38,
+    "columnNumber": 11
+  },
+  "[41a]lib/validated-map.js_CallExpression_38:11:38:50MaybeArgTypeMatch": {
+    "questionText": "[41a] lib/validated-map.js, CallExpression at 38:11:38:50: is arg iteratee of type string",
+    "answer": "No",
+    "patternId": "41a",
+    "fileName": "lib/validated-map.js",
+    "lineNumber": 38,
+    "columnNumber": 11
+  }
+}

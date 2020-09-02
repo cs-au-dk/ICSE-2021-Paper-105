@@ -1,0 +1,31 @@
+[
+  {
+    "name": "absolute-node-api",
+    "repo": {
+      "gitURL": "https://github.com/absolute-community/absolute-node-api",
+      "gitCommit": "1a6d9213d6d9bae3fba8cd174538f4450282c585"
+    }
+  },
+  {
+    "name": "spy-debugger",
+    "repo": {
+      "gitURL": "https://github.com/wuchangming/spy-debugger",
+      "gitCommit": "8f91506a479811eabd517fd5fc5f2bb72c097892"
+    }
+  },
+  {
+    "name": "bootstrap-treeview",
+    "excludedFolders": ["dist", "tests/lib"],
+    "repo": {
+      "gitURL": "https://github.com/cqkd6381/bootstrap-treeview",
+      "gitCommit": "832fdb3fc32a2bca7d8cca47b9634ef06dc8dd6e"
+    }
+  },
+  {
+    "name": "life_star",
+    "repo": {
+      "gitURL": "https://github.com/LivelyKernel/life_star",
+      "gitCommit": "abf3d30bd25faba43b9d21363d35edda183b41b8"
+    }
+  }
+]

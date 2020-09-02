@@ -1,0 +1,1283 @@
+[
+  {
+    "pattern": "call <lodash>()**.{times,forEach,forEachRight,forIn,forInRight,forOwn,forOwnRight}().value [0, 0]",
+    "uncertainAccPathQuestion": "Is the receiver a lodash implicit chain?",
+    "transform": {
+      "pattern": "$base"
+    },
+    "id": "4",
+    "changelogDescription": "Made _#times, _#forEach, _#forIn, _#forOwn, & their right-forms implicitly end chain sequences",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "import lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/*",
+    "transform": {
+      "pattern": "lodash/#2"
+    },
+    "id": "5",
+    "changelogDescription": "Removed category names from module paths",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/collection>,<lodash>()**,<lodash>.chain()**}.pluck",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.map"
+    },
+    "id": "6",
+    "changelogDescription": "Removed _.pluck in favor of _.map with iteratee shorthand",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "import lodash/collection/pluck",
+    "transform": {
+      "pattern": "lodash/map"
+    },
+    "id": "6b",
+    "changelogDescription": "Removed _.pluck in favor of _.map with iteratee shorthand",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/utility>}.{callback,iteratee} [2, 2]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1.bind($2))"
+    },
+    "id": "7a",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,unzipWith,zipWith,tap,thru,countBy,every,all,filter,select,find,findLast,forEach,each,forEachRight,forEachRight,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,cloneDeep,max,min,sum,findKey,findLastKey,forIn,forInRight,forOwn,forOwnRight,mapKeys,mapValues,omit,pick,times} [3, 3] 1:function",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2.bind($3))"
+    },
+    "id": "7b",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call {<lodash>(),<lodash>.chain()}**.{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,unzipWith,zipWith,tap,thru,countBy,every,all,filter,select,find,findLast,forEach,each,forEachRight,forEachRight,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,cloneDeep,max,min,sum,findKey,findLastKey,forIn,forInRight,forOwn,forOwnRight,mapKeys,mapValues,omit,pick,times} [2, 2] 0:function",
+    "uncertainAccPathQuestion": "Is the receiver a lodash chain?",
+    "transform": {
+      "pattern": "$callee($1.bind($2))"
+    },
+    "id": "7d",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,unzipWith,zipWith,tap,thru,countBy,every,all,filter,select,find,findLast,forEach,each,forEachRight,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,cloneDeep,max,min,sum,findKey,findLastKey,forIn,forInRight,forOwn,forOwnRight,mapKeys,mapValues,omit,pick,times}> [3, 3] 1:function",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2.bind($3))"
+    },
+    "id": "7e",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <lodash/utility/{callback,iteratee}> [2, 2]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1.bind($2))"
+    },
+    "id": "7f",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{sortedIndex,sortedLastIndex,uniq,unique,clone,isEqual,eq,isMatch,transform} [4, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2, $3.bind($4))"
+    },
+    "id": "7c",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{reduce,foldl,reduceRight,foldr} [4, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2.bind($4), $3)"
+    },
+    "id": "7j",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{assign,extend,merge} [4, 99]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Does this call use a customizer function and a thisArg for that customizer?",
+    "transform": {
+      "pattern": "$callee($args[0, -2], $-2.bind($-1))"
+    },
+    "id": "7h",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{sortedIndex,sortedLastIndex,uniq,unique,clone,isEqual,eq,isMatch,transform}> [4, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2, $3.bind($4))"
+    },
+    "id": "7g",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{reduce,foldl,reduceRight,foldr}> [4, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2.bind($4), $3)"
+    },
+    "id": "7k",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{assign,extend,merge}> [4, 99]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Does this call use a customizer function?",
+    "transform": {
+      "pattern": "$callee($args[0, -2], $-2.bind($-1))"
+    },
+    "id": "7i",
+    "changelogDescription": "Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/math>}.{max,min} [2, 3]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.$prop[max => maxBy, min => minBy]($args)"
+    },
+    "id": "8",
+    "changelogDescription": "Split _.max & _.min into _.maxBy & _.minBy",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <lodash/math/{min,max}> [2, 3]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/math/#1[min => minBy, max => maxBy]>($args)"
+    },
+    "id": "8b",
+    "changelogDescription": "Split _.max & _.min into _.maxBy & _.minBy",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "read <lodash>.support",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "($base.support || ($base.support = {}))"
+    },
+    "id": "9",
+    "changelogDescription": "Removed _.support",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/collections>}.findWhere",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.find"
+    },
+    "id": "10",
+    "changelogDescription": "Removed _.findWhere in favor of _.find with iteratee shorthand",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "import lodash/collections/findWhere",
+    "transform": {
+      "pattern": "lodash/find"
+    },
+    "id": "10b",
+    "changelogDescription": "Removed _.findWhere in favor of _.find with iteratee shorthand",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/collections>}.where",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.filter"
+    },
+    "id": "11",
+    "changelogDescription": "Removed _.where in favor of _.filter with iteratee shorthand",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "import lodash/collections/where",
+    "transform": {
+      "pattern": "lodash/filter"
+    },
+    "id": "11b",
+    "changelogDescription": "Removed _.where in favor of _.filter with iteratee shorthand",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/collections>}.indexBy",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.keyBy"
+    },
+    "id": "14",
+    "changelogDescription": "Renamed _.indexBy to _.keyBy",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "import lodash/collections/indexBy",
+    "transform": {
+      "pattern": "lodash/keyBy"
+    },
+    "id": "14b",
+    "changelogDescription": "Renamed _.indexBy to _.keyBy",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/collections>}.invoke",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.invokeMap"
+    },
+    "id": "15",
+    "changelogDescription": "Renamed _.invoke to _.invokeMap",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "import lodash/collections/invoke",
+    "transform": {
+      "pattern": "lodash/invokeMap"
+    },
+    "id": "15b",
+    "changelogDescription": "Renamed _.invoke to _.invokeMap",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/function>}.modArgs",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.overArgs"
+    },
+    "id": "16",
+    "changelogDescription": "Renamed _.modArgs to _.overArgs",
+    "changelogId": "11"
+  },
+  {
+    "pattern": "import lodash/function/modArgs",
+    "transform": {
+      "pattern": "lodash/overArgs"
+    },
+    "id": "16b",
+    "changelogDescription": "Renamed _.modArgs to _.overArgs",
+    "changelogId": "11"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/string>}.{padLeft,padRight}",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.$prop[padLeft => padStart, padRight => padEnd]"
+    },
+    "id": "17",
+    "changelogDescription": "Renamed _.padLeft & _.padRight to _.padStart & _.padEnd",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "import lodash/string/{padLeft,padRight}",
+    "transform": {
+      "pattern": "lodash/#new1",
+      "replacements": [
+        {
+          "source": "#1",
+          "newName": "#new1",
+          "substitutes": [
+            "padLeft => padStart",
+            "padRight => padEnd"
+          ]
+        }
+      ]
+    },
+    "id": "17b",
+    "changelogDescription": "Renamed _.padLeft & _.padRight to _.padStart & _.padEnd",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/object>}.pairs",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.toPairs"
+    },
+    "id": "18",
+    "changelogDescription": "Renamed _.pairs to _.toPairs",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "import lodash/object/pairs",
+    "transform": {
+      "pattern": "lodash/toPairs"
+    },
+    "id": "18b",
+    "changelogDescription": "Renamed _.pairs to _.toPairs",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/array>}.rest",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.tail"
+    },
+    "id": "19",
+    "changelogDescription": "Renamed _.rest to _.tail",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "import lodash/array/rest",
+    "transform": {
+      "pattern": "lodash/tail"
+    },
+    "id": "19b",
+    "changelogDescription": "Renamed _.rest to _.tail",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/function>}.restParam",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.rest"
+    },
+    "id": "20",
+    "changelogDescription": "Renamed _.restParam to _.rest",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "import lodash/function/restParam",
+    "transform": {
+      "pattern": "lodash/rest"
+    },
+    "id": "20b",
+    "changelogDescription": "Renamed _.restParam to _.rest",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/collections>}.sortByOrder",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.orderBy"
+    },
+    "id": "21",
+    "changelogDescription": "Renamed _.sortByOrder to _.orderBy",
+    "changelogId": "16"
+  },
+  {
+    "pattern": "import lodash/collections/sortByOrder",
+    "transform": {
+      "pattern": "lodash/orderBy"
+    },
+    "id": "21b",
+    "changelogDescription": "Renamed _.sortByOrder to _.orderBy",
+    "changelogId": "16"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/string>}.{trimLeft,trimRight}",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.$prop[trimLeft => trimStart, trimRight => trimEnd]"
+    },
+    "id": "22",
+    "changelogDescription": "Renamed _.trimLeft & _.trimRight to _.trimStart & _.trimEnd",
+    "changelogId": "17"
+  },
+  {
+    "pattern": "import lodash/string/{trimLeft,trimRight}",
+    "transform": {
+      "pattern": "lodash/#new1",
+      "replacements": [
+        {
+          "source": "#1",
+          "newName": "#new1",
+          "substitutes": [
+            "trimLeft => trimStart",
+            "trimRight => trimEnd"
+          ]
+        }
+      ]
+    },
+    "id": "22b",
+    "changelogDescription": "Renamed _.trimLeft & _.trimRight to _.trimStart & _.trimEnd",
+    "changelogId": "17"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/string>}.trunc",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.truncate"
+    },
+    "id": "23",
+    "changelogDescription": "Renamed _.trunc to _.truncate",
+    "changelogId": "18"
+  },
+  {
+    "pattern": "import lodash/string/trunc",
+    "transform": {
+      "pattern": "lodash/truncate"
+    },
+    "id": "23b",
+    "changelogDescription": "Renamed _.trunc to _.truncate",
+    "changelogId": "18"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/object>}.assign [3, 99]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Does this call to assign use a customizer function?",
+    "transform": {
+      "pattern": "$base.assignWith($args)"
+    },
+    "id": "24",
+    "COMMENT": "Could be more precise by only matching the calls where the last or the second last argument is of type function",
+    "changelogDescription": "Split _.assign & _.assignIn into _.assignWith & _.assignInWith",
+    "changelogId": "19"
+  },
+  {
+    "pattern": "call <lodash/object/assign> [3, 99]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Does this call to assign use a customizer function?",
+    "transform": {
+      "pattern": "<lodash/assignWith>($args)"
+    },
+    "id": "24b",
+    "COMMENT": "Could be more precise by only matching the calls where the last or the second last argument is of type function",
+    "changelogDescription": "Split _.assign & _.assignIn into _.assignWith & _.assignInWith",
+    "changelogId": "19"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/lang>}.cloneDeep [2, 3]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.cloneDeepWith($args)"
+    },
+    "id": "25e",
+    "COMMENT": "The part of classification 25 regarding clone is handled in category 52",
+    "changelogDescription": "Split _.clone & _.cloneDeep into _.cloneWith & _.cloneDeepWith",
+    "changelogId": "20"
+  },
+  {
+    "pattern": "call <lodash/lang/cloneDeep> [2, 3]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/cloneDeepWith>($args)"
+    },
+    "id": "25f",
+    "changelogDescription": "Split _.clone & _.cloneDeep into _.cloneWith & _.cloneDeepWith",
+    "changelogId": "20"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/array>}.{indexOf,lastIndexOf} [3, 3] 2:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($3 ? $base.$prop[indexOf => sortedIndexOf, lastIndexOf => sortedLastIndexOf]($1, $2) \n\t: $callee($args))"
+    },
+    "id": "26",
+    "changelogDescription": "Split _.indexOf & _.lastIndexOf into _.sortedIndexOf & _.sortedLastIndexOf",
+    "changelogId": "21"
+  },
+  {
+    "pattern": "call <lodash/array/{indexOf,lastIndexOf}> [3, 3] 2:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($3 ? <lodash/array/#1[indexOf => sortedIndexOf, lastIndexOf => sortedLastIndexOf]>($1, $2) \n\t: $callee($args))"
+    },
+    "id": "26b",
+    "changelogDescription": "Split _.indexOf & _.lastIndexOf into _.sortedIndexOf & _.sortedLastIndexOf",
+    "changelogId": "21"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/object>}.invert [2, 2]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? $base.invertBy($1) : $callee($1))"
+    },
+    "id": "27",
+    "changelogDescription": "Split _.invert into _.invertBy (see v4.1.0)",
+    "changelogId": "22"
+  },
+  {
+    "pattern": "call <lodash/object/invert> [2, 2]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? <lodash/invertBy>($1) : $callee($1))"
+    },
+    "id": "27b",
+    "changelogDescription": "Split _.invert into _.invertBy (see v4.1.0)",
+    "changelogId": "22"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/lang>}.isEqual [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.isEqualWith($args)"
+    },
+    "id": "28",
+    "changelogDescription": "Split _.isEqual into _.isEqualWith",
+    "changelogId": "23"
+  },
+  {
+    "pattern": "call <lodash/lang/isEqual> [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/lang/isEqualWith>($args)"
+    },
+    "id": "28b",
+    "changelogDescription": "Split _.isEqual into _.isEqualWith",
+    "changelogId": "23"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/lang>}.isMatch [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.isMatchWith($args)"
+    },
+    "id": "29",
+    "changelogDescription": "Split _.isMatch into _.isMatchWith",
+    "changelogId": "24"
+  },
+  {
+    "pattern": "call <lodash/lang/isMatch> [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/lang/isMatchWith>($args)"
+    },
+    "id": "29b",
+    "changelogDescription": "Split _.isMatch into _.isMatchWith",
+    "changelogId": "24"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/object>}.merge [3, 99]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Does this use of <lodash>.merge use a customizer function?",
+    "transform": {
+      "pattern": "$base.mergeWith($args)"
+    },
+    "id": "30",
+    "changelogDescription": "Split _.merge into _.mergeWith",
+    "changelogId": "25"
+  },
+  {
+    "pattern": "call <lodash/object/merge> [3, 99]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Does this use of <lodash>.merge use a customizer function?",
+    "transform": {
+      "pattern": "<lodash/object/mergeWith>($args)"
+    },
+    "id": "30b",
+    "changelogDescription": "Split _.merge into _.mergeWith",
+    "changelogId": "25"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/object>}.{omit,pick} [2, 2] 1:function",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.$prop[omit => omitBy, pick => pickBy]($args)"
+    },
+    "id": "31",
+    "changelogDescription": "Split _.omit & _.pick into _.omitBy & _.pickBy",
+    "changelogId": "26"
+  },
+  {
+    "pattern": "call <lodash/object/{omit,pick}> [2, 2] 1:function",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/#1[omit => omitBy, pick => pickBy]>($args)"
+    },
+    "id": "31b",
+    "changelogDescription": "Split _.omit & _.pick into _.omitBy & _.pickBy",
+    "changelogId": "26"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/collections>}.sample [2, 2]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.sampleSize($args)"
+    },
+    "id": "32",
+    "changelogDescription": "Split _.sample into _.sampleSize",
+    "changelogId": "27"
+  },
+  {
+    "pattern": "call <lodash/collections/sample> [2, 2]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/sampleSize>($args)"
+    },
+    "id": "32b",
+    "changelogDescription": "Split _.sample into _.sampleSize",
+    "changelogId": "27"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/array>}.sortedIndex [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.sortedIndexBy($args)"
+    },
+    "id": "33",
+    "changelogDescription": "Split _.sortedIndex into _.sortedIndexBy",
+    "changelogId": "28"
+  },
+  {
+    "pattern": "call <lodash/array/sortedIndex> [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/sortedIndexBy>($args)"
+    },
+    "id": "33b",
+    "changelogDescription": "Split _.sortedIndex into _.sortedIndexBy",
+    "changelogId": "28"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/array>}.sortedLastIndex [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.sortedLastIndexBy($args)"
+    },
+    "id": "34",
+    "changelogDescription": "Split _.sortedLastIndex into _.sortedLastIndexBy",
+    "changelogId": "29"
+  },
+  {
+    "pattern": "call <lodash/array/sortedLastIndex> [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/sortedLastIndexBy>($args)"
+    },
+    "id": "34b",
+    "changelogDescription": "Split _.sortedLastIndex into _.sortedLastIndexBy",
+    "changelogId": "29"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/math>}.sum [2, 3]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.sumBy($args)"
+    },
+    "id": "35",
+    "changelogDescription": "Split _.sum into _.sumBy",
+    "changelogId": "30"
+  },
+  {
+    "pattern": "call <lodash/math/sum> [2, 3]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/sumBy>($args)"
+    },
+    "id": "35b",
+    "changelogDescription": "Split _.sum into _.sumBy",
+    "changelogId": "30"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/array>}.uniq [2, 2] 1:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? $base.sortedUniq : $callee)($1)"
+    },
+    "id": "36a",
+    "changelogDescription": "Split _.uniq into _.sortedUniq, _.sortedUniqBy, & _.uniqBy",
+    "changelogId": "31"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/array>}.uniq [2, 3] 1:function",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.uniqBy($args)"
+    },
+    "id": "36b",
+    "changelogDescription": "Split _.uniq into _.sortedUniq, _.sortedUniqBy, & _.uniqBy",
+    "changelogId": "31"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/array>}.uniq [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? $base.sortedUniqBy : $base.uniqBy)($1, $args[2,])"
+    },
+    "id": "36c",
+    "changelogDescription": "Split _.uniq into _.sortedUniq, _.sortedUniqBy, & _.uniqBy",
+    "changelogId": "31"
+  },
+  {
+    "pattern": "call <lodash/array/uniq> [2, 2] 1:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? <lodash/sortedUniq> : $callee)($1)"
+    },
+    "id": "36d",
+    "changelogDescription": "Split _.uniq into _.sortedUniq, _.sortedUniqBy, & _.uniqBy",
+    "changelogId": "31"
+  },
+  {
+    "pattern": "call <lodash/array/uniq> [2, 3] 1:function",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/uniqBy>($args)"
+    },
+    "id": "36e",
+    "changelogDescription": "Split _.uniq into _.sortedUniq, _.sortedUniqBy, & _.uniqBy",
+    "changelogId": "31"
+  },
+  {
+    "pattern": "call <lodash/array/uniq> [3, 4]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? <lodash/sortedUniqBy> : <lodash/uniqBy>)($1, $args[2,])"
+    },
+    "id": "36f",
+    "changelogDescription": "Split _.uniq into _.sortedUniq, _.sortedUniqBy, & _.uniqBy",
+    "changelogId": "31"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/array>}.zipObject [1, 1]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.fromPairs($args)"
+    },
+    "id": "37",
+    "changelogDescription": "Split _.zipObject into _.fromPairs",
+    "changelogId": "32"
+  },
+  {
+    "pattern": "call <lodash/array/zipObject> [1, 1]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/fromPairs>($args)"
+    },
+    "id": "37b",
+    "changelogDescription": "Split _.zipObject into _.fromPairs",
+    "changelogId": "32"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/collections>}.sortByAll",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.sortBy($args)"
+    },
+    "id": "38",
+    "changelogDescription": "Absorbed _.sortByAll into _.sortBy",
+    "changelogId": "33"
+  },
+  {
+    "pattern": "call <lodash/collections/sortByAll>",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/sortBy>($args)"
+    },
+    "id": "38b",
+    "changelogDescription": "Absorbed _.sortByAll into _.sortBy",
+    "changelogId": "33"
+  },
+  {
+    "pattern": "read <lodash/collections>.at",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "<lodash/object>.at"
+    },
+    "id": "39",
+    "changelogDescription": "Changed the category of _.at to “Object”",
+    "changelogId": "34"
+  },
+  {
+    "pattern": "import lodash/collections/at",
+    "transform": {
+      "pattern": "lodash/at"
+    },
+    "id": "39b",
+    "changelogDescription": "Changed the category of _.at to “Object”",
+    "changelogId": "34"
+  },
+  {
+    "pattern": "read <lodash/function>.bindAll",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "<lodash/util>.bindAll"
+    },
+    "id": "40",
+    "changelogDescription": "Changed the category of _.bindAll to “Util”",
+    "changelogId": "35"
+  },
+  {
+    "pattern": "import lodash/function/bindAll",
+    "transform": {
+      "pattern": "lodash/bindAll"
+    },
+    "id": "40b",
+    "changelogDescription": "Changed the category of _.bindAll to “Util”",
+    "changelogId": "35"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,countBy,every,all,filter,select,find,detect,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,max,min,findKey,findLastKey,mapValues,uniq,unique} [3, 3] 1:string",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, [$2, $3])"
+    },
+    "id": "41a",
+    "changelogDescription": "Changed _.matchesProperty shorthand to an array of [path, srcValue]",
+    "changelogId": "36"
+  },
+  {
+    "pattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,countBy,every,all,filter,select,find,detect,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,max,min,findKey,findLastKey,mapValues,uniq,unique}> [3, 3] 1:string",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, [$2, $3])"
+    },
+    "id": "41c",
+    "changelogDescription": "Changed _.matchesProperty shorthand to an array of [path, srcValue]",
+    "changelogId": "36"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/array>}.{sortedIndex,uniq,unique} [4, 4] 2:string",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2, [$3, $4])"
+    },
+    "id": "41b",
+    "changelogDescription": "Changed _.matchesProperty shorthand to an array of [path, srcValue]",
+    "changelogId": "36"
+  },
+  {
+    "pattern": "call <lodash/array/{sortedIndex,uniq,unique}> [4, 4] 2:string",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2, [$3, $4])"
+    },
+    "id": "41d",
+    "changelogDescription": "Changed _.matchesProperty shorthand to an array of [path, srcValue]",
+    "changelogId": "36"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/object>}.merge",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Does any of the source properties have the value undefined and the property does not exist at the destination",
+    "transform": {
+      "pattern": "((() => {\n\tconst origKeys = Object.keys($1);\n\tconst res = $callee($args);\n\tObject.keys(res)\n\t\t.filter(k => res[k] === undefined && !origKeys.includes(k))\n\t\t.forEach(k => delete res[k])\n\treturn res;\n})())"
+    },
+    "id": "42",
+    "benign": true,
+    "changelogDescription": "Enabled _.merge to assign undefined if the destination property doesn’t exist",
+    "changelogId": "37"
+  },
+  {
+    "pattern": "call <lodash/object/merge>",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Does any of the source properties have the value undefined and the property does not exist at the destination",
+    "transform": {
+      "pattern": "((() => {\n\tconst origKeys = Object.keys($1);\n\tconst res = $callee($args);\n\tObject.keys(res)\n\t\t.filter(k => res[k] === undefined && !origKeys.includes(k))\n\t\t.forEach(k => delete res[k])\n\treturn res;\n})())"
+    },
+    "id": "42b",
+    "benign": true,
+    "changelogDescription": "Enabled _.merge to assign undefined if the destination property doesn’t exist",
+    "changelogId": "37"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/collections>}.{sortBy,countBy,groupBy,indexBy} [2, 3] 1:{function2,function3}",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "((() => { function* getIndex() {\n\t\tconst keys = Object.keys($1);\n\t\t for (var k of keys) {\n\t\t\t yield k; \n\t\t}}\n\treturn $callee($1, val => ($2).call(this, val, getIndex()));})())"
+    },
+    "id": "43",
+    "changelogDescription": "Made “By” methods like _.groupBy & _.sortBy provide a single param to iteratees",
+    "changelogId": "38"
+  },
+  {
+    "pattern": "call <lodash/collections/{sortBy,countBy,groupBy,indexBy}> [2, 3] 1:{function2,function3}",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "((() => { function* getIndex() {\n\t\t const keys = Object.keys($1);\n\t\t for (var k of keys) {\n\t\t\t yield k;\n\t\t }}\n\treturn $callee($1, val => ($2).call(this, val, getIndex()));})())"
+    },
+    "id": "43b",
+    "changelogDescription": "Made “By” methods like _.groupBy & _.sortBy provide a single param to iteratees",
+    "changelogId": "38"
+  },
+  {
+    "pattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2, 3]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Is the the first argument NOT a collection of numbers?",
+    "id": "44",
+    "transform": {
+      "pattern": "$callee(<lodash>.map($1, v => +v), $args[1,])"
+    },
+    "changelogDescription": "Made _.add, _.max, _.min, & _.sum no longer coerce values to numbers",
+    "changelogId": "39"
+  },
+  {
+    "pattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [1, 1]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Is the the first argument NOT a collection of numbers?",
+    "id": "44b",
+    "transform": {
+      "pattern": "$callee(<lodash>.map($1, v => +v))"
+    },
+    "changelogDescription": "Made _.add, _.max, _.min, & _.sum no longer coerce values to numbers",
+    "changelogId": "39"
+  },
+  {
+    "pattern": "call {{<lodash>,<lodash/math>}.add,<lodash/math/{add}>}",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Is the the first argument NOT a collection of numbers?",
+    "id": "44c",
+    "transform": {
+      "pattern": "$callee(+$1, +$2)"
+    },
+    "changelogDescription": "Made _.add, _.max, _.min, & _.sum no longer coerce values to numbers",
+    "changelogId": "39"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/string>}.capitalize [0, 1]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.upperFirst($args)"
+    },
+    "id": "45",
+    "changelogDescription": "Made _.capitalize uppercase the first character & lowercase the rest (see _.upperFirst)",
+    "changelogId": "40"
+  },
+  {
+    "pattern": "call <lodash/string/capitalize> [0, 1]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/upperFirst>($args)"
+    },
+    "id": "45b",
+    "changelogDescription": "Made _.capitalize uppercase the first character & lowercase the rest (see _.upperFirst)",
+    "changelogId": "40"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/lang>}.eq",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.isEqual"
+    },
+    "id": "46",
+    "changelogDescription": "Made _.eq its own method instead of an alias for _.isEqual",
+    "changelogId": "41"
+  },
+  {
+    "pattern": "call <lodash/lang/eq>",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/isEqual>($args)"
+    },
+    "id": "46b",
+    "changelogDescription": "Made _.eq its own method instead of an alias for _.isEqual",
+    "changelogId": "41"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/object>}.{methods,functions}",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.functionsIn($args)"
+    },
+    "id": "47",
+    "changelogDescription": "Made _.functions return only own method names",
+    "changelogId": "42"
+  },
+  {
+    "pattern": "call <lodash/object/functions>",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/functionsIn>($args)"
+    },
+    "id": "47b",
+    "changelogDescription": "Made _.functions return only own method names",
+    "changelogId": "42"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/math>}.max",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Can the function be called with an empty array?",
+    "transform": {
+      "pattern": "($callee($args) || -Infinity)"
+    },
+    "id": "48",
+    "changelogDescription": "Made _.max & _.min return undefined when passed an empty array",
+    "changelogId": "43"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/math>}.min",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Can the function be called with an empty array?",
+    "transform": {
+      "pattern": "($callee($args) || Infinity)"
+    },
+    "id": "48a",
+    "changelogDescription": "Made _.max & _.min return undefined when passed an empty array",
+    "changelogId": "43"
+  },
+  {
+    "pattern": "call <lodash/math/max>",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Can the function be called with an empty array?",
+    "transform": {
+      "pattern": "($callee($args) || -Infinity)"
+    },
+    "id": "48b",
+    "changelogDescription": "Made _.max & _.min return undefined when passed an empty array",
+    "changelogId": "43"
+  },
+  {
+    "pattern": "call <lodash/math/min>",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Can the function be called with an empty array?",
+    "transform": {
+      "pattern": "($callee($args) || Infinity)"
+    },
+    "id": "48c",
+    "changelogDescription": "Made _.max & _.min return undefined when passed an empty array",
+    "changelogId": "43"
+  },
+  {
+    "pattern": "call <lodash>()**.words",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($args).value()"
+    },
+    "id": "49",
+    "changelogDescription": "Made _.words chainable by default",
+    "changelogId": "44"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/lang>}.clone [3, 4] 1:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? $base.cloneDeepWith($1, $args[2,]) : $base.cloneWith($1, $args[2,]))"
+    },
+    "id": "52a",
+    "changelogDescription": "Removed isDeep params from _.clone & _.flatten",
+    "changelogId": "45"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/lang>}.clone [2, 3] 1:function",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.cloneWith($args)"
+    },
+    "id": "52b",
+    "changelogDescription": "Removed isDeep params from _.clone & _.flatten",
+    "changelogId": "45"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/lang>}.clone [2, 2] 1:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? $base.cloneDeepWith($1) : $base.cloneWith($1))"
+    },
+    "id": "52c",
+    "changelogDescription": "Removed isDeep params from _.clone & _.flatten",
+    "changelogId": "45"
+  },
+  {
+    "pattern": "call <lodash/lang/clone> [3, 4] 1:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? <lodash/cloneDeepWith>($1, $args[2,]) \n\t: <lodash/cloneWith>($1, $args[2,]))"
+    },
+    "id": "52d",
+    "changelogDescription": "Removed isDeep params from _.clone & _.flatten",
+    "changelogId": "45"
+  },
+  {
+    "pattern": "call <lodash/lang/clone> [2, 3] 1:function",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/lang/cloneWith>($args)"
+    },
+    "id": "52e",
+    "changelogDescription": "Removed isDeep params from _.clone & _.flatten",
+    "changelogId": "45"
+  },
+  {
+    "pattern": "call <lodash/lang/clone> [2, 2] 1:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "($2 ? <lodash/cloneDeep>($1) : $callee($1))"
+    },
+    "id": "52f",
+    "changelogDescription": "Removed isDeep params from _.clone & _.flatten",
+    "changelogId": "45"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/function>}.bindAll [1, 1]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, <lodash>.keysIn($1).filter(k => typeof $1[k] === 'function'))"
+    },
+    "id": "54",
+    "changelogDescription": "Removed support for binding all methods by default from _.bindAll",
+    "changelogId": "46"
+  },
+  {
+    "pattern": "call <lodash/function/bindAll> [1, 1]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, <lodash>.keysIn($1).filter(k => typeof $1[k] === 'function'))"
+    },
+    "id": "54b",
+    "changelogDescription": "Removed support for binding all methods by default from _.bindAll",
+    "changelogId": "46"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/{function,utility}>}.{debounce,throttle} [3, 3] 2:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2, {leading: $3})"
+    },
+    "id": "56",
+    "changelogDescription": "Dropped boolean options param support in _.debounce, _.mixin, & _.throttle",
+    "changelogId": "47"
+  },
+  {
+    "pattern": "call <lodash/{function,utility}/{debounce,throttle}> [3, 3] 2:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2, {leading: $3})"
+    },
+    "id": "56b",
+    "changelogDescription": "Dropped boolean options param support in _.debounce, _.mixin, & _.throttle",
+    "changelogId": "47"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/{function,utility}>}.mixin [3, 3] 2:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2, {chain: $3})"
+    },
+    "id": "56c",
+    "changelogDescription": "Dropped boolean options param support in _.debounce, _.mixin, & _.throttle",
+    "changelogId": "47"
+  },
+  {
+    "pattern": "call <lodash/{function,utility}/mixin> [3, 3] 2:boolean",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($1, $2, {chain: $3})"
+    },
+    "id": "56d",
+    "changelogDescription": "Dropped boolean options param support in _.debounce, _.mixin, & _.throttle",
+    "changelogId": "47"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/collections>}.sortOrderBy [3, 3]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$base.orderBy($1, $2, $3.map(e => e ? 'asc' : 'desc'))"
+    },
+    "id": "57",
+    "changelogDescription": "Dropped support for boolean orders param in _.orderBy",
+    "changelogId": "48"
+  },
+  {
+    "pattern": "call <lodash/collections/sortOrderBy> [3, 3]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "<lodash/orderBy>($1, $2, $3.map(e => e ? 'asc' : 'desc'))"
+    },
+    "id": "57b",
+    "changelogDescription": "Dropped support for boolean orders param in _.orderBy",
+    "changelogId": "48"
+  },
+  {
+    "pattern": "call {<lodash>,<lodash/string>}.escapeRegExp [1, 1]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Do the argument contain '/'?",
+    "transform": {
+      "pattern": "$callee($args).replace('/', '\\/')"
+    },
+    "id": "58",
+    "benign": true,
+    "changelogDescription": "Made _.escapeRegExp align to the defunct ES7 proposal",
+    "changelogId": "49"
+  },
+  {
+    "pattern": "call <lodash/string/escapeRegExp> [1, 1]",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "question": "Do the argument contain '/'?",
+    "transform": {
+      "pattern": "$callee($args).replace('/', '\\/')"
+    },
+    "id": "58b",
+    "benign": true,
+    "changelogDescription": "Made _.escapeRegExp align to the defunct ES7 proposal",
+    "changelogId": "49"
+  },
+  {
+    "pattern": "call <lodash>.{max,min,sum} 0:{string,object}",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee($base.values($1), $args[1,])"
+    },
+    "id": "59a",
+    "changelogDescription": "Made _.max, _.min, & _.sum support arrays only",
+    "changelogId": "50"
+  },
+  {
+    "pattern": "call <lodash/math>.{max,min,sum} 0:{string,object}",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee(<lodash/values>($1), $args[1,])"
+    },
+    "id": "59c",
+    "changelogDescription": "Made _.max, _.min, & _.sum support arrays only",
+    "changelogId": "50"
+  },
+  {
+    "pattern": "call <lodash/math/{max,min,sum}> 0:{string,object}",
+    "uncertainAccPathQuestion": "Is the function being called from lodash?",
+    "transform": {
+      "pattern": "$callee(<lodash/values>($1), $args[1,])"
+    },
+    "id": "59b",
+    "changelogDescription": "Made _.max, _.min, & _.sum support arrays only",
+    "changelogId": "50"
+  },
+  {
+    "pattern": "read {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>,<lodash>()**,<lodash>.chain()**}.{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,object,#run,select,unique}",
+    "uncertainAccPathQuestion": "Is the receiver lodash?",
+    "transform": {
+      "pattern": "$base.$prop[all => every, any => some, backflow => flowRight, callback => iteratee, collect => map, compose => flowRight, contains => includes, detect => find, foldl => reduce, foldr => reduceRight, include => includes, inject => reduce, methods => functions, object => fromPairs, run => value, select => filter, unique => uniq]"
+    },
+    "id": "61",
+    "changelogDescription": "17 aliases removed",
+    "changelogId": "51"
+  },
+  {
+    "pattern": "import lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,object,#run,select,unique}",
+    "transform": {
+      "pattern": "lodash/#new2",
+      "replacements": [
+        {
+          "source": "#2",
+          "newName": "#new2",
+          "substitutes": [
+            "all => every",
+            "any => some",
+            "backflow => flowRight",
+            "callback => iteratee",
+            "collect => map",
+            "compose => flowRight",
+            "contains => includes",
+            "detect => find",
+            "foldl => reduce",
+            "foldr => reduceRight",
+            "include => includes",
+            "inject => reduce",
+            "methods => functions",
+            "object => fromPairs",
+            "select => filter",
+            "unique => uniq"
+          ]
+        }
+      ]
+    },
+    "id": "61b",
+    "changelogDescription": "17 aliases removed",
+    "changelogId": "51"
+  }
+]

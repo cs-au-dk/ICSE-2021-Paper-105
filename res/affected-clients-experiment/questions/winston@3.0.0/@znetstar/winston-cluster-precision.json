@@ -1,0 +1,66 @@
+{
+  "[13b]lib/winston-cluster.js_CallExpression_71:16:71:50UncertainAccPathMatch": {
+    "questionText": "[13b] lib/winston-cluster.js, CallExpression at 71:16:71:50: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/winston-cluster.js",
+    "lineNumber": 71,
+    "columnNumber": 16
+  },
+  "[13b]lib/winston-cluster.js_CallExpression_71:16:71:50MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/winston-cluster.js, CallExpression at 71:16:71:50: is arg meta of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/winston-cluster.js",
+    "lineNumber": 71,
+    "columnNumber": 16
+  },
+  "[13b]lib/winston-cluster.js_CallExpression_73:16:73:49UncertainAccPathMatch": {
+    "questionText": "[13b] lib/winston-cluster.js, CallExpression at 73:16:73:49: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/winston-cluster.js",
+    "lineNumber": 73,
+    "columnNumber": 16
+  },
+  "[13b]lib/winston-cluster.js_CallExpression_73:16:73:49MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/winston-cluster.js, CallExpression at 73:16:73:49: is arg meta of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/winston-cluster.js",
+    "lineNumber": 73,
+    "columnNumber": 16
+  },
+  "[13b]lib/winston-cluster.js_CallExpression_97:16:97:57UncertainAccPathMatch": {
+    "questionText": "[13b] lib/winston-cluster.js, CallExpression at 97:16:97:57: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/winston-cluster.js",
+    "lineNumber": 97,
+    "columnNumber": 16
+  },
+  "[13b]lib/winston-cluster.js_CallExpression_97:16:97:57MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/winston-cluster.js, CallExpression at 97:16:97:57: is arg meta of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/winston-cluster.js",
+    "lineNumber": 97,
+    "columnNumber": 16
+  },
+  "[29]example.js_NewExpression_15:12:17:14UncertainAccPathMatch": {
+    "questionText": "[29] example.js, NewExpression at 15:12:17:14: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "example.js",
+    "lineNumber": 15,
+    "columnNumber": 12
+  },
+  "[29]example.js_NewExpression_15:12:17:14MaybeExplicitQuestionMatch": {
+    "questionText": "[29] example.js, NewExpression at 15:12:17:14: Does the options argument include formatting options?",
+    "answer": "No",
+    "patternId": "29",
+    "fileName": "example.js",
+    "lineNumber": 15,
+    "columnNumber": 12
+  }
+}

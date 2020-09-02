@@ -1,0 +1,470 @@
+{
+  "@aptoma/lambda-papertrail-logger": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 43,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 46,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 46,
+        "classification": "29",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 84,
+        "classification": "14",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/aptoma/lambda-papertrail-logger",
+      "gitCommit": "f3f8d49b03b26ae3a0cfe98f4c60cffd47d9fdd0"
+    }
+  },
+  "@markonis/cloudwatch-logger": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 77,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 33,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 33,
+        "classification": "29",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 117,
+        "classification": "13b",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 39,
+        "classification": "29",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/Markonis/cloudwatch-logger",
+      "gitCommit": "9311e25970739050ee0b236c9641a73455eefd1a"
+    }
+  },
+  "node-registry-winston": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 36,
+        "classification": "1",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/vladaspasic/node-registry-winston",
+      "gitCommit": "d5fcf2d340b9a91b11677a794c46815911cf66d5"
+    }
+  },
+  "node-proxy-service": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/jaebradley/node-proxy-service",
+      "gitCommit": "d75dfdef3212ee94acbaaafa36ed6d2a8f5a5cd8"
+    }
+  },
+  "node-fontdump": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["dist"],
+    "patches": [
+      {
+        "file": "src/fontdump.js",
+        "lineNumber": 157,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "src/fontdump.js",
+        "lineNumber": 230,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "src/fontdump.js",
+        "lineNumber": 368,
+        "classification": "13a",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/FarbDev/node-fontdump",
+      "gitCommit": "6508bac4acf15fae97f771dd3f02c0ef971921b9"
+    }
+  },
+  "nc-vault-env": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/loggerFactory.js",
+        "lineNumber": 7,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "src/loggerFactory.js",
+        "lineNumber": 17,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/loggerFactory.js",
+        "lineNumber": 17,
+        "classification": "29",
+        "truePositive": true
+      },
+      {
+        "file": "bin/cli.js",
+        "lineNumber": 40,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "bin/cli.js",
+        "lineNumber": 41,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "bin/cli.js",
+        "lineNumber": 46,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "bin/cli.js",
+        "lineNumber": 53,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "bin/cli.js",
+        "lineNumber": 78,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "bin/cli.js",
+        "lineNumber": 94,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "bin/cli.js",
+        "lineNumber": 102,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "bin/cli.js",
+        "lineNumber": 103,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "src/VaultEnv.js",
+        "lineNumber": 90,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "src/VaultEnv.js",
+        "lineNumber": 93,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "src/VaultEnv.js",
+        "lineNumber": 132,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "src/VaultEnv.js",
+        "lineNumber": 150,
+        "classification": "13a",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/namecheap/nc-vault-env",
+      "gitCommit": "4b102428bb5a6315212af549a511a3c79118c10c"
+    }
+  },
+  "express-rest-file-server": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["lib"],
+    "patches": [
+      {
+        "file": "src/log.js",
+        "lineNumber": 1,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "src/log.js",
+        "lineNumber": 3,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "src/server.js",
+        "lineNumber": 107,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "src/server.js",
+        "lineNumber": 109,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "src/log.js",
+        "lineNumber": 25,
+        "classification": "100",
+        "truePositive": true
+      },
+      {
+        "file": "src/log.js",
+        "lineNumber": 11,
+        "classification": "101",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/bitIO/express-rest-file-server",
+      "gitCommit": "4bc170489d00823600022cd7c251920105f087ec"
+    }
+  },
+  "@jobandtalent/gabbs": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/logger.js",
+        "lineNumber": 11,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "src/logger.js",
+        "lineNumber": 13,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/logger.js",
+        "lineNumber": 13,
+        "classification": "29",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/jobandtalent/gabbs",
+      "gitCommit": "6c025af3a6c3db305a7353a67f2acdaab550cff5"
+    }
+  },
+  "glacejs-utils": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["docs"],
+    "patches": [
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 26,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "lib/download.js",
+        "lineNumber": 90,
+        "classification": "11",
+        "truePositive": false
+      },
+      {
+        "file": "lib/download.js",
+        "lineNumber": 124,
+        "classification": "11",
+        "truePositive": false
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 28,
+        "classification": "11",
+        "truePositive": false
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 32,
+        "classification": "11",
+        "truePositive": false
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 47,
+        "classification": "11",
+        "truePositive": false
+      },
+      {
+        "file": "lib/pool.js",
+        "lineNumber": 73,
+        "classification": "11",
+        "truePositive": false
+      },
+      {
+        "file": "lib/download.js",
+        "lineNumber": 90,
+        "classification": "14",
+        "truePositive": false
+      },
+      {
+        "file": "lib/download.js",
+        "lineNumber": 124,
+        "classification": "14",
+        "truePositive": false
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 28,
+        "classification": "14",
+        "truePositive": true
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 32,
+        "classification": "14",
+        "truePositive": true
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 47,
+        "classification": "14",
+        "truePositive": true
+      },
+      {
+        "file": "lib/pool.js",
+        "lineNumber": 73,
+        "classification": "14",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/glacejs/glace-utils",
+      "gitCommit": "5c988525dbe287f6700a50ffb25da5e4f7dd2b86"
+    }
+  },
+  "xcode-build-tools": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "add-keys.js",
+        "lineNumber": 82,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "add-keys.js",
+        "lineNumber": 98,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "create-ipa.js",
+        "lineNumber": 26,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "create-release.js",
+        "lineNumber": 105,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "dev-version-xcode.js",
+        "lineNumber": 33,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "ensure-login-keychain.js",
+        "lineNumber": 43,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "find-identity-name.js",
+        "lineNumber": 19,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "remove-keys.js",
+        "lineNumber": 24,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "remove-keys.js",
+        "lineNumber": 33,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "upload-apk.js",
+        "lineNumber": 102,
+        "classification": "13a",
+        "truePositive": false
+      },
+      {
+        "file": "upload-ipa.js",
+        "lineNumber": 104,
+        "classification": "13a",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/ekreative/xcode-build-tools",
+      "gitCommit": "394d51c053d0f1ddc783db35a1aad67bd7f8dc9f"
+    }
+  }
+}

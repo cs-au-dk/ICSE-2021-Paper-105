@@ -1,0 +1,18 @@
+{
+  "[10]src/organisms/reaction-list.js_MemberExpression_39:11:39:29UncertainAccPathMatch": {
+    "questionText": "[10] src/organisms/reaction-list.js, MemberExpression at 39:11:39:29: Is the receiver a Map?",
+    "answer": "Yes",
+    "patternId": "10",
+    "fileName": "src/organisms/reaction-list.js",
+    "lineNumber": 39,
+    "columnNumber": 11
+  },
+  "[10b]src/organisms/reaction-list.js_MemberExpression_39:11:39:29UncertainAccPathMatch": {
+    "questionText": "[10b] src/organisms/reaction-list.js, MemberExpression at 39:11:39:29: Is the receiver a Set?",
+    "answer": "No",
+    "patternId": "10b",
+    "fileName": "src/organisms/reaction-list.js",
+    "lineNumber": 39,
+    "columnNumber": 11
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "ibt-telemetry",
+    "repo": {
+      "gitURL": "https://github.com/SkippyZA/ibt-telemetry",
+      "gitCommit": "13e7bcb69596d6c7fef7d814e2d93250f1be2bc8"
+    }
+  },
+  {
+    "name": "korn",
+    "repo": {
+      "gitURL": "https://github.com/SamVerschueren/korn",
+      "gitCommit": "b0a0ef2f3561a841fc8185276317f8edc2d4b4fd"
+    }
+  },
+  {
+    "name": "@msg-labs/test-module",
+    "repo": {
+      "gitURL": "https://github.com/msg-labs/test-module",
+      "gitCommit": "748b2d402c27d0a7bf8223228de5ee05ecdde8f3"
+    }
+  },
+  {
+    "name": "electron-spellchecker-provider",
+    "repo": {
+      "gitURL": "https://github.com/kevinlims/electron-spellchecker-provider",
+      "gitCommit": "d26556f14d3c39ea5ef9e06dfc6f274d6c266bfc"
+    }
+  },
+  {
+    "name": "rxsync",
+    "repo": {
+      "gitURL": "https://github.com/vlasovilya/rxsync",
+      "gitCommit": "cd755f2f51620ef906a0a32f19daea13e7f89984"
+    }
+  },
+  {
+    "name": "ale-ov2500-node",
+    "repo": {
+      "gitURL": "https://github.com/ale-de/ale-ov2500-node",
+      "gitCommit": "fa6457445921e700faf520d26398901d361efc23"
+    }
+  },
+  {
+    "name": "cbf",
+    "repo": {
+      "gitURL": "https://github.com/joshuatvernon/cbf",
+      "gitCommit": "6098899aaac91118acc5e47c4e2b643b91d4dc78"
+    }
+  },
+  {
+    "name": "rxjs-grpc-minimal",
+    "repo": {
+      "gitURL": "https://github.com/nmccready/rxjs-grpc-minimal",
+      "gitCommit": "41c7162a9be5c267d77ca7ca37c5130a91de0faf"
+    }
+  },
+  {
+    "name": "little-scraper",
+    "repo": {
+      "gitURL": "https://github.com/Restuta/little-scraper",
+      "gitCommit": "6742643ecb3b1476c641a2823f157be1e3444eac"
+    }
+  },
+  {
+    "name": "contentful-cli",
+    "repo": {
+      "gitURL": "https://github.com/contentful/contentful-cli",
+      "gitCommit": "9a2416385b53d57928c9bf19c9af7658152e51f1"
+    }
+  }
+]

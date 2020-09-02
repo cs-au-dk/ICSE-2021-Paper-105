@@ -1,0 +1,26 @@
+{
+  "[13a]src/index.js_CallExpression_23:2:23:66MaybeArgTypeMatch": {
+    "questionText": "[13a] src/index.js, CallExpression at 23:2:23:66: is arg file.display_name of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "src/index.js",
+    "lineNumber": 23,
+    "columnNumber": 2
+  },
+  "[13a]src/index.js_CallExpression_62:6:62:58MaybeArgTypeMatch": {
+    "questionText": "[13a] src/index.js, CallExpression at 62:6:62:58: is arg file.filenmae of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "src/index.js",
+    "lineNumber": 62,
+    "columnNumber": 6
+  },
+  "[13a]src/index.js_CallExpression_68:8:68:72MaybeArgTypeMatch": {
+    "questionText": "[13a] src/index.js, CallExpression at 68:8:68:72: is arg file.display_name of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "src/index.js",
+    "lineNumber": 68,
+    "columnNumber": 8
+  }
+}

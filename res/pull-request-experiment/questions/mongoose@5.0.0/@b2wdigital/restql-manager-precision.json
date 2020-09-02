@@ -1,0 +1,26 @@
+{
+  "[48b]src/server/persistence/index.js_CallExpression_124:9:136:6UncertainAccPathMatch": {
+    "questionText": "[48b] src/server/persistence/index.js, CallExpression at 124:9:136:6: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "48b",
+    "fileName": "src/server/persistence/index.js",
+    "lineNumber": 124,
+    "columnNumber": 9
+  },
+  "[26a]src/server/persistence/models.js_CallExpression_22:11:24:2MaybeExplicitQuestionMatch": {
+    "questionText": "[26a] src/server/persistence/models.js, CallExpression at 22:11:24:2: Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "src/server/persistence/models.js",
+    "lineNumber": 22,
+    "columnNumber": 11
+  },
+  "[26a]src/server/persistence/models.js_CallExpression_22:11:24:2TransformQuestion": {
+    "questionText": "[26a] src/server/persistence/models.js, CallExpression at 22:11:24:2: Is the option useMongoClient enabled?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "src/server/persistence/models.js",
+    "lineNumber": 22,
+    "columnNumber": 11
+  }
+}

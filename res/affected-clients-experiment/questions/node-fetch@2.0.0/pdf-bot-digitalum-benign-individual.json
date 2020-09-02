@@ -1,0 +1,10 @@
+{
+  "8-src/webhook.js_CallExpression_41:4:41:36": {
+    "questionText": "src/webhook.js_CallExpression_41:4:41:36: Should we patch the breaking change: Enhance: make sure header names and values are valid in HTTP",
+    "answer": "Yes",
+    "patternId": "8",
+    "fileName": "src/webhook.js",
+    "lineNumber": 41,
+    "columnNumber": 4
+  }
+}

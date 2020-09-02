@@ -1,0 +1,26 @@
+{
+  "[100]lib/Client.js_AssignmentExpression_12:4:12:18UncertainAccPathMatch": {
+    "questionText": "[100] lib/Client.js, AssignmentExpression at 12:4:12:18: Is the receiver a node-fetch request?",
+    "answer": "No",
+    "patternId": "100",
+    "fileName": "lib/Client.js",
+    "lineNumber": 12,
+    "columnNumber": 4
+  },
+  "[6]lib/fetchFactory.js_CallExpression_28:11:28:34MaybeExplicitQuestionMatch": {
+    "questionText": "[6] lib/fetchFactory.js, CallExpression at 28:11:28:34: Is the second argument a GET or HEAD Request with non-null body?",
+    "answer": "No",
+    "patternId": "6",
+    "fileName": "lib/fetchFactory.js",
+    "lineNumber": 28,
+    "columnNumber": 11
+  },
+  "[100]lib/fetchFactory.js_AssignmentExpression_25:6:25:23UncertainAccPathMatch": {
+    "questionText": "[100] lib/fetchFactory.js, AssignmentExpression at 25:6:25:23: Is the receiver a node-fetch request?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "lib/fetchFactory.js",
+    "lineNumber": 25,
+    "columnNumber": 6
+  }
+}

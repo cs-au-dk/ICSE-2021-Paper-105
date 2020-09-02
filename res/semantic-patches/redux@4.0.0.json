@@ -1,0 +1,24 @@
+[
+  {
+    "pattern": "call <redux{/**/*,}>?**.{getState,subscribe}",
+    "uncertainAccPathQuestion": "Is the receiver a redux store?",
+    "question": "Is the reducer currently dispatching?",
+    "transform": {
+      "status": "NO_GENERAL_PATCH",
+      "comment": "The change is only breaking if using redux in a way that is an anti-pattern in redux"
+    },
+    "id": "8",
+    "applicationLevelQuestion": true,
+    "changelogDescription": "Throw if getState, subscribe, or unsubscribe called while dispatching (including inside a reducer) (#1569 by @mjw56)",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "import redux/**/*",
+    "transform": {
+      "pattern": "<redux>.#2"
+    },
+    "id": "15",
+    "changelogDescription": "Bundle cjs and es formats (#2358 by @TrySound) - (direct, private imports (import createStore from 'redux/lib/createStore') will no longer work)",
+    "changelogId": "2"
+  }
+]

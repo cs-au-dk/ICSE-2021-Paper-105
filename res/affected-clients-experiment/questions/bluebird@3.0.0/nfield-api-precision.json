@@ -1,0 +1,10 @@
+{
+  "[7]api.js_CallExpression_7:14:7:51MaybeExplicitQuestionMatch": {
+    "questionText": "[7] api.js, CallExpression at 7:14:7:51: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "Yes",
+    "patternId": "7",
+    "fileName": "api.js",
+    "lineNumber": 7,
+    "columnNumber": 14
+  }
+}

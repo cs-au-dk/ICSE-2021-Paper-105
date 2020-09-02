@@ -1,0 +1,74 @@
+[
+  {
+    "name": "st-vue-cli",
+    "repo": {
+      "gitURL": "https://github.com/SHAREit-FE/st-vue-cli",
+      "gitCommit": "e312b46ab02d35d730a99578c47d5007c9a9168c"
+    }
+  },
+  {
+    "name": "@meganet/loopback-connector-redis",
+    "repo": {
+      "gitURL": "https://github.com/strongloop-community/loopback-connector-redis",
+      "gitCommit": "d68f5de674d812a850bfc734b28743973aa563d2"
+    }
+  },
+  {
+    "name": "js-fpm",
+    "repo": {
+      "gitURL": "https://github.com/SpeedPHP/js-fpm",
+      "gitCommit": "d5b7f67493bd272fe67f408ea14b5073a150abe1"
+    }
+  },
+  {
+    "name": "ui5-nwabap-deployer-core",
+    "packagePath": "packages/ui5-nwabap-deployer-core",
+    "repo": {
+      "gitURL": "https://github.com/pfefferf/ui5-nwabap-deployer",
+      "gitCommit": "61c9732830c1a84143c4a82da7467f64a7cd702b"
+    }
+  },
+  {
+    "name": "@internetarchive/dweb-transports",
+    "excludedFolders": ["dist"],
+    "repo": {
+      "gitURL": "https://github.com/internetarchive/dweb-transports",
+      "gitCommit": "ca76b3c8669c7096f87b288184012a815a4f1f9c"
+    }
+  },
+  {
+    "name": "kafka-consumer-manager",
+    "repo": {
+      "gitURL": "https://github.com/enudler/kafka-consumer-manager",
+      "gitCommit": "40f1e451fdcb39b7a0dc4604f50621076ed50925"
+    }
+  },
+  {
+    "name": "tts-cli",
+    "repo": {
+      "gitURL": "https://github.com/eheikes/tts",
+      "gitCommit": "d356daf84cd17f0e05be736e513ac7d53d022df6"
+    }
+  },
+  {
+    "name": "oe-common-mixins",
+    "repo": {
+      "gitURL": "https://github.com/EdgeVerve/oe-common-mixins",
+      "gitCommit": "ae521022c7699c3cc249c33d1c6e12dbd10c8fb7"
+    }
+  },
+  {
+    "name": "@buzuli/ops-tools",
+    "repo": {
+      "gitURL": "https://github.com/joeledwards/ops-tools",
+      "gitCommit": "b11109c190cca0ab5518de97cd09bea4d16e1a3d"
+    }
+  },
+  {
+    "name": "oe-expression",
+    "repo": {
+      "gitURL": "https://github.com/EdgeVerve/oe-expression",
+      "gitCommit": "9f5cba1afa221fc5de990d62704d2491bd1e3c93"
+    }
+  }
+]

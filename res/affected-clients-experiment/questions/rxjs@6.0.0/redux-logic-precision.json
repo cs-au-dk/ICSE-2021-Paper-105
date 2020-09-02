@@ -1,0 +1,114 @@
+{
+  "[102a]src/createLogic.js_CallExpression_244:36:244:66UncertainAccPathMatch": {
+    "questionText": "[102a] src/createLogic.js, CallExpression at 244:36:244:66: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/createLogic.js",
+    "lineNumber": 244,
+    "columnNumber": 36
+  },
+  "[21b]src/createLogicMiddleware.js_CallExpression_164:26:164:59UncertainAccPathMatch": {
+    "questionText": "[21b] src/createLogicMiddleware.js, CallExpression at 164:26:164:59: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "21b",
+    "fileName": "src/createLogicMiddleware.js",
+    "lineNumber": 164,
+    "columnNumber": 26
+  },
+  "[102a]src/createLogicMiddleware.js_CallExpression_187:24:188:38UncertainAccPathMatch": {
+    "questionText": "[102a] src/createLogicMiddleware.js, CallExpression at 187:24:188:38: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/createLogicMiddleware.js",
+    "lineNumber": 187,
+    "columnNumber": 24
+  },
+  "[102a]src/createLogicMiddleware.js_CallExpression_223:23:226:4UncertainAccPathMatch": {
+    "questionText": "[102a] src/createLogicMiddleware.js, CallExpression at 223:23:226:4: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/createLogicMiddleware.js",
+    "lineNumber": 223,
+    "columnNumber": 23
+  },
+  "[102a]src/createLogicMiddleware.js_CallExpression_227:21:228:51UncertainAccPathMatch": {
+    "questionText": "[102a] src/createLogicMiddleware.js, CallExpression at 227:21:228:51: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/createLogicMiddleware.js",
+    "lineNumber": 227,
+    "columnNumber": 21
+  },
+  "[102a]src/createLogicMiddleware.js_CallExpression_271:9:276:8UncertainAccPathMatch": {
+    "questionText": "[102a] src/createLogicMiddleware.js, CallExpression at 271:9:276:8: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/createLogicMiddleware.js",
+    "lineNumber": 271,
+    "columnNumber": 9
+  },
+  "[102a]src/logicWrapper.js_CallExpression_27:16:27:43UncertainAccPathMatch": {
+    "questionText": "[102a] src/logicWrapper.js, CallExpression at 27:16:27:43: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/logicWrapper.js",
+    "lineNumber": 27,
+    "columnNumber": 16
+  },
+  "[102a]src/logicWrapper.js_CallExpression_31:16:31:43UncertainAccPathMatch": {
+    "questionText": "[102a] src/logicWrapper.js, CallExpression at 31:16:31:43: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/logicWrapper.js",
+    "lineNumber": 31,
+    "columnNumber": 16
+  },
+  "[102a]src/logicWrapper.js_CallExpression_39:20:39:37UncertainAccPathMatch": {
+    "questionText": "[102a] src/logicWrapper.js, CallExpression at 39:20:39:37: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/logicWrapper.js",
+    "lineNumber": 39,
+    "columnNumber": 20
+  },
+  "[102a]src/logicWrapper.js_CallExpression_42:10:42:73UncertainAccPathMatch": {
+    "questionText": "[102a] src/logicWrapper.js, CallExpression at 42:10:42:73: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/logicWrapper.js",
+    "lineNumber": 42,
+    "columnNumber": 10
+  },
+  "[102a]src/logicWrapper.js_CallExpression_46:31:47:56UncertainAccPathMatch": {
+    "questionText": "[102a] src/logicWrapper.js, CallExpression at 46:31:47:56: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/logicWrapper.js",
+    "lineNumber": 46,
+    "columnNumber": 31
+  },
+  "[102a]src/logicWrapper.js_CallExpression_50:15:50:71UncertainAccPathMatch": {
+    "questionText": "[102a] src/logicWrapper.js, CallExpression at 50:15:50:71: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/logicWrapper.js",
+    "lineNumber": 50,
+    "columnNumber": 15
+  },
+  "[102a]src/logicWrapper.js_CallExpression_50:6:53:52UncertainAccPathMatch": {
+    "questionText": "[102a] src/logicWrapper.js, CallExpression at 50:6:53:52: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/logicWrapper.js",
+    "lineNumber": 50,
+    "columnNumber": 6
+  },
+  "[102a]src/utils.js_CallExpression_17:9:17:42UncertainAccPathMatch": {
+    "questionText": "[102a] src/utils.js, CallExpression at 17:9:17:42: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/utils.js",
+    "lineNumber": 17,
+    "columnNumber": 9
+  }
+}

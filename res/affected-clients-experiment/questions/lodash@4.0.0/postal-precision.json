@@ -1,0 +1,50 @@
+{
+  "[7b]lib/postal.js_CallExpression_596:8:603:17UncertainAccPathMatch": {
+    "questionText": "[7b] lib/postal.js, CallExpression at 596:8:603:17: Is the receiver lodash?",
+    "answer": "Yes",
+    "patternId": "7b",
+    "fileName": "lib/postal.js",
+    "lineNumber": 596,
+    "columnNumber": 8
+  },
+  "[56]lib/postal.js_CallExpression_250:12:255:13UncertainAccPathMatch": {
+    "questionText": "[56] lib/postal.js, CallExpression at 250:12:255:13: Is the function being called from lodash?",
+    "answer": "Yes",
+    "patternId": "56",
+    "fileName": "lib/postal.js",
+    "lineNumber": 250,
+    "columnNumber": 12
+  },
+  "[61]lib/postal.js_MemberExpression_49:45:49:68UncertainAccPathMatch": {
+    "questionText": "[61] lib/postal.js, MemberExpression at 49:45:49:68: Is the receiver lodash?",
+    "answer": "No",
+    "patternId": "61",
+    "fileName": "lib/postal.js",
+    "lineNumber": 49,
+    "columnNumber": 45
+  },
+  "[61]lib/postal.js_MemberExpression_109:26:109:31UncertainAccPathMatch": {
+    "questionText": "[61] lib/postal.js, MemberExpression at 109:26:109:31: Is the receiver lodash?",
+    "answer": "Yes",
+    "patternId": "61",
+    "fileName": "lib/postal.js",
+    "lineNumber": 109,
+    "columnNumber": 26
+  },
+  "[61]lib/postal.js_MemberExpression_582:108:582:124UncertainAccPathMatch": {
+    "questionText": "[61] lib/postal.js, MemberExpression at 582:108:582:124: Is the receiver lodash?",
+    "answer": "No",
+    "patternId": "61",
+    "fileName": "lib/postal.js",
+    "lineNumber": 582,
+    "columnNumber": 108
+  },
+  "[56b]lib/postal.lodash.js_CallExpression_273:12:278:13UncertainAccPathMatch": {
+    "questionText": "[56b] lib/postal.lodash.js, CallExpression at 273:12:278:13: Is the function being called from lodash?",
+    "answer": "Yes",
+    "patternId": "56b",
+    "fileName": "lib/postal.lodash.js",
+    "lineNumber": 273,
+    "columnNumber": 12
+  }
+}

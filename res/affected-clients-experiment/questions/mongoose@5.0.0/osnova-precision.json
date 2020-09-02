@@ -1,0 +1,10 @@
+{
+  "[26]src/modules/mongo.js_CallExpression_19:9:19:40MaybeExplicitQuestionMatch": {
+    "questionText": "[26] src/modules/mongo.js, CallExpression at 19:9:19:40: Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "answer": "Yes",
+    "patternId": "26",
+    "fileName": "src/modules/mongo.js",
+    "lineNumber": 19,
+    "columnNumber": 9
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "[3]lib/reporter/tap.js_AssignmentExpression_13:4:13:33UncertainAccPathMatch": {
+    "questionText": "[3] lib/reporter/tap.js, AssignmentExpression at 13:4:13:33: Is the receiver to the write a async queue or cargo?",
+    "answer": "No",
+    "patternId": "3",
+    "fileName": "lib/reporter/tap.js",
+    "lineNumber": 13,
+    "columnNumber": 4
+  }
+}

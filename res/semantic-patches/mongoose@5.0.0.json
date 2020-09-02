@@ -1,0 +1,210 @@
+[
+  {
+    "pattern": "write <mongoose>?**.cursor",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose collection?",
+    "transform": {
+      "status": "UNKNOWN_PATCH"
+    },
+    "id": "17",
+    "changelogDescription": "BREAKING CHANGE: always use mongoose aggregation cursor when using .aggregate().cursor() #5941",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <mongoose>?**.{pre,post} [2, 2] 0:string 1:function",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose schema?",
+    "question": "Has the model being compiled yet?",
+    "transform": {
+      "status": "UNEXPRESSIBLE_PATCH"
+    },
+    "id": "18",
+    "changelogDescription": "BREAKING CHANGE: attach query middleware when compiling model #5939",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "write <mongoose>?**.passRawResult",
+    "uncertainAccPathQuestion": "Is the receiver an options object for a findOneAndUpdate call on a mongoose model?",
+    "question": "Is the object this property is written on passed to a findOneAndUpdate call?",
+    "transform": {
+      "status": "NO_GENERAL_PATCH"
+    },
+    "id": "22",
+    "changelogDescription": "BREAKING CHANGE: remove passRawResult option for findOneAndUpdate, use rawResult #5869",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "call <mongoose>?**.validate 0:function2",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose schema?",
+    "transform": {
+      "pattern": "$callee(function (arg) {\n\treturn new Promise(resolve => {\n\t\t($1).call(this, arg, resolve);\n\t});\n}, $args[1,])"
+    },
+    "id": "23",
+    "changelogDescription": "BREAKING CHANGE: implicit async validators (based on number of function args) are removed, return a promise instead #5824",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <mongoose>?**.mapReduce",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose model?",
+    "transform": {
+      "pattern": "$callee($args[0, -1], function (errArg, resArg) {\n\t($-1).call(this, errArg, resArg.results, resArg.stats);\n});"
+    },
+    "id": "25",
+    "changelogDescription": "BREAKING CHANGE: mapReduce resolves to an object with 2 keys rather than 2 separate args #5816",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "callR <mongoose>.connect [1, 1]",
+    "uncertainAccPathQuestion": "Is the receiver mongoose?",
+    "question": "Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "id": "26",
+    "transform": {
+      "pattern": "((() => {\n\t$callee($args);\n\treturn $base;\n})())"
+    },
+    "changelogDescription": "BREAKING CHANGE: mongoose.connect() returns a promise, removed MongooseThenable #5796",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "callR <mongoose>.connect [2, 3]",
+    "uncertainAccPathQuestion": "Is the receiver mongoose?",
+    "question": "Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "transformQuestion": "Is the option useMongoClient enabled?",
+    "id": "26a",
+    "transform": {
+      "pattern": {
+        "Yes": "((() => {\n\t$callee($args);\n\treturn $base.connection;\n})())",
+        "No": "((() => {\n\t$callee($args);\n\treturn $base;\n})())"
+      }
+    },
+    "changelogDescription": "BREAKING CHANGE: mongoose.connect() returns a promise, removed MongooseThenable #5796",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "callR <mongoose>.createConnection [1, 3]",
+    "uncertainAccPathQuestion": "Is the receiver mongoose?",
+    "question": "Is useMongoClient not enabled and is the return value not used as a Thenable?",
+    "id": "26b",
+    "transform": {
+      "pattern": "((() => {\n\tconst conn = $callee();\n\tconn.openUri(connectionUrl).catch(e => e);\n\treturn conn;\n})())"
+    },
+    "changelogDescription": "BREAKING CHANGE: mongoose.connect() returns a promise, removed MongooseThenable #5796",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "call <mongoose>?**.stream [0, 1]",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose query?",
+    "transform": {
+      "pattern": "$base.cursor($args)"
+    },
+    "id": "27",
+    "changelogDescription": "BREAKING CHANGE: query stream removed, use cursor() instead #5795",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "call <mongoose>?**.{open,openSet}",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose connection?",
+    "id": "28",
+    "transform": {
+      "status": "UNEXPRESSIBLE_PATCH"
+    },
+    "changelogDescription": "BREAKING CHANGE: connection open() and openSet() removed, use openUri() instead #5795",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "write <mongoose>?**.usePushEach",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose schema?",
+    "transform": {
+      "pattern": ""
+    },
+    "id": "30a",
+    "changelogDescription": "BREAKING CHANGE: remove support for $pushAll, remove usePushEach option #5670",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "write <mongoose>?**.$pushAll",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose model?",
+    "transform": {
+      "pattern": "$base.$push = Object.keys($value).reduce((acc, elem) => {acc[elem] = {$each: $value[elem]}; return acc;}, {})"
+    },
+    "id": "30b",
+    "changelogDescription": "BREAKING CHANGE: remove support for $pushAll, remove usePushEach option #5670",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "write <mongoose>?**.saveErrorIfNotFound",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose model?",
+    "question": "Is the object a mongoose schema?",
+    "transform": {
+      "pattern": ""
+    },
+    "id": "34a",
+    "changelogDescription": "BREAKING CHANGE: remove saveErrorIfNotFound, always error out if save() did not update a document #4973",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "call <mongoose>?**.save",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose document?",
+    "question": "Is the saveErrorIfNotFound not set to true on the Schema and can save errors occur and is the result used by the code?",
+    "transform": {
+      "status": "NO_GENERAL_PATCH"
+    },
+    "benign": true,
+    "id": "34b",
+    "changelogDescription": "BREAKING CHANGE: remove saveErrorIfNotFound, always error out if save() did not update a document #4973",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "call <mongoose>?**.get().get [1, 1] 0:function",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose virtual type?",
+    "transform": {
+      "pattern": "$base:callee($args).get($base:args)"
+    },
+    "id": "35",
+    "benign": true,
+    "changelogDescription": "BREAKING CHANGE: don't execute getters in reverse order #4835",
+    "changelogId": "11"
+  },
+  {
+    "pattern": "call <mongoose>?**.{toObject,toJson} [1, 1]",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose document?",
+    "transform": {
+      "pattern": "((() => { \n\tconst rcv = $base;\n\tconst oldOptions = rcv.schema.options.$prop;\n\tconst res = rcv.$prop($args);\n\trcv.schema.options.$prop = oldOptions;\n\treturn res;\n})())"
+    },
+    "id": "37",
+    "changelogDescription": "BREAKING CHANGE: toObject() and toJSON() option parameter merges with defaults rather than overwriting #4131",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "callR <mongoose>?**.{remove,deleteOne,deleteMany}",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose model?",
+    "question": "Is the resolved value of the returned promise used?",
+    "transform": {
+      "status": "NO_GENERAL_PATCH"
+    },
+    "id": "39",
+    "changelogDescription": "BREAKING CHANGE: deleteX() and remove() promise resolves to the write object result #4013",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "call <mongoose>?**.aggregate [2, 99] 0:object",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose model?",
+    "transformQuestion": "Does this call provide a callback?",
+    "transform": {
+      "pattern": {
+        "Yes": "$callee([$args[0, -1]], $-1)",
+        "No": "$callee([$args])"
+      }
+    },
+    "id": "48a",
+    "changelogDescription": "BREAKING CHANGE: aggregate() no longer accepts a spread #2716",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "call <mongoose>?**.aggregate [1, 1] 0:object",
+    "uncertainAccPathQuestion": "Is the receiver a mongoose model?",
+    "transform": {
+      "pattern": "$callee([$args])"
+    },
+    "id": "48b",
+    "changelogDescription": "BREAKING CHANGE: aggregate() no longer accepts a spread #2716",
+    "changelogId": "14"
+  }
+]

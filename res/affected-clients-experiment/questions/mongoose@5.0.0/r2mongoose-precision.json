@@ -1,0 +1,18 @@
+{
+  "[26a]index.js_CallExpression_25:13:25:69MaybeExplicitQuestionMatch": {
+    "questionText": "[26a] index.js, CallExpression at 25:13:25:69: Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "index.js",
+    "lineNumber": 25,
+    "columnNumber": 13
+  },
+  "[26a]index.js_CallExpression_25:13:25:69TransformQuestion": {
+    "questionText": "[26a] index.js, CallExpression at 25:13:25:69: Is the option useMongoClient enabled?",
+    "answer": "No",
+    "patternId": "26a",
+    "fileName": "index.js",
+    "lineNumber": 25,
+    "columnNumber": 13
+  }
+}

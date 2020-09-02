@@ -1,0 +1,222 @@
+[
+  {
+    "pattern": "import rxjs/**/*observable/dom/{WebSocket,WebSocketSubject}{,*,/**/*}",
+    "id": "1",
+    "changelogDescription": "webSocket: webSocket creator function now exported from rxjs/websocket as websocket.",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "import rxjs/**/*util/{isArray,applyMixins,ArgumentOutOfRangeError,EmptyError,errorObject,identity,Immediate,isDate,isNumeric,isObject,isFunction,isPromise,isScheduler,noop,not,ObjectUnsubscribedError,pipe,root,SubscribeToResult,TimeoutError,toSubscriber,tryCatch,UnsubscriptionError}{,*,/**/*}",
+    "id": "3",
+    "changelogDescription": "utils: Many internal use utilities like isArray are now hidden under rxjs/internal, they are implementation details and should not be used.",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "import rxjs/**/*testing/{HotObservable,ColdObservable}{,*,/**/*}",
+    "id": "4",
+    "changelogDescription": "testing observables: HotObservable and ColdObservable, and other testing support types are no longer exported directly.",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "read <rxjs{,/**/*}>.Observable.{from,fromPromise,of,combineLatest,fromEvent,timer,interval,merge,bindCallback,bindNodeCallback,empty,if,throw,defer,concat,combineAll,concatAll,endWith,forkJoin,mergeAll,pairwise,race,startWith,withLatestFrom,zip,ajax,generate,range}",
+    "id": "5a",
+    "changelogDescription": "creation functions: All create functions such as of, from, combineLatest and fromEvent should now be imported from rxjs/create.",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "import rxjs/observable/{from,fromPromise,of,combineLatest,fromEvent,timer,interval,merge,bindCallback,bindNodeCallback,empty,if,throw,defer,concat,combineAll,concatAll,endWith,forkJoin,mergeAll,pairwise,race,startWith,withLatestFrom,zip,ajax,generate,range}",
+    "id": "5b",
+    "changelogDescription": "creation functions: All create functions such as of, from, combineLatest and fromEvent should now be imported from rxjs/create.",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "import rxjs/symbol/*",
+    "id": "7a",
+    "changelogDescription": "symbols: Symbols are no longer exported directly from modules such as rxjs/symbol/observable please use Symbol.observable and Symbol.iterator (polyfills may be required)",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "read <rxjs/symbol/*>.$$observable",
+    "id": "7b",
+    "changelogDescription": "symbols: Symbols are no longer exported directly from modules such as rxjs/symbol/observable please use Symbol.observable and Symbol.iterator (polyfills may be required)",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "import rxjs/{Observable,Subject,ReplaySubject,BehaviorSubject,Subscription,Subscriber}",
+    "id": "8",
+    "changelogDescription": "deep imports: Can no longer deep import top-level types such as rxjs/Observable, rxjs/Subject, rxjs/ReplaySubject, et al. All imports should be done directly from rxjs, for example: import \\{ Observable, Subject \\} from 'rxjs';",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "read <rxjs>.Scheduler.{async,virtualTime,animationFrame,asap,queue}",
+    "id": "9",
+    "changelogDescription": "schedulers: Scheduler instances have changed names to be suffixed with Scheduler, (e.g. asap -> asapScheduler)",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "import rxjs/operator/{audit,combineAll,debounceTime,do,findIndex,map,mergeScan,publishBehavior,retry,single,switchMap,timeInterval,windowTime,auditTime,combineLatest,defaultIfEmpty,elementAt,find,mapTo,min,publish,retryWhen,skip,switchMapTo,timeout,windowToggle,bufferCount,concatAll,delay,every,first,materialize,multicast,publishLast,sample,skipLast,take,timeoutWith,windowWhen,buffer,concat,delayWhen,exhaust,groupBy,max,observeOn,publishReplay,sampleTime,skipUntil,takeLast,timestamp,withLatestFrom,bufferTime,concatMap,dematerialize,exhaustMap,ignoreElements,mergeAll,onErrorResumeNext,race,scan,skipWhile,takeUntil,toArray,zipAll,bufferToggle,concatMapTo,distinct,expand,isEmpty,merge,pairwise,reduce,sequenceEqual,startWith,takeWhile,toPromise,zip,bufferWhen,count,distinctUntilChanged,filter,last,mergeMap,partition,repeat,share,subscribeOn,throttle,windowCount,catch,debounce,distinctUntilKeyChanged,finally,let,mergeMapTo,pluck,repeatWhen,shareReplay,switch,throttleTime,window}",
+    "id": "10",
+    "changelogDescription": "operators: Pipeable operators must now be imported from rxjs like so: import { map, filter, switchMap } from 'rxjs/operators';. No deep imports.",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "import rxjs/**/*observable/dom/ajax",
+    "id": "11",
+    "changelogDescription": "ajax: Ajax observable should be imported from rxjs/ajax.",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "import rxjs/**/observable/EmptyObservable",
+    "id": "12",
+    "changelogDescription": "Observable: You should no longer deep import custom Observable implementations such as ArrayObservable or ForkJoinObservable.",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "call <rxjs{,/**/*}>.EmptyObservable.create",
+    "id": "12a",
+    "changelogDescription": "Observable: You should no longer deep import custom Observable implementations such as ArrayObservable or ForkJoinObservable.",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "import rxjs/**/observable/{ArrayLikeObservable,BoundNodeCallbackObservable,DeferObservable,ForkJoinObservable,RangeObservable,TimerObservable,ArrayObservable,FromObservable,IfObservable,PairsObservable,ScalarObservable,FromEventObservable,NeverObservable,PromiseObservable,SubscribeOnObservable,UsingObservable,ConnectableObservable,ErrorObservable,IntervalObservable,BoundCallbackObservable,FromEventPatternObservable,GenerateObservable,IteratorObservable}",
+    "id": "12b",
+    "changelogDescription": "Observable: You should no longer deep import custom Observable implementations such as ArrayObservable or ForkJoinObservable.",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "read <rxjs/**/observable/{ArrayLikeObservable,FromObservable,IteratorObservable,PromiseObservable,ArrayObservable,ScalarObservable,BoundCallbackObservable,BoundNodeCallbackObservable,DeferObservable,EmptyObservable,ErrorObservable,ForkJoinObservable,FromEventObservable,FromEventPatternObservable,GenerateObservable,IfObservable,IntervalObservable,NeverObservable,PairsObservable,RangeObservable,TimerObservable,UsingObservable}>.create",
+    "id": "12c",
+    "changelogDescription": "Observable: You should no longer deep import custom Observable implementations such as ArrayObservable or ForkJoinObservable.",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "read <rxjs/**/observable/throw>._throw",
+    "id": "13",
+    "changelogDescription": "_throw: _throw is now exported as throwError",
+    "changelogId": "11"
+  },
+  {
+    "pattern": "import rxjs/**/if",
+    "id": "14a",
+    "changelogDescription": "if: if is now exported as iif",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "read <rxjs>.Observable.if",
+    "id": "14b",
+    "changelogDescription": "if: if is now exported as iif",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "import rxjs/operator/{merge,concat,zip,onErrorResumeNext,race}{,/**/*}",
+    "id": "21",
+    "changelogDescription": "operators removed: Operator versions of static observable creators such as merge, concat, zip, onErrorResumeNext, and race have been removed. Please use the static versions of those operations. e.g. a.pipe(concat(b, c)) becomes concat(a, b, c).",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "call (<rxjs{,/**/*}>?**\\<rxjs{,/**/*}>.Observable).{merge,concat,zip,onErrorResumeNext,race}",
+    "id": "21b",
+    "changelogDescription": "operators removed: Operator versions of static observable creators such as merge, concat, zip, onErrorResumeNext, and race have been removed. Please use the static versions of those operations. e.g. a.pipe(concat(b, c)) becomes concat(a, b, c).",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "read <Symbol>.observable",
+    "question": "Did the user depend on RxJS polyfilling Symbol.observable?",
+    "id": "28",
+    "changelogDescription": "Symbol.observable: RxJS will no longer be polyfilling Symbol.observable. That should be done by an actual polyfill library. This is to prevent duplication of code, and also to prevent having modules with side-effects in rxjs.",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "import rxjs/Rx",
+    "id": "31",
+    "changelogDescription": "Rx.ts: importing from rxjs/Rx is no longer available. Upcoming backwards compat solution will allow that",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "import rxjs/**/never",
+    "id": "35",
+    "changelogDescription": "never: no longer exported. Use the NEVER constant instead.",
+    "changelogId": "16"
+  },
+  {
+    "pattern": "call {<rxjs{,/**/*}>,<rxjs{,/**/*}>.Observable}.ajax 0:{string,object}",
+    "question": "Is the request a CORS request and the crossDomain flag not set?",
+    "id": "43a",
+    "changelogDescription": "ajax: will no longer execute a CORS request by default, you must opt-in with the crossDomain flag in the config.",
+    "changelogId": "17"
+  },
+  {
+    "pattern": "call <rxjs/**/operator/ajax{,*,/**/*}> 0:{string,object}",
+    "question": "Is the request a CORS request and the crossDomain flag not set?",
+    "id": "43b",
+    "changelogDescription": "ajax: will no longer execute a CORS request by default, you must opt-in with the crossDomain flag in the config.",
+    "changelogId": "17"
+  },
+  {
+    "pattern": "call <rxjs/**/observable/dom/{webSocket,WebSocketSubject}{,*,/**/*}> 0:string",
+    "id": "59a",
+    "changelogDescription": "websocket: WebSocketSubject will now JSON serialize all messages sent over it by default, to return to the old behavior, pass a config setting of serializer: x => x like so: websocket({ url, serializer: x => x })",
+    "changelogId": "18"
+  },
+  {
+    "pattern": "call <rxjs/**/observable/dom/{webSocket,WebSocketSubject}{,*,/**/*}> 0:object",
+    "id": "59b",
+    "changelogDescription": "websocket: WebSocketSubject will now JSON serialize all messages sent over it by default, to return to the old behavior, pass a config setting of serializer: x => x like so: websocket({ url, serializer: x => x })",
+    "changelogId": "18"
+  },
+  {
+    "pattern": "import rxjs/observable/fromPromise",
+    "id": "100",
+    "changelogDescription": "Removed fromPromise, should use from instead.",
+    "changelogId": "19"
+  },
+  {
+    "pattern": "read <rxjs{,/**/*}>.Observable.fromPromise",
+    "id": "100b",
+    "changelogDescription": "Removed fromPromise, should use from instead.",
+    "changelogId": "19"
+  },
+  {
+    "pattern": "importD rxjs{,/Rx}",
+    "id": "101",
+    "description": "should catch `import Rx form 'rxjs'`",
+    "changelogDescription": "Removed default import such that import Rx from 'rxjs'; fails. Instead import * as Rx from 'rxjs'; works",
+    "changelogId": "20"
+  },
+  {
+    "pattern": "call (<rxjs{,/**/*}>?**\\<rxjs{,/**/*}/operators>).{flatMap,map,mapTo,filter,take,takeUntil,takeWhile,delay,last,null,do,catch,finally,switch,withLatestFrom,startWith,timeout,defaultIfEmpty,scan,debounceTime,throttleTime,share,mergeMap,retryWhen,timestamp,mergeMapTo,distinctUntilChanged,switchMap,bufferToggle,concatMap,windowWhen,concatAll,first,toArray,isEmpty,mergeAll,groupBy,reduce,buffer}",
+    "id": "102a",
+    "changelogDescription": "Dropping support for chaining operators (use pipe instead)",
+    "changelogId": "21"
+  },
+  {
+    "pattern": "import rxjs/add{,/**/*}",
+    "id": "102b",
+    "changelogDescription": "Dropping support for chaining operators (use pipe instead)",
+    "changelogId": "22"
+  },
+  {
+    "pattern": "read <rxjs{,/**/*}>?**.{do,catch,switch,finally}",
+    "id": "103a",
+    "changelogDescription": "Operator renames: do -> tap, catch -> catchError, switch -> switchAll, finally -> finalize, throw -> throwError\n",
+    "changelogId": "23"
+  },
+  {
+    "pattern": "import rxjs/**/throw",
+    "id": "103b",
+    "changelogDescription": "Operator renames: do -> tap, catch -> catchError, switch -> switchAll, finally -> finalize, throw -> throwError\n",
+    "changelogId": "23"
+  },
+  {
+    "pattern": "read <rxjs{,/**/*}>.Observable.throw",
+    "id": "103c",
+    "changelogDescription": "Operator renames: do -> tap, catch -> catchError, switch -> switchAll, finally -> finalize, throw -> throwError\n",
+    "changelogId": "23"
+  },
+  {
+    "pattern": "importD symbol-observable",
+    "id": "104",
+    "changelogDescription": "rxjs@6.0.0 is incompatible with the npm package symbol-observable",
+    "changelogId": "24"
+  }
+]

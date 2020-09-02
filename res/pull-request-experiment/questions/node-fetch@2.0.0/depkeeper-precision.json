@@ -1,0 +1,26 @@
+{
+  "[4]lib/registry.js_CallExpression_60:20:60:31UncertainAccPathMatch": {
+    "questionText": "[4] lib/registry.js, CallExpression at 60:20:60:31: Is the receiver a node-fetch response?",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "lib/registry.js",
+    "lineNumber": 60,
+    "columnNumber": 20
+  },
+  "[4]lib/registry.js_CallExpression_60:20:60:31MaybeExplicitQuestionMatch": {
+    "questionText": "[4] lib/registry.js, CallExpression at 60:20:60:31: Can the response code be 204?",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "lib/registry.js",
+    "lineNumber": 60,
+    "columnNumber": 20
+  },
+  "[6]lib/registry.js_CallExpression_56:11:56:76MaybeExplicitQuestionMatch": {
+    "questionText": "[6] lib/registry.js, CallExpression at 56:11:56:76: Is the second argument a GET or HEAD Request with non-null body?",
+    "answer": "No",
+    "patternId": "6",
+    "fileName": "lib/registry.js",
+    "lineNumber": 56,
+    "columnNumber": 11
+  }
+}

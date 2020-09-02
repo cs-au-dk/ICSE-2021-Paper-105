@@ -1,0 +1,8 @@
+[
+  {
+    "pattern": "call <yargs>**.strict [0, 0]",
+    "id": "3",
+    "changelogDescription": "do not allow additional positionals in strict mode",
+    "changelogId": "1"
+  }
+]

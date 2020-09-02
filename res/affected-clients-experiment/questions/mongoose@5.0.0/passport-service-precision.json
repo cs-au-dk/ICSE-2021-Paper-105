@@ -1,0 +1,50 @@
+{
+  "[18]app/models/user.js_CallExpression_115:2:123:4UncertainAccPathMatch": {
+    "questionText": "[18] app/models/user.js, CallExpression at 115:2:123:4: Is the receiver a mongoose schema?",
+    "answer": "Yes",
+    "patternId": "18",
+    "fileName": "app/models/user.js",
+    "lineNumber": 115,
+    "columnNumber": 2
+  },
+  "[18]app/models/user.js_CallExpression_115:2:123:4MaybeExplicitQuestionMatch": {
+    "questionText": "[18] app/models/user.js, CallExpression at 115:2:123:4: Has the model being compiled yet?",
+    "answer": "No",
+    "patternId": "18",
+    "fileName": "app/models/user.js",
+    "lineNumber": 115,
+    "columnNumber": 2
+  },
+  "[23]app/models/user.js_CallExpression_83:2:93:28UncertainAccPathMatch": {
+    "questionText": "[23] app/models/user.js, CallExpression at 83:2:93:28: Is the receiver a mongoose schema?",
+    "answer": "Yes",
+    "patternId": "23",
+    "fileName": "app/models/user.js",
+    "lineNumber": 83,
+    "columnNumber": 2
+  },
+  "[18]config/routes.js_CallExpression_10:2:10:61UncertainAccPathMatch": {
+    "questionText": "[18] config/routes.js, CallExpression at 10:2:10:61: Is the receiver a mongoose schema?",
+    "answer": "No",
+    "patternId": "18",
+    "fileName": "config/routes.js",
+    "lineNumber": 10,
+    "columnNumber": 2
+  },
+  "[18]config/routes.js_CallExpression_11:2:11:55UncertainAccPathMatch": {
+    "questionText": "[18] config/routes.js, CallExpression at 11:2:11:55: Is the receiver a mongoose schema?",
+    "answer": "No",
+    "patternId": "18",
+    "fileName": "config/routes.js",
+    "lineNumber": 11,
+    "columnNumber": 2
+  },
+  "[18]config/routes.js_CallExpression_12:2:12:59UncertainAccPathMatch": {
+    "questionText": "[18] config/routes.js, CallExpression at 12:2:12:59: Is the receiver a mongoose schema?",
+    "answer": "No",
+    "patternId": "18",
+    "fileName": "config/routes.js",
+    "lineNumber": 12,
+    "columnNumber": 2
+  }
+}

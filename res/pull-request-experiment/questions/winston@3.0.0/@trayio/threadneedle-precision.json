@@ -1,0 +1,98 @@
+{
+  "[13a]lib/addMethod/addMethodREST.js_CallExpression_220:20:220:89UncertainAccPathMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodREST.js, CallExpression at 220:20:220:89: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodREST.js",
+    "lineNumber": 220,
+    "columnNumber": 20
+  },
+  "[13a]lib/addMethod/addMethodREST.js_CallExpression_220:20:220:89MaybeArgTypeMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodREST.js, CallExpression at 220:20:220:89: is arg request of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodREST.js",
+    "lineNumber": 220,
+    "columnNumber": 20
+  },
+  "[13a]lib/addMethod/addMethodREST.js_CallExpression_259:20:259:82UncertainAccPathMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodREST.js, CallExpression at 259:20:259:82: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodREST.js",
+    "lineNumber": 259,
+    "columnNumber": 20
+  },
+  "[13a]lib/addMethod/addMethodREST.js_CallExpression_259:20:259:82MaybeArgTypeMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodREST.js, CallExpression at 259:20:259:82: is arg err of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodREST.js",
+    "lineNumber": 259,
+    "columnNumber": 20
+  },
+  "[13a]lib/addMethod/addMethodSOAP.js_CallExpression_155:28:155:91UncertainAccPathMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodSOAP.js, CallExpression at 155:28:155:91: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodSOAP.js",
+    "lineNumber": 155,
+    "columnNumber": 28
+  },
+  "[13a]lib/addMethod/addMethodSOAP.js_CallExpression_155:28:155:91MaybeArgTypeMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodSOAP.js, CallExpression at 155:28:155:91: is arg JSON.stringify(raw) of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodSOAP.js",
+    "lineNumber": 155,
+    "columnNumber": 28
+  },
+  "[13a]lib/addMethod/addMethodSOAP.js_CallExpression_210:28:210:95UncertainAccPathMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodSOAP.js, CallExpression at 210:28:210:95: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodSOAP.js",
+    "lineNumber": 210,
+    "columnNumber": 28
+  },
+  "[13a]lib/addMethod/addMethodSOAP.js_CallExpression_210:28:210:95MaybeArgTypeMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodSOAP.js, CallExpression at 210:28:210:95: is arg soapRequest of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodSOAP.js",
+    "lineNumber": 210,
+    "columnNumber": 28
+  },
+  "[13a]lib/addMethod/addMethodSOAP.js_CallExpression_242:20:242:82UncertainAccPathMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodSOAP.js, CallExpression at 242:20:242:82: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodSOAP.js",
+    "lineNumber": 242,
+    "columnNumber": 20
+  },
+  "[13a]lib/addMethod/addMethodSOAP.js_CallExpression_242:20:242:82MaybeArgTypeMatch": {
+    "questionText": "[13a] lib/addMethod/addMethodSOAP.js, CallExpression at 242:20:242:82: is arg err of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "lib/addMethod/addMethodSOAP.js",
+    "lineNumber": 242,
+    "columnNumber": 20
+  },
+  "[14a]lib/logger.js_CallExpression_7:0:10:2MaybeArgTypeMatch": {
+    "questionText": "[14a] lib/logger.js, CallExpression at 7:0:10:2: is arg winston.transports.Console of type function",
+    "answer": "Yes",
+    "patternId": "14a",
+    "fileName": "lib/logger.js",
+    "lineNumber": 7,
+    "columnNumber": 0
+  },
+  "[14a]lib/logger.js_CallExpression_7:0:10:2TransformQuestion": {
+    "questionText": "[14a] lib/logger.js, CallExpression at 7:0:10:2: Is the first argument one of winston.transports.{File,Console,Http} and the second argument an object containing formatting options?",
+    "answer": "Yes",
+    "patternId": "14a",
+    "fileName": "lib/logger.js",
+    "lineNumber": 7,
+    "columnNumber": 0
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "[18]example/schema/Premier.js_CallExpression_16:0:16:46MaybeArgTypeMatch": {
+    "questionText": "[18] example/schema/Premier.js, CallExpression at 16:0:16:46: is arg autoPopulateLead of type function",
+    "answer": "Yes",
+    "patternId": "18",
+    "fileName": "example/schema/Premier.js",
+    "lineNumber": 16,
+    "columnNumber": 0
+  },
+  "[18]example/schema/Premier.js_CallExpression_16:0:16:46MaybeExplicitQuestionMatch": {
+    "questionText": "[18] example/schema/Premier.js, CallExpression at 16:0:16:46: Has the model being compiled yet?",
+    "answer": "No",
+    "patternId": "18",
+    "fileName": "example/schema/Premier.js",
+    "lineNumber": 16,
+    "columnNumber": 0
+  },
+  "[18]example/schema/Premier.js_CallExpression_17:0:17:43MaybeArgTypeMatch": {
+    "questionText": "[18] example/schema/Premier.js, CallExpression at 17:0:17:43: is arg autoPopulateLead of type function",
+    "answer": "Yes",
+    "patternId": "18",
+    "fileName": "example/schema/Premier.js",
+    "lineNumber": 17,
+    "columnNumber": 0
+  },
+  "[18]example/schema/Premier.js_CallExpression_17:0:17:43MaybeExplicitQuestionMatch": {
+    "questionText": "[18] example/schema/Premier.js, CallExpression at 17:0:17:43: Has the model being compiled yet?",
+    "answer": "No",
+    "patternId": "18",
+    "fileName": "example/schema/Premier.js",
+    "lineNumber": 17,
+    "columnNumber": 0
+  },
+  "[26a]lib/schema.js_CallExpression_61:29:66:14MaybeExplicitQuestionMatch": {
+    "questionText": "[26a] lib/schema.js, CallExpression at 61:29:66:14: Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "lib/schema.js",
+    "lineNumber": 61,
+    "columnNumber": 29
+  },
+  "[26a]lib/schema.js_CallExpression_61:29:66:14TransformQuestion": {
+    "questionText": "[26a] lib/schema.js, CallExpression at 61:29:66:14: Is the option useMongoClient enabled?",
+    "answer": "No",
+    "patternId": "26a",
+    "fileName": "lib/schema.js",
+    "lineNumber": 61,
+    "columnNumber": 29
+  }
+}

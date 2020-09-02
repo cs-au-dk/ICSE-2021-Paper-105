@@ -1,0 +1,17 @@
+{
+  "3": {
+    "questionText": "Should we patch the breaking change: Major: response.text() no longer attempts to detect encoding, instead always opting for UTF-8 (per spec); use response.textConverted() for the v1 behavior",
+    "answer": "No",
+    "patternId": "3"
+  },
+  "4": {
+    "questionText": "Should we patch the breaking change: Major: make response.json() throw error instead of returning an empty object on 204 no-content respose (per spec; reverts behavior changed in v1.6.2)",
+    "answer": "No",
+    "patternId": "4"
+  },
+  "8": {
+    "questionText": "Should we patch the breaking change: Enhance: make sure header names and values are valid in HTTP",
+    "answer": "No",
+    "patternId": "8"
+  }
+}

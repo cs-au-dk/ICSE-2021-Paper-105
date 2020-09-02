@@ -1,0 +1,7 @@
+{
+  "7b": {
+    "questionText": "Should we patch the breaking change: In winston.transports.Console, output for all log levels are now sent to stdout by default. - stderrLevels option now defaults to []. - debugStdout option has been removed.",
+    "answer": "No",
+    "patternId": "7b"
+  }
+}

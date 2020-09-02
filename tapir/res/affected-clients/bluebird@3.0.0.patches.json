@@ -1,0 +1,253 @@
+{
+  "auto-refresh-from-url": {
+    "repo": {
+      "gitCommit": "ab0348e522e0ebf2869849d6cea622a7d2d2d2d3",
+      "gitURL": "https://github.com/UberEther/auto-refresh-from-url/"
+    },
+    "patches": [
+      {
+        "file": "lib/urlLoader.coffee",
+        "lineNumber": 8,
+        "classification": "7"
+      }
+    ]
+  },
+  "gulp-cache": {
+    "repo": {
+      "gitCommit": "b0537d7955e6532770775daf4565ce7ba8d18396",
+      "gitURL": "https://github.com/jgable/gulp-cache"
+    },
+    "patches": [
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "6",
+        "lineNumber": 45
+      },
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "6",
+        "lineNumber": 58
+      },
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "6",
+        "lineNumber": 82
+      },
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "6",
+        "lineNumber": 180
+      },
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "6",
+        "lineNumber": 198
+      },
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "7",
+        "lineNumber": 45
+      },
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "7",
+        "lineNumber": 58
+      },
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "7",
+        "lineNumber": 82
+      },
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "7",
+        "lineNumber": 180
+      },
+      {
+        "file": "lib/TaskProxy.js",
+        "classification": "7",
+        "lineNumber": 198
+      }
+    ]
+  },
+  "async-rtree": {
+    "repo": {
+      "gitCommit": "69294a8e95f5d228cda709fb9091b058bc702c18",
+      "gitURL": "git@github.com:calvinmetcalf/async-rtree"
+    },
+    "patches": [
+      {
+        "file": "lib/index.js",
+        "classification": "6",
+        "lineNumber": 17
+      },
+      {
+        "file": "lib/index.js",
+        "classification": "7",
+        "lineNumber": 17
+      }
+    ]
+  },
+  "shen": {
+    "repo": {
+      "gitCommit": "ae6d2bfafffb6b23c50a3b090803de78f52fd403",
+      "gitURL": "https://github.com/cultofmetatron/Shen"
+    },
+    "patches": [
+      {
+        "file": "test/parallel-test.js",
+        "classification": "7",
+        "lineNumber": 8
+      }
+    ]
+  },
+  "thrush": {
+    "repo": {
+      "gitCommit": "bc3f2ae4b4bd977d56c1ce40526e035cad97f4ef",
+      "gitURL": "https://github.com/DeNA/thrush"
+    },
+    "patches" : [
+      {
+        "file": "index.js",
+        "classification": "100",
+        "lineNumber": 12
+      },
+      {
+        "file": "test/thrushTest.js",
+        "classification": "11",
+        "lineNumber": 554
+      }
+    ]
+  },
+  "node-clusterphone": {
+    "excludedFolders": ["test/worker-behaviors/older-version/node_modules"],
+    "repo": {
+      "gitCommit": "01c12f8a4efd737603dedc4fcb972f0ef3a5dfe0",
+      "gitURL": "https://github.com/samcday/node-clusterphone"
+    },
+    "patches": [
+      {
+        "file": "test/test.js",
+        "classification": "12",
+        "lineNumber": 243
+      },
+      {
+        "file": "test/test.js",
+        "classification": "12",
+        "lineNumber": 385
+      },
+      {
+        "file": "test/test.js",
+        "classification": "12",
+        "lineNumber": 394
+      },
+      {
+        "file": "test/test.js",
+        "classification": "7b",
+        "lineNumber": 5
+      },
+      {
+        "file": "test/test.js",
+        "classification": "7b",
+        "lineNumber": 28
+      }
+    ]
+  },
+  "node-heroku-bouncer": {
+    "repo": {
+      "gitCommit": "44c54ffb80ff2a1c54136dcb4a319c7c90a6ae07",
+      "gitURL": "https://github.com/heroku/node-heroku-bouncer"
+    },
+    "patches": [
+      {
+        "file": "test/bouncer-test.js",
+        "classification": "7",
+        "lineNumber": 13
+      },
+      {
+        "file": "test/bouncer-test.js",
+        "classification": "7",
+        "lineNumber": 14
+      },
+      {
+        "file": "test/helpers/shared.js",
+        "classification": "7",
+        "lineNumber": 5
+      }
+    ]
+  },
+  "zeninjector": {
+    "repo": {
+      "gitCommit": "249ce7eb2756b9a21e960e88d958bf8ca14cb4db",
+      "gitURL": "https://github.com/geekingfrog/zeninjector"
+    },
+    "patches": [
+      {
+        "file": "lib/promise.js",
+        "classification": "100",
+        "lineNumber": 1
+      },
+      {
+        "file": "test/container.js",
+        "classification": "11",
+        "lineNumber": 113
+      },
+      {
+        "file": "test/container.js",
+        "classification": "11",
+        "lineNumber": 124
+      },
+      {
+        "file": "test/container.js",
+        "classification": "11",
+        "lineNumber": 136
+      },
+      {
+        "file": "test/container.js",
+        "classification": "11",
+        "lineNumber": 177
+      },
+      {
+        "file": "test/container.js",
+        "classification": "11",
+        "lineNumber": 187
+      }
+    ]
+  },
+  "nfield-api": {
+    "repo": {
+      "gitCommit": "fcd635255fad2fc483d0e9045ecf7faba04378d9",
+      "gitURL": "https://github.com/gribnoysup/nfield-api"
+    },
+    "patches": [
+      {
+        "file": "api.js",
+        "classification": "7",
+        "lineNumber": 7
+      }
+    ]
+  },
+  "express-promise-router": {
+    "repo": {
+      "gitCommit": "0cd580b67b79be8a342b73d3e4f71590d5f90833",
+      "gitURL": "https://github.com/alex-whitney/express-promise-router"
+    },
+    "patches": [
+      {
+        "file": "test/express-promise-router.route.test.js",
+        "classification": "7",
+        "lineNumber": 7
+      },
+      {
+        "file": "test/express-promise-router.test.js",
+        "classification": "7",
+        "lineNumber": 7
+      },
+      {
+        "file": "lib/express-promise-router.js",
+        "classification": "11",
+        "lineNumber": 43
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "[100]bin/dockerfile_lint_MemberExpression_44:8:44:33UncertainAccPathMatch": {
+    "questionText": "[100] bin/dockerfile_lint, MemberExpression at 44:8:44:33: Is the receiver the transports object of a winston logger?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "bin/dockerfile_lint",
+    "lineNumber": 44,
+    "columnNumber": 8
+  },
+  "[100]bin/dockerfile_lint_MemberExpression_44:35:44:60UncertainAccPathMatch": {
+    "questionText": "[100] bin/dockerfile_lint, MemberExpression at 44:35:44:60: Is the receiver the transports object of a winston logger?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "bin/dockerfile_lint",
+    "lineNumber": 44,
+    "columnNumber": 35
+  },
+  "[29]lib/logger.js_NewExpression_16:4:19:6UncertainAccPathMatch": {
+    "questionText": "[29] lib/logger.js, NewExpression at 16:4:19:6: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "lib/logger.js",
+    "lineNumber": 16,
+    "columnNumber": 4
+  },
+  "[29]lib/logger.js_NewExpression_16:4:19:6MaybeExplicitQuestionMatch": {
+    "questionText": "[29] lib/logger.js, NewExpression at 16:4:19:6: Does the options argument include formatting options?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "lib/logger.js",
+    "lineNumber": 16,
+    "columnNumber": 4
+  },
+  "[29]lib/logger.js_NewExpression_20:4:23:6UncertainAccPathMatch": {
+    "questionText": "[29] lib/logger.js, NewExpression at 20:4:23:6: Is the receiver winston.transports?",
+    "answer": "No",
+    "patternId": "29",
+    "fileName": "lib/logger.js",
+    "lineNumber": 20,
+    "columnNumber": 4
+  }
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "autoapply",
+    "testCommand": "yarn nyc mocha --timeout=8000 --check-leaks",
+    "repo": {
+      "gitCommit": "7de73f0b548845372196775f73e8818af5f767ca",
+      "gitURL": "https://github.com/autoapply/autoapply"
+    }
+  },
+  {
+    "name": "dockerfile_lint",
+    "repo": {
+      "gitCommit": "625f957af62c5184423cbc017fdbc8e4a7383543",
+      "gitURL": "https://github.com/projectatomic/dockerfile_lint"
+    }
+  },
+  {
+    "name": "@znetstar/winston-cluster",
+    "repo": {
+      "gitCommit": "c599f5faa28a181203aea40b009661355d6670f2",
+      "gitURL": "https://github.com/ryankurte/winston-cluster"
+    }
+  },
+  {
+    "name": "node-api-server",
+    "testCommand": "npm run mocha",
+    "repo": {
+      "gitCommit": "a82bc59636a7ef3447780ed8775529de71d026b5",
+      "gitURL": "https://github.com/pizza-rolls/api-server"
+    },
+    "excludedFolders": ["compiled"]
+  },
+  {
+    "name": "psyloc",
+    "repo": {
+      "gitCommit": "61a494ce7f4440aa08410533bbfa248657337dcb",
+      "gitURL": "https://github.com/waTeim/psyloc"
+    }
+  },
+  {
+    "name": "ruo",
+    "repo": {
+      "gitCommit": "e1a11e52652d22e842dd8b6e04e98314f60a9de5",
+      "gitURL": "https://github.com/ruojs/ruo"
+    },
+    "excludedFolders": ["dist"]
+  },
+  {
+    "name": "winston-testified-console",
+    "repo": {
+      "gitCommit": "da3f9c3d8eb16ed8745b967b39e843ead71514ca",
+      "gitURL": "https://github.com/prometheas/winston-testified-console"
+    }
+  },
+  {
+    "name": "hypernova",
+    "testCommand": "npm run coverage",
+    "repo": {
+      "gitCommit": "0a9fff9da1e239ffce658d43f96c760e5ae33234",
+      "gitURL": "https://github.com/airbnb/hypernova"
+    },
+    "excludedFolders": ["lib"]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "[7]test/parallel-test.js_CallExpression_8:14:8:51MaybeExplicitQuestionMatch": {
+    "questionText": "[7] test/parallel-test.js, CallExpression at 8:14:8:51: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "Yes",
+    "patternId": "7",
+    "fileName": "test/parallel-test.js",
+    "lineNumber": 8,
+    "columnNumber": 14
+  }
+}

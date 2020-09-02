@@ -1,0 +1,10 @@
+{
+  "[2b]src/robot.js_CallExpression_622:4:622:59UncertainAccPathMatch": {
+    "questionText": "[2b] src/robot.js, CallExpression at 622:4:622:59: Is the receiver an express response object?",
+    "answer": "No",
+    "patternId": "2b",
+    "fileName": "src/robot.js",
+    "lineNumber": 622,
+    "columnNumber": 4
+  }
+}

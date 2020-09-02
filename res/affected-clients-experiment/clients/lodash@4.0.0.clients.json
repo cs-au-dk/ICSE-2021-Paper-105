@@ -1,0 +1,96 @@
+[
+  {
+    "name": "postal",
+    "repo": {
+      "gitCommit": "4f743670f3d6af30959b3ded4e736aae44cf55f2",
+      "gitURL": "https://github.com/postaljs/postal.js"
+    },
+    "excludedFolders": ["src"]
+  },
+  {
+    "name": "bracket-data",
+    "repo": {
+      "gitCommit": "4560b6bb232d6904b1b5e4c452bd5b0c40762ce0",
+      "gitURL": "https://github.com/bracketclub/bracket-data"
+    }
+  },
+  {
+    "name": "grunt-atomizer",
+    "repo": {
+      "gitCommit": "7449d5e2a9b379f8f040831caedccc002f5bcc33",
+      "gitURL": "https://github.com/acss-io/grunt-atomizer"
+    }
+  },
+  {
+    "name": "network-config",
+    "repo": {
+      "gitCommit": "765d1b03748d20ef154a1cf08068d36cfbd35cfb",
+      "gitURL": "https://github.com/FGRibreau/network-config"
+    }
+  },
+  {
+    "name": "netiam",
+    "repo": {
+      "gitCommit": "01d91c5de476035ac246e920b84bafb67db2e28b",
+      "gitURL": "https://github.com/netiam/netiam"
+    }
+  },
+  {
+    "name": "waterfall-then",
+    "repo": {
+      "gitCommit": "d5b144434b8744db8e7e7f0083a453ac17f1235b",
+      "gitURL": "https://github.com/thenables/waterfall-then"
+    }
+  },
+  {
+    "name": "kyper-matter",
+    "repo": {
+      "gitCommit": "9682df3efc83d53406917d83c3fbdff6922aead6",
+      "gitURL": "https://github.com/KyperTech/matter"
+    },
+    "excludedFolders": ["lib", "dist"]
+  },
+  {
+    "name": "generator-phaser-plus",
+    "repo": {
+      "gitCommit": "399671ef8c1354dfdb04e727c877424bbd855c01",
+      "gitURL": "https://github.com/rblopes/generator-phaser-plus"
+    }
+  },
+  {
+    "name": "common-env",
+    "repo": {
+      "gitCommit": "e2245638f2dd18c0ed67929e64f34ff34faedfe8",
+      "gitURL": "https://github.com/FGRibreau/common-env"
+    }
+  },
+  {
+    "name": "contentful-space-sync",
+    "testCommand": "npm run test:cover",
+    "repo": {
+      "gitCommit": "7fbb4200e320173c533b2c74e812f74cf05a57b1",
+      "gitURL": "https://github.com/contentful/contentful-space-sync"
+    }
+  },
+  {
+    "name": "lowdb-recursive",
+    "repo": {
+      "gitCommit": "a55f11bccbdcdf1020506b981d21ee6cbb925d3e",
+      "gitURL": "https://github.com/ghondar/lowdb-recursive"
+    }
+  },
+  {
+    "name": "sass-graph",
+    "repo": {
+      "gitCommit": "c0c8c25fff0c148aa13bc8eaef04ee0bfae753be",
+      "gitURL": "https://github.com/xzyfer/sass-graph"
+    }
+  },
+  {
+    "name": "atomizer",
+    "repo": {
+      "gitCommit": "2dedf2663af2f4fd09c5fa0c78c17416dbea504b",
+      "gitURL": "https://github.com/acss-io/atomizer"
+    }
+  }
+]

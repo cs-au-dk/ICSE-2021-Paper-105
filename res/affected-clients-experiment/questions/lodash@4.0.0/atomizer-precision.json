@@ -1,0 +1,34 @@
+{
+  "[7h]src/lib/utils.js_CallExpression_37:11:37:71MaybeApplyOrSpreadArgFilterMatch": {
+    "questionText": "[7h] src/lib/utils.js, CallExpression at 37:11:37:71: does the call match the filters: [4, 99]",
+    "answer": "Yes",
+    "patternId": "7h",
+    "fileName": "src/lib/utils.js",
+    "lineNumber": 37,
+    "columnNumber": 11
+  },
+  "[7h]src/lib/utils.js_CallExpression_37:11:37:71MaybeExplicitQuestionMatch": {
+    "questionText": "[7h] src/lib/utils.js, CallExpression at 37:11:37:71: Does this call use a customizer function and a thisArg for that customizer?",
+    "answer": "No",
+    "patternId": "7h",
+    "fileName": "src/lib/utils.js",
+    "lineNumber": 37,
+    "columnNumber": 11
+  },
+  "[30]src/lib/utils.js_CallExpression_37:11:37:71MaybeApplyOrSpreadArgFilterMatch": {
+    "questionText": "[30] src/lib/utils.js, CallExpression at 37:11:37:71: does the call match the filters: [3, 99]",
+    "answer": "Yes",
+    "patternId": "30",
+    "fileName": "src/lib/utils.js",
+    "lineNumber": 37,
+    "columnNumber": 11
+  },
+  "[30]src/lib/utils.js_CallExpression_37:11:37:71MaybeExplicitQuestionMatch": {
+    "questionText": "[30] src/lib/utils.js, CallExpression at 37:11:37:71: Does this use of <lodash>.merge use a customizer function?",
+    "answer": "Yes",
+    "patternId": "30",
+    "fileName": "src/lib/utils.js",
+    "lineNumber": 37,
+    "columnNumber": 11
+  }
+}

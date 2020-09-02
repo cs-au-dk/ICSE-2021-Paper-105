@@ -1,0 +1,354 @@
+{
+  "generator-kittn": {
+    "excludedFolders": ["generators/app/templates/src/skeletons"],
+    "patches": [
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 96,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 123,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 123,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 124,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 124,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 126,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 127,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 127,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 127,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 127,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 128,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 128,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 216,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 216,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 218,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 219,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 219,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/index.js",
+        "lineNumber": 265,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/modules/prompt/partials/_general.js",
+        "lineNumber": 23,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/modules/prompt/partials/_general.js",
+        "lineNumber": 24,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/modules/prompt/partials/_general.js",
+        "lineNumber": 291,
+        "classification": "4"
+      },
+      {
+        "file": "generators/app/modules/prompt/partials/_general.js",
+        "lineNumber": 291,
+        "classification": "4"
+      },
+      {
+        "file": "generators/module/helpers/messages/branding.js",
+        "lineNumber": 4,
+        "classification": "4"
+      },
+      {
+        "file": "generators/module/helpers/messages/branding.js",
+        "lineNumber": 11,
+        "classification": "4"
+      },
+      {
+        "file": "generators/module/helpers/messages/branding.js",
+        "lineNumber": 11,
+        "classification": "4"
+      }
+    ],
+    "repo": {
+      "gitCommit": "38b8ffb6b30f84fc6a9a42e7429d8aaf871992c4",
+      "gitURL": "https://github.com/kittn/generator-kittn"
+    }
+  },
+  "volleyball": {
+    "patches": [
+      {
+        "file": "test/test.js",
+        "lineNumber": 26,
+        "classification": "3"
+      }
+    ],
+    "repo": {
+      "gitCommit": "1413179b614d3c677419932b9e93266dc1ccf08b",
+      "gitURL": "https://github.com/glebec/volleyball"
+    }
+  },
+  "filesizegzip": {
+    "patches": [
+      {
+        "file": "test.js",
+        "lineNumber": 9,
+        "classification": "3"
+      },
+      {
+        "file": "test.js",
+        "lineNumber": 10,
+        "classification": "3"
+      },
+      {
+        "file": "test.js",
+        "lineNumber": 14,
+        "classification": "3"
+      },
+      {
+        "file": "test.js",
+        "lineNumber": 15,
+        "classification": "3"
+      },
+      {
+        "file": "test.js",
+        "lineNumber": 19,
+        "classification": "3"
+      },
+      {
+        "file": "test.js",
+        "lineNumber": 20,
+        "classification": "3"
+      }
+    ],
+    "repo": {
+      "gitCommit": "d7208474ed70bec6d6f05473fc2be4a2c300ddff",
+      "gitURL": "https://github.com/mrmartineau/filesizegzip"
+    }
+  },
+  "@averjs/friendly-errors-webpack-plugin": {
+    "patches": [
+      {
+        "file": "src/output.js",
+        "lineNumber": 101,
+        "classification": "3"
+      },
+      {
+        "file": "test/unit/formatters/defaultError.spec.js",
+        "lineNumber": 5,
+        "classification": "3"
+      }
+    ],
+    "repo": {
+      "gitCommit": "8a1326752bdc0a572af5b3aa79efc3fb789db8bc",
+      "gitURL": "https://github.com/exreplay/friendly-errors-webpack-plugin"
+    }
+  },
+  "@reactive/fido": {
+    "patches": [
+      {
+        "file": "test/test.js",
+        "lineNumber": 8,
+        "classification": "3"
+      },
+      {
+        "file": "test/test.js",
+        "lineNumber": 54,
+        "classification": "3"
+      }
+    ],
+    "repo": {
+      "gitCommit": "a34543e87498cb71e0a5ae62aa18026e8232ce1e",
+      "gitURL": "https://github.com/reactivepod/fido"
+    }
+  },
+  "seeli": {
+    "patches": [
+      {
+        "file": "lib/command.js",
+        "lineNumber": 397,
+        "classification": "3"
+      },
+      {
+        "file": "lib/command.js",
+        "lineNumber": 434,
+        "classification": "3"
+      },
+      {
+        "file": "test/command.spec.js",
+        "lineNumber": 48,
+        "classification": "3"
+      },
+      {
+        "file": "test/command.spec.js",
+        "lineNumber": 70,
+        "classification": "3"
+      }
+    ],
+    "repo": {
+      "gitCommit": "20543c837942c0f31edb62024c6e492848d36568",
+      "gitURL": "https://github.com/esatterwhite/node-seeli"
+    }
+  },
+  "npm-install-que": {
+    "patches": [
+      {
+        "file": "test/test.js",
+        "lineNumber": 18,
+        "classification": "3"
+      },
+      {
+        "file": "test/test.js",
+        "lineNumber": 27,
+        "classification": "3"
+      },
+      {
+        "file": "test/test.js",
+        "lineNumber": 38,
+        "classification": "3"
+      },
+      {
+        "file": "test/test.js",
+        "lineNumber": 50,
+        "classification": "3"
+      },
+      {
+        "file": "test/test.js",
+        "lineNumber": 58,
+        "classification": "3"
+      }
+    ],
+    "repo": {
+      "gitCommit": "84f93fc7dee1a94820ebcd05c3f1136518d645cc",
+      "gitURL": "https://github.com/radiovisual/npm-install-que"
+    }
+  },
+  "@jannis/metalsmith-watch": {
+    "excludedFolders": ["dist"],
+    "patches": [
+      {
+        "file":"__tests__/logs.es",
+        "lineNumber": 30,
+        "classification": "3"
+      }
+    ],
+    "repo": {
+      "gitCommit": "6dddfece3f20dce7ed74fb27c3fe98b6fc48870f",
+      "gitURL": "https://github.com/jannisg/metalsmith-watch"
+    }
+  },
+  "analyze-deps-cli": {
+    "patches": [
+      {
+        "file":"src/helpers.js",
+        "lineNumber": 8,
+        "classification": "3"
+      },
+      {
+        "file":"src/helpers.js",
+        "lineNumber": 11,
+        "classification": "3"
+      },
+      {
+        "file":"src/helpers.js",
+        "lineNumber": 16,
+        "classification": "3"
+      }
+    ],
+    "repo": {
+      "gitCommit": "8552b04dd4799799fd8984bcc3ae0f495863e283",
+      "gitURL": "https://github.com/moroshko/analyze-deps-cli"
+    }
+  },
+  "fastbench": {
+    "patches": [
+      {
+        "file": "test.js",
+        "lineNumber": 78,
+        "classification": "2"
+      },
+      {
+        "file": "test.js",
+        "lineNumber": 81,
+        "classification": "2"
+      },
+      {
+        "file": "test.js",
+        "lineNumber": 103,
+        "classification": "2"
+      },
+      {
+        "file": "test.js",
+        "lineNumber": 106,
+        "classification": "2"
+      },
+      {
+        "file": "bench.js",
+        "lineNumber": 5,
+        "classification": "4"
+      }
+    ],
+    "repo": {
+      "gitCommit": "b5c6f85a297d7fd33f189c4f36996eb802d9e2b5",
+      "gitURL": "https://github.com/mcollina/fastbench"
+    }
+  }
+}

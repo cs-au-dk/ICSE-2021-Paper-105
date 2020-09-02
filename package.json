@@ -1,0 +1,46 @@
+{
+  "name": "jsfix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/JSFixMain.js",
+  "scripts": {
+    "prepare": "tsc --declaration"
+  },
+  "author": "casa.au.dk",
+  "license": "MIT",
+  "dependencies": {
+    "acorn": "7.1.0",
+    "async": "^3.1.0",
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0",
+    "data-to-latex": "^0.4.3",
+    "fs-extra": "^8.1.0",
+    "latest-version": "^5.1.0",
+    "lodash": "4.17.15",
+    "ncp": "^2.0.0",
+    "open-editor": "^2.0.1",
+    "prompts": "^2.3.1",
+    "recast": "^0.18.5",
+    "rimraf": "^3.0.0",
+    "table": "^5.4.6",
+    "tapir": "./tapir",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/acorn": "4.0.5",
+    "@types/async": "3.0.3",
+    "@types/chai": "^4.2.3",
+    "@types/estree": "0.0.44",
+    "@types/fs-extra": "^8.0.0",
+    "@types/latest-version": "^4.0.1",
+    "@types/lodash": "4.14.146",
+    "@types/mocha": "^5.2.7",
+    "@types/ncp": "^2.0.3",
+    "@types/prompts": "^2.0.3",
+    "@types/rimraf": "^2.0.3",
+    "@types/table": "^4.0.7",
+    "mocha": "^6.2.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.2"
+  }
+}

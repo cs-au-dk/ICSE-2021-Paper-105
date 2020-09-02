@@ -1,0 +1,66 @@
+{
+  "[30]lib/bulk-upsert-plugin.js_CallExpression_153:24:157:25MaybeExplicitQuestionMatch": {
+    "questionText": "[30] lib/bulk-upsert-plugin.js, CallExpression at 153:24:157:25: Does this use of <lodash>.merge use a customizer function?",
+    "answer": "No",
+    "patternId": "30",
+    "fileName": "lib/bulk-upsert-plugin.js",
+    "lineNumber": 153,
+    "columnNumber": 24
+  },
+  "[31]lib/bulk-upsert-plugin.js_CallExpression_196:20:196:72UncertainAccPathMatch": {
+    "questionText": "[31] lib/bulk-upsert-plugin.js, CallExpression at 196:20:196:72: Is the function being called from lodash?",
+    "answer": "Yes",
+    "patternId": "31",
+    "fileName": "lib/bulk-upsert-plugin.js",
+    "lineNumber": 196,
+    "columnNumber": 20
+  },
+  "[31]lib/bulk-upsert-plugin.js_CallExpression_196:20:196:72MaybeArgTypeMatch": {
+    "questionText": "[31] lib/bulk-upsert-plugin.js, CallExpression at 196:20:196:72: is arg this._virtualAttributes of type function",
+    "answer": "No",
+    "patternId": "31",
+    "fileName": "lib/bulk-upsert-plugin.js",
+    "lineNumber": 196,
+    "columnNumber": 20
+  },
+  "[31]lib/bulk-upsert-plugin.js_CallExpression_313:19:313:71UncertainAccPathMatch": {
+    "questionText": "[31] lib/bulk-upsert-plugin.js, CallExpression at 313:19:313:71: Is the function being called from lodash?",
+    "answer": "Yes",
+    "patternId": "31",
+    "fileName": "lib/bulk-upsert-plugin.js",
+    "lineNumber": 313,
+    "columnNumber": 19
+  },
+  "[31]lib/bulk-upsert-plugin.js_CallExpression_313:19:313:71MaybeArgTypeMatch": {
+    "questionText": "[31] lib/bulk-upsert-plugin.js, CallExpression at 313:19:313:71: is arg self._virtualAttributes of type function",
+    "answer": "No",
+    "patternId": "31",
+    "fileName": "lib/bulk-upsert-plugin.js",
+    "lineNumber": 313,
+    "columnNumber": 19
+  },
+  "[31]lib/history-plugin.js_CallExpression_81:25:81:52MaybeArgTypeMatch": {
+    "questionText": "[31] lib/history-plugin.js, CallExpression at 81:25:81:52: is arg options.track of type function",
+    "answer": "No",
+    "patternId": "31",
+    "fileName": "lib/history-plugin.js",
+    "lineNumber": 81,
+    "columnNumber": 25
+  },
+  "[24]lib/update-handler.js_CallExpression_122:41:122:90MaybeExplicitQuestionMatch": {
+    "questionText": "[24] lib/update-handler.js, CallExpression at 122:41:122:90: Does this call to assign use a customizer function?",
+    "answer": "No",
+    "patternId": "24",
+    "fileName": "lib/update-handler.js",
+    "lineNumber": 122,
+    "columnNumber": 41
+  },
+  "[31]lib/upsert-plugin.js_CallExpression_25:36:25:95MaybeArgTypeMatch": {
+    "questionText": "[31] lib/upsert-plugin.js, CallExpression at 25:36:25:95: is arg Object.keys(instance._changed) of type function",
+    "answer": "No",
+    "patternId": "31",
+    "fileName": "lib/upsert-plugin.js",
+    "lineNumber": 25,
+    "columnNumber": 36
+  }
+}

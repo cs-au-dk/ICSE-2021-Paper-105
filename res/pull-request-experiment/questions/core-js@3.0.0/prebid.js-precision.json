@@ -1,0 +1,42 @@
+{
+  "[3b]modules/prebidServerBidAdapter/index.js_MemberExpression_792:14:792:27DisjunctionMatchResult": {
+    "questionText": "[3b] modules/prebidServerBidAdapter/index.js, MemberExpression at 792:14:792:27: Is the receiver an array or the core-js object? OR Is the receiver an array or the core-js object?",
+    "answer": "No",
+    "patternId": "3b",
+    "fileName": "modules/prebidServerBidAdapter/index.js",
+    "lineNumber": 792,
+    "columnNumber": 14
+  },
+  "[3b]modules/adtelligentBidAdapter.js_MemberExpression_92:13:92:26DisjunctionMatchResult": {
+    "questionText": "[3b] modules/adtelligentBidAdapter.js, MemberExpression at 92:13:92:26: Is the receiver an array or the core-js object? OR Is the receiver an array or the core-js object?",
+    "answer": "No",
+    "patternId": "3b",
+    "fileName": "modules/adtelligentBidAdapter.js",
+    "lineNumber": 92,
+    "columnNumber": 13
+  },
+  "[3b]modules/sizeMappingV2.js_MemberExpression_545:16:545:29DisjunctionMatchResult": {
+    "questionText": "[3b] modules/sizeMappingV2.js, MemberExpression at 545:16:545:29: Is the receiver an array or the core-js object? OR Is the receiver an array or the core-js object?",
+    "answer": "No",
+    "patternId": "3b",
+    "fileName": "modules/sizeMappingV2.js",
+    "lineNumber": 545,
+    "columnNumber": 16
+  },
+  "[3b]modules/underdogmediaBidAdapter.js_MemberExpression_32:14:32:27DisjunctionMatchResult": {
+    "questionText": "[3b] modules/underdogmediaBidAdapter.js, MemberExpression at 32:14:32:27: Is the receiver an array or the core-js object? OR Is the receiver an array or the core-js object?",
+    "answer": "No",
+    "patternId": "3b",
+    "fileName": "modules/underdogmediaBidAdapter.js",
+    "lineNumber": 32,
+    "columnNumber": 14
+  },
+  "[3b]modules/viewdeosDXBidAdapter.js_MemberExpression_88:13:88:26DisjunctionMatchResult": {
+    "questionText": "[3b] modules/viewdeosDXBidAdapter.js, MemberExpression at 88:13:88:26: Is the receiver an array or the core-js object? OR Is the receiver an array or the core-js object?",
+    "answer": "No",
+    "patternId": "3b",
+    "fileName": "modules/viewdeosDXBidAdapter.js",
+    "lineNumber": 88,
+    "columnNumber": 13
+  }
+}

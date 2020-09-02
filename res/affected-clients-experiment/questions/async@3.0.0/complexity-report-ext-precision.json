@@ -1,0 +1,10 @@
+{
+  "[3]src/lib.js_AssignmentExpression_18:8:18:34UncertainAccPathMatch": {
+    "questionText": "[3] src/lib.js, AssignmentExpression at 18:8:18:34: Is the receiver to the write a async queue or cargo?",
+    "answer": "No",
+    "patternId": "3",
+    "fileName": "src/lib.js",
+    "lineNumber": 18,
+    "columnNumber": 8
+  }
+}

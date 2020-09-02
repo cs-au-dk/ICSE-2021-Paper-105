@@ -1,0 +1,93 @@
+{
+  "storj-service-mailer": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/Storj/service-mailer",
+      "gitCommit": "ff9ff512eeb17bb31e490a9ad35e24f0045fe0ba"
+    }
+  },
+  "metalsmith-jstransformer-layouts": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/RobLoach/metalsmith-jstransformer-layouts",
+      "gitCommit": "b49f148f5a4fb68bd086097aa019d83c3941e499"
+    }
+  },
+  "metalsmith-formatcheck": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/gchallen/code.metalsmith-formatcheck",
+      "gitCommit": "cdddd0df384a347261229277ce3aceed70919adc"
+    }
+  },
+  "installall": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/ralphtheninja/installall",
+      "gitCommit": "58463d2059510bbff1e30a7f1c5617bab44a7089"
+    }
+  },
+  "download-manager": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/piranna/download-manager",
+      "gitCommit": "3647e2eab8e21ad1ec7e5133b5ff7f4c1336e3a3"
+    }
+  },
+  "rabbitmq-queue-stream": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/classdojo/rabbitmq-queue-stream",
+      "gitCommit": "22b8816a2a899cf0d99be790dab26dd9677f2277"
+    }
+  },
+  "cli-cube-timer": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/icyflame/cli-cube-timer",
+      "gitCommit": "67a5bc48e46d006082831a3f5f301ec918fc5a57"
+    }
+  },
+  "csv-to-jsonl": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/ahmednuaman/csv-to-jsonl",
+      "gitCommit": "70fd8ff10fd988991602799b8966bb376b707568"
+    }
+  },
+  "webpack-2b": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["examples/dest"],
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/wujohns/webpack-2b",
+      "gitCommit": "974aba785b2936e36c32d8022097ecc7b9d0dadd"
+    }
+  },
+  "noya-cli": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/seayona/noya-cli",
+      "gitCommit": "7fc2c88c3558991e918829f491bccc662d890cf2"
+    }
+  }
+}

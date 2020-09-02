@@ -1,0 +1,484 @@
+{
+  "scimgateway": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/scimgateway.js",
+        "lineNumber": 189,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "lib/scimgateway.js",
+        "lineNumber": 196,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "lib/scimgateway.js",
+        "lineNumber": 189,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "lib/scimgateway.js",
+        "lineNumber": 196,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "lib/scimgateway.js",
+        "lineNumber": 189,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/scimgateway.js",
+        "lineNumber": 196,
+        "classification": "4",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/jelhub/scimgateway",
+      "gitCommit": "5a044ca9b18083508cb004af3ab1a4aa16ebe13e"
+    }
+  },
+  "pusher-chatkit-server": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/pusher/chatkit-server-node",
+      "gitCommit": "c657509eac26a88bec14d2a40484aad52a4f83a5"
+    }
+  },
+  "base-api-layer": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "dist/helpers/jwt.js",
+        "lineNumber": 15,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "dist/helpers/jwt.js",
+        "lineNumber": 33,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "dist/helpers/jwt.js",
+        "lineNumber": 15,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "dist/helpers/jwt.js",
+        "lineNumber": 33,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "dist/helpers/jwt.js",
+        "lineNumber": 33,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "dist/helpers/jwt.js",
+        "lineNumber": 15,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/n9iels/base-api-layer",
+      "gitCommit": "4608e113ec8646c14c974b4574d60300ea21d1f2"
+    }
+  },
+  "remote-auth": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 44,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/dottgonzo/remote-auth",
+      "gitCommit": "32fd97cff13d299bfe11747031f163238d7e6d7c"
+    }
+  },
+  "collar-websocket": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/bhou/collar-websocket",
+      "gitCommit": "bb9497c0b8017ddf5a6fedb13744b31738513cbf"
+    }
+  },
+  "socketjam": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "__tests__/jwtVerify.test.js",
+        "lineNumber": 9,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/bigslycat/socketjam",
+      "gitCommit": "bf9e4ef2c469f168cc52be816b0434e9862cd39d"
+    }
+  },
+  "opentok": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 89,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 102,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 114,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 130,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 200,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 296,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 334,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 371,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 408,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 445,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 482,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 519,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 578,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 607,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 852,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 891,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 934,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 980,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 89,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 102,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 114,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 130,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 200,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 296,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 334,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 371,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 408,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 445,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 482,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 519,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 578,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 607,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 852,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 891,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 934,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/opentok-test.js",
+        "lineNumber": 980,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/generateJwt.js",
+        "lineNumber": 5,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/opentok/opentok-node",
+      "gitCommit": "86a5c304a6de324c30dc000956aa97058414d4a9"
+    }
+  },
+  "toa-token": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 78,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 91,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 91,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 78,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/toajs/toa-token",
+      "gitCommit": "fb83de64343fa77e2d5511dfb6a43a99731c0572"
+    }
+  },
+  "verify-azure-ad-jwt": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/verifier.js",
+        "lineNumber": 75,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "src/verifier.js",
+        "lineNumber": 75,
+        "classification": "3",
+        "truePositive": true
+      },
+      {
+        "file": "src/verifier.js",
+        "lineNumber": 75,
+        "classification": "4",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/octoblu/verify-azure-ad-jwt",
+      "gitCommit": "0484019f0d6e6d1bb2fda8181409d42d74744ca8"
+    }
+  },
+  "jwt-permissions": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/index.js",
+        "lineNumber": 9,
+        "classification": "1",
+        "truePositive": true
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 9,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 16,
+        "classification": "5",
+        "truePositive": true
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 23,
+        "classification": "5",
+        "truePositive": true
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 31,
+        "classification": "5",
+        "truePositive": true
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 46,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/hharnisc/jwt-permissions",
+      "gitCommit": "852179bb7065f23817c35921f6b1a97c59c5b72e"
+    }
+  }
+}

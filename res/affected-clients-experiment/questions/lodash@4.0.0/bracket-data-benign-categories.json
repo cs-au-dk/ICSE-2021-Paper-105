@@ -1,0 +1,7 @@
+{
+  "42b": {
+    "questionText": "Should we patch the breaking change: Enabled _.merge to assign undefined if the destination property doesn’t exist",
+    "answer": "No",
+    "patternId": "42b"
+  }
+}

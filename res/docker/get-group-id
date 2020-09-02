@@ -1,0 +1,2 @@
+#!/bin/bash
+getent group $1 | awk -F: '{printf "%d\n", $3}'

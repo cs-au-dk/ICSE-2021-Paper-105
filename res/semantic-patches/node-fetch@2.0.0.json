@@ -1,0 +1,114 @@
+[
+  {
+    "pattern": "import node-fetch/lib/**/*",
+    "transform": {
+      "pattern": "<node-fetch>.#new2",
+      "replacements": [
+        {
+          "source": "#2",
+          "newName": "#new2",
+          "substitutes": [
+            "fetch-error => FetchError",
+            "response => Response",
+            "request => Request",
+            "body => Body",
+            "headers => Headers"
+          ]
+        }
+      ]
+    },
+    "id": "2",
+    "changelogDescription": "Major: require('node-fetch/lib/response') etc. is now unsupported; use require('node-fetch').Response or ES6 module imports",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <node-fetch>?**.text",
+    "uncertainAccPathQuestion": "Is the receiver a node-fetch response?",
+    "question": "Is the response text not encoded in UTF-8?",
+    "transform": {
+      "pattern": "$base.textConverted($args)"
+    },
+    "id": "3",
+    "benign": true,
+    "changelogDescription": "Major: response.text() no longer attempts to detect encoding, instead always opting for UTF-8 (per spec); use response.textConverted() for the v1 behavior",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call <node-fetch>?**.json",
+    "uncertainAccPathQuestion": "Is the receiver a node-fetch response?",
+    "question": "Can the response code be 204?",
+    "transform": {
+      "pattern": "($base.status === 204 ? {} : $base.json())"
+    },
+    "id": "4",
+    "benign": true,
+    "changelogDescription": "Major: make response.json() throw error instead of returning an empty object on 204 no-content respose (per spec; reverts behavior changed in v1.6.2)",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "call <node-fetch>.{_clone,_decode,_convert}",
+    "uncertainAccPathQuestion": "Is the receiver node-fetch?",
+    "transform": {
+      "status": "NO_GENERAL_PATCH"
+    },
+    "id": "5",
+    "changelogDescription": "Major: internal methods are no longer exposed",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <node-fetch> [2, 2]",
+    "uncertainAccPathQuestion": "Is the function being called node-fetch?",
+    "id": "6",
+    "question": "Is the second argument a GET or HEAD Request with non-null body?",
+    "transform": {
+      "pattern": "$callee($1, Object.assign($2, {body: null}))"
+    },
+    "changelogDescription": "Major: throw error when a GET or HEAD Request is constructed with a non-null body (per spec)",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <node-fetch>?**.getAll",
+    "uncertainAccPathQuestion": "Is the receiver a node-fetch headers object?",
+    "hackyTransform": {
+      "pattern": "$base.get($args).split(/(?<!Mon|Tue|Wed|Thu|Fri|Sat|Sun),/)"
+    },
+    "transform": {
+      "status": "NO_GENERAL_PATCH"
+    },
+    "id": "7",
+    "changelogDescription": "Major: remove headers.getAll(); make get() return all headers delimited by commas (per spec)",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "call <node-fetch>?**.{set,append,has,delete} [1, 2] 0:string",
+    "uncertainAccPathQuestion": "Is the receiver a node-fetch headers object?",
+    "question": "Is the header name valid?",
+    "transform": {
+      "pattern": "try {\n\t$callee($args)\n} catch (_e) {}"
+    },
+    "id": "8",
+    "benign": true,
+    "changelogDescription": "Enhance: make sure header names and values are valid in HTTP",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "read <node-fetch>?**.arrayBuffer",
+    "uncertainAccPathQuestion": "Is the receiver a node-fetch request or response object?",
+    "transform": {
+      "pattern": "undefined"
+    },
+    "id": "9",
+    "changelogDescription": "Enhance: add response.arrayBuffer() (also applies to Requests)",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "write <node-fetch>?**.url",
+    "uncertainAccPathQuestion": "Is the receiver a node-fetch request?",
+    "transform": {
+      "pattern": "Object.defineProperty($base, 'url', {value: $value})"
+    },
+    "id": "100",
+    "changelogDescription": "request.url can no longer be written in a property write",
+    "changelogId": "9"
+  }
+]

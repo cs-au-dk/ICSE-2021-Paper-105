@@ -1,0 +1,9 @@
+[
+  {
+    "name": "slugid",
+    "repo": {
+      "gitCommit": "a5279baba17c5d99a34a877510f3d93abb800fef",
+      "gitURL": "https://github.com/taskcluster/slugid"
+    }
+  }
+]

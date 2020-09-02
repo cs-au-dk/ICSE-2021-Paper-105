@@ -1,0 +1,246 @@
+[
+  {
+    "pattern": "read <express>?**.headerSent",
+    "uncertainAccPathQuestion": "Is the receiver an express response object?",
+    "transform": {
+      "pattern": "$base.headersSent"
+    },
+    "id": "2a",
+    "changelogDescription": "remove connect and connect's patches except for charset handling",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <express>?**.on [2, 2] 0:\"header\" 1:function",
+    "uncertainAccPathQuestion": "Is the receiver an express response object?",
+    "transform": {
+      "pattern": "((() => {<on-headers>($base, $2); return $base;})())"
+    },
+    "id": "2b",
+    "changelogDescription": "remove connect and connect's patches except for charset handling",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <express>?**.setHeader 0:\"Set-Cookie\" 1:string",
+    "uncertainAccPathQuestion": "Is the receiver an express response object?",
+    "transform": {
+      "pattern": "$base.cookie(...($1.split('=')))"
+    },
+    "id": "2c",
+    "changelogDescription": "remove connect and connect's patches except for charset handling",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <express>?**.setHeader 0:\"Set-Cookie\" 1:array",
+    "uncertainAccPathQuestion": "Is the receiver an express response object?",
+    "transform": {
+      "pattern": "$1.forEach(str => $base.cookie(...(str.split('='))))"
+    },
+    "id": "2d",
+    "changelogDescription": "remove connect and connect's patches except for charset handling",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <express>.bodyParser",
+    "uncertainAccPathQuestion": "Is the receiver express?",
+    "transform": {
+      "pattern": "<body-parser>($args)"
+    },
+    "id": "3a",
+    "changelogDescription": "remove bodyParser middelware",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call <express>.json",
+    "uncertainAccPathQuestion": "Is the receiver express?",
+    "transform": {
+      "pattern": "<body-parser>.json($args)"
+    },
+    "id": "3b",
+    "changelogDescription": "remove bodyParser middelware",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call <express>.urlencoded",
+    "uncertainAccPathQuestion": "Is the receiver express?",
+    "transform": {
+      "pattern": "<body-parser>.urlencoded($args)"
+    },
+    "id": "3c",
+    "changelogDescription": "remove bodyParser middelware",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "call <express>.{compress,timeout,cookieParser,cookieSession,csrf,errorHandler,session,methodOverride,logger,responseTime,favicon,directory,vhost}",
+    "uncertainAccPathQuestion": "Is the receiver express?",
+    "transform": {
+      "pattern": "$prop[compress => <compression>, timeout => <connect-timeout>, cookieParser => <cookie-parser>, cookieSession => <cookie-session>, csrf => <csurf>, errorHandler => <errorhandler>, session => <express-session>, methodOverride => <method-override>, logger => <morgan>, responseTime => <response-time>, favicon => serve-favicon, directory => <serve-index>, vhost => <vhost>]($args)"
+    },
+    "id": "4",
+    "changelogDescription": "remove all bundled middleware except static",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "read <express>.createServer",
+    "uncertainAccPathQuestion": "Is the receiver express?",
+    "transform": {
+      "pattern": "$base"
+    },
+    "id": "6",
+    "changelogDescription": "remove express.createServer() - it has been deprecated for a long time. Use express()",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <express>?**.configure [1, 1]",
+    "uncertainAccPathQuestion": "Is the receiver an express app?",
+    "transform": {
+      "pattern": "$1()"
+    },
+    "id": "7",
+    "changelogDescription": "remove app.configure - use logic in your own app code",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <express>?**.configure [2, 2]",
+    "uncertainAccPathQuestion": "Is the receiver an express app?",
+    "transform": {
+      "pattern": "if ($1 === $base.get('env')) {\n\t$2()\n}"
+    },
+    "id": "7b",
+    "changelogDescription": "remove app.configure - use logic in your own app code",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "read <express>?**.router",
+    "uncertainAccPathQuestion": "Is the receiver an express app?",
+    "transform": {
+      "status": "UNEXPRESSIBLE_PATCH"
+    },
+    "id": "8",
+    "changelogDescription": "remove app.router - is removed",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "read <express>.basicAuth",
+    "uncertainAccPathQuestion": "Is the receiver express?",
+    "transform": {
+      "pattern": "<basic-auth-connect>"
+    },
+    "id": "9",
+    "changelogDescription": "remove req.auth - use basic-auth instead",
+    "comment": "Couldn't find req.auth in documentation for express 3, but found basicAuth middleware which was removed in the update",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "read <express>?**.{acceptedCharsets,acceptedLanguages}",
+    "uncertainAccPathQuestion": "Is the receiver an express request?",
+    "transform": {
+      "pattern": "<accepts>(req).$prop[acceptedCharsets => charsets, acceptedLanguages => languages]"
+    },
+    "id": "10",
+    "changelogDescription": "remove req.accepted* - use req.accepts*() instead",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "call <express>?.location [1, 1] 0:string",
+    "uncertainAccPathQuestion": "Is the receiver an express response?",
+    "question": "Is the argument a relative URL?",
+    "transform": {
+      "pattern": "$callee(((res, url) => {\n  var app = res.app\n    , req = res.req\n    , path;\n\n  // \"back\" is an alias for the referrer\n  if ('back' == url) url = req.get('Referrer') || '/';\n\n  // relative\n  if (!~url.indexOf('://') && 0 != url.indexOf('//')) {\n    // relative to path\n    if ('.' == url[0]) {\n      path = <parseurl>.original(req).pathname;\n      path = path + ('/' == path[path.length - 1] ? '' : '/');\n      url = <url>.resolve(path, url);\n      // relative to mount-point\n    } else if ('/' != url[0]) {\n      path = app.path();\n      url = path + '/' + url;\n    }\n  } \n  return url;\n})($base, $1))"
+    },
+    "id": "11",
+    "changelogDescription": "res.location - relative URL resolution is removed",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "write <express>?**.charset",
+    "uncertainAccPathQuestion": "Is the receiver an express response?",
+    "transform": {
+      "pattern": "$base.set('Content-Type', ($base.get('Content-Type') ? $base.get('Content-Type') + '; ' : '') + 'charset=' + $value)"
+    },
+    "id": "12",
+    "changelogDescription": "remove res.charset - include the charset in the content type when using res.set()",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "read <express>()?**.route",
+    "uncertainAccPathQuestion": "Is the receiver an express app?",
+    "transform": {
+      "pattern": "$base.mountPath"
+    },
+    "id": "13",
+    "changelogDescription": "change app.route -> app.mountpath when mounting an express app in another express app",
+    "changelogId": "11"
+  },
+  {
+    "pattern": "read <express>?**.{acceptsEncoding,acceptsCharset,acceptsLanguage}",
+    "uncertainAccPathQuestion": "Is the receiver an express request?",
+    "transform": {
+      "pattern": "$base.$prop[acceptsEncoding => acceptsEncodings, acceptsCharset => acceptsCharsets, acceptsLanguage => acceptsLanguages]"
+    },
+    "id": "15",
+    "changelogDescription": "change req.accepts* -> req.accepts*s - i.e. req.acceptsEncoding -> req.acceptsEncodings",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "read <express>?**.params",
+    "uncertainAccPathQuestion": "Is the receiver an express request?",
+    "transform": {
+      "pattern": "Object.assign([], $base.params)"
+    },
+    "id": "16",
+    "benign": true,
+    "changelogDescription": "change req.params is now an object instead of an array",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "call <express>?**.locals",
+    "uncertainAccPathQuestion": "Is the receiver an express response?",
+    "transform": {
+      "pattern": "Object.assign($callee, $1)"
+    },
+    "id": "17",
+    "changelogDescription": "change res.locals is no longer a function. It is a plain js object. Treat it as such.",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "call <express>?**.{acceptsCharset,acceptsLanguage}",
+    "uncertainAccPathQuestion": "Is the receiver an express request?",
+    "transform": {
+      "pattern": "(!!$base.$prop[acceptsCharset => acceptsCharsets, acceptsLanguage => acceptsLanguages]($args))"
+    },
+    "id": "19",
+    "changelogDescription": "refactor req.accepts* with accepts",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "call <express>?**.is",
+    "uncertainAccPathQuestion": "Is the receiver an express request?",
+    "transform": {
+      "pattern": "(!!$base.is($args))"
+    },
+    "id": "20",
+    "benign": true,
+    "changelogDescription": "refactor req.is with type-is",
+    "changelogId": "16"
+  },
+  {
+    "pattern": "read <express>?**.routes",
+    "uncertainAccPathQuestion": "Is the receiver an express app?",
+    "transform": {
+      "pattern": "['post', 'get', 'delete', 'put']\n\t.map(rt => [rt, $base._router.stack.map(r => r.route)\n\t\t.filter(r => r && r.methods[rt])])\n\t.reduce((acc, elem) => {acc[elem[0]] = elem[1]; return acc}, {})"
+    },
+    "id": "100",
+    "changelogDescription": "Removed app.routes",
+    "changelogId": "17"
+  },
+  {
+    "pattern": "read <express>.mime",
+    "uncertainAccPathQuestion": "Is the receiver express?",
+    "transform": {
+      "pattern": "$base.static.mime"
+    },
+    "id": "101",
+    "changelogDescription": "express.mime is removed. Use express.static.mime",
+    "changelogId": "18"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "pattern": "read <chalk>.hasColor",
+    "id": "2",
+    "changelogDescription": "Removed chalk.hasColor(). Use the has-ansi package directly instead. 04cae22",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "read <chalk>.stripColor",
+    "id": "3",
+    "changelogDescription": "Removed chalk.stripColor(). Use the strip-ansi package directly instead. 04cae22",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "read <chalk>.styles",
+    "id": "4",
+    "changelogDescription": "Removed chalk.styles. Use the ansi-styles package directly instead. 8702496",
+    "changelogId": "3"
+  }
+]

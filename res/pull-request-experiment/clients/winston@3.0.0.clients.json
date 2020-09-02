@@ -1,0 +1,74 @@
+[
+  {
+    "name": "@bloq/service-logger",
+    "repo": {
+      "gitURL": "https://github.com/bloq/service-logger",
+      "gitCommit": "62c9ca988955d5710f2cfca5978c38cecce70b7e"
+    }
+  },
+  {
+    "name": "@csllc/cs-modbus-cli",
+    "repo": {
+      "gitURL": "https://github.com/csllc/cs-modbus-cli",
+      "gitCommit": "2b2db507836c85a05eab5726934d016227cac955"
+    }
+  },
+  {
+    "name": "@trayio/threadneedle",
+    "repo": {
+      "gitURL": "https://github.com/trayio/threadneedle",
+      "gitCommit": "0dcbe079c35e8f5a26c3292e055df2d55350f0fb"
+    }
+  },
+  {
+    "name": "gearmanode-up",
+    "repo": {
+      "gitURL": "https://github.com/ashtonjang/GearmaNode",
+      "gitCommit": "8988977dd8ca3ccb3fac59bac91aa13bd1e8ac63"
+    }
+  },
+  {
+    "name": "db-presets",
+    "repo": {
+      "gitURL": "https://github.com/Dzenly/db-presets",
+      "gitCommit": "0865f0cbcc264a500eaf0d12987bd7b6191d109d"
+    }
+  },
+  {
+    "name": "@lumberjack-otters/serverless-aws-arn-resolver",
+    "repo": {
+      "gitURL": "https://github.com/LumberjackOtters/serverless-aws-arn-resolver",
+      "gitCommit": "8fa83be1b5a6411b2c582cd2f23fdc58b35db22c"
+    }
+  },
+  {
+    "name": "@rewardops/sdk-node",
+    "repo": {
+      "gitURL": "https://github.com/rewardops/rewardops-sdk-node",
+      "gitCommit": "363873ec6fa52522ff3b596c02504343fa4c8516"
+    }
+  },
+  {
+    "name": "plunk",
+    "repo": {
+      "gitURL": "https://github.com/iliakan/plunk",
+      "gitCommit": "039acf793a80a799677e033c286ab0fbd3418bd7"
+    }
+  },
+  {
+    "name": "csync-canvas",
+    "excludedFolders": ["dist"],
+    "repo": {
+      "gitURL": "https://github.com/mfine15/csync",
+      "gitCommit": "eb0cc3bee5428d920eab86e51968f5c5d5753bbd"
+    }
+  },
+  {
+    "name": "@stae/logger",
+    "packagePath": "packages/logger",
+    "repo": {
+      "gitURL": "https://github.com/staeco/modules",
+      "gitCommit": "d3c31ea1393883c206d4e4e9aacb4a168b6c82f9"
+    }
+  }
+]

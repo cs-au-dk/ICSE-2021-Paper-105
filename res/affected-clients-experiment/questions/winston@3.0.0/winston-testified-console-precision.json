@@ -1,0 +1,74 @@
+{
+  "[14]test/unit/index.spec.js_CallExpression_23:6:23:44MaybeArgTypeMatch": {
+    "questionText": "[14] test/unit/index.spec.js, CallExpression at 23:6:23:44: is arg winston.transports.Console of type function",
+    "answer": "Yes",
+    "patternId": "14",
+    "fileName": "test/unit/index.spec.js",
+    "lineNumber": 23,
+    "columnNumber": 6
+  },
+  "[14]test/unit/index.spec.js_CallExpression_41:6:41:44MaybeArgTypeMatch": {
+    "questionText": "[14] test/unit/index.spec.js, CallExpression at 41:6:41:44: is arg winston.transports.Console of type function",
+    "answer": "Yes",
+    "patternId": "14",
+    "fileName": "test/unit/index.spec.js",
+    "lineNumber": 41,
+    "columnNumber": 6
+  },
+  "[14]test/unit/index.spec.js_CallExpression_50:6:50:44MaybeArgTypeMatch": {
+    "questionText": "[14] test/unit/index.spec.js, CallExpression at 50:6:50:44: is arg winston.transports.Console of type function",
+    "answer": "Yes",
+    "patternId": "14",
+    "fileName": "test/unit/index.spec.js",
+    "lineNumber": 50,
+    "columnNumber": 6
+  },
+  "[14a]test/unit/index.spec.js_CallExpression_33:6:33:68MaybeArgTypeMatch": {
+    "questionText": "[14a] test/unit/index.spec.js, CallExpression at 33:6:33:68: is arg winston.transports.File of type function",
+    "answer": "Yes",
+    "patternId": "14a",
+    "fileName": "test/unit/index.spec.js",
+    "lineNumber": 33,
+    "columnNumber": 6
+  },
+  "[14a]test/unit/index.spec.js_CallExpression_33:6:33:68TransformQuestion": {
+    "questionText": "[14a] test/unit/index.spec.js, CallExpression at 33:6:33:68: Is the first argument one of winston.transports.{File,Console,Http} and the second argument an object containing formatting options?",
+    "answer": "No",
+    "patternId": "14a",
+    "fileName": "test/unit/index.spec.js",
+    "lineNumber": 33,
+    "columnNumber": 6
+  },
+  "[100]index.js_MemberExpression_18:7:18:25UncertainAccPathMatch": {
+    "questionText": "[100] index.js, MemberExpression at 18:7:18:25: Is the receiver the transports object of a winston logger?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "index.js",
+    "lineNumber": 18,
+    "columnNumber": 7
+  },
+  "[100]index.js_MemberExpression_55:15:55:33UncertainAccPathMatch": {
+    "questionText": "[100] index.js, MemberExpression at 55:15:55:33: Is the receiver the transports object of a winston logger?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "index.js",
+    "lineNumber": 55,
+    "columnNumber": 15
+  },
+  "[100]index.js_MemberExpression_59:4:59:22UncertainAccPathMatch": {
+    "questionText": "[100] index.js, MemberExpression at 59:4:59:22: Is the receiver the transports object of a winston logger?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "index.js",
+    "lineNumber": 59,
+    "columnNumber": 4
+  },
+  "[100]index.js_MemberExpression_61:6:61:24UncertainAccPathMatch": {
+    "questionText": "[100] index.js, MemberExpression at 61:6:61:24: Is the receiver the transports object of a winston logger?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "index.js",
+    "lineNumber": 61,
+    "columnNumber": 6
+  }
+}

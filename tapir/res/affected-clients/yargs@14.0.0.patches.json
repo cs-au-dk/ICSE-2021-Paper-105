@@ -1,0 +1,16 @@
+{
+  "ybiq": {
+    "patches": [
+      {
+        "file": "lib/cli.js",
+        "lineNumber": 6,
+        "classification": "3",
+        "NOTE": "It's not clear how this should be fixed. Removing strict mode is one option, but that's probably not the idomatic solution. Instead, the tests should be updated to now pass unused arguments to init, i.e., change args to [args[0]] in the cp.execFile call in test/helpers/exec.js"
+      }
+    ],
+    "repo": {
+      "gitCommit": "8776bd98d4e9fabe787b4896ce153028865a1a41",
+      "gitURL": "https://github.com/ybiquitous/ybiq"
+    }
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "ketting": {
+      "patches": [
+        {
+          "file": "lib/resource.js",
+          "lineNumber": 321,
+          "classification": "100"
+        },
+        {
+          "file": "lib/resource.js",
+          "lineNumber": 149,
+          "classification": "3"
+        },
+        {
+          "file": "lib/http-error.js",
+          "lineNumber": 62,
+          "classification": "4"
+        },
+        {
+          "file": "test/integration/fetch-api.js",
+          "lineNumber": 58,
+          "classification": "4"
+        },
+        {
+          "file": "lib/utils/oauth.js",
+          "lineNumber": 36,
+          "classification": "8"
+        },
+        {
+          "file": "lib/utils/oauth.js",
+          "lineNumber": 44,
+          "classification": "8"
+        },
+        {
+          "file": "lib/utils/oauth.js",
+          "lineNumber": 71,
+          "classification": "8"
+        },
+        {
+          "file": "lib/ketting.js",
+          "lineNumber": 150,
+          "classification": "8"
+        },
+        {
+          "file": "lib/ketting.js",
+          "lineNumber": 151,
+          "classification": "8"
+        },
+        {
+          "file": "lib/ketting.js",
+          "lineNumber": 153,
+          "classification": "8"
+        },
+        {
+          "file": "lib/ketting.js",
+          "lineNumber": 161,
+          "classification": "8"
+        },
+        {
+          "file": "lib/ketting.js",
+          "lineNumber": 163,
+          "classification": "8"
+        },
+        {
+          "file": "lib/ketting.js",
+          "lineNumber": 164,
+          "classification": "8"
+        },
+        {
+          "file": "lib/ketting.js",
+          "lineNumber": 166,
+          "classification": "8"
+        },
+        {
+          "file": "lib/ketting.js",
+          "lineNumber": 170,
+          "classification": "8"
+        },
+        {
+          "file": "lib/ketting.js",
+          "lineNumber": 173,
+          "classification": "8"
+        },
+        {
+          "file": "lib/resource.js",
+          "lineNumber": 120,
+          "classification": "8"
+        }
+      ],
+      "repo": {
+          "gitCommit": "d59bd9b3ced666a0cda2e78de8d7f83194996c2f",
+          "gitURL": "https://github.com/evert/ketting"
+      }
+  },
+  "alice-app": {
+    "patches": [
+      {
+        "file": "lib/alice.js",
+        "lineNumber": 182,
+        "classification": "4"
+      },
+      {
+        "file": "lib/alice.js",
+        "lineNumber": 182,
+        "classification": "6"
+      }
+    ],
+    "repo": {
+      "gitCommit": "8410d22fc3a7d46fa834ac541dacde27a4b322e3",
+      "gitURL": "https://github.com/keydotco/alice-app-js"
+    }
+  },
+  "fetch-vcr": {
+    "patches": [
+      {
+        "file": "lib/adapter/response-node.js",
+        "lineNumber": 2,
+        "classification": "2"
+      },
+      {
+        "file": "lib/index.js",
+        "lineNumber": 145,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 16,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 25,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 61,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 66,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 35,
+        "classification": "4"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 43,
+        "classification": "4"
+      }
+    ],
+    "repo": {
+      "gitCommit": "359fd431b541f59a3cb2e860bbca2f503ec8aba0",
+      "gitURL": "https://github.com/philschatz/fetch-vcr"
+    }
+  },
+  "eazydict-bing": {
+    "patches": [
+      {
+        "file": "test/lib/fetch.js",
+        "lineNumber": 10,
+        "classification": "2"
+      },
+      {
+        "file": "lib/fetch.js",
+        "lineNumber": 39,
+        "classification": "3"
+      },
+      {
+        "file": "lib/fetch.js",
+        "lineNumber": 38,
+        "classification": "6"
+      }
+    ],
+    "repo": {
+      "gitCommit": "f923e75b6251b5b1b0ae3a6a8c117ea5b03513e2",
+      "gitURL": "https://github.com/keenwon/eazydict-bing"
+    }
+  },
+  "akita": {
+    "patches": [
+      {
+        "file": "lib/client.js",
+        "lineNumber": 175,
+        "classification": "9"
+      },
+      {
+        "file": "lib/client.js",
+        "lineNumber": 207,
+        "classification": "4"
+      }
+    ],
+    "repo": {
+      "gitCommit": "6d6263a2549def270e567580bb6251c7a2ccb15c",
+      "gitURL": "https://github.com/maichong/akita"
+    }
+  },
+  "sw-test-env": {
+    "patches": [
+      {
+        "file": "lib/fetchFactory.js",
+        "lineNumber": 25,
+        "classification": "100"
+      },
+      {
+        "file": "lib/fetchFactory.js",
+        "lineNumber": 28,
+        "classification": "6"
+      }
+    ],
+    "repo": {
+      "gitCommit": "cf3689b019ae2a32348489d5f2eb6fd4ea906394",
+      "gitURL": "https://github.com/popeindustries/sw-test-env"
+    }
+  },
+  "pdf-bot-digitalum": {
+    "patches": [
+      {
+        "file": "src/webhook.js",
+        "lineNumber": 41,
+        "classification": "8"
+      },
+      {
+        "file": "src/webhook.js",
+        "lineNumber": 105,
+        "classification": "3"
+      },
+      {
+        "file": "src/webhook.js",
+        "lineNumber": 108,
+        "classification": "3"
+      },
+      {
+        "file": "src/webhook.js",
+        "lineNumber": 73,
+        "classification": "6"
+      }
+    ],
+    "repo": {
+      "gitCommit": "5bf58dc8bef1c15d625e002e1301f132ba7bb83c",
+      "gitURL": "https://github.com/esbenp/pdf-bot"
+    }
+  },
+  "req-fetch": {
+    "patches": [
+      {
+        "file": "test/index.js",
+        "lineNumber": 263,
+        "classification": "7"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 290,
+        "classification": "7"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 312,
+        "classification": "7"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 13,
+        "classification": "7"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 92,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 117,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 142,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 167,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 186,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 206,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 225,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 245,
+        "classification": "3"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 338,
+        "classification": "3"
+      }
+    ],
+    "repo": {
+      "gitCommit": "9ea235ea6863b20f496522778a056e07cabfa33c",
+      "gitURL": "https://github.com/undoZen/req-fetch"
+    }
+  }
+}

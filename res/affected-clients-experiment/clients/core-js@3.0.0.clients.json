@@ -1,0 +1,61 @@
+[
+  {
+    "name": "funk-lib",
+    "repo": {
+      "gitCommit": "ea5e0f620024306e130fd08b385ff3b434ea9792",
+      "gitURL": "https://github.com/colbydauph/funk-lib"
+    },
+    "excludedFolders": ["dist"]
+  },
+  {
+    "name": "@netology-group/wc-reaction",
+    "repo": {
+      "gitCommit": "69f9cdf96d6504fd7dd9d2948bb59af084b290e3",
+      "gitURL": "https://github.com/netology-group/wc-reaction"
+    },
+    "excludedFolders": ["dist", "es", "lib", "public/node_modules"]
+  },
+  {
+    "name": "@yeutech-lab/react-router-dom-utils",
+    "repo": {
+      "gitCommit": "5997f3683e820eff89682c1ff0863a48383ea818",
+      "gitURL": "https://github.com/yeutech-lab/react-router-dom-utils"
+    }
+  },
+  {
+    "name": "kewt",
+    "repo": {
+      "gitCommit": "c502d76a18977526eca94b1bb6735ae90d07c750",
+      "gitURL": "https://github.com/flipactual/kewt"
+    }
+  },
+  {
+    "name": "schema-entity",
+    "repo": {
+      "gitCommit": "8aefd00ac6351495aabd5c5bf56181d969e18e4c",
+      "gitURL": "https://github.com/henit/schema-entity"
+    }
+  },
+  {
+    "name": "@monastic.panic/react-live",
+    "repo": {
+      "gitCommit": "c4eee2cf08cb3600f62025f88016d8e2b3b9d3e5",
+      "gitURL": "https://github.com/philpl/react-live"
+    }
+  },
+  {
+    "name": "styled-transition-group-animation",
+    "repo": {
+      "gitCommit": "f90fec52756d3a64a9a6cd448bb6712ac80bf836",
+      "gitURL": "https://github.com/SanderV1992/Styled-Transition-Group"
+    },
+    "excludedFolders": ["public/storybook/static"]
+  },
+  {
+    "name": "domain-gfx",
+    "repo": {
+      "gitCommit": "49879fb721e1f4afff7747eb3796c19007495b08",
+      "gitURL": "https://github.com/ProteinsWebTeam/domain_gfx"
+    }
+  }
+]

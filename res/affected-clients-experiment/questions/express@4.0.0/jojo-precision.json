@@ -1,0 +1,18 @@
+{
+  "[17]src/jojo.js_CallExpression_114:4:117:6UncertainAccPathMatch": {
+    "questionText": "[17] src/jojo.js, CallExpression at 114:4:117:6: Is the receiver an express response?",
+    "answer": "Yes",
+    "patternId": "17",
+    "fileName": "src/jojo.js",
+    "lineNumber": 114,
+    "columnNumber": 4
+  },
+  "[17]src/jojo.js_CallExpression_127:8:129:10UncertainAccPathMatch": {
+    "questionText": "[17] src/jojo.js, CallExpression at 127:8:129:10: Is the receiver an express response?",
+    "answer": "Yes",
+    "patternId": "17",
+    "fileName": "src/jojo.js",
+    "lineNumber": 127,
+    "columnNumber": 8
+  }
+}

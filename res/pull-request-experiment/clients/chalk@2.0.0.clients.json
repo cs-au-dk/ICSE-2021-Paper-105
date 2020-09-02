@@ -1,0 +1,72 @@
+[
+  {
+    "name": "purs-loader",
+    "repo": {
+      "gitURL": "https://github.com/ethul/purs-loader",
+      "gitCommit": "8d4bd16e97e5e315d879fbfae04f52073b9e6a2b"
+    }
+  },
+  {
+    "name": "@bluejeans/react-native-windows",
+    "repo": {
+      "gitURL": "https://github.com/bluejeans/react-native-windows",
+      "gitCommit": "48eec0c0ac59d4a5d90f31976b3840352e2b4590"
+    }
+  },
+  {
+    "name": "karma-istanbul-threshold",
+    "repo": {
+      "gitURL": "https://github.com/titel-media/karma-istanbul-threshold",
+      "gitCommit": "3652e479f239a00aea19ef547e68a365d128b44b"
+    }
+  },
+  {
+    "name": "mochawesome-screenshots-it-steps",
+    "repo": {
+      "gitURL": "https://github.com/midev247/mochawesome-screenshots",
+      "gitCommit": "3f221ac5f10675ba5e6384838d8513754069f6df"
+    }
+  },
+  {
+    "name": "meanie",
+    "repo": {
+      "gitURL": "https://github.com/meanie/meanie",
+      "gitCommit": "8338107fc1addfbfba31e4e75c17e4758b28256b"
+    }
+  },
+  {
+    "name": "elm-live",
+    "repo": {
+      "gitURL": "https://github.com/wking-io/elm-live",
+      "gitCommit": "19b4c9012d6906ff61c54d77d35f94b86951c5ef"
+    }
+  },
+  {
+    "name": "yuzu-definition-core",
+    "repo": {
+      "gitURL": "https://github.com/balanced-dev/yuzu-definition-core",
+      "gitCommit": "4cd769517dc70bd5612fd46df073881bddb76c68"
+    }
+  },
+  {
+    "name": "generator-py-struct",
+    "repo": {
+      "gitURL": "https://github.com/cristian-rincon/py-struct",
+      "gitCommit": "239066a09285f086923c810e48b0ea25e7c7326a"
+    }
+  },
+  {
+    "name": "homematic-virtual-interface",
+    "repo": {
+      "gitURL": "https://github.com/thkl/Homematic-Virtual-Interface",
+      "gitCommit": "383d592e52ff0d0d19356320df4fbc8ee72b7cb5"
+    }
+  },
+  {
+    "name": "zh-cli",
+    "repo": {
+      "gitURL": "https://github.com/zhonggithub/z-cli",
+      "gitCommit": "9d616cd8b98a7f4c9f55e576d780bc5ff2484865"
+    }
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "[102a]src/cli.js_CallExpression_56:13:56:48UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 56:13:56:48: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 56,
+    "columnNumber": 13
+  },
+  "[102a]src/cli.js_CallExpression_58:11:58:37UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 58:11:58:37: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 58,
+    "columnNumber": 11
+  },
+  "[102a]src/cli.js_CallExpression_58:11:58:76UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 58:11:58:76: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 58,
+    "columnNumber": 11
+  },
+  "[102a]src/cli.js_CallExpression_53:0:59:4UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 53:0:59:4: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 53,
+    "columnNumber": 0
+  },
+  "[102a]src/cli.js_CallExpression_53:0:60:28UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 53:0:60:28: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 53,
+    "columnNumber": 0
+  },
+  "[102a]src/cli.js_CallExpression_61:16:61:36UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 61:16:61:36: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 61,
+    "columnNumber": 16
+  },
+  "[102a]src/cli.js_CallExpression_53:0:61:37UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 53:0:61:37: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 53,
+    "columnNumber": 0
+  },
+  "[102a]src/cli.js_CallExpression_53:0:62:14UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 53:0:62:14: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 53,
+    "columnNumber": 0
+  },
+  "[102a]src/cli.js_CallExpression_53:0:65:4UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 53:0:65:4: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 53,
+    "columnNumber": 0
+  },
+  "[102a]src/cli.js_CallExpression_53:0:66:57UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 53:0:66:57: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 53,
+    "columnNumber": 0
+  },
+  "[102a]src/cli.js_CallExpression_71:21:71:74UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 71:21:71:74: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 71,
+    "columnNumber": 21
+  },
+  "[102a]src/cli.js_CallExpression_53:0:108:4UncertainAccPathMatch": {
+    "questionText": "[102a] src/cli.js, CallExpression at 53:0:108:4: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/cli.js",
+    "lineNumber": 53,
+    "columnNumber": 0
+  },
+  "[103a]src/cli.js_MemberExpression_58:11:58:22UncertainAccPathMatch": {
+    "questionText": "[103a] src/cli.js, MemberExpression at 58:11:58:22: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "103a",
+    "fileName": "src/cli.js",
+    "lineNumber": 58,
+    "columnNumber": 11
+  },
+  "[103a]src/cli.js_MemberExpression_53:0:63:5UncertainAccPathMatch": {
+    "questionText": "[103a] src/cli.js, MemberExpression at 53:0:63:5: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "103a",
+    "fileName": "src/cli.js",
+    "lineNumber": 53,
+    "columnNumber": 0
+  },
+  "[103a]src/cli.js_MemberExpression_53:0:67:5UncertainAccPathMatch": {
+    "questionText": "[103a] src/cli.js, MemberExpression at 53:0:67:5: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "103a",
+    "fileName": "src/cli.js",
+    "lineNumber": 53,
+    "columnNumber": 0
+  },
+  "[102a]src/index.js_CallExpression_22:18:22:85UncertainAccPathMatch": {
+    "questionText": "[102a] src/index.js, CallExpression at 22:18:22:85: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/index.js",
+    "lineNumber": 22,
+    "columnNumber": 18
+  },
+  "[102a]test/index.js_CallExpression_12:2:13:12UncertainAccPathMatch": {
+    "questionText": "[102a] test/index.js, CallExpression at 12:2:13:12: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "test/index.js",
+    "lineNumber": 12,
+    "columnNumber": 2
+  }
+}

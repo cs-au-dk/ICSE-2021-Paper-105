@@ -1,0 +1,398 @@
+{
+    "bitter": {
+        "patches": [
+            {
+                "description": "Should use the npm package compression instead of express.compress().",
+                "file": "server.js",
+                "lineNumber": 55,
+                "classification": "4"
+            },
+            {
+                "description": "Should use the npm package response-time instead of express.responseTime().",
+                "file": "server.js",
+                "lineNumber": 56,
+                "classification": "4"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 61,
+                "classification": "16"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 62,
+                "classification": "16"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 63,
+                "classification": "16"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 64,
+                "classification": "16"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 65,
+                "classification": "16"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 112,
+                "classification": "16"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 113,
+                "classification": "16"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 143,
+                "classification": "16"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 168,
+                "classification": "16"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 169,
+                "classification": "16"
+            }
+        ],
+        "repo": {
+            "gitCommit": "e13d2cf983cb25c3a3c67fca4cb27462b58428cc",
+            "gitURL": "https://github.com/iizukanao/bitter"
+        }
+    },
+    "hubot": {
+        "patches": [
+            {
+                "file": "src/robot.js",
+                "lineNumber": 440,
+                "classification": "9"
+            },
+            {
+                "file": "src/robot.js",
+                "lineNumber": 444,
+                "classification": "3a"
+            },
+            {
+                "file": "src/robot.js",
+                "lineNumber": 445,
+                "classification": "3a"
+            }
+        ],
+        "repo": {
+            "gitCommit": "d0c13d2d8cd1ba30dc7f8765778988ca5a4d00c9",
+            "gitURL": "https://github.com/hubotio/hubot"
+        }
+    },
+    "cf-api": {
+        "patches": [
+            {
+                "file": "middleware/logger.js",
+                "lineNumber": 11,
+                "classification": "4"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 35,
+                "classification": "4"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 41,
+                "classification": "3a"
+            },
+            {
+                "file": "server.js",
+                "lineNumber": 51,
+                "classification": "8"
+            },
+            {
+                "file": "test/middleware/error/integration.test.js",
+                "lineNumber": 14,
+                "classification": "8"
+            }
+        ],
+        "repo": {
+            "gitCommit": "cd918033256c05426c55bfb89a7103378821b92c",
+            "gitURL": "https://github.com/clocklimited/cf-api"
+        }
+    },
+    "json-server": {
+        "repo": {
+            "gitCommit": "3ae7c5bcec03fa5104f180b1002036a147e980c9",
+            "gitURL": "https://github.com/typicode/json-server"
+        },
+        "patches": [
+            {
+                "file": "src/server.js",
+                "lineNumber": 17,
+                "classification": "3a"
+            },
+            {
+                "file": "src/server.js",
+                "lineNumber": 18,
+                "classification": "3a"
+            },
+            {
+                "file": "src/server.js",
+                "lineNumber": 16,
+                "classification": "4"
+            },
+            {
+                "file": "src/server.js",
+                "lineNumber": 31,
+                "classification": "4"
+            },
+            {
+                "file": "src/server.js",
+                "lineNumber": 28,
+                "classification": "8"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 24,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 25,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 25,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 34,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 47,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 49,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 51,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 66,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 67,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 79,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 93,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 94,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 102,
+                "classification": "16"
+            },
+            {
+                "file": "src/routes.js",
+                "lineNumber": 102,
+                "classification": "16"
+            }
+        ]
+    },
+    "jojo": {
+        "repo": {
+            "gitCommit": "82fe6b7ce7bc841ddde800ebb543a14aa70cd856",
+            "gitURL": "https://github.com/twolfson/jojo"
+        },
+        "patches": [
+            {
+                "file": "src/jojo.js",
+                "lineNumber": 114,
+                "classification": "17"
+            },
+            {
+                "file": "src/jojo.js",
+                "lineNumber": 127,
+                "classification": "17"
+            },
+            {
+                "file": "src/jojo.js",
+                "lineNumber": 140,
+                "classification": "6"
+            }
+        ]
+    },
+    "mockiji": {
+        "repo": {
+            "gitCommit": "3f60902555d0b0704946cd8ab6a790d22f93a88a",
+            "gitURL": "https://github.com/NijiDigital/mockiji"
+        },
+        "patches": [
+            {
+                "file": "src/index.js",
+                "lineNumber": 24,
+                "classification": "3a"
+            },
+            {
+                "file": "src/index.js",
+                "lineNumber": 25,
+                "classification": "3a"
+            }
+        ]
+    },
+    "http-test-servers": {
+        "repo": {
+            "gitCommit": "7e76d04186734dcb03a8a320fa0f1e65bd0394c8",
+            "gitURL": "https://github.com/matteofigus/http-test-servers"
+        },
+        "patches": [
+            {
+                "file": "lib/http-test-servers.js",
+                "lineNumber": 55,
+                "classification": "3a"
+            },
+            {
+                "file": "lib/http-test-servers.js",
+                "lineNumber": 56,
+                "classification": "3a"
+            },
+            {
+                "file": "lib/http-test-servers.js",
+                "lineNumber": 54,
+                "classification": "4"
+            },
+            {
+                "file": "lib/http-test-servers.js",
+                "lineNumber": 59,
+                "classification": "4"
+            },
+            {
+                "file": "test/http-test-servers.js",
+                "lineNumber": 186,
+                "classification": "100"
+            }
+        ]
+    },
+    "lingon": {
+        "repo": {
+            "gitCommit": "7c4cd02d5d761120dfb00a3d2126378c531be5a8",
+            "gitURL": "https://github.com/spotify/lingon"
+        },
+        "patches": [
+            {
+                "file": "lib/server.js",
+                "lineNumber": 17,
+                "classification": "101"
+            }
+        ]
+    },
+    "lingon": {
+        "repo": {
+            "gitCommit": "7c4cd02d5d761120dfb00a3d2126378c531be5a8",
+            "gitURL": "https://github.com/spotify/lingon"
+        },
+        "patches": [
+            {
+                "file": "lib/server.js",
+                "lineNumber": 17,
+                "classification": "101"
+            }
+        ]
+    },
+    "corsica": {
+        "repo": {
+            "gitCommit": "d7422b4c9e20432bfd21737d5706ad1f4a0d2897",
+            "gitURL": "https://github.com/mozilla/corsica"
+        },
+        "patches": [
+            {
+                "file": "lib/server.js",
+                "lineNumber": 19,
+                "classification": "4"
+            },
+            {
+                "file": "lib/server.js",
+                "lineNumber": 20,
+                "classification": "3a"
+            },
+            {
+                "file": "lib/server.js",
+                "lineNumber": 42,
+                "classification": "16"
+            },
+            {
+                "file": "lib/server.js",
+                "lineNumber": 53,
+                "classification": "16"
+            }
+        ]
+    },
+    "gqexpress": {
+        "repo": {
+            "gitCommit": "1799a1038d0bf6401062554b29831b1a3e4d271b",
+            "gitURL": "https://github.com/goldfiction/gqexpress"
+        },
+        "patches": [
+            {
+                "file": "main.js",
+                "lineNumber": 129,
+                "classification": "3a"
+            },
+            {
+                "file": "main.js",
+                "lineNumber": 130,
+                "classification": "3a"
+            },
+            {
+                "file": "main.js",
+                "lineNumber": 124,
+                "classification": "4"
+            },
+            {
+                "file": "main.js",
+                "lineNumber": 125,
+                "classification": "4"
+            },
+            {
+                "file": "main.js",
+                "lineNumber": 142,
+                "classification": "4"
+            },
+            {
+                "file": "main.js",
+                "lineNumber": 150,
+                "classification": "8"
+            }
+        ]
+    }
+}
+

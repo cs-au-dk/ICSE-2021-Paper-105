@@ -1,0 +1,34 @@
+{
+  "[7b]lib/ModelFactory/index.js_CallExpression_55:8:55:35MaybeExplicitQuestionMatch": {
+    "questionText": "[7b] lib/ModelFactory/index.js, CallExpression at 55:8:55:35: Is the first argument an object with functions that calls their callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7b",
+    "fileName": "lib/ModelFactory/index.js",
+    "lineNumber": 55,
+    "columnNumber": 8
+  },
+  "[7b]lib/RouteFactory/interactions.js_CallExpression_358:8:358:33MaybeExplicitQuestionMatch": {
+    "questionText": "[7b] lib/RouteFactory/interactions.js, CallExpression at 358:8:358:33: Is the first argument an object with functions that calls their callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7b",
+    "fileName": "lib/RouteFactory/interactions.js",
+    "lineNumber": 358,
+    "columnNumber": 8
+  },
+  "[7]test/spec/RouteFactory/interactions-tests.js_CallExpression_49:33:49:73MaybeExplicitQuestionMatch": {
+    "questionText": "[7] test/spec/RouteFactory/interactions-tests.js, CallExpression at 49:33:49:73: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7",
+    "fileName": "test/spec/RouteFactory/interactions-tests.js",
+    "lineNumber": 49,
+    "columnNumber": 33
+  },
+  "[7]test/spec/RouteFactory/interactions-tests.js_CallExpression_69:63:69:133MaybeExplicitQuestionMatch": {
+    "questionText": "[7] test/spec/RouteFactory/interactions-tests.js, CallExpression at 69:63:69:133: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7",
+    "fileName": "test/spec/RouteFactory/interactions-tests.js",
+    "lineNumber": 69,
+    "columnNumber": 63
+  }
+}

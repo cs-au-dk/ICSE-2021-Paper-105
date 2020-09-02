@@ -1,0 +1,10 @@
+{
+  "[7c]lib/index.js_CallExpression_17:15:17:51MaybeExplicitQuestionMatch": {
+    "questionText": "[7c] lib/index.js, CallExpression at 17:15:17:51: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7c",
+    "fileName": "lib/index.js",
+    "lineNumber": 17,
+    "columnNumber": 15
+  }
+}

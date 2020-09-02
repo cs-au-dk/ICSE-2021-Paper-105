@@ -1,0 +1,196 @@
+{
+  "clpm": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/1ambda/clpm",
+      "gitCommit": "3515c91a23a4b749bd4aaab6b47c51d37a02cdef"
+    }
+  },
+  "npm-freeze": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "bin/npm-freeze.js",
+        "lineNumber": 106,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "bin/npm-freeze.js",
+        "lineNumber": 106,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/phadej/npm-freeze",
+      "gitCommit": "326683cab5b1ecce46511890dd3e73b1018baa58"
+    }
+  },
+  "react-doc-creator": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/utils/command.js",
+        "lineNumber": 13,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils/command.js",
+        "lineNumber": 13,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/crearlink/react-doc-creator",
+      "gitCommit": "5fabf1545eab54083c499e41b2e66c5367a398aa"
+    }
+  },
+  "ugly": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "bin/launcher.js",
+        "lineNumber": 13,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "bin/launcher.js",
+        "lineNumber": 13,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/williamg/ugly",
+      "gitCommit": "345d1f7b7f8ab7f72c28c2205d6e408a1c27e38f"
+    }
+  },
+  "staticfragment": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 95,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 95,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/admataz/staticfragment",
+      "gitCommit": "fd85f4b85b9218b7af1855829a68f59e27d86c89"
+    }
+  },
+  "tar.gz": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/alanhoff/node-tar.gz",
+      "gitCommit": "485aa89cbb7c73bd65e4c70f4346361c62f20c37"
+    }
+  },
+  "maildev": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 21,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 21,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/maildev/maildev",
+      "gitCommit": "f526cce34f86736f579b753f5bf782ca4717b3d3"
+    }
+  },
+  "gen-file-diff": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/bin/gendiff.js",
+        "lineNumber": 14,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "src/bin/gendiff.js",
+        "lineNumber": 14,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/tysky/gen-diff",
+      "gitCommit": "1789c3837f31b6533a1819d61acf0ad6b9e38e3b"
+    }
+  },
+  "dod": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "dod.js",
+        "lineNumber": 419,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "dod.js",
+        "lineNumber": 419,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/gamontal/dod",
+      "gitCommit": "921c5d5bf6c1b4d4b68c640ac1655b4fcc37b2a6"
+    }
+  },
+  "monopod": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "bin/monopod",
+        "lineNumber": 10,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "bin/monopod",
+        "lineNumber": 10,
+        "classification": "5",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/studio-b12/monopod",
+      "gitCommit": "d34e7b18eb35e4ab64c205cbb6f3575f6e37bf3d"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "[26b]src/service-proxy.js_CallExpression_17:23:17:63MaybeExplicitQuestionMatch": {
+    "questionText": "[26b] src/service-proxy.js, CallExpression at 17:23:17:63: Is useMongoClient not enabled and is the return value not used as a Thenable?",
+    "answer": "Yes",
+    "patternId": "26b",
+    "fileName": "src/service-proxy.js",
+    "lineNumber": 17,
+    "columnNumber": 23
+  }
+}

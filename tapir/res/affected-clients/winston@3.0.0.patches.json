@@ -1,0 +1,382 @@
+{
+  "autoapply": {
+      "patches": [
+        {
+          "file": "bin/autoapply.js",
+          "lineNumber": 20,
+          "classification": "1"
+        },
+        {
+          "file": "bin/autoapply.js",
+          "lineNumber": 30,
+          "classification": "7"
+        },
+        {
+          "file": "bin/autoapply.js",
+          "lineNumber": 30,
+          "classification": "29"
+        },
+        {
+          "file": "bin/autoapply.js",
+          "lineNumber": 32,
+          "classification": "101"
+        }
+      ],
+      "repo": {
+          "gitCommit": "7de73f0b548845372196775f73e8818af5f767ca",
+          "gitURL": "https://github.com/autoapply/autoapply"
+      }
+  },
+  "@siggame/colisee-lib": {
+    "install": true,
+    "patches": [
+      {
+        "file": "src/logger/index.js",
+        "lineNumber": 7,
+        "classification": "1"
+      },
+      {
+        "file": "src/logger/index.js",
+        "lineNumber": 9,
+        "classification": "7"
+      },
+      {
+        "file": "src/logger/index.js",
+        "lineNumber": 10,
+        "classification": "29"
+      }
+    ],
+    "repo": {
+      "gitCommit": "d79f38002c77c31243c01f784294d692f99d846f",
+      "gitURL": "https://github.com/siggame/colisee-lib"
+    }
+  },
+  "dockerfile_lint": {
+    "patches": [
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 8,
+        "classification": "2"
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 27,
+        "classification": "1"
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 27,
+        "classification": "1"
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 16,
+        "classification": "7"
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 16,
+        "classification": "29"
+      },
+      {
+        "file": "lib/logger.js",
+        "lineNumber": 20,
+        "classification": "29"
+      },
+      {
+        "file": "bin/dockerfile_lint",
+        "lineNumber": 44,
+        "classification": "100"
+      },
+      {
+        "file": "bin/dockerfile_lint",
+        "lineNumber": 44,
+        "classification": "100"
+      }
+    ],
+    "repo": {
+      "gitCommit": "625f957af62c5184423cbc017fdbc8e4a7383543",
+      "gitURL": "https://github.com/projectatomic/dockerfile_lint"
+    }
+  },
+  "@znetstar/winston-cluster": {
+    "patches": [
+      {
+        "file": "test/test-worker.js",
+        "lineNumber": 7,
+        "classification": "1"
+      },
+      {
+        "file": "example-multi-logger.js",
+        "lineNumber": 19,
+        "classification": "1"
+      },
+      {
+        "file": "example-multi-logger.js",
+        "lineNumber": 27,
+        "classification": "1"
+      },
+      {
+        "file": "example-multi-logger.js",
+        "lineNumber": 58,
+        "classification": "1"
+      },
+      {
+        "file": "example.js",
+        "lineNumber": 13,
+        "classification": "1"
+      },
+      {
+        "file": "example.js",
+        "lineNumber": 41,
+        "classification": "1"
+      },
+      {
+        "file": "lib/winston-cluster.js",
+        "lineNumber": 35,
+        "classification": "5"
+      },
+      {
+        "file": "lib/winston-cluster.js",
+        "lineNumber": 43,
+        "classification": "5"
+      },
+      {
+        "file": "example-multi-logger.js",
+        "lineNumber": 21,
+        "classification": "7"
+      },
+      {
+        "file": "example-multi-logger.js",
+        "lineNumber": 29,
+        "classification": "7"
+      },
+      {
+        "file": "example.js",
+        "lineNumber": 15,
+        "classification": "7"
+      },
+      {
+        "file": "example.js",
+        "lineNumber": 15,
+        "classification": "29"
+      }
+    ],
+    "repo": {
+      "gitCommit": "c599f5faa28a181203aea40b009661355d6670f2",
+      "gitURL": "https://github.com/ryankurte/winston-cluster"
+    }
+  },
+  "node-api-server": {
+    "excludedFolders": ["compiled"],
+    "patches": [
+      {
+        "file": "src/utils/logger.js",
+        "lineNumber": 23,
+        "classification": "1"
+      },
+      {
+        "file": "test/Logger.test.js",
+        "lineNumber": 7,
+        "classification": "1"
+      },
+      {
+        "file": "test/Logger.test.js",
+        "lineNumber": 11,
+        "classification": "1"
+      },
+      {
+        "file": "src/utils/logger.js",
+        "lineNumber": 25,
+        "classification": "7"
+      },
+      {
+        "file": "src/utils/logger.js",
+        "lineNumber": 25,
+        "classification": "29"
+      }
+    ],
+    "repo": {
+      "gitCommit": "a82bc59636a7ef3447780ed8775529de71d026b5",
+      "gitURL": "https://github.com/pizza-rolls/api-server"
+    }
+  },
+  "almex-sdk": {
+    "install": true,
+    "patches": [
+      {
+        "file": "build/logger/index.js",
+        "lineNumber": 54,
+        "classification": "1"
+      },
+      {
+        "file": "build/logger/index.js",
+        "lineNumber": 48,
+        "classification": "7"
+      }
+    ],
+    "repo": {
+      "gitCommit": "201011e9e329cf15842ca9d063aad07670d39bdb",
+      "gitURL": "https://github.com/Parsimotion/almex-sdk"
+    }
+  },
+  "psyloc": {
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 201,
+        "classification": "1"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 201,
+        "classification": "7"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 201,
+        "classification": "29"
+      }
+    ],
+    "repo": {
+      "gitCommit": "61a494ce7f4440aa08410533bbfa248657337dcb",
+      "gitURL": "https://github.com/waTeim/psyloc"
+    }
+  },
+  "ruo": {
+    "excludedFolders": "dist",
+    "patches": [
+      {
+        "file": "src/logger.js",
+        "lineNumber": 16,
+        "classification": "1"
+      },
+      {
+        "file": "src/logger.js",
+        "lineNumber": 33,
+        "classification": "7"
+      },
+      {
+        "file": "src/logger.js",
+        "lineNumber": 33,
+        "classification": "29"
+      }
+    ],
+    "repo": {
+      "gitCommit": "e1a11e52652d22e842dd8b6e04e98314f60a9de5",
+      "gitURL": "https://github.com/ruojs/ruo"
+    }
+  },
+  "winston-testified-console": {
+    "patches": [
+      {
+        "file": "test/unit/index.spec.js",
+        "lineNumber": 19,
+        "classification": "1"
+      },
+      {
+        "file": "test/unit/index.spec.js",
+        "lineNumber": 23,
+        "classification": "14"
+      },
+      {
+        "file": "test/unit/index.spec.js",
+        "lineNumber": 33,
+        "classification": "14"
+      },
+      {
+        "file": "test/unit/index.spec.js",
+        "lineNumber": 41,
+        "classification": "14"
+      },
+      {
+        "file": "test/unit/index.spec.js",
+        "lineNumber": 50,
+        "classification": "14"
+      },
+      {
+        "file": "test/unit/index.spec.js",
+        "lineNumber": 28,
+        "classification": "100"
+      },
+      {
+        "file": "test/unit/index.spec.js",
+        "lineNumber": 43,
+        "classification": "100"
+      },
+      {
+        "file": "test/unit/index.spec.js",
+        "lineNumber": 52,
+        "classification": "100"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 18,
+        "classification": "100"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 55,
+        "classification": "100"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 59,
+        "classification": "100"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 61,
+        "classification": "100"
+      },
+      {
+        "file": "data/mocha/test/boot.js",
+        "lineNumber": 12,
+        "classification": "1"
+      },
+      {
+        "file": "data/mocha/test/boot.js",
+        "lineNumber": 17,
+        "classification": "1"
+      },
+      {
+        "file": "data/mocha/test/boot.js",
+        "lineNumber": 18,
+        "classification": "1"
+      },
+      {
+        "file": "data/mocha/test/boot.js",
+        "lineNumber": 24,
+        "classification": "10"
+      }
+    ],
+    "repo": {
+      "gitCommit": "da3f9c3d8eb16ed8745b967b39e843ead71514ca",
+      "gitURL": "https://github.com/prometheas/winston-testified-console"
+    }
+  },
+  "hypernova": {
+    "excludedFolders": ["lib"],
+    "patches": [
+      {
+        "file": "src/utils/logger.js",
+        "lineNumber": 19,
+        "classification": "1"
+      },
+      {
+        "file": "src/utils/logger.js",
+        "lineNumber": 21,
+        "classification": "7"
+      },
+      {
+        "file": "src/utils/logger.js",
+        "lineNumber": 21,
+        "classification": "29"
+      }
+    ],
+    "repo": {
+      "gitCommit": "0a9fff9da1e239ffce658d43f96c760e5ae33234",
+      "gitURL": "https://github.com/airbnb/hypernova"
+    }
+  }
+}

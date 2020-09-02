@@ -1,0 +1,66 @@
+{
+  "[13a]lib/index.js_CallExpression_35:4:35:39UncertainAccPathMatch": {
+    "questionText": "[13a] lib/index.js, CallExpression at 35:4:35:39: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "lib/index.js",
+    "lineNumber": 35,
+    "columnNumber": 4
+  },
+  "[13a]lib/index.js_CallExpression_35:4:35:39MaybeApplyOrSpreadArgFilterMatch": {
+    "questionText": "[13a] lib/index.js, CallExpression at 35:4:35:39: does the call match the filters: [2, 2],1:function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "lib/index.js",
+    "lineNumber": 35,
+    "columnNumber": 4
+  },
+  "[13a]lib/index.js_CallExpression_38:23:38:59UncertainAccPathMatch": {
+    "questionText": "[13a] lib/index.js, CallExpression at 38:23:38:59: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "lib/index.js",
+    "lineNumber": 38,
+    "columnNumber": 23
+  },
+  "[13a]lib/index.js_CallExpression_38:23:38:59MaybeApplyOrSpreadArgFilterMatch": {
+    "questionText": "[13a] lib/index.js, CallExpression at 38:23:38:59: does the call match the filters: [2, 2],1:function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "lib/index.js",
+    "lineNumber": 38,
+    "columnNumber": 23
+  },
+  "[13a]lib/index.js_CallExpression_39:22:39:57UncertainAccPathMatch": {
+    "questionText": "[13a] lib/index.js, CallExpression at 39:22:39:57: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "lib/index.js",
+    "lineNumber": 39,
+    "columnNumber": 22
+  },
+  "[13a]lib/index.js_CallExpression_39:22:39:57MaybeApplyOrSpreadArgFilterMatch": {
+    "questionText": "[13a] lib/index.js, CallExpression at 39:22:39:57: does the call match the filters: [2, 2],1:function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "lib/index.js",
+    "lineNumber": 39,
+    "columnNumber": 22
+  },
+  "[29]lib/index.js_NewExpression_20:4:20:43UncertainAccPathMatch": {
+    "questionText": "[29] lib/index.js, NewExpression at 20:4:20:43: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "lib/index.js",
+    "lineNumber": 20,
+    "columnNumber": 4
+  },
+  "[29]lib/index.js_NewExpression_20:4:20:43MaybeExplicitQuestionMatch": {
+    "questionText": "[29] lib/index.js, NewExpression at 20:4:20:43: Does the options argument include formatting options?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "lib/index.js",
+    "lineNumber": 20,
+    "columnNumber": 4
+  }
+}

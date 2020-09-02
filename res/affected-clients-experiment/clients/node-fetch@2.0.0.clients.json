@@ -1,0 +1,58 @@
+[
+  {
+    "name": "ketting",
+    "repo": {
+      "gitCommit": "d59bd9b3ced666a0cda2e78de8d7f83194996c2f",
+      "gitURL": "https://github.com/evert/ketting"
+    }
+  },
+  {
+    "name": "alice-app",
+    "repo": {
+      "gitCommit": "8410d22fc3a7d46fa834ac541dacde27a4b322e3",
+      "gitURL": "https://github.com/keydotco/alice-app-js"
+    }
+  },
+  {
+    "name": "fetch-vcr",
+    "repo": {
+      "gitCommit": "359fd431b541f59a3cb2e860bbca2f503ec8aba0",
+      "gitURL": "https://github.com/philschatz/fetch-vcr"
+    }
+  },
+  {
+    "name": "eazydict-bing",
+    "repo": {
+      "gitCommit": "f923e75b6251b5b1b0ae3a6a8c117ea5b03513e2",
+      "gitURL": "https://github.com/keenwon/eazydict-bing"
+    }
+  },
+  {
+    "name": "akita",
+    "repo": {
+      "gitCommit": "6d6263a2549def270e567580bb6251c7a2ccb15c",
+      "gitURL": "https://github.com/maichong/akita"
+    }
+  },
+  {
+    "name": "sw-test-env",
+    "repo": {
+      "gitCommit": "cf3689b019ae2a32348489d5f2eb6fd4ea906394",
+      "gitURL": "https://github.com/popeindustries/sw-test-env"
+    }
+  },
+  {
+    "name": "pdf-bot-digitalum",
+    "repo": {
+      "gitCommit": "5bf58dc8bef1c15d625e002e1301f132ba7bb83c",
+      "gitURL": "https://github.com/esbenp/pdf-bot"
+    }
+  },
+  {
+    "name": "req-fetch",
+    "repo": {
+      "gitCommit": "9ea235ea6863b20f496522778a056e07cabfa33c",
+      "gitURL": "https://github.com/undoZen/req-fetch"
+    }
+  }
+]

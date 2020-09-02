@@ -1,0 +1,10 @@
+{
+  "[102a]src/telemetry-sample.js_CallExpression_36:11:37:94UncertainAccPathMatch": {
+    "questionText": "[102a] src/telemetry-sample.js, CallExpression at 36:11:37:94: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/telemetry-sample.js",
+    "lineNumber": 36,
+    "columnNumber": 11
+  }
+}

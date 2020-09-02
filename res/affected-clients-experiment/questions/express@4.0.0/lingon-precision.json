@@ -1,0 +1,10 @@
+{
+  "[2b]lib/lingon.js_CallExpression_224:2:224:73UncertainAccPathMatch": {
+    "questionText": "[2b] lib/lingon.js, CallExpression at 224:2:224:73: Is the receiver an express response object?",
+    "answer": "No",
+    "patternId": "2b",
+    "fileName": "lib/lingon.js",
+    "lineNumber": 224,
+    "columnNumber": 2
+  }
+}

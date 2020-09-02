@@ -1,0 +1,34 @@
+{
+  "[8]src/db/lowdb.js_CallExpression_187:2:187:27UncertainAccPathMatch": {
+    "questionText": "[8] src/db/lowdb.js, CallExpression at 187:2:187:27: Is the receiver a node-fetch headers object?",
+    "answer": "No",
+    "patternId": "8",
+    "fileName": "src/db/lowdb.js",
+    "lineNumber": 187,
+    "columnNumber": 2
+  },
+  "[6]src/webhook.js_CallExpression_73:9:73:43MaybeExplicitQuestionMatch": {
+    "questionText": "[6] src/webhook.js, CallExpression at 73:9:73:43: Is the second argument a GET or HEAD Request with non-null body?",
+    "answer": "No",
+    "patternId": "6",
+    "fileName": "src/webhook.js",
+    "lineNumber": 73,
+    "columnNumber": 9
+  },
+  "[8]src/webhook.js_CallExpression_41:4:41:36MaybeArgTypeMatch": {
+    "questionText": "[8] src/webhook.js, CallExpression at 41:4:41:36: is arg i of type string",
+    "answer": "Yes",
+    "patternId": "8",
+    "fileName": "src/webhook.js",
+    "lineNumber": 41,
+    "columnNumber": 4
+  },
+  "[8]src/webhook.js_CallExpression_41:4:41:36MaybeExplicitQuestionMatch": {
+    "questionText": "[8] src/webhook.js, CallExpression at 41:4:41:36: Is the header name valid?",
+    "answer": "Yes",
+    "patternId": "8",
+    "fileName": "src/webhook.js",
+    "lineNumber": 41,
+    "columnNumber": 4
+  }
+}

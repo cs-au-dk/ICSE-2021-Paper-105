@@ -1,0 +1,12 @@
+[
+  {
+    "pattern": "call <uuid>.{parse,unparse}",
+    "uncertainAccPathQuestion": "Is the receiver uuid?",
+    "transform": {
+      "pattern": "<uuid-parse>.$prop($args)"
+    },
+    "id": "1",
+    "changelogDescription": "remove .parse and .unparse",
+    "changelogId": "1"
+  }
+]

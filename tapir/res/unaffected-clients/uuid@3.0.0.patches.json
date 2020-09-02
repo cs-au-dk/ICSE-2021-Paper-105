@@ -1,0 +1,92 @@
+{
+  "cache-manager-fs-binary": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/sheershoff/node-cache-manager-fs-binary",
+      "gitCommit": "9728d871b5c2fc6e64ff9cf24e9f00579619bcdd"
+    }
+  },
+  "mongodb-js-metrics": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/mongodb-js/metrics",
+      "gitCommit": "faa23d1c98acf076dbed15e37b236e69b8b00789"
+    }
+  },
+  "meshblu-core-task-send-message-2": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/octoblu/meshblu-core-task-send-message-2",
+      "gitCommit": "c6b0372f5a8f966bc9fa0f431f3f29b2931bbb59"
+    }
+  },
+  "focus-core": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/KleeGroup/focus-core",
+      "gitCommit": "3895e5e4181ecd541c04a70eac239a2388bb2069"
+    }
+  },
+  "kinto-discovery": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/kinto/kinto-discovery-lib",
+      "gitCommit": "a6d421b68ee2d06b1149a13acf39784838827759"
+    }
+  },
+  "generator-topshelf": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/Saanch/generator-topshelf",
+      "gitCommit": "dc11efac7b85d2d1ca76c26c082f7276f9e00735"
+    }
+  },
+  "yocto-render": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/yoctore/yocto-render",
+      "gitCommit": "fdca0b2ff793b72b550421dd499e744f24559d55"
+    }
+  },
+  "wct-sauce": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/Polymer/wct-sauce",
+      "gitCommit": "96233f689d892ee429e286e924fb6f44f9cb9768"
+    }
+  },
+  "wee-db": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/mrvautin/wee-db",
+      "gitCommit": "01e3bca317cede6a3c9112b8be10fb6fcfdd56d6"
+    }
+  },
+  "accounts": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/Mitica/node-accounts",
+      "gitCommit": "aa096305d962bf1ab2fc96c391f8dbadb7dc0d4b"
+    }
+  }
+}

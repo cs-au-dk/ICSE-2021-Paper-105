@@ -1,0 +1,125 @@
+{
+  "mdquery": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/index.js",
+        "lineNumber": 53,
+        "classification": "58",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/mastersign/mdquery",
+      "gitCommit": "a11131ef09622fec6e073ac42b74dc14d96d3f4f"
+    }
+  },
+  "slackbase": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/makerbot/slackbot",
+      "gitCommit": "ec8a4f02582266597b024d6a1ec00e085d012cef"
+    }
+  },
+  "larvitbase": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "base.js",
+        "lineNumber": 68,
+        "classification": "42",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/larvit/larvitbase",
+      "gitCommit": "24d3fa1fbde445e549e2b8062e452a456e3fee9b"
+    }
+  },
+  "numbat-analyzer": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/numbat-metrics/numbat-analyzer",
+      "gitCommit": "6b7d2f952fc72bfb9ee397850830309f34c8d178"
+    }
+  },
+  "@resin/sbvr-parser": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/balena-io-modules/sbvr-parser",
+      "gitCommit": "8a696dbd86ba77267f8863e787b958647ee9a98e"
+    }
+  },
+  "needs": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/taoyuan/needs",
+      "gitCommit": "2a5ec989fdd7b15999034f6446b361e08fe20643"
+    }
+  },
+  "johnnycache": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "test/index.js",
+        "lineNumber": 71,
+        "classification": "24",
+        "truePositive": true
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 87,
+        "classification": "24",
+        "truePositive": true
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 112,
+        "classification": "24",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/sgtlambda/johnnycache",
+      "gitCommit": "022cef90851c30fe70e1fb6f2213e50513c44e37"
+    }
+  },
+  "vogels-helpers": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/Mitica/vogels-helpers",
+      "gitCommit": "b98d67184eecb3c9602d5b0fd6886f2b7ec66172"
+    }
+  },
+  "ldap-escape": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/tcort/ldap-escape",
+      "gitCommit": "a8587720e878d564f59bb222ac03226866d52270"
+    }
+  },
+  "gmail-send": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/alykoshin/gmail-send",
+      "gitCommit": "7a83becdd6b423d3219caf6b2b78c1968ae892ca"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "[9]lib/client.js_MemberExpression_175:14:175:29UncertainAccPathMatch": {
+    "questionText": "[9] lib/client.js, MemberExpression at 175:14:175:29: Is the receiver a node-fetch request or response object?",
+    "answer": "Yes",
+    "patternId": "9",
+    "fileName": "lib/client.js",
+    "lineNumber": 175,
+    "columnNumber": 14
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "[13]lib/http-test-servers.js_MemberExpression_18:7:18:18UncertainAccPathMatch": {
+    "questionText": "[13] lib/http-test-servers.js, MemberExpression at 18:7:18:18: Is the receiver an express app?",
+    "answer": "No",
+    "patternId": "13",
+    "fileName": "lib/http-test-servers.js",
+    "lineNumber": 18,
+    "columnNumber": 7
+  },
+  "[13]lib/http-test-servers.js_MemberExpression_19:20:19:31UncertainAccPathMatch": {
+    "questionText": "[13] lib/http-test-servers.js, MemberExpression at 19:20:19:31: Is the receiver an express app?",
+    "answer": "No",
+    "patternId": "13",
+    "fileName": "lib/http-test-servers.js",
+    "lineNumber": 19,
+    "columnNumber": 20
+  },
+  "[13]lib/http-test-servers.js_MemberExpression_19:42:19:53UncertainAccPathMatch": {
+    "questionText": "[13] lib/http-test-servers.js, MemberExpression at 19:42:19:53: Is the receiver an express app?",
+    "answer": "No",
+    "patternId": "13",
+    "fileName": "lib/http-test-servers.js",
+    "lineNumber": 19,
+    "columnNumber": 42
+  },
+  "[13]lib/http-test-servers.js_MemberExpression_31:29:31:40UncertainAccPathMatch": {
+    "questionText": "[13] lib/http-test-servers.js, MemberExpression at 31:29:31:40: Is the receiver an express app?",
+    "answer": "No",
+    "patternId": "13",
+    "fileName": "lib/http-test-servers.js",
+    "lineNumber": 31,
+    "columnNumber": 29
+  },
+  "[13]lib/http-test-servers.js_MemberExpression_33:52:33:63UncertainAccPathMatch": {
+    "questionText": "[13] lib/http-test-servers.js, MemberExpression at 33:52:33:63: Is the receiver an express app?",
+    "answer": "No",
+    "patternId": "13",
+    "fileName": "lib/http-test-servers.js",
+    "lineNumber": 33,
+    "columnNumber": 52
+  },
+  "[100]test/http-test-servers.js_MemberExpression_186:29:186:67UncertainAccPathMatch": {
+    "questionText": "[100] test/http-test-servers.js, MemberExpression at 186:29:186:67: Is the receiver an express app?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "test/http-test-servers.js",
+    "lineNumber": 186,
+    "columnNumber": 29
+  }
+}

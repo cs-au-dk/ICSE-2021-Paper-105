@@ -1,0 +1,7 @@
+{
+  "16": {
+    "questionText": "Should we patch the breaking change: change req.params is now an object instead of an array",
+    "answer": "No",
+    "patternId": "16"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "[102a]examples/helloworld/client.js_CallExpression_29:0:29:43UncertainAccPathMatch": {
+    "questionText": "[102a] examples/helloworld/client.js, CallExpression at 29:0:29:43: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "examples/helloworld/client.js",
+    "lineNumber": 29,
+    "columnNumber": 0
+  },
+  "[103a]examples/helloworld/client.js_MemberExpression_29:0:29:12UncertainAccPathMatch": {
+    "questionText": "[103a] examples/helloworld/client.js, MemberExpression at 29:0:29:12: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "103a",
+    "fileName": "examples/helloworld/client.js",
+    "lineNumber": 29,
+    "columnNumber": 0
+  },
+  "[102a]examples/helloworld/client2.js_CallExpression_32:0:32:43UncertainAccPathMatch": {
+    "questionText": "[102a] examples/helloworld/client2.js, CallExpression at 32:0:32:43: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "examples/helloworld/client2.js",
+    "lineNumber": 32,
+    "columnNumber": 0
+  },
+  "[103a]examples/helloworld/client2.js_MemberExpression_32:0:32:12UncertainAccPathMatch": {
+    "questionText": "[103a] examples/helloworld/client2.js, MemberExpression at 32:0:32:12: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "103a",
+    "fileName": "examples/helloworld/client2.js",
+    "lineNumber": 32,
+    "columnNumber": 0
+  },
+  "[102a]examples/helloworld/server.js_CallExpression_18:0:18:43UncertainAccPathMatch": {
+    "questionText": "[102a] examples/helloworld/server.js, CallExpression at 18:0:18:43: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "examples/helloworld/server.js",
+    "lineNumber": 18,
+    "columnNumber": 0
+  },
+  "[103a]examples/helloworld/server.js_MemberExpression_18:0:18:12UncertainAccPathMatch": {
+    "questionText": "[103a] examples/helloworld/server.js, MemberExpression at 18:0:18:12: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "103a",
+    "fileName": "examples/helloworld/server.js",
+    "lineNumber": 18,
+    "columnNumber": 0
+  },
+  "[21b]tests/utils/getProtoPath.js_CallExpression_8:31:8:49UncertainAccPathMatch": {
+    "questionText": "[21b] tests/utils/getProtoPath.js, CallExpression at 8:31:8:49: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "21b",
+    "fileName": "tests/utils/getProtoPath.js",
+    "lineNumber": 8,
+    "columnNumber": 31
+  },
+  "[102a]tests/client.spec.js_CallExpression_152:10:152:37UncertainAccPathMatch": {
+    "questionText": "[102a] tests/client.spec.js, CallExpression at 152:10:152:37: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "tests/client.spec.js",
+    "lineNumber": 152,
+    "columnNumber": 10
+  },
+  "[102a]tests/client.spec.js_CallExpression_219:22:219:42UncertainAccPathMatch": {
+    "questionText": "[102a] tests/client.spec.js, CallExpression at 219:22:219:42: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "tests/client.spec.js",
+    "lineNumber": 219,
+    "columnNumber": 22
+  }
+}

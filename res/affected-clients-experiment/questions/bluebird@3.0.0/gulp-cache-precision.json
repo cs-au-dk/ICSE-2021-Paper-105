@@ -1,0 +1,42 @@
+{
+  "[7c]lib/TaskProxy.js_CallExpression_45:25:48:7MaybeExplicitQuestionMatch": {
+    "questionText": "[7c] lib/TaskProxy.js, CallExpression at 45:25:48:7: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7c",
+    "fileName": "lib/TaskProxy.js",
+    "lineNumber": 45,
+    "columnNumber": 25
+  },
+  "[7c]lib/TaskProxy.js_CallExpression_58:15:58:52MaybeExplicitQuestionMatch": {
+    "questionText": "[7c] lib/TaskProxy.js, CallExpression at 58:15:58:52: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7c",
+    "fileName": "lib/TaskProxy.js",
+    "lineNumber": 58,
+    "columnNumber": 15
+  },
+  "[7c]lib/TaskProxy.js_CallExpression_82:22:82:92MaybeExplicitQuestionMatch": {
+    "questionText": "[7c] lib/TaskProxy.js, CallExpression at 82:22:82:92: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7c",
+    "fileName": "lib/TaskProxy.js",
+    "lineNumber": 82,
+    "columnNumber": 22
+  },
+  "[7c]lib/TaskProxy.js_CallExpression_180:17:180:63MaybeExplicitQuestionMatch": {
+    "questionText": "[7c] lib/TaskProxy.js, CallExpression at 180:17:180:63: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7c",
+    "fileName": "lib/TaskProxy.js",
+    "lineNumber": 180,
+    "columnNumber": 17
+  },
+  "[7c]lib/TaskProxy.js_CallExpression_198:22:198:92MaybeExplicitQuestionMatch": {
+    "questionText": "[7c] lib/TaskProxy.js, CallExpression at 198:22:198:92: Is the first argument a function that calls its callback with more than two arguments?",
+    "answer": "No",
+    "patternId": "7c",
+    "fileName": "lib/TaskProxy.js",
+    "lineNumber": 198,
+    "columnNumber": 22
+  }
+}

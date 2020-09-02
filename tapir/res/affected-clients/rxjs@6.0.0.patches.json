@@ -1,0 +1,2440 @@
+{
+  "codeclimate-tslint" : {
+    "install": true,
+    "repo": {
+      "gitCommit": "2cc20bb70284943f72b1d55f1f37ff22030fb530",
+      "gitURL": "https://github.com/tkqubo/codeclimate-tslint"
+    },
+    "patches": [
+      {
+        "file": "dist/tsLinter.js",
+        "lineNumber": 36,
+        "classification": "5a"
+      },
+      {
+        "file": "dist/tsLinter.js",
+        "lineNumber": 36,
+        "classification": "102a"
+      },
+      {
+        "file": "dist/tsLinter.js",
+        "lineNumber": 52,
+        "classification": "5a"
+      },
+      {
+        "file": "dist/tsLinter.js",
+        "lineNumber": 54,
+        "classification": "102a"
+      },
+      {
+        "file": "dist/tsLinter.js",
+        "lineNumber": 56,
+        "classification": "102a"
+      },
+      {
+        "file": "dist/tsLinter.js",
+        "lineNumber": 56,
+        "classification": "102a"
+      },
+      {
+        "file": "dist/tsLinter.js",
+        "lineNumber": 56,
+        "classification": "103a"
+      },
+      {
+        "file": "dist/tsLinter.js",
+        "lineNumber": 58,
+        "classification": "5a"
+      },
+      {
+        "file": "dist/test/tsLinter.spec.js",
+        "lineNumber": 157,
+        "classification": "102a"
+      },
+      {
+        "file": "dist/test/tsLinter.spec.js",
+        "lineNumber": 157,
+        "classification": "102a"
+      }
+    ]
+  },
+  "rxjs-operators": {
+    "patches" : [
+      {
+        "file": "src/bufferMap/index.js",
+        "lineNumber": 1,
+        "classification": "8"
+      },
+      {
+        "file": "lib/bufferMap/index.js",
+        "lineNumber": 3,
+        "classification": "8"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 7,
+        "classification": "5a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 7,
+        "classification": "102a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 9,
+        "classification": "5a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 9,
+        "classification": "102a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 25,
+        "classification": "5a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 25,
+        "classification": "102a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 26,
+        "classification": "5a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 26,
+        "classification": "5a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 28,
+        "classification": "5a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 28,
+        "classification": "102a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 44,
+        "classification": "5a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 44,
+        "classification": "102a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 45,
+        "classification": "5a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 47,
+        "classification": "5a"
+      },
+      {
+        "file": "test/bufferMap.test.js",
+        "lineNumber": 47,
+        "classification": "102a"
+      }
+    ],
+    "repo": {
+      "gitCommit": "5b1954959396d2e861df2eb86d9aecead0ef7207",
+      "gitURL": "https://github.com/iamcco/rxjs-operators"
+    }
+  },
+  "redux-logic" : {
+    "excludedFolders": ["examples", "build-es", "build-lib"],
+    "repo": {
+      "gitCommit": "c472991bd8fbd011064cf57d4074c07bbd0aee2c",
+      "gitURL": "https://github.com/jeffbski/redux-logic"
+    },
+    "patches": [
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 2,
+        "classification": "8"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 3,
+        "classification": "8"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 4,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 5,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 6,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 7,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 6,
+        "classification": "103b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 8,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 9,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 10,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 11,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 12,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 13,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 14,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 45,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 63,
+        "classification": "5a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 63,
+        "classification": "5a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 63,
+        "classification": "5a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 63,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 63,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 63,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 65,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 65,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 63,
+        "classification": "103a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 73,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 73,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 76,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 76,
+        "classification": "103a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 182,
+        "classification": "5a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 182,
+        "classification": "100b"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 183,
+        "classification": "5a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 183,
+        "classification": "103c"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 184,
+        "classification": "5a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 292,
+        "classification": "5a"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 292,
+        "classification": "103c"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 42,
+        "classification": "102a",
+        "COMMENT": "The call to takeUntil is in line 315"
+      },
+      {
+        "file": "src/createLogicAction$.js",
+        "lineNumber": 42,
+        "classification": "102a",
+        "COMMENT": "The call to take is in line 316"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 1,
+        "classification": "8"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 2,
+        "classification": "8"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 3,
+        "classification": "8"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 4,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 5,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 6,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 7,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 8,
+        "classification": "102b"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 53,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 124,
+        "classification": "102a"
+      },
+      {
+        "file": "src/createLogicMiddleware.js",
+        "lineNumber": 124,
+        "classification": "102a"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 1,
+        "classification": "8"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 2,
+        "classification": "102b"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 2,
+        "classification": "102b"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 3,
+        "classification": "102b"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 4,
+        "classification": "102b"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 5,
+        "classification": "102b"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 6,
+        "classification": "102b"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 7,
+        "classification": "102b"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 27,
+        "classification": "102a"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 27,
+        "classification": "102a"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 31,
+        "classification": "102a"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 39,
+        "classification": "102a"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 42,
+        "classification": "102a"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 46,
+        "classification": "102a"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 50,
+        "classification": "102a"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 50,
+        "classification": "102a"
+      },
+      {
+        "file": "src/logicWrapper.js",
+        "lineNumber": 55,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 95,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 2,
+        "classification": "101"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 97,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 97,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 97,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 101,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 101,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 101,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 101,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 146,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 148,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 148,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 148,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 152,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 152,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 152,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 152,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 193,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 195,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 195,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 195,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 199,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 199,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 199,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 199,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 246,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 248,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 248,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 248,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 252,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 252,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 252,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 252,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 301,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 303,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 303,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 303,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 307,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 307,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 307,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 307,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 355,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 357,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 357,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 357,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 361,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 361,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 361,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogic.spec.js",
+        "lineNumber": 361,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogicMiddleware-debounce.spec.js",
+        "lineNumber": 1,
+        "classification": "101"
+      },
+      {
+        "file": "test/createLogicMiddleware-deps.spec.js",
+        "lineNumber": 1,
+        "classification": "101"
+      },
+      {
+        "file": "test/createLogicMiddleware-deps.spec.js",
+        "lineNumber": 242,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-deps.spec.js",
+        "lineNumber": 242,
+        "classification": "102a"
+      },
+      {
+        "file": "test/createLogicMiddleware-latest.spec.js",
+        "lineNumber": 1,
+        "classification": "101"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1,
+        "classification": "101"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 896,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 965,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1037,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1114,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1116,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1198,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1200,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1286,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1358,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1435,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1436,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1517,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-process.spec.js",
+        "lineNumber": 1518,
+        "classification": "5a"
+      },
+      {
+        "file": "test/createLogicMiddleware-throttle.spec.js",
+        "lineNumber": 1,
+        "classification": "101"
+      },
+      {
+        "file": "src/utils.js",
+        "lineNumber": 1,
+        "classification": "104"
+      }
+    ]
+  },
+  "ngx-componentdestroyed" : {
+    "install": true,
+    "patches": [
+      {
+        "file": "dist/test.js",
+        "lineNumber": 4,
+        "classification": "8"
+      },
+      {
+        "file": "dist/test.js",
+        "lineNumber": 7,
+        "classification": "5b"
+      },
+      {
+        "file": "dist/index.js",
+        "lineNumber": 4,
+        "classification": "8"
+      }
+    ],
+    "repo": {
+      "gitCommit": "f169eb8a122215be9d81054d396cba554a9f7dd1",
+      "gitURL": "https://github.com/w11k/ngx-componentdestroyed"
+    }
+  },
+  "react-redux-epic": {
+    "patches": [
+      {
+        "file": "src/contain.js",
+        "lineNumber": 2,
+        "classification": "3"
+      },
+      {
+        "file": "src/render.js",
+        "lineNumber": 2,
+        "classification": "8"
+      },
+      {
+        "file": "src/render-to-string.js",
+        "lineNumber": 6,
+        "classification": "8"
+      },
+      {
+        "file": "src/render-to-string.js",
+        "lineNumber": 42,
+        "classification": "5a"
+      },
+      {
+        "file": "src/render-to-string.js",
+        "lineNumber": 42,
+        "classification": "103c"
+      },
+      {
+        "file": "src/render-to-string.js",
+        "lineNumber": 47,
+        "classification": "5a"
+      },
+      {
+        "file": "src/render-to-string.js",
+        "lineNumber": 47,
+        "classification": "102a"
+      },
+      {
+        "file": "src/wrap-root-epic.js",
+        "lineNumber": 3,
+        "classification": "12"
+      },
+      {
+        "file": "src/wrap-root-epic.js",
+        "lineNumber": 26,
+        "classification": "12a"
+      },
+      {
+        "file": "src/wrap-root-epic.js",
+        "lineNumber": 4,
+        "classification": "8"
+      },
+      {
+        "file": "src/wrap-root-epic.js",
+        "lineNumber": 5,
+        "classification": "8"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 8,
+        "classification": "7a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 8,
+        "classification": "7b"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 27,
+        "classification": "7b"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 33,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 33,
+        "classification": "103a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 40,
+        "classification": "5a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 40,
+        "classification": "24"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 50,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 50,
+        "classification": "103a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 56,
+        "classification": "5a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 56,
+        "classification": "24"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 65,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 65,
+        "classification": "103a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 71,
+        "classification": "5a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 71,
+        "classification": "24"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 79,
+        "classification": "5a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 79,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 79,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 82,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 88,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 88,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 88,
+        "classification": "103a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 108,
+        "classification": "5a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 108,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 108,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 111,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 117,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 117,
+        "classification": "103a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 123,
+        "classification": "5a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 123,
+        "classification": "24"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 143,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 143,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 144,
+        "classification": "5a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 144,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 171,
+        "classification": "102a"
+      },
+      {
+        "file": "test/render-to-string.js",
+        "lineNumber": 171,
+        "classification": "103a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 2,
+        "classification": "7a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 2,
+        "classification": "7b"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 58,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 61,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 61,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 72,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 74,
+        "classification": "5a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 74,
+        "classification": "103c"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 74,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 74,
+        "classification": "103a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 77,
+        "classification": "5a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 77,
+        "classification": "24"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 113,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 113,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 118,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 118,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 118,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 118,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 118,
+        "classification": "103a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 120,
+        "classification": "5a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 122,
+        "classification": "5a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 136,
+        "classification": "102a"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 47,
+        "classification": "7b"
+      },
+      {
+        "file": "test/wrap-root-epic.js",
+        "lineNumber": 104,
+        "classification": "7b"
+      }
+    ],
+    "repo": {
+      "gitCommit": "43acd4905020b22e4132d327bc3e5988dd7fa56f",
+      "gitURL": "https://github.com/BerkeleyTrue/react-redux-epic"
+    }
+  },
+  "justore" : {
+    "patches": [
+      {
+        "file": "test.js",
+        "lineNumber": 4,
+        "classification": "8"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 5,
+        "classification": "8"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 6,
+        "classification": "102b"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 7,
+        "classification": "102b"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 8,
+        "classification": "102b"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 9,
+        "classification": "102b"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 10,
+        "classification": "102b"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 11,
+        "classification": "102b"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 12,
+        "classification": "102b"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 13,
+        "classification": "102b"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 15,
+        "classification": "102b"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 149,
+        "classification": "102a"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 149,
+        "classification": "102a"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 149,
+        "classification": "102a"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 152,
+        "classification": "102a"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 178,
+        "classification": "102a"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 178,
+        "classification": "102a"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 204,
+        "classification": "102a"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 204,
+        "classification": "102a"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 210,
+        "classification": "102a"
+      }
+    ],
+    "repo": {
+      "gitCommit": "70848e0ec5eae913bd35073bcd16b2baa3b78e91",
+      "gitURL": "https://github.com/regou/justore"
+    }
+  },
+  "apartmentor" : {
+    "excludedFolders": ["coverage"],
+    "repo": {
+      "gitCommit": "276d8db603a74f1db4c7ac153b0f88a3342f8b59",
+      "gitURL": "https://github.com/maxdavidson/apartmentor"
+    },
+    "patches": [
+      {
+        "file": "src/cli.js",
+        "lineNumber": 53,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 53,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 53,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 53,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 53,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 53,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 53,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 53,
+        "classification": "103a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 53,
+        "classification": "103a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 56,
+        "classification": "5a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 56,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 56,
+        "classification": "103c"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 58,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 58,
+        "classification": "102a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 58,
+        "classification": "103a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 58,
+        "classification": "5a"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 66,
+        "classification": "5a"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 18,
+        "classification": "5a"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 18,
+        "classification": "102a"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 18,
+        "classification": "102a"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 21,
+        "classification": "100b"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 21,
+        "classification": "5a"
+      },
+      {
+        "file": "src/index.js",
+        "lineNumber": 21,
+        "classification": "102a"
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 12,
+        "classification": "102a"
+      }
+    ]
+  },
+  "fs-walker-rx" : {
+    "repo": {
+      "gitCommit": "dcd102e638a964205c00ec58ca1b6012145f4861",
+      "gitURL": "https://github.com/joshuaeilers/fs-walker-rx"
+    },
+    "patches": [
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 5,
+        "classification": "31"
+      },
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 6,
+        "classification": "5a"
+      },
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 7,
+        "classification": "5a"
+      },
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 17,
+        "classification": "102a"
+      },
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 17,
+        "classification": "102a"
+      },
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 17,
+        "classification": "102a"
+      },
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 18,
+        "classification": "5a"
+      },
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 21,
+        "classification": "102a"
+      },
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 26,
+        "classification": "5a"
+      },
+      {
+        "file": "fs-walker/fs-walker.js",
+        "lineNumber": 28,
+        "classification": "5a"
+      }
+    ]
+  },
+  "rxjs-serial-subscription" : {
+    "excludedFolders": ["lib"],
+    "repo": {
+      "gitCommit": "f7ceb330a7b2b7a4d2337b27108c0641c10949d9",
+      "gitURL": "https://github.com/anaisbetts/rxjs-serial-subscription"
+    },
+    "patches": [
+      {
+        "file": "src/index.js",
+        "lineNumber": 1,
+        "classification": "8"
+      }
+    ]
+  },
+  "omnisharp-client" : {
+    "install": true,
+    "repo": {
+      "gitCommit": "3f92d7511d5f03a196cd8833ef9b43972c99dd50",
+      "gitURL": "https://github.com/OmniSharp/omnisharp-node-client"
+    },
+    "patches": [
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 136,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 136,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 137,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 137,
+        "classification": "5a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 154,
+        "classification": "5a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 154,
+        "classification": "5a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 154,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 172,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 174,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 174,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 174,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 179,
+        "classification": "5a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 187,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 187,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 187,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 187,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 187,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 187,
+        "classification": "103a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 248,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 254,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 254,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 254,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 258,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 258,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 258,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 258,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 258,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 265,
+        "classification": "5a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 265,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 265,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 295,
+        "classification": "5a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 295,
+        "classification": "24"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 300,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 328,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 338,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 338,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 369,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 381,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 402,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 412,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 424,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 434,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 448,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 465,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 474,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 486,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 496,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 510,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 527,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 539,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 539,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 539,
+        "classification": "102a"
+      },
+      {
+        "file": "languageserver/server.js",
+        "lineNumber": 561,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/contexts/RequestContext.js",
+        "lineNumber": 39,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/decorators.js",
+        "lineNumber": 19,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/decorators.js",
+        "lineNumber": 19,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/decorators.js",
+        "lineNumber": 19,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/decorators.js",
+        "lineNumber": 26,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 9,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 10,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 24,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 24,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 24,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 24,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 24,
+        "classification": "103a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 21,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 21,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/plugin.js",
+        "lineNumber": 21,
+        "classification": "103a"
+      },
+      {
+        "file": "lib/helpers/PluginManager.js",
+        "lineNumber": 12,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/QueueProcessor.js",
+        "lineNumber": 46,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/QueueProcessor.js",
+        "lineNumber": 58,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/QueueProcessor.js",
+        "lineNumber": 58,
+        "classification": "103a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 14,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 14,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 15,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 97,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 97,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 97,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 97,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 97,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 102,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 100,
+        "classification": "9"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 106,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 106,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 108,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 108,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 110,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 110,
+        "classification": "14b"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 159,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 159,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 161,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 163,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 163,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 163,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 163,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 163,
+        "classification": "14b"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 167,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 168,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 168,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 168,
+        "classification": "14b"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 181,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 195,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 195,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 195,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 195,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 195,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 195,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 195,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 195,
+        "classification": "103a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 200,
+        "classification": "9"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 213,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 216,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 220,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 220,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 220,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 220,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 226,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/helpers/runtime.js",
+        "lineNumber": 226,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 52,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 52,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 52,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 52,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 54,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 57,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 59,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 59,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 63,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 63,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 63,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 63,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 63,
+        "classification": "103a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 71,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 93,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 93,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 93,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 93,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 93,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 93,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 93,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 93,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 94,
+        "classification": "9"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 98,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 98,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/candidate-finder.js",
+        "lineNumber": 98,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-client-spec.js",
+        "lineNumber": 27,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-client-spec.js",
+        "lineNumber": 27,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-client-spec.js",
+        "lineNumber": 27,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-client-spec.js",
+        "lineNumber": 35,
+        "classification": "5a"
+      },
+      {
+        "file": "test/omnisharp-client-spec.js",
+        "lineNumber": 44,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-client-spec.js",
+        "lineNumber": 55,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-client-spec.js",
+        "lineNumber": 64,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-client-spec.js",
+        "lineNumber": 64,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-runtime-spec.js",
+        "lineNumber": 10,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-runtime-spec.js",
+        "lineNumber": 17,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-runtime-spec.js",
+        "lineNumber": 17,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-runtime-spec.js",
+        "lineNumber": 40,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-runtime-spec.js",
+        "lineNumber": 40,
+        "classification": "103a"
+      },
+      {
+        "file": "test/omnisharp-runtime-spec.js",
+        "lineNumber": 65,
+        "classification": "102a"
+      },
+      {
+        "file": "test/omnisharp-runtime-spec.js",
+        "lineNumber": 65,
+        "classification": "103a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 54,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 55,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 55,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 55,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 55,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 196,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 196,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 196,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 219,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveClient.js",
+        "lineNumber": 219,
+        "classification": "103a"
+      },
+      {
+        "file": "lib/reactive/ReactiveCombinationClient.js",
+        "lineNumber": 20,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveCombinationClient.js",
+        "lineNumber": 20,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveCombinationClient.js",
+        "lineNumber": 20,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveCombinationClient.js",
+        "lineNumber": 24,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/reactive/ReactiveCombinationClient.js",
+        "lineNumber": 24,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveObservationClient.js",
+        "lineNumber": 16,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveObservationClient.js",
+        "lineNumber": 16,
+        "classification": "102a"
+      },
+      {
+        "file": "lib/reactive/ReactiveObservationClient.js",
+        "lineNumber": 16,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/drivers/StdioDriver.js",
+        "lineNumber": 95,
+        "classification": "5a"
+      },
+      {
+        "file": "lib/drivers/StdioDriver.js",
+        "lineNumber": 95,
+        "classification": "103c"
+      }
+    ]
+  }
+}

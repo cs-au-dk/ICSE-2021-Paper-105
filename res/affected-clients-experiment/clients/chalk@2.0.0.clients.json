@@ -1,0 +1,74 @@
+[
+  {
+    "name": "generator-kittn",
+    "repo": {
+      "gitCommit": "38b8ffb6b30f84fc6a9a42e7429d8aaf871992c4",
+      "gitURL": "https://github.com/kittn/generator-kittn"
+    },
+    "excludedFolders": ["generators/app/templates/src/skeletons"]
+  },
+  {
+    "name": "volleyball",
+    "repo": {
+      "gitCommit": "1413179b614d3c677419932b9e93266dc1ccf08b",
+      "gitURL": "https://github.com/glebec/volleyball"
+    }
+  },
+  {
+    "name": "filesizegzip",
+    "repo": {
+      "gitCommit": "d7208474ed70bec6d6f05473fc2be4a2c300ddff",
+      "gitURL": "https://github.com/mrmartineau/filesizegzip"
+    }
+  },
+  {
+    "name": "@averjs/friendly-errors-webpack-plugin",
+    "repo": {
+      "gitCommit": "8a1326752bdc0a572af5b3aa79efc3fb789db8bc",
+      "gitURL": "https://github.com/exreplay/friendly-errors-webpack-plugin"
+    }
+  },
+  {
+    "name": "@reactive/fido",
+    "repo": {
+      "gitCommit": "a34543e87498cb71e0a5ae62aa18026e8232ce1e",
+      "gitURL": "https://github.com/reactivepod/fido"
+    }
+  },
+  {
+    "name": "seeli",
+    "repo": {
+      "gitCommit": "20543c837942c0f31edb62024c6e492848d36568",
+      "gitURL": "https://github.com/esatterwhite/node-seeli"
+    }
+  },
+  {
+    "name": "npm-install-que",
+    "repo": {
+      "gitCommit": "84f93fc7dee1a94820ebcd05c3f1136518d645cc",
+      "gitURL": "https://github.com/radiovisual/npm-install-que"
+    }
+  },
+  {
+    "name": "@jannis/metalsmith-watch",
+    "repo": {
+      "gitCommit": "6dddfece3f20dce7ed74fb27c3fe98b6fc48870f",
+      "gitURL": "https://github.com/jannisg/metalsmith-watch"
+    },
+    "excludedFolders": ["dist"]
+  },
+  {
+    "name": "analyze-deps-cli",
+    "repo": {
+      "gitCommit": "8552b04dd4799799fd8984bcc3ae0f495863e283",
+      "gitURL": "https://github.com/moroshko/analyze-deps-cli"
+    }
+  },
+  {
+    "name": "fastbench",
+    "repo": {
+      "gitCommit": "b5c6f85a297d7fd33f189c4f36996eb802d9e2b5",
+      "gitURL": "https://github.com/mcollina/fastbench"
+    }
+  }
+]

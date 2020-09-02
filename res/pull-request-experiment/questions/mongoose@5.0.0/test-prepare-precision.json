@@ -1,0 +1,26 @@
+{
+  "[26a]lib/test_prepare.js_CallExpression_52:25:59:14UncertainAccPathMatch": {
+    "questionText": "[26a] lib/test_prepare.js, CallExpression at 52:25:59:14: Is the receiver mongoose?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "lib/test_prepare.js",
+    "lineNumber": 52,
+    "columnNumber": 25
+  },
+  "[26a]lib/test_prepare.js_CallExpression_52:25:59:14MaybeExplicitQuestionMatch": {
+    "questionText": "[26a] lib/test_prepare.js, CallExpression at 52:25:59:14: Is it NOT exploited that the result of connect was a MongooseThenable?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "lib/test_prepare.js",
+    "lineNumber": 52,
+    "columnNumber": 25
+  },
+  "[26a]lib/test_prepare.js_CallExpression_52:25:59:14TransformQuestion": {
+    "questionText": "[26a] lib/test_prepare.js, CallExpression at 52:25:59:14: Is the option useMongoClient enabled?",
+    "answer": "Yes",
+    "patternId": "26a",
+    "fileName": "lib/test_prepare.js",
+    "lineNumber": 52,
+    "columnNumber": 25
+  }
+}

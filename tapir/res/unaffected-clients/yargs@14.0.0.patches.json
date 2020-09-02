@@ -1,0 +1,113 @@
+{
+  "@pown/cli": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/pownjs/pown-cli",
+      "gitCommit": "8cd3b48815e8346998d2406d2af803cd44ddc3d9"
+    }
+  },
+  "npm-tool-cli": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/liuyongshun/npmbin",
+      "gitCommit": "bd622b88eb76b9f3bfe4e63241d1824cef04e643"
+    }
+  },
+  "flt": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/gpoitch/flt",
+      "gitCommit": "a8ddfb834032a708ba8c2cbddf15a71d45bc4304"
+    }
+  },
+  "kubernetes-bootstrap": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/bootstrap.js",
+        "lineNumber": 33,
+        "classification": "3",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/Collaborne/kubernetes-bootstrap",
+      "gitCommit": "d5499ba89686b76cd389ac6bf6e44a461472e0fa"
+    }
+  },
+  "@sourcegraph/web-ext": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/sourcegraph/web-ext",
+      "gitCommit": "7311faa01c6861847cd428308c1781cf6bc9f34b"
+    }
+  },
+  "eat-at-epfl": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/innovativeinnovation/eat-at-epfl",
+      "gitCommit": "fa7a52817f380294665b05d527d04788901f18c6"
+    }
+  },
+  "kaori": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "dist/cli.js",
+        "lineNumber": 6,
+        "classification": "3",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/iCrawl/kaori",
+      "gitCommit": "f1bbce0c6b5dcef1e533e898d75b7e98a4a9c733"
+    }
+  },
+  "pgsh": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/sastraxi/pgsh",
+      "gitCommit": "9464e772ae1207f40119ce6f1ee4f401df8f1416"
+    }
+  },
+  "@spicypixel/build-kit-js": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/spicypixel/build-kit-js",
+      "gitCommit": "70d7bbe70b031ec7e9a25e3a70cff3ebebf2148f"
+    }
+  },
+  "factom-identity-cli": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "bin/factom-identity-cli.js",
+        "lineNumber": 4,
+        "classification": "3",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/PaulBernier/factom-identity-cli",
+      "gitCommit": "de1d67adeae63d12d9db7883cf1939853f976710"
+    }
+  }
+}

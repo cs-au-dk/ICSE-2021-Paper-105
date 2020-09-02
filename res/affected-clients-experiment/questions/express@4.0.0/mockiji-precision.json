@@ -1,0 +1,10 @@
+{
+  "[100]src/index.js_MemberExpression_30:4:30:15UncertainAccPathMatch": {
+    "questionText": "[100] src/index.js, MemberExpression at 30:4:30:15: Is the receiver an express app?",
+    "answer": "No",
+    "patternId": "100",
+    "fileName": "src/index.js",
+    "lineNumber": 30,
+    "columnNumber": 4
+  }
+}

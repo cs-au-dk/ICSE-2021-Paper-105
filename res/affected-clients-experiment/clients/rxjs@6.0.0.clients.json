@@ -1,0 +1,49 @@
+[
+  {
+    "name": "rxjs-operators",
+    "repo": {
+      "gitCommit": "5b1954959396d2e861df2eb86d9aecead0ef7207",
+      "gitURL": "https://github.com/iamcco/rxjs-operators"
+    }
+  },
+  {
+    "name": "redux-logic",
+    "repo": {
+      "gitCommit": "c472991bd8fbd011064cf57d4074c07bbd0aee2c",
+      "gitURL": "https://github.com/jeffbski/redux-logic"
+    },
+    "excludedFolders": ["examples", "build-es", "build-lib"]
+  },
+  {
+    "name": "justore",
+    "testCommand": "mocha test.js",
+    "repo": {
+      "gitCommit": "70848e0ec5eae913bd35073bcd16b2baa3b78e91",
+      "gitURL": "https://github.com/regou/justore"
+    }
+  },
+  {
+    "name": "apartmentor",
+    "testCommand": "npx nyc --reporter=text --reporter=html ava",
+    "repo": {
+      "gitCommit": "276d8db603a74f1db4c7ac153b0f88a3342f8b59",
+      "gitURL": "https://github.com/maxdavidson/apartmentor"
+    },
+    "excludedFolders": ["coverage"]
+  },
+  {
+    "name": "fs-walker-rx",
+    "repo": {
+      "gitCommit": "dcd102e638a964205c00ec58ca1b6012145f4861",
+      "gitURL": "https://github.com/joshuaeilers/fs-walker-rx"
+    }
+  },
+  {
+    "name": "rxjs-serial-subscription",
+    "repo": {
+      "gitCommit": "f7ceb330a7b2b7a4d2337b27108c0641c10949d9",
+      "gitURL": "https://github.com/anaisbetts/rxjs-serial-subscription"
+    },
+    "excludedFolders": ["lib"]
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "[13a]bin/autoapply.js_CallExpression_110:16:110:85MaybeArgTypeMatch": {
+    "questionText": "[13a] bin/autoapply.js, CallExpression at 110:16:110:85: is arg err.message || 'unknown error!' of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "bin/autoapply.js",
+    "lineNumber": 110,
+    "columnNumber": 16
+  },
+  "[13a]bin/autoapply.js_CallExpression_122:8:122:81MaybeArgTypeMatch": {
+    "questionText": "[13a] bin/autoapply.js, CallExpression at 122:8:122:81: is arg err.message || 'unknown error!' of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "bin/autoapply.js",
+    "lineNumber": 122,
+    "columnNumber": 8
+  },
+  "[13a]bin/autoapply.js_CallExpression_294:12:294:87MaybeArgTypeMatch": {
+    "questionText": "[13a] bin/autoapply.js, CallExpression at 294:12:294:87: is arg JSON.stringify(command.command) of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "bin/autoapply.js",
+    "lineNumber": 294,
+    "columnNumber": 12
+  },
+  "[13a]bin/autoapply.js_CallExpression_344:24:344:94MaybeArgTypeMatch": {
+    "questionText": "[13a] bin/autoapply.js, CallExpression at 344:24:344:94: is arg err.message || 'unknown error!' of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "bin/autoapply.js",
+    "lineNumber": 344,
+    "columnNumber": 24
+  },
+  "[29]bin/autoapply.js_NewExpression_30:12:41:14UncertainAccPathMatch": {
+    "questionText": "[29] bin/autoapply.js, NewExpression at 30:12:41:14: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "bin/autoapply.js",
+    "lineNumber": 30,
+    "columnNumber": 12
+  },
+  "[29]bin/autoapply.js_NewExpression_30:12:41:14MaybeExplicitQuestionMatch": {
+    "questionText": "[29] bin/autoapply.js, NewExpression at 30:12:41:14: Does the options argument include formatting options?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "bin/autoapply.js",
+    "lineNumber": 30,
+    "columnNumber": 12
+  }
+}

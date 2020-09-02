@@ -1,0 +1,10 @@
+{
+  "4-lib/alice.js_CallExpression_182:49:182:64": {
+    "questionText": "lib/alice.js_CallExpression_182:49:182:64: Should we patch the breaking change: Major: make response.json() throw error instead of returning an empty object on 204 no-content respose (per spec; reverts behavior changed in v1.6.2)",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "lib/alice.js",
+    "lineNumber": 182,
+    "columnNumber": 49
+  }
+}

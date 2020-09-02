@@ -1,0 +1,72 @@
+[
+  {
+    "name": "ibmapm-restclient",
+    "repo": {
+      "gitURL": "https://github.com/IBM/node-ibmapm-restclient",
+      "gitCommit": "464089d21dce4f2baefa7487fd6ae71f3b18008b"
+    }
+  },
+  {
+    "name": "doc-recog",
+    "repo": {
+      "gitURL": "https://github.com/zepspaiva/doc-recog",
+      "gitCommit": "96d31957fbc2a31f1d739e2d64e5c85a05f688ec"
+    }
+  },
+  {
+    "name": "claudia",
+    "repo": {
+      "gitURL": "https://github.com/claudiajs/claudia",
+      "gitCommit": "8e63acdfb623bce0b435023520447c3ae73fb6ec"
+    }
+  },
+  {
+    "name": "ibmapm-embed",
+    "repo": {
+      "gitURL": "https://github.com/IBM/node-ibmapm-embed",
+      "gitCommit": "491ecfb50ff43753c1eeef991f1eb9a72968ad00"
+    }
+  },
+  {
+    "name": "microservicebus-core",
+    "repo": {
+      "gitURL": "https://github.com/axians/microservicebus-core",
+      "gitCommit": "b74c0aafc1eaa108a3173c1c2566a15cf29b0f05"
+    }
+  },
+  {
+    "name": "ibmapm",
+    "repo": {
+      "gitURL": "https://github.com/IBM/node-ibmapm",
+      "gitCommit": "f30e46aa595ab3c6779c11f1f5074abcdcaaf7ee"
+    }
+  },
+  {
+    "name": "cpdf-gergogy",
+    "repo": {
+      "gitURL": "https://github.com/n6g7/node-cpdf",
+      "gitCommit": "73eb18c1dc6d549950fbbd72ba4a8e9128102ed8"
+    }
+  },
+  {
+    "name": "plex-api",
+    "repo": {
+      "gitURL": "https://github.com/phillipj/node-plex-api",
+      "gitCommit": "a212a3dcbb2536d489e52ca2dca3a3b94682ab0e"
+    }
+  },
+  {
+    "name": "caver-js",
+    "repo": {
+      "gitURL": "https://github.com/klaytn/caver-js",
+      "gitCommit": "27c45f74559524f394edf55ff26b2cb833152f80"
+    }
+  },
+  {
+    "name": "mobilpay-node",
+    "repo": {
+      "gitURL": "https://github.com/robi-richter/mobilpay-node",
+      "gitCommit": "4b84d76d03fe48eca2b51e1e0aa574599f7a362e"
+    }
+  }
+]

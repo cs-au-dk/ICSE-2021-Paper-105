@@ -1,0 +1,33 @@
+[
+  {
+    "name": "feathers-lg-multi-service-mongoose",
+    "testCommand": "npm run ava",
+    "repo": {
+      "gitCommit": "bf5322e68807f3f786db7ac966c0b704bb5be820",
+      "gitURL": "https://github.com/dmitrovskiy/feathers-lg-multi-service-mongoose"
+    }
+  },
+  {
+    "name": "r2mongoose",
+    "repo": {
+      "gitCommit": "b7807dd0ebc0000d89a03b8d03395395f630bfe5",
+      "gitURL": "https://github.com/r2js/r2mongoose"
+    }
+  },
+  {
+    "name": "passport-service",
+    "testCommand": "rm -rf node_modules && npm install && npm test",
+    "repo": {
+      "gitCommit": "b5dfa85b622e5b18072b5f295d7ff300c5bd5025",
+      "gitURL": "https://github.com/binocarlos/passport-service"
+    }
+  },
+  {
+    "name": "osnova",
+    "repo": {
+      "gitCommit": "8a45a48cf17bde81b4833b0b7362158fb4b02450",
+      "gitURL": "https://github.com/Noviel/osnova"
+    },
+    "excludedFolders": ["build"]
+  }
+]

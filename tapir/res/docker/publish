@@ -1,0 +1,2 @@
+#!/bin/bash
+docker push torp123/tapir:v1.1

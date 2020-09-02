@@ -1,0 +1,10 @@
+{
+  "[102a]lib/ov2500.js_CallExpression_338:32:340:18UncertainAccPathMatch": {
+    "questionText": "[102a] lib/ov2500.js, CallExpression at 338:32:340:18: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "lib/ov2500.js",
+    "lineNumber": 338,
+    "columnNumber": 32
+  }
+}

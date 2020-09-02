@@ -1,0 +1,178 @@
+{
+  "[13a]mb.js_CallExpression_554:40:554:81UncertainAccPathMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 554:40:554:81: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 554,
+    "columnNumber": 40
+  },
+  "[13a]mb.js_CallExpression_554:40:554:81MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 554:40:554:81: is arg w of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 554,
+    "columnNumber": 40
+  },
+  "[13a]mb.js_CallExpression_693:6:693:57MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 693:6:693:57: is arg err of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 693,
+    "columnNumber": 6
+  },
+  "[13a]mb.js_CallExpression_701:6:701:57MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 701:6:701:57: is arg attempt of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 701,
+    "columnNumber": 6
+  },
+  "[13a]mb.js_CallExpression_705:6:705:60MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 705:6:705:60: is arg attempt of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 705,
+    "columnNumber": 6
+  },
+  "[13a]mb.js_CallExpression_709:6:709:60MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 709:6:709:60: is arg err of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 709,
+    "columnNumber": 6
+  },
+  "[13a]mb.js_CallExpression_721:6:721:47MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 721:6:721:47: is arg ms of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 721,
+    "columnNumber": 6
+  },
+  "[13a]mb.js_CallExpression_739:40:739:81MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 739:40:739:81: is arg w of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 739,
+    "columnNumber": 40
+  },
+  "[13a]mb.js_CallExpression_854:4:854:67MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 854:4:854:67: is arg '[connection#error] ' + err.message of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 854,
+    "columnNumber": 4
+  },
+  "[13a]mb.js_CallExpression_862:6:862:52MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 862:6:862:52: is arg util.inspect( data ) of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 862,
+    "columnNumber": 6
+  },
+  "[13a]mb.js_CallExpression_871:6:871:50MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 871:6:871:50: is arg util.inspect(data ) of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 871,
+    "columnNumber": 6
+  },
+  "[13a]mb.js_CallExpression_888:6:888:47MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 888:6:888:47: is arg err.message of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 888,
+    "columnNumber": 6
+  },
+  "[13a]mb.js_CallExpression_895:8:895:58MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 895:8:895:58: is arg response.toString() of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 895,
+    "columnNumber": 8
+  },
+  "[13a]mb.js_CallExpression_907:8:907:50MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 907:8:907:50: is arg err.message of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 907,
+    "columnNumber": 8
+  },
+  "[13a]mb.js_CallExpression_911:8:911:48MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 911:8:911:48: is arg response of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 911,
+    "columnNumber": 8
+  },
+  "[13a]mb.js_CallExpression_928:6:928:43MaybeArgTypeMatch": {
+    "questionText": "[13a] mb.js, CallExpression at 928:6:928:43: is arg buf of type function",
+    "answer": "No",
+    "patternId": "13a",
+    "fileName": "mb.js",
+    "lineNumber": 928,
+    "columnNumber": 6
+  },
+  "[14a]mb.js_CallExpression_626:4:630:6MaybeArgTypeMatch": {
+    "questionText": "[14a] mb.js, CallExpression at 626:4:630:6: is arg winston.transports.Console of type function",
+    "answer": "Yes",
+    "patternId": "14a",
+    "fileName": "mb.js",
+    "lineNumber": 626,
+    "columnNumber": 4
+  },
+  "[14a]mb.js_CallExpression_626:4:630:6TransformQuestion": {
+    "questionText": "[14a] mb.js, CallExpression at 626:4:630:6: Is the first argument one of winston.transports.{File,Console,Http} and the second argument an object containing formatting options?",
+    "answer": "Yes",
+    "patternId": "14a",
+    "fileName": "mb.js",
+    "lineNumber": 626,
+    "columnNumber": 4
+  },
+  "[14a]mb.js_CallExpression_633:4:633:66MaybeArgTypeMatch": {
+    "questionText": "[14a] mb.js, CallExpression at 633:4:633:66: is arg winston.transports.File of type function",
+    "answer": "Yes",
+    "patternId": "14a",
+    "fileName": "mb.js",
+    "lineNumber": 633,
+    "columnNumber": 4
+  },
+  "[14a]mb.js_CallExpression_633:4:633:66TransformQuestion": {
+    "questionText": "[14a] mb.js, CallExpression at 633:4:633:66: Is the first argument one of winston.transports.{File,Console,Http} and the second argument an object containing formatting options?",
+    "answer": "No",
+    "patternId": "14a",
+    "fileName": "mb.js",
+    "lineNumber": 633,
+    "columnNumber": 4
+  },
+  "[14a]mb.js_CallExpression_659:4:659:65MaybeArgTypeMatch": {
+    "questionText": "[14a] mb.js, CallExpression at 659:4:659:65: is arg winston.transports.File of type function",
+    "answer": "Yes",
+    "patternId": "14a",
+    "fileName": "mb.js",
+    "lineNumber": 659,
+    "columnNumber": 4
+  },
+  "[14a]mb.js_CallExpression_659:4:659:65TransformQuestion": {
+    "questionText": "[14a] mb.js, CallExpression at 659:4:659:65: Is the first argument one of winston.transports.{File,Console,Http} and the second argument an object containing formatting options?",
+    "answer": "No",
+    "patternId": "14a",
+    "fileName": "mb.js",
+    "lineNumber": 659,
+    "columnNumber": 4
+  }
+}

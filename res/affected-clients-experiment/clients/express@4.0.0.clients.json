@@ -1,0 +1,73 @@
+[
+  {
+    "name": "bitter",
+    "repo": {
+      "gitCommit": "e13d2cf983cb25c3a3c67fca4cb27462b58428cc",
+      "gitURL": "https://github.com/iizukanao/bitter"
+    }
+  },
+  {
+    "name": "hubot",
+    "testCommand": "mocha",
+    "repo": {
+      "gitCommit": "d0c13d2d8cd1ba30dc7f8765778988ca5a4d00c9",
+      "gitURL": "https://github.com/hubotio/hubot"
+    }
+  },
+  {
+    "name": "cf-api",
+    "repo": {
+      "gitCommit": "cd918033256c05426c55bfb89a7103378821b92c",
+      "gitURL": "https://github.com/clocklimited/cf-api"
+    }
+  },
+  {
+    "name": "json-server",
+    "repo": {
+      "gitCommit": "3ae7c5bcec03fa5104f180b1002036a147e980c9",
+      "gitURL": "https://github.com/typicode/json-server"
+    }
+  },
+  {
+    "name": "jojo",
+    "repo": {
+      "gitCommit": "82fe6b7ce7bc841ddde800ebb543a14aa70cd856",
+      "gitURL": "https://github.com/twolfson/jojo"
+    }
+  },
+  {
+    "name": "mockiji",
+    "repo": {
+      "gitCommit": "3f60902555d0b0704946cd8ab6a790d22f93a88a",
+      "gitURL": "https://github.com/NijiDigital/mockiji"
+    }
+  },
+  {
+    "name": "http-test-servers",
+    "repo": {
+      "gitCommit": "7e76d04186734dcb03a8a320fa0f1e65bd0394c8",
+      "gitURL": "https://github.com/matteofigus/http-test-servers"
+    }
+  },
+  {
+    "name": "lingon",
+    "repo": {
+      "gitCommit": "7c4cd02d5d761120dfb00a3d2126378c531be5a8",
+      "gitURL": "https://github.com/spotify/lingon"
+    }
+  },
+  {
+    "name": "corsica",
+    "repo": {
+      "gitCommit": "d7422b4c9e20432bfd21737d5706ad1f4a0d2897",
+      "gitURL": "https://github.com/mozilla/corsica"
+    }
+  },
+  {
+    "name": "gqexpress",
+    "repo": {
+      "gitCommit": "1799a1038d0bf6401062554b29831b1a3e4d271b",
+      "gitURL": "https://github.com/goldfiction/gqexpress"
+    }
+  }
+]

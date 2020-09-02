@@ -1,0 +1,74 @@
+[
+  {
+    "name": "test-prepare",
+    "repo": {
+      "gitURL": "https://github.com/diogolmenezes/test_prepare",
+      "gitCommit": "b38ec1fb5e7eb2999294e7d0a4b83aa833c8a957"
+    }
+  },
+  {
+    "name": "smongo",
+    "repo": {
+      "gitURL": "https://github.com/teniryte/smongo",
+      "gitCommit": "5b08ab2a3986b9676002909d67dbacd81150f389"
+    }
+  },
+  {
+    "name": "@b2wdigital/restql-manager",
+    "excludedFolders": ["build"],
+    "repo": {
+      "gitURL": "https://github.com/b2wdigital/restQL-manager",
+      "gitCommit": "37d3dc9d1574197698643435446a8ee1fb44a475"
+    }
+  },
+  {
+    "name": "@vshsolutions/gryd",
+    "repo": {
+      "gitURL": "https://github.com/ablankenship10/gryd",
+      "gitCommit": "6da5741792062c76b9270179f68a9722bc312c17"
+    }
+  },
+  {
+    "name": "deocoin-insight-api",
+    "repo": {
+      "gitURL": "https://github.com/deocoincore/deocoin-insight-api",
+      "gitCommit": "942c9d3ff1d29cea363ba8a74e87d045a2d1e010"
+    }
+  },
+  {
+    "name": "jerkie",
+    "repo": {
+      "gitURL": "https://github.com/NodeTopia/Jerkie",
+      "gitCommit": "11e1061b42ed41a181951bf47195fab2e2e12b62"
+    }
+  },
+  {
+    "name": "fhirball",
+    "repo": {
+      "gitURL": "https://github.com/BlackPearSw/fhirball",
+      "gitCommit": "6946677a2742d10584fcf729a582bf203720fbf5"
+    }
+  },
+  {
+    "name": "rest-hapi",
+    "repo": {
+      "gitURL": "https://github.com/JKHeadley/rest-hapi",
+      "gitCommit": "a47ea950f1803bce744d549d19021a1f74639c02"
+    }
+  },
+  {
+    "name": "yapi-cli",
+    "excludedFolders": ["src/commands/server"],
+    "repo": {
+      "gitURL": "https://github.com/YMFE/yapi-cli",
+      "gitCommit": "de0cdb79ad8a837bfc2f8c9cab1f7852c3075de5"
+    }
+  },
+  {
+    "name": "@benjamin-vanryseghem/mongoose-dummy",
+    "repo": {
+      "gitURL": "https://github.com/thedgmbh/mongoose-dummy",
+      "gitCommit": "58e2931bca09dfefc7853d0f7158f25a782490b1"
+    }
+  }
+]

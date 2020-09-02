@@ -1,0 +1,7 @@
+{
+  "4": {
+    "questionText": "Should we patch the breaking change: Major: make response.json() throw error instead of returning an empty object on 204 no-content respose (per spec; reverts behavior changed in v1.6.2)",
+    "answer": "Maybe",
+    "patternId": "4"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "[14a]lib/utils/logger.js_CallExpression_48:4:52:6MaybeArgTypeMatch": {
+    "questionText": "[14a] lib/utils/logger.js, CallExpression at 48:4:52:6: is arg winston.transports.File of type function",
+    "answer": "Yes",
+    "patternId": "14a",
+    "fileName": "lib/utils/logger.js",
+    "lineNumber": 48,
+    "columnNumber": 4
+  },
+  "[14a]lib/utils/logger.js_CallExpression_48:4:52:6TransformQuestion": {
+    "questionText": "[14a] lib/utils/logger.js, CallExpression at 48:4:52:6: Is the first argument one of winston.transports.{File,Console,Http} and the second argument an object containing formatting options?",
+    "answer": "No",
+    "patternId": "14a",
+    "fileName": "lib/utils/logger.js",
+    "lineNumber": 48,
+    "columnNumber": 4
+  },
+  "[29]lib/utils/logger.js_NewExpression_20:4:28:6UncertainAccPathMatch": {
+    "questionText": "[29] lib/utils/logger.js, NewExpression at 20:4:28:6: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "lib/utils/logger.js",
+    "lineNumber": 20,
+    "columnNumber": 4
+  },
+  "[29]lib/utils/logger.js_NewExpression_20:4:28:6MaybeExplicitQuestionMatch": {
+    "questionText": "[29] lib/utils/logger.js, NewExpression at 20:4:28:6: Does the options argument include formatting options?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "lib/utils/logger.js",
+    "lineNumber": 20,
+    "columnNumber": 4
+  }
+}

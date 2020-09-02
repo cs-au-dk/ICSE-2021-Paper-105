@@ -1,0 +1,11 @@
+#!/bin/bash
+
+FILE_NAME=$(basename -- "$0")
+USER_NAME=$(./get-file-user ${FILE_NAME})
+GROUP_NAME=$(./get-file-group ${FILE_NAME})
+GROUP_ID=$(./get-group-id ${GROUP_NAME})
+USER_ID=$(id -u ${USER_NAME})
+
+# We set the username and the group name of the Docker container to be the owners of this bash script.
+# Thereby, the files created by the running docker instance will have the same group and user owners as this script.
+docker build --build-arg GROUP_ID=${GROUP_ID} --build-arg USER_NAME=$USER_NAME --build-arg USER_ID=$USER_ID -t torp123/tapir:v1.1 .

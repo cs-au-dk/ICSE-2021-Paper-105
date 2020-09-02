@@ -1,0 +1,265 @@
+{
+  "bound-compose": {
+    "patches": [
+      {
+        "file": "src/index.js",
+        "lineNumber": 1,
+        "classification": "15"
+      }
+    ],
+    "repo": {
+      "gitCommit": "061e886cfb0068cdf44d3d93da186f0b6f9b8792",
+      "gitURL": "https://github.com/sugarshin/bound-compose"
+    }
+  },
+  "dnd-core": {
+    "patches": [
+      {
+        "file": "src/DragDropManager.js",
+        "lineNumber": 1,
+        "classification": "15"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 25,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 27,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 43,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 52,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 54,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 63,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 138,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 142,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 146,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 150,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 154,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 158,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 162,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 166,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 170,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 174,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 178,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropMonitor.js",
+        "lineNumber": 182,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropManager.js",
+        "lineNumber": 15,
+        "classification": "8"
+      },
+      {
+        "file": "src/DragDropManager.js",
+        "lineNumber": 19,
+        "classification": "8"
+      }
+    ],
+    "repo": {
+      "gitCommit": "d80cf23877861cc28b24eb5af7aaf52daaf4be7b",
+      "gitURL": "https://github.com/gaearon/dnd-core"
+    }
+  },
+  "redux-bind-action-groups": {
+    "patches": [
+      {
+        "file": "src/index.js",
+        "lineNumber": 1,
+        "classification": "15"
+      },
+      {
+        "file": "src/__test__/index.js",
+        "lineNumber": 23,
+        "classification": "8"
+      }
+    ],
+    "repo": {
+      "gitCommit": "3322f231a48e4318dbd48d6866e17db959419f64",
+      "gitURL": "https://github.com/eyasliu/redux-bind-action-groups"
+    }
+  },
+  "mickey": {
+    "excludedFolders": ["lib"],
+    "patches": [
+      {
+        "file": "src/createApp.js",
+        "lineNumber": 159,
+        "classification": "16"
+      },
+      {
+        "file": "src/createStore.js",
+        "lineNumber": 49,
+        "classification": "8"
+      },
+      {
+        "file": "src/createStore.js",
+        "lineNumber": 50,
+        "classification": "8"
+      },
+      {
+        "file": "src/watcher.js",
+        "lineNumber": 7,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/getSaga.spec.js",
+        "lineNumber": 36,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/getSaga.spec.js",
+        "lineNumber": 76,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/getSaga.spec.js",
+        "lineNumber": 129,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/getSaga.spec.js",
+        "lineNumber": 147,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/watcher.spec.js",
+        "lineNumber": 28,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/watcher.spec.js",
+        "lineNumber": 62,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/watcher.spec.js",
+        "lineNumber": 63,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 28,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 43,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 255,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 259,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 293,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 325,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 329,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 369,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 370,
+        "classification": "8"
+      },
+      {
+        "file": "test/spec/createApp.spec.js",
+        "lineNumber": 412,
+        "classification": "8"
+      },
+      {
+        "file": "src/createApp.js",
+        "lineNumber": 143,
+        "classification": "16"
+      }
+    ],
+    "repo": {
+      "gitCommit": "06394f312289f30f4fb0110ee3115def4ad4ae77",
+      "gitURL": "https://github.com/bubkoo/mickey"
+    }
+  }
+}

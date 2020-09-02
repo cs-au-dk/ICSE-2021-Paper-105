@@ -1,0 +1,139 @@
+[
+  {
+    "pattern": "read <winston>.Logger",
+    "id": "1",
+    "changelogDescription": "winston.Logger has been replaced with winston.createLogger.",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "call <winston>.setLevels",
+    "id": "2",
+    "changelogDescription": "winston.setLevels has been removed. Levels are frozen at the time of Logger creation.",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "read <winston>.transports.Memory",
+    "id": "4a",
+    "changelogDescription": "winston.transports.Memory was removed. Use any Node.js stream.Writeable with a large highWaterMark instance instead.",
+    "changelogId": "3"
+  },
+  {
+    "pattern": "read <winston>.Transport",
+    "id": "5",
+    "changelogDescription": "When writing transports use winston-transport instead of winston.Transport.",
+    "changelogId": "4"
+  },
+  {
+    "pattern": "call <winston>.transports.Console [0, 2]",
+    "id": "7",
+    "benign": true,
+    "changelogDescription": "In winston.transports.Console, output for all log levels are now sent to stdout by default. - stderrLevels option now defaults to []. - debugStdout option has been removed.",
+    "changelogId": "5"
+  },
+  {
+    "pattern": "call <winston>.Container [0, 0]",
+    "id": "10",
+    "changelogDescription": "winston.Container instances no longer have default Console transports",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "call <winston>.Container [1, 1]",
+    "question": "Does the options object NOT include transports?",
+    "id": "10a",
+    "changelogDescription": "winston.Container instances no longer have default Console transports",
+    "changelogId": "6"
+  },
+  {
+    "pattern": "read <winston>.Container()?**.add",
+    "id": "11",
+    "changelogDescription": "winston.Container.prototype.add no longer does crazy options parsing. Implementation inspired by segmentio/winston-logger",
+    "changelogId": "7"
+  },
+  {
+    "pattern": "call <winston>?**.{info,warn,error} [2, 2] 1:function",
+    "id": "13a",
+    "changelogDescription": "winston.Logger.log and level-specific methods (.info, .error, etc) no longer accepts a callback. The vast majority of use cases for this feature was folks awaiting all logging to complete, not just a single logging message. To accomplish this:",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "call <winston>?**.log [3, 3] 2:function",
+    "id": "13b",
+    "changelogDescription": "winston.Logger.log and level-specific methods (.info, .error, etc) no longer accepts a callback. The vast majority of use cases for this feature was folks awaiting all logging to complete, not just a single logging message. To accomplish this:",
+    "changelogId": "8"
+  },
+  {
+    "pattern": "call <winston>?**.add [1, 2] 0:function",
+    "id": "14",
+    "changelogDescription": "winston.Logger.add no longer accepts prototypes / classes. Pass an instance of our transport instead.",
+    "changelogId": "9"
+  },
+  {
+    "pattern": "call <winston>?**.stream [1, 1]",
+    "question": "Is the transport option set?",
+    "id": "18",
+    "changelogDescription": "Logger.prototype.stream - options.transport is removed. Use the transport instance on the logger directly.",
+    "changelogId": "10"
+  },
+  {
+    "pattern": "call <winston>?**.query [2, 2] 1:function",
+    "question": "Is the transport option set?",
+    "id": "19",
+    "changelogDescription": "Logger.prototype.query - options.transport is removed. Use the transport instance on the logger directly.",
+    "changelogId": "11"
+  },
+  {
+    "pattern": "read <winston>.exception",
+    "id": "21",
+    "changelogDescription": "winston.exception has been removed. Use: const exception = winston.ExceptionHandler();",
+    "changelogId": "12"
+  },
+  {
+    "pattern": "read <winston>.hash",
+    "id": "24a",
+    "changelogDescription": "winston.hash was removed.",
+    "changelogId": "13"
+  },
+  {
+    "pattern": "read <winston>.common.pad",
+    "id": "25a",
+    "changelogDescription": "winston.common.pad was removed.",
+    "changelogId": "14"
+  },
+  {
+    "pattern": "read <winston>.common.serialize",
+    "id": "26",
+    "changelogDescription": "winston.common.serialized was removed (use winston-compat).",
+    "changelogId": "15"
+  },
+  {
+    "pattern": "read <winston>.common.log",
+    "id": "27",
+    "changelogDescription": "winston.common.log was removed (use winston-compat).",
+    "changelogId": "16"
+  },
+  {
+    "pattern": "call <winston>.transports.{File,Console,Http} [1, 1]",
+    "question": "Does the options argument include formatting options?",
+    "id": "29",
+    "changelogDescription": "Removed winston.transports.{File,Console,Http} formatting options",
+    "changelogId": "17"
+  },
+  {
+    "pattern": "read <winston>?**.{rewriters,filters}",
+    "id": "30",
+    "changelogDescription": "Migrating filters and rewriters to formats in winston@3",
+    "changelogId": "18"
+  },
+  {
+    "pattern": "read <winston>?**.console",
+    "id": "100",
+    "changelogDescription": "Removed console property from transports",
+    "changelogId": "19"
+  },
+  {
+    "pattern": "read <winston>.config.colorize",
+    "id": "101",
+    "changelogDescription": "winston.config.colorize is removed",
+    "changelogId": "20"
+  }
+]

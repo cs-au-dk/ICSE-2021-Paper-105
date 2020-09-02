@@ -1,0 +1,314 @@
+{
+  "[100]example/stability-test-worker.js_MemberExpression_8:0:8:43UncertainAccPathMatch": {
+    "questionText": "[100] example/stability-test-worker.js, MemberExpression at 8:0:8:43: Is the receiver the transports object of a winston logger?",
+    "answer": "Yes",
+    "patternId": "100",
+    "fileName": "example/stability-test-worker.js",
+    "lineNumber": 8,
+    "columnNumber": 0
+  },
+  "[13b]lib/gearmanode/client.js_CallExpression_84:4:84:97UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/client.js, CallExpression at 84:4:84:97: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/client.js",
+    "lineNumber": 84,
+    "columnNumber": 4
+  },
+  "[13b]lib/gearmanode/client.js_CallExpression_84:4:84:97MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/client.js, CallExpression at 84:4:84:97: is arg this.jobServers.length of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/client.js",
+    "lineNumber": 84,
+    "columnNumber": 4
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_94:16:94:78UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 94:16:94:78: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 94,
+    "columnNumber": 16
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_94:16:94:78MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 94:16:94:78: is arg name of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 94,
+    "columnNumber": 16
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_106:12:106:90UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 106:12:106:90: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 106,
+    "columnNumber": 12
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_106:12:106:90MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 106:12:106:90: is arg self.getUid() of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 106,
+    "columnNumber": 12
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_112:12:112:63UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 112:12:112:63: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 112,
+    "columnNumber": 12
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_112:12:112:63MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 112:12:112:63: is arg err of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 112,
+    "columnNumber": 12
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_136:16:136:88UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 136:16:136:88: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 136,
+    "columnNumber": 16
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_136:16:136:88MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 136:16:136:88: is arg chunk.length of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 136,
+    "columnNumber": 16
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_137:16:137:97UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 137:16:137:97: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 137,
+    "columnNumber": 16
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_137:16:137:97MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 137:16:137:97: is arg common.bufferAsHex(chunk) of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 137,
+    "columnNumber": 16
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_148:16:148:117UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 148:16:148:117: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 148,
+    "columnNumber": 16
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_148:16:148:117MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 148:16:148:117: is arg self.getUid() of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 148,
+    "columnNumber": 16
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_159:12:159:88UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 159:12:159:88: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 159,
+    "columnNumber": 12
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_159:12:159:88MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 159:12:159:88: is arg self.getUid() of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 159,
+    "columnNumber": 12
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_208:4:208:77UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 208:4:208:77: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 208,
+    "columnNumber": 4
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_208:4:208:77MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 208:4:208:77: is arg this.getUid() of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 208,
+    "columnNumber": 4
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_281:8:281:86UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 281:8:281:86: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 281,
+    "columnNumber": 8
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_281:8:281:86MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 281:8:281:86: is arg this.getUid() of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 281,
+    "columnNumber": 8
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_428:8:428:75UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 428:8:428:75: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 428,
+    "columnNumber": 8
+  },
+  "[13b]lib/gearmanode/job-server.js_CallExpression_428:8:428:75MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/job-server.js, CallExpression at 428:8:428:75: is arg packetType of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/job-server.js",
+    "lineNumber": 428,
+    "columnNumber": 8
+  },
+  "[13b]lib/gearmanode/load-balancing.js_CallExpression_86:14:86:88UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/load-balancing.js, CallExpression at 86:14:86:88: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/load-balancing.js",
+    "lineNumber": 86,
+    "columnNumber": 14
+  },
+  "[13b]lib/gearmanode/load-balancing.js_CallExpression_86:14:86:88MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/load-balancing.js, CallExpression at 86:14:86:88: is arg candidate of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/load-balancing.js",
+    "lineNumber": 86,
+    "columnNumber": 14
+  },
+  "[13b]lib/gearmanode/load-balancing.js_CallExpression_90:12:90:80UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/load-balancing.js, CallExpression at 90:12:90:80: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/load-balancing.js",
+    "lineNumber": 90,
+    "columnNumber": 12
+  },
+  "[13b]lib/gearmanode/load-balancing.js_CallExpression_90:12:90:80MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/load-balancing.js, CallExpression at 90:12:90:80: is arg candidate of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/load-balancing.js",
+    "lineNumber": 90,
+    "columnNumber": 12
+  },
+  "[13b]lib/gearmanode/load-balancing.js_CallExpression_97:6:97:111UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/load-balancing.js, CallExpression at 97:6:97:111: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/load-balancing.js",
+    "lineNumber": 97,
+    "columnNumber": 6
+  },
+  "[13b]lib/gearmanode/load-balancing.js_CallExpression_97:6:97:111MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/load-balancing.js, CallExpression at 97:6:97:111: is arg timeoutCandidate of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/load-balancing.js",
+    "lineNumber": 97,
+    "columnNumber": 6
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_73:4:73:97UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 73:4:73:97: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 73,
+    "columnNumber": 4
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_73:4:73:97MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 73:4:73:97: is arg this.jobServers.length of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 73,
+    "columnNumber": 4
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_187:4:187:90UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 187:4:187:90: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 187,
+    "columnNumber": 4
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_187:4:187:90MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 187:4:187:90: is arg this.workerId of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 187,
+    "columnNumber": 4
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_247:8:247:92UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 247:8:247:92: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 247,
+    "columnNumber": 8
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_247:8:247:92MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 247:8:247:92: is arg job.name of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 247,
+    "columnNumber": 8
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_277:8:277:90UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 277:8:277:90: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 277,
+    "columnNumber": 8
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_277:8:277:90MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 277:8:277:90: is arg name of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 277,
+    "columnNumber": 8
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_363:8:363:72UncertainAccPathMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 363:8:363:72: Is the receiver a winston logger?",
+    "answer": "Yes",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 363,
+    "columnNumber": 8
+  },
+  "[13b]lib/gearmanode/worker.js_CallExpression_363:8:363:72MaybeArgTypeMatch": {
+    "questionText": "[13b] lib/gearmanode/worker.js, CallExpression at 363:8:363:72: is arg this.handle of type function",
+    "answer": "No",
+    "patternId": "13b",
+    "fileName": "lib/gearmanode/worker.js",
+    "lineNumber": 363,
+    "columnNumber": 8
+  }
+}

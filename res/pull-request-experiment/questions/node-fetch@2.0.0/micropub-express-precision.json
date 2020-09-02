@@ -1,0 +1,10 @@
+{
+  "[6]index.js_CallExpression_382:27:382:56MaybeExplicitQuestionMatch": {
+    "questionText": "[6] index.js, CallExpression at 382:27:382:56: Is the second argument a GET or HEAD Request with non-null body?",
+    "answer": "No",
+    "patternId": "6",
+    "fileName": "index.js",
+    "lineNumber": 382,
+    "columnNumber": 27
+  }
+}

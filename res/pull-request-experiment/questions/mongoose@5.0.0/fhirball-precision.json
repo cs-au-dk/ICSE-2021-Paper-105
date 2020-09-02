@@ -1,0 +1,50 @@
+{
+  "[48b]lib/RouteFactory/interactions.js_CallExpression_249:8:249:38UncertainAccPathMatch": {
+    "questionText": "[48b] lib/RouteFactory/interactions.js, CallExpression at 249:8:249:38: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "48b",
+    "fileName": "lib/RouteFactory/interactions.js",
+    "lineNumber": 249,
+    "columnNumber": 8
+  },
+  "[48b]lib/RouteFactory/interactions.js_CallExpression_249:8:249:38MaybeArgTypeMatch": {
+    "questionText": "[48b] lib/RouteFactory/interactions.js, CallExpression at 249:8:249:38: is arg pipeline of type object",
+    "answer": "No",
+    "patternId": "48b",
+    "fileName": "lib/RouteFactory/interactions.js",
+    "lineNumber": 249,
+    "columnNumber": 8
+  },
+  "[48b]lib/RouteFactory/interactions.js_CallExpression_334:8:334:38UncertainAccPathMatch": {
+    "questionText": "[48b] lib/RouteFactory/interactions.js, CallExpression at 334:8:334:38: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "48b",
+    "fileName": "lib/RouteFactory/interactions.js",
+    "lineNumber": 334,
+    "columnNumber": 8
+  },
+  "[48b]lib/RouteFactory/interactions.js_CallExpression_334:8:334:38MaybeArgTypeMatch": {
+    "questionText": "[48b] lib/RouteFactory/interactions.js, CallExpression at 334:8:334:38: is arg pipeline of type object",
+    "answer": "No",
+    "patternId": "48b",
+    "fileName": "lib/RouteFactory/interactions.js",
+    "lineNumber": 334,
+    "columnNumber": 8
+  },
+  "[48b]lib/RouteFactory/interactions.js_CallExpression_375:8:375:33UncertainAccPathMatch": {
+    "questionText": "[48b] lib/RouteFactory/interactions.js, CallExpression at 375:8:375:33: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "48b",
+    "fileName": "lib/RouteFactory/interactions.js",
+    "lineNumber": 375,
+    "columnNumber": 8
+  },
+  "[48b]lib/RouteFactory/interactions.js_CallExpression_375:8:375:33MaybeArgTypeMatch": {
+    "questionText": "[48b] lib/RouteFactory/interactions.js, CallExpression at 375:8:375:33: is arg pipeline of type object",
+    "answer": "No",
+    "patternId": "48b",
+    "fileName": "lib/RouteFactory/interactions.js",
+    "lineNumber": 375,
+    "columnNumber": 8
+  }
+}

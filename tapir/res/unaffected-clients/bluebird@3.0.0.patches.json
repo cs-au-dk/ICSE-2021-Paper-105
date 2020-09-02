@@ -1,0 +1,382 @@
+{
+  "schema-mapper-driver-postgresql": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/dropper.js",
+        "lineNumber": 3,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "src/migrator.js",
+        "lineNumber": 4,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "src/syncer.js",
+        "lineNumber": 8,
+        "classification": "7b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/schema-mapper/driver-postgresql",
+      "gitCommit": "a609eb7935cb9850eebb450b57351f62584060e3"
+    }
+  },
+  "fetch-bluebird": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/undoZen/fetch-bluebird",
+      "gitCommit": "0fc47641ffb7e13d7c8424ca5119b2d53616c659"
+    }
+  },
+  "softlayer-node-fix": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/pmpkin/softlayer-node",
+      "gitCommit": "d776a49af7499f1dd52823440f21c4402809f847"
+    }
+  },
+  "@frctl/fractal": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/frctl/fractal",
+      "gitCommit": "5a8c477e73252adbffbf98438c1ad47b9a6f6947"
+    }
+  },
+  "smart-agg-camera-provider": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/stierma1/smart-agg-camera-provider",
+      "gitCommit": "124fc674be6aa57f1e09bf7d22ae3ce075cab5ca"
+    }
+  },
+  "yarp": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/dialexa/yarp",
+      "gitCommit": "ce641d5b462ad4b87305cf995c5fd107946dd24e"
+    }
+  },
+  "thinkable-ducks": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "config.js",
+        "lineNumber": 39,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "supervisor.js",
+        "lineNumber": 18,
+        "classification": "7b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/shimaore/thinkable-ducks",
+      "gitCommit": "5ebba6f8831c9aee97f95d24cc0b7991d65cd7f7"
+    }
+  },
+  "name-me": {
+    "install": true,
+    "ignore": true,
+    "excludedFiles": ["bundle.js"],
+    "patches": [
+      {
+        "file": "bin.js",
+        "lineNumber": 8,
+        "classification": "7",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/calvinmetcalf/name-me",
+      "gitCommit": "7bb58d3db3cbc4454587366966a606b2c8d95e1b"
+    }
+  },
+  "ember-loader": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": [
+      "bower_components"
+    ],
+    "patches": [
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 7,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 9,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 11,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 13,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 28,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 30,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 32,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 34,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 7,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 9,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 11,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 13,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 28,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 30,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 32,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 34,
+        "classification": "7",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/mzgoddard/ember-loader",
+      "gitCommit": "4ff2fbcaf4facad537c64e2fc0622431dc10257a"
+    }
+  },
+  "onionskin": {
+    "excludedFolders": ["dist"],
+    "patches": [
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 9,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 10,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 11,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 12,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 13,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 9,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 10,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 11,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 12,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/memcached.js",
+        "lineNumber": 13,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 9,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 10,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 11,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 12,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 14,
+        "classification": "6",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 9,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 10,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 11,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 12,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "src/onionskin/drivers/redis.js",
+        "lineNumber": 14,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "examples/facebook.js",
+        "lineNumber": 35,
+        "classification": "11",
+        "truePositive": true
+      },
+      {
+        "file": "test/onionskin/pool_test.js",
+        "lineNumber": 41,
+        "classification": "11",
+        "truePositive": true
+      },
+      {
+        "file": "test/onionskin/pool_test.js",
+        "lineNumber": 61,
+        "classification": "11",
+        "truePositive": true
+      },
+      {
+        "file": "test/onionskin/pool_test.js",
+        "lineNumber": 84,
+        "classification": "11",
+        "truePositive": true
+      },
+      {
+        "file": "test/onionskin/pool_test.js",
+        "lineNumber": 98,
+        "classification": "11",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/onionskin/onionskin",
+      "gitCommit": "80270f854704eea898d0af3c338e72d21715d9dc"
+    }
+  }
+}

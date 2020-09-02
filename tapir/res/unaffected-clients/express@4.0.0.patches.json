@@ -1,0 +1,436 @@
+{
+  "iora": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/core.js",
+        "lineNumber": 29,
+        "classification": "100",
+        "truePositive": false
+      },
+      {
+        "file": "lib/core.js",
+        "lineNumber": 61,
+        "classification": "100",
+        "truePositive": false
+      },
+      {
+        "file": "lib/core.js",
+        "lineNumber": 62,
+        "classification": "100",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/scrapjs/iora",
+      "gitCommit": "9356908db335ae52b9d52b98b1810c90e6717474"
+    }
+  },
+  "openshift-demo-nodejs-gestrem": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/gestrem/OpenShift-Demo-NodeJS",
+      "gitCommit": "b3e3c7ce2bda90a0c757ef38e0ea3493aeab5cbc"
+    }
+  },
+  "express-contentpool": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/kelkes/express-contentpool",
+      "gitCommit": "b1d5910509991410cd42b5190a9cb850ec3c78f8"
+    }
+  },
+  "https-localhost": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/daquinoaldo/https-localhost",
+      "gitCommit": "e8b8417d8f675308c3980ef2ce09b9587b3c3165"
+    }
+  },
+  "express-device": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "example/app.js",
+        "lineNumber": 12,
+        "classification": "3a",
+        "truePositive": true
+      },
+      {
+        "file": "example/app.js",
+        "lineNumber": 13,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app.js",
+        "lineNumber": 14,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app.js",
+        "lineNumber": 7,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "example/app.js",
+        "lineNumber": 19,
+        "classification": "8",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/rguerreiro/express-device",
+      "gitCommit": "0fdaf9c8cdba4b104cd752b27809c85fbb5b18be"
+    }
+  },
+  "tesla": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": [
+      "public/lib"
+    ],
+    "patches": [
+      {
+        "file": "config/express.js",
+        "lineNumber": 153,
+        "classification": "3a",
+        "truePositive": true
+      },
+      {
+        "file": "config/express.js",
+        "lineNumber": 154,
+        "classification": "3a",
+        "truePositive": true
+      },
+      {
+        "file": "config/express.js",
+        "lineNumber": 21,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "config/express.js",
+        "lineNumber": 128,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "config/express.js",
+        "lineNumber": 133,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "config/express.js",
+        "lineNumber": 147,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "config/express.js",
+        "lineNumber": 155,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "config/express.js",
+        "lineNumber": 144,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "config/express.js",
+        "lineNumber": 144,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "config/express.js",
+        "lineNumber": 173,
+        "classification": "8",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/teslajs/tesla.js",
+      "gitCommit": "59e64521628ed068bae33ba4841017f946c35cf0"
+    }
+  },
+  "openshift-demo-nodejs-ges": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/gestrem/OpenShift-Demo-NodeJS",
+      "gitCommit": "b3e3c7ce2bda90a0c757ef38e0ea3493aeab5cbc"
+    }
+  },
+  "hello-world-server": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/nisaacson/hello-world-server",
+      "gitCommit": "fca6bee9f8dd1b6ff63b4c20cc5672ff3f8dc076"
+    }
+  },
+  "firestarter": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "example/app-error-badcode.js",
+        "lineNumber": 16,
+        "classification": "3a",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error.js",
+        "lineNumber": 16,
+        "classification": "3a",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error-badcode.js",
+        "lineNumber": 19,
+        "classification": "3a",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error.js",
+        "lineNumber": 19,
+        "classification": "3a",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-leaktest.js",
+        "lineNumber": 19,
+        "classification": "3a",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error-badcode.js",
+        "lineNumber": 15,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error-badcode.js",
+        "lineNumber": 26,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error-badcode.js",
+        "lineNumber": 27,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error.js",
+        "lineNumber": 15,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error.js",
+        "lineNumber": 26,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error.js",
+        "lineNumber": 27,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error-badcode.js",
+        "lineNumber": 18,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error-badcode.js",
+        "lineNumber": 29,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error-badcode.js",
+        "lineNumber": 30,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error.js",
+        "lineNumber": 18,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error.js",
+        "lineNumber": 29,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error.js",
+        "lineNumber": 30,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-leaktest.js",
+        "lineNumber": 18,
+        "classification": "4",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error-badcode.js",
+        "lineNumber": 11,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error-badcode.js",
+        "lineNumber": 19,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error-badcode.js",
+        "lineNumber": 24,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error.js",
+        "lineNumber": 11,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error.js",
+        "lineNumber": 19,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-error.js",
+        "lineNumber": 24,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error-badcode.js",
+        "lineNumber": 14,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error-badcode.js",
+        "lineNumber": 22,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error-badcode.js",
+        "lineNumber": 27,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error.js",
+        "lineNumber": 14,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error.js",
+        "lineNumber": 22,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-error.js",
+        "lineNumber": 27,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-leaktest.js",
+        "lineNumber": 14,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-leaktest.js",
+        "lineNumber": 22,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-event-leaktest.js",
+        "lineNumber": 27,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-function.js",
+        "lineNumber": 10,
+        "classification": "7",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-function.js",
+        "lineNumber": 18,
+        "classification": "7b",
+        "truePositive": true
+      },
+      {
+        "file": "example/app-function.js",
+        "lineNumber": 23,
+        "classification": "7b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/davewilliamson/firestarter",
+      "gitCommit": "e9172e67a49735bc92fd07ddc6be3413663fadab"
+    }
+  },
+  "losdos": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/losdos.js",
+        "lineNumber": 16,
+        "classification": "100",
+        "truePositive": false
+      },
+      {
+        "file": "lib/losdos.js",
+        "lineNumber": 16,
+        "classification": "100",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/coltonw/losdos",
+      "gitCommit": "a009470efc4a3669c118b8d2de0d69dde859c9ea"
+    }
+  }
+}

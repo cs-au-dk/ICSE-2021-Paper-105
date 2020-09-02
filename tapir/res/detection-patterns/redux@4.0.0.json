@@ -1,0 +1,15 @@
+[
+  {
+    "pattern": "call <redux{/**/*,}>?**.{getState,subscribe}",
+    "question": "Is the reducer currently dispatching?",
+    "id": "8",
+    "changelogDescription": "Throw if getState, subscribe, or unsubscribe called while dispatching (including inside a reducer) (#1569 by @mjw56)",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "import redux/**/*",
+    "id": "15",
+    "changelogDescription": "Bundle cjs and es formats (#2358 by @TrySound) - (direct, private imports (import createStore from 'redux/lib/createStore') will no longer work)",
+    "changelogId": "2"
+  }
+]

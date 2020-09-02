@@ -1,0 +1,66 @@
+{
+  "[39]scripts/seed.js_CallExpression_92:10:92:32UncertainAccPathMatch": {
+    "questionText": "[39] scripts/seed.js, CallExpression at 92:10:92:32: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "39",
+    "fileName": "scripts/seed.js",
+    "lineNumber": 92,
+    "columnNumber": 10
+  },
+  "[39]scripts/seed.js_CallExpression_92:10:92:32MaybeExplicitQuestionMatch": {
+    "questionText": "[39] scripts/seed.js, CallExpression at 92:10:92:32: Is the resolved value of the returned promise used?",
+    "answer": "No",
+    "patternId": "39",
+    "fileName": "scripts/seed.js",
+    "lineNumber": 92,
+    "columnNumber": 10
+  },
+  "[39]scripts/seed.js_CallExpression_94:10:94:32UncertainAccPathMatch": {
+    "questionText": "[39] scripts/seed.js, CallExpression at 94:10:94:32: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "39",
+    "fileName": "scripts/seed.js",
+    "lineNumber": 94,
+    "columnNumber": 10
+  },
+  "[39]scripts/seed.js_CallExpression_94:10:94:32MaybeExplicitQuestionMatch": {
+    "questionText": "[39] scripts/seed.js, CallExpression at 94:10:94:32: Is the resolved value of the returned promise used?",
+    "answer": "No",
+    "patternId": "39",
+    "fileName": "scripts/seed.js",
+    "lineNumber": 94,
+    "columnNumber": 10
+  },
+  "[39]tests/e2e/basic-crud.tests.js_CallExpression_307:25:311:20UncertainAccPathMatch": {
+    "questionText": "[39] tests/e2e/basic-crud.tests.js, CallExpression at 307:25:311:20: Is the receiver a mongoose model?",
+    "answer": "Yes",
+    "patternId": "39",
+    "fileName": "tests/e2e/basic-crud.tests.js",
+    "lineNumber": 307,
+    "columnNumber": 25
+  },
+  "[39]tests/e2e/basic-crud.tests.js_CallExpression_307:25:311:20MaybeExplicitQuestionMatch": {
+    "questionText": "[39] tests/e2e/basic-crud.tests.js, CallExpression at 307:25:311:20: Is the resolved value of the returned promise used?",
+    "answer": "No",
+    "patternId": "39",
+    "fileName": "tests/e2e/basic-crud.tests.js",
+    "lineNumber": 307,
+    "columnNumber": 25
+  },
+  "[23]tests/unit/joi-mongoose-helper.tests.js_CallExpression_1760:8:1760:51UncertainAccPathMatch": {
+    "questionText": "[23] tests/unit/joi-mongoose-helper.tests.js, CallExpression at 1760:8:1760:51: Is the receiver a mongoose schema?",
+    "answer": "Yes",
+    "patternId": "23",
+    "fileName": "tests/unit/joi-mongoose-helper.tests.js",
+    "lineNumber": 1760,
+    "columnNumber": 8
+  },
+  "[23]tests/unit/joi-mongoose-helper.tests.js_CallExpression_1760:8:1760:51MaybeArgTypeMatch": {
+    "questionText": "[23] tests/unit/joi-mongoose-helper.tests.js, CallExpression at 1760:8:1760:51: is arg mongoose.Types.ObjectId() of type function2",
+    "answer": "No",
+    "patternId": "23",
+    "fileName": "tests/unit/joi-mongoose-helper.tests.js",
+    "lineNumber": 1760,
+    "columnNumber": 8
+  }
+}

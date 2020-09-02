@@ -1,0 +1,7 @@
+{
+  "34b": {
+    "questionText": "Should we patch the breaking change: BREAKING CHANGE: remove saveErrorIfNotFound, always error out if save() did not update a document #4973",
+    "answer": "No",
+    "patternId": "34b"
+  }
+}

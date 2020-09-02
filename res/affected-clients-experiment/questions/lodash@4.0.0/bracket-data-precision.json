@@ -1,0 +1,10 @@
+{
+  "[30b]data/index.js_CallExpression_27:15:27:48MaybeExplicitQuestionMatch": {
+    "questionText": "[30b] data/index.js, CallExpression at 27:15:27:48: Does this use of <lodash>.merge use a customizer function?",
+    "answer": "No",
+    "patternId": "30b",
+    "fileName": "data/index.js",
+    "lineNumber": 27,
+    "columnNumber": 15
+  }
+}

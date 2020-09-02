@@ -1,0 +1,34 @@
+{
+  "[2c]lib/proxy/spyProxy.js_CallExpression_119:36:119:80UncertainAccPathMatch": {
+    "questionText": "[2c] lib/proxy/spyProxy.js, CallExpression at 119:36:119:80: Is the receiver an express response object?",
+    "answer": "No",
+    "patternId": "2c",
+    "fileName": "lib/proxy/spyProxy.js",
+    "lineNumber": 119,
+    "columnNumber": 36
+  },
+  "[2d]lib/proxy/spyProxy.js_CallExpression_119:36:119:80UncertainAccPathMatch": {
+    "questionText": "[2d] lib/proxy/spyProxy.js, CallExpression at 119:36:119:80: Is the receiver an express response object?",
+    "answer": "No",
+    "patternId": "2d",
+    "fileName": "lib/proxy/spyProxy.js",
+    "lineNumber": 119,
+    "columnNumber": 36
+  },
+  "[2c]src/proxy/spyProxy.js_CallExpression_130:36:130:80UncertainAccPathMatch": {
+    "questionText": "[2c] src/proxy/spyProxy.js, CallExpression at 130:36:130:80: Is the receiver an express response object?",
+    "answer": "No",
+    "patternId": "2c",
+    "fileName": "src/proxy/spyProxy.js",
+    "lineNumber": 130,
+    "columnNumber": 36
+  },
+  "[2d]src/proxy/spyProxy.js_CallExpression_130:36:130:80UncertainAccPathMatch": {
+    "questionText": "[2d] src/proxy/spyProxy.js, CallExpression at 130:36:130:80: Is the receiver an express response object?",
+    "answer": "No",
+    "patternId": "2d",
+    "fileName": "src/proxy/spyProxy.js",
+    "lineNumber": 130,
+    "columnNumber": 36
+  }
+}

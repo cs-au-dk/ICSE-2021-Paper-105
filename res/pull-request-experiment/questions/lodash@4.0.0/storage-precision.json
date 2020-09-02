@@ -1,0 +1,10 @@
+{
+  "[7h]lib/index.js_CallExpression_22:30:22:99MaybeExplicitQuestionMatch": {
+    "questionText": "[7h] lib/index.js, CallExpression at 22:30:22:99: Does this call use a customizer function and a thisArg for that customizer?",
+    "answer": "No",
+    "patternId": "7h",
+    "fileName": "lib/index.js",
+    "lineNumber": 22,
+    "columnNumber": 30
+  }
+}

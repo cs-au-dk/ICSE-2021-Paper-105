@@ -1,0 +1,34 @@
+{
+  "[29]logger/logger.js_NewExpression_12:4:18:6UncertainAccPathMatch": {
+    "questionText": "[29] logger/logger.js, NewExpression at 12:4:18:6: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "logger/logger.js",
+    "lineNumber": 12,
+    "columnNumber": 4
+  },
+  "[29]logger/logger.js_NewExpression_12:4:18:6MaybeExplicitQuestionMatch": {
+    "questionText": "[29] logger/logger.js, NewExpression at 12:4:18:6: Does the options argument include formatting options?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "logger/logger.js",
+    "lineNumber": 12,
+    "columnNumber": 4
+  },
+  "[29]logger/logger.js_NewExpression_19:4:26:6UncertainAccPathMatch": {
+    "questionText": "[29] logger/logger.js, NewExpression at 19:4:26:6: Is the receiver winston.transports?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "logger/logger.js",
+    "lineNumber": 19,
+    "columnNumber": 4
+  },
+  "[29]logger/logger.js_NewExpression_19:4:26:6MaybeExplicitQuestionMatch": {
+    "questionText": "[29] logger/logger.js, NewExpression at 19:4:26:6: Does the options argument include formatting options?",
+    "answer": "Yes",
+    "patternId": "29",
+    "fileName": "logger/logger.js",
+    "lineNumber": 19,
+    "columnNumber": 4
+  }
+}

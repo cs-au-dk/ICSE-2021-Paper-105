@@ -1,0 +1,369 @@
+{
+  "node-odata": {
+    "install": true,
+    "ignore": true,
+    "excludedFolders": ["lib"],
+    "patches": [
+      {
+        "file": "src/model/idPlugin.js",
+        "lineNumber": 42,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "src/rest/index.js",
+        "lineNumber": 73,
+        "classification": "18",
+        "truePositive": false
+      },
+      {
+        "file": "src/server.js",
+        "lineNumber": 48,
+        "classification": "18",
+        "truePositive": false
+      },
+      {
+        "file": "src/server.js",
+        "lineNumber": 131,
+        "classification": "26b",
+        "truePositive": true
+      },
+      {
+        "file": "examples/simple/index.js",
+        "lineNumber": 18,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "examples/simple-with-data/index.js",
+        "lineNumber": 9,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "src/rest/put.js",
+        "lineNumber": 19,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "src/rest/post.js",
+        "lineNumber": 7,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "test/odata.actions.js",
+        "lineNumber": 25,
+        "classification": "34b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/TossShinHwa/node-odata",
+      "gitCommit": "0d7d0f101c3fd7f323bb98bcdb80e0b100dcfa75"
+    }
+  },
+  "mongoose-immutable": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/elbuo8/mongoose-immutable",
+      "gitCommit": "4b28830c2dcc906d51df3b92ea2b05ffce1a79d5"
+    }
+  },
+  "uniformity": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "app/models/auth/strategy.js",
+        "lineNumber": 22,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/auth/strategy.js",
+        "lineNumber": 23,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/auth/strategy.js",
+        "lineNumber": 24,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/auth/strategy.js",
+        "lineNumber": 28,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/auth/strategy.js",
+        "lineNumber": 39,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/auth/user.js",
+        "lineNumber": 27,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/auth/user.js",
+        "lineNumber": 28,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/auth/user.js",
+        "lineNumber": 29,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/auth/user.js",
+        "lineNumber": 32,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/routable.js",
+        "lineNumber": 22,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/routable.js",
+        "lineNumber": 23,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/routable.js",
+        "lineNumber": 24,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/routable.js",
+        "lineNumber": 28,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "app/models/routable.js",
+        "lineNumber": 39,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "config/mongoose.js",
+        "lineNumber": 8,
+        "classification": "26",
+        "truePositive": true
+      },
+      {
+        "file": "app/apicontrollers/routable.js",
+        "lineNumber": 73,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "app/apicontrollers/routable.js",
+        "lineNumber": 76,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "app/controllers/auth/user.js",
+        "lineNumber": 28,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "app/controllers/auth/user.js",
+        "lineNumber": 40,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "app/controllers/auth/user.js",
+        "lineNumber": 45,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "app/controllers/api.js",
+        "lineNumber": 106,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "app/controllers/plugin.js",
+        "lineNumber": 86,
+        "classification": "34b",
+        "truePositive": false
+      },
+      {
+        "file": "app/controllers/routable.js",
+        "lineNumber": 40,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "app/controllers/routable.js",
+        "lineNumber": 43,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "app/views/admin/js/contentEditor.js",
+        "lineNumber": 250,
+        "classification": "34b",
+        "truePositive": false
+      },
+      {
+        "file": "app/views/admin/js/contentEditor.js",
+        "lineNumber": 283,
+        "classification": "34b",
+        "truePositive": false
+      },
+      {
+        "file": "plugin.js",
+        "lineNumber": 45,
+        "classification": "34b",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/apocist/uniformity",
+      "gitCommit": "808f70d4bb563b5f2dfc585255c449cff117ade2"
+    }
+  },
+  "abz-chat": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/muhammadsumair/abz-chat",
+      "gitCommit": "17b332b43512306d339ec1b28a417f2caff9d9ce"
+    }
+  },
+  "mongoose-jsonld": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/factory.js",
+        "lineNumber": 117,
+        "classification": "18",
+        "truePositive": true
+      },
+      {
+        "file": "lib/handlers/restful.js",
+        "lineNumber": 135,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/handlers/restful.js",
+        "lineNumber": 155,
+        "classification": "39",
+        "truePositive": true
+      },
+      {
+        "file": "lib/handlers/restful.js",
+        "lineNumber": 176,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "lib/handlers/restful.js",
+        "lineNumber": 216,
+        "classification": "34b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/infolis/mongoose-jsonld",
+      "gitCommit": "1e52527d2d840566257e38b9f2ee2c7abf10aefe"
+    }
+  },
+  "phobosjs": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/phobosjs/phobos.js",
+      "gitCommit": "32d3f175c400f9b934c65d7085067fc7a8364c95"
+    }
+  },
+  "@benjamin-vanryseghem/mongoose-dummy": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/thedgmbh/mongoose-dummy",
+      "gitCommit": "58e2931bca09dfefc7853d0f7158f25a782490b1"
+    }
+  },
+  "mongo-accounts": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/storage.js",
+        "lineNumber": 19,
+        "classification": "26b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/mitica/mongo-accounts",
+      "gitCommit": "767b7c5a3178ca080f31b5e5971d7bc4ae343120"
+    }
+  },
+  "schema2hapi": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/controllers.js",
+        "lineNumber": 336,
+        "classification": "34b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/ospet/schema2hapi",
+      "gitCommit": "d622b3691fa1b0cce3809416cab926e9ef2fb314"
+    }
+  },
+  "mongoose-ember-errors": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "test/index.js",
+        "lineNumber": 25,
+        "classification": "34b",
+        "truePositive": true
+      },
+      {
+        "file": "test/index.js",
+        "lineNumber": 38,
+        "classification": "34b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/elbuo8/mongoose-ember-errors",
+      "gitCommit": "8695fb903687f827fb8cd8ff72958e71de406c0b"
+    }
+  }
+}

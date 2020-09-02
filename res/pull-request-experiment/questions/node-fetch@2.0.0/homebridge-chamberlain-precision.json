@@ -1,0 +1,42 @@
+{
+  "[3]src/api.js_CallExpression_26:13:26:23UncertainAccPathMatch": {
+    "questionText": "[3] src/api.js, CallExpression at 26:13:26:23: Is the receiver a node-fetch response?",
+    "answer": "Yes",
+    "patternId": "3",
+    "fileName": "src/api.js",
+    "lineNumber": 26,
+    "columnNumber": 13
+  },
+  "[3]src/api.js_CallExpression_26:13:26:23MaybeExplicitQuestionMatch": {
+    "questionText": "[3] src/api.js, CallExpression at 26:13:26:23: Is the response text not encoded in UTF-8?",
+    "answer": "No",
+    "patternId": "3",
+    "fileName": "src/api.js",
+    "lineNumber": 26,
+    "columnNumber": 13
+  },
+  "[3]src/api.js_CallExpression_30:11:30:21UncertainAccPathMatch": {
+    "questionText": "[3] src/api.js, CallExpression at 30:11:30:21: Is the receiver a node-fetch response?",
+    "answer": "Yes",
+    "patternId": "3",
+    "fileName": "src/api.js",
+    "lineNumber": 30,
+    "columnNumber": 11
+  },
+  "[3]src/api.js_CallExpression_30:11:30:21MaybeExplicitQuestionMatch": {
+    "questionText": "[3] src/api.js, CallExpression at 30:11:30:21: Is the response text not encoded in UTF-8?",
+    "answer": "No",
+    "patternId": "3",
+    "fileName": "src/api.js",
+    "lineNumber": 30,
+    "columnNumber": 11
+  },
+  "[6]src/api.js_CallExpression_13:2:24:4MaybeExplicitQuestionMatch": {
+    "questionText": "[6] src/api.js, CallExpression at 13:2:24:4: Is the second argument a GET or HEAD Request with non-null body?",
+    "answer": "No",
+    "patternId": "6",
+    "fileName": "src/api.js",
+    "lineNumber": 13,
+    "columnNumber": 2
+  }
+}

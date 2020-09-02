@@ -1,0 +1,114 @@
+{
+  "[102a]src/custom-operators.js_CallExpression_9:11:10:65UncertainAccPathMatch": {
+    "questionText": "[102a] src/custom-operators.js, CallExpression at 9:11:10:65: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/custom-operators.js",
+    "lineNumber": 9,
+    "columnNumber": 11
+  },
+  "[102a]src/custom-operators.js_CallExpression_9:11:11:15UncertainAccPathMatch": {
+    "questionText": "[102a] src/custom-operators.js, CallExpression at 9:11:11:15: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "src/custom-operators.js",
+    "lineNumber": 9,
+    "columnNumber": 11
+  },
+  "[103a]src/custom-operators.js_MemberExpression_9:11:11:13UncertainAccPathMatch": {
+    "questionText": "[103a] src/custom-operators.js, MemberExpression at 9:11:11:13: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "103a",
+    "fileName": "src/custom-operators.js",
+    "lineNumber": 9,
+    "columnNumber": 11
+  },
+  "[102a]src/spell-check-handler.js_CallExpression_314:19:320:12UncertainAccPathMatch": {
+    "questionText": "[102a] src/spell-check-handler.js, CallExpression at 314:19:320:12: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/spell-check-handler.js",
+    "lineNumber": 314,
+    "columnNumber": 19
+  },
+  "[102a]src/spell-check-handler.js_CallExpression_332:19:336:11UncertainAccPathMatch": {
+    "questionText": "[102a] src/spell-check-handler.js, CallExpression at 332:19:336:11: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/spell-check-handler.js",
+    "lineNumber": 332,
+    "columnNumber": 19
+  },
+  "[102a]src/spell-check-handler.js_CallExpression_343:17:349:10UncertainAccPathMatch": {
+    "questionText": "[102a] src/spell-check-handler.js, CallExpression at 343:17:349:10: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "src/spell-check-handler.js",
+    "lineNumber": 343,
+    "columnNumber": 17
+  },
+  "[102a]test/dictionary-sync.js_CallExpression_25:4:25:25UncertainAccPathMatch": {
+    "questionText": "[102a] test/dictionary-sync.js, CallExpression at 25:4:25:25: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "test/dictionary-sync.js",
+    "lineNumber": 25,
+    "columnNumber": 4
+  },
+  "[102a]test/spell-check-handler.js_CallExpression_39:4:39:25UncertainAccPathMatch": {
+    "questionText": "[102a] test/spell-check-handler.js, CallExpression at 39:4:39:25: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "test/spell-check-handler.js",
+    "lineNumber": 39,
+    "columnNumber": 4
+  },
+  "[102a]test/spell-check-handler.js_CallExpression_72:4:72:25UncertainAccPathMatch": {
+    "questionText": "[102a] test/spell-check-handler.js, CallExpression at 72:4:72:25: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "test/spell-check-handler.js",
+    "lineNumber": 72,
+    "columnNumber": 4
+  },
+  "[102a]test/spell-check-handler.js_CallExpression_112:6:112:29UncertainAccPathMatch": {
+    "questionText": "[102a] test/spell-check-handler.js, CallExpression at 112:6:112:29: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "test/spell-check-handler.js",
+    "lineNumber": 112,
+    "columnNumber": 6
+  },
+  "[102a]test/spell-check-handler.js_CallExpression_125:12:125:59UncertainAccPathMatch": {
+    "questionText": "[102a] test/spell-check-handler.js, CallExpression at 125:12:125:59: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "test/spell-check-handler.js",
+    "lineNumber": 125,
+    "columnNumber": 12
+  },
+  "[102a]test/spell-check-handler.js_CallExpression_131:6:131:29UncertainAccPathMatch": {
+    "questionText": "[102a] test/spell-check-handler.js, CallExpression at 131:6:131:29: Is the receiver a rxjs observable?",
+    "answer": "No",
+    "patternId": "102a",
+    "fileName": "test/spell-check-handler.js",
+    "lineNumber": 131,
+    "columnNumber": 6
+  },
+  "[102a]test/spell-check-handler.js_CallExpression_147:12:147:59UncertainAccPathMatch": {
+    "questionText": "[102a] test/spell-check-handler.js, CallExpression at 147:12:147:59: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "test/spell-check-handler.js",
+    "lineNumber": 147,
+    "columnNumber": 12
+  },
+  "[102a]test/spell-check-handler.js_CallExpression_162:12:162:59UncertainAccPathMatch": {
+    "questionText": "[102a] test/spell-check-handler.js, CallExpression at 162:12:162:59: Is the receiver a rxjs observable?",
+    "answer": "Yes",
+    "patternId": "102a",
+    "fileName": "test/spell-check-handler.js",
+    "lineNumber": 162,
+    "columnNumber": 12
+  }
+}

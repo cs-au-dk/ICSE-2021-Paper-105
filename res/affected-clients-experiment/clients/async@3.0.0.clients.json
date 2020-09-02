@@ -1,0 +1,58 @@
+[
+  {
+    "name": "dispensary",
+    "repo": {
+      "gitCommit": "c489ed7212b79956ce3250cbd311a0af5a75a7d4",
+      "gitURL": "https://github.com/mozilla/dispensary"
+    }
+  },
+  {
+    "name": "gulp-expect-file",
+    "repo": {
+      "gitCommit": "429e6514248f5d4b0ba5416042c0bf5144c3f975",
+      "gitURL": "https://github.com/pioug/gulp-expect-file"
+    }
+  },
+  {
+    "name": "citgm",
+    "repo": {
+      "gitCommit": "6f0a524dffcfcdc5a2d2f888cc791ee0c4873633",
+      "gitURL": "https://github.com/nodejs/citgm"
+    }
+  },
+  {
+    "name": "complexity-report-ext",
+    "repo": {
+      "gitCommit": "0e56f52f9b8330df1bfdde904aec4fc19e894ac8",
+      "gitURL": "https://github.com/prantlf/complexity-report"
+    }
+  },
+  {
+    "name": "ask-cli-x",
+    "repo": {
+      "gitCommit": "524a951b7ebef15f9e318db59325d761cca2f070",
+      "gitURL": "https://github.com/alexa-labs/ask-cli"
+    }
+  },
+  {
+    "name": "gulp-connect-ssi",
+    "repo": {
+      "gitCommit": "c0c2ef39a61214cef257963ce73c7a4a79652255",
+      "gitURL": "https://github.com/fanyegong/gulp-connect-ssi"
+    }
+  },
+  {
+    "name": "@alertlogic/al-azure-collector-js",
+    "repo": {
+      "gitCommit": "476bad4d9c203bfce608a2f4eefc9396baa52be8",
+      "gitURL": "https://github.com/alertlogic/al-azure-collector-js"
+    }
+  },
+  {
+    "name": "bulk-html-loader",
+    "repo": {
+      "gitCommit": "7e0589768c9d789394283726ae25741f3adf0b47",
+      "gitURL": "https://github.com/ChristianRich/bulk-html-loader"
+    }
+  }
+]

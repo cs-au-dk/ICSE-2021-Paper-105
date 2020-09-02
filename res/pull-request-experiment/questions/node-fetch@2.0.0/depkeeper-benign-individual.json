@@ -1,0 +1,10 @@
+{
+  "4-lib/registry.js_CallExpression_60:20:60:31": {
+    "questionText": "lib/registry.js_CallExpression_60:20:60:31: Should we patch the breaking change: Major: make response.json() throw error instead of returning an empty object on 204 no-content respose (per spec; reverts behavior changed in v1.6.2)",
+    "answer": "Yes",
+    "patternId": "4",
+    "fileName": "lib/registry.js",
+    "lineNumber": 60,
+    "columnNumber": 20
+  }
+}

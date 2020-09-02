@@ -1,0 +1,8 @@
+#!/bin/bash
+
+OS="$(uname)"
+  if [[ $OS == "Darwin" ]]; then
+    echo $(stat -f '%Sg' ${1})
+  else
+    echo $(stat -c '%G' ${1})
+fi

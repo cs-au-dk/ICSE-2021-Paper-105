@@ -1,0 +1,72 @@
+[
+  {
+    "name": "@mapbox/mapbox-gl-directions",
+    "repo": {
+      "gitURL": "https://github.com/mapbox/mapbox-gl-directions",
+      "gitCommit": "933bf6d26adfcc888ad51bffe696ff8e1a2a2a45"
+    }
+  },
+  {
+    "name": "topcoder-react-lib",
+    "repo": {
+      "gitURL": "https://github.com/topcoder-platform/topcoder-react-lib",
+      "gitCommit": "97506da5fd7a6c3f72d9ecc6ec3bbaf09c1b0ca5"
+    }
+  },
+  {
+    "name": "airswap.js",
+    "repo": {
+      "gitURL": "https://github.com/airswap/AirSwap.js",
+      "gitCommit": "329c69bdfb648811bda74a9e68b09661fb371af7"
+    }
+  },
+  {
+    "name": "unified-redux-wrapper",
+    "repo": {
+      "gitURL": "https://github.com/felixsonyusuftosin/redux-wrapper",
+      "gitCommit": "a54d214a32eb533040c282ddc3ab10f5d9ccb322"
+    }
+  },
+  {
+    "name": "svelte-dev-store",
+    "repo": {
+      "gitURL": "https://github.com/GarethOates/svelte-dev-store",
+      "gitCommit": "bde80a0706c01f8894e5f55cf5b5fdec0491a863"
+    }
+  },
+  {
+    "name": "swiftdocs",
+    "repo": {
+      "gitURL": "https://github.com/swiftmade/swiftdocs",
+      "gitCommit": "c0374a2bef527c6752046910a6e434f6ee06cc70"
+    }
+  },
+  {
+    "name": "redux-saga-kit",
+    "repo": {
+      "gitURL": "https://github.com/wix-incubator/redux-saga-kit",
+      "gitCommit": "47f93c279013c59e7919f5462c97c3fae80e7d6f"
+    }
+  },
+  {
+    "name": "easy-mediasoup",
+    "repo": {
+      "gitURL": "https://github.com/Adrinalin4ik/easy-mediasoup",
+      "gitCommit": "7cdbf756dc5a2fcb9b124c3d98b83fb5497cc824"
+    }
+  },
+  {
+    "name": "catro-eixos-js",
+    "repo": {
+      "gitURL": "https://github.com/prefapp/catro_eixos_js",
+      "gitCommit": "a4a10b83954054390645e89e80882a0e2ab84165"
+    }
+  },
+  {
+    "name": "scpx-wallet",
+    "repo": {
+      "gitURL": "https://github.com/Scoop-Tech/scpx-wallet",
+      "gitCommit": "d31f4a22e0adfd35c43daecdf734208f9b9c0263"
+    }
+  }
+]

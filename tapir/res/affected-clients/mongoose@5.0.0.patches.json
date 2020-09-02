@@ -1,0 +1,249 @@
+{
+  "feathers-lg-multi-service-mongoose": {
+      "patches": [
+        {
+          "file": "src/service-proxy.js",
+          "lineNumber": 17,
+          "classification": "26b"
+        }
+      ],
+      "repo": {
+          "gitCommit": "bf5322e68807f3f786db7ac966c0b704bb5be820",
+          "gitURL": "https://github.com/dmitrovskiy/feathers-lg-multi-service-mongoose"
+      }
+  },
+  "r2mongoose": {
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 25,
+        "classification": "26"
+      }
+    ],
+    "repo": {
+      "gitCommit": "b7807dd0ebc0000d89a03b8d03395395f630bfe5",
+      "gitURL": "https://github.com/r2js/r2mongoose"
+    }
+  },
+  "passport-service": {
+    "patches": [
+      {
+        "file": "app/models/user.js",
+        "lineNumber": 83,
+        "classification": "23"
+      },
+      {
+        "file": "app/models/user.js",
+        "lineNumber": 115,
+        "classification": "18"
+      },
+      {
+        "file": "app/controllers/users.js",
+        "lineNumber": 34,
+        "classification": "34b"
+      },
+      {
+        "file": "app/controllers/users.js",
+        "lineNumber": 116,
+        "classification": "34b"
+      },
+      {
+        "file": "config/passport/facebook.js",
+        "lineNumber": 35,
+        "classification": "34b"
+      },
+      {
+        "file": "config/passport/github.js",
+        "lineNumber": 35,
+        "classification": "34b"
+      },
+      {
+        "file": "config/passport/google.js",
+        "lineNumber": 35,
+        "classification": "34b"
+      },
+      {
+        "file": "config/passport/twitter.js",
+        "lineNumber": 34,
+        "classification": "34b"
+      }
+    ],
+    "repo": {
+      "gitCommit": "b5dfa85b622e5b18072b5f295d7ff300c5bd5025",
+      "gitURL": "https://github.com/binocarlos/passport-service"
+    }
+  },
+  "osnova": {
+    "excludedFolders": ["build"],
+    "patches": [
+      {
+        "file":"src/modules/mongo.js",
+        "lineNumber": 19,
+        "classification": "26"
+      }
+    ],
+    "repo": {
+      "gitCommit": "8a45a48cf17bde81b4833b0b7362158fb4b02450",
+      "gitURL": "https://github.com/Noviel/osnova"
+    }
+  },
+  "mongoose-transaction-plugin": {
+    "install": true,
+    "patches": [
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 73,
+        "classification": "26"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 325,
+        "classification": "26"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 388,
+        "classification": "26"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 484,
+        "classification": "26"
+      },
+      {
+        "file": "dist/plugin.js",
+        "lineNumber": 162,
+        "classification": "18"
+      },
+      {
+        "file": "dist/plugin.js",
+        "lineNumber": 172,
+        "classification": "18"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 101,
+        "classification": "39"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 104,
+        "classification": "39"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 123,
+        "classification": "39"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 125,
+        "classification": "39"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 144,
+        "classification": "39"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 177,
+        "classification": "39"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 249,
+        "classification": "39"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 257,
+        "classification": "39"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 111,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 137,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 169,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 255,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 278,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 406,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 422,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 433,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 436,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 446,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/spec/transaction-spec.js",
+        "lineNumber": 459,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 59,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 181,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 237,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 252,
+        "classification": "34b"
+      },
+      {
+        "file": "dist/transaction.js",
+        "lineNumber": 261,
+        "classification": "34b"
+      }
+    ],
+    "repo": {
+      "gitCommit": "42c784350d53bd2b801bacfe23264053a811cfc4",
+      "gitURL": "https://github.com/wokim/mongoose-transaction-plugin"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "generator-ninthlink": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/jeffreysbrother/generator-ninthlink",
+      "gitCommit": "5a9939df6d1a58b32244a8e4b77a4ab99e935242"
+    }
+  },
+  "@gkalpak/ng-pr-merge": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/gkalpak/ng-pr-merge",
+      "gitCommit": "12576e05311f879524de3ac327750ce5cbdb4ce7"
+    }
+  },
+  "print-flat-tree": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/mafintosh/print-flat-tree",
+      "gitCommit": "b0f1085eaa1e11daf298e3ebd2a1be4a6080208e"
+    }
+  },
+  "dod": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/gamontal/dod",
+      "gitCommit": "921c5d5bf6c1b4d4b68c640ac1655b4fcc37b2a6"
+    }
+  },
+  "generator-nswebapp": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/jovicaconkic/generator-nswebapp",
+      "gitCommit": "641d78cc57f0f3013b2c2ca592e7d77187d931a8"
+    }
+  },
+  "smooth-progress": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/progress.js",
+        "lineNumber": 40,
+        "classification": "3",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/jdxcode/smooth-progress",
+      "gitCommit": "f637f2f7c1b55297aa39a651dd0494f33b54e0f8"
+    }
+  },
+  "monopod": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/studio-b12/monopod",
+      "gitCommit": "d34e7b18eb35e4ab64c205cbb6f3575f6e37bf3d"
+    }
+  },
+  "@string-bean/grunt-package-modules": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/stringbean/grunt-package-modules",
+      "gitCommit": "2f6c8001baa1d953393337b01f3c6093d8cf5b00"
+    }
+  },
+  "lme": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/vajahath/lme",
+      "gitCommit": "1bf613a2decff2a0852a6c686ee7c76fa90b0161"
+    }
+  },
+  "@alexistessier/report": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/AlexisTessier/report",
+      "gitCommit": "a17f3d34514746eb0d894c6f1fc64113d8f1930b"
+    }
+  }
+}

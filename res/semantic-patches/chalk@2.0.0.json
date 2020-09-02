@@ -1,0 +1,32 @@
+[
+  {
+    "pattern": "read <chalk>.hasColor",
+    "uncertainAccPathQuestion": "Is the receiver chalk?",
+    "transform": {
+      "pattern": "<has-ansi@2.0.0>"
+    },
+    "id": "2",
+    "changelogDescription": "Removed chalk.hasColor(). Use the has-ansi package directly instead. 04cae22",
+    "changelogId": "1"
+  },
+  {
+    "pattern": "read <chalk>.stripColor",
+    "uncertainAccPathQuestion": "Is the receiver chalk?",
+    "transform": {
+      "pattern": "<strip-ansi@3.0.0>"
+    },
+    "id": "3",
+    "changelogDescription": "Removed chalk.stripColor(). Use the strip-ansi package directly instead. 04cae22",
+    "changelogId": "2"
+  },
+  {
+    "pattern": "read <chalk>.styles",
+    "uncertainAccPathQuestion": "Is the receiver chalk?",
+    "transform": {
+      "pattern": "<ansi-styles@2.2.1>"
+    },
+    "id": "4",
+    "changelogDescription": "Removed chalk.styles. Use the ansi-styles package directly instead. 8702496",
+    "changelogId": "3"
+  }
+]

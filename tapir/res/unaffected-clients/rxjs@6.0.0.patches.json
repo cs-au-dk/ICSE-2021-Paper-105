@@ -1,0 +1,877 @@
+{
+  "@rrijnberk/core": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/rrijnberk-nl/core",
+      "gitCommit": "3bd7ec800a429fa17e14d2d7e037ee2aa78cac15"
+    }
+  },
+  "ng2-backend": {
+    "install": true,
+    "ignore": true,
+    "excludedFiles": ["docs/assets/js/main.js"],
+    "patches": [
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 4,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 40,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/utils.js",
+        "lineNumber": 40,
+        "classification": "103c",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 17,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 17,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 27,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 27,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 37,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 37,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 47,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 47,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 57,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 57,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 67,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 67,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 3,
+        "classification": "102b",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 4,
+        "classification": "102b",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 17,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 27,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 37,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 47,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 57,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/backend.js",
+        "lineNumber": 67,
+        "classification": "103a",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/s-m-i-t-a/ng2-backend",
+      "gitCommit": "9b64285e48305a303ca44d8c133d2df3a96d51f1"
+    }
+  },
+  "react-declarative-state": {
+    "install": true,
+    "ignore": true,
+    "excludedFiles": ["docs/assets/js/main.js", "dist/react-declarative-state.es5.js", "dist/react-declarative-state.umd.js"],
+    "patches": [
+      {
+        "file": "dist/lib/Async.js",
+        "lineNumber": 70,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Async.js",
+        "lineNumber": 84,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Async.js",
+        "lineNumber": 98,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Async.js",
+        "lineNumber": 115,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Constant.js",
+        "lineNumber": 54,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 75,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 83,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Operation.js",
+        "lineNumber": 56,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Operation.js",
+        "lineNumber": 66,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Stream.js",
+        "lineNumber": 57,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Stream.js",
+        "lineNumber": 65,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 59,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 89,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 98,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Async.js",
+        "lineNumber": 70,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Async.js",
+        "lineNumber": 84,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Async.js",
+        "lineNumber": 98,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Async.js",
+        "lineNumber": 115,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Constant.js",
+        "lineNumber": 48,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Constant.js",
+        "lineNumber": 48,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Constant.js",
+        "lineNumber": 48,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 62,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 64,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 64,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 64,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 64,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 77,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 77,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Operation.js",
+        "lineNumber": 45,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Operation.js",
+        "lineNumber": 45,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Operation.js",
+        "lineNumber": 45,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Operation.js",
+        "lineNumber": 59,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Operation.js",
+        "lineNumber": 59,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Stream.js",
+        "lineNumber": 47,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Stream.js",
+        "lineNumber": 47,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Stream.js",
+        "lineNumber": 47,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Stream.js",
+        "lineNumber": 59,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Stream.js",
+        "lineNumber": 59,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 52,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 52,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 52,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 77,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 77,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 77,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 91,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 91,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Constant.js",
+        "lineNumber": 48,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 64,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Controlled.js",
+        "lineNumber": 77,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Operation.js",
+        "lineNumber": 45,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Operation.js",
+        "lineNumber": 59,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Stream.js",
+        "lineNumber": 47,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Stream.js",
+        "lineNumber": 59,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 52,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 77,
+        "classification": "103a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/lib/Variable.js",
+        "lineNumber": 91,
+        "classification": "103a",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/osaario/react-declarative-state",
+      "gitCommit": "ce1c3d316e757cc94339179f94a7d5e88c506c9e"
+    }
+  },
+  "ng-radio": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "dist/ng_radio.js",
+        "lineNumber": 3,
+        "classification": "8",
+        "truePositive": true
+      },
+      {
+        "file": "dist/ng_radio.js",
+        "lineNumber": 46,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/ng_radio.js",
+        "lineNumber": 46,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "dist/ng_radio.js",
+        "lineNumber": 4,
+        "classification": "102b",
+        "truePositive": true
+      },
+      {
+        "file": "dist/ng_radio.js",
+        "lineNumber": 5,
+        "classification": "102b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/govorov/ng-radio",
+      "gitCommit": "428647565342ad124a30fd9c3e1751a1332f5de6"
+    }
+  },
+  "ng-pell": {
+    "install": true,
+    "ignore": true,
+    "patches": [],
+    "repo": {
+      "gitURL": "https://github.com/snood1205/ng-pell",
+      "gitCommit": "077a3b795d0bff3073c34b40e3eee62f56772b07"
+    }
+  },
+  "@shopgate/cloud-sdk-webpack": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "lib/webpackDevServer/WebpackDevServer.js",
+        "lineNumber": 35,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "lib/webpackDevServer/WebpackDevServer.js",
+        "lineNumber": 74,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "lib/Themes.js",
+        "lineNumber": 90,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "lib/webpackDevServer/WebpackDevServer.js",
+        "lineNumber": 35,
+        "classification": "103a",
+        "truePositive": false
+      },
+      {
+        "file": "lib/webpackDevServer/WebpackDevServer.js",
+        "lineNumber": 74,
+        "classification": "103a",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/shopgate/cloud-sdk-webpack",
+      "gitCommit": "be1316c3529485393b84298133cfbe0b7eaeb031"
+    }
+  },
+  "hystrix-too-busy": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 45,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 45,
+        "classification": "103a",
+        "truePositive": false
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/trooba/hystrix-too-busy",
+      "gitCommit": "385d374f8fb8cbb09311018dee3cf1d5a832776d"
+    }
+  },
+  "lacona-etym": {
+    "install": true,
+    "ignore": true,
+    "excludedFiles": ["lib/etym-api.js"],
+    "patches": [
+      {
+        "file": "lib/index.js",
+        "lineNumber": 12,
+        "classification": "5b",
+        "truePositive": true
+      },
+      {
+        "file": "lib/index.js",
+        "lineNumber": 12,
+        "classification": "100",
+        "truePositive": true
+      },
+      {
+        "file": "lib/index.js",
+        "lineNumber": 27,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "lib/index.js",
+        "lineNumber": 61,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "lib/index.js",
+        "lineNumber": 14,
+        "classification": "102b",
+        "truePositive": true
+      },
+      {
+        "file": "lib/index.js",
+        "lineNumber": 16,
+        "classification": "102b",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/d4hines/lacona-etym",
+      "gitCommit": "5d0587fb63a1dd0b6a5c8aaf717f82b487707f0f"
+    }
+  },
+  "browser-synth": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 114,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 124,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 195,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 224,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 117,
+        "classification": "43a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 124,
+        "classification": "100b",
+        "truePositive": true
+      },
+      {
+        "file": "src/effects.js",
+        "lineNumber": 77,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "src/effects.js",
+        "lineNumber": 103,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "src/oscillator.js",
+        "lineNumber": 63,
+        "classification": "21b",
+        "truePositive": false
+      },
+      {
+        "file": "src/oscillator.js",
+        "lineNumber": 92,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 117,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 21,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 32,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 35,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 117,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 114,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 114,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 114,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 114,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "src/poly-synth.js",
+        "lineNumber": 370,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "src/samplePlayer.js",
+        "lineNumber": 91,
+        "classification": "102a",
+        "truePositive": false
+      },
+      {
+        "file": "src/utils.js",
+        "lineNumber": 211,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "src/utils.js",
+        "lineNumber": 212,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "src/utils.js",
+        "lineNumber": 214,
+        "classification": "21b",
+        "truePositive": true
+      },
+      {
+        "file": "src/utils.js",
+        "lineNumber": 228,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "src/utils.js",
+        "lineNumber": 214,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "src/utils.js",
+        "lineNumber": 214,
+        "classification": "102a",
+        "truePositive": true
+      },
+      {
+        "file": "src/utils.js",
+        "lineNumber": 214,
+        "classification": "103a",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/blunox/browser-synth",
+      "gitCommit": "d180eefa68b5a1b16ce7e42feb7cb86b80fbe12f"
+    }
+  },
+  "veenbox": {
+    "install": true,
+    "ignore": true,
+    "patches": [
+      {
+        "file": "src/old/old/utils/index.r.js",
+        "lineNumber": 32,
+        "classification": "5a",
+        "truePositive": true
+      },
+      {
+        "file": "src/old/old/utils/index.r.js",
+        "lineNumber": 1,
+        "classification": "31",
+        "truePositive": true
+      },
+      {
+        "file": "src/old/old/utils/index.r.js",
+        "lineNumber": 1,
+        "classification": "101",
+        "truePositive": true
+      },
+      {
+        "file": "src/old/old/utils/index.r.js",
+        "lineNumber": 32,
+        "classification": "102a",
+        "truePositive": true
+      }
+    ],
+    "repo": {
+      "gitURL": "https://github.com/veenedu/veenbox",
+      "gitCommit": "8794322073928d078f76233302f6fe31f9fdaa50"
+    }
+  }
+}

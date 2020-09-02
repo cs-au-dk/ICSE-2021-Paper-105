@@ -1,0 +1,197 @@
+{
+  "md-file-converter": {
+    "patches": [
+      {
+        "file": "bin/index.js",
+        "lineNumber": 57,
+        "classification": "4"
+      },
+      {
+        "file": "bin/index.js",
+        "lineNumber": 57,
+        "classification": "5"
+      }
+    ],
+    "repo": {
+      "gitCommit": "ceeb0441aaa34f921becd1e0dcc6f87dd4490596",
+      "gitURL": "https://github.com/MarcLoupias/md-file-converter"
+    }
+  },
+  "@sector-labs/lingui-multi": {
+    "repo": {
+      "gitCommit": "f88c5f03f4da51d6a971f54d58799a4233cd3973",
+      "gitURL": "https://github.com/SectorLabs/lingui-multi"
+    },
+    "patches": [
+      {
+        "file": "dist/lingui-multi.js",
+        "lineNumber": 344,
+        "classification": "4"
+      },
+      {
+        "file": "dist/lingui-multi.js",
+        "lineNumber": 344,
+        "classification": "5"
+      }
+    ]
+  },
+  "@apexearth/egrep": {
+    "repo": {
+      "gitCommit": "129196b8c0a3125bd0bf21db49b077ff91f27aa3",
+      "gitURL": "https://github.com/apexearth/egrep"
+    },
+    "patches": [
+      {
+        "file": "src/cli.js",
+        "lineNumber": 8,
+        "classification": "4"
+      },
+      {
+        "file": "src/cli.js",
+        "lineNumber": 8,
+        "classification": "5"
+      }
+    ]
+  },
+  "watson-speech-to-text-utils": {
+    "repo": {
+      "gitCommit": "ad7d6db8dc108a0a518aabb352cb12c269edb187",
+      "gitURL": "https://github.com/watson-developer-cloud/speech-to-text-utils"
+    },
+    "patches": [
+      {
+        "file": "lib/index.js",
+        "lineNumber": 292,
+        "classification": "4"
+      },
+      {
+        "file": "lib/index.js",
+        "lineNumber": 292,
+        "classification": "5"
+      }
+    ]
+  },
+  "ehlo": {
+    "repo": {
+      "gitCommit": "4de4999bc2c99fa724d7f528c75be58efc7ef393",
+      "gitURL": "https://github.com/ehlo-io/ehlo"
+    },
+    "patches": [
+      {
+        "file": "cli.js",
+        "lineNumber": 12,
+        "classification": "4"
+      },
+      {
+        "file": "cli.js",
+        "lineNumber": 12,
+        "classification": "5"
+      }
+    ]
+  },
+  "webpagetest": {
+    "repo": {
+      "gitCommit": "ba3ce0434e54bbfe457edf595573465775ae1c17",
+      "gitURL": "https://github.com/marcelduran/webpagetest-api"
+    },
+    "patches": [
+      {
+        "file": "bin/webpagetest",
+        "lineNumber": 253,
+        "classification": "4"
+      },
+      {
+        "file": "bin/webpagetest",
+        "lineNumber": 253,
+        "classification": "5"
+      },
+      {
+        "file": "bin/webpagetest",
+        "lineNumber": 299,
+        "classification": "4"
+      },
+      {
+        "file": "bin/webpagetest",
+        "lineNumber": 299,
+        "classification": "5"
+      }
+    ]
+  },
+  "watson-visual-recognition-utils": {
+    "repo": {
+      "gitCommit": "62c459d7b536347c4cf60f0213f00ae7fb3cc494",
+      "gitURL": "https://github.com/IBM-Bluemix/watson-visual-recognition-cli"
+    },
+    "patches": [
+      {
+        "file": "lib/index.js",
+        "lineNumber": 122,
+        "classification": "4"
+      },
+      {
+        "file": "lib/index.js",
+        "lineNumber": 122,
+        "classification": "5"
+      }
+    ]
+  },
+  "googleit": {
+    "repo": {
+      "gitCommit": "2eb9ae7fd793d205d23eec2d26fad8aaedf6b55a",
+      "gitURL": "https://github.com/PeterTeng/googleit"
+    },
+    "patches": [
+      {
+        "file": "index.js",
+        "lineNumber": 74,
+        "classification": "4"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 74,
+        "classification": "5"
+      },
+      {
+        "file": "index.js",
+        "lineNumber": 63,
+        "classification": "2"
+      }
+    ]
+  },
+  "next-version": {
+    "repo": {
+      "gitCommit": "7867e691063408a9bc49afd683c289e1a565a4b6",
+      "gitURL": "https://github.com/Sjeiti/next-version"
+    },
+    "patches": [
+      {
+        "file": "bin.js",
+        "lineNumber": 9,
+        "classification": "4"
+      },
+      {
+        "file": "bin.js",
+        "lineNumber": 9,
+        "classification": "5"
+      }
+    ]
+  },
+  "uglify-js": {
+    "repo": {
+      "gitCommit": "fe19ab7c57de1f3ba717ecd531e0e3f34c591a01",
+      "gitURL": "https://github.com/mishoo/UglifyJS2"
+    },
+    "patches": [
+      {
+        "file": "bin/uglifyjs",
+        "lineNumber": 56,
+        "classification": "4"
+      },
+      {
+        "file": "bin/uglifyjs",
+        "lineNumber": 56,
+        "classification": "5"
+      }
+    ]
+  }
+}

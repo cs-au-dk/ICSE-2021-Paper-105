@@ -1,0 +1,7 @@
+{
+  "11": {
+    "questionText": "Should we patch the breaking change: .done causes an irrecoverable fatal error in Node.js environments now. See #471 for rationale.",
+    "answer": "No",
+    "patternId": "11"
+  }
+}

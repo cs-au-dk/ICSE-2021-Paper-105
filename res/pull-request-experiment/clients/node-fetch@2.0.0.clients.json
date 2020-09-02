@@ -1,0 +1,74 @@
+[
+  {
+    "name": "depkeeper",
+    "repo": {
+      "gitURL": "https://github.com/wix/depkeeper",
+      "gitCommit": "d984bd7f27c5a6a2eab5898d5a7153d594a55292"
+    }
+  },
+  {
+    "name": "homebridge-chamberlain",
+    "repo": {
+      "gitURL": "https://github.com/iRayanKhan/homebridge-chamberlain",
+      "gitCommit": "09a9712c7bcac68a2eb3a1db17426bc40f4055a8"
+    }
+  },
+  {
+    "name": "bynder-js-sdk",
+    "repo": {
+      "gitURL": "https://github.com/Bynder/bynder-js-sdk",
+      "gitCommit": "9ac5c91665970ceabde04a93300cfc465832ec43"
+    }
+  },
+  {
+    "name": "lokka-transport-http",
+    "excludedFolders": ["dist"],
+    "repo": {
+      "gitURL": "https://github.com/vurtnec/lokka-transport-http",
+      "gitCommit": "1c3aaee579a826876af59344f211e7bb96507129"
+    }
+  },
+  {
+    "name": "cloud-random-user",
+    "repo": {
+      "gitURL": "https://github.com/Slashgear/cloud-random-user",
+      "gitCommit": "2d1ee602367eef0277c5bfb7285d435f388edf27"
+    }
+  },
+  {
+    "name": "homebridge-myq2",
+    "repo": {
+      "gitURL": "https://github.com/hjdhjd/homebridge-myq2",
+      "gitCommit": "9664bcf43dbd3bca0a29b62ceb0957a8e1ce9df7"
+    }
+  },
+  {
+    "name": "axsemantics",
+    "excludedFolders": ["dist"],
+    "repo": {
+      "gitURL": "https://github.com/axsemantics/axsemantics-js",
+      "gitCommit": "79edfe8745cd28dfed2e3be24d1ea777d9ca2803"
+    }
+  },
+  {
+    "name": "multiprocess-store",
+    "repo": {
+      "gitURL": "https://github.com/fantasyui-com/multiprocess-store",
+      "gitCommit": "b30166c303d7392dc6e51e038223853547f97e37"
+    }
+  },
+  {
+    "name": "micropub-express",
+    "repo": {
+      "gitURL": "https://github.com/voxpelli/node-micropub-express",
+      "gitCommit": "f24bfdba43e94af9993cbec1251c94b1d929e2c7"
+    }
+  },
+  {
+    "name": "node-alarm-dot-com",
+    "repo": {
+      "gitURL": "https://github.com/mkormendy/node-alarm-dot-com",
+      "gitCommit": "45ee5a2ef33f2d9d8cf152dca14f2977eedd2cd2"
+    }
+  }
+]
