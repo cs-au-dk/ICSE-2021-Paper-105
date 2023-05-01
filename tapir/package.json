@@ -19,7 +19,7 @@
     "data-to-latex": "^0.4.3",
     "fs-extra": "^8.1.0",
     "lodash": "4.17.15",
-    "recast": "^0.18.5",
+    "recast": "^0.21.2",
     "rimraf": "^3.0.0",
     "table": "^5.4.6",
     "winston": "^3.2.1"
