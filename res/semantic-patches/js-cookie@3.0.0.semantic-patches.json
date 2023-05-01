@@ -1,0 +1,289 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "write <js-cookie>.defaults",
+      "suggestedFixDescription": "To declare default properties for each cookie you now have to create your own api instance. \nBy this we simply mean that instead of using Cookie.set()/get() you would use your own cookie api object, for which these default properties were already defined.\nYou can define this api instance of Cookie with default properties by using `Cookies.withAttributes()`:\n  const api = Cookies.withAttributes({\n    // default properties, for instance -\n    // secure: true\n  })\nThe big complication this brings is that each place in your code where you are using the default properties, you will now have to use this new api instance instead of the default Cookie object.\nFor another example of this, see the official changelog: https://github.com/js-cookie/js-cookie/releases/tag/v3.0.0",
+      "unknownAccessPathQuestion": "Is this changing the object of the js-cookie.defaults property?"
+    },
+    "semanticPatchId": "2136",
+    "breakingChangeId": "784",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "write <js-cookie>.defaults",
+      "suggestedFixDescription": "To declare default properties for each cookie you now have to create your own api instance. \nBy this we simply mean that instead of using Cookie.set()/get() you would use your own cookie api object, for which these default properties were already defined.\nYou can define this api instance of Cookie with default properties by using `Cookies.withAttributes()`:\n  const api = Cookies.withAttributes({\n    // default properties, for instance -\n    // secure: true\n  })\nThe big complication this brings is that each place in your code where you are using the default properties, you will now have to use this new api instance instead of the default Cookie object.\nFor another example of this, see the official changelog: https://github.com/js-cookie/js-cookie/releases/tag/v3.0.0",
+      "unknownAccessPathQuestion": "Is this writing to the js-cookie.defaults object?"
+    },
+    "semanticPatchId": "2137",
+    "breakingChangeId": "784",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <js-cookie>.defaults",
+      "suggestedFixDescription": "To declare default properties for each cookie you now have to create your own api instance. \nBy this we simply mean that instead of using Cookie.set()/get() you would use your own cookie api object, for which these default properties were already defined.\nYou can define this api instance of Cookie with default properties by using `Cookies.withAttributes()`:\n  const api = Cookies.withAttributes({\n    // default properties, for instance -\n    // secure: true\n  })\nThe big complication this brings is that each place in your code where you are using the default properties, you will now have to use this new api instance instead of the default Cookie object.\nFor another example of this, see the official changelog: https://github.com/js-cookie/js-cookie/releases/tag/v3.0.0",
+      "unknownAccessPathQuestion": "Is this reading the js-cookie.defaults object?"
+    },
+    "semanticPatchId": "2138",
+    "breakingChangeId": "784",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2138",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-14T07:00:16.000Z",
+      "detectionPattern": "read <js-cookie>.defaults",
+      "suggestedFixDescription": "To declare default properties for each cookie you now have to create your own api instance. \nBy this we simply mean that instead of using Cookie.set()/get() you would use your own cookie api object, for which these default properties were already defined.\nYou can define this api instance of Cookie with default properties by using `Cookies.withAttributes()`:\n  const api = Cookies.withAttributes({\n    // default properties, for instance -\n    // secure: true\n  })\nThe big complication this brings is that each place in your code where you are using the default properties, you will now have to use this new api instance instead of the default Cookie object.\nFor another example of this, see the official changelog: https://github.com/js-cookie/js-cookie/releases/tag/v3.0.0",
+      "unknownAccessPathQuestion": "Is this reading the js-cookie.defaults object?"
+    },
+    "semanticPatchId": "2138",
+    "breakingChangeId": "784",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2136",
+      "comment": "disabled. The matches are covered by the read pattern",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-11-14T06:58:12.000Z",
+      "detectionPattern": "write <js-cookie>.defaults.{expires,path,domain,secure}",
+      "suggestedFixDescription": "To declare default properties for each cookie you now have to create your own api instance. \nBy this we simply mean that instead of using Cookie.set()/get() you would use your own cookie api object, for which these default properties were already defined.\nYou can define this api instance of Cookie with default properties by using `Cookies.withAttributes()`:\n  const api = Cookies.withAttributes({\n    // default properties, for instance -\n    // secure: true\n  })\nThe big complication this brings is that each place in your code where you are using the default properties, you will now have to use this new api instance instead of the default Cookie object.\nFor another example of this, see the official changelog: https://github.com/js-cookie/js-cookie/releases/tag/v3.0.0",
+      "unknownAccessPathQuestion": "Is this changing the object of the js-cookie.defaults property?"
+    },
+    "semanticPatchId": "2136",
+    "breakingChangeId": "784",
+    "enabled": false,
+    "comment": "disabled. The matches are covered by the read pattern"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <js-cookie>.withConverter",
+      "suggestedFixDescription": "providing custom converters for cookies has had two main changes.\n(1) Instead of parsing a function to `withConverter` you would now parse an object, with the type(s) (read/write) of converter(s) as keys. \nFor an example see: https://github.com/js-cookie/js-cookie/tree/v2.2.1#write\n(2) If you are currently returning falsy values as a trick to fall back to the standard converter, you will now have to use this converter directly in your custom converter.\nFor instance instead of:\n```\nvar cookies = Cookies.withConverter(function (value, name) {\n    if ( name === 'escaped' ) {\n        return unescape(value);\n    }\n});\n\t```\nyou would now use\n```\nvar cookies = Cookies.withConverter(function (value, name) {\n    if ( name === 'escaped' ) {\n        return unescape(value);\n    }\n    return Cookies.converter.read(value)\n});\n\t```\nFor an example see: https://github.com/js-cookie/js-cookie#read",
+      "unknownAccessPathQuestion": "Is this a call of the withConverter method from js-cookie?"
+    },
+    "semanticPatchId": "2141",
+    "breakingChangeId": "790",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2141",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-17T05:36:09.000Z",
+      "detectionPattern": "call <js-cookie>.withConverter",
+      "suggestedFixDescription": "providing custom converters for cookies has had two main changes.\n(1) Instead of parsing a function to `withConverter` you would now parse an object, with the type(s) (read/write) of converter(s) as keys. \nFor an example see: https://github.com/js-cookie/js-cookie/tree/v2.2.1#write\n(2) If you are currently returning falsy values as a trick to fall back to the standard converter, you will now have to use this converter directly in your custom converter.\nFor instance instead of:\n```\nvar cookies = Cookies.withConverter(function (value, name) {\n    if ( name === 'escaped' ) {\n        return unescape(value);\n    }\n});\n```\nyou would now use:\n```\nvar cookies = Cookies.withConverter(function (value, name) {\n    if ( name === 'escaped' ) {\n        return unescape(value);\n    }\n    return Cookies.converter.read(value)\n});\n```\nFor an example see: https://github.com/js-cookie/js-cookie#read",
+      "unknownAccessPathQuestion": "Is this a call of the withConverter method from js-cookie?"
+    },
+    "semanticPatchId": "2141",
+    "breakingChangeId": "790",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2141",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-11-17T05:36:27.000Z",
+      "detectionPattern": "call <js-cookie>.withConverter",
+      "suggestedFixDescription": "providing custom converters for cookies has had two main changes.\n(1) Instead of parsing a function to `withConverter` you would now parse an object, with the type(s) (read/write) of converter(s) as keys. \nFor an example see: https://github.com/js-cookie/js-cookie/tree/v2.2.1#write\n(2) If you are currently returning falsy values as a trick to fall back to the standard converter, you will now have to use this converter directly in your custom converter.\nFor instance instead of:\n```\nvar cookies = Cookies.withConverter(function (value, name) {\n    if ( name === 'escaped' ) {\n        return unescape(value);\n    }\n});\n```\nyou would now use:\n```\nvar cookies = Cookies.withConverter({\n  read: function (value, name) {\n    if (name === 'escaped') {\n      return unescape(value)\n    }\n    // Fall back to default for all other cookies\n    return Cookies.converter.read(value, name)\n  }\n});\n```\nFor an example see: https://github.com/js-cookie/js-cookie#read",
+      "unknownAccessPathQuestion": "Is this a call of the withConverter method from js-cookie?"
+    },
+    "semanticPatchId": "2141",
+    "breakingChangeId": "790",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee($1, JSON.stringify($2), $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <js-cookie>.set",
+      "unknownAccessPathQuestion": "Is this a call of the Cookies.set() method from js-cookie?"
+    },
+    "semanticPatchId": "2142",
+    "breakingChangeId": "792",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "JSON.parse($callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call <js-cookie>.get",
+      "unknownAccessPathQuestion": "Is this a call of the Cookies.get method from js-cookie?"
+    },
+    "semanticPatchId": "2143",
+    "breakingChangeId": "792",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<js-cookie>.get($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <js-cookie>.getJSON",
+      "unknownAccessPathQuestion": "Is this a call of the Cookies.getJSON method from js-cookie?"
+    },
+    "semanticPatchId": "2144",
+    "breakingChangeId": "792",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <js-cookie>.get",
+      "suggestedFixDescription": "This is only breaking if $1 is falsy. \nPreviously calling `Cookies.get(value)` with a falsy `value` would have returned all cookies.\nThe new behavior is to return null. \nA general fix for this is to use the `?` operator, to return all the cookies if the `value` is falsy using `Cookies.get()` with no parameters:\n```\n(value ? Cookies.get(value) : Cookies.get())\n```",
+      "unknownAccessPathQuestion": "Is this a call of Cookies.get from js-cookie?"
+    },
+    "semanticPatchId": "2145",
+    "breakingChangeId": "794",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2145",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-17T06:42:53.000Z",
+      "detectionPattern": "call <js-cookie>.get",
+      "suggestedFixDescription": "This is only breaking if the first argument is falsy. \nPreviously calling `Cookies.get(value)` with a falsy `value` would have returned all cookies.\nThe new behavior is to return null. \nA general fix for this is to use the `?` operator, to return all the cookies if the `value` is falsy using `Cookies.get()` with no parameters:\n```\n(value ? Cookies.get(value) : Cookies.get())\n```",
+      "unknownAccessPathQuestion": "Is this a call of Cookies.get from js-cookie?"
+    },
+    "semanticPatchId": "2145",
+    "breakingChangeId": "794",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2142",
+      "comment": "Added argument filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-17T06:02:51.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, JSON.stringify($2), $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <js-cookie>.set 1:{object,array}",
+      "unknownAccessPathQuestion": "Is this a call of the Cookies.set() method from js-cookie?"
+    },
+    "semanticPatchId": "2142",
+    "breakingChangeId": "792",
+    "enabled": true,
+    "comment": "Added argument filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2143",
+      "comment": "Disabled, notes: https://docs.google.com/document/d/1zNXgvdirOC-4sT29w5w36Oly2bHqa0rcb4rdog7RDmI/edit#bookmark=id.cxq2tlr74xbh",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-11-17T06:04:36.000Z",
+      "primaryTemplate": {
+        "pattern": "JSON.parse($callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call <js-cookie>.get",
+      "unknownAccessPathQuestion": "Is this a call of the Cookies.get method from js-cookie?"
+    },
+    "semanticPatchId": "2143",
+    "breakingChangeId": "792",
+    "enabled": false,
+    "comment": "Disabled, notes: https://docs.google.com/document/d/1zNXgvdirOC-4sT29w5w36Oly2bHqa0rcb4rdog7RDmI/edit#bookmark=id.cxq2tlr74xbh"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2138",
+      "comment": "minors in sfd",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-14T07:02:59.000Z",
+      "detectionPattern": "read <js-cookie>.defaults",
+      "suggestedFixDescription": "To declare default properties for each cookie you now have to create your own api instance. \nBy this, we simply mean that instead of using Cookie.set()/get() you would use your own cookie api object, for which these default properties are already defined.\nYou can define this api instance of Cookie with default properties by using `Cookies.withAttributes()`:\n  const api = Cookies.withAttributes({\n    // default properties, for instance -\n    // secure: true\n  })\nThe big complication this brings is that each place in your code where you are using the default properties, you will now have to use this new api instance instead of the default Cookie object.\nFor another example of this, see the official changelog: https://github.com/js-cookie/js-cookie/releases/tag/v3.0.0",
+      "unknownAccessPathQuestion": "Is this reading the js-cookie.defaults object?"
+    },
+    "semanticPatchId": "2138",
+    "breakingChangeId": "784",
+    "enabled": true,
+    "comment": "minors in sfd"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2137",
+      "comment": "minors in sfd",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-14T06:59:28.000Z",
+      "detectionPattern": "write <js-cookie>.defaults",
+      "suggestedFixDescription": "To declare default properties for each cookie you now have to create your own api instance. \nBy this, we simply mean that instead of using Cookie.set()/get() you would use your own cookie api object, for which these default properties are already defined.\nYou can define this api instance of Cookie with default properties by using `Cookies.withAttributes()`:\n  const api = Cookies.withAttributes({\n    // default properties, for instance -\n    // secure: true\n  })\nThe big complication this brings is that each place in your code where you are using the default properties, you will now have to use this new api instance instead of the default Cookie object.\nFor another example of this, see the official changelog: https://github.com/js-cookie/js-cookie/releases/tag/v3.0.0",
+      "unknownAccessPathQuestion": "Is this writing to the js-cookie.defaults object?"
+    },
+    "semanticPatchId": "2137",
+    "breakingChangeId": "784",
+    "enabled": true,
+    "comment": "minors in sfd"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2141",
+      "comment": "minors in sfd",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-17T05:40:16.000Z",
+      "detectionPattern": "call <js-cookie>.withConverter",
+      "suggestedFixDescription": "providing custom converters for cookies has changed in 2 ways.\n(1) Instead of passing a function to `withConverter` you would now pass an object with the type(s) (read/write) of converter(s) as keys. \nFor an example see: https://github.com/js-cookie/js-cookie/tree/v2.2.1#write\n(2) If you are currently returning falsy values as a trick to fall back to the standard converter, you will now have to use this converter directly in your custom converter.\nFor instance instead of:\n```\nvar cookies = Cookies.withConverter(function (value, name) {\n    if ( name === 'escaped' ) {\n        return unescape(value);\n    }\n});\n```\nyou should now use:\n```\nvar cookies = Cookies.withConverter({\n  read: function (value, name) {\n    if (name === 'escaped') {\n      return unescape(value)\n    }\n    // Fall back to default for all other cookies\n    return Cookies.converter.read(value, name)\n  }\n});\n```\nFor an example see: https://github.com/js-cookie/js-cookie#read",
+      "unknownAccessPathQuestion": "Is this a call of the withConverter method from js-cookie?"
+    },
+    "semanticPatchId": "2141",
+    "breakingChangeId": "790",
+    "enabled": true,
+    "comment": "minors in sfd"
+  }
+]

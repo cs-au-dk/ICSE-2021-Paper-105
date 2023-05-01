@@ -1,0 +1,123 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "($1 === 'Server Error' ? 500 : $callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call <http-status-codes>.getStatusCode [1,1] 0:String",
+      "unknownAccessPathQuestion": "Is this a call of the http-status-codes.getStatusCode method?"
+    },
+    "semanticPatchId": "2132",
+    "breakingChangeId": "781",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2132",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-14T05:33:28.000Z",
+      "primaryTemplate": {
+        "pattern": "($1 === 'Server Error' ? 500 : $callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call <http-status-codes>.getStatusCode [1,1] 0:string",
+      "unknownAccessPathQuestion": "Is this a call of the http-status-codes.getStatusCode method?"
+    },
+    "semanticPatchId": "2132",
+    "breakingChangeId": "781",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "($1 === 500 ? 'Server Error' : $callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call <http-status-codes>.getStatusText [1,1] 0:number",
+      "unknownAccessPathQuestion": "Is this a call of the http-status-codes.getStatusText method?"
+    },
+    "semanticPatchId": "2133",
+    "breakingChangeId": "781",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.StatusCodes.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "readO <http-status-codes>.*",
+      "unknownAccessPathQuestion": "Is this reading a status code property on the http-status-codes object?"
+    },
+    "semanticPatchId": "2134",
+    "breakingChangeId": "782",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2134",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-14T05:44:45.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.StatusCodes.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "readO <http-status-codes>.OK",
+      "unknownAccessPathQuestion": "Is this reading a status code property on the http-status-codes object?"
+    },
+    "semanticPatchId": "2134",
+    "breakingChangeId": "782",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2134",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-11-14T05:46:08.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.StatusCodes.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "readO <http-status-codes>.{ACCEPTED,BAD_GATEWAY,BAD_REQUEST,CONFLICT,CONTINUE,CREATED,EXPECTATION_FAILED,FAILED_DEPENDENCY,FORBIDDEN,GATEWAY_TIMEOUT,GONE,HTTP_VERSION_NOT_SUPPORTED,IM_A_TEAPOT,INSUFFICIENT_SPACE_ON_RESOURCEINSUFFICIENT_STORAGE,INTERNAL_SERVER_ERROR,LENGTH_REQUIRED,LOCKED,METHOD_FAILURE,METHOD_NOT_ALLOWED,MOVED_PERMANENTLY,MOVED_TEMPORARILY,MULTI_STATUS,MULTIPLE_CHOICES,NETWORK_AUTHENTICATION_REQUIRED,NO_CONTENT,NON_AUTHORITATIVE_INFORMATION,NOT_ACCEPTABLE,NOT_FOUND,NOT_IMPLEMENTED,NOT_MIDIFIED,OK,PARTIAL_CONTENT,PAYMENT_REQUIRED,PERMANENT_REDIRECT,PRECONDITION_FAILED,PRECONDITION_REQUIRED,PROCESSING,PROXY_AUTHENTICATION_REQUIRED,REQUEST_HEADER_FIELDS_TOO_LARGE,REQUEST_TIMEOUT,REQUEST_TOO_LONG,REQUEST_URI_TOO_LONG,REQUESTED_RANGE_NOT_SATISFIABLE,RESET_CONTENT,SEE_OTHER,SERVICE_UNAVAILABLE,SWITCHING_PROTOCOLS,TEMPORARY_REDIRECT,TOO_MANY_REQUESTS,UNAUTHORIZED,UNPROCESSABLE_ENTITY,UNSUPPORTED_MEDIA_TYPE,USE_PROXY}",
+      "unknownAccessPathQuestion": "Is this reading a status code property on the http-status-codes object?"
+    },
+    "semanticPatchId": "2134",
+    "breakingChangeId": "782",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.getReasonPhrase($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <http-status-codes>.getStatusText [1,1] 0:number",
+      "unknownAccessPathQuestion": "is this a call of the http-status-codes.getStatusText method?"
+    },
+    "semanticPatchId": "2135",
+    "breakingChangeId": "783",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

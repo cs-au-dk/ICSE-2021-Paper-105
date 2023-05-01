@@ -1,0 +1,24 @@
+[
+  {
+    "id": "426",
+    "packageVersion": "1.0.0",
+    "packageName": "html-react-parser",
+    "description": "package: upgrade dependency html-dom-parser to 0.5.0. TypeScript projects will need to update the types in v1.0.0.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "448",
+    "packageVersion": "1.0.0",
+    "packageName": "html-react-parser",
+    "description": "The standard way of using the replace option may not work",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

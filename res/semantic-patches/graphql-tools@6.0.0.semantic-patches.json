@@ -1,0 +1,831 @@
+[
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1345",
+      "comment": "add support for TransformObjectFields",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-25T12:07:44.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee((...args) => {\n  const tmp = $1(args);\n  return typeof tmp === 'object' ? [tmp.name, tmp.field] : tmp;\n}, $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.{TransformRootFields,TransformObjectFields}"
+    },
+    "semanticPatchId": "1345",
+    "breakingChangeId": "207",
+    "enabled": true,
+    "comment": "add support for TransformObjectFields"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1347",
+      "comment": "Allow unknown paths",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-01-25T13:27:12.000Z",
+      "detectionPattern": "write <Object>?.createProxyingResolver"
+    },
+    "semanticPatchId": "1347",
+    "breakingChangeId": "209",
+    "enabled": true,
+    "comment": "Allow unknown paths"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1347",
+      "comment": "Add question for unknown access path",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-01-27T08:57:28.000Z",
+      "detectionPattern": "write <Object>?.createProxyingResolver",
+      "unknownAccessPathQuestion": "Is the receiver a graphql-tools subschema config object?"
+    },
+    "semanticPatchId": "1347",
+    "breakingChangeId": "209",
+    "enabled": true,
+    "comment": "Add question for unknown access path"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "read <graphql-tools>**.mergeInfo"
+    },
+    "semanticPatchId": "1348",
+    "breakingChangeId": "210",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <graphql-tools>.delegateToSchema"
+    },
+    "semanticPatchId": "1349",
+    "breakingChangeId": "211",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1348",
+      "comment": "add ? to detection pattern",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-27T09:12:38.000Z",
+      "detectionPattern": "read <graphql-tools>?**.mergeInfo"
+    },
+    "semanticPatchId": "1348",
+    "breakingChangeId": "210",
+    "enabled": true,
+    "comment": "add ? to detection pattern"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1348",
+      "comment": "add specific properties",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-01-27T09:17:19.000Z",
+      "detectionPattern": "read <graphql-tools>?**.mergeInfo.{mergedTypes,delegate,fragments,replacementSelectionSets,replacementFragments}"
+    },
+    "semanticPatchId": "1348",
+    "breakingChangeId": "210",
+    "enabled": true,
+    "comment": "add specific properties"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1349",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-27T09:16:32.000Z",
+      "detectionPattern": "call <graphql-tools>?**.info.delegateToSchema"
+    },
+    "semanticPatchId": "1349",
+    "breakingChangeId": "211",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1349",
+      "comment": "add template ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-01-27T09:53:32.000Z",
+      "primaryTemplate": {
+        "pattern": "<@graphql-tools/delegate@6.0.0>.delegateToSchema($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>?**.mergeInfo.delegateToSchema"
+    },
+    "semanticPatchId": "1349",
+    "breakingChangeId": "211",
+    "enabled": true,
+    "comment": "add template "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "read <graphql-tools>.buildSchema"
+    },
+    "semanticPatchId": "1350",
+    "breakingChangeId": "212",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1350",
+      "comment": "add more polyfills",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-27T10:13:22.000Z",
+      "detectionPattern": "read <graphql-tools>.{buildSchema,extendSchema,isSpecifiedScalarType,toConfig,schemaToConfig,typeToConfig,objectTypeToConfig,interfaceTypeToConfig,unionTypeToConfig,enumTypeToConfig,scalarTypeToConfig,inputObjectTypeToConfig,directiveToConfig,inputFieldMapToConfig,inputFieldToConfig,fieldMapToConfig,fieldToConfig,argumentMapToConfig,argumentToConfig}"
+    },
+    "semanticPatchId": "1350",
+    "breakingChangeId": "212",
+    "enabled": true,
+    "comment": "add more polyfills"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "read <graphql-tools>**.{fieldToFieldConfig,inputFieldToInputFieldConfig}"
+    },
+    "semanticPatchId": "1351",
+    "breakingChangeId": "213",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1351",
+      "comment": "add ?",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-27T10:20:36.000Z",
+      "detectionPattern": "read <graphql-tools>?**.{fieldToFieldConfig,inputFieldToInputFieldConfig}"
+    },
+    "semanticPatchId": "1351",
+    "breakingChangeId": "213",
+    "enabled": true,
+    "comment": "add ?"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1349",
+      "comment": "add unknown access path question ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-01-27T10:04:46.000Z",
+      "primaryTemplate": {
+        "pattern": "<@graphql-tools/delegate@6.0.0>.delegateToSchema($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>?**.mergeInfo.delegateToSchema",
+      "unknownAccessPathQuestion": "Is mergeInfo read on the info object passed to graphql resolver?"
+    },
+    "semanticPatchId": "1349",
+    "breakingChangeId": "211",
+    "enabled": true,
+    "comment": "add unknown access path question "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1342",
+      "comment": "import linkToExecutor from @graphql-tools/links",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-01-25T08:21:56.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => {\n  const args = $args;\n  if (args.link) {\n    args.link = <@graphql-tools/links@6.0.0>.linkToExecutor(args.link);\n  }\n  return <@graphql-tools/wrap@6.0.0>.makeRemoteExecutableSchema(args);\n})()",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.makeRemoteExecutableSchema"
+    },
+    "semanticPatchId": "1342",
+    "breakingChangeId": "205",
+    "enabled": true,
+    "comment": "import linkToExecutor from @graphql-tools/links"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1342",
+      "comment": "$args to $1",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-01-31T06:42:55.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => {\n  const args = $1;\n  if (args.link) {\n    args.link = <@graphql-tools/links@6.0.0>.linkToExecutor(args.link);\n  }\n  return <@graphql-tools/wrap@6.0.0>.makeRemoteExecutableSchema(args);\n})()",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.makeRemoteExecutableSchema"
+    },
+    "semanticPatchId": "1342",
+    "breakingChangeId": "205",
+    "enabled": true,
+    "comment": "$args to $1"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init detection pattern",
+      "detectionPattern": "call <graphql-tools>.{FilterRootFields,FilterObjectFields}"
+    },
+    "semanticPatchId": "1343",
+    "breakingChangeId": "206",
+    "enabled": true,
+    "comment": "init detection pattern"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Renames",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addResolveFunctionsToSchema => addResolversToSchema, addSchemaLevelResolveFunctions => addSchemaLevelResolveFunctions, addMockFunctionsToSchema => addMocksToSchema]",
+        "replacements": []
+      },
+      "detectionPattern": "read <graphql-tools>.{addResolveFunctionsToSchema,addSchemaLevelResolveFunctions,addMockFunctionsToSchema}"
+    },
+    "semanticPatchId": "1338",
+    "breakingChangeId": "201",
+    "enabled": true,
+    "comment": "Renames"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1338",
+      "comment": "Renames ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-20T11:58:09.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addResolveFunctionsToSchema => addResolversToSchema, addSchemaLevelResolveFunctions => addSchemaLevelResolveFunctions, addMockFunctionsToSchema => addMocksToSchema]",
+        "replacements": []
+      },
+      "detectionPattern": "read <graphql-tools>.{addResolveFunctionsToSchema,addSchemaLevelResolveFunctions,addMockFunctionsToSchema}"
+    },
+    "semanticPatchId": "1338",
+    "breakingChangeId": "201",
+    "enabled": true,
+    "comment": "Renames "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1338",
+      "comment": "Fix rename to addSchemaLevelResolver",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-01-20T11:58:22.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addResolveFunctionsToSchema => addResolversToSchema, addSchemaLevelResolveFunctions => addSchemaLevelResolver, addMockFunctionsToSchema => addMocksToSchema]",
+        "replacements": []
+      },
+      "detectionPattern": "read <graphql-tools>.{addResolveFunctionsToSchema,addSchemaLevelResolveFunctions,addMockFunctionsToSchema}"
+    },
+    "semanticPatchId": "1338",
+    "breakingChangeId": "201",
+    "enabled": true,
+    "comment": "Fix rename to addSchemaLevelResolver"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1338",
+      "comment": "Move addResolveFunctionsToSchema rename to version 5 update ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-01-20T12:39:40.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addSchemaLevelResolveFunctions => addSchemaLevelResolver, addMockFunctionsToSchema => addMocksToSchema]",
+        "replacements": []
+      },
+      "detectionPattern": "read <graphql-tools>.{addSchemaLevelResolveFunctions,addMockFunctionsToSchema}"
+    },
+    "semanticPatchId": "1338",
+    "breakingChangeId": "201",
+    "enabled": true,
+    "comment": "Move addResolveFunctionsToSchema rename to version 5 update "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1338",
+      "comment": "Move addMockFunctionsToSchema rename to version 5 update ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-01-20T12:47:39.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addSchemaLevelResolveFunctions => addSchemaLevelResolver]",
+        "replacements": []
+      },
+      "detectionPattern": "read <graphql-tools>.{addSchemaLevelResolveFunctions,addMockFunctionsToSchema}"
+    },
+    "semanticPatchId": "1338",
+    "breakingChangeId": "201",
+    "enabled": true,
+    "comment": "Move addMockFunctionsToSchema rename to version 5 update "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1338",
+      "comment": "Move addMockFunctionsToSchema rename to version 5 update (fix)",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-01-21T06:06:14.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addSchemaLevelResolveFunctions => addSchemaLevelResolver]",
+        "replacements": []
+      },
+      "detectionPattern": "read <graphql-tools>.{addSchemaLevelResolveFunctions}"
+    },
+    "semanticPatchId": "1338",
+    "breakingChangeId": "201",
+    "enabled": true,
+    "comment": "Move addMockFunctionsToSchema rename to version 5 update (fix)"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <graphql-tools>.addResolversToSchema"
+    },
+    "semanticPatchId": "1340",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1340",
+      "comment": "add code template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-24T14:33:31.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => {\n  const tmp = $args;\n  tmp.schema = $callee(tmp);\n  return tmp.schema;\n})();",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.addResolversToSchema"
+    },
+    "semanticPatchId": "1340",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "add code template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1341",
+      "comment": "add code template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-24T15:31:28.000Z",
+      "primaryTemplate": {
+        "pattern": "$arg1 = $callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "add code template"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1341",
+      "comment": "import from graphql-tools/utils",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-01-24T15:34:27.000Z",
+      "primaryTemplate": {
+        "pattern": "$arg1 = <graphql-tools/utils>($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "import from graphql-tools/utils"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1341",
+      "comment": "import from graphql-tools/utils ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-01-24T15:36:20.000Z",
+      "primaryTemplate": {
+        "pattern": "$arg1 = <graphql-tools/utils>.attachDirectiveResolvers($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "import from graphql-tools/utils "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1341",
+      "comment": "import from graphql-tools/utils",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-01-24T15:36:56.000Z",
+      "primaryTemplate": {
+        "pattern": "$arg1 = <graphql-tools/utils@6.0.0>.attachDirectiveResolvers($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "import from graphql-tools/utils"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1341",
+      "comment": "import from graphql-tools/utils ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-01-24T15:39:56.000Z",
+      "primaryTemplate": {
+        "pattern": "$arg1 = <graphql-tools\\/utils@6.0.0>.attachDirectiveResolvers($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "import from graphql-tools/utils "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1341",
+      "comment": "import from graphql-tools/utils",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-01-24T15:40:33.000Z",
+      "primaryTemplate": {
+        "pattern": "$arg1 = <graphql-tools/utils@6.0.0>.attachDirectiveResolvers($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "import from graphql-tools/utils"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1341",
+      "comment": "import from graphql-tools/utils (fix import path)",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-01-24T15:40:56.000Z",
+      "primaryTemplate": {
+        "pattern": "$arg1 = <@graphql-tools/utils@6.0.0>.attachDirectiveResolvers($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "import from graphql-tools/utils (fix import path)"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1341",
+      "comment": "import from graphql-tools/utils (fix import path) ",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-01-24T18:28:18.000Z",
+      "primaryTemplate": {
+        "pattern": "$arg1 = <\\@graphql-tools/utils@6.0.0>.attachDirectiveResolvers($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "import from graphql-tools/utils (fix import path) "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init detection pattern",
+      "enabled": true,
+      "detectionPattern": "call <graphql-tools>.makeRemoteExecutableSchema"
+    },
+    "semanticPatchId": "1342",
+    "breakingChangeId": "205",
+    "enabled": true,
+    "comment": "init detection pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1342",
+      "comment": "add code template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-25T07:14:45.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => {\n  const args = $args;\n  args.link = <@graphql-tools/utils@6.0.0>.linkToExecutor(args.link);\n  return <@graphql-tools/wrap@6.0.0>.makeRemoteExecutableSchema(args);\n)()",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.makeRemoteExecutableSchema"
+    },
+    "semanticPatchId": "1342",
+    "breakingChangeId": "205",
+    "enabled": true,
+    "comment": "add code template"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1342",
+      "comment": "check on args.link",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-01-25T07:39:14.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => {\n  const args = $args;\n  if (args.link) {\n    args.link = <@graphql-tools/utils@6.0.0>.linkToExecutor(args.link);\n  }\n  return <@graphql-tools/wrap@6.0.0>.makeRemoteExecutableSchema(args);\n)()",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.makeRemoteExecutableSchema"
+    },
+    "semanticPatchId": "1342",
+    "breakingChangeId": "205",
+    "enabled": true,
+    "comment": "check on args.link"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1342",
+      "comment": "insert missing brace",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-01-25T07:43:34.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => {\n  const args = $args;\n  if (args.link) {\n    args.link = <@graphql-tools/utils@6.0.0>.linkToExecutor(args.link);\n  }\n  return <@graphql-tools/wrap@6.0.0>.makeRemoteExecutableSchema(args);\n})()",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.makeRemoteExecutableSchema"
+    },
+    "semanticPatchId": "1342",
+    "breakingChangeId": "205",
+    "enabled": true,
+    "comment": "insert missing brace"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1343",
+      "comment": "init template",
+      "version": 0,
+      "creationDate": "2022-01-25T08:42:05.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($arg1, $arg2, <@graphql-tools/utils>.fieldToFieldConfig($arg3))",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.{FilterRootFields,FilterObjectFields}"
+    },
+    "semanticPatchId": "1343",
+    "breakingChangeId": "206",
+    "enabled": true,
+    "comment": "init template"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1343",
+      "comment": "Remove template (we cannot currently patch this BC)",
+      "version": 1,
+      "creationDate": "2022-01-25T08:44:56.000Z",
+      "detectionPattern": "call <graphql-tools>.{TransformRootFields,FilterRootFields,RenameRootFields,TransformObjectFields,FilterObjectFields,RenameObjectFields}"
+    },
+    "semanticPatchId": "1343",
+    "breakingChangeId": "206",
+    "enabled": true,
+    "comment": "Remove template (we cannot currently patch this BC)"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1340",
+      "comment": "import from @graphql-tools/schema ",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-01-25T06:24:48.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => {\n  const tmp = $args;\n  tmp.schema = <@graphql-tools/schema>.addResolversToSchema(tmp);\n  return tmp.schema;\n})();",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.addResolversToSchema"
+    },
+    "semanticPatchId": "1340",
+    "breakingChangeId": "203",
+    "enabled": false,
+    "comment": "import from @graphql-tools/schema "
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1341",
+      "comment": "import from graphql-tools/utils (fix import path) ",
+      "enabled": false,
+      "version": 9,
+      "creationDate": "2022-01-24T18:28:53.000Z",
+      "primaryTemplate": {
+        "pattern": "$arg1 = <@graphql-tools/utils@6.0.0>.attachDirectiveResolvers($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.attachDirectiveResolvers"
+    },
+    "semanticPatchId": "1341",
+    "breakingChangeId": "203",
+    "enabled": false,
+    "comment": "import from graphql-tools/utils (fix import path) "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <graphql-tools>.{addResolversToSchema,attachDirectiveResolvers,addSchemaLevelResolver,addCatchUndefinedToSchema,addErrorLoggingToSchema,addMocksToSchema}"
+    },
+    "semanticPatchId": "1344",
+    "breakingChangeId": "203",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "$callee((...args) => {\n  const tmp = $1(args);\n  return typeof tmp === 'object' ? [tmp.name, tmp.field] : tmp;\n})",
+        "replacements": []
+      },
+      "detectionPattern": "call <graphql-tools>.TransformRootFields"
+    },
+    "semanticPatchId": "1345",
+    "breakingChangeId": "207",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init detection pattern",
+      "enabled": true,
+      "detectionPattern": "read <graphql-tools>.mergeSchemas"
+    },
+    "semanticPatchId": "1346",
+    "breakingChangeId": "208",
+    "enabled": true,
+    "comment": "init detection pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1346",
+      "comment": "add template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-01-25T12:48:27.000Z",
+      "primaryTemplate": {
+        "pattern": "<@graphql-tools/stitch@6.0.0>.stitchSchemas",
+        "replacements": []
+      },
+      "detectionPattern": "read <graphql-tools>.mergeSchemas"
+    },
+    "semanticPatchId": "1346",
+    "breakingChangeId": "208",
+    "enabled": true,
+    "comment": "add template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "write <graphql-tools>**?.CreateProxyingResolverFn"
+    },
+    "semanticPatchId": "1347",
+    "breakingChangeId": "209",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1347",
+      "comment": "init ",
+      "version": 0,
+      "creationDate": "2022-01-25T13:10:41.000Z",
+      "detectionPattern": "write <graphql-tools>?**.CreateProxyingResolverFn"
+    },
+    "semanticPatchId": "1347",
+    "breakingChangeId": "209",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1347",
+      "comment": "minor fix",
+      "version": 1,
+      "creationDate": "2022-01-25T13:19:37.000Z",
+      "detectionPattern": "write <graphql-tools>?**.createProxyingResolverFn"
+    },
+    "semanticPatchId": "1347",
+    "breakingChangeId": "209",
+    "enabled": true,
+    "comment": "minor fix"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1347",
+      "comment": "minor fix ",
+      "version": 2,
+      "creationDate": "2022-01-25T13:22:23.000Z",
+      "detectionPattern": "write <graphql-tools>?**.createProxyingResolver"
+    },
+    "semanticPatchId": "1347",
+    "breakingChangeId": "209",
+    "enabled": true,
+    "comment": "minor fix "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1347",
+      "comment": "use Object",
+      "version": 3,
+      "creationDate": "2022-01-25T13:25:12.000Z",
+      "detectionPattern": "write <Object>.createProxyingResolver"
+    },
+    "semanticPatchId": "1347",
+    "breakingChangeId": "209",
+    "enabled": true,
+    "comment": "use Object"
+  }
+]

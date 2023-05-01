@@ -1,0 +1,564 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.extensions.add",
+      "suggestedFixDescription": "This change will most likely not be breaking, since most extensions can handle being installed twice without causing harm. \nHowever, some extensions might break your application if installed more than once, and since installing an extension twice is useless we simply recommend in most cases no longer to use `extensions.add()` to install extensions.",
+      "unknownAccessPathQuestion": "Is this a call of the extensions.add method from the pixi.js package?"
+    },
+    "semanticPatchId": "2319",
+    "breakingChangeId": "857",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <pixi.js>.Loader.shared",
+      "suggestedFixDescription": "Instead of using the `Loader` class you can now use the global `Assets` object, which has an `Assets.load()` method for loading resources. \nSince the `Assets` object is a global singleton instance, you no longer need this constructor call.",
+      "unknownAccessPathQuestion": "Is this reading the shared/default Loader from the pixi.js?"
+    },
+    "semanticPatchId": "2321",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <pixi.js>.Loader().defaultQueryString",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you do unfortunately lose the `defaultQueryString` functionality. \nThis means that if you have a query string to attach to multiple resources you will have to append these to the url of the resources manually. \nFor good practice we do recommend you assign the query string to a variable `DEFAULT_QUERY_STRING`, and then append this variable to the url.",
+      "unknownAccessPathQuestion": "Is this either reading or writing to the defaultQueryString property of the Loader class from the pixi.js package?"
+    },
+    "semanticPatchId": "2322",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <pixi.js>.Loader().defaultQueryString",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you do unfortunately lose the `defaultQueryString` functionality. \nThis means that if you have a query string to attach to multiple resources you will have to append these to the url of the resources manually. \nFor good practice we do recommend you assign the query string to a variable `DEFAULT_QUERY_STRING`, and then append this variable to the url.",
+      "unknownAccessPathQuestion": "Is this reading the defaultQueryString property from the Loader class from the pixi.js package?"
+    },
+    "semanticPatchId": "2323",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "write <pixi.js>.Loader.shared.defaultQueryString",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you do unfortunately lose the `defaultQueryString` functionality. \nThis means that if you have a query string to attach to multiple resources you will have to append these to the url of the resources manually. \nFor good practice we do recommend you assign the query string to a variable `DEFAULT_QUERY_STRING`, and then append this variable to the url.",
+      "unknownAccessPathQuestion": "Is this writing to the defaultQueryString property of the shared Loader from the pixi.js package?"
+    },
+    "semanticPatchId": "2324",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <pixi.js>.Loader.shared.defaultQueryString",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you do unfortunately lose the `defaultQueryString` functionality. \nThis means that if you have a query string to attach to multiple resources you will have to append these to the url of the resources manually. \nFor good practice we do recommend you assign the query string to a variable `DEFAULT_QUERY_STRING`, and then append this variable to the url.",
+      "unknownAccessPathQuestion": "Is this reading the defaultQueryString property of the shared Loader from the pixi.js package?"
+    },
+    "semanticPatchId": "2325",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2319",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-12-17T09:47:39.000Z",
+      "detectionPattern": "call <pixi.js>.extensions.add",
+      "suggestedFixDescription": "This change will most likely not be breaking, since most extensions can handle being installed twice without causing harm. \nHowever, some extensions might break your application if installed more than once, and since installing an extension twice is useless we simply recommend in most cases no longer to use `extensions.add()` to install extensions.",
+      "unknownAccessPathQuestion": "Is this a call of the extensions.add method from the pixi.js package?"
+    },
+    "semanticPatchId": "2319",
+    "breakingChangeId": "857",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Loader()",
+      "suggestedFixDescription": "Instead of using the `Loader` class you can now use the global `Assets` object, which has an `Assets.load()` method for loading resources. \nSince the `Assets` object is a global singleton instance, you no longer need this constructor call.",
+      "unknownAccessPathQuestion": "Is this a call of the Loader constructor from the pixi.js package?"
+    },
+    "semanticPatchId": "2320",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Loader().add",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you do unfortunately lose the option to add resources to the loader query like previously.\nNow all of these resources are simply parsed directly to the `.load()` method of the `Assets` object. \nTherefore you can either delete this call completely and add the resource to the `.load()` method directly, \nor you can keep your own `queue/array`, appending the resources for each `.add()` call to this before parsing it to the `.load()` call.",
+      "unknownAccessPathQuestion": "Is this a call of the .add() method of the Loader class from the pixi.js package?"
+    },
+    "semanticPatchId": "2326",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Loader.shared.Loader()**.add",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you do unfortunately lose the option to add resources to the loader query like previously.\nNow all of these resources are simply parsed directly to the `.load()` method of the `Assets` object. \nTherefore you can either delete this call completely and add the resource to the `.load()` method directly, \nor you can keep your own `queue/array`, appending the resources for each `.add()` call to this before parsing it to the `.load()` call.",
+      "unknownAccessPathQuestion": "Is this a call of the .add() method from the shared loader from the pixi.js package?"
+    },
+    "semanticPatchId": "2327",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Loader()**.load",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you are also switching from using a callback to access the texture to now get promises resolving to these textures. \nThe argument to the `Assets.load()` method should be the resources you previously would add by using the `Loader.add()` method.\nThe returned value is a promise, which resolves to the texture of the resources parsed as the argument. \nFor instance would the call `await Assets.load('example.png');` return the texture of the “example.png” path.",
+      "unknownAccessPathQuestion": "Is this a call of the .load() method from the Loader class of the pixi.js package?"
+    },
+    "semanticPatchId": "2328",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Loader.shared**.load",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you are also switching from using a callback to access the texture to now get promises resolving to these textures. \nThe argument to the `Assets.load()` method should be the resources you previously would add by using the `Loader.add()` method.\nThe returned value is a promise, which resolves to the texture of the resources parsed as the argument. \nFor instance would the call `await Assets.load('example.png');` return the texture of the “example.png” path.",
+      "unknownAccessPathQuestion": "Is this a call of the load method from the shared Loader of the pixi.js package?"
+    },
+    "semanticPatchId": "2329",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Loader().reset",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you no longer need the `.reset()` call since the `Assets` object does not keep a “loading queue”.",
+      "unknownAccessPathQuestion": "Is this a call of the .reset() method from the Loader class from the pixi.js package?"
+    },
+    "semanticPatchId": "2330",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Loader.shared.reset",
+      "suggestedFixDescription": "When switching out the `Loader` class with the `Assets` object you no longer need the `.reset()` call since the `Assets` object does not keep a “loading queue”.",
+      "unknownAccessPathQuestion": "Is this a call of the .reset() method from the shared Loader from the pixi.js package?"
+    },
+    "semanticPatchId": "2331",
+    "breakingChangeId": "858",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Renderer().generateTexture",
+      "suggestedFixDescription": "This is only breaking if the displayObject “ $1 “ has some kind of transformation on it. \nCurrently if this is the case the transformation would be applied additionally to the texture, potentially making the texture no longer conform to the displayObject on which it was applied.\nThis change unfortunately doesn’t come with an easy fix for users who have been working around this old behavior.\nMeaning to fix this you might have to play around with the transformation of your different textures.\nIf you simply want the texture to match the displayObjects transformation you can just have no transformation on the texture itself and hereby have it use the transformation of the displayObject.",
+      "unknownAccessPathQuestion": "Is this a call of the generatetexture method from the renderer class from the pixi.js package?"
+    },
+    "semanticPatchId": "2332",
+    "breakingChangeId": "860",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2332",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-20T06:38:17.000Z",
+      "detectionPattern": "call <pixi.js>.Renderer().generateTexture",
+      "suggestedFixDescription": "This is only breaking if the displayObject “ $1 “ has some kind of transformation on it. \nCurrently if this is the case the transformation would be applied additionally to the texture, potentially making the texture no longer conform to the displayObject on which it was applied.\nThis change unfortunately doesn’t come with an easy fix for users who have been working around this old behavior.\nMeaning to fix this you might have to play around with the transformation of your different textures.\nIf you simply want the texture to match the displayObjects transformation you can just have no transformation on the texture itself and hereby have it use the transformation of the displayObject.",
+      "unknownAccessPathQuestion": "Is this a call of the generatetexture method from the renderer class from the pixi.js package?"
+    },
+    "semanticPatchId": "2332",
+    "breakingChangeId": "860",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.extensions.add ",
+      "suggestedFixDescription": "This is only breaking if this call adds a custom Batch renderer to pixi. \nYou can keep this call, but you will have to uninstall the default `BatchRenderer` which from version 7 is installed automatically. \nDo this using another call:  `pixi.extention.remove(pixi.BatchRenderer)`",
+      "unknownAccessPathQuestion": "Is this a call of the extensions.add() method from the pixi package?"
+    },
+    "semanticPatchId": "2333",
+    "breakingChangeId": "861",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Renderer.registerPlugin",
+      "suggestedFixDescription": "The Renderer.registerPlugin() method has been removed in v. 7 after it has been deprecated since v. 6.5.\nInstead use the `extensions.add` method.\nfurthermore, if this call registers a custom Batch renderer to pixi, you will have to uninstall the default `BatchRenderer` which from version 7 is installed automatically. \nDo this using another call:  `pixi.extention.remove(pixi.BatchRenderer)`",
+      "unknownAccessPathQuestion": "Is this a call of the registerPlugin method from the renderer class from the pixi.js package?"
+    },
+    "semanticPatchId": "2334",
+    "breakingChangeId": "862",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base:base.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <pixi.js>**().renderer.plugins.{prepare,extract} base:base:{CanvasRenderer,Renderer}",
+      "unknownAccessPathQuestion": "Is this reading either the prepare or extract property on the plugin of a Renderer class from the pixi package?"
+    },
+    "semanticPatchId": "2335",
+    "breakingChangeId": "863",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2335",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-22T08:38:33.000Z",
+      "primaryTemplate": {
+        "pattern": "$base:base.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <pixi.js>**().renderer.plugins.{prepare,extract} base:base:{CanvasRenderer,Renderer}",
+      "unknownAccessPathQuestion": "Is this reading either the prepare or extract property on the plugin of a Renderer class from the pixi package?"
+    },
+    "semanticPatchId": "2335",
+    "breakingChangeId": "863",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "write <pixi.js>.{Text,Graphics}().{nextRoundedRectBehavior,nextLineHeightBehavior}",
+      "suggestedFixDescription": "This change sets the default value of the $prop flag to true. It also removes this flag, hence setting this property is useless and you should remove this.",
+      "unknownAccessPathQuestion": "Is this writing to either the nextRoundedRectBehavior property of the Graphics class of the nextLineHeightBehavior property of the Text class?"
+    },
+    "semanticPatchId": "2336",
+    "breakingChangeId": "864",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2336",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-22T10:19:17.000Z",
+      "detectionPattern": "write <pixi.js>.{Text,Graphics}.{nextRoundedRectBehavior,nextLineHeightBehavior}",
+      "suggestedFixDescription": "This change sets the default value of the $prop flag to true. It also removes this flag, hence setting this property is useless and you should remove this.",
+      "unknownAccessPathQuestion": "Is this writing to either the nextRoundedRectBehavior property of the Graphics class of the nextLineHeightBehavior property of the Text class?"
+    },
+    "semanticPatchId": "2336",
+    "breakingChangeId": "864",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Graphics()**.drawRoundedRect",
+      "suggestedFixDescription": "This change only affects Graphics where the `nextRoundedRectBehavior` flag is not already set to true, which is the new default value. \nAlso this change only has a slight effect on the visual representation of the rounded rectangle, which is why the devs. have marked this as a breaking change.\nSince this change shouldn’t break any parts of the production code, we recommend upgrading and only then if you see a difference you can adjust the properties of the rectangle.",
+      "unknownAccessPathQuestion": "Is this drawing a rounded rectangle using the Graphics class from pixi.js?"
+    },
+    "semanticPatchId": "2337",
+    "breakingChangeId": "865",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "write <pixi.js>.Text().style",
+      "suggestedFixDescription": "This change only affects Text elements where the `nextLineHeightBehavior` flag is not already set to true, which is the new default value. \nAlso this change only has a slight effect on the visual representation of the text element, making the vertical whitespace of the text element behave more like html text elements.\nSince this change shouldn’t break any parts of the production code, we recommend upgrading your code, and afterwards making sure the text elements looks like it did before.\nTo see the difference you can set line 16 in this example to true: https://jsfiddle.net/yzk5gutd.",
+      "unknownAccessPathQuestion": "is this writing tot he style property of an object of the Text class from the pixi.js package?"
+    },
+    "semanticPatchId": "2338",
+    "breakingChangeId": "866",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <pixi.js>.Renderer.registerPlugin 0:\"batch\"",
+      "suggestedFixDescription": "This is only breaking if you want the value of `vertexSize`, `geometryClass` and `shaderGenerator` to be null.\nThis change mostly changes internal types and how the Renderer works, no longer using two different types of Batch rendered, but now only using the one `BatchRenderer`. \nThe breaking part is that the default values for the three properties 'vertexSize`, `geometryClass` and `shaderGenerator` have been set to the already documented default value, instead of just being null.\nThe new default values make a lot more sense, and we believe most users would have had to change the values anyway for their application to work properly.\nBut in the case that you need these old default values you can make a custom renderer class extending BatchRenderer, where the old default values (`null`) is set:\n```\nclass customRenderer extends PIXI.BatchRenderer {\n  extension = { name: \"batch\" }\n  constructor(renderer) {\n      super(renderer);\n      this.shaderGenerator = null;\n      this.geometryClass = null;\n      this.vertexSize = null;\n  }\n}\nPIXI.extensions.add(customRenderer);\n```",
+      "unknownAccessPathQuestion": "is this call registering the \"batch\" renderer plugin for the pixi.js package?"
+    },
+    "semanticPatchId": "2339",
+    "breakingChangeId": "867",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.on(‘$prop’, $value)",
+        "replacements": []
+      },
+      "detectionPattern": "write <pixi.js>.{Container,Graphics,Sprite,Text,BitmapText,TilingSprite,AnimatedSprite,Mesh,NineSlicePlane,SimpleMesh,SimplePlane,SimpleRope}().{click,mousedown,mousemove,mouseout,mouseover,mouseup,mouseupoutside,pointercancel,pointerdown,pointermove,pointerout,pointerover,pointertap,pointerup,pointerupoutsidem,rightclick,rightdown,rightup,rightupoutside,tap,touchcancel,touchend,touchendoutside,touchmove,touchstart}",
+      "unknownAccessPathQuestion": "Is this setting the value of one of the display object events from pixi.js?"
+    },
+    "semanticPatchId": "2340",
+    "breakingChangeId": "868",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2340",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-23T10:04:31.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.on(\"$prop\", $value)",
+        "replacements": []
+      },
+      "detectionPattern": "write <pixi.js>.{Container,Graphics,Sprite,Text,BitmapText,TilingSprite,AnimatedSprite,Mesh,NineSlicePlane,SimpleMesh,SimplePlane,SimpleRope}().{click,mousedown,mousemove,mouseout,mouseover,mouseup,mouseupoutside,pointercancel,pointerdown,pointermove,pointerout,pointerover,pointertap,pointerup,pointerupoutsidem,rightclick,rightdown,rightup,rightupoutside,tap,touchcancel,touchend,touchendoutside,touchmove,touchstart}",
+      "unknownAccessPathQuestion": "Is this setting the value of one of the display object events from pixi.js?"
+    },
+    "semanticPatchId": "2340",
+    "breakingChangeId": "868",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "const boundary = new <pixi.js>.EventBoundary($base:base:base:base.stage);\nboundary.hitTest($1.x, $1.y)",
+        "replacements": []
+      },
+      "detectionPattern": "call <pixi.js>.Application().renderer.plugins.interaction.hitTest",
+      "alternativeTemplate": {
+        "pattern": "boundary.hitTest($1.x, $1.y)",
+        "replacements": []
+      },
+      "transformationQuestion": "Is this the first match of a call to the `hitTest()` method?",
+      "unknownAccessPathQuestion": "Is this a call of the hitTest method on the Application class from the pixi.js package?"
+    },
+    "semanticPatchId": "2341",
+    "breakingChangeId": "869",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2341",
+      "comment": "Initial  ",
+      "version": 1,
+      "creationDate": "2022-12-25T09:43:12.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => { const boundary = new <pixi.js>.EventBoundary($base:base:base:base.stage); boundary.hitTest($1.x, $1.y); })()",
+        "replacements": []
+      },
+      "detectionPattern": "call <pixi.js>.Application().renderer.plugins.interaction.hitTest",
+      "alternativeTemplate": {
+        "pattern": "boundary.hitTest($1.x, $1.y)",
+        "replacements": []
+      },
+      "transformationQuestion": "Is this the first match of a call to the `hitTest()` method?",
+      "unknownAccessPathQuestion": "Is this a call of the hitTest method on the Application class from the pixi.js package?"
+    },
+    "semanticPatchId": "2341",
+    "breakingChangeId": "869",
+    "enabled": true,
+    "comment": "Initial  "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2341",
+      "comment": "Initial   ",
+      "version": 1,
+      "creationDate": "2022-12-25T09:43:12.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => { \n   const boundary = new <pixi.js>.EventBoundary($base:base:base:base.stage); \n   boundary.hitTest($1.x, $1.y); \n})()",
+        "replacements": []
+      },
+      "detectionPattern": "call <pixi.js>.Application().renderer.plugins.interaction.hitTest",
+      "alternativeTemplate": {
+        "pattern": "boundary.hitTest($1.x, $1.y)",
+        "replacements": []
+      },
+      "transformationQuestion": "Is this the first match of a call to the `hitTest()` method?",
+      "unknownAccessPathQuestion": "Is this a call of the hitTest method on the Application class from the pixi.js package?"
+    },
+    "semanticPatchId": "2341",
+    "breakingChangeId": "869",
+    "enabled": true,
+    "comment": "Initial   "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2334",
+      "comment": "Fixed typo",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-12-21T16:34:48.000Z",
+      "detectionPattern": "call <pixi.js>.Renderer.registerPlugin",
+      "suggestedFixDescription": "The Renderer.registerPlugin() method has been removed in v. 7 after it has been deprecated since v. 6.5.\nInstead use the `extensions.add` method.\nFurthermore, if this call registers a custom Batch renderer to pixi, you will have to uninstall the default `BatchRenderer` which from version 7 is installed automatically. \nDo this using another call:  `pixi.extention.remove(pixi.BatchRenderer)`",
+      "unknownAccessPathQuestion": "Is this a call of the registerPlugin method from the renderer class from the pixi.js package?"
+    },
+    "semanticPatchId": "2334",
+    "breakingChangeId": "862",
+    "enabled": true,
+    "comment": "Fixed typo"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "await $callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "callR {<pixi.js>.{CanvasExtract(),Extract()},<pixi.js>.Application().renderer.plugins.extract}.{base64,image}",
+      "unknownAccessPathQuestion": "Is the callee from pixi.js?"
+    },
+    "semanticPatchId": "2342",
+    "breakingChangeId": "870",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2341",
+      "comment": "Initial    ",
+      "version": 2,
+      "creationDate": "2022-12-25T09:45:10.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => { \n   const boundary = new <pixi.js>.EventBoundary($base:base:base:base.stage); \n   boundary.hitTest($1.x, $1.y); \n})()",
+        "replacements": []
+      },
+      "detectionPattern": "call <pixi.js>.Application().renderer.plugins.interaction.hitTest",
+      "alternativeTemplate": {
+        "pattern": "boundary.hitTest($1.x, $1.y)",
+        "replacements": []
+      },
+      "transformationQuestion": "Is this the first match of a call to the `hitTest()` method in this file?",
+      "unknownAccessPathQuestion": "Is this a call of the hitTest method on the Application class from the pixi.js package?"
+    },
+    "semanticPatchId": "2341",
+    "breakingChangeId": "869",
+    "enabled": true,
+    "comment": "Initial    "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "extraQuestion": "Is this the first match regarding the ‘.buttonMode’ property in this file?",
+      "primaryTemplate": {
+        "pattern": "(() => { \n  Object.defineProperty(<pixi.js>.DisplayObject.prototype, 'buttonMode', {\n     get() { return this.cursor === 'pointer'; },\n     set(value) { this.cursor = value ? 'pointer' : null; },\n   });\n   $base.$prop = $value\n})()",
+        "replacements": []
+      },
+      "detectionPattern": "write <pixi.js>.{Stripe}().buttonMode",
+      "unknownAccessPathQuestion": "Is this writing to the buttonMode property from the pixi.package?"
+    },
+    "semanticPatchId": "2343",
+    "breakingChangeId": "871",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2343",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-26T08:31:41.000Z",
+      "extraQuestion": "Is this the first match regarding the ‘.buttonMode’ property in this file?",
+      "primaryTemplate": {
+        "pattern": "(() => { \n  Object.defineProperty(<pixi.js>.DisplayObject.prototype, 'buttonMode', {\n     get() { return this.cursor === 'pointer'; },\n     set(value) { this.cursor = value ? 'pointer' : null; },\n   });\n   $base.$prop = $value\n})()",
+        "replacements": []
+      },
+      "detectionPattern": "write <pixi.js>.Stripe().buttonMode",
+      "unknownAccessPathQuestion": "Is this writing to the buttonMode property from the pixi.package?"
+    },
+    "semanticPatchId": "2343",
+    "breakingChangeId": "871",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2343",
+      "comment": "Initial  ",
+      "version": 1,
+      "creationDate": "2022-12-26T08:32:29.000Z",
+      "extraQuestion": "Is this the first match regarding the ‘.buttonMode’ property in this file?",
+      "primaryTemplate": {
+        "pattern": "(() => { \n  Object.defineProperty(<pixi.js>.DisplayObject.prototype, 'buttonMode', {\n     get() { return this.cursor === 'pointer'; },\n     set(value) { this.cursor = value ? 'pointer' : null; },\n   });\n   $base.$prop = $value\n})()",
+        "replacements": []
+      },
+      "detectionPattern": "write <pixi.js>.Sprite().buttonMode",
+      "unknownAccessPathQuestion": "Is this writing to the buttonMode property from the pixi.package?"
+    },
+    "semanticPatchId": "2343",
+    "breakingChangeId": "871",
+    "enabled": true,
+    "comment": "Initial  "
+  }
+]

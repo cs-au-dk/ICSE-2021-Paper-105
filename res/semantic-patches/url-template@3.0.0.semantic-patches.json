@@ -1,0 +1,45 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call (<url-template>.*\\<url-template>.parse)",
+      "unknownAccessPathQuestion": "is the callee from url-template?"
+    },
+    "semanticPatchId": "2140",
+    "breakingChangeId": "789",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2140",
+      "comment": "changed detection to call pattern",
+      "version": 0,
+      "creationDate": "2022-11-15T17:53:49.000Z",
+      "detectionPattern": "call (<url-template>**\\<url-template>.parse)",
+      "unknownAccessPathQuestion": "is the callee from url-template?"
+    },
+    "semanticPatchId": "2140",
+    "breakingChangeId": "789",
+    "enabled": true,
+    "comment": "changed detection to call pattern"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2140",
+      "comment": "Removed calls to chains on parse",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T17:54:17.000Z",
+      "detectionPattern": "call (<url-template>**\\<url-template>.parse**)",
+      "unknownAccessPathQuestion": "is the callee from url-template?"
+    },
+    "semanticPatchId": "2140",
+    "breakingChangeId": "789",
+    "enabled": true,
+    "comment": "Removed calls to chains on parse"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "826",
+    "packageVersion": "5.0.0",
+    "packageName": "open-graph-scraper",
+    "description": "The retry option is now a object -> https://github.com/sindresorhus/got/blob/main/documentation/7-retry.md#retry",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "827",
+    "packageVersion": "5.0.0",
+    "packageName": "open-graph-scraper",
+    "description": "The timeout option is now a object -> https://github.com/sindresorhus/got/blob/main/documentation/6-timeout.md#timeout-options",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "828",
+    "packageVersion": "5.0.0",
+    "packageName": "open-graph-scraper",
+    "description": "Dropping callback support. If you still want to use callbacks, you can use callbackify -> https://nodejs.org/api/util.html#util_util_callbackify_original",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "829",
+    "packageVersion": "5.0.0",
+    "packageName": "open-graph-scraper",
+    "description": "Dropping support for node12 since got no longer supports it.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "831",
+    "packageVersion": "5.0.0",
+    "packageName": "open-graph-scraper",
+    "description": "Removing options.encoding.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "830",
+    "packageVersion": "5.0.0",
+    "packageName": "open-graph-scraper",
+    "description": "Auth errors will now be passed back to the client and will no longer just be Page not found errors. \nThis change means that instead of throwing an error if the request results in an [error code in the range 400-499](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses) the request will now simply return an [Error object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). The consequences of this change is primarily that authentication errors will no longer be caught in a .catch() statement, since they are no longer thrown automatically. If you still want the auth. errors to be thrown you can, inside your .then() statement, make a check like:\n```\nif (error && result.message && result.message.startsWith('Response code 4')) {\n   throw new Error('Page not found');\n}\n```",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

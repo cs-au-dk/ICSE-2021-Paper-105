@@ -1,0 +1,24 @@
+[
+  {
+    "id": "197",
+    "packageVersion": "4.0.0",
+    "packageName": "chalk",
+    "description": "Require Node.js 10",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "251",
+    "packageVersion": "4.0.0",
+    "packageName": "chalk",
+    "description": "Change the Level TypeScript type to be a union instead of enum",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

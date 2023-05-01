@@ -1,0 +1,79 @@
+[
+  {
+    "id": "520",
+    "packageVersion": "105.0.0",
+    "packageName": "googleapis",
+    "description": "Breaking change: Renamed `youtube.v3.liveBroadcasts.cuepoint.create` to `liveBroadcasts.insertCuepoint`.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "521",
+    "packageVersion": "105.0.0",
+    "packageName": "googleapis",
+    "description": "Breaking change: Renamed `logging.billingAccounts.buckets.get` to `logging.billingAccounts.locations.buckets.get`.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "522",
+    "packageVersion": "105.0.0",
+    "packageName": "googleapis",
+    "description": "Breaking change: Renamed `logging.billingAccounts.buckets.views.get` to `logging.billingAccounts.locations.buckets.views.get`.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "523",
+    "packageVersion": "105.0.0",
+    "packageName": "googleapis",
+    "description": "Breaking change: Renamed `logging.billingAccounts.operations.get` to `logging.billingAccounts.locations.operations.get`",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "524",
+    "packageVersion": "105.0.0",
+    "packageName": "googleapis",
+    "description": "Breaking change: Removed The `validateOnly` parameter of the `firestore.projects.databases.create` method.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "525",
+    "packageVersion": "105.0.0",
+    "packageName": "googleapis",
+    "description": "Breaking change: Removed the `name` property from the `RuntimeConfig` schema.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "526",
+    "packageVersion": "105.0.0",
+    "packageName": "googleapis",
+    "description": "Breaking change: The `dynamicMetricCosts` property was removed from the metricRule schema",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

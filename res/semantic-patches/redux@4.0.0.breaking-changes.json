@@ -1,0 +1,24 @@
+[
+  {
+    "id": "139",
+    "packageVersion": "4.0.0",
+    "packageName": "redux",
+    "description": "Bundle cjs and es formats (#2358 by @TrySound) - (direct, private imports (import createStore from 'redux/lib/createStore') will no longer work)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "138",
+    "packageVersion": "4.0.0",
+    "packageName": "redux",
+    "description": "Throw if getState, subscribe, or unsubscribe called while dispatching (including inside a reducer) (#1569 by @mjw56)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

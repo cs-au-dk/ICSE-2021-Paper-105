@@ -1,0 +1,13 @@
+[
+  {
+    "id": "519",
+    "packageVersion": "8.0.0",
+    "packageName": "superagent",
+    "description": "Dropped IE support. Support for Internet Explore has previously presented difficulties for superagent, and has recently been breaking [another feature]( https://github.com/visionmedia/superagent/issues/1731) and was hence removed from v. 8.0.0.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

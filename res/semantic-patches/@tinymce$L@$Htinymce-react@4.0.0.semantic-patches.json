@@ -1,0 +1,31 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "read <@tinymce/tinymce-react>**?.outputFormat",
+      "unknownAccessPathQuestion": "Is $prop read on a tinymce-react editor?"
+    },
+    "semanticPatchId": "1622",
+    "breakingChangeId": "418",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1622",
+      "comment": "minor",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-07-11T06:22:28.000Z",
+      "detectionPattern": "read <@tinymce/tinymce-react>?**.outputFormat",
+      "unknownAccessPathQuestion": "Is $prop read on a tinymce-react editor?"
+    },
+    "semanticPatchId": "1622",
+    "breakingChangeId": "418",
+    "enabled": true,
+    "comment": "minor"
+  }
+]

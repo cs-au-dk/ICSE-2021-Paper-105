@@ -1,0 +1,46 @@
+[
+  {
+    "id": "396",
+    "packageVersion": "9.0.0",
+    "packageName": "fs-extra",
+    "description": "Requires Node.js version 10 or greater",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "397",
+    "packageVersion": "9.0.0",
+    "packageName": "fs-extra",
+    "description": "Creating a directory with fs-extra no longer returns the path",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "398",
+    "packageVersion": "9.0.0",
+    "packageName": "fs-extra",
+    "description": "outputJson now outputs objects as they were when the function was called, even if they are mutated later",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "399",
+    "packageVersion": "9.0.0",
+    "packageName": "fs-extra",
+    "description": "Cannot pass null as an options parameter to *Json* methods",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

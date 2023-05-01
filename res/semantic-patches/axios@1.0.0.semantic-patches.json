@@ -1,0 +1,340 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <axios>.{post,put,patch} ",
+      "unknownAccessPathQuestion": "Is this a call of a axios.post .put or .patch method?"
+    },
+    "semanticPatchId": "2271",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2271",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-05T06:37:46.000Z",
+      "detectionPattern": "call <axios>.{post,put,patch} 2.headers:\"multipart/form-data\"",
+      "unknownAccessPathQuestion": "Is this a call of a axios.post .put or .patch method?"
+    },
+    "semanticPatchId": "2271",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2271",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-12-05T06:38:08.000Z",
+      "detectionPattern": "call <axios>.{post,put,patch} 2.headers:number",
+      "unknownAccessPathQuestion": "Is this a call of a axios.post .put or .patch method?"
+    },
+    "semanticPatchId": "2271",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2271",
+      "comment": "Initial ",
+      "version": 2,
+      "creationDate": "2022-12-05T06:38:24.000Z",
+      "detectionPattern": "call <axios>.{post,put,patch} 2.headers:\"test\"",
+      "unknownAccessPathQuestion": "Is this a call of a axios.post .put or .patch method?"
+    },
+    "semanticPatchId": "2271",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "2271",
+      "comment": "Initial",
+      "version": 3,
+      "creationDate": "2022-12-05T06:38:47.000Z",
+      "detectionPattern": "call <axios>.{post,put,patch} 2.headers:\"multipart/form-data\"",
+      "unknownAccessPathQuestion": "Is this a call of a axios.post .put or .patch method?"
+    },
+    "semanticPatchId": "2271",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "2271",
+      "comment": "Initial ",
+      "version": 4,
+      "creationDate": "2022-12-05T06:39:21.000Z",
+      "detectionPattern": "call <axios>.{post,put,patch} 2.headers.ContentType:\"multipart/form-data\"",
+      "unknownAccessPathQuestion": "Is this a call of a axios.post .put or .patch method?"
+    },
+    "semanticPatchId": "2271",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "2271",
+      "comment": "Initial",
+      "version": 5,
+      "creationDate": "2022-12-05T06:39:45.000Z",
+      "extraQuestion": "Is the 'Content-Type' key set to be 'multipart/form-data' in $3?",
+      "detectionPattern": "call <axios>.{post,put,patch} [3,3]",
+      "unknownAccessPathQuestion": "Is this a call of a axios.post .put or .patch method?"
+    },
+    "semanticPatchId": "2271",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "2271",
+      "comment": "Initial ",
+      "version": 6,
+      "creationDate": "2022-12-05T06:42:56.000Z",
+      "extraQuestion": "Is the 'Content-Type' key set to be 'multipart/form-data' in $3?",
+      "objectModifiers": {
+        "$3.formSerializer": [
+          {
+            "value": "true",
+            "propName": "dots",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "detectionPattern": "call <axios>.{post,put,patch} [3,3]",
+      "unknownAccessPathQuestion": "Is this a call of a axios.post .put or .patch method?"
+    },
+    "semanticPatchId": "2271",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "2271",
+      "comment": "disabled since the object modification is currently not supported",
+      "enabled": false,
+      "version": 8,
+      "creationDate": "2022-12-05T06:51:36.000Z",
+      "extraQuestion": "Is the 'Content-Type' key set to be 'multipart/form-data' in $3?",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "{dots: true}",
+            "propName": "formSerializer",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "detectionPattern": "call <axios>.{post,put,patch} [3,3]",
+      "unknownAccessPathQuestion": "Is this a call of a axios.post .put or .patch method?"
+    },
+    "semanticPatchId": "2271",
+    "breakingChangeId": "836",
+    "enabled": false,
+    "comment": "disabled since the object modification is currently not supported"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <axios>.{postForm,putForm,patchForm}",
+      "suggestedFixDescription": "This changes the notation to no longer use the “dot” notation to now use the bracket notation:\n- array.0\n+ array[0]\nA new config option `formSerializer` has however been added, making it possible to get the “dot” notation back.\nthe $prop methods third argument is a configuration object. If you inside this object add `formSerializer: {dots: true}` you will get the old behavior back.\nTo read about the new behavior and options see the official readme section on “Automatic serialization to FormData”: https://github.com/axios/axios#-automatic-serialization-to-formdata",
+      "unknownAccessPathQuestion": "Is this a call of either the axios.postForm, axios.putForm og axios.patchForm method?"
+    },
+    "semanticPatchId": "2272",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <axios>.{post,put,patch} [3,3]",
+      "suggestedFixDescription": "This is only breaking if you are using the content-type 'multipart/form-data'. This changes the notation to no longer use the “dot” notation to now use the bracket notation:\n- arr.0\n+ arr[0]\nA new config option `formSerializer` has however been added, making it possible to get the “dot” notation back.\nIf you inside the config object add `formSerializer: {dots: true}` you will get the old behavior back.\nTo read about the new behavior and options see the official readme section on “Automatic serialization to FormData”: https://github.com/axios/axios#-automatic-serialization-to-formdata",
+      "unknownAccessPathQuestion": "Is this a call of either the axios.post, .pot or .patch method?"
+    },
+    "semanticPatchId": "2273",
+    "breakingChangeId": "836",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2273",
+      "comment": "Disabled since it was moved into another unlikely breaking change.",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-12-05T16:18:55.000Z",
+      "detectionPattern": "call <axios>.{post,put,patch} [3,3]",
+      "suggestedFixDescription": "This is only breaking if you are using the content-type 'multipart/form-data'. This changes the notation to no longer use the “dot” notation to now use the bracket notation:\n- arr.0\n+ arr[0]\nA new config option `formSerializer` has however been added, making it possible to get the “dot” notation back.\nIf you inside the config object add `formSerializer: {dots: true}` you will get the old behavior back.\nTo read about the new behavior and options see the official readme section on “Automatic serialization to FormData”: https://github.com/axios/axios#-automatic-serialization-to-formdata",
+      "unknownAccessPathQuestion": "Is this a call of either the axios.post, .pot or .patch method?"
+    },
+    "semanticPatchId": "2273",
+    "breakingChangeId": "836",
+    "enabled": false,
+    "comment": "Disabled since it was moved into another unlikely breaking change."
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <axios>.{post,put,patch} [3,3]",
+      "suggestedFixDescription": "This is only breaking if you are using the content-type 'multipart/form-data'. This changes the notation to no longer use the “dot” notation to now use the bracket notation:\n- arr.0\n+ arr[0]\nA new config option `formSerializer` has however been added, making it possible to get the “dot” notation back.\nIf you inside the config object add `formSerializer: {dots: true}` you will get the old behavior back.\nTo read about the new behavior and options see the official readme section on “Automatic serialization to FormData”: https://github.com/axios/axios#-automatic-serialization-to-formdata",
+      "unknownAccessPathQuestion": "Is this a call of either the .post, .put or the .patch method from the axios package?"
+    },
+    "semanticPatchId": "2274",
+    "breakingChangeId": "837",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <axios>.create().{post,put,patch} [3,3]",
+      "suggestedFixDescription": "This is only breaking if you are using the content-type 'multipart/form-data'. This changes the notation to no longer use the “dot” notation to now use the bracket notation:\n- arr.0\n+ arr[0]\nA new config option `formSerializer` has however been added, making it possible to get the “dot” notation back.\nIf you inside the config object add `formSerializer: {dots: true}` you will get the old behavior back.\nTo read about the new behavior and options see the official readme section on “Automatic serialization to FormData”: https://github.com/axios/axios#-automatic-serialization-to-formdata",
+      "unknownAccessPathQuestion": "Is this a call of a .post, .put or .patch method from an instance of the axios object?"
+    },
+    "semanticPatchId": "2275",
+    "breakingChangeId": "837",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <axios>.{post,put,patch}**.catch",
+      "unknownAccessPathQuestion": "Is this a .catch call on a promise returned from a axios method?"
+    },
+    "semanticPatchId": "2277",
+    "breakingChangeId": "839",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2277",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-07T09:18:06.000Z",
+      "detectionPattern": "call <axios>.{request,get,delete,head,options,post,put,patch,postForm,putForm,patchForm}**.catch",
+      "suggestedFixDescription": "This change means that if you are expecting errors to have a response object (with a `status` code and `data`) then NetworkErrors can now be breaking.\nBasically this changes removes the response object from any network errors thrown by axios, meaning using something like `error.response.status` in a `.catch()` statement would throw a `Cannot read properties of undefined` error.\nThe best fix for this kind of errors is to check the `response` object before accessing its properties. See this example from the official axios documentation: https://github.com/axios/axios#handling-errors.",
+      "unknownAccessPathQuestion": "Is this a .catch call on a promise returned from a axios method?"
+    },
+    "semanticPatchId": "2277",
+    "breakingChangeId": "839",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2277",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-12-07T09:39:24.000Z",
+      "detectionPattern": "call <axios>.{request,get,delete,head,options,post,put,patch,postForm,putForm,patchForm}**.catch",
+      "suggestedFixDescription": "This change means that if you are expecting errors to have a response object (with a `status` code and `data`) then NetworkErrors can now be breaking.\nBasically this change removes the response object from any network errors thrown by axios, meaning using something like `error.response.status` in a `.catch()` statement would throw a `Cannot read properties of undefined` error.\nThe best fix for this kind of errors is to check the `response` object before accessing its properties. See this example from the official axios documentation: https://github.com/axios/axios#handling-errors.",
+      "unknownAccessPathQuestion": "Is this a .catch call on a promise returned from a axios method?"
+    },
+    "semanticPatchId": "2277",
+    "breakingChangeId": "839",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2277",
+      "comment": "Initial ",
+      "version": 2,
+      "creationDate": "2022-12-07T09:46:32.000Z",
+      "detectionPattern": "call <axios>.{request,get,delete,head,options,post,put,patch,postForm,putForm,patchForm}**.catch",
+      "suggestedFixDescription": "This change means that if you are expecting errors to have a response object (with a `status` code and `data`) then NetworkErrors can now be breaking.\nBasically this change removes the response object from any network errors thrown by axios, meaning using something like `error.response.status` in a `.catch()` statement would throw a `Cannot read properties of undefined` error.\nThe best fix for this kind of error is to check the `response` object before accessing its properties. See this example from the official axios documentation: https://github.com/axios/axios#handling-errors.",
+      "unknownAccessPathQuestion": "Is this a .catch call on a promise returned from a axios method?"
+    },
+    "semanticPatchId": "2277",
+    "breakingChangeId": "839",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <axios>.create().{request,get,delete,head,options,post,put,patch,postForm,putForm,patchForm}**.catch",
+      "suggestedFixDescription": "This change means that if you are expecting errors to have a response object (with a `status` code and `data`) then NetworkErrors can now be breaking.\nBasically this change removes the response object from any network errors thrown by axios, meaning using something like `error.response.status` in a `.catch()` statement would throw a `Cannot read properties of undefined` error.\nThe best fix for this kind of error is to check the `response` object before accessing its properties. See this example from the official axios documentation: https://github.com/axios/axios#handling-errors",
+      "unknownAccessPathQuestion": "Is this calling a catch statement on a promise form an axios instance?"
+    },
+    "semanticPatchId": "2278",
+    "breakingChangeId": "839",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <axios>.interceptors.response.use [2,99]",
+      "suggestedFixDescription": "This change means that if you are expecting errors to have a response object (with a `status` code and `data`) then NetworkErrors can now be breaking.\nBasically this change removes the response object from any network errors thrown by axios, meaning using something like `error.response.status` in a `.catch()` statement would throw a `Cannot read properties of undefined` error.\nThe best fix for this kind of error is to check the `response` object before accessing its properties. See this example from the official axios documentation: https://github.com/axios/axios#handling-errors. ",
+      "unknownAccessPathQuestion": "Is this creating an interceptor for axios responses?"
+    },
+    "semanticPatchId": "2279",
+    "breakingChangeId": "839",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2279",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-07T09:50:07.000Z",
+      "detectionPattern": "call <axios>.interceptors.{response,request}.use [2,99]",
+      "suggestedFixDescription": "This change means that if you are expecting errors to have a response object (with a `status` code and `data`) then NetworkErrors can now be breaking.\nBasically this change removes the response object from any network errors thrown by axios, meaning using something like `error.response.status` in a `.catch()` statement would throw a `Cannot read properties of undefined` error.\nThe best fix for this kind of error is to check the `response` object before accessing its properties. See this example from the official axios documentation: https://github.com/axios/axios#handling-errors. ",
+      "unknownAccessPathQuestion": "Is this creating an interceptor for axios responses?"
+    },
+    "semanticPatchId": "2279",
+    "breakingChangeId": "839",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <axios>.create().interceptors.{response,request}.use [2,99]",
+      "suggestedFixDescription": "This change means that if you are expecting errors to have a response object (with a `status` code and `data`) then NetworkErrors can now be breaking.\nBasically this change removes the response object from any network errors thrown by axios, meaning using something like `error.response.status` in a `.catch()` statement would throw a `Cannot read properties of undefined` error.\nThe best fix for this kind of error is to check the `response` object before accessing its properties. See this example from the official axios documentation: https://github.com/axios/axios#handling-errors.",
+      "unknownAccessPathQuestion": "Is this creating an interceptor for axios responses?"
+    },
+    "semanticPatchId": "2280",
+    "breakingChangeId": "839",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

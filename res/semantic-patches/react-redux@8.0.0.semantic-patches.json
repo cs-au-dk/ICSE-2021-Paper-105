@@ -1,0 +1,180 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <react-redux>.connectAdvanced",
+      "enabled": true,
+      "detectionPattern": "read <react-redux>.connectAdvanced",
+      "suggestedFixDescription": "You need to rewrite your code to avoid using the connectAdvanced API, likely by using the hooks API instead.",
+      "unknownAccessPathQuestion": "Is this connectAdvanced from react-redux?"
+    },
+    "semanticPatchId": "1557",
+    "breakingChangeId": "410",
+    "enabled": true,
+    "comment": "read <react-redux>.connectAdvanced"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <react-redux>.connect [4,4]",
+      "enabled": true,
+      "detectionPattern": "call <react-redux>.connect [4,4]",
+      "unknownAccessPathQuestion": "Is connect function from react-redux?"
+    },
+    "semanticPatchId": "1558",
+    "breakingChangeId": "408",
+    "enabled": true,
+    "comment": "call <react-redux>.connect [4,4]"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1558",
+      "comment": "updated question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-23T11:55:29.000Z",
+      "detectionPattern": "call <react-redux>.connect [4,4]",
+      "unknownAccessPathQuestion": "Is the connect function from react-redux?"
+    },
+    "semanticPatchId": "1558",
+    "breakingChangeId": "408",
+    "enabled": true,
+    "comment": "updated question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1558",
+      "comment": " ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-23T11:55:51.000Z",
+      "detectionPattern": "call <react-redux>.connect [3,4]",
+      "unknownAccessPathQuestion": "Is the connect function from react-redux?"
+    },
+    "semanticPatchId": "1558",
+    "breakingChangeId": "408",
+    "enabled": true,
+    "comment": " "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1558",
+      "comment": "",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-23T11:58:05.000Z",
+      "detectionPattern": "call <react-redux>.connect [4, 4]",
+      "unknownAccessPathQuestion": "Is the connect function from react-redux?"
+    },
+    "semanticPatchId": "1558",
+    "breakingChangeId": "408",
+    "enabled": true,
+    "comment": ""
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1558",
+      "comment": "call <react-redux>.connect -1.pure:boolean [4,4]",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-05-23T12:03:42.000Z",
+      "detectionPattern": "call <react-redux>.connect [4, 4]",
+      "suggestedFixDescription": "The pure option for connect has been removed.",
+      "unknownAccessPathQuestion": "Is the connect function from react-redux?"
+    },
+    "semanticPatchId": "1558",
+    "breakingChangeId": "408",
+    "enabled": true,
+    "comment": "call <react-redux>.connect -1.pure:boolean [4,4]"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1558",
+      "comment": "call <react-redux>.connect -1.pure:boolean [4,4] ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-05-23T12:03:42.000Z",
+      "detectionPattern": "call <react-redux>.connect -1.pure:boolean [4,4]",
+      "suggestedFixDescription": "The pure option for connect has been removed.",
+      "unknownAccessPathQuestion": "Is the connect function from react-redux?"
+    },
+    "semanticPatchId": "1558",
+    "breakingChangeId": "408",
+    "enabled": true,
+    "comment": "call <react-redux>.connect -1.pure:boolean [4,4] "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1557",
+      "comment": "insert link to the hooks API",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-23T11:16:05.000Z",
+      "detectionPattern": "read <react-redux>.connectAdvanced",
+      "suggestedFixDescription": "You need to rewrite your code to avoid using the connectAdvanced API, likely by using the hooks API instead (https://react-redux.js.org/api/hooks).",
+      "unknownAccessPathQuestion": "Is this connectAdvanced from react-redux?"
+    },
+    "semanticPatchId": "1557",
+    "breakingChangeId": "410",
+    "enabled": true,
+    "comment": "insert link to the hooks API"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1558",
+      "comment": "edit semantic patch to include 1-4 params",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-05-24T21:04:33.000Z",
+      "detectionPattern": "call <react-redux>.connect -1.pure:boolean [1,4]",
+      "suggestedFixDescription": "The pure option for connect has been removed.",
+      "unknownAccessPathQuestion": "Is the connect function from react-redux?"
+    },
+    "semanticPatchId": "1558",
+    "breakingChangeId": "408",
+    "enabled": true,
+    "comment": "edit semantic patch to include 1-4 params"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1558",
+      "comment": "Improve suggested fix",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-05-29T06:53:48.000Z",
+      "detectionPattern": "call <react-redux>.connect -1.pure:boolean [1,4]",
+      "suggestedFixDescription": "The pure option for connect has been removed. Removing it should not affect semantics. More info on the pure option is provided her https://github.com/reduxjs/react-redux/blob/7.x/docs/api/connect.md#pure-boolean",
+      "unknownAccessPathQuestion": "Is the connect function from react-redux?"
+    },
+    "semanticPatchId": "1558",
+    "breakingChangeId": "408",
+    "enabled": true,
+    "comment": "Improve suggested fix"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1558",
+      "comment": "Add extra question",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-06-20T06:30:22.000Z",
+      "extraQuestion": "Is $-1 an options object?",
+      "detectionPattern": "call <react-redux>.connect -1.pure:boolean [1,4]",
+      "suggestedFixDescription": "The pure option for connect has been removed. Removing it should not affect semantics. More info on the pure option is provided her https://github.com/reduxjs/react-redux/blob/7.x/docs/api/connect.md#pure-boolean",
+      "unknownAccessPathQuestion": "Is the connect function from react-redux?"
+    },
+    "semanticPatchId": "1558",
+    "breakingChangeId": "408",
+    "enabled": true,
+    "comment": "Add extra question"
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "843",
+    "packageVersion": "7.0.0",
+    "packageName": "semver",
+    "description": "Dropped support for very old node versions older than ES6, use const/let, => functions, and classes. ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

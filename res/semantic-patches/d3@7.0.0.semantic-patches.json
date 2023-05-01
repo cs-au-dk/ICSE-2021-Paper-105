@@ -1,0 +1,89 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.scaleOrdinal [2,2]",
+      "suggestedFixDescription": "This can be breaking if you are using non-primitive types in the domain of the ordinal scale. \nThis changes the way domain values are now uniqued. Previously two values would be considered identical/different based on a method called the [`SameValueZero`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#comparing_equality_methods) method, but will from now on be compared using their `.valueOf()` method.. \nThe new behavior is probably what you would expect from the ordinal scale, but for instance currently two `date` objects with the same values will not override each other, but both exist on the scale, whereas for the updated behavior only one (the last declared) will be present on the scale.\nThis will however break instances where the domain values do not have a .valueOf() method, since the ordinal scale would not be able to compare these domain values.",
+      "unknownAccessPathQuestion": "Is this a call of the sclaeOrdinal method from the d3 package?"
+    },
+    "semanticPatchId": "2119",
+    "breakingChangeId": "767",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.scaleOrdinal()**.domain [1,1]",
+      "suggestedFixDescription": "rdinal()**.domain [1,1]\nunlikely suggested fix: This can be breaking if you are using non-primitive types in the domain of the ordinal scale. \nThis changes the way domain values are now uniqued. Previously two values would be considered identical/different based on a method called the [`SameValueZero`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#comparing_equality_methods) method, but will from now on be compared using their `.valueOf()` method.. \nThe new behavior is probably what you would expect from the ordinal scale, but for instance currently two `date` objects with the same values will not override each other, but both exist on the scale, whereas for the updated behavior only one (the last declared) will be present on the scale.\nThis will however break instances where the domain values do not have a .valueOf() method, since the ordinal scale would not be able to compare these domain values.",
+      "unknownAccessPathQuestion": "Is this a call of the scaleOrdinal.domain() method from the d3 package?"
+    },
+    "semanticPatchId": "2120",
+    "breakingChangeId": "767",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "($1 < $2 ? -1 : $1 > $2 ? 1 : $1 >= $2 ? 0 : NaN)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.ascending",
+      "unknownAccessPathQuestion": "Is this a call of the d3.ascending method?"
+    },
+    "semanticPatchId": "2121",
+    "breakingChangeId": "768",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "($2 < $1 ? -1 : $2 > $1 ? 1 : $2 >= $1 ? 0 : NaN)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.descending",
+      "unknownAccessPathQuestion": "Is this a call of the d3.descending method "
+    },
+    "semanticPatchId": "2122",
+    "breakingChangeId": "768",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.bin()()",
+      "suggestedFixDescription": "This can only be breaking if the array of the argument parsed to the bin method can contain a null value. \nAll null values are from version 7 of d3 not included in the result of the `bin()` method. \nThis should not really change how you would use the resulting bins, but it can have an effect on something like a test suite, since the length and potentially the result of your bins have changed.\nFor most users we recommend upgrading, and then only worrying about this change throwing an error once it gets to it.\nIf you are not in full control over the argument parsed to `bin()` we recommend removing null values before parsing it to the bins, just to be sure. This can be done using [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).",
+      "unknownAccessPathQuestion": "Is this a call of the bin() method from the d3 package?"
+    },
+    "semanticPatchId": "2123",
+    "breakingChangeId": "769",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2123",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-09T05:31:19.000Z",
+      "detectionPattern": "call <d3>.bin()",
+      "suggestedFixDescription": "This can only be breaking if the array of the argument parsed to the bin method can contain a null value. \nAll null values are from version 7 of d3 not included in the result of the `bin()` method. \nThis should not really change how you would use the resulting bins, but it can have an effect on something like a test suite, since the length and potentially the result of your bins have changed.\nFor most users we recommend upgrading, and then only worrying about this change throwing an error once it gets to it.\nIf you are not in full control over the argument parsed to `bin()` we recommend removing null values before parsing it to the bins, just to be sure. This can be done using [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).",
+      "unknownAccessPathQuestion": "Is this a call of the bin() method from the d3 package?"
+    },
+    "semanticPatchId": "2123",
+    "breakingChangeId": "769",
+    "enabled": true,
+    "comment": "Initial "
+  }
+]

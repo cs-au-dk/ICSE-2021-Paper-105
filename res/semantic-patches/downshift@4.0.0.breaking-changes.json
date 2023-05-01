@@ -1,0 +1,13 @@
+[
+  {
+    "id": "436",
+    "packageVersion": "4.0.0",
+    "packageName": "downshift",
+    "description": "TypeScript types may have changed (see https://github.com/downshift-js/downshift/pull/860 for more details if your program no longer compiles)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

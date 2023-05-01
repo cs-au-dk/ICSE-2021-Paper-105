@@ -1,0 +1,46 @@
+[
+  {
+    "id": "248",
+    "packageVersion": "2.0.0",
+    "packageName": "http-errors",
+    "description": "Remove I'mateapot export; use ImATeapot instead",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "247",
+    "packageVersion": "2.0.0",
+    "packageName": "http-errors",
+    "description": "Dropped Node.js 0.6 support",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "250",
+    "packageVersion": "2.0.0",
+    "packageName": "http-errors",
+    "description": "Rename UnorderedCollection constructor to TooEarly",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "249",
+    "packageVersion": "2.0.0",
+    "packageName": "http-errors",
+    "description": "Remove support for status being non-first argument",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <mustache>.render",
+      "unknownAccessPathQuestion": "Is this a method call of the render or to_html function from the mustache package?"
+    },
+    "semanticPatchId": "1652",
+    "breakingChangeId": "533",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1652",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-08-30T15:17:45.000Z",
+      "detectionPattern": "call <mustache>.to_html",
+      "unknownAccessPathQuestion": "Is this a method call of the render or to_html function from the mustache package?"
+    },
+    "semanticPatchId": "1652",
+    "breakingChangeId": "533",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1652",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-08-30T15:18:12.000Z",
+      "detectionPattern": "call <mustache>.to_html",
+      "unknownAccessPathQuestion": "Is this a method call of the to_html function from the mustache package?"
+    },
+    "semanticPatchId": "1652",
+    "breakingChangeId": "533",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "initial",
+      "detectionPattern": "call <mustache>.to_html",
+      "suggestedFixDescription": "The behaviour of `render()` has changed, to where null and undefined are not considered “hits” when found in a lookup. This means that instead of looking further up the parent tree, the render would instead use the falsy value. See [this comment](https://github.com/janl/mustache.js/issues/390#issue-39305428) for an example of the old and the new behaviour.",
+      "unknownAccessPathQuestion": "Is this a method call of the render unction from the mustache package?"
+    },
+    "semanticPatchId": "1653",
+    "breakingChangeId": "533",
+    "enabled": true,
+    "comment": "initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1653",
+      "comment": "initial ",
+      "version": 0,
+      "creationDate": "2022-08-30T15:29:00.000Z",
+      "detectionPattern": "call <mustache>.render",
+      "suggestedFixDescription": "The behaviour of `render()` has changed, to where null and undefined are not considered “hits” when found in a lookup. This means that instead of looking further up the parent tree, the render would instead use the falsy value. See [this comment](https://github.com/janl/mustache.js/issues/390#issue-39305428) for an example of the old and the new behaviour.",
+      "unknownAccessPathQuestion": "Is this a method call of the render unction from the mustache package?"
+    },
+    "semanticPatchId": "1653",
+    "breakingChangeId": "533",
+    "enabled": true,
+    "comment": "initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1653",
+      "comment": "initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-08-30T15:30:07.000Z",
+      "detectionPattern": "call <mustache>.{render,to_html}",
+      "suggestedFixDescription": "The behaviour of `render()` has changed, to where null and undefined are not considered “hits” when found in a lookup. This means that instead of looking further up the parent tree, the render would instead use the falsy value. See [this comment](https://github.com/janl/mustache.js/issues/390#issue-39305428) for an example of the old and the new behaviour.",
+      "unknownAccessPathQuestion": "Is this a method call of the to_html or render function from the mustache package?"
+    },
+    "semanticPatchId": "1653",
+    "breakingChangeId": "533",
+    "enabled": true,
+    "comment": "initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1652",
+      "comment": "Disabled, since it was included in the other patch",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-08-30T15:27:48.000Z",
+      "detectionPattern": "call <mustache>.to_html",
+      "suggestedFixDescription": "The behaviour of to_html has changed, to where null and undefined are not considered “hits” when found in a lookup. This means that instead of looking further up the parent tree, the render would instead use the falsy value. See [this comment](https://github.com/janl/mustache.js/issues/390#issue-39305428) for an example of the old and the new behaviour.",
+      "unknownAccessPathQuestion": "Is this a method call of the to_html function from the mustache package?"
+    },
+    "semanticPatchId": "1652",
+    "breakingChangeId": "533",
+    "enabled": false,
+    "comment": "Disabled, since it was included in the other patch"
+  }
+]

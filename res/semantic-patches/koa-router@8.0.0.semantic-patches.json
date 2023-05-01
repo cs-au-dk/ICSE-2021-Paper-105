@@ -1,0 +1,229 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "router.use('/nested/path', otherRouter.routes())",
+      "detectionPattern": "call <koa-router>().use 1:string 2:<koa-router>()"
+    },
+    "semanticPatchId": "1409",
+    "breakingChangeId": "274",
+    "enabled": true,
+    "comment": "router.use('/nested/path', otherRouter.routes())"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1409",
+      "comment": "router.use(path, otherrouter.routes())",
+      "version": 1,
+      "creationDate": "2022-03-14T13:06:37.000Z",
+      "detectionPattern": "call <koa-router>().use 0:string 1:function [2, 2]"
+    },
+    "semanticPatchId": "1409",
+    "breakingChangeId": "274",
+    "enabled": true,
+    "comment": "router.use(path, otherrouter.routes())"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "parentRouter.use(childRouter.routes());",
+      "detectionPattern": "call <router>"
+    },
+    "semanticPatchId": "1410",
+    "breakingChangeId": "274",
+    "enabled": true,
+    "comment": "parentRouter.use(childRouter.routes());"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <koa-router>().url 0:string 1:object 2:object [3,3]",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $3.query)",
+        "replacements": []
+      },
+      "detectionPattern": "call <koa-router>().url 0:string 1:object 2:object [3,3]"
+    },
+    "semanticPatchId": "1441",
+    "breakingChangeId": "302",
+    "enabled": true,
+    "comment": "call <koa-router>().url 0:string 1:object 2:object [3,3]"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <koa-router>.create.redirect",
+      "primaryTemplate": {
+        "pattern": " $base:callee($base:$1, $base:$2, (ctx) => ctx.redirect(ctx.redirect(ctx.router.path($base:$1))))",
+        "replacements": []
+      },
+      "detectionPattern": "call <koa-router>.create.redirect"
+    },
+    "semanticPatchId": "1442",
+    "breakingChangeId": "303",
+    "enabled": true,
+    "comment": "call <koa-router>.create.redirect"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1409",
+      "comment": "router.use(path, otherrouter.routes()).",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-14T13:06:37.000Z",
+      "detectionPattern": "call <koa-router>().use 0:string 1:function [2, 2]",
+      "suggestedFixDescription": "const router = new Router({prefix: '/nested/path'}); router.nest('/nested/path', otherRouter);"
+    },
+    "semanticPatchId": "1409",
+    "breakingChangeId": "274",
+    "enabled": true,
+    "comment": "router.use(path, otherrouter.routes())."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1442",
+      "comment": "call <koa-router>.create()**.redirect",
+      "version": 0,
+      "creationDate": "2022-03-24T11:03:16.000Z",
+      "primaryTemplate": {
+        "pattern": " $base:callee($base:$1, $base:$2, (ctx) => ctx.redirect(ctx.redirect(ctx.router.path($base:$1))))",
+        "replacements": []
+      },
+      "detectionPattern": "call <koa-router>.create()**.redirect"
+    },
+    "semanticPatchId": "1442",
+    "breakingChangeId": "303",
+    "enabled": true,
+    "comment": "call <koa-router>.create()**.redirect"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1410",
+      "comment": "delete this patch.",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-03-23T16:02:44.000Z",
+      "detectionPattern": "call <delete-this-patch>"
+    },
+    "semanticPatchId": "1410",
+    "breakingChangeId": "274",
+    "enabled": false,
+    "comment": "delete this patch."
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1409",
+      "comment": "router.use(path, someFunction())",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-23T15:30:57.000Z",
+      "detectionPattern": "call <koa-router>().use [2, 2]",
+      "suggestedFixDescription": "See changelog: https://github.com/koajs/router/blob/8.x/docs/UPGRADING.md"
+    },
+    "semanticPatchId": "1409",
+    "breakingChangeId": "274",
+    "enabled": true,
+    "comment": "router.use(path, someFunction())"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1410",
+      "comment": "call <koa-router>().use [1,1]",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-23T16:02:44.000Z",
+      "detectionPattern": "call <koa-router>().use [1,1]",
+      "suggestedFixDescription": "parentRouter.use(childRouter.routes());   becomes:   parentRouter.nest(childRouter);"
+    },
+    "semanticPatchId": "1410",
+    "breakingChangeId": "274",
+    "enabled": true,
+    "comment": "call <koa-router>().use [1,1]"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <koa-router>().{get,put,post,patch,delete,del}",
+      "detectionPattern": "call <koa-router>().{get,put,post,patch,delete,del}"
+    },
+    "semanticPatchId": "1460",
+    "breakingChangeId": "323",
+    "enabled": true,
+    "comment": "call <koa-router>().{get,put,post,patch,delete,del}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1460",
+      "comment": "call <koa-router>().{get,put,post,patch,delete,del}.",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-30T08:46:30.000Z",
+      "detectionPattern": "call <koa-router>().{get,put,post,patch,delete,del}"
+    },
+    "semanticPatchId": "1460",
+    "breakingChangeId": "323",
+    "enabled": true,
+    "comment": "call <koa-router>().{get,put,post,patch,delete,del}."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1441",
+      "comment": "call <koa-router>().url [3,3]",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-03-24T10:52:39.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $3.query)",
+        "replacements": []
+      },
+      "detectionPattern": "call <koa-router>().url [3,3]"
+    },
+    "semanticPatchId": "1441",
+    "breakingChangeId": "302",
+    "enabled": false,
+    "comment": "call <koa-router>().url [3,3]"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1409",
+      "comment": "router.use(path, otherrouter.routes())",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-14T13:14:05.000Z",
+      "primaryTemplate": {
+        "pattern": "const router = new Router({prefix: $1});\nrouter.use($2);",
+        "replacements": []
+      },
+      "detectionPattern": "call <koa-router>().use 0:string 1:function [2, 2]",
+      "suggestedFixDescription": "const router = new Router({prefix: '/nested/path'}); router.nest('/nested/path', otherRouter);"
+    },
+    "semanticPatchId": "1409",
+    "breakingChangeId": "274",
+    "enabled": true,
+    "comment": "router.use(path, otherrouter.routes())"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1410",
+      "comment": "delete this",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-14T13:08:06.000Z",
+      "detectionPattern": "call <a>"
+    },
+    "semanticPatchId": "1410",
+    "breakingChangeId": "274",
+    "enabled": true,
+    "comment": "delete this"
+  }
+]

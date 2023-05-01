@@ -1,0 +1,408 @@
+[
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1388",
+      "comment": "call <chalk>.{keyword,hsl,hsv,hwb,ansi} ",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-02-21T08:59:44.000Z",
+      "detectionPattern": "call <chalk>.{keyword,hsl,hsv,hwb,ansi}",
+      "suggestedFixDescription": "You can achieve the same by using: https://github.com/Qix-/color-convert"
+    },
+    "semanticPatchId": "1388",
+    "breakingChangeId": "255",
+    "enabled": false,
+    "comment": "call <chalk>.{keyword,hsl,hsv,hwb,ansi} "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1387",
+      "comment": "read chalk.{Instance,supportsColor,stderr,stderr.supportsColor}",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-02-22T16:29:44.000Z",
+      "primaryTemplate": {
+        "pattern": "<chalk>.#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "Instance => Chalk",
+              "supportsColor => supportsColor",
+              "stderr => chalkStderr",
+              "stderr.supportsColor => supportsColorStderr"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "read <chalk>.{Instance,supportsColor,stderr,stderr.supportsColor}"
+    },
+    "semanticPatchId": "1387",
+    "breakingChangeId": "254",
+    "enabled": true,
+    "comment": "read chalk.{Instance,supportsColor,stderr,stderr.supportsColor}"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1388",
+      "comment": "call <chalk>",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-02-22T16:31:02.000Z",
+      "detectionPattern": "call <chalk>.{*,keyword,hsl,hsv,hwb,ansi}",
+      "suggestedFixDescription": "You can achieve the same by using: https://github.com/Qix-/color-convert"
+    },
+    "semanticPatchId": "1388",
+    "breakingChangeId": "255",
+    "enabled": false,
+    "comment": "call <chalk>"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1388",
+      "comment": "call <chalk>.{*,keyword,hsl,hsv,hwb,ansi}{,.*}",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-02-22T17:14:33.000Z",
+      "detectionPattern": "call <chalk>.{*,keyword,hsl,hsv,hwb,ansi}{,.*}",
+      "suggestedFixDescription": "You can achieve the same by using: https://github.com/Qix-/color-convert"
+    },
+    "semanticPatchId": "1388",
+    "breakingChangeId": "255",
+    "enabled": false,
+    "comment": "call <chalk>.{*,keyword,hsl,hsv,hwb,ansi}{,.*}"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1388",
+      "comment": "call <chalk>.{keyword,hsl,hsv,hwb,ansi}",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-02-22T17:15:12.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.<color-convert>.#1.rbg($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <chalk>.{keyword,hsl,hsv,hwb,ansi}",
+      "suggestedFixDescription": "You can achieve the same by using: https://github.com/Qix-/color-convert"
+    },
+    "semanticPatchId": "1388",
+    "breakingChangeId": "255",
+    "enabled": false,
+    "comment": "call <chalk>.{keyword,hsl,hsv,hwb,ansi}"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1387",
+      "comment": "import chalk.{Instance,supportsColor,stderr,stderr.supportsColor}",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-02-22T16:29:44.000Z",
+      "primaryTemplate": {
+        "pattern": "<chalk>.#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "Instance => Chalk",
+              "supportsColor => supportsColor",
+              "stderr => chalkStderr",
+              "stderr.supportsColor => supportsColorStderr"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import <chalk>.{Instance,supportsColor,stderr,stderr.supportsColor}"
+    },
+    "semanticPatchId": "1387",
+    "breakingChangeId": "254",
+    "enabled": true,
+    "comment": "import chalk.{Instance,supportsColor,stderr,stderr.supportsColor}"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1387",
+      "comment": "read chalk.{Instance,supportsColor,stderr,stderr.supportsColor}",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-02-23T19:20:49.000Z",
+      "primaryTemplate": {
+        "pattern": "<chalk>.#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "Instance => Chalk",
+              "supportsColor => supportsColor",
+              "stderr => chalkStderr",
+              "stderr.supportsColor => supportsColorStderr"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "read <chalk>.{Instance,supportsColor,stderr,stderr.supportsColor}"
+    },
+    "semanticPatchId": "1387",
+    "breakingChangeId": "254",
+    "enabled": true,
+    "comment": "read chalk.{Instance,supportsColor,stderr,stderr.supportsColor}"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1387",
+      "comment": "read chalk.{Instance,supportsColor,stderr,stderr.supportsColor}",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-02-23T19:22:26.000Z",
+      "primaryTemplate": {
+        "pattern": "<chalk>.$prop [Instance => Chalk,supportsColor => supportsColor,stderr => chalkStderr,stderr.supportsColor => supportsColorStderr]",
+        "replacements": [
+          {
+            "source": "",
+            "newName": "",
+            "substitutes": [
+              ""
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "read <chalk>.{Instance,supportsColor,stderr,stderr.supportsColor}"
+    },
+    "semanticPatchId": "1387",
+    "breakingChangeId": "254",
+    "enabled": true,
+    "comment": "read chalk.{Instance,supportsColor,stderr,stderr.supportsColor}"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1387",
+      "comment": "read chalk.{Instance,supportsColor,stderr,stderr.supportsColor} ",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-02-23T19:22:26.000Z",
+      "detectionPattern": "read <chalk>.{Instance,supportsColor,stderr,stderr.supportsColor}",
+      "suggestedFixDescription": "Import the properties individually. The new import names are: chalk.Instance → Chalk     chalk.supportsColor → supportsColor     chalk.stderr → chalkStderr     chalk.stderr.supportsColor → supportsColorStderr."
+    },
+    "semanticPatchId": "1387",
+    "breakingChangeId": "254",
+    "enabled": true,
+    "comment": "read chalk.{Instance,supportsColor,stderr,stderr.supportsColor} "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1389",
+      "comment": "Skal slettes",
+      "enabled": false,
+      "version": 5,
+      "creationDate": "2022-02-21T09:18:47.000Z",
+      "detectionPattern": "read <chalk>.'*'"
+    },
+    "semanticPatchId": "1389",
+    "breakingChangeId": "256",
+    "enabled": false,
+    "comment": "Skal slettes"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1388",
+      "comment": "call <chalk>**.{keyword,hsl,hsv,hwb,ansi} ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-02-27T19:36:45.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.rgb(...<color-convert>.convert.$prop.rgb($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call <chalk>**.{keyword,hsl,hsv,hwb,ansi}",
+      "suggestedFixDescription": "You can achieve the same by using: https://github.com/Qix-/color-convert"
+    },
+    "semanticPatchId": "1388",
+    "breakingChangeId": "255",
+    "enabled": true,
+    "comment": "call <chalk>**.{keyword,hsl,hsv,hwb,ansi} "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "import chalk.Instance",
+      "detectionPattern": "import chalk.Instance"
+    },
+    "semanticPatchId": "1387",
+    "breakingChangeId": "254",
+    "enabled": true,
+    "comment": "import chalk.Instance"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1387",
+      "comment": "import chalk.{Instance,supportsColor,stderr,stderr.supportsColor}",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-02-21T08:34:13.000Z",
+      "primaryTemplate": {
+        "pattern": "<chalk>.#1[Instance => Chalk,supportsColor => supportsColor,stderr => chalkStderr,stderr.supportsColor => supportsColorStderr]",
+        "replacements": []
+      },
+      "detectionPattern": "import chalk.{Instance,supportsColor,stderr,stderr.supportsColor}"
+    },
+    "semanticPatchId": "1387",
+    "breakingChangeId": "254",
+    "enabled": false,
+    "comment": "import chalk.{Instance,supportsColor,stderr,stderr.supportsColor}"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <chalk>.{keyword,hsl,hsv,hwb,ansi}",
+      "detectionPattern": "call <chalk>.{keyword,hsl,hsv,hwb,ansi}"
+    },
+    "semanticPatchId": "1388",
+    "breakingChangeId": "255",
+    "enabled": true,
+    "comment": "call <chalk>.{keyword,hsl,hsv,hwb,ansi}"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <chalk>",
+      "detectionPattern": "read <chalk>.chalk"
+    },
+    "semanticPatchId": "1389",
+    "breakingChangeId": "256",
+    "enabled": true,
+    "comment": "read <chalk>"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1389",
+      "comment": "read <chalk>.`*`",
+      "version": 0,
+      "creationDate": "2022-02-21T09:13:22.000Z",
+      "detectionPattern": "read <chalk>.`*`"
+    },
+    "semanticPatchId": "1389",
+    "breakingChangeId": "256",
+    "enabled": true,
+    "comment": "read <chalk>.`*`"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1389",
+      "comment": "read <chalk>.`",
+      "version": 1,
+      "creationDate": "2022-02-21T09:13:44.000Z",
+      "detectionPattern": "read <chalk>.`"
+    },
+    "semanticPatchId": "1389",
+    "breakingChangeId": "256",
+    "enabled": true,
+    "comment": "read <chalk>.`"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1389",
+      "comment": "read <chalk>.chalk",
+      "version": 2,
+      "creationDate": "2022-02-21T09:15:12.000Z",
+      "detectionPattern": "read <chalk>.chalk"
+    },
+    "semanticPatchId": "1389",
+    "breakingChangeId": "256",
+    "enabled": true,
+    "comment": "read <chalk>.chalk"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1389",
+      "comment": "call <chalk>",
+      "version": 4,
+      "creationDate": "2022-02-21T09:17:02.000Z",
+      "detectionPattern": "call <chalk>"
+    },
+    "semanticPatchId": "1389",
+    "breakingChangeId": "256",
+    "enabled": true,
+    "comment": "call <chalk>"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1389",
+      "comment": "",
+      "enabled": false,
+      "version": 5,
+      "creationDate": "2022-02-21T09:18:47.000Z",
+      "detectionPattern": "read <chalk>.`*`"
+    },
+    "semanticPatchId": "1389",
+    "breakingChangeId": "256",
+    "enabled": false,
+    "comment": ""
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1387",
+      "comment": "import chalk.{Instance,supportsColor,stderr,stderr.supportsColor}",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-02-21T09:33:16.000Z",
+      "primaryTemplate": {
+        "pattern": "<chalk>.#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "Instance => Chalk",
+              "supportsColor => supportsColor",
+              "stderr => chalkStderr",
+              "stderr.supportsColor => supportsColorStderr"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import chalk.{Instance,supportsColor,stderr,stderr.supportsColor}"
+    },
+    "semanticPatchId": "1387",
+    "breakingChangeId": "254",
+    "enabled": false,
+    "comment": "import chalk.{Instance,supportsColor,stderr,stderr.supportsColor}"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1387",
+      "comment": "Fixed detection pattern - dots are not allowed in prop names list",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-02-26T15:35:31.000Z",
+      "detectionPattern": "read <chalk>.{Instance,supportsColor,stderr}",
+      "suggestedFixDescription": "Import the properties individually. The new import names are: chalk.Instance → Chalk     chalk.supportsColor → supportsColor     chalk.stderr → chalkStderr     chalk.stderr.supportsColor → supportsColorStderr.",
+      "unknownAccessPathQuestion": "Is the property read from chalk?"
+    },
+    "semanticPatchId": "1387",
+    "breakingChangeId": "254",
+    "enabled": true,
+    "comment": "Fixed detection pattern - dots are not allowed in prop names list"
+  }
+]

@@ -1,0 +1,720 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <bluebird>.settle"
+    },
+    "semanticPatchId": "1001",
+    "breakingChangeId": "5",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <bluebird>.spawn"
+    },
+    "semanticPatchId": "1002",
+    "breakingChangeId": "6",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <bluebird>.try [2, 3]"
+    },
+    "semanticPatchId": "1003",
+    "breakingChangeId": "7",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <bluebird>?**.nodeify",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1004",
+    "breakingChangeId": "8",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <bluebird>.fromNode"
+    },
+    "semanticPatchId": "1005",
+    "breakingChangeId": "9",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, {context: $2})"
+      },
+      "detectionPattern": "call <bluebird>.{promisify,promisifyAll,asCallback} [2, 2]",
+      "unknownAccessPathQuestion": "Is the called function from bluebird?"
+    },
+    "semanticPatchId": "1006",
+    "breakingChangeId": "10",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the first argument a function that calls its callback with more than two arguments?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, {multiArgs: true})"
+      },
+      "detectionPattern": "call <bluebird>.{promisify,asCallback} [1, 1]",
+      "unknownAccessPathQuestion": "Is the called function from bluebird?"
+    },
+    "semanticPatchId": "1007",
+    "breakingChangeId": "11",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the first argument a function that calls its callback with more than two arguments?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, Object.assign({}, $2, {multiArgs: true}))"
+      },
+      "detectionPattern": "call <bluebird>.{promisify,asCallback} [2, 2]",
+      "unknownAccessPathQuestion": "Is the function being called from bluebird?"
+    },
+    "semanticPatchId": "1008",
+    "breakingChangeId": "11",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the first argument an object with function properties that calls their callback with more than two arguments?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, {multiArgs: true})"
+      },
+      "detectionPattern": "call <bluebird>.promisifyAll [1, 1]",
+      "unknownAccessPathQuestion": "Is the function being called from bluebird?"
+    },
+    "semanticPatchId": "1009",
+    "breakingChangeId": "11",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the first argument an object with function properties that calls their callback with more than two arguments?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, Object.assign({}, $2, {multiArgs: true}))"
+      },
+      "detectionPattern": "call <bluebird>.promisifyAll [2, 2]",
+      "unknownAccessPathQuestion": "Is the function being called from bluebird?"
+    },
+    "semanticPatchId": "1010",
+    "breakingChangeId": "11",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <bluebird>?**.{cancellable,uncancellable}",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1011",
+    "breakingChangeId": "12",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <bluebird>?**.{progressed,progress}",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1012",
+    "breakingChangeId": "13",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <bluebird>?**.{then,done,fork} [3, 3]",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1013",
+    "breakingChangeId": "13",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Does the promise chain have unhandled rejections?",
+      "detectionPattern": "call <bluebird>?**.done",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1015",
+    "breakingChangeId": "15",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is this error handler used to catch errors created with Promise.reject or the reject callback of new Promise",
+      "primaryTemplate": {
+        "pattern": "$base.catch($args)"
+      },
+      "detectionPattern": "call <bluebird>?**.error [1, 1] 0:function",
+      "unknownAccessPathQuestion": "Is the receiver a Bluebird promise?"
+    },
+    "semanticPatchId": "1016",
+    "breakingChangeId": "16",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "bluebird/js/release/#1"
+      },
+      "detectionPattern": "import bluebird/js/main/*"
+    },
+    "semanticPatchId": "1017",
+    "breakingChangeId": "17",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <bluebird>?**.spread [2, 2]",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1014",
+    "breakingChangeId": "14",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1004",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>?**.nodeify",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1004",
+    "breakingChangeId": "8",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1001",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>.settle",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird Promise?"
+    },
+    "semanticPatchId": "1001",
+    "breakingChangeId": "5",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1002",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>.spawn",
+      "unknownAccessPathQuestion": "Is the receiver Bluebird?"
+    },
+    "semanticPatchId": "1002",
+    "breakingChangeId": "6",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1005",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>.fromNode",
+      "unknownAccessPathQuestion": "Is the receiver Bluebird?"
+    },
+    "semanticPatchId": "1005",
+    "breakingChangeId": "9",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1003",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>.try [2, 3]",
+      "unknownAccessPathQuestion": "Is the receiver Bluebird?"
+    },
+    "semanticPatchId": "1003",
+    "breakingChangeId": "7",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1011",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>?**.{cancellable,uncancellable}",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1011",
+    "breakingChangeId": "12",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1012",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>?**.{progressed,progress}",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1012",
+    "breakingChangeId": "13",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1013",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>?**.{then,done,fork} [3, 3]",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1013",
+    "breakingChangeId": "13",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1014",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>?**.spread [2, 2]",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1014",
+    "breakingChangeId": "14",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1016",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is this error handler used to catch errors created with Promise.reject or the reject callback of new Promise",
+      "primaryTemplate": {
+        "pattern": "$base.catch($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>?**.error [1, 1] 0:function",
+      "unknownAccessPathQuestion": "Is the receiver a Bluebird promise?"
+    },
+    "semanticPatchId": "1016",
+    "breakingChangeId": "16",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1015",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Does the promise chain have unhandled rejections?",
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>?**.done",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1015",
+    "breakingChangeId": "15",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1006",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, {context: $2})",
+        "replacements": []
+      },
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>.{promisify,promisifyAll,asCallback} [2, 2]",
+      "unknownAccessPathQuestion": "Is the called function from bluebird?"
+    },
+    "semanticPatchId": "1006",
+    "breakingChangeId": "10",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1007",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the first argument a function that calls its callback with more than two arguments?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, {multiArgs: true})",
+        "replacements": []
+      },
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>.{promisify,asCallback} [1, 1]",
+      "unknownAccessPathQuestion": "Is the called function from bluebird?"
+    },
+    "semanticPatchId": "1007",
+    "breakingChangeId": "11",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1008",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the first argument a function that calls its callback with more than two arguments?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, Object.assign({}, $2, {multiArgs: true}))",
+        "replacements": []
+      },
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>.{promisify,asCallback} [2, 2]",
+      "unknownAccessPathQuestion": "Is the function being called from bluebird?"
+    },
+    "semanticPatchId": "1008",
+    "breakingChangeId": "11",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1009",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the first argument an object with function properties that calls their callback with more than two arguments?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, {multiArgs: true})",
+        "replacements": []
+      },
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>.promisifyAll [1, 1]",
+      "unknownAccessPathQuestion": "Is the function being called from bluebird?"
+    },
+    "semanticPatchId": "1009",
+    "breakingChangeId": "11",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1010",
+      "comment": "Add additional import path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the first argument an object with function properties that calls their callback with more than two arguments?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, Object.assign({}, $2, {multiArgs: true}))",
+        "replacements": []
+      },
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>.promisifyAll [2, 2]",
+      "unknownAccessPathQuestion": "Is the function being called from bluebird?"
+    },
+    "semanticPatchId": "1010",
+    "breakingChangeId": "11",
+    "enabled": true,
+    "comment": "Add additional import path"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1001",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T08:23:15.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>.settle base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird Promise?"
+    },
+    "semanticPatchId": "1001",
+    "breakingChangeId": "5",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1002",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T08:23:55.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>.spawn base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver Bluebird?"
+    },
+    "semanticPatchId": "1002",
+    "breakingChangeId": "6",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1004",
+      "comment": "Added bases filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T08:24:20.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>?**.nodeify base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1004",
+    "breakingChangeId": "8",
+    "enabled": true,
+    "comment": "Added bases filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1005",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T08:25:23.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>.fromNode base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver Bluebird?"
+    },
+    "semanticPatchId": "1005",
+    "breakingChangeId": "9",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1003",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T08:47:56.000Z",
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>.try [2, 3] base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver Bluebird?"
+    },
+    "semanticPatchId": "1003",
+    "breakingChangeId": "7",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1011",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T08:48:28.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>?**.{cancellable,uncancellable} base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1011",
+    "breakingChangeId": "12",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1012",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T10:31:20.000Z",
+      "detectionPattern": "read <{bluebird,bluebird/js/main/promise}>?**.{progressed,progress} base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1012",
+    "breakingChangeId": "13",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1013",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T10:31:37.000Z",
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>?**.{then,done,fork} [3, 3] base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1013",
+    "breakingChangeId": "13",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1014",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T10:31:59.000Z",
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>?**.spread [2, 2] base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1014",
+    "breakingChangeId": "14",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1016",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T10:32:19.000Z",
+      "extraQuestion": "Is this error handler used to catch errors created with Promise.reject or the reject callback of new Promise",
+      "primaryTemplate": {
+        "pattern": "$base.catch($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>?**.error [1, 1] 0:function base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver a Bluebird promise?"
+    },
+    "semanticPatchId": "1016",
+    "breakingChangeId": "16",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1015",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T10:32:35.000Z",
+      "extraQuestion": "Does the promise chain have unhandled rejections?",
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>?**.done base:Promise",
+      "unknownAccessPathQuestion": "Is the receiver a bluebird promise?"
+    },
+    "semanticPatchId": "1015",
+    "breakingChangeId": "15",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1006",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T10:33:07.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, {context: $2})",
+        "replacements": []
+      },
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>.{promisify,promisifyAll,asCallback} [2, 2] base:Promise",
+      "unknownAccessPathQuestion": "Is the called function from bluebird?"
+    },
+    "semanticPatchId": "1006",
+    "breakingChangeId": "10",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1007",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-04T10:33:27.000Z",
+      "extraQuestion": "Is the first argument a function that calls its callback with more than two arguments?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, {multiArgs: true})",
+        "replacements": []
+      },
+      "detectionPattern": "call <{bluebird,bluebird/js/main/promise}>.{promisify,asCallback} [1, 1] base:promise",
+      "unknownAccessPathQuestion": "Is the called function from bluebird?"
+    },
+    "semanticPatchId": "1007",
+    "breakingChangeId": "11",
+    "enabled": true,
+    "comment": "Added base filter"
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "530",
+    "packageVersion": "10.0.0",
+    "packageName": "firebase-admin",
+    "description": "Dropped support for Node.js 10. Developers should use Node.js 12 or up when deploying the Admin SDK",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

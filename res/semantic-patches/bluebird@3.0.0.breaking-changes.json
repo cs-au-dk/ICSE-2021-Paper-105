@@ -1,0 +1,145 @@
+[
+  {
+    "id": "5",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": "Promise.settle has been deprecated. Use .reflect instead.",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "6",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": "Promise.spawn has been deprecated. Use Promise.coroutine instead.",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "8",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": ".nodeify is now better known as .asCallback",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "9",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": ".fromNode is now better known as Promise.fromCallback",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "7",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": "Promise.try's ctx and arg arguments have been deprecated.",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "12",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": "Cancellation redesign.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "13",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": "Promise progression has been completely removed.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "14",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": ".spread's second argument has been removed.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "16",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": "Errors created with Promise.reject or reject callback of new Promise are no longer marked as OperationalErrors.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "15",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": ".done causes an irrecoverable fatal error in Node.js environments now. See #471 for rationale.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "17",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": "Submodules moved from folder 'main' to folder 'release'",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "10",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": "If a second argument is passed to Promise.promisify, Promise.promisifyAll or Promise.asCallback, it should be wrapped inside an object, i.e., if the second argument is arg2, then the patch should make the second argument into the object {context: arg2}.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "11",
+    "packageVersion": "3.0.0",
+    "packageName": "bluebird",
+    "description": "Previously if the callback to be promisified was with  multiple values the resolved value was an array off all the arguments and just the value in the case of the callback only being called with one argument. Now by default the resolved value is always a single even though the callback is called multiple times. There is however an option that can be enabled, such that the resolved value always is an array (multiArgs). The patch could then use this option and in the case of a single element array, resolve with the single value.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

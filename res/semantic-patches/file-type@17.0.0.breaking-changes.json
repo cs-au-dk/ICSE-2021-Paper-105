@@ -1,0 +1,46 @@
+[
+  {
+    "id": "291",
+    "packageVersion": "17.0.0",
+    "packageName": "file-type",
+    "description": "Remove the /browser sub-export",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "292",
+    "packageVersion": "17.0.0",
+    "packageName": "file-type",
+    "description": "Moved from a default export to named exports",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "308",
+    "packageVersion": "17.0.0",
+    "packageName": "file-type",
+    "description": "Require Node.js 12.20",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "314",
+    "packageVersion": "17.0.0",
+    "packageName": "file-type",
+    "description": "This package is now pure ESM",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "443",
+    "packageVersion": "8.0.0",
+    "packageName": "commander",
+    "description": "Help method .visibleArguments() returns array of Argument",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "442",
+    "packageVersion": "8.0.0",
+    "packageName": "commander",
+    "description": "Commander 8 requires Node.js 12 or higher",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "452",
+    "packageVersion": "8.0.0",
+    "packageName": "commander",
+    "description": "TypeScript declaration for .addHelpText() callback no longer allows result of undefined, now just string",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "453",
+    "packageVersion": "8.0.0",
+    "packageName": "commander",
+    "description": "[Deprecated] second parameter of cmd.description(desc, argDescriptions) for adding argument descriptions ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "454",
+    "packageVersion": "8.0.0",
+    "packageName": "commander",
+    "description": "TypeScript declaration for default export of global Command object",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "447",
+    "packageVersion": "8.0.0",
+    "packageName": "commander",
+    "description": "CommanderError code commander.invalidOptionArgument renamed to commander.invalidArgument (#1508)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "458",
+    "packageVersion": "8.0.0",
+    "packageName": "commander",
+    "description": "If you have a simple commander-based program without an `.action()` handler, you will now get an error if you call the `program.parse` function or if your users run the program with fewer arguments than it requires. See these migrations tips for an example of the problem and how to fix it: https://github.com/tj/commander.js/blob/master/CHANGELOG.md#migration-tips",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

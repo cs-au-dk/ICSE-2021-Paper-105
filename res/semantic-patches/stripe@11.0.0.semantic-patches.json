@@ -1,0 +1,451 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "$base.latest_charge",
+        "replacements": []
+      },
+      "detectionPattern": "read <stripe>().paymentIntents.create().charges",
+      "unknownAccessPathQuestion": "Is the base a PaymentIntent from stripe?"
+    },
+    "semanticPatchId": "2152",
+    "breakingChangeId": "806",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "read <stripe>().sku**",
+      "unknownAccessPathQuestion": "Is the property read of a stripe object?"
+    },
+    "semanticPatchId": "2237",
+    "breakingChangeId": "813",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "apiKey",
+            "oldPropName": "api_key"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <stripe> 2:object",
+      "unknownAccessPathQuestion": "Is the callee the constructor from stripe?"
+    },
+    "semanticPatchId": "2151",
+    "breakingChangeId": "804",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2151",
+      "comment": "Added object modifiers",
+      "version": 0,
+      "creationDate": "2022-11-22T18:32:01.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "apiKey",
+            "oldPropName": "api_key"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "idempotencyKey",
+            "oldPropName": "idempotency_key"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "stripeAccount",
+            "oldPropName": "stripe_account"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "apiVersion",
+            "oldPropName": "stripe_version"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "apiVersion",
+            "oldPropName": "stripeVersion"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <stripe> 2:object",
+      "unknownAccessPathQuestion": "Is the callee the constructor from stripe?"
+    },
+    "semanticPatchId": "2151",
+    "breakingChangeId": "804",
+    "enabled": true,
+    "comment": "Added object modifiers"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2151",
+      "comment": "changed filters",
+      "version": 1,
+      "creationDate": "2022-11-22T18:33:45.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "apiKey",
+            "oldPropName": "api_key"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "idempotencyKey",
+            "oldPropName": "idempotency_key"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "stripeAccount",
+            "oldPropName": "stripe_account"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "apiVersion",
+            "oldPropName": "stripe_version"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "apiVersion",
+            "oldPropName": "stripeVersion"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <stripe> 1:object",
+      "unknownAccessPathQuestion": "Is the callee the constructor from stripe?"
+    },
+    "semanticPatchId": "2151",
+    "breakingChangeId": "804",
+    "enabled": true,
+    "comment": "changed filters"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2237",
+      "comment": "changed detection pattern",
+      "version": 0,
+      "creationDate": "2022-11-25T10:21:39.000Z",
+      "detectionPattern": "read <stripe>().sku.{create,retrieve,update,list,del}",
+      "unknownAccessPathQuestion": "Is the property read of a stripe object?"
+    },
+    "semanticPatchId": "2237",
+    "breakingChangeId": "813",
+    "enabled": true,
+    "comment": "changed detection pattern"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "read <stripe>().orders.{create,retrieve,update,list,cancel,listLineItems,reopen,submit}",
+      "unknownAccessPathQuestion": "Is the method called on the Orders resource from Stripe?"
+    },
+    "semanticPatchId": "2238",
+    "breakingChangeId": "814",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2237",
+      "comment": "It's skus not sku",
+      "version": 1,
+      "creationDate": "2022-11-25T11:00:40.000Z",
+      "detectionPattern": "read <stripe>().skus.{create,retrieve,update,list,del}",
+      "unknownAccessPathQuestion": "Is the property read of a stripe object?"
+    },
+    "semanticPatchId": "2237",
+    "breakingChangeId": "813",
+    "enabled": true,
+    "comment": "It's skus not sku"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <stripe>().checkout.sessions.create 0.payment_method_options.paynow:any",
+      "unknownAccessPathQuestion": "Is the create method called on CheckoutSessions from stripe?"
+    },
+    "semanticPatchId": "2239",
+    "breakingChangeId": "815",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <stripe>().checkout.sessions.create 0.subscription_data.items:array",
+      "unknownAccessPathQuestion": "Is the create method on CheckoutSessions called with the subscription_data.items property?"
+    },
+    "semanticPatchId": "2240",
+    "breakingChangeId": "816",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <stripe>().{setHost,setProtocol,setPort,setApiVersion,setApiKey,setTimeout,setAppInfo,setHttpAgent,setMaxNetworkRetries,setTelemetryEnabled}",
+      "suggestedFixDescription": "Instead of using the settere methods, use the config object to set these options. E.g. instead of using stripe.setPort(123), set the port option, when creating the stripe object: const stripe = new Stripe('sk_test_...', { port: 123 })",
+      "unknownAccessPathQuestion": "Is the callee called on the stripe object?"
+    },
+    "semanticPatchId": "2241",
+    "breakingChangeId": "817",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2241",
+      "comment": "updated suggested fix",
+      "version": 0,
+      "creationDate": "2022-11-26T12:15:50.000Z",
+      "detectionPattern": "call <stripe>().{setHost,setProtocol,setPort,setApiVersion,setApiKey,setTimeout,setAppInfo,setHttpAgent,setMaxNetworkRetries,setTelemetryEnabled}",
+      "suggestedFixDescription": "Instead of using the settere methods, use the config object to set these options. \nE.g. instead of using stripe.setPort(123), set the port option, when creating the stripe object: const stripe = new Stripe('sk_test_...', { port: 123 })",
+      "unknownAccessPathQuestion": "Is the callee called on the stripe object?"
+    },
+    "semanticPatchId": "2241",
+    "breakingChangeId": "817",
+    "enabled": true,
+    "comment": "updated suggested fix"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "$base:base.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <stripe>.StripeSignatureVerificationError.detail.{header,payload}",
+      "unknownAccessPathQuestion": "Is the base a StripeSignatureVerificationError from stripe?"
+    },
+    "semanticPatchId": "2245",
+    "breakingChangeId": "821",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2245",
+      "comment": "updated detection pattern",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-28T16:29:22.000Z",
+      "primaryTemplate": {
+        "pattern": "$base:base.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <stripe>.StripeSignatureVerificationError?.detail.{header,payload}",
+      "unknownAccessPathQuestion": "Is the base a StripeSignatureVerificationError from stripe?"
+    },
+    "semanticPatchId": "2245",
+    "breakingChangeId": "821",
+    "enabled": true,
+    "comment": "updated detection pattern"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2245",
+      "comment": "updated unknown access path question to be more guiding",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-29T15:10:22.000Z",
+      "primaryTemplate": {
+        "pattern": "$base:base.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <stripe>.StripeSignatureVerificationError?.detail.{header,payload}",
+      "unknownAccessPathQuestion": "Is the detail property read off a StripeSignatureVerificationError from stripe?"
+    },
+    "semanticPatchId": "2245",
+    "breakingChangeId": "821",
+    "enabled": true,
+    "comment": "updated unknown access path question to be more guiding"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <stripe>.checkout.sessions.create 0.line_items.amount:any",
+      "unknownAccessPathQuestion": "Is the callee the create method to create a Checkout Session object?"
+    },
+    "semanticPatchId": "2263",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2263",
+      "comment": "changed detection pattern",
+      "version": 0,
+      "creationDate": "2022-12-02T10:12:37.000Z",
+      "detectionPattern": "call <stripe>.checkout.sessions.create 0.line_items:array",
+      "unknownAccessPathQuestion": "Is the callee the create method to create a Checkout Session object?"
+    },
+    "semanticPatchId": "2263",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "changed detection pattern"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2263",
+      "comment": "changed to detect calls on stripe objects",
+      "version": 1,
+      "creationDate": "2022-12-02T10:12:55.000Z",
+      "extraQuestion": "Is the amount property sat on the LineItems?",
+      "detectionPattern": "call <stripe>().checkout.sessions.create 0.line_items:any",
+      "unknownAccessPathQuestion": "Is the callee the create method to create a Checkout Session object?"
+    },
+    "semanticPatchId": "2263",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "changed to detect calls on stripe objects"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2263",
+      "comment": "Removed question to make it an unlikely breaking change",
+      "version": 2,
+      "creationDate": "2022-12-02T10:27:38.000Z",
+      "detectionPattern": "call <stripe>().checkout.sessions.create 0.line_items:any",
+      "unknownAccessPathQuestion": "Is the callee the create method to create a Checkout Session object?"
+    },
+    "semanticPatchId": "2263",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "Removed question to make it an unlikely breaking change"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <stripe>().checkout.sessions.expire",
+      "unknownAccessPathQuestion": "Is the callee called on Checkout Session from stripe?"
+    },
+    "semanticPatchId": "2264",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2264",
+      "comment": "updated detection pattern",
+      "version": 0,
+      "creationDate": "2022-12-02T10:31:07.000Z",
+      "detectionPattern": "call <stripe>().checkout.sessions.expire().line_items",
+      "unknownAccessPathQuestion": "Is the callee called on Checkout Session from stripe?"
+    },
+    "semanticPatchId": "2264",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "updated detection pattern"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <stripe>().checkout.sessions.retrieve().line_items",
+      "unknownAccessPathQuestion": "Is the callee dfs"
+    },
+    "semanticPatchId": "2265",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2265",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-12-02T10:34:17.000Z",
+      "detectionPattern": "call <stripe>().checkout.sessions.retrieve().line_items",
+      "unknownAccessPathQuestion": "Is the callee called on Checkout Session from stripe?"
+    },
+    "semanticPatchId": "2265",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <stripe>().checkout.sessions.listLineItems",
+      "unknownAccessPathQuestion": "Is the callee called on Checkout Session from stripe?"
+    },
+    "semanticPatchId": "2266",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <stripe>().checkout.sessions.list().data",
+      "unknownAccessPathQuestion": "Does this property contain an array of ListItems?"
+    },
+    "semanticPatchId": "2267",
+    "breakingChangeId": "807",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <stripe>.StripeResource.extend 0.includeBasic:array",
+      "unknownAccessPathQuestion": "Is the callee from stripe?"
+    },
+    "semanticPatchId": "2318",
+    "breakingChangeId": "854",
+    "enabled": true,
+    "comment": "init"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "547",
+    "packageVersion": "5.0.0",
+    "packageName": "@google-cloud/storage",
+    "description": "automatically detect contentType if not provided",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "546",
+    "packageVersion": "5.0.0",
+    "packageName": "@google-cloud/storage",
+    "description": "drop support for node.js 8.x. You will need to use atleast node v. ^10.0.0 to be able to use @google-cloud/storage@5.0.0",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "550",
+    "packageVersion": "5.0.0",
+    "packageName": "@google-cloud/storage",
+    "description": "drop keepAcl parameter in file copy",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

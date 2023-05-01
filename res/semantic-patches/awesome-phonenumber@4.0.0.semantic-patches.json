@@ -1,0 +1,264 @@
+[
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2249",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-29T15:16:55.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.number.e164",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().getNumber [1,1] 0:\"e164\" base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a call of the getNumber  method from the awesome-phonenumber package?"
+    },
+    "semanticPatchId": "2249",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.number.international",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().getNumber [1,1] 0:\"international\" base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a call of the getNumber method from the awesome-phonenumber package?"
+    },
+    "semanticPatchId": "2250",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.number.national",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().getNumber [1,1] 0:\"national\" base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a call of the getNumber method from the awesome-phonenumber?"
+    },
+    "semanticPatchId": "2251",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee($1, { regionCode: $2 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber",
+      "unknownAccessPathQuestion": "Is this a call of the parsePhoneNumber from the awesome-phonenumber package?"
+    },
+    "semanticPatchId": "2246",
+    "breakingChangeId": "822",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[isValid=> valid,isPossible=> possible,getType=> type,isMobile=> typeIsMobile,isFixedLine=> typeIsFixedLine,getRegionCode=> regionCode,getCountryCode=> countryCode]",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().{isValid,isPossible,getType,isMobile,isFixedLine,getRegionCode,getCountryCode} base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a function call on a number returned by parsePhoneNumber?"
+    },
+    "semanticPatchId": "2247",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2247",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-29T15:05:14.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[isValid=> valid,isPossible=> possible,getType=> type,isMobile=> typeIsMobile,isFixedLine=> typeIsFixedLine,getRegionCode=> regionCode,getCountryCode=> countryCode,canBeInternationallyDialled=> canBeInternationallyDialled]",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().{isValid,isPossible,getType,isMobile,isFixedLine,getRegionCode,getCountryCode,canBeInternationallyDialled} base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a function call on a number returned by parsePhoneNumber?"
+    },
+    "semanticPatchId": "2247",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "initial",
+      "primaryTemplate": {
+        "pattern": "$base.number.input",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().getNumber [0,0] base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a call of the getNumber method from awesome-phonenumber?"
+    },
+    "semanticPatchId": "2248",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.number.e164",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().getNumber [1,1] 0:”e164” base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a call of the getNumber  method from the awesome-phonenumber package?"
+    },
+    "semanticPatchId": "2249",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.number.significant",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().getNumber [1,1] 0:\"significant\" base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a call of the getNumber method from the awesome-phonenumber package?"
+    },
+    "semanticPatchId": "2252",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.number.rfc3966",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().getNumber [1,1] 0:\"rfc3966\" base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a call of the getNumber method from the awesome-phonenumber package?"
+    },
+    "semanticPatchId": "2253",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<awesome-phonenumber>.getNumberFrom($base, $1)",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().getNumberFrom [1,1] base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "unknownAccessPathQuestion": "Is this a call of a getNumberFrom method from the awesome-phonenumber package?"
+    },
+    "semanticPatchId": "2254",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().toJSON [1,1] base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "suggestedFixDescription": "The return value of parsePhoneNumber has been transformed into a json object, hence most calls to the toJSON method on this return value are no longer needed and can be removed without complications.",
+      "unknownAccessPathQuestion": "Is this a call of a toJSON method from the awesome-phonenumber package?"
+    },
+    "semanticPatchId": "2255",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2255",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-29T15:32:20.000Z",
+      "detectionPattern": "call <awesome-phonenumber>.parsePhoneNumber().toJSON base:{ParsedPhoneNumberValid,ParsedPhoneNumberInvalid}",
+      "suggestedFixDescription": "The return value of parsePhoneNumber has been transformed into a json object, hence most calls to the toJSON method on this return value are no longer needed and can be removed without complications.",
+      "unknownAccessPathQuestion": "Is this a call of a toJSON method from the awesome-phonenumber package?"
+    },
+    "semanticPatchId": "2255",
+    "breakingChangeId": "823",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<awesome-phonenumber>.parsePhoneNumber($1)",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber>() [1,1]",
+      "unknownAccessPathQuestion": "is this a call of the awesome-phonenumber constructor?"
+    },
+    "semanticPatchId": "2256",
+    "breakingChangeId": "824",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2256",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-29T15:49:56.000Z",
+      "primaryTemplate": {
+        "pattern": "<awesome-phonenumber>.parsePhoneNumber($1)",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber> [1,1]",
+      "unknownAccessPathQuestion": "is this a call of the awesome-phonenumber constructor?"
+    },
+    "semanticPatchId": "2256",
+    "breakingChangeId": "824",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<awesome-phonenumber>.parsePhoneNumber($1, { regionCode: $2 } )",
+        "replacements": []
+      },
+      "detectionPattern": "call <awesome-phonenumber> [2,2]",
+      "unknownAccessPathQuestion": "Is this a call of the awesome-phonenumber constructor?"
+    },
+    "semanticPatchId": "2257",
+    "breakingChangeId": "824",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

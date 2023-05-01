@@ -1,0 +1,35 @@
+[
+  {
+    "id": "257",
+    "packageVersion": "13.0.0",
+    "packageName": "prom-client",
+    "description": "The following functions are now async (return a promise): registry.metrics() registry.getMetricsAsJSON() registry.getMetricsAsArray() registry.getSingleMetricAsString(), metric.get()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "258",
+    "packageVersion": "13.0.0",
+    "packageName": "prom-client",
+    "description": "register.clusterMetrics() no longer accepts a callback; it only returns a promise.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "259",
+    "packageVersion": "13.0.0",
+    "packageName": "prom-client",
+    "description": "v12.0.0 added the undocumented functions registry.registerCollector and registry.collectors(). These have been removed. If you were using them, you should instead provide a collect function as described in the changelog. (https://github.com/siimon/prom-client/blob/master/CHANGELOG.md#breaking-2)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "135",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "Enhance: make sure header names and values are valid in HTTP",
+    "deprecation": false,
+    "askBeforePatch": true,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "134",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "Major: remove headers.getAll(); make get() return all headers delimited by commas (per spec)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "132",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "Major: internal methods are no longer exposed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "133",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "Major: throw error when a GET or HEAD Request is constructed with a non-null body (per spec)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "136",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "Enhance: add response.arrayBuffer() (also applies to Requests)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "131",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "Major: make response.json() throw error instead of returning an empty object on 204 no-content respose (per spec; reverts behavior changed in v1.6.2)",
+    "deprecation": false,
+    "askBeforePatch": true,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "137",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "request.url can no longer be written in a property write",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "129",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "Major: require('node-fetch/lib/response') etc. is now unsupported; use require('node-fetch').Response or ES6 module imports",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "130",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "Major: response.text() no longer attempts to detect encoding, instead always opting for UTF-8 (per spec); use response.textConverted() for the v1 behavior",
+    "deprecation": false,
+    "askBeforePatch": true,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "190",
+    "packageVersion": "2.0.0",
+    "packageName": "node-fetch",
+    "description": "Node.js 0.10.x and 0.12.x support is dropped",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

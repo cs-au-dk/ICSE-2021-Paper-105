@@ -1,0 +1,68 @@
+[
+  {
+    "id": "375",
+    "packageVersion": "5.0.0",
+    "packageName": "csv-parse",
+    "description": "refactor: rename skip_lines_with_empty_values to skip_records_with_empty_values",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "376",
+    "packageVersion": "5.0.0",
+    "packageName": "csv-parse",
+    "description": "refactor: rename skip_lines_with_error to skip_records_with_error",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "378",
+    "packageVersion": "5.0.0",
+    "packageName": "csv-parse",
+    "description": "Removed default export",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "379",
+    "packageVersion": "5.0.0",
+    "packageName": "csv-parse",
+    "description": "Remove lib subfolder",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "381",
+    "packageVersion": "5.0.0",
+    "packageName": "csv-parse",
+    "description": "Rename option relax to relax_quotes",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "407",
+    "packageVersion": "5.0.0",
+    "packageName": "csv-parse",
+    "description": "CommonJS imports not supported",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "499",
+    "packageVersion": "28.0.0",
+    "packageName": "ts-jest",
+    "description": "Any imports ts-jest/dist/compiler/ts-compiler should change to ts-jest/dist/legacy/compiler/ts-compiler",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "500",
+    "packageVersion": "28.0.0",
+    "packageName": "ts-jest",
+    "description": "Any imports ts-jest/dist/compiler/ts-jest-compiler should change to ts-jest/dist/legacy/compiler/ts-jest-compiler",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "501",
+    "packageVersion": "28.0.0",
+    "packageName": "ts-jest",
+    "description": "Any imports ts-jest/dist/config/config-set should change to ts-jest/dist/legacy/config/config-set",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "502",
+    "packageVersion": "28.0.0",
+    "packageName": "ts-jest",
+    "description": "Minimum support TypeScript version is now 4.3 since Jest 28 requires it",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "503",
+    "packageVersion": "28.0.0",
+    "packageName": "ts-jest",
+    "description": "Jest 28 is required.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "504",
+    "packageVersion": "28.0.0",
+    "packageName": "ts-jest",
+    "description": "Support for Node.js v10 has been removed as Jest drops support for it.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "505",
+    "packageVersion": "28.0.0",
+    "packageName": "ts-jest",
+    "description": "core: Any imports ts-jest/utils should be replaced with ts-jest.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "506",
+    "packageVersion": "28.0.0",
+    "packageName": "ts-jest",
+    "description": "Starting from Jest 27.4, mocked has been integrated into Jest repo.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

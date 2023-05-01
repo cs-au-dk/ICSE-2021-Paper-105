@@ -1,0 +1,120 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<ts-jest/dist/legacy/compiler/ts-compiler>",
+        "replacements": []
+      },
+      "detectionPattern": "import ts-jest/dist/compiler/ts-compiler",
+      "unknownAccessPathQuestion": "Is this an import of ts-jest/dist/compiler/ts-compiler"
+    },
+    "semanticPatchId": "1629",
+    "breakingChangeId": "499",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "ts-jest/dist/legacy/compiler/ts-jest-compiler",
+        "replacements": []
+      },
+      "detectionPattern": "import ts-jest/dist/compiler/ts-jest-compiler",
+      "unknownAccessPathQuestion": "Is this an import of ts-jest/dist/compiler/ts-jest-compiler?"
+    },
+    "semanticPatchId": "1630",
+    "breakingChangeId": "500",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1629",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-24T09:27:36.000Z",
+      "primaryTemplate": {
+        "pattern": "ts-jest/dist/legacy/compiler/ts-compiler",
+        "replacements": []
+      },
+      "detectionPattern": "import ts-jest/dist/compiler/ts-compiler",
+      "unknownAccessPathQuestion": "Is this an import of ts-jest/dist/compiler/ts-compiler"
+    },
+    "semanticPatchId": "1629",
+    "breakingChangeId": "499",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "ts-jest/dist/legacy/config/config-set",
+        "replacements": []
+      },
+      "detectionPattern": "import ts-jest/dist/config/config-set",
+      "unknownAccessPathQuestion": "Is this an import of ts-jest/dist/config/config-set?"
+    },
+    "semanticPatchId": "1631",
+    "breakingChangeId": "501",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "ts-jest",
+        "replacements": []
+      },
+      "detectionPattern": "import ts-jest/utils",
+      "unknownAccessPathQuestion": "Is this an import of ts-jest/utils?"
+    },
+    "semanticPatchId": "1632",
+    "breakingChangeId": "505",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<jest-mock>.mocked",
+        "replacements": []
+      },
+      "detectionPattern": "call <ts-jest/utils>.mocked",
+      "unknownAccessPathQuestion": "Is this a call to the mocked function from the ts-jest package?"
+    },
+    "semanticPatchId": "1633",
+    "breakingChangeId": "506",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1633",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-25T08:25:36.000Z",
+      "primaryTemplate": {
+        "pattern": "<jest-mock>.mocked($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <ts-jest/utils>.mocked",
+      "unknownAccessPathQuestion": "Is this a call to the mocked function from the ts-jest package?"
+    },
+    "semanticPatchId": "1633",
+    "breakingChangeId": "506",
+    "enabled": true,
+    "comment": "Initial "
+  }
+]

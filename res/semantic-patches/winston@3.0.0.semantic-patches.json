@@ -1,0 +1,557 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <winston>.setLevels",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1297",
+    "breakingChangeId": "165",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.ExceptionHandler()"
+      },
+      "detectionPattern": "read <winston>.exception",
+      "unknownAccessPathQuestion": "Is the receiver winston?"
+    },
+    "semanticPatchId": "1314",
+    "breakingChangeId": "175",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<winston-transport>"
+      },
+      "detectionPattern": "read <winston>.Transport",
+      "unknownAccessPathQuestion": "Is the receiver winston?"
+    },
+    "semanticPatchId": "1301",
+    "breakingChangeId": "167",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<winston-compat>.log"
+      },
+      "detectionPattern": "read <winston>.common.log",
+      "unknownAccessPathQuestion": "Is the receiver winston.common?"
+    },
+    "semanticPatchId": "1320",
+    "breakingChangeId": "179",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Does the options object NOT include transports?",
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign($1, {\n    transports: [\n      new winston.transports.Console({\n        level: 'silly',\n        colorize: false\n      })\n    ]\n  }))"
+      },
+      "detectionPattern": "call <winston>.Container [1, 1]",
+      "unknownAccessPathQuestion": "Is the receiver winston?"
+    },
+    "semanticPatchId": "1306",
+    "breakingChangeId": "169",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, (((opts) => {\n  const existing = opts.transports || $base.options.transports;\n  opts.transports = existing ? existing.slice() : [];\n  Object.keys(opts).forEach(function (key) {\n    if (key === 'transports' || key === 'filters' || key === 'rewriters') {\n      return;\n    }\n\n    var name = key[0].toUpperCase() + key.slice(1);\n\n    if (!<winston>.transports[name]) {\n      throw new Error('Cannot add unknown transport: ' + name);\n    }\n\n    var namedOptions = opts[key];\n    namedOptions.id = $1;\n    opts.transports.push(new (<winston>.transports[name])(namedOptions));\n  });\n})()))"
+      },
+      "detectionPattern": "read <winston>.Container()?**.add",
+      "unknownAccessPathQuestion": "Is the receiver a winston Container?"
+    },
+    "semanticPatchId": "1307",
+    "breakingChangeId": "170",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <winston>?**.{rewriters,filters}",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1322",
+    "breakingChangeId": "181",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((str) => <crypto>.createHash('sha1').update(str).digest('hex'))"
+      },
+      "detectionPattern": "readO <winston>.hash",
+      "unknownAccessPathQuestion": "Is the receiver winston?"
+    },
+    "semanticPatchId": "1315",
+    "breakingChangeId": "176",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(((opts) => Object.assign({}, opts, opts.stderrLevels ? {} : {stderrLevels: opts.debugStdout ? ['error'] : ['error', 'debug']}))($1), $2)"
+      },
+      "detectionPattern": "call <winston>.transports.Console [2, 2]",
+      "unknownAccessPathQuestion": "Is the receiver winston.transports?"
+    },
+    "semanticPatchId": "1304",
+    "breakingChangeId": "168",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.filter(transport => transport instanceof <winston>.transports.Console)[0]"
+      },
+      "detectionPattern": "read <winston>?**.console",
+      "unknownAccessPathQuestion": "Is the receiver the transports object of a winston logger?"
+    },
+    "semanticPatchId": "1323",
+    "breakingChangeId": "182",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(new $1())"
+      },
+      "detectionPattern": "call <winston>?**.add [1, 1] 0:function",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1310",
+    "breakingChangeId": "172",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.createLogger($args)"
+      },
+      "detectionPattern": "call <winston>.Logger",
+      "unknownAccessPathQuestion": "Is the called function winston.Logger?"
+    },
+    "semanticPatchId": "1295",
+    "breakingChangeId": "164",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <winston>?**.log [3, 3] 2:function",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1309",
+    "breakingChangeId": "171",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<crypto>.createHash('sha1').update($1).digest('hex')"
+      },
+      "detectionPattern": "call <winston>.hash",
+      "unknownAccessPathQuestion": "Is the receiver winston?"
+    },
+    "semanticPatchId": "1316",
+    "breakingChangeId": "176",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the transport option set?",
+      "primaryTemplate": {
+        "pattern": "(((opts) => {\n    const transport = $base.transports[opts.transport.toLowerCase()]\n    if (opts.query) {\n        opts.query = transport.formatQuery(Object.assign({}, opts.query));\n    }\n\n    transport.query(opts, function (err, results) {\n        if (err) {\n            return $2(err);\n        }\n        $2(null, transport.formatResults(results, opts.format));\n    });\n})($1))"
+      },
+      "detectionPattern": "call <winston>?**.query [2, 2] 1:function",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1313",
+    "breakingChangeId": "174",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.Stream"
+      },
+      "detectionPattern": "readO <winston>.transports.Memory",
+      "unknownAccessPathQuestion": "Is the receiver winston.transports?"
+    },
+    "semanticPatchId": "1298",
+    "breakingChangeId": "166",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.Stream({stream: new <stream>.Writable()})"
+      },
+      "detectionPattern": "call <winston>.transports.Memory [0, 0]",
+      "unknownAccessPathQuestion": "Is the receiver winston.transports?"
+    },
+    "semanticPatchId": "1299",
+    "breakingChangeId": "166",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee({\n    transports: [\n      new winston.transports.Console({\n        level: 'silly',\n        colorize: false\n      })\n    ]\n  })"
+      },
+      "detectionPattern": "call <winston>.Container [0, 0]",
+      "unknownAccessPathQuestion": "Is the receiver winston?"
+    },
+    "semanticPatchId": "1305",
+    "breakingChangeId": "169",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Does the options argument include formatting options?",
+      "primaryTemplate": {
+        "pattern": "new $callee((function(opts) {\n      const newOpts = {};\n      const formatArray = [];\n      const formatOptions = {\n        stringify: () => <winston>.format((info) => { info.message = JSON.stringify(info.message); })(),\n        formatter: () => <winston>.format((info) => { info.message = opts.formatter(Object.assign(info, opts)); })(),\n        json: () => <winston>.format.json(),\n        raw: () => <winston>.format.json(),\n        label: () => <winston>.format.label(opts.label),\n        logstash: () => <winston>.format.logstash(),\n        prettyPrint: () => <winston>.format.prettyPrint({depth: opts.depth || 2}),\n        colorize: () => <winston>.format.colorize({level: opts.colorize === true || opts.colorize === 'level', all: opts.colorize === 'all', message: opts.colorize === 'message'}),\n        timestamp: () => <winston>.format.timestamp(),\n        align: () => <winston>.format.align(),\n        showLevel: () => <winston>.format((info) => { info.message = info.level + ': ' + info.message; })()\n      }\n      Object.keys(opts).filter(k => !formatOptions.hasOwnProperty(k)).forEach((k) => { newOpts[k] = opts[k]; });\n      Object.keys(opts).filter(k => formatOptions.hasOwnProperty(k) && formatOptions[k]).forEach(k => formatArray.push(formatOptions[k]()));\n      newOpts.format = <winston>.format.combine(...formatArray);\n      return newOpts;\n    })($1))"
+      },
+      "detectionPattern": "call <winston>.transports.{File,Console,Http} [1, 1]",
+      "unknownAccessPathQuestion": "Is the receiver winston.transports?"
+    },
+    "semanticPatchId": "1321",
+    "breakingChangeId": "180",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee({stderrLevels: ['error', 'debug']})"
+      },
+      "detectionPattern": "call <winston>.transports.Console [0, 0]",
+      "unknownAccessPathQuestion": "Is the receiver winston.transports?"
+    },
+    "semanticPatchId": "1302",
+    "breakingChangeId": "168",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(((opts) => Object.assign({}, opts, opts.stderrLevels ? {} : {stderrLevels: opts.debugStdout ? ['error'] : ['error', 'debug']}))($1))"
+      },
+      "detectionPattern": "call <winston>.transports.Console [1, 1]",
+      "unknownAccessPathQuestion": "Is the receiver winston.transports?"
+    },
+    "semanticPatchId": "1303",
+    "breakingChangeId": "168",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <winston>?**.{info,warn,error} [2, 2] 1:function",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1308",
+    "breakingChangeId": "171",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the transport option set?",
+      "primaryTemplate": {
+        "pattern": "(((opts) => {\n    const transport = $base.transports[opts.transport]\n    delete opts.transport;\n    if (transport && transport.stream)\n        return transport.stream(opts);\n    return $callee(opts);\n})())"
+      },
+      "detectionPattern": "call <winston>?**.stream [1, 1]",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1312",
+    "breakingChangeId": "173",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<winston-compat>.serialize"
+      },
+      "detectionPattern": "read <winston>.common.serialize",
+      "unknownAccessPathQuestion": "Is the receiver winston.common?"
+    },
+    "semanticPatchId": "1319",
+    "breakingChangeId": "178",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((n) => n < 10 ? '0' + n.toString(10) : n.toString(10))"
+      },
+      "detectionPattern": "readO <winston>.common.pad",
+      "unknownAccessPathQuestion": "Is the receiver winston.common?"
+    },
+    "semanticPatchId": "1317",
+    "breakingChangeId": "177",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.createLogger().constructor.__proto__"
+      },
+      "detectionPattern": "readO <winston>.Logger",
+      "unknownAccessPathQuestion": "Is the read property winston.Logger?"
+    },
+    "semanticPatchId": "1296",
+    "breakingChangeId": "164",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($1 < 10 ? '0' + $1.toString(10) : $1.toString(10))"
+      },
+      "detectionPattern": "call <winston>.common.pad",
+      "unknownAccessPathQuestion": "Is the receiver winston.common?"
+    },
+    "semanticPatchId": "1318",
+    "breakingChangeId": "177",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(new $1((function(opts) {\n      const newOpts = {};\n      const formatArray = [];\n      const formatOptions = {\n        stringify: () => <winston>.format((info) => { info.message = JSON.stringify(info.message); })(),\n        formatter: () => <winston>.format((info) => { info.message = opts.formatter(Object.assign(info, opts)); })(),\n        json: () => <winston>.format.json(),\n        raw: () => <winston>.format.json(),\n        label: () => <winston>.format.label(opts.label),\n        logstash: () => <winston>.format.logstash(),\n        prettyPrint: () => <winston>.format.prettyPrint({depth: opts.depth || 2}),\n        colorize: () => <winston>.format.colorize({level: opts.colorize === true || opts.colorize === 'level', all: opts.colorize === 'all', message: opts.colorize === 'message'}),\n        timestamp: () => <winston>.format.timestamp(),\n        align: () => <winston>.format.align(),\n        showLevel: () => <winston>.format((info) => { info.message = info.level + ': ' + info.message; })()\n      }\n      Object.keys(opts).filter(k => !formatOptions.hasOwnProperty(k)).forEach((k) => { newOpts[k] = opts[k]; });\n      Object.keys(opts).filter(k => formatOptions.hasOwnProperty(k) && formatOptions[k]).forEach(k => formatArray.push(formatOptions[k]()));\n      newOpts.format = <winston>.format.combine(...formatArray);\n      return newOpts;\n    })($2)))"
+      },
+      "detectionPattern": "call <winston>?**.add [2, 2] 0:function",
+      "alternativeTemplate": {
+        "pattern": "$callee(new $1($2))"
+      },
+      "transformationQuestion": "Is the first argument one of winston.transports.{File,Console,Http} and the second argument an object containing formatting options?",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1311",
+    "breakingChangeId": "172",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "winston.format.colorize().colorize"
+      },
+      "detectionPattern": "read <winston>.config.colorize",
+      "unknownAccessPathQuestion": "Is the receiver winston.config?"
+    },
+    "semanticPatchId": "1324",
+    "breakingChangeId": "183",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.Stream(Object.assign({stream: new <stream>.Writable()}), (function(opts) {\n      const newOpts = {};\n      const formatArray = [];\n      const formatOptions = {\n        stringify: () => <winston>.format((info) => { info.message = JSON.stringify(info.message); })(),\n        formatter: () => <winston>.format((info) => { info.message = opts.formatter(Object.assign(info, opts)); })(),\n        json: () => <winston>.format.json(),\n        raw: () => <winston>.format.json(),\n        label: () => <winston>.format.label(opts.label),\n        logstash: () => <winston>.format.logstash(),\n        prettyPrint: () => <winston>.format.prettyPrint({depth: opts.depth || 2}),\n        colorize: () => <winston>.format.colorize({level: opts.colorize === true || opts.colorize === 'level', all: opts.colorize === 'all', message: opts.colorize === 'message'}),\n        timestamp: () => <winston>.format.timestamp(),\n        align: () => <winston>.format.align(),\n        showLevel: () => <winston>.format((info) => { info.message = info.level + ': ' + info.message; })()\n      }\n      Object.keys(opts).filter(k => !formatOptions.hasOwnProperty(k)).forEach((k) => { newOpts[k] = opts[k]; });\n      Object.keys(opts).filter(k => formatOptions.hasOwnProperty(k) && formatOptions[k]).forEach(k => formatArray.push(formatOptions[k]()));\n      newOpts.format = <winston>.format.combine(...formatArray);\n      return newOpts;\n    })($1))"
+      },
+      "detectionPattern": "call <winston>.transports.Memory [1, 1]",
+      "unknownAccessPathQuestion": "Is the receiver winston.transports?"
+    },
+    "semanticPatchId": "1300",
+    "breakingChangeId": "166",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1307",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, (((opts) => {\n  const existing = opts.transports || $base.options.transports;\n  opts.transports = existing ? existing.slice() : [];\n  Object.keys(opts).forEach(function (key) {\n    if (key === 'transports' || key === 'filters' || key === 'rewriters') {\n      return;\n    }\n\n    var name = key[0].toUpperCase() + key.slice(1);\n\n    if (!<winston>.transports[name]) {\n      throw new Error('Cannot add unknown transport: ' + name);\n    }\n\n    var namedOptions = opts[key];\n    namedOptions.id = $1;\n    opts.transports.push(new (<winston>.transports[name])(namedOptions));\n  });\n})()))",
+        "replacements": []
+      },
+      "detectionPattern": "read <winston>.Container()?**.add base:Container",
+      "unknownAccessPathQuestion": "Is the receiver a winston Container?"
+    },
+    "semanticPatchId": "1307",
+    "breakingChangeId": "170",
+    "enabled": true,
+    "comment": "Add base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1312",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the transport option set?",
+      "primaryTemplate": {
+        "pattern": "(((opts) => {\n    const transport = $base.transports[opts.transport]\n    delete opts.transport;\n    if (transport && transport.stream)\n        return transport.stream(opts);\n    return $callee(opts);\n})())",
+        "replacements": []
+      },
+      "detectionPattern": "call <winston>?**.stream [1, 1] base:Logger",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1312",
+    "breakingChangeId": "173",
+    "enabled": true,
+    "comment": "Add base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1313",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the transport option set?",
+      "primaryTemplate": {
+        "pattern": "(((opts) => {\n    const transport = $base.transports[opts.transport.toLowerCase()]\n    if (opts.query) {\n        opts.query = transport.formatQuery(Object.assign({}, opts.query));\n    }\n\n    transport.query(opts, function (err, results) {\n        if (err) {\n            return $2(err);\n        }\n        $2(null, transport.formatResults(results, opts.format));\n    });\n})($1))",
+        "replacements": []
+      },
+      "detectionPattern": "call <winston>?**.query [2, 2] 1:function base:Logger",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1313",
+    "breakingChangeId": "174",
+    "enabled": true,
+    "comment": "Add base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1310",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(new $1())",
+        "replacements": []
+      },
+      "detectionPattern": "call <winston>?**.add [1, 1] 0:function base:Logger",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1310",
+    "breakingChangeId": "172",
+    "enabled": true,
+    "comment": "Add base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1311",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(new $1((function(opts) {\n      const newOpts = {};\n      const formatArray = [];\n      const formatOptions = {\n        stringify: () => <winston>.format((info) => { info.message = JSON.stringify(info.message); })(),\n        formatter: () => <winston>.format((info) => { info.message = opts.formatter(Object.assign(info, opts)); })(),\n        json: () => <winston>.format.json(),\n        raw: () => <winston>.format.json(),\n        label: () => <winston>.format.label(opts.label),\n        logstash: () => <winston>.format.logstash(),\n        prettyPrint: () => <winston>.format.prettyPrint({depth: opts.depth || 2}),\n        colorize: () => <winston>.format.colorize({level: opts.colorize === true || opts.colorize === 'level', all: opts.colorize === 'all', message: opts.colorize === 'message'}),\n        timestamp: () => <winston>.format.timestamp(),\n        align: () => <winston>.format.align(),\n        showLevel: () => <winston>.format((info) => { info.message = info.level + ': ' + info.message; })()\n      }\n      Object.keys(opts).filter(k => !formatOptions.hasOwnProperty(k)).forEach((k) => { newOpts[k] = opts[k]; });\n      Object.keys(opts).filter(k => formatOptions.hasOwnProperty(k) && formatOptions[k]).forEach(k => formatArray.push(formatOptions[k]()));\n      newOpts.format = <winston>.format.combine(...formatArray);\n      return newOpts;\n    })($2)))",
+        "replacements": []
+      },
+      "detectionPattern": "call <winston>?**.add [2, 2] 0:function base:Logger",
+      "alternativeTemplate": {
+        "pattern": "$callee(new $1($2))",
+        "replacements": []
+      },
+      "transformationQuestion": "Is the first argument one of winston.transports.{File,Console,Http} and the second argument an object containing formatting options?",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1311",
+    "breakingChangeId": "172",
+    "enabled": true,
+    "comment": "Add base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1322",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "read <winston>?**.{rewriters,filters} base:Logger",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1322",
+    "breakingChangeId": "181",
+    "enabled": true,
+    "comment": "Add base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1308",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "call <winston>?**.{info,warn,error} [2, 2] 1:function base:Logger",
+      "unknownAccessPathQuestion": "Is the receiver a winston logger?"
+    },
+    "semanticPatchId": "1308",
+    "breakingChangeId": "171",
+    "enabled": true,
+    "comment": "Add base filter"
+  }
+]

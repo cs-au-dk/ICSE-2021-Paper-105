@@ -1,0 +1,13 @@
+[
+  {
+    "id": "557",
+    "packageVersion": "9.0.0",
+    "packageName": "inquirer",
+    "description": "Inquirer is now a native Node ECMAScript module. This will require your Node runtime to support es modules, and your app to be an es module. This is only breaking if your project is not already an ECMaScript module. The Process of migrating from commonJS to an es module includes a lot of small changes, and since inquirer@9.0.0 does not fix any immediate security or functionality flaw, this should not rush you into getting started on the migration. However, once you are ready we recommend following one of the many guides available, for instance: https://electerious.medium.com/from-commonjs-to-es-modules-how-to-modernize-your-node-js-app-ad8cdd4fb662. ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

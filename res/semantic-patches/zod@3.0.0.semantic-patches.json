@@ -1,0 +1,367 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <zod>**.check",
+      "suggestedFixDescription": "Instead of using the .check() method for type guarding, you can use z.X.safeParse(y), which returns an object with a ‘success’ key indicating if the type of y matches the type of X  (X is a schema). If the types match the second key ‘data’ contains the .parse() return value. If not, the ‘error’ key will contain a ZodError object. By using this object in an if statement you can make sure the type of y is the same as the type of X. For more information on .safeParse() see: https://github.com/colinhacks/zod#safeparse.",
+      "unknownAccessPathQuestion": "Is this a call to the check function from the zod package?"
+    },
+    "semanticPatchId": "1684",
+    "breakingChangeId": "570",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.string().transform($3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <zod>.transformers [1,3] 0:string",
+      "unknownAccessPathQuestion": "Is this a call of the transformers function from the zod package?"
+    },
+    "semanticPatchId": "1682",
+    "breakingChangeId": "569",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1682",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-09-19T04:09:17.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.string().transform($3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <zod>.transformers",
+      "unknownAccessPathQuestion": "Is this a call of the transformers function from the zod package?"
+    },
+    "semanticPatchId": "1682",
+    "breakingChangeId": "569",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1682",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-09-19T04:13:42.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.string().transform($3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <zod>.transformer",
+      "unknownAccessPathQuestion": "Is this a call of the transformers function from the zod package?"
+    },
+    "semanticPatchId": "1682",
+    "breakingChangeId": "569",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1682",
+      "comment": "Initial",
+      "version": 3,
+      "creationDate": "2022-09-19T04:15:32.000Z",
+      "primaryTemplate": {
+        "pattern": "$1.transform($3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <zod>.transformer",
+      "unknownAccessPathQuestion": "Is this a call of the transformers function from the zod package?"
+    },
+    "semanticPatchId": "1682",
+    "breakingChangeId": "569",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "initial",
+      "primaryTemplate": {
+        "pattern": "$callee($2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <zod>.transform [2,2]",
+      "unknownAccessPathQuestion": "Is this a call to the transform function from the zod package?"
+    },
+    "semanticPatchId": "1683",
+    "breakingChangeId": "569",
+    "enabled": true,
+    "comment": "initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1683",
+      "comment": "initial ",
+      "version": 0,
+      "creationDate": "2022-09-19T04:21:31.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <zod>**.transform [2,2]",
+      "unknownAccessPathQuestion": "Is this a call to the transform function from the zod package?"
+    },
+    "semanticPatchId": "1683",
+    "breakingChangeId": "569",
+    "enabled": true,
+    "comment": "initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <zod>**.merge",
+      "suggestedFixDescription": "Previously A.merge(B) would have the result be the intersection of the different keys, meaning if two identical keys had values of different types, the new type of this key would be ‘never’. The new default behavior is to use B’s type, so if the two schemas have a key in common, then B’s key and values will override those of schema A. If you are currently using .merge() to intersect two schemas types, then you should now use the .intersection() function or the equivalent .and() function. However, the value of these two functions does not return a ZodObject, which means they lack common object methods like pick and omit. For details on the .merge() function see: https://github.com/colinhacks/zod#merge.",
+      "unknownAccessPathQuestion": "Is this a call of the merge() function from the zod package?"
+    },
+    "semanticPatchId": "1688",
+    "breakingChangeId": "574",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Default value logic is now implemented inside a ZodDefault class, instead of using transformers.",
+      "detectionPattern": "call <zod>.transformer",
+      "suggestedFixDescription": "This is only breaking if you are declaring a default value in the transformer by using the logical operator “||” in your return value. JSFIX will change the `.transformer()` call for you (because of another breaking change to the API) but to still declare a default value you can use the `.default()` function like: $1.default(“default value”).transform($3), and then remove the “||” operator from $3.",
+      "unknownAccessPathQuestion": "is this a call of the .transformer() function from the zod package?"
+    },
+    "semanticPatchId": "1689",
+    "breakingChangeId": "569",
+    "enabled": true,
+    "comment": "Default value logic is now implemented inside a ZodDefault class, instead of using transformers."
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <zod>.setErrorMap",
+      "suggestedFixDescription": "When using Zod’s custom error maps there is an unlikely chance that upgrading to version 3 of Zod will also require you to change either the custom error map or the expected result. Since these changes are small, we recommend testing the output of expected error messages before and after upgrading to version 3 of Zod and making sure these are the same before changing anything. For more information on of to use `ZodErrorMap` see: https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md#customizing-errors-with-zoderrormap. ",
+      "unknownAccessPathQuestion": "Is this a call of the setErrorMap function from the zod package?"
+    },
+    "semanticPatchId": "1690",
+    "breakingChangeId": "575",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <zod>**.refine",
+      "suggestedFixDescription": "This is breaking if you are at any point after using the refine method using a method from the z.object() class. See what these methods are here: https://github.com/colinhacks/zod#objects. The .refine() method now returns a “ZodEffects” instead of a “ZodObject”, hence these methods are no longer available. There is no general solution to this, but in most cases it should be possible to refactor so the .refine() call is at the end of the. For an example of this see this comment: https://github.com/colinhacks/zod/issues/597#issuecomment-902716656",
+      "unknownAccessPathQuestion": "Is this a call of the refine function from the zod package?"
+    },
+    "semanticPatchId": "1691",
+    "breakingChangeId": "576",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1691",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-09-21T12:47:22.000Z",
+      "detectionPattern": "call <zod>**.refine",
+      "suggestedFixDescription": "This is breaking if you are at any point after using the refine method using a method from the z.object() class. See what these methods are here: https://github.com/colinhacks/zod#objects. The .refine() method now returns a “ZodEffects” instead of a “ZodObject”, hence these methods are no longer available. There is no general solution to this, but in most cases it should be possible to refactor so the .refine() call is at the end of the call \"chain\". For an example of this see this comment: https://github.com/colinhacks/zod/issues/597#issuecomment-902716656",
+      "unknownAccessPathQuestion": "Is this a call of the refine function from the zod package?"
+    },
+    "semanticPatchId": "1691",
+    "breakingChangeId": "576",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <zod>.transformer",
+      "suggestedFixDescription": "This is only breaking if you are declaring a default value in the transformer by using the logical operator “||” in your return value. JSFIX will change the `.transformer()` call for you (because of another breaking change to the API) but to still declare a default value you can use the `.default()` function like: $1.default(“default value”).transform($3), and then remove the “||” operator from $3.",
+      "unknownAccessPathQuestion": "is this a call of the .transformer() function from the zod package?"
+    },
+    "semanticPatchId": "1692",
+    "breakingChangeId": "577",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1689",
+      "comment": "This was not ment to be in this breaking change. Was moved to \"default value logic is now implemented inside a ZodDefault class, instead of using transformers.\" ",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-09-20T17:43:18.000Z",
+      "detectionPattern": "call <zod>.transformer",
+      "suggestedFixDescription": "This is only breaking if you are declaring a default value in the transformer by using the logical operator “||” in your return value. JSFIX will change the `.transformer()` call for you (because of another breaking change to the API) but to still declare a default value you can use the `.default()` function like: $1.default(“default value”).transform($3), and then remove the “||” operator from $3.",
+      "unknownAccessPathQuestion": "is this a call of the .transformer() function from the zod package?"
+    },
+    "semanticPatchId": "1689",
+    "breakingChangeId": "569",
+    "enabled": false,
+    "comment": "This was not ment to be in this breaking change. Was moved to \"default value logic is now implemented inside a ZodDefault class, instead of using transformers.\" "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1684",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-19T04:53:19.000Z",
+      "detectionPattern": "call <zod>**.check",
+      "suggestedFixDescription": "Instead of using the .check() method for type guarding, you can use $base.safeParse($1), which returns an object with a ‘success’ key indicating if the type of $1 matches the type of $base. If the types match the second key of the returned object ‘data’ contains the `.parse()` return value. If not, the ‘error’ key will contain a ZodError object. By using this object in an if statement you can make sure the type of $1 is the same as the type of $base. For more information on .safeParse() see: https://github.com/colinhacks/zod#safeparse.",
+      "unknownAccessPathQuestion": "Is this a call to the check function from the zod package?"
+    },
+    "semanticPatchId": "1684",
+    "breakingChangeId": "570",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1688",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-20T17:02:59.000Z",
+      "detectionPattern": "call <zod>**.merge",
+      "suggestedFixDescription": "Previously $base.merge($1) would have the result be the intersection of the different keys, meaning if two identical keys had values of different types, the new type of this key would be ‘never’. The new default behavior is to use the type of the key from schema $1, so if the two schemas have a key in common, then the key and values from $1 will override those of $base. If you are currently using .merge() to intersect the types of two schemas, then you should now use the .intersection() function or the equivalent .and() function. However, the value of these two functions does not return a ZodObject, which means they lack common object methods like pick and omit. To see which methods using the .intersect methods prohibit see: https://github.com/colinhacks/zod#objects.",
+      "unknownAccessPathQuestion": "Is this a call of the merge() function from the zod package?"
+    },
+    "semanticPatchId": "1688",
+    "breakingChangeId": "574",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1690",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-21T12:01:54.000Z",
+      "detectionPattern": "call <zod>.setErrorMap",
+      "suggestedFixDescription": "When using Zod’s custom error maps there is an unlikely chance that upgrading to version 3 of Zod will also require you to change either the custom error map or the expected result. Since these changes are small, we recommend testing the output of expected error messages before and after upgrading to version 3 of Zod and making sure these are the same before changing anything. For more information on how to use `ZodErrorMap` see: https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md#customizing-errors-with-zoderrormap. ",
+      "unknownAccessPathQuestion": "Is this a call of the setErrorMap function from the zod package?"
+    },
+    "semanticPatchId": "1690",
+    "breakingChangeId": "575",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1682",
+      "comment": "Added numArgs filter",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-09-19T04:15:32.000Z",
+      "primaryTemplate": {
+        "pattern": "$1.transform($3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <zod>.transformer [3, 3]",
+      "unknownAccessPathQuestion": "Is this a call of the transformers function from the zod package?"
+    },
+    "semanticPatchId": "1682",
+    "breakingChangeId": "569",
+    "enabled": true,
+    "comment": "Added numArgs filter"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1682",
+      "comment": "Remove numArgs filter",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-11-02T10:36:10.000Z",
+      "primaryTemplate": {
+        "pattern": "$1.transform($3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <zod>.transformer",
+      "unknownAccessPathQuestion": "Is this a call of the transformers function from the zod package?"
+    },
+    "semanticPatchId": "1682",
+    "breakingChangeId": "569",
+    "enabled": true,
+    "comment": "Remove numArgs filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1691",
+      "comment": "Added specific calls to the pattern",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-21T12:49:14.000Z",
+      "detectionPattern": "call <zod>**.refine**().{shape,keyof,extend,merge,pick,omit,partial,deepPartial,required,passthrough,strict,strip,catchall}",
+      "suggestedFixDescription": "In an attempt to clearly separate the different transformation operations like `transform`, `and`, `or` and more from the accessor methods on a zod schema object, the .refine() method now returns a zodEffect.\nThis means that you can no longer call $prop after calling .refine(), and has to do this earlier in the call chain.\nThere is no general solution to this, but in most cases it should be possible to refactor so the .refine() call is at the end of the call “chain”. For an example of this see this comment: https://github.com/colinhacks/zod/issues/597#issuecomment-902716656",
+      "unknownAccessPathQuestion": "Is this a call of the refine function from the zod package?"
+    },
+    "semanticPatchId": "1691",
+    "breakingChangeId": "576",
+    "enabled": true,
+    "comment": "Added specific calls to the pattern"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1691",
+      "comment": "Added specific calls to the pattern ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-02T16:17:50.000Z",
+      "detectionPattern": "call <zod>**.refine**().{shape,keyof,extend,merge,pick,omit,partial,deepPartial,required,passthrough,strict,strip,catchall,and,or,brand}",
+      "suggestedFixDescription": "In an attempt to clearly separate the different transformation operations from the accessor methods on a zod schema object, the .refine() method now returns a zodEffect.\nThis means that you can no longer call `.$prop()` after calling .refine(), and has to do this earlier in the call chain.\nThere is no general solution to this, but in most cases it should be possible to refactor so the .refine() call is at the end of the call “chain”. \nFor an example of this see this comment: https://github.com/colinhacks/zod/issues/597#issuecomment-902716656",
+      "unknownAccessPathQuestion": "Is this a call of the refine function from the zod package?"
+    },
+    "semanticPatchId": "1691",
+    "breakingChangeId": "576",
+    "enabled": true,
+    "comment": "Added specific calls to the pattern "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1684",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-21T13:11:03.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.safeParse($1).success",
+        "replacements": []
+      },
+      "detectionPattern": "call <zod>**.check",
+      "suggestedFixDescription": "Instead of using the .check() method for type guarding, you can use $base.safeParse($1), which returns an object with a ‘success’ key indicating if the type of $1 matches the type of $base. If the types match the second key of the returned object ‘data’ contains the `.parse()` return value. If not, the ‘error’ key will contain a ZodError object. By using this object in an if statement you can make sure the type of $1 is the same as the type of $base. For more information on .safeParse() see: https://github.com/colinhacks/zod#safeparse.",
+      "unknownAccessPathQuestion": "Is this a call to the check function from the zod package?"
+    },
+    "semanticPatchId": "1684",
+    "breakingChangeId": "570",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

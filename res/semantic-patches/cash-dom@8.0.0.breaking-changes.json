@@ -1,0 +1,24 @@
+[
+  {
+    "id": "808",
+    "packageVersion": "8.0.0",
+    "packageName": "cash-dom",
+    "description": "Improved alignment with jQuery regarding handling of non-bubbling events significantly",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "809",
+    "packageVersion": "8.0.0",
+    "packageName": "cash-dom",
+    "description": "Improved alignment with jQuery regarding handling of non-bubbling events significantly. Previously triggering events natively (without the `$.trigger()` method) like using `HTMLElement.focus()` would not make the event bubble up. This has now been changed to match jQuery, and a call to for instance `HTMLElement.focus()` would be made a bubble event triggering event listeners like `$.on(‘focus’, listener)` on any parent element of `HTMLElement`.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

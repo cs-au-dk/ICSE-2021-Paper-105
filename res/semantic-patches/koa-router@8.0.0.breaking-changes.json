@@ -1,0 +1,46 @@
+[
+  {
+    "id": "303",
+    "packageVersion": "8.0.0",
+    "packageName": "koa-router",
+    "description": "Router#redirect() no longer acceps a route name for the first argument. It must be a path",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "302",
+    "packageVersion": "8.0.0",
+    "packageName": "koa-router",
+    "description": "router.url()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "274",
+    "packageVersion": "8.0.0",
+    "packageName": "koa-router",
+    "description": "Deprecate use('/path', ...)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "323",
+    "packageVersion": "8.0.0",
+    "packageName": "koa-router",
+    "description": "Snapshot routes when calling .routes() so router modifications after that point have no effect on previously exported routes",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

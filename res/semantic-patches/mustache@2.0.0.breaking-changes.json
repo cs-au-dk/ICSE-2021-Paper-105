@@ -1,0 +1,13 @@
+[
+  {
+    "id": "533",
+    "packageVersion": "2.0.0",
+    "packageName": "mustache",
+    "description": "Fixed lookup not stopping upon finding undefined or null values",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

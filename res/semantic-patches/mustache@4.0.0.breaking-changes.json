@@ -1,0 +1,24 @@
+[
+  {
+    "id": "537",
+    "packageVersion": "4.0.0",
+    "packageName": "mustache",
+    "description": "Allow template caching to be customised",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "536",
+    "packageVersion": "4.0.0",
+    "packageName": "mustache",
+    "description": "Remove .to_html()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

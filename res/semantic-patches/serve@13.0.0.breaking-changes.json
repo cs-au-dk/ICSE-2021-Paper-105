@@ -1,0 +1,13 @@
+[
+  {
+    "id": "562",
+    "packageVersion": "13.0.0",
+    "packageName": "serve",
+    "description": "Change default port from 5000 to 3000. This change was made since airplay started to also use port 5000, which for some people meant that their development environments no longer worked. Port 3000 may also be used for some services, most of which you can find here: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers. If for some reason this change still breaks your project, you can use the `--listen <port>` option to specify what port you wish to use.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

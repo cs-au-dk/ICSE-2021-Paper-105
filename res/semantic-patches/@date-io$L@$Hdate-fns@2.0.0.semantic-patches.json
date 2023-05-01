@@ -1,0 +1,90 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.formatByString($1, $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@date-io/moment>().format [2,2]",
+      "unknownAccessPathQuestion": "Is this a call to parse function on date-io adapter?"
+    },
+    "semanticPatchId": "1572",
+    "breakingChangeId": "429",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.formats.$prop[yearFormat => year, yearMonthFormat => monthAndYear, dateTime12hFormat => fullDateTime12h, dateTime24hFormat => fullDateTime24h, time12hFormat => fullTime12h, time24hFormat => fullTime12h, dateFormat => fullDate]",
+        "replacements": []
+      },
+      "detectionPattern": "read <@date-io/date-fns>().{yearFormat,yearMonthFormat,dateTime12hFormat,dateTime24hFormat,time12hFormat,time24hFormat,dateFormat}",
+      "unknownAccessPathQuestion": "Is this a property on an DateFnsAdapter from @date-io/date-fns?"
+    },
+    "semanticPatchId": "1573",
+    "breakingChangeId": "431",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.formats.$prop[yearFormat => year, yearMonthFormat => monthAndYear, dateTime12hFormat => fullDateTime12h, dateTime24hFormat => fullDateTime24h, time12hFormat => fullTime12h, time24hFormat => fullTime12h, dateFormat => fullDate] = $value",
+        "replacements": []
+      },
+      "detectionPattern": "write <@date-io/date-fns>().{yearFormat,yearMonthFormat,dateTime12hFormat,dateTime24hFormat,time12hFormat,time24hFormat,dateFormat}",
+      "unknownAccessPathQuestion": "Is this a property on an DateFnsAdapter from @date-io/date-fns?"
+    },
+    "semanticPatchId": "1574",
+    "breakingChangeId": "431",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.formats.$prop[yearFormat => year, yearMonthFormat => monthAndYear, dateTime12hFormat => fullDateTime12h, dateTime24hFormat => fullDateTime24h, time12hFormat => fullTime12h, time24hFormat => fullTime12h, dateFormat => fullDate]",
+        "replacements": []
+      },
+      "detectionPattern": "read <@date-io/date-fns>().{yearFormat,yearMonthFormat,dateTime12hFormat,dateTime24hFormat,time12hFormat,time24hFormat,dateFormat}",
+      "unknownAccessPathQuestion": "Is this a property on an DateFnsAdapter from @date-io/date-fns?"
+    },
+    "semanticPatchId": "1575",
+    "breakingChangeId": "431",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1572",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-13T13:17:37.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.formatByString($1, $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@date-io/date-fns>().format [2,2]",
+      "unknownAccessPathQuestion": "Is this a call to parse function on date-io adapter?"
+    },
+    "semanticPatchId": "1572",
+    "breakingChangeId": "429",
+    "enabled": true,
+    "comment": "init "
+  }
+]

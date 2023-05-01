@@ -1,0 +1,24 @@
+[
+  {
+    "id": "477",
+    "packageVersion": "5.0.0",
+    "packageName": "js-joda/core",
+    "description": "[Reverting babel targets for UMD](https://github.com/js-joda/js-joda/pull/574). This change introduces a bug for users using the ie11 browser. The bug is yet to be fixed, hence if you are using the ie11 browser we recommend not upgrading to this version.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "478",
+    "packageVersion": "5.0.0",
+    "packageName": "js-joda/core",
+    "description": "[Disallowing implicit conversion of Temporal/TemporalAmount to numeric values](https://github.com/js-joda/js-joda/pull/548). This means you can no longer compare dates, times or periodes from the js-joda/code package like you would numeric   values. Instead use .equals(), .compareTo(), .isBefore() or some other sutable function. To see some examples of what will now throw and error, see: https://github.com/js-joda/js-joda/pull/548/files#diff-48c2f6a0ff9b462469b07d9a2756eea9cbf5d88a7b6b3be00740bb89d8656c8dR173-R180. To see what is still alowed see [the initial issue comment](https://github.com/js-joda/js-joda/pull/548#issue-1003180025).",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,354 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <googleapis>.youtube.youtube.v3.liveBroadcasts.cuepoint.create",
+      "unknownAccessPathQuestion": "Is this a method call of youtube.v3.liveBroadcasts.cuepoint.create on a youtube object from the googleapis package?"
+    },
+    "semanticPatchId": "1641",
+    "breakingChangeId": "520",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1641",
+      "comment": "Initial (code template is currently wrong)",
+      "version": 0,
+      "creationDate": "2022-08-11T06:55:50.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.liveBroadcasts.insertCuepoint($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <googleapis>.google.youtube().youtube.v3.liveBroadcasts.cuepoint.create",
+      "unknownAccessPathQuestion": "Is this a method call of youtube.v3.liveBroadcasts.cuepoint.create on a youtube object from the googleapis package?"
+    },
+    "semanticPatchId": "1641",
+    "breakingChangeId": "520",
+    "enabled": true,
+    "comment": "Initial (code template is currently wrong)"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1641",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-08-11T07:13:52.000Z",
+      "primaryTemplate": {
+        "pattern": "$base:base:base:base:base.liveBroadcasts.insertCuepoint($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <googleapis>.google.youtube().youtube.v3.liveBroadcasts.cuepoint.create",
+      "unknownAccessPathQuestion": "Is this a method call of youtube.v3.liveBroadcasts.cuepoint.create on a youtube object from the googleapis package?"
+    },
+    "semanticPatchId": "1641",
+    "breakingChangeId": "520",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <googleapis>.google.logging().billingAccounts.buckets.get",
+      "unknownAccessPathQuestion": "Is this a method call of billingAccounts.buckets.get on a logging object from the googleapis package?"
+    },
+    "semanticPatchId": "1642",
+    "breakingChangeId": "521",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1642",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-08-15T10:57:30.000Z",
+      "primaryTemplate": {
+        "pattern": "$base:base.locations.buckets.get($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <googleapis>.google.logging().billingAccounts.buckets.get",
+      "unknownAccessPathQuestion": "Is this a method call of billingAccounts.buckets.get on a logging object from the googleapis package?"
+    },
+    "semanticPatchId": "1642",
+    "breakingChangeId": "521",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base:base:base.locations.buckets.views.get($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <googleapis>.google.logging().billingAccounts.buckets.views.get",
+      "unknownAccessPathQuestion": "Is this a method call of billingAccounts.buckets.views.get on a logging object from the googleapis package?"
+    },
+    "semanticPatchId": "1643",
+    "breakingChangeId": "522",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base:base.locations.operations.get($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <googleapis>.google.logging().billingAccounts.operations.get",
+      "unknownAccessPathQuestion": "Is this a method call of billingAccounts.operations.get on a logging object from the googleapis package?"
+    },
+    "semanticPatchId": "1644",
+    "breakingChangeId": "523",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <googleapis>.google.firestore().projects.databases.create [3:3] 3.validateOnly:boolean",
+      "unknownAccessPathQuestion": "Is this a method call of projects.databases.create on a firestore object from the googleapis package?"
+    },
+    "semanticPatchId": "1645",
+    "breakingChangeId": "524",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1645",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-08-16T05:34:18.000Z",
+      "detectionPattern": "call <googleapis>.google.firestore().projects.databases.create 0.validateOnly:boolean",
+      "suggestedFixDescription": "The google firestore api no longer provides a validation option when creating a new database. Since not upgrading to ^105.0.0 could result in security complications, we recommend you do upgrade and then catch potential errors and validating the result by querying the new database manually.",
+      "unknownAccessPathQuestion": "Is this a method call of projects.databases.create on a firestore object from the googleapis package?"
+    },
+    "semanticPatchId": "1645",
+    "breakingChangeId": "524",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "callR <googleapis>.google.connectors().projects.locations.getRuntimeConfig",
+      "suggestedFixDescription": "This is only breaking if the `name` property from the returned value of the call to $callee is used (e.g. in a snapshot test of the returned value). There is not complete alternative to the name property, but instead of this property we recommend using the `locationId` if you need to indentify the location.",
+      "unknownAccessPathQuestion": "Is this a method call of projects.locations.getRuntimeConfig on a connectors object from the googleapis package?"
+    },
+    "semanticPatchId": "1646",
+    "breakingChangeId": "525",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Patch for google.servicemanagement**.list",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.list",
+      "unknownAccessPathQuestion": "Is this a method call of (...).list on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1647",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "Patch for google.servicemanagement**.list"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1647",
+      "comment": "Patch for google.servicemanagement**.list ",
+      "version": 0,
+      "creationDate": "2022-08-17T08:27:04.000Z",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.list",
+      "suggestedFixDescription": "This is only breaking if you are using/accessing the returned `dynamicMetricCost` property from the call $callee(...): ` dynamicMetricCost ` has been removed since it was rarely used and was only implemented in CloudESF(go/cloudesf). As an alternative we recommend you use the property `metricCost` which is still included in the returned value.",
+      "unknownAccessPathQuestion": "Is this a method call of (...).list on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1647",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "Patch for google.servicemanagement**.list "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "patch for google.servicemanagement.services.getConfig",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement().services.getConfig",
+      "suggestedFixDescription": "This is only breaking if you are using/accessing the returned `dynamicMetricCost` property from the call $callee(...): `dynamicMetricCost` has been removed since it was rarely used and was only implemented in CloudESF(go/cloudesf). As an alternative we recommend you use the property `metricCost` which is still included in the returned value.",
+      "unknownAccessPathQuestion": "Is this a method call of services.getConfig on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1648",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "patch for google.servicemanagement.services.getConfig"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "patch for google.servicemanagement**.create",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.create",
+      "suggestedFixDescription": "This is only breaking if you are using/accessing the returned `dynamicMetricCost` property from the call $callee(...): `dynamicMetricCost` has been removed since it was rarely used and was only implemented in CloudESF(go/cloudesf). As an alternative we recommend you use the property `metricCost` which is still included in the returned value.",
+      "unknownAccessPathQuestion": "Is this a method call of (...).create on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1649",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "patch for google.servicemanagement**.create"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1647",
+      "comment": "patch for google.servicemanagement**.list",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-08-17T08:39:56.000Z",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.list",
+      "suggestedFixDescription": "This is only breaking if you are using/accessing the returned `dynamicMetricCost` property from the call $callee(...): `dynamicMetricCost` has been removed since it was rarely used and was only implemented in CloudESF(go/cloudesf). As an alternative we recommend you use the property `metricCost` which is still included in the returned value.",
+      "unknownAccessPathQuestion": "Is this a method call of (...).list on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1647",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "patch for google.servicemanagement**.list"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "patch for google.servicemanagement**.get",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.get",
+      "suggestedFixDescription": "This is only breaking if you are using/accessing the returned `dynamicMetricCost` property from the call $callee(...): `dynamicMetricCost` has been removed since it was rarely used and was only implemented in CloudESF(go/cloudesf). As an alternative we recommend you use the property `metricCost` which is still included in the returned value.",
+      "unknownAccessPathQuestion": "Is this a method call of (...).list on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1650",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "patch for google.servicemanagement**.get"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "patch for google.servicemanagement**.create",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.create [2,2]",
+      "unknownAccessPathQuestion": "Is this a method call of (...).create on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1651",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "patch for google.servicemanagement**.create"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1651",
+      "comment": "patch for google.servicemanagement**.create ",
+      "version": 0,
+      "creationDate": "2022-08-17T09:08:04.000Z",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.create [2,2]",
+      "suggestedFixDescription": "This is only breaking if you are using CloudESF(go/cloudesf) and if you are changing the `dynamicMetricCost` property of the quota object given as a parameter to $2: `dynamicMetricCost` has been removed since it was rarely used and was only implemented in CloudESF(go/cloudesf). As an alternative we recommend you use the property `metricCost` which is still included in the returned value.",
+      "unknownAccessPathQuestion": "Is this a method call of (...).create on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1651",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "patch for google.servicemanagement**.create "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1651",
+      "comment": "patch for google.servicemanagement**.create",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-08-17T09:21:26.000Z",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.create $0.requestBody:object",
+      "suggestedFixDescription": "This is only breaking if you are using CloudESF(go/cloudesf) and if you are changing the `dynamicMetricCost` property of the quota object given as a parameter to $2: `dynamicMetricCost` has been removed since it was rarely used and was only implemented in CloudESF(go/cloudesf). As an alternative we recommend you use the property `metricCost` which is still included in the returned value.",
+      "unknownAccessPathQuestion": "Is this a method call of (...).create on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1651",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "patch for google.servicemanagement**.create"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1651",
+      "comment": "patch for google.servicemanagement**.create ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-08-17T09:25:02.000Z",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.create $0.requestBody:object",
+      "suggestedFixDescription": "This is only breaking if you are using CloudESF(go/cloudesf) and if you are changing the `dynamicMetricCost` property of the quota object given as a parameter to the `requestBody` parameter: `dynamicMetricCost` has been removed since it was rarely used and was only implemented in CloudESF(go/cloudesf). As an alternative we recommend you use the property `metricCost` which is still included in the returned value.",
+      "unknownAccessPathQuestion": "Is this a method call of (...).create on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1651",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "patch for google.servicemanagement**.create "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1651",
+      "comment": "patch for google.servicemanagement**.create",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-08-17T09:25:58.000Z",
+      "detectionPattern": "callR <googleapis>.google.servicemanagement()**.create $0.requestBody:object",
+      "suggestedFixDescription": "This is only breaking if you are using CloudESF(go/cloudesf) and if you are changing the `dynamicMetricCost` property of the quota object given as a parameter to the `requestBody` parameter: `dynamicMetricCost` has been removed since it was rarely used and was only implemented in CloudESF(go/cloudesf). As an alternative we recommend you use the property `metricCost` which it's still parsed with the quota object.",
+      "unknownAccessPathQuestion": "Is this a method call of (...).create on a servicemanagement object from the googleapis package?"
+    },
+    "semanticPatchId": "1651",
+    "breakingChangeId": "526",
+    "enabled": true,
+    "comment": "patch for google.servicemanagement**.create"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1645",
+      "comment": "Minor to suggested fix ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-08-16T06:11:38.000Z",
+      "detectionPattern": "call <googleapis>.google.firestore().projects.databases.create 0.validateOnly:boolean",
+      "suggestedFixDescription": "The google firestore api no longer provides a validation option when creating a new database. Since not upgrading to ^105.0.0 leaves you exposed to security vulnerabilities, we recommend you upgrade and then catch potential errors and validate the result by querying the new database manually.",
+      "unknownAccessPathQuestion": "Is this a method call of projects.databases.create on a firestore object from the googleapis package?"
+    },
+    "semanticPatchId": "1645",
+    "breakingChangeId": "524",
+    "enabled": true,
+    "comment": "Minor to suggested fix "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1646",
+      "comment": "Minor to suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-08-16T11:53:24.000Z",
+      "detectionPattern": "callR <googleapis>.google.connectors().projects.locations.getRuntimeConfig",
+      "suggestedFixDescription": "This is only breaking if the `name` property from the returned value of the call to $callee is used (e.g. in a snapshot test of the returned value). There is no perfect alternative to the name property, but you may use the `locationId` if you need to indentify the location.",
+      "unknownAccessPathQuestion": "Is this a method call of projects.locations.getRuntimeConfig on a connectors object from the googleapis package?"
+    },
+    "semanticPatchId": "1646",
+    "breakingChangeId": "525",
+    "enabled": true,
+    "comment": "Minor to suggested fix"
+  }
+]

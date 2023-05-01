@@ -1,0 +1,714 @@
+[
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1673",
+      "comment": "Initial for GetFilesOptions.directory (The value of the new prefix property is currently wrong)",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-09-08T12:53:59.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "directory",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "($1.directory).replace(/\\/*$/, '/')",
+            "propName": "prefix",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().getFiles 0.directory:string 0.prefix:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Initial for GetFilesOptions.directory (The value of the new prefix property is currently wrong)"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1673",
+      "comment": "Initial for GetFilesOptions.directory (The value of the new prefix property is currently wrong) ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-09-08T12:57:57.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "prefix",
+            "oldPropName": "derectory"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().getFiles 0.directory:string 0.prefix:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Initial for GetFilesOptions.directory (The value of the new prefix property is currently wrong) "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial for GetFilesOptions.directory",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().getFiles 0.directory:string",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Initial for GetFilesOptions.directory"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1673",
+      "comment": "Initial for GetFilesOptions.directory ",
+      "version": 0,
+      "creationDate": "2022-09-08T12:22:08.000Z",
+      "objectModifiers": {
+        "$0": [
+          {
+            "propName": "directory",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().getFiles 0.directory:string",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Initial for GetFilesOptions.directory "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1673",
+      "comment": "Initial for GetFilesOptions.directory",
+      "version": 1,
+      "creationDate": "2022-09-08T12:24:43.000Z",
+      "objectModifiers": {
+        "$0": [
+          {
+            "propName": "directory",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().getFiles 0.directory:string",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Initial for GetFilesOptions.directory"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1673",
+      "comment": "Initial for GetFilesOptions.directory (The value of the new prefix property is currently wrong)",
+      "version": 2,
+      "creationDate": "2022-09-08T12:24:55.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "directory",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "prefixOfFiles",
+            "propName": "prefix",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().getFiles 0.directory:string 0.prefix:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Initial for GetFilesOptions.directory (The value of the new prefix property is currently wrong)"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1673",
+      "comment": "Initial for GetFilesOptions.directory (The value of the new prefix property is currently wrong) ",
+      "version": 3,
+      "creationDate": "2022-09-08T12:39:27.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "directory",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "($1.directory).replace(/\\/*$/, '/');",
+            "propName": "prefix",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().getFiles 0.directory:string 0.prefix:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Initial for GetFilesOptions.directory (The value of the new prefix property is currently wrong) "
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1673",
+      "comment": "Initial for GetFilesOptions.directory",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-09-08T13:05:48.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "prefix",
+            "oldPropName": "directory"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().getFiles 0.directory:string 0.prefix:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Initial for GetFilesOptions.directory"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1673",
+      "comment": "Initial for director for the functions getFiles, getFilesStream",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-09-08T13:05:48.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "prefix",
+            "oldPropName": "directory"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().{getFiles,getFilesStream} 0.directory:string 0.prefix:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Initial for director for the functions getFiles, getFilesStream"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1674",
+      "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one)",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-09-11T12:26:13.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "true",
+            "operation": "COPY_PROP",
+            "destPropName": "retryOptions",
+            "sourceAstReference": "$1.autoRetry"
+          },
+          {
+            "propName": "autoRetry",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.autoRetry:boolean",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1674",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one)"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1674",
+      "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one) ",
+      "version": 2,
+      "creationDate": "2022-09-09T14:07:54.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "",
+            "operation": "RENAME_PROP",
+            "newPropName": "retryOptions: {autoRetry}",
+            "oldPropName": "autoRetry"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.autoRetry:boolean",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1674",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one) "
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1673",
+      "comment": "Removed property \"directory\" from the functions getFiles, getFilesStream and deleteFiles.",
+      "enabled": true,
+      "version": 9,
+      "creationDate": "2022-09-08T13:33:21.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "prefix",
+            "oldPropName": "directory"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().{getFiles,getFilesStream,deleteFiles} 0.directory:string 0.prefix:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the getFiles method from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1673",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"directory\" from the functions getFiles, getFilesStream and deleteFiles."
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Removed property \"autoRetry\" from the storage() object",
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.autoRetry:boolean",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1674",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"autoRetry\" from the storage() object"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1674",
+      "comment": "Removed property \"autoRetry\" from the storage() object ",
+      "version": 0,
+      "creationDate": "2022-09-09T13:46:48.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "",
+            "operation": "RENAME_PROP",
+            "newPropName": "retryOptions.autoRetry",
+            "oldPropName": "autoRetry"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.autoRetry:boolean",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1674",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"autoRetry\" from the storage() object "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Removed property \"promise\" from the storage() object",
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.promise:constructor",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1675",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"promise\" from the storage() object"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1674",
+      "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one)  ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-09-09T14:07:54.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "",
+            "operation": "RENAME_PROP",
+            "newPropName": "retryOptions.autoRetry",
+            "oldPropName": "autoRetry"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.autoRetry:boolean",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1674",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one)  "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1674",
+      "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one) ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-09-10T02:26:00.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "retryOptions.autoRetry",
+            "sourceAstReference": "$1.autoRetry"
+          },
+          {
+            "propName": "autoRetry",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.autoRetry:boolean",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1674",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one) "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1674",
+      "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one) ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-09-11T12:31:46.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "",
+            "operation": "COPY_PROP",
+            "destPropName": "retryOptions",
+            "sourceAstReference": "$1.autoRetry"
+          },
+          {
+            "propName": "autoRetry",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.autoRetry:boolean",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1674",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"autoRetry\" from the storage() object (The current object modification is not right for this one) "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial (createWriteStream)",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 1.configPath:string",
+      "suggestedFixDescription": "@google-cloud/storage no longer depends on configstore to verify the files when resuming an upload, hence the use of the configPath property is no longer needed. You should be able to remove the declaration of this property without losing any functionality. The difference for you is that the resumable functions no longer have to cache the first 16 bytes of the uploaded file on your local disk. For more information see: https://github.com/googleapis/nodejs-storage/pull/1871",
+      "unknownAccessPathQuestion": "Is this a call of the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1676",
+    "breakingChangeId": "555",
+    "enabled": true,
+    "comment": "Initial (createWriteStream)"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1676",
+      "comment": "Initial (createWriteStream) ",
+      "version": 0,
+      "creationDate": "2022-09-11T13:20:36.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.configPath:string",
+      "suggestedFixDescription": "@google-cloud/storage no longer depends on configstore to verify the files when resuming an upload, hence the use of the configPath property is no longer needed. You should be able to remove the declaration of this property without losing any functionality. The difference for you is that the resumable functions no longer have to cache the first 16 bytes of the uploaded file on your local disk. For more information see: https://github.com/googleapis/nodejs-storage/pull/1871",
+      "unknownAccessPathQuestion": "Is this a call of the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1676",
+    "breakingChangeId": "555",
+    "enabled": true,
+    "comment": "Initial (createWriteStream) "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial (createResumableUpload)",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createResumableUpload 0.configPath:string",
+      "suggestedFixDescription": "@google-cloud/storage no longer depends on configstore to verify the files when resuming an upload, hence the use of the configPath property is no longer needed. You should be able to remove the declaration of this property without losing any functionality. The difference for you is that the resumable functions no longer have to cache the first 16 bytes of the uploaded file on your local disk. For more information see: https://github.com/googleapis/nodejs-storage/pull/1871",
+      "unknownAccessPathQuestion": "Is this a call of the file.createResumableUpload function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1677",
+    "breakingChangeId": "555",
+    "enabled": true,
+    "comment": "Initial (createResumableUpload)"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1676",
+      "comment": "Initial (createWriteStream)",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-11T13:23:47.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.configPath:string",
+      "suggestedFixDescription": "@google-cloud/storage no longer depends on configstore to verify the files when resuming an upload, hence the use of the configPath property is no longer needed. You should be able to remove the declaration of this property without losing any functionality. The difference for you is that resumable functions are now only resumable doing the lifetime of the nodejs process, which previously already was the only way to be sure that the data was not corrupted. For more information see: https://github.com/googleapis/nodejs-storage/pull/1871",
+      "unknownAccessPathQuestion": "Is this a call of the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1676",
+    "breakingChangeId": "555",
+    "enabled": true,
+    "comment": "Initial (createWriteStream)"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1677",
+      "comment": "Initial (createResumableUpload) ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-11T13:28:05.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createResumableUpload 0.configPath:string",
+      "suggestedFixDescription": "@google-cloud/storage no longer depends on configstore to verify the files when resuming an upload, hence the use of the configPath property is no longer needed. You should be able to remove the declaration of this property without losing any functionality. The difference for you is that resumable functions are now only resumable doing the lifetime of the nodejs process, which previously already was the only way to be sure that the data was not corrupted. For more information see: https://github.com/googleapis/nodejs-storage/pull/1871",
+      "unknownAccessPathQuestion": "Is this a call of the file.createResumableUpload function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1677",
+    "breakingChangeId": "555",
+    "enabled": true,
+    "comment": "Initial (createResumableUpload) "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1675",
+      "comment": "Removed property \"promise\" from the storage() object ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-09T15:07:46.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.promise:function",
+      "suggestedFixDescription": "The option to get @google-cloud/storage to use custom promises is no longer available. Since async/await always uses native promises and that the StorageOptions.promise might not always behave like most people expect this was removed. If you are dependent on this feature, for instance when using bluebird, you can try using the `global.Promise = your.thing;` as an alternative. For more information see the issue regarding this change: https://github.com/googleapis/nodejs-common/issues/107",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1675",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Removed property \"promise\" from the storage() object "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.resumable:boolean",
+      "suggestedFixDescription": "The default value of the resumable option of the functions upload and createWriteStream are now `true` no matter the size of the file. Previously the default value was true only for all files above 5MB. Hence if you are not sure that your file size is more than 5MB we suggest checking this value on runtime and then setting the resumable option to false if the size is less than 5MB. To see how to check the file size with the package fs see: https://attacomsian.com/blog/nodejs-get-file-size ",
+      "unknownAccessPathQuestion": "Is this a call of the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1678",
+    "breakingChangeId": "556",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().upload 2.resumable:boolean",
+      "suggestedFixDescription": "The default value of the resumable option of the functions upload and createWriteStream are now `true` no matter the size of the file. Previously the default value was true only for all files above 5MB. Hence if you are not sure that your file size is more than 5MB we suggest checking this value on runtime and then setting the resumable option to false if the size is less than 5MB. To see how to check the file size with the package fs see: https://attacomsian.com/blog/nodejs-get-file-size ",
+      "unknownAccessPathQuestion": "Is this a call of the upload function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1679",
+    "breakingChangeId": "556",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1679",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-09-13T04:21:11.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().upload 1.resumable:boolean",
+      "suggestedFixDescription": "The default value of the resumable option of the functions upload and createWriteStream are now `true` no matter the size of the file. Previously the default value was true only for all files above 5MB. Hence if you are not sure that your file size is more than 5MB we suggest checking this value on runtime and then setting the resumable option to false if the size is less than 5MB. To see how to check the file size with the package fs see: https://attacomsian.com/blog/nodejs-get-file-size ",
+      "unknownAccessPathQuestion": "Is this a call of the upload function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1679",
+    "breakingChangeId": "556",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1675",
+      "comment": "Minors in suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-13T03:44:44.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage 0.promise:function",
+      "suggestedFixDescription": "The option for configuring @google-cloud/storage to use custom promises is no longer available. Since async/await always uses native promises and the StorageOptions.promise might not always behave like most people expect this option was removed. If you are dependent on this feature, for instance when using bluebird, you can try using the `global.Promise = your.thing;` as an alternative. For more information see the issue regarding this change: https://github.com/googleapis/nodejs-common/issues/107",
+      "unknownAccessPathQuestion": "Is this making a new storage object from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1675",
+    "breakingChangeId": "554",
+    "enabled": true,
+    "comment": "Minors in suggested fix"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1676",
+      "comment": "update suggested fix",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-09-12T05:34:05.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.configPath:string",
+      "suggestedFixDescription": "@google-cloud/storage no longer depends on configstore to verify the files when resuming an upload, hence the use of the configPath property is no longer needed. You should be able to remove the declaration of this property without losing any functionality. The difference for you is that resumable functions are now only resumable during the lifetime of the nodejs process, which was also previously the only way to ensure that the data was not corrupted. For more information see: https://github.com/googleapis/nodejs-storage/pull/1871",
+      "unknownAccessPathQuestion": "Is this a call of the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1676",
+    "breakingChangeId": "555",
+    "enabled": true,
+    "comment": "update suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1677",
+      "comment": "Update suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-12T05:34:30.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createResumableUpload 0.configPath:string",
+      "suggestedFixDescription": "@google-cloud/storage no longer depends on configstore to verify the files when resuming an upload, hence the use of the configPath property is no longer needed. You should be able to remove the declaration of this property without losing any functionality. The difference for you is that resumable functions are now only resumable during the lifetime of the nodejs process, which was also previously the only way to ensure that the data was not corrupted. For more information see: https://github.com/googleapis/nodejs-storage/pull/1871",
+      "unknownAccessPathQuestion": "Is this a call of the file.createResumableUpload function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1677",
+    "breakingChangeId": "555",
+    "enabled": true,
+    "comment": "Update suggested fix"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1678",
+      "comment": "Minor in suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-13T04:17:38.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.resumable:boolean",
+      "suggestedFixDescription": "The default value of the resumable option of the functions upload and createWriteStream is now `true` no matter the size of the file. Previously the default value was true only for all files above 5MB. Hence if you are not sure that the file size is more than 5MB, we suggest checking this value on runtime and then setting the resumable option to false if the size is less than 5MB to preserve the old behavior. You can fs to find the file size (see: https://attacomsian.com/blog/nodejs-get-file-size)",
+      "unknownAccessPathQuestion": "Is this a call of the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1678",
+    "breakingChangeId": "556",
+    "enabled": true,
+    "comment": "Minor in suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1679",
+      "comment": "Update suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-13T04:23:21.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().upload 1.resumable:boolean",
+      "suggestedFixDescription": "The default value of the resumable option of the functions upload and createWriteStream is now `true` no matter the size of the file. Previously the default value was true only for all files above 5MB. Hence if you are not sure that the file size is more than 5MB, we suggest checking this value on runtime and then setting the resumable option to false if the size is less than 5MB to preserve the old behavior. You can fs to find the file size (see: https://attacomsian.com/blog/nodejs-get-file-size)",
+      "unknownAccessPathQuestion": "Is this a call of the upload function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1679",
+    "breakingChangeId": "556",
+    "enabled": true,
+    "comment": "Update suggested fix"
+  }
+]

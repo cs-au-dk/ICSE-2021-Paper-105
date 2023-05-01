@@ -1,0 +1,77 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "database default",
+      "detectionPattern": "read <file-type>.fromTokenizer",
+      "suggestedFixDescription": "strtok3 needs to be updated to version 6, because the tokenizer argument has been changed and requires a newer version"
+    },
+    "semanticPatchId": "1434",
+    "breakingChangeId": "295",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "database default",
+      "detectionPattern": "read <file-type>.minimumBytes",
+      "suggestedFixDescription": "FileType.minimumBytes became obsolete since we now read beyond this 4k boundary. Use .fromFile() for efficient detection."
+    },
+    "semanticPatchId": "1435",
+    "breakingChangeId": "296",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1434",
+      "comment": "Added unknown access path quistion",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-23T13:58:11.000Z",
+      "detectionPattern": "read <file-type>.fromTokenizer",
+      "suggestedFixDescription": "strtok3 needs to be updated to version 6, because the tokenizer argument has been changed and requires a newer version",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1434",
+    "breakingChangeId": "295",
+    "enabled": true,
+    "comment": "Added unknown access path quistion"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1435",
+      "comment": "Added unknown access path quistion",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-23T14:01:39.000Z",
+      "detectionPattern": "read <file-type>.minimumBytes",
+      "suggestedFixDescription": "FileType.minimumBytes became obsolete since we now read beyond this 4k boundary. Use .fromFile() for efficient detection.",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1435",
+    "breakingChangeId": "296",
+    "enabled": true,
+    "comment": "Added unknown access path quistion"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1435",
+      "comment": "improve suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-06T11:38:44.000Z",
+      "detectionPattern": "read <file-type>.minimumBytes",
+      "suggestedFixDescription": "FileType.minimumBytes is obsolete since file-type now reads beyond a 4k boundary (See https://github.com/sindresorhus/file-type/pull/319)",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1435",
+    "breakingChangeId": "296",
+    "enabled": true,
+    "comment": "improve suggested fix"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "558",
+    "packageVersion": "9.0.0",
+    "packageName": "uuid",
+    "description": "Drop Node.js 10.x support. This library always aims at supporting one EOLed LTS release which by this time now is 12.x which has reached EOL 30 Apr 2022.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "560",
+    "packageVersion": "9.0.0",
+    "packageName": "uuid",
+    "description": "Drop IE 11 and Safari 10 support. This is unlikely to be breaking for most users, but in the rare case that your package or your users use one of the two legacy browsers, we recommend either staying on version 8.x of uuid or dropping support for these browsers yourself. But since 9.0.0 is not fixing any immediate security flaw, the only disadvantage of staying on 8.x is missing out on future fixes/features.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "559",
+    "packageVersion": "9.0.0",
+    "packageName": "uuid",
+    "description": "Remove the minified UMD build from the package. It’s likely that this will not affect the majority of users, but if you are currently using the minified UMD build of this package, you will either have to start using one of the normal builds or stay on version 8.x. The minified UMD build was removed from the exported builds because of potential future security issues. For more information see the issue: https://github.com/uuidjs/uuid/issues/620",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

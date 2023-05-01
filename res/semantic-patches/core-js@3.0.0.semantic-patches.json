@@ -1,0 +1,819 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js/#1/#2queueMicrotask"
+      },
+      "detectionPattern": "import core-js/**/*asap"
+    },
+    "semanticPatchId": "1021",
+    "breakingChangeId": "21",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import core-js/**/escape"
+    },
+    "semanticPatchId": "1034",
+    "breakingChangeId": "29",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<unescape-html>($base)"
+      },
+      "detectionPattern": "call <String>?**.unescapeHTML",
+      "unknownAccessPathQuestion": "Is the receiver a string?"
+    },
+    "semanticPatchId": "1044",
+    "breakingChangeId": "34",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import core-js/**/object/{classof,is-object,define,make}"
+    },
+    "semanticPatchId": "1038",
+    "breakingChangeId": "32",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Are you affected by the breaking change: Update String#matchAll (proposal-string-matchall#17, proposal-string-matchall#38, proposal-string-matchall#41, etc.) and move to the stage 3?",
+      "detectionPattern": "call {<core-js>?,<String>?}**.matchAll",
+      "unknownAccessPathQuestion": "Is the receiver a string or the core-js module object?"
+    },
+    "semanticPatchId": "1026",
+    "breakingChangeId": "24",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.queueMicrotask"
+      },
+      "detectionPattern": "read {<core-js>,<global>}.asap",
+      "unknownAccessPathQuestion": "Is the receiver the core-js module object or the global object?"
+    },
+    "semanticPatchId": "1022",
+    "breakingChangeId": "21",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "import/#1flat"
+      },
+      "detectionPattern": "import core-js/**/flatten"
+    },
+    "semanticPatchId": "1024",
+    "breakingChangeId": "23",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Are you affected by the breaking change: Update Observable (#257, #276, etc.)?",
+      "detectionPattern": "call <core-js/**/*observable>",
+      "unknownAccessPathQuestion": "Is the function from the core-js observable module?"
+    },
+    "semanticPatchId": "1023",
+    "breakingChangeId": "22",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.flat"
+      },
+      "detectionPattern": "read {<core-js>?,<Array>?}**.flatten",
+      "unknownAccessPathQuestion": "Is the receiver an array or the core-js module object object?"
+    },
+    "semanticPatchId": "1025",
+    "breakingChangeId": "23",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import core-js/**/is-error"
+    },
+    "semanticPatchId": "1028",
+    "breakingChangeId": "26",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import core-js{/library/,/}fn/array/{pop,push,reverse,shift,unshift}"
+    },
+    "semanticPatchId": "1060",
+    "breakingChangeId": "44",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js/es#1"
+      },
+      "detectionPattern": "import core-js/es7{,/**/*}"
+    },
+    "semanticPatchId": "1053",
+    "breakingChangeId": "39",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<regexp.escape>"
+      },
+      "detectionPattern": "read <RegExp>.escape",
+      "unknownAccessPathQuestion": "Is the receiver the built-in RegExp constructor?"
+    },
+    "semanticPatchId": "1035",
+    "breakingChangeId": "29",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base"
+      },
+      "detectionPattern": "read <global>.core",
+      "unknownAccessPathQuestion": "Is the receiver the global object?"
+    },
+    "semanticPatchId": "1061",
+    "breakingChangeId": "45",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "globalThis"
+      },
+      "detectionPattern": "read <System>.global",
+      "unknownAccessPathQuestion": "Is the receiver System?"
+    },
+    "semanticPatchId": "1031",
+    "breakingChangeId": "27",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "(new Promise(function (resolve) {\n      setTimeout(resolve(true), $1);\n    }));"
+      },
+      "detectionPattern": "call {<core-js/**/>.delay,<core-js/**/delay>}",
+      "unknownAccessPathQuestion": "Is the read property the delay function from core-js?"
+    },
+    "semanticPatchId": "1047",
+    "breakingChangeId": "35",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js-bundle"
+      },
+      "detectionPattern": "import core-js/{client,client/**/*}"
+    },
+    "semanticPatchId": "1048",
+    "breakingChangeId": "36",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js/modules/#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "es7.map.from => esnext.map.from",
+              "es7.map.of => esnext.map.of",
+              "es7.math.clamp => esnext.math.clamp",
+              "es7.math.deg-per-rad => esnext.math.deg-per-rad",
+              "es7.math.degrees => esnext.math.degrees",
+              "es7.math.fscale => esnext.math.fscale",
+              "es7.math.iaddh => esnext.math.iaddh",
+              "es7.math.imulh => esnext.math.imulh",
+              "es7.math.isubh => esnext.math.isubh",
+              "es7.math.rad-per-deg => esnext.math.rad-per-deg",
+              "es7.math.radians => esnext.math.radians",
+              "es7.math.scale => esnext.math.scale",
+              "es7.math.signbit => esnext.math.signbit",
+              "es7.math.umulh => esnext.math.umulh",
+              "es7.observable => esnext.observable",
+              "es7.promise.try => esnext.promise.try",
+              "es7.reflect.define-metadata => esnext.reflect.define-metadata",
+              "es7.reflect.delete-metadata => esnext.reflect.delete-metadata",
+              "es7.reflect.get-metadata => esnext.reflect.get-metadata",
+              "es7.reflect.get-metadata-keys => esnext.reflect.get-metadata-keys",
+              "es7.reflect.get-own-metadata => esnext.reflect.get-own-metadata",
+              "es7.reflect.get-own-metadata-keys => esnext.reflect.get-own-metadata-keys",
+              "es7.reflect.has-metadata => esnext.reflect.has-metadata",
+              "es7.reflect.has-own-metadata => esnext.reflect.has-own-metadata",
+              "es7.reflect.metadata => esnext.reflect.metadata",
+              "es7.set.of => esnext.set.of",
+              "es7.string.at => esnext.string.at",
+              "es7.string.match-all => esnext.string.match-all",
+              "es7.symbol.observable => esnext.symbol.observable",
+              "es7.weak-map.from => esnext.weak-map.from",
+              "es7.weak-map.of => esnext.weak-map.of",
+              "es7.weak-set.from => esnext.weak-set.from",
+              "es7.weak-set.of => esnext.weak-set.of"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import core-js/modules/{es7.map.from,es7.map.of,es7.math.clamp,es7.math.deg-per-rad,es7.math.degrees,es7.math.fscale,es7.math.iaddh,es7.math.imulh,es7.math.isubh,es7.math.rad-per-deg,es7.math.radians,es7.math.scale,es7.math.signbit,es7.math.umulh,es7.observable,es7.promise.try,es7.reflect.define-metadata,es7.reflect.delete-metadata,es7.reflect.get-metadata,es7.reflect.get-metadata-keys,es7.reflect.get-own-metadata,es7.reflect.get-own-metadata-keys,es7.reflect.has-metadata,es7.reflect.has-own-metadata,es7.reflect.metadata,es7.set.of,es7.string.at,es7.string.match-all,es7.symbol.observable,es7.weak-map.from,es7.weak-map.of,es7.weak-set.from,es7.weak-set.of}"
+    },
+    "semanticPatchId": "1055",
+    "breakingChangeId": "40",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js-pure/features#1"
+      },
+      "detectionPattern": "import core-js/library/fn{,/**/*}"
+    },
+    "semanticPatchId": "1057",
+    "breakingChangeId": "41",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((() => {<map-tojson>.shim(); return $base.$prop})())"
+      },
+      "detectionPattern": "read <Map>?**.toJSON",
+      "unknownAccessPathQuestion": "Is the receiver a Map?"
+    },
+    "semanticPatchId": "1032",
+    "breakingChangeId": "28",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<escape-html>($base)"
+      },
+      "detectionPattern": "call <String>?**.escapeHTML",
+      "unknownAccessPathQuestion": "Is the receiver a string?"
+    },
+    "semanticPatchId": "1043",
+    "breakingChangeId": "34",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js-pure/features/#1"
+      },
+      "detectionPattern": "import core-js/library/es7/*"
+    },
+    "semanticPatchId": "1050",
+    "breakingChangeId": "37",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "(Object.prototype.toString($1).slice(8, -1) === 'Error')"
+      },
+      "detectionPattern": "call <Error>.isError",
+      "unknownAccessPathQuestion": "Is the receiver the built-in Error constructor?"
+    },
+    "semanticPatchId": "1030",
+    "breakingChangeId": "26",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <Dict>",
+      "unknownAccessPathQuestion": "Is the called function the built-in Dict object?"
+    },
+    "semanticPatchId": "1037",
+    "breakingChangeId": "31",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js-pure/es/#2"
+      },
+      "detectionPattern": "import core-js/library/{es5,es6}/*"
+    },
+    "semanticPatchId": "1049",
+    "breakingChangeId": "37",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js/internals/#1"
+      },
+      "detectionPattern": "import core-js/modules/_*"
+    },
+    "semanticPatchId": "1059",
+    "breakingChangeId": "43",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read {<core-js>?,<Function>?}**.part",
+      "unknownAccessPathQuestion": "Is the receiver a function or the core-js module object?"
+    },
+    "semanticPatchId": "1041",
+    "breakingChangeId": "33",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js"
+      },
+      "detectionPattern": "import core-js/{shim,shim/**/*}"
+    },
+    "semanticPatchId": "1051",
+    "breakingChangeId": "38",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <Object>.{classof,isObject,define,make}",
+      "unknownAccessPathQuestion": "Is the receiver the built-in Object constructor?"
+    },
+    "semanticPatchId": "1039",
+    "breakingChangeId": "32",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js/internals/dom-iterables"
+      },
+      "detectionPattern": "import core-js/modules/web.dom.*"
+    },
+    "semanticPatchId": "1058",
+    "breakingChangeId": "42",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((time) => new Promise(function (resolve) {\n      setTimeout(resolve(true), time);\n    }));"
+      },
+      "detectionPattern": "readO <core-js/**/>.delay",
+      "unknownAccessPathQuestion": "Is the read property the delay function from core-js?"
+    },
+    "semanticPatchId": "1046",
+    "breakingChangeId": "35",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import core-js/**/delay"
+    },
+    "semanticPatchId": "1045",
+    "breakingChangeId": "35",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((() => {<set-tojson>.shim(); return $base.$prop})())"
+      },
+      "detectionPattern": "read <Set>?**.toJSON",
+      "unknownAccessPathQuestion": "Is the receiver a Set?"
+    },
+    "semanticPatchId": "1033",
+    "breakingChangeId": "28",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((arg) => Object.prototype.toString.call(arg).slice(8, -1) === 'Error')"
+      },
+      "detectionPattern": "readO <Error>.isError",
+      "unknownAccessPathQuestion": "Is the receiver the built-in Error constructor?"
+    },
+    "semanticPatchId": "1029",
+    "breakingChangeId": "26",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js/modules/#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "es6.object.is => es.object.is",
+              "es7.string.trim-left => es.string.trim-left",
+              "es6.object.is-sealed => es.object.is-sealed",
+              "es7.string.trim-right => es.string.trim-right",
+              "es6.object.keys => es.object.keys",
+              "es7.symbol.async-iterator => es.symbol.async-iterator",
+              "es6.object.prevent-extensions => es.object.prevent-extensions",
+              "es7.symbol.observable => es.symbol.observable",
+              "es6.object.seal => es.object.seal",
+              "es7.system.global => es.system.global",
+              "es6.object.set-prototype-of => es.object.set-prototype-of",
+              "es7.weak-map.from => es.weak-map.from",
+              "es6.object.to-string => es.object.to-string",
+              "es7.weak-map.of => es.weak-map.of",
+              "es6.parse-float => es.parse-float",
+              "es7.weak-set.from => es.weak-set.from",
+              "es6.parse-int => es.parse-int",
+              "es7.weak-set.of => es.weak-set.of",
+              "es6.promise => es.promise",
+              "es6.reflect.apply => es.reflect.apply",
+              "es6.reflect.construct => es.reflect.construct",
+              "es6.reflect.define-property => es.reflect.define-property",
+              "es6.reflect.delete-property => es.reflect.delete-property",
+              "es6.reflect.enumerate => es.reflect.enumerate",
+              "es6.reflect.get => es.reflect.get",
+              "es6.reflect.get-own-property-descriptor => es.reflect.get-own-property-descriptor",
+              "es6.reflect.get-prototype-of => es.reflect.get-prototype-of",
+              "es6.reflect.has => es.reflect.has",
+              "es6.reflect.is-extensible => es.reflect.is-extensible",
+              "es6.reflect.own-keys => es.reflect.own-keys",
+              "es6.reflect.prevent-extensions => es.reflect.prevent-extensions",
+              "es6.reflect.set => es.reflect.set",
+              "es6.reflect.set-prototype-of => es.reflect.set-prototype-of",
+              "es6.regexp.constructor => es.regexp.constructor",
+              "es6.regexp.exec => es.regexp.exec",
+              "es6.regexp.flags => es.regexp.flags",
+              "es6.regexp.match => es.string.match",
+              "es6.regexp.replace => es.string.replace",
+              "es6.regexp.search => es.string.search",
+              "es6.regexp.split => es.string.split",
+              "es6.regexp.to-string => es.regexp.to-string",
+              "es6.set => es.set",
+              "es6.string.anchor => es.string.anchor",
+              "es6.string.big => es.string.big",
+              "es6.string.blink => es.string.blink",
+              "es6.string.bold => es.string.bold",
+              "es6.string.code-point-at => es.string.code-point-at",
+              "es6.string.ends-with => es.string.ends-with",
+              "es6.string.fixed => es.string.fixed",
+              "es6.string.fontcolor => es.string.fontcolor",
+              "es6.string.fontsize => es.string.fontsize",
+              "es6.string.from-code-point => es.string.from-code-point",
+              "es6.string.includes => es.string.includes",
+              "es6.string.italics => es.string.italics",
+              "es6.string.iterator => es.string.iterator",
+              "es6.string.link => es.string.link",
+              "es6.array.copy-within => es.array.copy-within",
+              "es6.string.raw => es.string.raw",
+              "es6.array.every => es.array.every",
+              "es6.string.repeat => es.string.repeat",
+              "es6.array.fill => es.array.fill",
+              "es6.string.small => es.string.small",
+              "es6.array.filter => es.array.filter",
+              "es6.string.starts-with => es.string.starts-with",
+              "es6.array.find-index => es.array.find-index",
+              "es6.string.strike => es.string.strike",
+              "es6.array.find => es.array.find",
+              "es6.string.sub => es.string.sub",
+              "es6.array.for-each => es.array.for-each",
+              "es6.string.sup => es.string.sup",
+              "es6.array.from => es.array.from",
+              "es6.string.trim => es.string.trim",
+              "es6.array.index-of => es.array.index-of",
+              "es6.symbol => es.symbol",
+              "es6.array.is-array => es.array.is-array",
+              "es6.typed.array-buffer => es.typed-array.array-buffer",
+              "es6.array.iterator => es.array.iterator",
+              "es6.typed.data-view => es.typed-array.data-view",
+              "es6.array.join => es.array.join",
+              "es6.typed.float32-array => es.typed-array.float32-array",
+              "es6.array.last-index-of => es.array.last-index-of",
+              "es6.typed.float64-array => es.typed-array.float64-array",
+              "es6.array.map => es.array.map",
+              "es6.typed.int16-array => es.typed-array.int16-array",
+              "es6.array.of => es.array.of",
+              "es6.typed.int32-array => es.typed-array.int32-array",
+              "es6.array.reduce => es.array.reduce",
+              "es6.typed.int8-array => es.typed-array.int8-array",
+              "es6.array.reduce-right => es.array.reduce-right",
+              "es6.typed.uint16-array => es.typed-array.uint16-array",
+              "es6.array.slice => es.array.slice",
+              "es6.typed.uint32-array => es.typed-array.uint32-array",
+              "es6.array.some => es.array.some",
+              "es6.typed.uint8-array => es.typed-array.uint8-array",
+              "es6.array.sort => es.array.sort",
+              "es6.typed.uint8-clamped-array => es.typed-array.uint8-clamped-array",
+              "es6.array.species => es.array.species",
+              "es6.weak-map => es.weak-map",
+              "es6.date.now => es.date.now",
+              "es6.weak-set => es.weak-set",
+              "es6.date.to-iso-string => es.date.to-iso-string",
+              "es7.array.flat-map => es.array.flat-map",
+              "es6.date.to-json => es.date.to-json",
+              "es7.array.flatten => es.array.flatten",
+              "es6.date.to-primitive => es.date.to-primitive",
+              "es7.array.includes => es.array.includes",
+              "es6.date.to-string => es.date.to-string",
+              "es7.asap => web.queue-microtask",
+              "es6.function.bind => es.function.bind",
+              "es7.error.is-error => es.error.is-error",
+              "es6.function.has-instance => es.function.has-instance",
+              "es7.global => es.global",
+              "es6.function.name => es.function.name",
+              "es7.map.from => es.map.from",
+              "es6.map => es.map",
+              "es7.map.of => es.map.of",
+              "es6.math.acosh => es.math.acosh",
+              "es7.map.to-json => es.map.to-json",
+              "es6.math.asinh => es.math.asinh",
+              "es7.math.clamp => es.math.clamp",
+              "es6.math.atanh => es.math.atanh",
+              "es7.math.deg-per-rad => es.math.deg-per-rad",
+              "es6.math.cbrt => es.math.cbrt",
+              "es7.math.degrees => es.math.degrees",
+              "es6.math.clz32 => es.math.clz32",
+              "es7.math.fscale => es.math.fscale",
+              "es6.math.cosh => es.math.cosh",
+              "es7.math.iaddh => es.math.iaddh",
+              "es6.math.expm1 => es.math.expm1",
+              "es7.math.imulh => es.math.imulh",
+              "es6.math.fround => es.math.fround",
+              "es7.math.isubh => es.math.isubh",
+              "es6.math.hypot => es.math.hypot",
+              "es7.math.radians => es.math.radians",
+              "es6.math.imul => es.math.imul",
+              "es7.math.rad-per-deg => es.math.rad-per-deg",
+              "es6.math.log10 => es.math.log10",
+              "es7.math.scale => es.math.scale",
+              "es6.math.log1p => es.math.log1p",
+              "es7.math.signbit => es.math.signbit",
+              "es6.math.log2 => es.math.log2",
+              "es7.math.umulh => es.math.umulh",
+              "es6.math.sign => es.math.sign",
+              "es7.object.define-getter => es.object.define-getter",
+              "es6.math.sinh => es.math.sinh",
+              "es7.object.define-setter => es.object.define-setter",
+              "es6.math.tanh => es.math.tanh",
+              "es7.object.entries => es.object.entries",
+              "es6.math.trunc => es.math.trunc",
+              "es7.object.get-own-property-descriptors => es.object.get-own-property-descriptors",
+              "es6.number.constructor => es.number.constructor",
+              "es7.object.lookup-getter => es.object.lookup-getter",
+              "es6.number.epsilon => es.number.epsilon",
+              "es7.object.lookup-setter => es.object.lookup-setter",
+              "es6.number.is-finite => es.number.is-finite",
+              "es7.object.values => es.object.values",
+              "es6.number.is-integer => es.number.is-integer",
+              "es7.observable => es.observable",
+              "es6.number.is-nan => es.number.is-nan",
+              "es7.promise.finally => es.promise.finally",
+              "es6.number.is-safe-integer => es.number.is-safe-integer",
+              "es7.promise.try => es.promise.try",
+              "es6.number.max-safe-integer => es.number.max-safe-integer",
+              "es7.reflect.define-metadata => es.reflect.define-metadata",
+              "es6.number.min-safe-integer => es.number.min-safe-integer",
+              "es7.reflect.delete-metadata => es.reflect.delete-metadata",
+              "es6.number.parse-float => es.number.parse-float",
+              "es7.reflect.get-metadata => es.reflect.get-metadata",
+              "es6.number.parse-int => es.number.parse-int",
+              "es7.reflect.get-metadata-keys => es.reflect.get-metadata-keys",
+              "es6.number.to-fixed => es.number.to-fixed",
+              "es7.reflect.get-own-metadata => es.reflect.get-own-metadata",
+              "es6.number.to-precision => es.number.to-precision",
+              "es7.reflect.get-own-metadata-keys => es.reflect.get-own-metadata-keys",
+              "es6.object.assign => es.object.assign",
+              "es7.reflect.has-metadata => es.reflect.has-metadata",
+              "es6.object.create => es.object.create",
+              "es7.reflect.has-own-metadata => es.reflect.has-own-metadata",
+              "es6.object.define-properties => es.object.define-properties",
+              "es7.reflect.metadata => es.reflect.metadata",
+              "es6.object.define-property => es.object.define-property",
+              "es7.set.from => es.set.from",
+              "es6.object.freeze => es.object.freeze",
+              "es7.set.of => es.set.of",
+              "es6.object.get-own-property-descriptor => es.object.get-own-property-descriptor",
+              "es7.set.to-json => es.set.to-json",
+              "es6.object.get-own-property-names => es.object.get-own-property-names",
+              "es7.string.at => es.string.at",
+              "es6.object.get-prototype-of => es.object.get-prototype-of",
+              "es7.string.match-all => es.string.match-all",
+              "es6.object.is-extensible => es.object.is-extensible",
+              "es7.string.pad-end => es.string.pad-end",
+              "es6.object.is-frozen => es.object.is-frozen",
+              "es7.string.pad-start => es.string.pad-start"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import core-js/modules/{es6.array.copy-within,es6.array.every,es6.array.fill,es6.array.filter,es6.array.find-index,es6.array.find,es6.array.for-each,es6.array.from,es6.array.index-of,es6.array.is-array,es6.array.iterator,es6.array.join,es6.array.last-index-of,es6.array.map,es6.array.of,es6.array.reduce-right,es6.array.reduce,es6.array.slice,es6.array.some,es6.array.sort,es6.array.species,es6.date.now,es6.date.to-iso-string,es6.date.to-json,es6.date.to-primitive,es6.date.to-string,es6.function.bind,es6.function.has-instance,es6.function.name,es6.map,es6.math.acosh,es6.math.asinh,es6.math.atanh,es6.math.cbrt,es6.math.clz32,es6.math.cosh,es6.math.expm1,es6.math.fround,es6.math.hypot,es6.math.imul,es6.math.log1p,es6.math.log2,es6.math.log10,es6.math.sign,es6.math.sinh,es6.math.tanh,es6.math.trunc,es6.number.constructor,es6.number.epsilon,es6.number.is-finite,es6.number.is-integer,es6.number.is-nan,es6.number.is-safe-integer,es6.number.max-safe-integer,es6.number.min-safe-integer,es6.number.parse-float,es6.number.parse-int,es6.number.to-fixed,es6.number.to-precision,es6.object.assign,es6.object.create,es6.object.define-properties,es6.object.define-property,es6.object.freeze,es6.object.get-own-property-descriptor,es6.object.get-own-property-names,es6.object.get-prototype-of,es6.object.is-extensible,es6.object.is-frozen,es6.object.is-sealed,es6.object.is,es6.object.keys,es6.object.prevent-extensions,es6.object.seal,es6.object.set-prototype-of,es6.object.to-string,es6.parse-float,es6.parse-int,es6.promise,es6.reflect.apply,es6.reflect.construct,es6.reflect.define-property,es6.reflect.delete-property,es6.reflect.get-own-property-descriptor,es6.reflect.get-prototype-of,es6.reflect.get,es6.reflect.has,es6.reflect.is-extensible,es6.reflect.own-keys,es6.reflect.prevent-extensions,es6.reflect.set-prototype-of,es6.reflect.set,es6.regexp.constructor,es6.regexp.exec,es6.regexp.flags,es6.regexp.to-string,es6.set,es6.string.anchor,es6.string.big,es6.string.blink,es6.string.bold,es6.string.code-point-at,es6.string.ends-with,es6.string.fixed,es6.string.fontcolor,es6.string.fontsize,es6.string.from-code-point,es6.string.includes,es6.string.italics,es6.string.iterator,es6.string.link,es6.string.raw,es6.string.repeat,es6.string.small,es6.string.starts-with,es6.string.strike,es6.string.sub,es6.string.sup,es6.string.trim,es6.symbol,es6.typed.array-buffer,es6.typed.data-view,es6.typed.float32-array,es6.typed.float64-array,es6.typed.int8-array,es6.typed.int16-array,es6.typed.int32-array,es6.typed.uint8-array,es6.typed.uint8-clamped-array,es6.typed.uint16-array,es6.typed.uint32-array,es6.weak-map,es6.weak-set,es7.array.flat-map,es7.array.flatten,es7.array.includes,es7.object.define-getter,es7.object.define-setter,es7.object.entries,es7.object.get-own-property-descriptors,es7.object.lookup-getter,es7.object.lookup-setter,es7.object.values,es7.promise.finally,es7.string.pad-end,es7.string.pad-start,es7.string.trim-left,es7.string.trim-right,es7.symbol.async-iterator}"
+    },
+    "semanticPatchId": "1054",
+    "breakingChangeId": "39",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import core-js/**/part"
+    },
+    "semanticPatchId": "1040",
+    "breakingChangeId": "33",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js/features#1"
+      },
+      "detectionPattern": "import core-js/fn{,/**/*}"
+    },
+    "semanticPatchId": "1056",
+    "breakingChangeId": "41",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js/#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "es5 => es",
+              "es6 => es",
+              "es6/array => es/array",
+              "es6/function => es/function",
+              "es6/map => es/map",
+              "es6/number => es/number",
+              "es6/parse-float => es/number/parse-float",
+              "es6/promise => es/promise",
+              "es6/regexp => es/regexp",
+              "es6/string => es/string",
+              "es6/typed => es/typed-array",
+              "es6/weak => es/weak-set",
+              "es6/date => es/date",
+              "es6/math => es/math",
+              "es6/object => es/object",
+              "es6/parse-int => es/number/parse-int",
+              "es6/reflect => es/reflect",
+              "es6/set => es/set",
+              "es6/symbol => es/symbol",
+              "es6/weak => es/weak-map"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import core-js/{es5,es6,es5/**/*,es6/**/*}"
+    },
+    "semanticPatchId": "1052",
+    "breakingChangeId": "39",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import core-js/**/*{escape-html,unescape-html}"
+    },
+    "semanticPatchId": "1042",
+    "breakingChangeId": "34",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <Reflect>.enumerate",
+      "unknownAccessPathQuestion": "Is the receiver the built-in Reflect object?"
+    },
+    "semanticPatchId": "1036",
+    "breakingChangeId": "30",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "core-js/#1/#2#new3",
+        "replacements": [
+          {
+            "source": "#3",
+            "newName": "#new3",
+            "substitutes": [
+              "trim-left => trim-start",
+              "trim-right => trim-end"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import core-js/**/*{trim-left,trim-right}"
+    },
+    "semanticPatchId": "1027",
+    "breakingChangeId": "25",
+    "enabled": true,
+    "comment": "database default"
+  }
+]

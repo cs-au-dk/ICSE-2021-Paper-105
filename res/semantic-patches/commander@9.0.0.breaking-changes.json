@@ -1,0 +1,35 @@
+[
+  {
+    "id": "455",
+    "packageVersion": "9.0.0",
+    "packageName": "commander",
+    "description": "Commander 9 requires Node.js v12.20.0 or higher",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "457",
+    "packageVersion": "9.0.0",
+    "packageName": "commander",
+    "description": "removed internal fallback to require.main.filename when script not known from arguments passed to .parse()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "456",
+    "packageVersion": "9.0.0",
+    "packageName": "commander",
+    "description": "Changed/Fixed the behaviour of default values for non-boolean options so it now works as documented here https://github.com/tj/commander.js/tree/v8.0.0#default-option-value (like boolean options)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

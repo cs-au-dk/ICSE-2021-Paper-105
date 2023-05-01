@@ -1,0 +1,57 @@
+[
+  {
+    "id": "401",
+    "packageVersion": "10.0.0",
+    "packageName": "fs-extra",
+    "description": "Require Node.js v12+",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "402",
+    "packageVersion": "10.0.0",
+    "packageName": "fs-extra",
+    "description": "Allow copying broken symlinks",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "403",
+    "packageVersion": "10.0.0",
+    "packageName": "fs-extra",
+    "description": "Ensure correct type when destination exists for ensureLink*()/ensureSymlink*()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "404",
+    "packageVersion": "10.0.0",
+    "packageName": "fs-extra",
+    "description": "Error when attempting to copy*() unknown file type",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "405",
+    "packageVersion": "10.0.0",
+    "packageName": "fs-extra",
+    "description": "Remove undocumented options for remove*()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

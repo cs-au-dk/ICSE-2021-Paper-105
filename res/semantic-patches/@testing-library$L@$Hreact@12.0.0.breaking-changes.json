@@ -1,0 +1,24 @@
+[
+  {
+    "id": "507",
+    "packageVersion": "12.0.0",
+    "packageName": "@testing-library/react",
+    "description": "Bump @testing-library/dom to 8.0.0.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "508",
+    "packageVersion": "12.0.0",
+    "packageName": "@testing-library/react",
+    "description": "node 10 is no longer supported. Use node 12, 14 or 16",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

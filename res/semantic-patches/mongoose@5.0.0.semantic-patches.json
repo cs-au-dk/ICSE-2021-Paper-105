@@ -1,0 +1,1715 @@
+[
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "Add suggested fix",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-04T12:34:30.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "propName": "usePushEach",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema",
+      "suggestedFixDescription": "Ensure that the second argument to the Schema constructor does not set the usePushEach property",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose module object?"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "Add suggested fix"
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "add suggested fix and test",
+      "enabled": true,
+      "version": 8,
+      "creationDate": "2022-04-05T18:46:27.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "usePushEach",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema 1.usePushEach:boolean",
+      "suggestedFixDescription": "Remove the usePushEach option on the second argument.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose module object?"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "add suggested fix and test"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1214",
+      "comment": "disable",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is it NOT exploited that the result of connect was a MongooseThenable?",
+      "primaryTemplate": {
+        "pattern": "((() => {\n\t$callee($args);\n\treturn $base;\n})())",
+        "replacements": []
+      },
+      "detectionPattern": "callR <mongoose>.connect [1, 1]",
+      "unknownAccessPathQuestion": "Is the receiver the mongoose module object?"
+    },
+    "semanticPatchId": "1214",
+    "breakingChangeId": "120",
+    "enabled": false,
+    "comment": "disable"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1215",
+      "comment": "disable",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is it NOT exploited that the result of connect was a MongooseThenable?",
+      "primaryTemplate": {
+        "pattern": "((() => {\n\t$callee($args);\n\treturn $base.connection;\n})())",
+        "replacements": []
+      },
+      "detectionPattern": "callR <mongoose>.connect [2, 3]",
+      "alternativeTemplate": {
+        "pattern": "((() => {\n\t$callee($args);\n\treturn $base;\n})())",
+        "replacements": []
+      },
+      "transformationQuestion": "Is the option useMongoClient enabled?",
+      "unknownAccessPathQuestion": "Is the receiver the mongoose module object?"
+    },
+    "semanticPatchId": "1215",
+    "breakingChangeId": "120",
+    "enabled": false,
+    "comment": "disable"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "callR <mongoose>.{connect,createConnection}",
+      "suggestedFixDescription": "Only relevant if you depend on the return value being a reference to the mongoose object. In that case, you need to modify the usages of the return value to get the mongoose object from somewhere else."
+    },
+    "semanticPatchId": "1462",
+    "breakingChangeId": "120",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1222",
+      "comment": "disable ",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-04-04T14:08:05.000Z",
+      "extraQuestion": "Is the saveErrorIfNotFound not set to true on the Schema and can save errors occur and is the result used by the code?",
+      "detectionPattern": "call <mongoose>?**.save",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose document?"
+    },
+    "semanticPatchId": "1222",
+    "breakingChangeId": "124",
+    "enabled": false,
+    "comment": "disable "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1209",
+      "comment": "Change to call pattern",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "call <mongoose>?**.aggregate()**.cursor",
+      "suggestedFixDescription": "The useMongooseAggCursor option of the cursor call is now always set. If this option was already set, you can ignore this breaking change. Otherwise, your code will probably still work, but extra testing is advised.",
+      "unknownAccessPathQuestion": "Is the call to cursor on a mongoose collection aggregate?"
+    },
+    "semanticPatchId": "1209",
+    "breakingChangeId": "115",
+    "enabled": true,
+    "comment": "Change to call pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1224",
+      "comment": "Suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "call <mongoose>?**.{toObject,toJson} [1, 1]",
+      "suggestedFixDescription": "The options provided to toObject and toJson are now merged with the schema-wide options. If you depend on some schema-wide option properties being overwritten, then you must set these properties explicitly on the options object to this call. ",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose document?"
+    },
+    "semanticPatchId": "1224",
+    "breakingChangeId": "126",
+    "enabled": true,
+    "comment": "Suggested fix"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1221",
+      "comment": "disable",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the object a mongoose schema?",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "write <mongoose>?**.saveErrorIfNotFound",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1221",
+    "breakingChangeId": "124",
+    "enabled": false,
+    "comment": "disable"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.save",
+      "suggestedFixDescription": "If the updated document does not exists, save may now throw an error. Check that your code does not save non-existing objects."
+    },
+    "semanticPatchId": "1463",
+    "breakingChangeId": "124",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "read <mongoose>?**.geoNear",
+      "suggestedFixDescription": "See https://www.mongodb.com/docs/v4.0/reference/command/geoNear/#dbcmd.geoNear for other options",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose Model?"
+    },
+    "semanticPatchId": "1471",
+    "breakingChangeId": "329",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>.{connect,createConnection}",
+      "suggestedFixDescription": "If you use a domain socket to connect to mongoose (host name ends with .sock), then you must use encodeURIComponent on the hostname."
+    },
+    "semanticPatchId": "1472",
+    "breakingChangeId": "330",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1463",
+      "comment": "Unknown access path question (not technically required since the BC is marked as unlikely).",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-04T14:11:01.000Z",
+      "detectionPattern": "call <mongoose>?**.save",
+      "suggestedFixDescription": "If the updated document does not exists, save may now throw an error. Check that your code does not save non-existing objects.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose document?"
+    },
+    "semanticPatchId": "1463",
+    "breakingChangeId": "124",
+    "enabled": true,
+    "comment": "Unknown access path question (not technically required since the BC is marked as unlikely)."
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "write <Object>?**.validator",
+      "suggestedFixDescription": "Return a promise instead of calling the callback. For example, for validator function body `b`, replace `b` with `return new Promise((res) => {b})` and replace calls to the validator callback `cb(x)` with `res(x)` in the body `b`. "
+    },
+    "semanticPatchId": "1464",
+    "breakingChangeId": "118",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1472",
+      "comment": "minor",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T05:27:49.000Z",
+      "detectionPattern": "call <mongoose>.{connect,createConnection}",
+      "suggestedFixDescription": "If you use a domain socket to connect to mongoose (host name ends with .sock), then you must use encodeURIComponent on the hostname."
+    },
+    "semanticPatchId": "1472",
+    "breakingChangeId": "330",
+    "enabled": true,
+    "comment": "minor"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init sempatch",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.init [2, 2]",
+      "suggestedFixDescription": "The init function was always executing synchronously anyway, so take the body of the callback function and execute those statements/expressions after the init call to preserve the old behavior.",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose Document?"
+    },
+    "semanticPatchId": "1473",
+    "breakingChangeId": "331",
+    "enabled": true,
+    "comment": "init sempatch"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "extraQuestion": "is passRawResult set as an option to a call to Mongoose' findOneAndUpdate method?",
+      "detectionPattern": "write <Object>?**.passRawResult",
+      "suggestedFixDescription": "You can set the 'rawResult' property to true instead, but then the findOndAndUpdate callback is called with arguments `(error, writeOpResult)` instead of `(error, doc, writeOpResult)`."
+    },
+    "semanticPatchId": "1465",
+    "breakingChangeId": "117",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1465",
+      "comment": "enable",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-04T14:56:32.000Z",
+      "extraQuestion": "is passRawResult set as an option to a call to Mongoose' findOneAndUpdate method?",
+      "detectionPattern": "write <Object>?**.passRawResult",
+      "suggestedFixDescription": "You can set the 'rawResult' property to true instead, but then the findOndAndUpdate callback is called with arguments `(error, writeOpResult)` instead of `(error, doc, writeOpResult)`."
+    },
+    "semanticPatchId": "1465",
+    "breakingChangeId": "117",
+    "enabled": true,
+    "comment": "enable"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.save [1, 1] 1:function3",
+      "suggestedFixDescription": "The third argument to the callback numAffected is no longer passed. You only need to rely on the error argument for error checking."
+    },
+    "semanticPatchId": "1474",
+    "breakingChangeId": "332",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1474",
+      "comment": "unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T06:58:03.000Z",
+      "detectionPattern": "call <mongoose>?**.save [1,1] 0:function3",
+      "suggestedFixDescription": "The third argument to the callback numAffected is no longer passed. You only need to rely on the error argument for error checking.",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose Document?"
+    },
+    "semanticPatchId": "1474",
+    "breakingChangeId": "332",
+    "enabled": true,
+    "comment": "unknown access path question"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.Promise",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.getPromiseConstructor",
+      "unknownAccessPathQuestion": "Is the receiver the mongoose module object"
+    },
+    "semanticPatchId": "1475",
+    "breakingChangeId": "333",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.pre",
+      "suggestedFixDescription": "If you want pass information between pre middleware hooks you need to track that information in some shared state instead."
+    },
+    "semanticPatchId": "1477",
+    "breakingChangeId": "334",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1477",
+      "comment": "unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T07:40:20.000Z",
+      "detectionPattern": "call <mongoose>?**.pre",
+      "suggestedFixDescription": "If you want pass information between pre middleware hooks you need to track that information in some shared state instead.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema object?"
+    },
+    "semanticPatchId": "1477",
+    "breakingChangeId": "334",
+    "enabled": true,
+    "comment": "unknown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1477",
+      "comment": "extra question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T07:40:46.000Z",
+      "extraQuestion": "Do you pass any arguments to the next callback?",
+      "detectionPattern": "call <mongoose>?**.pre",
+      "suggestedFixDescription": "If you want pass information between pre middleware hooks you need to track that information in some shared state instead.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema object?"
+    },
+    "semanticPatchId": "1477",
+    "breakingChangeId": "334",
+    "enabled": true,
+    "comment": "extra question"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.{update,updateOne,updateMany,replaceOne,remove,deleteOne,deleteMany}",
+      "suggestedFixDescription": "Most likely this change is irrelevant, but you may want to consider whether a cast error thrown in exec can result in changed behavior."
+    },
+    "semanticPatchId": "1478",
+    "breakingChangeId": "336",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1210",
+      "comment": "Add suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the mongoose model compiled at this point?",
+      "detectionPattern": "call <mongoose>?**.{pre,post} [2, 2] 0:string 1:function",
+      "suggestedFixDescription": "Ensure calls to middleware installation methods happen before the model is compiled, i.e., calls to schema.pre and schema.post should appear before calls to mongoose.model. ",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1210",
+    "breakingChangeId": "116",
+    "enabled": true,
+    "comment": "Add suggested fix"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1219",
+      "comment": "Suggest fix description",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "write <mongoose>?**.usePushEach",
+      "suggestedFixDescription": "The usePushEach option has been removed. It is no longer relevant after the removal of $pushAll.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1219",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "Suggest fix description"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1225",
+      "comment": "database default ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "read <mongoose>?**.{remove,deleteOne,deleteMany}().result",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1225",
+    "breakingChangeId": "127",
+    "enabled": true,
+    "comment": "database default "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1465",
+      "comment": "Improve patch",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-04T14:56:46.000Z",
+      "extraQuestion": "is passRawResult set as an option to a call to Mongoose' findOneAndUpdate method?",
+      "detectionPattern": "write <Object>.passRawResult",
+      "suggestedFixDescription": "You can set the 'rawResult' property to true instead, but then the findOndAndUpdate callback is called with arguments `(error, writeOpResult)` instead of `(error, doc, writeOpResult)`."
+    },
+    "semanticPatchId": "1465",
+    "breakingChangeId": "117",
+    "enabled": true,
+    "comment": "Improve patch"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.post",
+      "suggestedFixDescription": "The post hook will now execute after (rather than before) the operation it hooks. In many cases this change is harmless, but you may want to ensure that the hook is not dependent on the hooked operation not having taken place. ",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose schema?"
+    },
+    "semanticPatchId": "1479",
+    "breakingChangeId": "337",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <mongoose>.Schema()"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "write <mongoose>?**.retainKeyOrder",
+      "suggestedFixDescription": "More details on why this option was removed is found here https://github.com/Automattic/mongoose/issues/2749",
+      "unknownAccessPathQuestion": "is the write of retainKeyOrder on some mongoose-related options object?"
+    },
+    "semanticPatchId": "1484",
+    "breakingChangeId": "342",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1478",
+      "comment": "update suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T11:41:14.000Z",
+      "detectionPattern": "call <mongoose>?**.{update,updateOne,updateMany,replaceOne,remove,deleteOne,deleteMany}",
+      "suggestedFixDescription": "Most likely this change is irrelevant, but notice that 'mongoose won't restructure the data you passed in until after your hooks and query helpers you ran'. "
+    },
+    "semanticPatchId": "1478",
+    "breakingChangeId": "336",
+    "enabled": true,
+    "comment": "update suggested fix"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "set object modifier",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-04T11:45:17.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "usePushEach",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "set object modifier"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1223",
+      "comment": "Remove template and add suggested fix since template only worked with 2 consecutive get calls.",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "call <mongoose>?**.get().get [1, 1] 0:function",
+      "suggestedFixDescription": "Switch the order of the get calls to preserve the old behavior.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose virtual type?"
+    },
+    "semanticPatchId": "1223",
+    "breakingChangeId": "125",
+    "enabled": true,
+    "comment": "Remove template and add suggested fix since template only worked with 2 consecutive get calls."
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "add unknown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-04T11:59:08.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema",
+      "unknownAccessPathQuestion": "Is the receiver the mongoose module object?"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "add unknown access path question"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "usePushEach type filter",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-04-04T12:38:49.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "usePushEach",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema 1.usePushEach:boolean",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose module object?"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "usePushEach type filter"
+  },
+  {
+    "version": 10,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "Fix object modifier index.",
+      "enabled": true,
+      "version": 9,
+      "creationDate": "2022-04-05T18:47:59.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "propName": "usePushEach",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema 1.usePushEach:boolean",
+      "suggestedFixDescription": "Remove the usePushEach option on the second argument.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose module object?"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "Fix object modifier index."
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "add object modifiers ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-04T12:25:28.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "propName": "usePushEach",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema",
+      "unknownAccessPathQuestion": "Is the receiver the mongoose module object?"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "add object modifiers "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "question text",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-04T12:25:28.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "propName": "usePushEach",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose module object?"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "question text"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "add suggested fix and test",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-04-05T17:04:18.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "usePushEach",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema 1.usePushEach:boolean",
+      "suggestedFixDescription": "$pushAll is no longer supported so just remove the usePushEach option.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose module object?"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "add suggested fix and test"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1461",
+      "comment": "add suggested fix and test ",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-04-05T18:42:55.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "usePushEach",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema 1.usePushEach:boolean",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose module object?"
+    },
+    "semanticPatchId": "1461",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "add suggested fix and test "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.cursor($args)"
+      },
+      "detectionPattern": "call <mongoose>?**.stream [0, 1]",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose query?"
+    },
+    "semanticPatchId": "1217",
+    "breakingChangeId": "121",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is it NOT exploited that the result of connect was a MongooseThenable?",
+      "primaryTemplate": {
+        "pattern": "((() => {\n\t$callee($args);\n\treturn $base;\n})())"
+      },
+      "detectionPattern": "callR <mongoose>.connect [1, 1]",
+      "unknownAccessPathQuestion": "Is the receiver the mongoose module object?"
+    },
+    "semanticPatchId": "1214",
+    "breakingChangeId": "120",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee([$args[0, -1]], $-1)"
+      },
+      "detectionPattern": "call <mongoose>?**.aggregate [2, 99] 0:object",
+      "alternativeTemplate": {
+        "pattern": "$callee([$args])"
+      },
+      "transformationQuestion": "Does this call provide a callback?",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1226",
+    "breakingChangeId": "128",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the object a mongoose schema?",
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "write <mongoose>?**.saveErrorIfNotFound",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1221",
+    "breakingChangeId": "124",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((() => { \n\tconst rcv = $base;\n\tconst oldOptions = rcv.schema.options.$prop;\n\tconst res = rcv.$prop($args);\n\trcv.schema.options.$prop = oldOptions;\n\treturn res;\n})())"
+      },
+      "detectionPattern": "call <mongoose>?**.{toObject,toJson} [1, 1]",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose document?"
+    },
+    "semanticPatchId": "1224",
+    "breakingChangeId": "126",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "write <mongoose>?**.usePushEach",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1219",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the object this property is written on passed to a findOneAndUpdate call?",
+      "detectionPattern": "write <mongoose>?**.passRawResult",
+      "unknownAccessPathQuestion": "Is the receiver an options object for a findOneAndUpdate call on a mongoose model?"
+    },
+    "semanticPatchId": "1211",
+    "breakingChangeId": "117",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "write <mongoose>?**.cursor",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose collection?"
+    },
+    "semanticPatchId": "1209",
+    "breakingChangeId": "115",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base:callee($args).get($base:args)"
+      },
+      "detectionPattern": "call <mongoose>?**.get().get [1, 1] 0:function",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose virtual type?"
+    },
+    "semanticPatchId": "1223",
+    "breakingChangeId": "125",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the mongoose model compiled at this point?",
+      "detectionPattern": "call <mongoose>?**.{pre,post} [2, 2] 0:string 1:function",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1210",
+    "breakingChangeId": "116",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$push = Object.keys($value).reduce((acc, elem) => {acc[elem] = {$each: $value[elem]}; return acc;}, {})"
+      },
+      "detectionPattern": "write <mongoose>?**.$pushAll",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1220",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is it NOT exploited that the result of connect was a MongooseThenable?",
+      "primaryTemplate": {
+        "pattern": "((() => {\n\t$callee($args);\n\treturn $base.connection;\n})())"
+      },
+      "detectionPattern": "callR <mongoose>.connect [2, 3]",
+      "alternativeTemplate": {
+        "pattern": "((() => {\n\t$callee($args);\n\treturn $base;\n})())"
+      },
+      "transformationQuestion": "Is the option useMongoClient enabled?",
+      "unknownAccessPathQuestion": "Is the receiver the mongoose module object?"
+    },
+    "semanticPatchId": "1215",
+    "breakingChangeId": "120",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(function (arg) {\n\treturn new Promise(resolve => {\n\t\t($1).call(this, arg, resolve);\n\t});\n}, $args[1,])"
+      },
+      "detectionPattern": "call <mongoose>?**.validate 0:function2",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1212",
+    "breakingChangeId": "118",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the saveErrorIfNotFound not set to true on the Schema and can save errors occur and is the result used by the code?",
+      "detectionPattern": "call <mongoose>?**.save",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose document?"
+    },
+    "semanticPatchId": "1222",
+    "breakingChangeId": "124",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($args[0, -1], function (errArg, resArg) {\n\t($-1).call(this, errArg, resArg.results, resArg.stats);\n});"
+      },
+      "detectionPattern": "call <mongoose>?**.mapReduce",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1213",
+    "breakingChangeId": "119",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the resolved value of the returned promise used?",
+      "detectionPattern": "callR <mongoose>?**.{remove,deleteOne,deleteMany}",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1225",
+    "breakingChangeId": "127",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <mongoose>?**.{open,openSet}",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose connection?"
+    },
+    "semanticPatchId": "1218",
+    "breakingChangeId": "122",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee([$args])"
+      },
+      "detectionPattern": "call <mongoose>?**.aggregate [1, 1] 0:object",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1227",
+    "breakingChangeId": "128",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is useMongoClient NOT enabled and is the return value NOT used as a Thenable?",
+      "primaryTemplate": {
+        "pattern": "((() => {\n\tconst conn = $callee();\n\tconn.openUri(connectionUrl).catch(e => e);\n\treturn conn;\n})())"
+      },
+      "detectionPattern": "callR <mongoose>.createConnection [1, 3]",
+      "unknownAccessPathQuestion": "Is the receiver mongoose?"
+    },
+    "semanticPatchId": "1216",
+    "breakingChangeId": "120",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1216",
+      "comment": "disable ",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-04-04T12:41:44.000Z",
+      "extraQuestion": "Is useMongoClient NOT enabled and is the return value NOT used as a Thenable?",
+      "primaryTemplate": {
+        "pattern": "((() => {\n\tconst conn = $callee();\n\tconn.openUri(connectionUrl).catch(e => e);\n\treturn conn;\n})())",
+        "replacements": []
+      },
+      "detectionPattern": "callR <mongoose>.createConnection [1, 3]",
+      "unknownAccessPathQuestion": "Is the receiver mongoose?"
+    },
+    "semanticPatchId": "1216",
+    "breakingChangeId": "120",
+    "enabled": false,
+    "comment": "disable "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1218",
+      "comment": "improve detection pattern precision",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>.createConnection}().{open,openSet}",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose connection?"
+    },
+    "semanticPatchId": "1218",
+    "breakingChangeId": "122",
+    "enabled": true,
+    "comment": "improve detection pattern precision"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1462",
+      "comment": "unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-04T12:46:04.000Z",
+      "detectionPattern": "callR <mongoose>.{connect,createConnection}",
+      "suggestedFixDescription": "Only relevant if you depend on the return value being a reference to the mongoose object. In that case, you need to modify the usages of the return value to get the mongoose object from somewhere else.",
+      "unknownAccessPathQuestion": "Is the receiver object the mongoose module?"
+    },
+    "semanticPatchId": "1462",
+    "breakingChangeId": "120",
+    "enabled": true,
+    "comment": "unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1226",
+      "comment": "improve detection pattern precision",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee([$args[0, -1]], $-1)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.aggregate [2, 99] 0:object",
+      "alternativeTemplate": {
+        "pattern": "$callee([$args])",
+        "replacements": []
+      },
+      "transformationQuestion": "Does this call provide a callback?",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model object?"
+    },
+    "semanticPatchId": "1226",
+    "breakingChangeId": "128",
+    "enabled": true,
+    "comment": "improve detection pattern precision"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1212",
+      "comment": "update unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(function (arg) {\n\treturn new Promise(resolve => {\n\t\t($1).call(this, arg, resolve);\n\t});\n}, $args[1,])",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.validate 0:function2",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema type?"
+    },
+    "semanticPatchId": "1212",
+    "breakingChangeId": "118",
+    "enabled": true,
+    "comment": "update unknown access path question"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1465",
+      "comment": "Improve patch using Benjamin's new object property type filter.",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-04T15:00:40.000Z",
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.findOneAndUpdate 2.passRawResult:true",
+      "suggestedFixDescription": "You can set the 'rawResult' property to true instead, but then the findOndAndUpdate callback is called with arguments `(error, writeOpResult)` instead of `(error, doc, writeOpResult)`."
+    },
+    "semanticPatchId": "1465",
+    "breakingChangeId": "117",
+    "enabled": true,
+    "comment": "Improve patch using Benjamin's new object property type filter."
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1478",
+      "comment": "Add unknown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T12:44:10.000Z",
+      "detectionPattern": "call <mongoose>?**.{update,updateOne,updateMany,replaceOne,remove,deleteOne,deleteMany}",
+      "suggestedFixDescription": "Most likely this change is irrelevant, but notice that 'mongoose won't restructure the data you passed in until after your hooks and query helpers you ran'. ",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose model, query or document?"
+    },
+    "semanticPatchId": "1478",
+    "breakingChangeId": "336",
+    "enabled": true,
+    "comment": "Add unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1479",
+      "comment": "Improve precision of detection pattern",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T11:53:42.000Z",
+      "detectionPattern": "call <mongoose>.Schema().post",
+      "suggestedFixDescription": "The post hook will now execute after (rather than before) the operation it hooks. In many cases this change is harmless, but you may want to ensure that the hook is not dependent on the hooked operation not having taken place. ",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose schema?"
+    },
+    "semanticPatchId": "1479",
+    "breakingChangeId": "337",
+    "enabled": true,
+    "comment": "Improve precision of detection pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1471",
+      "comment": "improve detection pattern precision",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T05:09:32.000Z",
+      "detectionPattern": "read {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.geoNear",
+      "suggestedFixDescription": "See https://www.mongodb.com/docs/v4.0/reference/command/geoNear/#dbcmd.geoNear for other options",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose Model?"
+    },
+    "semanticPatchId": "1471",
+    "breakingChangeId": "329",
+    "enabled": true,
+    "comment": "improve detection pattern precision"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1477",
+      "comment": "improve unknown access path question",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T07:43:05.000Z",
+      "extraQuestion": "Do you pass any arguments to the next callback?",
+      "detectionPattern": "call <mongoose>?**.pre",
+      "suggestedFixDescription": "If you want pass information between pre middleware hooks you need to track that information in some shared state instead.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema or query object?"
+    },
+    "semanticPatchId": "1477",
+    "breakingChangeId": "334",
+    "enabled": true,
+    "comment": "improve unknown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1210",
+      "comment": "Only apply to schemas since middleware can still be added to queries post model compilation.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-02T12:24:58.000Z",
+      "extraQuestion": "Is the mongoose model compiled at this point?",
+      "detectionPattern": "call <mongoose>.Schema().{pre,post} [2, 2] 0:string 1:function",
+      "suggestedFixDescription": "Ensure calls to middleware installation methods happen before the model is compiled, i.e., calls to schema.pre and schema.post should appear before calls to mongoose.model. ",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1210",
+    "breakingChangeId": "116",
+    "enabled": true,
+    "comment": "Only apply to schemas since middleware can still be added to queries post model compilation."
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1219",
+      "comment": "Disable template (it's better to insert suggested fix) ",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-04-04T12:05:58.000Z",
+      "detectionPattern": "write <mongoose>?**.usePushEach",
+      "suggestedFixDescription": "The usePushEach option has been removed. It is no longer relevant after the removal of $pushAll.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1219",
+    "breakingChangeId": "123",
+    "enabled": false,
+    "comment": "Disable template (it's better to insert suggested fix) "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1464",
+      "comment": "extra question + improved precision",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-04T14:43:27.000Z",
+      "extraQuestion": "Is this a validator function for a mongoose schema type?",
+      "detectionPattern": "write <Object>.validator value:function",
+      "suggestedFixDescription": "Return a promise instead of calling the callback. For example, for validator function body `b`, replace `b` with `return new Promise((res) => {b})` and replace calls to the validator callback `cb(x)` with `res(x)` in the body `b`. ",
+      "unknownAccessPathQuestion": "Is the validator property written a mongoose validate object?"
+    },
+    "semanticPatchId": "1464",
+    "breakingChangeId": "118",
+    "enabled": true,
+    "comment": "extra question + improved precision"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1210",
+      "comment": "Better extra question.",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-07T13:45:28.000Z",
+      "extraQuestion": "Is the mongoose model associated to this schema compiled at this point?",
+      "detectionPattern": "call <mongoose>.Schema().{pre,post} [2, 2] 0:string 1:function",
+      "suggestedFixDescription": "Ensure calls to middleware installation methods happen before the model is compiled, i.e., calls to schema.pre and schema.post should appear before calls to mongoose.model. ",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1210",
+    "breakingChangeId": "116",
+    "enabled": true,
+    "comment": "Better extra question."
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1210",
+      "comment": "Better extra question. ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-08T05:20:25.000Z",
+      "extraQuestion": "Is the mongoose model associated with this schema compiled at this point?",
+      "detectionPattern": "call <mongoose>.Schema().{pre,post} [2, 2] 0:string 1:function",
+      "suggestedFixDescription": "Ensure calls to middleware installation methods happen before the model is compiled, i.e., calls to schema.pre and schema.post should appear before calls to mongoose.model. ",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1210",
+    "breakingChangeId": "116",
+    "enabled": true,
+    "comment": "Better extra question. "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1227",
+      "comment": "Improve detection pattern precision",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee([$args])",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.aggregate [1, 1] 0:object",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1227",
+    "breakingChangeId": "128",
+    "enabled": true,
+    "comment": "Improve detection pattern precision"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1464",
+      "comment": "Update to only match functions with two arguments.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-08T05:14:30.000Z",
+      "extraQuestion": "Is this a validator function for a mongoose schema type?",
+      "detectionPattern": "write <Object>.validator value:function2",
+      "suggestedFixDescription": "Return a promise instead of calling the callback. For example, for validator function body `b`, replace `b` with `return new Promise((res) => {b})` and replace calls to the validator callback `cb(x)` with `res(x)` in the body `b`. ",
+      "unknownAccessPathQuestion": "Is the validator property written a mongoose validate object?"
+    },
+    "semanticPatchId": "1464",
+    "breakingChangeId": "118",
+    "enabled": true,
+    "comment": "Update to only match functions with two arguments."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1217",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.cursor($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.stream [0, 1] base:Query",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose query?"
+    },
+    "semanticPatchId": "1217",
+    "breakingChangeId": "121",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1213",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args[0, -1], function (errArg, resArg) {\n\t($-1).call(this, errArg, resArg.results, resArg.stats);\n});",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.mapReduce base:Model",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1213",
+    "breakingChangeId": "119",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1210",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-11-12T06:31:45.000Z",
+      "extraQuestion": "Is the mongoose model associated with this schema compiled at this point?",
+      "detectionPattern": "call <mongoose>.Schema().{pre,post} [2, 2] 0:string 1:function base:Schema",
+      "suggestedFixDescription": "Ensure calls to middleware installation methods happen before the model is compiled, i.e., calls to schema.pre and schema.post should appear before calls to mongoose.model. ",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1210",
+    "breakingChangeId": "116",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1225",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-04T11:28:22.000Z",
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "read <mongoose>?**.{remove,deleteOne,deleteMany}().result base.base:Model",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1225",
+    "breakingChangeId": "127",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1219",
+      "comment": "Added base filter",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-04-04T12:05:58.000Z",
+      "detectionPattern": "write <mongoose>?**.usePushEach base:Schema",
+      "suggestedFixDescription": "The usePushEach option has been removed. It is no longer relevant after the removal of $pushAll.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema?"
+    },
+    "semanticPatchId": "1219",
+    "breakingChangeId": "123",
+    "enabled": false,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1220",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$push = Object.keys($value).reduce((acc, elem) => {acc[elem] = {$each: $value[elem]}; return acc;}, {})",
+        "replacements": []
+      },
+      "detectionPattern": "write <mongoose>?**.$pushAll base:Model",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1220",
+    "breakingChangeId": "123",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1218",
+      "comment": "Added base filter: https://github.com/Automattic/mongoose/blob/f1c433c0f90ad1a65c8b3795eefaaf02a64b849e/types/connection.d.ts#L60",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-07T05:31:21.000Z",
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>.createConnection}().{open,openSet} base:Connection",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose connection?"
+    },
+    "semanticPatchId": "1218",
+    "breakingChangeId": "122",
+    "enabled": true,
+    "comment": "Added base filter: https://github.com/Automattic/mongoose/blob/f1c433c0f90ad1a65c8b3795eefaaf02a64b849e/types/connection.d.ts#L60"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1224",
+      "comment": "Added base filter: https://github.com/Automattic/mongoose/blob/master/types/document.d.ts#L19",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-04T13:49:36.000Z",
+      "detectionPattern": "call <mongoose>?**.{toObject,toJson} [1, 1] base:Document",
+      "suggestedFixDescription": "The options provided to toObject and toJson are now merged with the schema-wide options. If you depend on some schema-wide option properties being overwritten, then you must set these properties explicitly on the options object to this call. ",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose document?"
+    },
+    "semanticPatchId": "1224",
+    "breakingChangeId": "126",
+    "enabled": true,
+    "comment": "Added base filter: https://github.com/Automattic/mongoose/blob/master/types/document.d.ts#L19"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1226",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-07T05:46:45.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee([$args[0, -1]], $-1)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.aggregate [2, 99] 0:object base:Model",
+      "alternativeTemplate": {
+        "pattern": "$callee([$args])",
+        "replacements": []
+      },
+      "transformationQuestion": "Does this call provide a callback?",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model object?"
+    },
+    "semanticPatchId": "1226",
+    "breakingChangeId": "128",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1465",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-07T06:06:45.000Z",
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.findOneAndUpdate 2.passRawResult:true base:Model",
+      "suggestedFixDescription": "You can set the 'rawResult' property to true instead, but then the findOndAndUpdate callback is called with arguments `(error, writeOpResult)` instead of `(error, doc, writeOpResult)`.",
+      "unknownAccessPathQuestion": "Is the reciever of this call a mongoose model?"
+    },
+    "semanticPatchId": "1465",
+    "breakingChangeId": "117",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1471",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-07T06:35:31.000Z",
+      "detectionPattern": "read {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.geoNear base:Model",
+      "suggestedFixDescription": "See https://www.mongodb.com/docs/v4.0/reference/command/geoNear/#dbcmd.geoNear for other options",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose Model?"
+    },
+    "semanticPatchId": "1471",
+    "breakingChangeId": "329",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1473",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T05:42:48.000Z",
+      "detectionPattern": "call <mongoose>?**.init [2, 2] base:Document",
+      "suggestedFixDescription": "The init function was always executing synchronously anyway, so take the body of the callback function and execute those statements/expressions after the init call to preserve the old behavior.",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose Document?"
+    },
+    "semanticPatchId": "1473",
+    "breakingChangeId": "331",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1223",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T12:47:35.000Z",
+      "detectionPattern": "call <mongoose>?**.get().get [1, 1] 0:function base:VirtualType",
+      "suggestedFixDescription": "Switch the order of the get calls to preserve the old behavior.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose virtual type?"
+    },
+    "semanticPatchId": "1223",
+    "breakingChangeId": "125",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1463",
+      "comment": "Unknown access path question (not technically required since the BC is marked as unlikely). - Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-04T14:12:08.000Z",
+      "detectionPattern": "call <mongoose>?**.save base:Document",
+      "suggestedFixDescription": "If the updated document does not exists, save may now throw an error. Check that your code does not save non-existing objects.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose document?"
+    },
+    "semanticPatchId": "1463",
+    "breakingChangeId": "124",
+    "enabled": true,
+    "comment": "Unknown access path question (not technically required since the BC is marked as unlikely). - Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1474",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T07:14:34.000Z",
+      "detectionPattern": "call <mongoose>?**.save [1,1] 0:function3 base:Document",
+      "suggestedFixDescription": "The third argument to the callback numAffected is no longer passed. You only need to rely on the error argument for error checking.",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose Document?"
+    },
+    "semanticPatchId": "1474",
+    "breakingChangeId": "332",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1477",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-07T06:38:24.000Z",
+      "extraQuestion": "Do you pass any arguments to the next callback?",
+      "detectionPattern": "call <mongoose>?**.pre base:{Schema,Query}",
+      "suggestedFixDescription": "If you want pass information between pre middleware hooks you need to track that information in some shared state instead.",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose schema or query object?"
+    },
+    "semanticPatchId": "1477",
+    "breakingChangeId": "334",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1478",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-07T06:11:13.000Z",
+      "detectionPattern": "call <mongoose>?**.{update,updateOne,updateMany,replaceOne,remove,deleteOne,deleteMany} base:{Mode,Query,Document}",
+      "suggestedFixDescription": "Most likely this change is irrelevant, but notice that 'mongoose won't restructure the data you passed in until after your hooks and query helpers you ran'. ",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose model, query or document?"
+    },
+    "semanticPatchId": "1478",
+    "breakingChangeId": "336",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1479",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-07T06:32:19.000Z",
+      "detectionPattern": "call <mongoose>.Schema().post base:Schema",
+      "suggestedFixDescription": "The post hook will now execute after (rather than before) the operation it hooks. In many cases this change is harmless, but you may want to ensure that the hook is not dependent on the hooked operation not having taken place. ",
+      "unknownAccessPathQuestion": "Is the receiver object a mongoose schema?"
+    },
+    "semanticPatchId": "1479",
+    "breakingChangeId": "337",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1225",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-12T06:35:17.000Z",
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "read <mongoose>?**.{remove,deleteOne,deleteMany}().result base:{Model,Schema,Query}",
+      "unknownAccessPathQuestion": "Is the receiver a mongoose model?"
+    },
+    "semanticPatchId": "1225",
+    "breakingChangeId": "127",
+    "enabled": true,
+    "comment": "Added base filter "
+  }
+]

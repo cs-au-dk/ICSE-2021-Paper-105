@@ -1,0 +1,32 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call<file-type>.{fromBuffer,fromFile,fromStream,fromTokenizer}",
+      "enabled": true,
+      "detectionPattern": "call <file-type>.{fromBuffer,fromFile,fromStream,fromTokenizer}",
+      "suggestedFixDescription": "file-type no longer supports files of type 'Microsoft Windows Installer'."
+    },
+    "semanticPatchId": "1458",
+    "breakingChangeId": "312",
+    "enabled": true,
+    "comment": "call<file-type>.{fromBuffer,fromFile,fromStream,fromTokenizer}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1458",
+      "comment": "Added unknown access path quistion",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-28T13:17:13.000Z",
+      "detectionPattern": "call <file-type>.{fromBuffer,fromFile,fromStream,fromTokenizer}",
+      "suggestedFixDescription": "file-type no longer supports files of type 'Microsoft Windows Installer'.",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1458",
+    "breakingChangeId": "312",
+    "enabled": true,
+    "comment": "Added unknown access path quistion"
+  }
+]

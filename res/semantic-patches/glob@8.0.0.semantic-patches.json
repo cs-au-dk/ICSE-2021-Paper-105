@@ -1,0 +1,64 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "read <glob>.{sync,Glob}",
+      "suggestedFixDescription": "Though windows uses either / or \\ as its path separator, only / characters are used by this glob implementation. You must use forward-slashes only in glob expressions. Back-slashes will always be interpreted as escape characters, not path separators.",
+      "unknownAccessPathQuestion": "Is this a call to a function from the glob library?"
+    },
+    "semanticPatchId": "1588",
+    "breakingChangeId": "450",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <glob>",
+      "suggestedFixDescription": "Though windows uses either / or \\ as its path separator, only / characters are used by this glob implementation. You must use forward-slashes only in glob expressions. Back-slashes will always be interpreted as escape characters, not path separators.",
+      "unknownAccessPathQuestion": "Is this a call to a function from the glob library?"
+    },
+    "semanticPatchId": "1589",
+    "breakingChangeId": "450",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1588",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-21T10:21:05.000Z",
+      "detectionPattern": "call {<glob>,<glob>.{sync,Glob}}",
+      "suggestedFixDescription": "Though windows uses either / or \\ as its path separator, only / characters are used by this glob implementation. You must use forward-slashes only in glob expressions. Back-slashes will always be interpreted as escape characters, not path separators.",
+      "unknownAccessPathQuestion": "Is this a call to a function from the glob library?"
+    },
+    "semanticPatchId": "1588",
+    "breakingChangeId": "450",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1589",
+      "comment": "init ",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-06-21T10:24:00.000Z",
+      "detectionPattern": "call <glob>",
+      "suggestedFixDescription": "Though windows uses either / or \\ as its path separator, only / characters are used by this glob implementation. You must use forward-slashes only in glob expressions. Back-slashes will always be interpreted as escape characters, not path separators.",
+      "unknownAccessPathQuestion": "Is this a call to a function from the glob library?"
+    },
+    "semanticPatchId": "1589",
+    "breakingChangeId": "450",
+    "enabled": false,
+    "comment": "init "
+  }
+]

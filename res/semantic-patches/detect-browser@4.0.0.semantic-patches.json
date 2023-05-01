@@ -1,0 +1,15 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <detect-browser>**.bot",
+      "suggestedFixDescription": "This is only breaking if you at any point check for the .bot property to be false, for some result where a non-bot browser was found. Meaning changing \"result.bot == false\" to \"!result.bot\" should fix this issure. For a further explanation see: https://github.com/DamonOehlman/detect-browser/releases/tag/4.0.0",
+      "unknownAccessPathQuestion": "Is .bot a property on a result from the detect-browser?"
+    },
+    "semanticPatchId": "1598",
+    "breakingChangeId": "459",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

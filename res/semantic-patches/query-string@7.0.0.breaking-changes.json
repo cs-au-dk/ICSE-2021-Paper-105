@@ -1,0 +1,13 @@
+[
+  {
+    "id": "841",
+    "packageVersion": "7.0.0",
+    "packageName": "query-string",
+    "description": "Implement skips for stringify array format comma",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

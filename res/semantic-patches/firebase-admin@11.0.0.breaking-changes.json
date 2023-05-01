@@ -1,0 +1,24 @@
+[
+  {
+    "id": "531",
+    "packageVersion": "11.0.0",
+    "packageName": "firebase-admin",
+    "description": "Dropped support for Node.js 12. Developers should use Node.js 14 or higher when deploying the Admin SDK.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "532",
+    "packageVersion": "11.0.0",
+    "packageName": "firebase-admin",
+    "description": "Upgraded TypeScript to v4.6.4: firebase-admin version 11.0.0 uses @google-cloud/storage version 6.0.0 which depends on typescript v4.6.4 hence if you want to upgrade to firebase version 11.x you will also need at least typescript v.4.6.4.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

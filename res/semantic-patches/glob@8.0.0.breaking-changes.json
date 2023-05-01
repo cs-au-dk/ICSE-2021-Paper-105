@@ -1,0 +1,24 @@
+[
+  {
+    "id": "449",
+    "packageVersion": "8.0.0",
+    "packageName": "glob",
+    "description": "Only support node v12 and higher",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "450",
+    "packageVersion": "8.0.0",
+    "packageName": "glob",
+    "description": "Glob pattern paths must use forward-slashes as path separators, since \\ is an escape character to match literal glob pattern characters.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

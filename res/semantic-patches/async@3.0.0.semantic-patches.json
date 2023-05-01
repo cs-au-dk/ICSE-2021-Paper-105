@@ -1,0 +1,127 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$prop($value)"
+      },
+      "detectionPattern": "write {<async>.{queue,priorityQueue,cargo,cargoQueue},<async/{queue,priorityQueue,cargo,cargoQueue}>}()?.{drain,saturated,unsaturated,empty,error}",
+      "unknownAccessPathQuestion": "Is the receiver of the write an async queue, priorityQueue, cargo, or CargoQueue?"
+    },
+    "semanticPatchId": "994",
+    "breakingChangeId": "1",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$prop[during => whilst, doDuring => doWhilst]"
+      },
+      "detectionPattern": "read <async>.{during,doDuring}",
+      "unknownAccessPathQuestion": "Is the receiver the async module object?"
+    },
+    "semanticPatchId": "995",
+    "breakingChangeId": "2",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "async/#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "during => whilst",
+              "doDuring => doWhilst"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import async/{during,doDuring}"
+    },
+    "semanticPatchId": "996",
+    "breakingChangeId": "2",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(\n\tfunction() {\n\t\tconst cb = arguments[arguments.length - 1];\n\t\tconst args = Array.prototype.slice.call(arguments, 0, arguments.length - 1);\n\t\tconst f = $1;\n\t\ttry {\n\t\t\tcb(null, f.apply(this, args));\n\t\t} catch (e) {\n\t\t\tcb(e, null);\n\t\t}\n\t},\n\t$2,\n\t$3)"
+      },
+      "detectionPattern": "call {<async>.{whilst,until},<async/{whilst,until}>}",
+      "unknownAccessPathQuestion": "Is the called function from async?"
+    },
+    "semanticPatchId": "998",
+    "breakingChangeId": "2",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(\n\t$1,\n\tfunction() {\n\t\tconst cb = arguments[arguments.length - 1];\n\t\tconst args = Array.prototype.slice.call(arguments, 0, arguments.length - 1);\n\t\tconst f = $2;\n\t\ttry {\n\t\t\tcb(null, f.apply(this, args));\n\t\t} catch (e) {\n\t\t\tcb(e, null);\n\t\t}\n\t},\n\t$3)"
+      },
+      "detectionPattern": "call {<async>.{doWhilst,doUntil},<async/{doWhilst,doUntil}>}",
+      "unknownAccessPathQuestion": "Is the called function from async?"
+    },
+    "semanticPatchId": "997",
+    "breakingChangeId": "2",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($args[0, -1])($-1)"
+      },
+      "detectionPattern": "call {<async>.{applyEach,applyEachSeries},<async/{applyEach,applyEachSeries}>} [2, 99]",
+      "unknownAccessPathQuestion": "Is the called function from async?"
+    },
+    "semanticPatchId": "1000",
+    "breakingChangeId": "4",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Can the function to be memoized throw errors?",
+      "detectionPattern": "call {<async>.memoize,<async/memoize>}",
+      "unknownAccessPathQuestion": "Is the called function from async?"
+    },
+    "semanticPatchId": "999",
+    "breakingChangeId": "3",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "994",
+      "comment": "Added base filter: https://caolan.github.io/async/v3/docs.html#QueueObject",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop($value)",
+        "replacements": []
+      },
+      "detectionPattern": "write {<async>.{queue,priorityQueue,cargo,cargoQueue},<async/{queue,priorityQueue,cargo,cargoQueue}>}()?.{drain,saturated,unsaturated,empty,error} base:{QueueObject,}",
+      "unknownAccessPathQuestion": "Is the receiver of the write an async queue, priorityQueue, cargo, or CargoQueue?"
+    },
+    "semanticPatchId": "994",
+    "breakingChangeId": "1",
+    "enabled": true,
+    "comment": "Added base filter: https://caolan.github.io/async/v3/docs.html#QueueObject"
+  }
+]

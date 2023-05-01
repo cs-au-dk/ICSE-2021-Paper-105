@@ -1,0 +1,90 @@
+[
+  {
+    "id": "581",
+    "packageVersion": "2.0.0",
+    "packageName": "cookie-session",
+    "description": "Create new session for all types of invalid sessions - if trying to read an invalid session, it now always return a new session instead of throwing an error. Unless your code relies on this, it shouldn't be a breaking change.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "566",
+    "packageVersion": "2.0.0",
+    "packageName": "cookie-session",
+    "description": "Change .populated to .isPopulated",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "567",
+    "packageVersion": "2.0.0",
+    "packageName": "cookie-session",
+    "description": "Change default cookie name to session",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "571",
+    "packageVersion": "2.0.0",
+    "packageName": "cookie-session",
+    "description": "Drop support for Node.js 0.8",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "572",
+    "packageVersion": "2.0.0",
+    "packageName": "cookie-session",
+    "description": "Remove undocumented req.session.length to free up key name",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "573",
+    "packageVersion": "2.0.0",
+    "packageName": "cookie-session",
+    "description": "Remove undocumented req.sessionKey",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "568",
+    "packageVersion": "2.0.0",
+    "packageName": "cookie-session",
+    "description": "Remove the key option - use name instead",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "591",
+    "packageVersion": "2.0.0",
+    "packageName": "cookie-session",
+    "description": "Remove private req.session.save()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

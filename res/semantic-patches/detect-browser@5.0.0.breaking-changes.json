@@ -1,0 +1,13 @@
+[
+  {
+    "id": "460",
+    "packageVersion": "5.0.0",
+    "packageName": "detect-browser",
+    "description": "detect-browser can no longer detect the 'Vivaldi' browser since it no longer reports a unique user agent.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

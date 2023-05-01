@@ -1,0 +1,123 @@
+[
+  {
+    "id": "201",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "Rename addSchemaLevelResolveFunctions to addSchemaLevelResolver\n",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "203",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "Majority of schema modification functions now return new, altered schemas rather than modifying the original schema in place.\n\nAffected functions: \n- addResolversToSchema\n- attachDirectiveResolvers\n- addSchemaLevelResolver\n- addCatchUndefinedToSchema\n- addErrorLoggingToSchema\n- addMocksToSchema",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "205",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "Remote schema wrapping is now accomplished by using executors and subscribers rather than fetchers and links. Functions that convert links to executors/subscribers are included with @graphql-tools/links. See the docs.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "210",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "mergeInfo in GraphQLResolveInfo has been replaced by stitchingInfo in GraphQLSchemas extensions.\n\ninfo.mergeInfo.mergedTypes -> schema.extensions.stichingInfo.mergedTypes\ninfo.mergeInfo.delegate -> ??\ninfo.mergeInfo.fragments -> ??\ninfo.mergeInfo.replacementSelectionSets -> schema.extensions.selectionSetByType\ninfo.mergeInfo.replacementFragments -> ??\n",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "207",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "The case where a FieldTransformer previously returned an { name: string, field: GraphQLFieldConfig<any, any> } will now result in an array instead [string, GraphQLFieldConfig<any, any>] instead of an object.\nThe affected functions are:\n- TransformRootFields\n- TransformObjectFields\n",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "206",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "Field transformer callback functions now take a GraphQLFieldConfig instead of a GraphQLField.\n\nThe affected functions are:\nTransformRootFields\nFilterRootFields\nRenameRootFields\nTransformObjectFields\nFilterObjectFields\nRenameObjectFields\n",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "208",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "Stitching has been renamed (mergeSchemas => stitchSchemas)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "209",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "Custom proxying resolvers take an options object instead of individual parameters.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "211",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "delegateToSchema is not available in mergeInfo or stitchingInfo anymore. Simply import the delegateToSchema function from the delegate package instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "212",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "Polyfills for graphql versions earlier than 14.2 have been removed, including toConfig",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "213",
+    "packageVersion": "6.0.0",
+    "packageName": "graphql-tools",
+    "description": "fieldToFieldConfig and inputFieldToInputFieldConfig functionality is now exported separately, although library users should ideally not have to use them.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

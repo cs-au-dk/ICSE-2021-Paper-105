@@ -1,0 +1,377 @@
+[
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1065",
+      "comment": "Fixed code template to use the second argument instead of the first.",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$2.forEach(str => $base.cookie(...(str.split('='))))",
+        "replacements": []
+      },
+      "detectionPattern": "call <express>?**.setHeader 0:\"Set-Cookie\" 1:array",
+      "unknownAccessPathQuestion": "Is the receiver an express response object?"
+    },
+    "semanticPatchId": "1065",
+    "breakingChangeId": "46",
+    "enabled": true,
+    "comment": "Fixed code template to use the second argument instead of the first."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1064",
+      "comment": "Fixed code template to use the second argument instead of the first.",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.cookie(...($2.split('=')))",
+        "replacements": []
+      },
+      "detectionPattern": "call <express>?**.setHeader 0:\"Set-Cookie\" 1:string",
+      "unknownAccessPathQuestion": "Is the receiver an express response object?"
+    },
+    "semanticPatchId": "1064",
+    "breakingChangeId": "46",
+    "enabled": true,
+    "comment": "Fixed code template to use the second argument instead of the first."
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "if ($1 === $base.get('env')) {\n\t$2()\n}"
+      },
+      "detectionPattern": "call <express>?**.configure [2, 2]",
+      "unknownAccessPathQuestion": "Is the receiver an express app?"
+    },
+    "semanticPatchId": "1072",
+    "breakingChangeId": "50",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$prop[acceptsEncoding => acceptsEncodings, acceptsCharset => acceptsCharsets, acceptsLanguage => acceptsLanguages]"
+      },
+      "detectionPattern": "read <express>?**.{acceptsEncoding,acceptsCharset,acceptsLanguage}",
+      "unknownAccessPathQuestion": "Is the receiver an express request?"
+    },
+    "semanticPatchId": "1079",
+    "breakingChangeId": "57",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.mountPath"
+      },
+      "detectionPattern": "read <express>()?**.route",
+      "unknownAccessPathQuestion": "Is the receiver an express app?"
+    },
+    "semanticPatchId": "1078",
+    "breakingChangeId": "56",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "Object.assign($callee, $1)"
+      },
+      "detectionPattern": "call <express>?**.locals",
+      "unknownAccessPathQuestion": "Is the receiver an express response?"
+    },
+    "semanticPatchId": "1081",
+    "breakingChangeId": "59",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1069",
+      "primaryTemplate": {
+        "pattern": "$prop[compress => <compression>, timeout => <connect-timeout>, cookieParser => <cookie-parser>, cookieSession => <cookie-session>, csrf => <csurf>, errorHandler => <errorhandler>, session => <express-session>, methodOverride => <method-override>, logger => <morgan>, responseTime => <response-time>, favicon => <serve-favicon>, directory => <serve-index>, vhost => <vhost>]($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <express>.{compress,timeout,cookieParser,cookieSession,csrf,errorHandler,session,methodOverride,logger,responseTime,favicon,directory,vhost}"
+    },
+    "semanticPatchId": "1069",
+    "breakingChangeId": "48",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.set('Content-Type', ($base.get('Content-Type') ? $base.get('Content-Type') + '; ' : '') + 'charset=' + $value)"
+      },
+      "detectionPattern": "write <express>?**.charset",
+      "unknownAccessPathQuestion": "Is the receiver an express response?"
+    },
+    "semanticPatchId": "1077",
+    "breakingChangeId": "55",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "(!!$base.$prop[acceptsCharset => acceptsCharsets, acceptsLanguage => acceptsLanguages]($args))"
+      },
+      "detectionPattern": "call <express>?**.{acceptsCharset,acceptsLanguage}",
+      "unknownAccessPathQuestion": "Is the receiver an express request?"
+    },
+    "semanticPatchId": "1082",
+    "breakingChangeId": "60",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<basic-auth-connect>"
+      },
+      "detectionPattern": "read <express>.basicAuth",
+      "unknownAccessPathQuestion": "Is the receiver the express module object?"
+    },
+    "semanticPatchId": "1074",
+    "breakingChangeId": "52",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<body-parser>($args)"
+      },
+      "detectionPattern": "call <express>.bodyParser",
+      "unknownAccessPathQuestion": "Is the receiver the express module object?"
+    },
+    "semanticPatchId": "1066",
+    "breakingChangeId": "47",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$1()"
+      },
+      "detectionPattern": "call <express>?**.configure [1, 1]",
+      "unknownAccessPathQuestion": "Is the receiver an express app?"
+    },
+    "semanticPatchId": "1071",
+    "breakingChangeId": "50",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "Object.assign([], $base.params)"
+      },
+      "detectionPattern": "read <express>?**.params",
+      "unknownAccessPathQuestion": "Is the receiver an express request?"
+    },
+    "semanticPatchId": "1080",
+    "breakingChangeId": "58",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "(!!$base.is($args))"
+      },
+      "detectionPattern": "call <express>?**.is",
+      "unknownAccessPathQuestion": "Is the receiver an express request?"
+    },
+    "semanticPatchId": "1083",
+    "breakingChangeId": "61",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "['post', 'get', 'delete', 'put']\n\t.map(rt => [rt, $base._router.stack.map(r => r.route)\n\t\t.filter(r => r && r.methods[rt])])\n\t.reduce((acc, elem) => {acc[elem[0]] = elem[1]; return acc}, {})"
+      },
+      "detectionPattern": "read <express>?**.routes",
+      "unknownAccessPathQuestion": "Is the receiver an express app?"
+    },
+    "semanticPatchId": "1084",
+    "breakingChangeId": "62",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the argument a relative URL?",
+      "primaryTemplate": {
+        "pattern": "$callee(((res, url) => {\n  var app = res.app\n    , req = res.req\n    , path;\n\n  // \"back\" is an alias for the referrer\n  if ('back' == url) url = req.get('Referrer') || '/';\n\n  // relative\n  if (!~url.indexOf('://') && 0 != url.indexOf('//')) {\n    // relative to path\n    if ('.' == url[0]) {\n      path = <parseurl>.original(req).pathname;\n      path = path + ('/' == path[path.length - 1] ? '' : '/');\n      url = <url>.resolve(path, url);\n      // relative to mount-point\n    } else if ('/' != url[0]) {\n      path = app.path();\n      url = path + '/' + url;\n    }\n  } \n  return url;\n})($base, $1))"
+      },
+      "detectionPattern": "call <express>?.location [1, 1] 0:string",
+      "unknownAccessPathQuestion": "Is the receiver an express response?"
+    },
+    "semanticPatchId": "1076",
+    "breakingChangeId": "54",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.cookie(...($1.split('=')))"
+      },
+      "detectionPattern": "call <express>?**.setHeader 0:\"Set-Cookie\" 1:string",
+      "unknownAccessPathQuestion": "Is the receiver an express response object?"
+    },
+    "semanticPatchId": "1064",
+    "breakingChangeId": "46",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base"
+      },
+      "detectionPattern": "read <express>.createServer",
+      "unknownAccessPathQuestion": "Is the receiver the express module object?"
+    },
+    "semanticPatchId": "1070",
+    "breakingChangeId": "49",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.headersSent"
+      },
+      "detectionPattern": "read <express>?**.headerSent",
+      "unknownAccessPathQuestion": "Is the receiver an express response object?"
+    },
+    "semanticPatchId": "1062",
+    "breakingChangeId": "46",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$1.forEach(str => $base.cookie(...(str.split('='))))"
+      },
+      "detectionPattern": "call <express>?**.setHeader 0:\"Set-Cookie\" 1:array",
+      "unknownAccessPathQuestion": "Is the receiver an express response object?"
+    },
+    "semanticPatchId": "1065",
+    "breakingChangeId": "46",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((() => {<on-headers>($base, $2); return $base;})())"
+      },
+      "detectionPattern": "call <express>?**.on [2, 2] 0:\"header\" 1:function",
+      "unknownAccessPathQuestion": "Is the receiver an express response object?"
+    },
+    "semanticPatchId": "1063",
+    "breakingChangeId": "46",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <express>?**.router",
+      "unknownAccessPathQuestion": "Is the receiver an express app?"
+    },
+    "semanticPatchId": "1073",
+    "breakingChangeId": "51",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<body-parser>.json($args)"
+      },
+      "detectionPattern": "call <express>.json",
+      "unknownAccessPathQuestion": "Is the receiver the express module object?"
+    },
+    "semanticPatchId": "1067",
+    "breakingChangeId": "47",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<accepts>(req).$prop[acceptedCharsets => charsets, acceptedLanguages => languages]"
+      },
+      "detectionPattern": "read <express>?**.{acceptedCharsets,acceptedLanguages}",
+      "unknownAccessPathQuestion": "Is the receiver an express request?"
+    },
+    "semanticPatchId": "1075",
+    "breakingChangeId": "53",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.static.mime"
+      },
+      "detectionPattern": "read <express>.mime",
+      "unknownAccessPathQuestion": "Is the receiver the express module object?"
+    },
+    "semanticPatchId": "1085",
+    "breakingChangeId": "63",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<body-parser>.urlencoded($args)"
+      },
+      "detectionPattern": "call <express>.urlencoded",
+      "unknownAccessPathQuestion": "Is the receiver the express module object?"
+    },
+    "semanticPatchId": "1068",
+    "breakingChangeId": "47",
+    "enabled": true,
+    "comment": "database default"
+  }
+]

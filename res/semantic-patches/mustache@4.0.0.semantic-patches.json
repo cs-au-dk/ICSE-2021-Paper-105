@@ -1,0 +1,157 @@
+[
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1656",
+      "comment": "With 1-3 args ",
+      "version": 0,
+      "creationDate": "2022-08-31T15:26:41.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.render($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mustache>.to_html [1,3]",
+      "unknownAccessPathQuestion": "Is this a method call of to_html from the mustache package with 1-3 arguments?"
+    },
+    "semanticPatchId": "1656",
+    "breakingChangeId": "536",
+    "enabled": true,
+    "comment": "With 1-3 args "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "With 1-3 args",
+      "primaryTemplate": {
+        "pattern": "render($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mustache>.to_html [1,3]",
+      "unknownAccessPathQuestion": "Is this a method call of to_html from the mustache package with 1-3 arguments?"
+    },
+    "semanticPatchId": "1656",
+    "breakingChangeId": "536",
+    "enabled": true,
+    "comment": "With 1-3 args"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "with 4 args",
+      "detectionPattern": "call <mustache>.to_html [4,4]",
+      "suggestedFixDescription": "`.to_htm()l` has been deprecated for a long time, and has now been removed/replaced by `.render()`. `.render()` does not have the functionality of invoking an optional function with the string result of `.render()` like `.to_html` had, and you will have to do this yourself after receiving the string result of `.render()`.",
+      "unknownAccessPathQuestion": "Is this a method call of to_html from the mustache package with 4 arguments?"
+    },
+    "semanticPatchId": "1657",
+    "breakingChangeId": "536",
+    "enabled": true,
+    "comment": "with 4 args"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1657",
+      "comment": "with 4 args ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-08-31T15:30:21.000Z",
+      "detectionPattern": "call <mustache>.to_html [4,4]",
+      "suggestedFixDescription": "`.to_htm()l` has been deprecated for a long time, and has now been removed/replaced by `.render()`. `.render()` does not have the functionality of invoking an optional function with the string result of `.render()` like `.to_html` had, and you will have to do this yourself after receiving the string result of `.render()`. If you are using the consolidate package together with mustache, you will have to be on at least version 0.16.0 of consolidate to support mustache 4.x",
+      "unknownAccessPathQuestion": "Is this a method call of to_html from the mustache package with 4 arguments?"
+    },
+    "semanticPatchId": "1657",
+    "breakingChangeId": "536",
+    "enabled": true,
+    "comment": "with 4 args "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1657",
+      "comment": "Minor typo fix to suggested fix description.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-01T14:42:12.000Z",
+      "detectionPattern": "call <mustache>.to_html [4,4]",
+      "suggestedFixDescription": "`.to_html()` has been deprecated for a long time, and has now been removed/replaced by `.render()`. `.render()` does not have the functionality of invoking an optional function with the string result of `.render()` like `.to_html` had, and you will have to do this yourself after receiving the string result of `.render()`. If you are using the consolidate package together with mustache, you will have to be on at least version 0.16.0 of consolidate to support mustache 4.x.",
+      "unknownAccessPathQuestion": "Is this a method call of to_html from the mustache package with 4 arguments?"
+    },
+    "semanticPatchId": "1657",
+    "breakingChangeId": "536",
+    "enabled": true,
+    "comment": "Minor typo fix to suggested fix description."
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "mustache.templateCache = $value",
+        "replacements": []
+      },
+      "detectionPattern": "write <mustache>.Writer.prototype.parse",
+      "transformationQuestion": "Are you overwriting the $base.parse function here?",
+      "unknownAccessPathQuestion": "Is this chaning the mustache.Writer.prototype.parse function?"
+    },
+    "semanticPatchId": "1667",
+    "breakingChangeId": "537",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1667",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-09-05T14:38:46.000Z",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "write <mustache>.Writer.prototype.parse",
+      "transformationQuestion": "Are you overwriting the $base.parse function here?",
+      "suggestedFixDescription": "Changing the default caching of templates by overwriting the $base.parse function is not recommended, since this might break future changes to the .parse() function. Instead overwrite the new mustache.templateCache() function. For an overview of this function see: https://github.com/janl/mustache.js/blob/master/CHANGELOG.md#400--16-january-2020 and for more examples see the comment: https://github.com/janl/mustache.js/issues/730#issuecomment-570952433",
+      "unknownAccessPathQuestion": "Is this chaning the mustache.Writer.prototype.parse function?"
+    },
+    "semanticPatchId": "1667",
+    "breakingChangeId": "537",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1667",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-05T14:47:38.000Z",
+      "detectionPattern": "write <mustache>.Writer.prototype.parse",
+      "transformationQuestion": "Are you overwriting the $base.parse function here?",
+      "suggestedFixDescription": "Changing the default caching of templates by overwriting the $base.parse function is not recommended, since this might break future changes to the .parse() function. Instead overwrite the new mustache.templateCache() function. For an overview of this function see: https://github.com/janl/mustache.js/blob/master/CHANGELOG.md#400--16-january-2020 and for more examples see the comment: https://github.com/janl/mustache.js/issues/730#issuecomment-570952433",
+      "unknownAccessPathQuestion": "Is this chaning the mustache.Writer.prototype.parse function?"
+    },
+    "semanticPatchId": "1667",
+    "breakingChangeId": "537",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1667",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-09-05T14:48:37.000Z",
+      "detectionPattern": "write <mustache>.Writer.prototype.parse",
+      "suggestedFixDescription": "Changing the default caching of templates by overwriting the $base.parse function is not recommended, since this might break future changes to the .parse() function. Instead overwrite the new mustache.templateCache() function. For an overview of this function see: https://github.com/janl/mustache.js/blob/master/CHANGELOG.md#400--16-january-2020 and for more examples see the comment: https://github.com/janl/mustache.js/issues/730#issuecomment-570952433",
+      "unknownAccessPathQuestion": "Is this chaning the mustache.Writer.prototype.parse function?"
+    },
+    "semanticPatchId": "1667",
+    "breakingChangeId": "537",
+    "enabled": true,
+    "comment": "Initial "
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "295",
+    "packageVersion": "14.0.0",
+    "packageName": "file-type",
+    "description": "Update strtok3 dependency",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "296",
+    "packageVersion": "14.0.0",
+    "packageName": "file-type",
+    "description": "Removed .minimumBytes",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

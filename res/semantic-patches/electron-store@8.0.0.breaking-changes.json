@@ -1,0 +1,13 @@
+[
+  {
+    "id": "584",
+    "packageVersion": "8.0.0",
+    "packageName": "electron-store",
+    "description": "Upgrade to from Ajv 7 to Ajv 8",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

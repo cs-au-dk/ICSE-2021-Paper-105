@@ -1,0 +1,13 @@
+[
+  {
+    "id": "561",
+    "packageVersion": "12.0.0",
+    "packageName": "serve",
+    "description": "Drops support for Node 8. From server v. 12.0.0 the module no longer provides support for users using Node version 8 or older. If possible we recommend updating Node to a “Current” version. If you are in doubt which versions are still being maintained and which are active see: https://endoflife.date/nodejs.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

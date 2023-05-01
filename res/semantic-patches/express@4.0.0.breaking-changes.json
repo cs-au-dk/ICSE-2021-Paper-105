@@ -1,0 +1,222 @@
+[
+  {
+    "id": "47",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "remove bodyParser middelware",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "46",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "remove connect and connect's patches except for charset handling",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "49",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "remove express.createServer() - it has been deprecated for a long time. Use express()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "50",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "remove app.configure - use logic in your own app code",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "51",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "remove app.router - is removed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "52",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "remove req.auth - use basic-auth instead",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "53",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "remove req.accepted* - use req.accepts*() instead",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "48",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "remove all bundled middleware except static",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "54",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "res.location - relative URL resolution is removed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "60",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "refactor req.accepts* with accepts",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "61",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "refactor req.is with type-is",
+    "deprecation": false,
+    "askBeforePatch": true,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "55",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "remove res.charset - include the charset in the content type when using res.set()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "56",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "change app.route -> app.mountpath when mounting an express app in another express app",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "63",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "express.mime is removed. Use express.static.mime",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "57",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "change req.accepts* -> req.accepts*s - i.e. req.acceptsEncoding -> req.acceptsEncodings",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "62",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "Removed app.routes",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "59",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "change res.locals is no longer a function. It is a plain js object. Treat it as such.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "58",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "change req.params is now an object instead of an array",
+    "deprecation": false,
+    "askBeforePatch": true,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "186",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "Remove node 0.8 support",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "187",
+    "packageVersion": "4.0.0",
+    "packageName": "express",
+    "description": "Change json spaces no longer enabled by default in development",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

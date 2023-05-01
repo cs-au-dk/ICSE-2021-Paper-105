@@ -1,0 +1,13 @@
+[
+  {
+    "id": "493",
+    "packageVersion": "3.0.0",
+    "packageName": "@tinymce/tinymce-react",
+    "description": "Changed default cloudChannel to '5'. This change is only relevant if you use the 'cloud' version of TinyMCE, i.e., don't host it yourself. The change 'upgrades' TinyMCE to version 5 (see changes here https://www.tiny.cloud/docs/release-notes/release-notes50/). If you want to continue to use TinyMCE version 4, initialize the editor with a specific channel: <Editor  init={{ cloudChannel: '4' }} />",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "538",
+    "packageVersion": "2.0.0",
+    "packageName": "deep-equal",
+    "description": "compare Map, Set, WeakMap, WeakSet matching node assert",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "539",
+    "packageVersion": "2.0.0",
+    "packageName": "deep-equal",
+    "description": "comparing arrays and objects should always fail, per node‘s assert.deepEqual",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "540",
+    "packageVersion": "2.0.0",
+    "packageName": "deep-equal",
+    "description": "non-Date objects with different [[Prototypes]] are not equal",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "541",
+    "packageVersion": "2.0.0",
+    "packageName": "deep-equal",
+    "description": "boxed primitives are not silently unboxed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "542",
+    "packageVersion": "2.0.0",
+    "packageName": "deep-equal",
+    "description": " two objects with different Symbol.toStringTags are not equal",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "543",
+    "packageVersion": "2.0.0",
+    "packageName": "deep-equal",
+    "description": "ensure Error objects compare properly",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "544",
+    "packageVersion": "2.0.0",
+    "packageName": "deep-equal",
+    "description": "add exports to package.json",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "545",
+    "packageVersion": "2.0.0",
+    "packageName": "deep-equal",
+    "description": "false and [] are no longer equal, even non-strictly",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

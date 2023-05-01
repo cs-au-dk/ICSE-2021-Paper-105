@@ -1,0 +1,68 @@
+[
+  {
+    "id": "437",
+    "packageVersion": "7.0.0",
+    "packageName": "commander",
+    "description": "options are stored safely by default, not as properties on the command",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "438",
+    "packageVersion": "7.0.0",
+    "packageName": "commander",
+    "description": "action handlers are passed options and command separately",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "439",
+    "packageVersion": "7.0.0",
+    "packageName": "commander",
+    "description": "errors now displayed using process.stderr.write() instead of console.error() - If your program no longer compiles make sure you are not expecting a console.error() in a test somewhere.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "440",
+    "packageVersion": "7.0.0",
+    "packageName": "commander",
+    "description": ".passCommandToAction() was removed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "441",
+    "packageVersion": "7.0.0",
+    "packageName": "commander",
+    "description": "\"extra arguments\" parameter to action handler has been removed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "451",
+    "packageVersion": "7.0.0",
+    "packageName": "commander",
+    "description": "The command object no longer stores the options properties. If you depend on these properties being on the command object you can use program.opts() to get access to an options object with these properties. Otherwise you can use .storeOptionsAsProperties(true) before defining your first additional option to revert the behaviour, and get the properties back on the Command object.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

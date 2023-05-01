@@ -1,0 +1,32 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": " ",
+      "detectionPattern": "call <html-react-parser> [2,2] 1.replace:any",
+      "suggestedFixDescription": "You may need to as described here: https://github.com/remarkablemark/html-react-parser#v100",
+      "unknownAccessPathQuestion": "Is the receiver the default method from html-react-parser?"
+    },
+    "semanticPatchId": "1587",
+    "breakingChangeId": "448",
+    "enabled": true,
+    "comment": " "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1587",
+      "comment": " edit suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-19T15:21:19.000Z",
+      "detectionPattern": "call <html-react-parser> [2,2] 1.replace:any",
+      "suggestedFixDescription": "You may find more information here https://github.com/remarkablemark/html-react-parser#v100",
+      "unknownAccessPathQuestion": "Is the receiver the default method from html-react-parser?"
+    },
+    "semanticPatchId": "1587",
+    "breakingChangeId": "448",
+    "enabled": true,
+    "comment": " edit suggested fix"
+  }
+]

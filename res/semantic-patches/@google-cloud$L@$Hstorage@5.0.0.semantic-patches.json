@@ -1,0 +1,174 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <@google-cloud/storage>.bucket().file().createWriteStream 0.contentType:undefined",
+      "unknownAccessPathQuestion": "Is this a call to the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1670",
+    "breakingChangeId": "547",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1670",
+      "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined",
+      "version": 0,
+      "creationDate": "2022-09-06T16:34:31.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.contentType:undefined",
+      "unknownAccessPathQuestion": "Is this a call to the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1670",
+    "breakingChangeId": "547",
+    "enabled": true,
+    "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1670",
+      "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined ",
+      "version": 1,
+      "creationDate": "2022-09-06T16:38:58.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.contentType:undefined",
+      "suggestedFixDescription": "Only breaking if the file used for the write stream should not be considered the same file type as the file extension. If you are not declaring the `options.metadata.contentType` the function createWriteStream will now get the file type from the name of the file. For most people this should not be breaking, but if you need the file to have a specific type (that mime can’t get from the file extension) we suggest adding the option `.createWriteStream({contentType: \"your_type\"})` which is an alias for the `options.metadata.contentType`.",
+      "unknownAccessPathQuestion": "Is this a call to the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1670",
+    "breakingChangeId": "547",
+    "enabled": true,
+    "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1670",
+      "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined",
+      "version": 2,
+      "creationDate": "2022-09-06T16:47:32.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.contentType:undefined",
+      "suggestedFixDescription": "Only breaking if the file used for the write stream should not be considered the same file type as the file extension. If you are not declaring the `options.metadata.contentType` the function `createWriteStream` will now get the file type from the name of the file. For most people this should not be breaking, but if you need the file to have a specific type (that mime can’t get from the file extension) we suggest adding the option `.createWriteStream({contentType: \"your_type\"})` which is an alias for the `options.metadata.contentType`.",
+      "unknownAccessPathQuestion": "Is this a call to the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1670",
+    "breakingChangeId": "547",
+    "enabled": true,
+    "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1670",
+      "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined ",
+      "version": 3,
+      "creationDate": "2022-09-06T16:48:21.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.contentType:undefined",
+      "suggestedFixDescription": "Only breaking if the type of the content returned byt the write stream should not be of the same type as the file extension. If you are not declaring the `options.metadata.contentType` the function `createWriteStream` will now get the file type from the name of the file. For most people this should not be breaking, but if you need the file to have a specific type (that mime can’t get from the file extension) we suggest adding the option `.createWriteStream({contentType: \"your_type\"})` which is an alias for the `options.metadata.contentType`.",
+      "unknownAccessPathQuestion": "Is this a call to the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1670",
+    "breakingChangeId": "547",
+    "enabled": true,
+    "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1670",
+      "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-09-06T16:53:53.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.contentType:undefined",
+      "suggestedFixDescription": "Only breaking if the type of the content returned byt the write stream should not be of the same type as the file extension. If you are not declaring the `options.metadata.contentType` the function `createWriteStream` will now get the file type from the name of the file. For most people this should not be breaking, but if you need the content to have a specific type (that mime can’t get from the file extension) we suggest adding the option `.createWriteStream({contentType: \"your_type\"})` which is an alias for the `options.metadata.contentType`.",
+      "unknownAccessPathQuestion": "Is this a call to the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1670",
+    "breakingChangeId": "547",
+    "enabled": true,
+    "comment": "Initial // needs the filter: &&  0:metadata.contentType:undefined "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1670",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-09-07T14:21:53.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().createWriteStream 0.metadata.contentType:undefined 0.contentType:undefined",
+      "suggestedFixDescription": "Only breaking if the type of the content returned byt the write stream should not be of the same type as the file extension. If you are not declaring the `options.metadata.contentType` the function `createWriteStream` will now get the file type from the name of the file. For most people this should not be breaking, but if you need the content to have a specific type (that mime can’t get from the file extension) we suggest adding the option `.createWriteStream({contentType: \"your_type\"})` which is an alias for the `options.metadata.contentType`.",
+      "unknownAccessPathQuestion": "Is this a call to the file.createWriteStream function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1670",
+    "breakingChangeId": "547",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <@google-cloud/storage>.bucket().file().copy",
+      "suggestedFixDescription": "This is breaking if you are using deep-equal with typescript and relying on the `.file.copy()` function to take some specific parameters. One unsupported parameter `keepAcl` was removed from the definition of the copy function. For most people this should not be breaking, and for the few getting a typescript error regarding the `file.copy()` function, they should be able to fix this quite easily. ",
+      "unknownAccessPathQuestion": "Is this using the file.copy function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1672",
+    "breakingChangeId": "550",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1672",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-09-07T15:03:26.000Z",
+      "detectionPattern": "read <@google-cloud/storage>.Storage().bucket().file().copy",
+      "suggestedFixDescription": "This is breaking if you are using deep-equal with typescript and relying on the `.file.copy()` function to take some specific parameters. One unsupported parameter `keepAcl` was removed from the definition of the copy function. For most people this should not be breaking, and for the few getting a typescript error regarding the `file.copy()` function, they should be able to fix this quite easily. ",
+      "unknownAccessPathQuestion": "Is this using the file.copy function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1672",
+    "breakingChangeId": "550",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1672",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-07T15:05:39.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.bucket().file().copy [2,3] 1.keepAcl:string",
+      "suggestedFixDescription": "The `keepAcl` was included in the options for the copy function by mistake, and was hence never supported. Simply removing this property from the `options` argument should resolve the issue without any negative consequences.",
+      "unknownAccessPathQuestion": "Is this using the file.copy function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1672",
+    "breakingChangeId": "550",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1672",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-09-19T07:27:59.000Z",
+      "detectionPattern": "call <@google-cloud/storage>.Storage().bucket().file().copy [2,3] 1.keepAcl:string",
+      "suggestedFixDescription": "The `keepAcl` was included in the options for the copy function by mistake, and was hence never supported. Simply removing this property from the `options` argument should resolve the issue without any negative consequences.",
+      "unknownAccessPathQuestion": "Is this using the file.copy function from the @google-cloud/storage package?"
+    },
+    "semanticPatchId": "1672",
+    "breakingChangeId": "550",
+    "enabled": true,
+    "comment": "Initial "
+  }
+]

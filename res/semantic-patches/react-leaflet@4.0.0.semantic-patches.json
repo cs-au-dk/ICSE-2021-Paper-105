@@ -1,0 +1,14 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": " ",
+      "detectionPattern": "call <react-leaflet>.useMapElement",
+      "unknownAccessPathQuestion": "Is the method called from react-leaflet?"
+    },
+    "semanticPatchId": "1611",
+    "breakingChangeId": "476",
+    "enabled": true,
+    "comment": " "
+  }
+]

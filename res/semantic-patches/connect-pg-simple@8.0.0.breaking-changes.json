@@ -1,0 +1,24 @@
+[
+  {
+    "id": "811",
+    "packageVersion": "8.0.0",
+    "packageName": "connect-pg-simple",
+    "description": "Mark most private methods and properties as actually private using the Private class feature",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "812",
+    "packageVersion": "8.0.0",
+    "packageName": "connect-pg-simple",
+    "description": "BREAKING: Require Node version ^14.18.0 || >=16.0.0. This means you can either use node version 14.x, 16.x or higher",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,730 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_empty_values",
+            "oldPropName": "skip_lines_with_empty_values"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <csv-parse>.parse 0:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1525",
+    "breakingChangeId": "375",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1525",
+      "comment": "init ",
+      "version": 0,
+      "creationDate": "2022-04-23T14:29:59.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_empty_values",
+            "oldPropName": "skip_lines_with_empty_values"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <csv-parse>.parse 1:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1525",
+    "breakingChangeId": "375",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_error",
+            "oldPropName": "skip_lines_with_error"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <csv-parse>.parse 1:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1526",
+    "breakingChangeId": "376",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_error",
+            "oldPropName": "skip_lines_with_error"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <csv-parse>.parse 0:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1527",
+    "breakingChangeId": "376",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_empty_values",
+            "oldPropName": "skip_lines_with_empty_values"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <csv-parse>.parse 0:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1528",
+    "breakingChangeId": "375",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<csv-parse>.parse($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <csv-parse>",
+      "unknownAccessPathQuestion": "Is this a call to default export from csv-parse?"
+    },
+    "semanticPatchId": "1529",
+    "breakingChangeId": "378",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1529",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-27T12:45:35.000Z",
+      "primaryTemplate": {
+        "pattern": "<csv-parse>.parse($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <csv-parse>",
+      "unknownAccessPathQuestion": "Is this a call to default export from csv-parse?"
+    },
+    "semanticPatchId": "1529",
+    "breakingChangeId": "378",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1529",
+      "comment": "init  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-27T12:45:39.000Z",
+      "primaryTemplate": {
+        "pattern": "<csv-parse>.parse($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>,<csv-parse>.default}",
+      "unknownAccessPathQuestion": "Is this a call to default export from csv-parse?"
+    },
+    "semanticPatchId": "1529",
+    "breakingChangeId": "378",
+    "enabled": true,
+    "comment": "init  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1529",
+      "comment": "init ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-27T12:58:50.000Z",
+      "primaryTemplate": {
+        "pattern": "<csv-parse>.parse($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <csv-parse>",
+      "unknownAccessPathQuestion": "Is this a call to default export from csv-parse?"
+    },
+    "semanticPatchId": "1529",
+    "breakingChangeId": "378",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1526",
+      "comment": "More detection patterns",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-23T14:35:14.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_error",
+            "oldPropName": "skip_lines_with_error"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 1:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1526",
+    "breakingChangeId": "376",
+    "enabled": true,
+    "comment": "More detection patterns"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1527",
+      "comment": "More detection patterns",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-23T14:39:43.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_error",
+            "oldPropName": "skip_lines_with_error"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 0:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1527",
+    "breakingChangeId": "376",
+    "enabled": true,
+    "comment": "More detection patterns"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1525",
+      "comment": "More detection patterns",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-23T14:31:31.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_empty_values",
+            "oldPropName": "skip_lines_with_empty_values"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 1:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1525",
+    "breakingChangeId": "375",
+    "enabled": true,
+    "comment": "More detection patterns"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1528",
+      "comment": "More detection patterns",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-23T14:42:00.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_empty_values",
+            "oldPropName": "skip_lines_with_empty_values"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 0:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1528",
+    "breakingChangeId": "375",
+    "enabled": true,
+    "comment": "More detection patterns"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1529",
+      "comment": "Add sync detection pattern",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-27T13:01:14.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee.parse($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>,<csv-parse/sync>}",
+      "unknownAccessPathQuestion": "Is this a call to default export from csv-parse?"
+    },
+    "semanticPatchId": "1529",
+    "breakingChangeId": "378",
+    "enabled": true,
+    "comment": "Add sync detection pattern"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1529",
+      "comment": "Add sync detection pattern ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-28T16:21:39.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee.parse($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>,<csv-parse/sync>,<csv-parse/lib/sync>}",
+      "unknownAccessPathQuestion": "Is this a call to default export from csv-parse?"
+    },
+    "semanticPatchId": "1529",
+    "breakingChangeId": "378",
+    "enabled": true,
+    "comment": "Add sync detection pattern "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "csv-parse/sync",
+        "replacements": []
+      },
+      "detectionPattern": "import csv-parse/lib/sync",
+      "unknownAccessPathQuestion": "Is this an import from csv-parse?"
+    },
+    "semanticPatchId": "1530",
+    "breakingChangeId": "379",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "relax_quotes",
+            "oldPropName": "relax"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 0:object",
+      "unknownAccessPathQuestion": "Is this a call to a parse function in csv-parse?"
+    },
+    "semanticPatchId": "1534",
+    "breakingChangeId": "381",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "relax_quotes",
+            "oldPropName": "relax"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 1:object",
+      "unknownAccessPathQuestion": "Is this a call to a parse function in csv-parse?"
+    },
+    "semanticPatchId": "1535",
+    "breakingChangeId": "381",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1525",
+      "comment": "Support camelCase",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-28T16:12:11.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_empty_values",
+            "oldPropName": "skip_lines_with_empty_values"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skipRecordsWithEmptyValues",
+            "oldPropName": "skipLinesWithEmptyValues"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 1:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1525",
+    "breakingChangeId": "375",
+    "enabled": true,
+    "comment": "Support camelCase"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1528",
+      "comment": "Support camelCase",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-28T16:12:24.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_empty_values",
+            "oldPropName": "skip_lines_with_empty_values"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skipRecordsWithEmptyValues",
+            "oldPropName": "skipLinesWithEmptyValues"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 0:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1528",
+    "breakingChangeId": "375",
+    "enabled": true,
+    "comment": "Support camelCase"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1526",
+      "comment": "Support camelCase",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-28T16:10:15.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_error",
+            "oldPropName": "skip_lines_with_error"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skipRecordsWithError",
+            "oldPropName": "skipLinesWithError"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 1:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1526",
+    "breakingChangeId": "376",
+    "enabled": true,
+    "comment": "Support camelCase"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1527",
+      "comment": "Support camelCase",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-28T16:11:52.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skip_records_with_error",
+            "oldPropName": "skip_lines_with_error"
+          },
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "skipRecordsWithError",
+            "oldPropName": "skipLinesWithError"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<csv-parse>.parse,<csv-parse/sync>.parse,<csv-parse>,<csv-parse/sync>} 0:object",
+      "unknownAccessPathQuestion": "Is this a call to csv-parse.parse?"
+    },
+    "semanticPatchId": "1527",
+    "breakingChangeId": "376",
+    "enabled": true,
+    "comment": "Support camelCase"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1530",
+      "comment": "Added extra question to support older versions of nodejs",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-28T16:33:50.000Z",
+      "extraQuestion": "Is NodeJS 12+ used?",
+      "primaryTemplate": {
+        "pattern": "csv-parse/sync",
+        "replacements": []
+      },
+      "detectionPattern": "import csv-parse/lib/sync",
+      "unknownAccessPathQuestion": "Is this an import from csv-parse?"
+    },
+    "semanticPatchId": "1530",
+    "breakingChangeId": "379",
+    "enabled": true,
+    "comment": "Added extra question to support older versions of nodejs"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1530",
+      "comment": "init",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-30T07:43:44.000Z",
+      "primaryTemplate": {
+        "pattern": "csv-parse/sync",
+        "replacements": []
+      },
+      "detectionPattern": "import csv-parse/lib/sync",
+      "unknownAccessPathQuestion": "Is this an import from csv-parse?"
+    },
+    "semanticPatchId": "1530",
+    "breakingChangeId": "379",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1530",
+      "comment": "Add version question",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-30T07:47:47.000Z",
+      "extraQuestion": "Are you using NodeJS 12+?",
+      "primaryTemplate": {
+        "pattern": "csv-parse/sync",
+        "replacements": []
+      },
+      "detectionPattern": "import csv-parse/lib/sync",
+      "unknownAccessPathQuestion": "Is this an import from csv-parse?"
+    },
+    "semanticPatchId": "1530",
+    "breakingChangeId": "379",
+    "enabled": true,
+    "comment": "Add version question"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "extraQuestion": "Do you use NodeJS older than 14?",
+      "primaryTemplate": {
+        "pattern": "csv-parse/dist/cjs/sync",
+        "replacements": []
+      },
+      "detectionPattern": "import csv-parse/lib/sync",
+      "unknownAccessPathQuestion": "Is this an import from the csv-parse library?"
+    },
+    "semanticPatchId": "1536",
+    "breakingChangeId": "379",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1536",
+      "comment": "Add file extension to template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-01T19:30:46.000Z",
+      "extraQuestion": "Do you use NodeJS older than 14?",
+      "primaryTemplate": {
+        "pattern": "csv-parse/dist/cjs/sync.cjs",
+        "replacements": []
+      },
+      "detectionPattern": "import csv-parse/lib/sync",
+      "unknownAccessPathQuestion": "Is this an import from the csv-parse library?"
+    },
+    "semanticPatchId": "1536",
+    "breakingChangeId": "379",
+    "enabled": true,
+    "comment": "Add file extension to template"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1536",
+      "comment": "init",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-03T07:46:56.000Z",
+      "extraQuestion": "Do you use NodeJS older than 14?",
+      "primaryTemplate": {
+        "pattern": "csv-parse/dist/esm/sync",
+        "replacements": []
+      },
+      "detectionPattern": "import csv-parse/lib/sync",
+      "unknownAccessPathQuestion": "Is this an import from the csv-parse library?"
+    },
+    "semanticPatchId": "1536",
+    "breakingChangeId": "379",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1530",
+      "comment": "Remove question",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-05-01T19:20:24.000Z",
+      "primaryTemplate": {
+        "pattern": "csv-parse/sync",
+        "replacements": []
+      },
+      "detectionPattern": "import csv-parse/lib/sync",
+      "unknownAccessPathQuestion": "Is this an import from csv-parse?"
+    },
+    "semanticPatchId": "1530",
+    "breakingChangeId": "379",
+    "enabled": true,
+    "comment": "Remove question"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1536",
+      "comment": "disable",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-05-03T07:57:23.000Z",
+      "extraQuestion": "Do you use NodeJS older than 14?",
+      "primaryTemplate": {
+        "pattern": "csv-parse/dist/cjs/sync.cjs",
+        "replacements": []
+      },
+      "detectionPattern": "import csv-parse/lib/sync",
+      "unknownAccessPathQuestion": "Is this an import from the csv-parse library?"
+    },
+    "semanticPatchId": "1536",
+    "breakingChangeId": "379",
+    "enabled": false,
+    "comment": "disable"
+  }
+]

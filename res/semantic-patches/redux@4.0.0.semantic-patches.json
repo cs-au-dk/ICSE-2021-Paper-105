@@ -1,0 +1,60 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the reducer currently dispatching?",
+      "detectionPattern": "call <redux{/**/*,}>?**.{getState,subscribe}",
+      "unknownAccessPathQuestion": "Is the receiver a redux store?"
+    },
+    "semanticPatchId": "1237",
+    "breakingChangeId": "138",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<redux>.#2"
+      },
+      "detectionPattern": "import redux/**/*"
+    },
+    "semanticPatchId": "1238",
+    "breakingChangeId": "139",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1237",
+      "comment": "Removed questions",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "detectionPattern": "call <redux{/**/*,}>?**.{getState,subscribe}",
+      "unknownAccessPathQuestion": "Is the receiver a redux store?"
+    },
+    "semanticPatchId": "1237",
+    "breakingChangeId": "138",
+    "enabled": true,
+    "comment": "Removed questions"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1237",
+      "comment": "Readded question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-11T07:54:05.000Z",
+      "extraQuestion": "Is the reducer currently dispatching?",
+      "detectionPattern": "call <redux{/**/*,}>?**.{getState,subscribe}",
+      "unknownAccessPathQuestion": "Is the receiver a redux store?"
+    },
+    "semanticPatchId": "1237",
+    "breakingChangeId": "138",
+    "enabled": true,
+    "comment": "Readded question"
+  }
+]

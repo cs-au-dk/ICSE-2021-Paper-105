@@ -1,0 +1,24 @@
+[
+  {
+    "id": "467",
+    "packageVersion": "7.0.0",
+    "packageName": "react-minimal-pie-chart",
+    "description": "[Remove src from distribution](https://github.com/toomuchdesign/react-minimal-pie-chart/commit/873042b66ff43b549f2363d17f98d6d0f9a2b84a#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519L14). This means the /src folder is no longer included in the files you get when you install the npm package. Hence if you want to manipulate how the package works, you will need to use version 6.0.1 or earlier.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "468",
+    "packageVersion": "7.0.0",
+    "packageName": "react-minimal-pie-chart",
+    "description": "[EventHandler expects void as return type](https://github.com/toomuchdesign/react-minimal-pie-chart/commit/d90f95299b93e3ce24817c0d68824ae41fad230c#diff-73509a13e74997f8f9d4144e3e7dce29aa7a39dfe0e19080e8b45a311a446751L12-R12). This means that if you provide a custom event handler for onClick, onMouseOver or onMouseOut your function will need to return void now. The signature of the expected eventhandler was [(event, data, dataIndex) => {}](https://github.com/toomuchdesign/react-minimal-pie-chart/tree/v6.0.1#options) and is now [(event, data, dataIndex) => void](https://github.com/toomuchdesign/react-minimal-pie-chart/tree/v7.0.0#options)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

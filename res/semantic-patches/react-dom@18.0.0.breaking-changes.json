@@ -1,0 +1,57 @@
+[
+  {
+    "id": "384",
+    "packageVersion": "18.0.0",
+    "packageName": "react-dom",
+    "description": "ReactDOM.render has been deprecated. Using it will warn and run your app in React 17 mode.",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "385",
+    "packageVersion": "18.0.0",
+    "packageName": "react-dom",
+    "description": "ReactDOM.hydrate has been deprecated. Using it will warn and run your app in React 17 mode.",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "386",
+    "packageVersion": "18.0.0",
+    "packageName": "react-dom",
+    "description": "ReactDOM.unmountComponentAtNode has been deprecated.",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "387",
+    "packageVersion": "18.0.0",
+    "packageName": "react-dom",
+    "description": "ReactDOM.renderSubtreeIntoContainer has been deprecated.",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "388",
+    "packageVersion": "18.0.0",
+    "packageName": "react-dom",
+    "description": "ReactDOMServer.renderToNodeStream has been deprecated.",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

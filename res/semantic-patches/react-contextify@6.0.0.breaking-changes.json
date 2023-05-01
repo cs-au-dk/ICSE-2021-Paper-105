@@ -1,0 +1,35 @@
+[
+  {
+    "id": "818",
+    "packageVersion": "6.0.0",
+    "packageName": "react-contextify",
+    "description": "removal of theme and animation constants",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "819",
+    "packageVersion": "6.0.0",
+    "packageName": "react-contextify",
+    "description": "The show method exposed by the useContextMenu hook uses the same signature as contextMenu. It only accepts a single parameter now.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "820",
+    "packageVersion": "6.0.0",
+    "packageName": "react-contextify",
+    "description": "Shorten path to import the stylesheet",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1382",
+      "comment": "read <http-errors>.createError.I'mateapot ",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-02-20T18:20:30.000Z",
+      "detectionPattern": "read <http-errors>.createError.I'mateapot"
+    },
+    "semanticPatchId": "1382",
+    "breakingChangeId": "248",
+    "enabled": false,
+    "comment": "read <http-errors>.createError.I'mateapot "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <http-errors>.createError.I'mateapot",
+      "detectionPattern": "read <http-errors>.createError.I'mateapot"
+    },
+    "semanticPatchId": "1382",
+    "breakingChangeId": "248",
+    "enabled": true,
+    "comment": "read <http-errors>.createError.I'mateapot"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <http-errors>.createError !(1:number)",
+      "detectionPattern": "call <http-errors>.createError !(1:number)"
+    },
+    "semanticPatchId": "1383",
+    "breakingChangeId": "249",
+    "enabled": true,
+    "comment": "call <http-errors>.createError !(1:number)"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <http-errors>.createError !(1:number)",
+      "detectionPattern": "call <http-errors>.createError !(1:number)"
+    },
+    "semanticPatchId": "1384",
+    "breakingChangeId": "249",
+    "enabled": true,
+    "comment": "call <http-errors>.createError !(1:number)"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1384",
+      "comment": "call <http-errors>.createError 1:number",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-20T18:46:25.000Z",
+      "detectionPattern": "call <http-errors>.createError 1:number"
+    },
+    "semanticPatchId": "1384",
+    "breakingChangeId": "249",
+    "enabled": true,
+    "comment": "call <http-errors>.createError 1:number"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1384",
+      "comment": "call <http-errors>.createError",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-02-20T18:50:47.000Z",
+      "detectionPattern": "call <http-errors>.createError"
+    },
+    "semanticPatchId": "1384",
+    "breakingChangeId": "249",
+    "enabled": true,
+    "comment": "call <http-errors>.createError"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1384",
+      "comment": "read <http-errors>.createError",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-02-20T18:52:05.000Z",
+      "detectionPattern": "read <http-errors>.createError"
+    },
+    "semanticPatchId": "1384",
+    "breakingChangeId": "249",
+    "enabled": true,
+    "comment": "read <http-errors>.createError"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1384",
+      "comment": "call <http-errors> 0:{string,function,boolean,object,undefined,array}",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-02-20T18:52:44.000Z",
+      "detectionPattern": "call <http-errors> 0:{string,function,boolean,object,undefined,array}"
+    },
+    "semanticPatchId": "1384",
+    "breakingChangeId": "249",
+    "enabled": true,
+    "comment": "call <http-errors> 0:{string,function,boolean,object,undefined,array}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1383",
+      "comment": "call <http-errors> 0:{string,function,boolean,object,undefined,array}",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-02-20T18:46:25.000Z",
+      "detectionPattern": "call <http-errors> 0:{string,function,boolean,object,undefined,array}"
+    },
+    "semanticPatchId": "1383",
+    "breakingChangeId": "249",
+    "enabled": false,
+    "comment": "call <http-errors> 0:{string,function,boolean,object,undefined,array}"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1383",
+      "comment": "call <http-errors>.createError",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-02-20T18:46:25.000Z",
+      "detectionPattern": "call <http-errors>.createError !(1:number)"
+    },
+    "semanticPatchId": "1383",
+    "breakingChangeId": "249",
+    "enabled": false,
+    "comment": "call <http-errors>.createError"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1383",
+      "comment": "call <http-errors>",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-02-20T20:00:59.000Z",
+      "detectionPattern": "import <http-errors>"
+    },
+    "semanticPatchId": "1383",
+    "breakingChangeId": "249",
+    "enabled": false,
+    "comment": "call <http-errors>"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <http-errors>.UnorderedCollection",
+      "primaryTemplate": {
+        "pattern": "$base.TooEarly",
+        "replacements": []
+      },
+      "detectionPattern": "read <http-errors>.UnorderedCollection"
+    },
+    "semanticPatchId": "1385",
+    "breakingChangeId": "250",
+    "enabled": true,
+    "comment": "read <http-errors>.UnorderedCollection"
+  }
+]

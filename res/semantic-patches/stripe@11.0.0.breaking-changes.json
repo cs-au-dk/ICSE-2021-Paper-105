@@ -1,0 +1,123 @@
+[
+  {
+    "id": "804",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "Remove deprecated option names. Use the following option names instead (OLD->NEW): api_key->apiKey, idempotency_key->idempotencyKey, stripe_account->stripeAccount, stripe_version->apiVersion, stripeVersion->apiVersion. ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "805",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "Drop support for Node.js 8 and 10. We now support Node.js 12+.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "806",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "Remove charges field on PaymentIntent and replace it with latest_charge.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "814",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "The Orders resource has been removed.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "813",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "The SKU resource has been removed.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "815",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "Remove support for tos_shown_and_accepted on CheckoutSessionCreateParams.payment_method_options.paynow. The property was mistakenly released and never worked.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "816",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "Removed deprecated CheckoutSessionCreateParams.subscription_data.items. Use the line_items parameter on the Session instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "817",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "Removed deprecated configuration setter methods (setHost, setProtocol, setPort, setApiVersion, setApiKey, setTimeout, setAppInfo, setHttpAgent, setMaxNetworkRetries, and setTelemetryEnabled).",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "821",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "Change StripeSignatureVerificationError to have header and payload fields instead of detail. To access these properties, use err.header and err.payload instead of err.detail.header and err.detail.payload.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "807",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "Removed deprecated amount field on Checkout.Session.LineItem.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": true,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "854",
+    "packageVersion": "11.0.0",
+    "packageName": "stripe",
+    "description": "Removed deprecated basic method definitions. Use basic methods defined on the resource instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

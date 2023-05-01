@@ -1,0 +1,57 @@
+[
+  {
+    "id": "551",
+    "packageVersion": "6.0.0",
+    "packageName": "@google-cloud/storage",
+    "description": "drop node 10 support. You will have to use atleast node 12 to be able to use @google-cloud/storage@6.0.0",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "552",
+    "packageVersion": "6.0.0",
+    "packageName": "@google-cloud/storage",
+    "description": "update TypeScript to ^4.6.4. You will need atleast typescript version 4.6.4 to be able to use @google-cloud/storage@6.0.0",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "554",
+    "packageVersion": "6.0.0",
+    "packageName": "@google-cloud/storage",
+    "description": "remove deprecated fields",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "555",
+    "packageVersion": "6.0.0",
+    "packageName": "@google-cloud/storage",
+    "description": "remove configstore",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "556",
+    "packageVersion": "6.0.0",
+    "packageName": "@google-cloud/storage",
+    "description": "align resumable upload behavior",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

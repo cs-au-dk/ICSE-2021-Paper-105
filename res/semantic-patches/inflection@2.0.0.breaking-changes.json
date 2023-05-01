@@ -1,0 +1,57 @@
+[
+  {
+    "id": "799",
+    "packageVersion": "2.0.0",
+    "packageName": "inflection",
+    "description": "BREAKING CHANGE: remove bower.json and component.json: \nThis is only breaking if you are currently using bower as the package manager for inflection@1.x. Inflection is from version 2.0.0 no longer being distributed using Bower, hence you would have to use something like npm or yarn if you want future inflection updates. For a guide on how to migrate away from Bower to using yarn see: https://bower.io/blog/2017/how-to-migrate-away-from-bower/",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "800",
+    "packageVersion": "2.0.0",
+    "packageName": "inflection",
+    "description": "We ship types with this package, so you don't need the @types/inflection package anymore. This is not breaking, we are just informing you that importing the types separate is no longer necessary.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "801",
+    "packageVersion": "2.0.0",
+    "packageName": "inflection",
+    "description": "BREAKING CHANGE: increase node minimal version to 14.0. You need to use Node >=14.0.0 if you want to use Inflection 2.x",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "802",
+    "packageVersion": "2.0.0",
+    "packageName": "inflection",
+    "description": "BREAKING CHANGE: inflect does not parse strings as count anymore",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "803",
+    "packageVersion": "2.0.0",
+    "packageName": "inflection",
+    "description": "BREAKING CHANGE: remove inflection.version variable",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

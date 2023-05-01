@@ -1,0 +1,131 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "import <react-textarea-autosize>.default",
+      "unknownAccessPathQuestion": "Is this an import statemate of react-textarea-autosize.default"
+    },
+    "semanticPatchId": "1614",
+    "breakingChangeId": "483",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1614",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-05T06:57:50.000Z",
+      "detectionPattern": "import react-textarea-autosize",
+      "unknownAccessPathQuestion": "Is this an import statemate of react-textarea-autosize.default"
+    },
+    "semanticPatchId": "1614",
+    "breakingChangeId": "483",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1614",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-07-05T07:03:51.000Z",
+      "detectionPattern": "import react-textarea-autosize",
+      "suggestedFixDescription": "This fixes a bug with the documentet way of requiring the package for CommonJS environments dating back to v5.1.0. [This change is only breaking if your program has relied on the broken behaviour](https://github.com/Andarist/react-textarea-autosize/releases/tag/v6.0.0).",
+      "unknownAccessPathQuestion": "Is this an import statemate of react-textarea-autosize.default"
+    },
+    "semanticPatchId": "1614",
+    "breakingChangeId": "483",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1614",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-05T07:10:39.000Z",
+      "detectionPattern": "import react-textarea-autosize",
+      "suggestedFixDescription": "This fixes a bug with the documentet way of requiring the package for CommonJS environments (require('react-textarea-autosize').default) dating back to v5.1.0. [This change is only breaking if your program has relied on the broken behaviour](https://github.com/Andarist/react-textarea-autosize/releases/tag/v6.0.0).",
+      "unknownAccessPathQuestion": "Is this an import statemate of react-textarea-autosize.default"
+    },
+    "semanticPatchId": "1614",
+    "breakingChangeId": "483",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1614",
+      "comment": "minor in suggested fix",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-05T07:11:26.000Z",
+      "detectionPattern": "import react-textarea-autosize",
+      "suggestedFixDescription": "This fixes a bug with the documented way of requiring the package for CommonJS environments (require('react-textarea-autosize').default) dating back to v5.1.0. [This change is only breaking if your program relied on the broken behaviour](https://github.com/Andarist/react-textarea-autosize/releases/tag/v6.0.0).",
+      "unknownAccessPathQuestion": "Is this an import statemate of react-textarea-autosize.default"
+    },
+    "semanticPatchId": "1614",
+    "breakingChangeId": "483",
+    "enabled": true,
+    "comment": "minor in suggested fix"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1614",
+      "comment": "suggested fix update",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-08-04T15:36:09.000Z",
+      "detectionPattern": "import react-textarea-autosize",
+      "suggestedFixDescription": "Only breaking if you have been using the returned value from `require('react-textarea-autosize').default;` and a version ^5.1.0 of react-textarea-autosize: Using `require('react-textarea-autosize').default;` has been broken since version 5.1.0, but is from 6.0.0 fixed again. This will most likely not be breaking, but we recommend making sure the value of the import wasn’t used anywhere, since this value has technically changed to now be the default exported object of react-textarea-autosize, where it used to return `undefined`.",
+      "unknownAccessPathQuestion": "Is this an import statemate of react-textarea-autosize.default"
+    },
+    "semanticPatchId": "1614",
+    "breakingChangeId": "483",
+    "enabled": true,
+    "comment": "suggested fix update"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1614",
+      "comment": "suggested fix update ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-08-06T12:12:56.000Z",
+      "detectionPattern": "import react-textarea-autosize",
+      "suggestedFixDescription": "Only breaking if you have been using the statement `require('react-textarea-autosize')` and a version between 5.1.0 and 5.2.1: These versions had a bug with this way of importing the package, hence you should change the import to `require('react-textarea-autosize').default`",
+      "unknownAccessPathQuestion": "Is this an import statemate of react-textarea-autosize.default"
+    },
+    "semanticPatchId": "1614",
+    "breakingChangeId": "483",
+    "enabled": true,
+    "comment": "suggested fix update "
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1614",
+      "comment": "Minors in suggested fix ",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-08-16T12:00:31.000Z",
+      "detectionPattern": "import react-textarea-autosize",
+      "suggestedFixDescription": "Only breaking if you have been using the statement `require('react-textarea-autosize')` and upgrade from version 5.1.0, 5.2.0 or 5.2.1: In these versions, the exported object was different due to a bug. If you previously used one of the affected versions, you should change the import to `require('react-textarea-autosize').default`",
+      "unknownAccessPathQuestion": "Is this an import statemate of react-textarea-autosize.default"
+    },
+    "semanticPatchId": "1614",
+    "breakingChangeId": "483",
+    "enabled": true,
+    "comment": "Minors in suggested fix "
+  }
+]

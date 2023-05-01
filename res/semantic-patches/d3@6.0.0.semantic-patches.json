@@ -1,0 +1,371 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$1.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.{keys,values,entries}",
+      "unknownAccessPathQuestion": "Is this a call to either the d3.keys, d3.values or d3.entries method from the d3 package?"
+    },
+    "semanticPatchId": "2089",
+    "breakingChangeId": "745",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "new Set($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.set",
+      "unknownAccessPathQuestion": "Is this a constructor call of the d3.set method?"
+    },
+    "semanticPatchId": "2090",
+    "breakingChangeId": "746",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.size",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.set()**.size",
+      "unknownAccessPathQuestion": "Is this a call to the set().size method from the d3 package?"
+    },
+    "semanticPatchId": "2091",
+    "breakingChangeId": "746",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.forEach($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.set()**.each",
+      "unknownAccessPathQuestion": "Is this a call to the set.each method from the d3 package?"
+    },
+    "semanticPatchId": "2092",
+    "breakingChangeId": "746",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.delete($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.set()**.remove",
+      "unknownAccessPathQuestion": "Is this a call of the set().remove method from the d3 package?"
+    },
+    "semanticPatchId": "2093",
+    "breakingChangeId": "746",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "Array.from($callee()).map((e) => Object({ key: e[0], value: e[1]}))",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.map()**.entries",
+      "unknownAccessPathQuestion": "Is this a call of the map.entries() method from the d3 package?"
+    },
+    "semanticPatchId": "2094",
+    "breakingChangeId": "747",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.size",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.map()**.size",
+      "unknownAccessPathQuestion": "Is this a call of the map.size method from the d3 package?"
+    },
+    "semanticPatchId": "2095",
+    "breakingChangeId": "747",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.delete($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.map()**.remove",
+      "unknownAccessPathQuestion": "Is this a call of the map.remove method from the d3 package?"
+    },
+    "semanticPatchId": "2096",
+    "breakingChangeId": "747",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.forEach($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.map()**.each",
+      "unknownAccessPathQuestion": "is this a call of the map.each method from the d3 package?"
+    },
+    "semanticPatchId": "2097",
+    "breakingChangeId": "747",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "new Set($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.set",
+      "unknownAccessPathQuestion": "is this a constructor call of the d3.set class?"
+    },
+    "semanticPatchId": "2098",
+    "breakingChangeId": "747",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2098",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-03T06:42:19.000Z",
+      "primaryTemplate": {
+        "pattern": "new Set($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.set",
+      "unknownAccessPathQuestion": "is this a constructor call of the d3.map class?"
+    },
+    "semanticPatchId": "2098",
+    "breakingChangeId": "747",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2098",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-11-03T06:42:29.000Z",
+      "primaryTemplate": {
+        "pattern": "new Map($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.map",
+      "unknownAccessPathQuestion": "is this a constructor call of the d3.map class?"
+    },
+    "semanticPatchId": "2098",
+    "breakingChangeId": "747",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.nest",
+      "suggestedFixDescription": "There are two main solutions to this breaking change, depending on how complex your application is.\n1 - if the way you use d3.nest is complex: A quick fix for this change is to simply use an additional module `d3-collection` which still works and gives the same functionality as your current implementation.\n2 - If the way you use d3.nest is simple: Technically there are replacements for each of the d3.nest() methods in the d3 module, and if your d3.nest() calls are simple this fix will not take long. \nObviously the first fix will work for both case, but you will be using an archive module, meaning it no longer gets support and updates. If you want to implement the second solution see the official migration guide for further details and examples: https://observablehq.com/@d3/d3v6-migration-guide#group.",
+      "unknownAccessPathQuestion": "Is this a call of the .nest method from the d3 package?"
+    },
+    "semanticPatchId": "2102",
+    "breakingChangeId": "751",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2102",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-04T07:01:35.000Z",
+      "detectionPattern": "call <d3>.nest",
+      "suggestedFixDescription": "There are two main solutions to this breaking change, depending on how complex your application is.\n1 - if the way you use d3.nest is complex: A quick fix for this change is to simply use an additional module `d3-collection` which still works and gives the same functionality as your current implementation.\n2 - If the way you use d3.nest is simple: Technically there are replacements for each of the d3.nest() methods in the d3 module, and if your d3.nest() calls are simple this fix will not take long. \nObviously the first fix will work for both case, but you will be using an archive module, meaning it no longer gets support and updates. \nIf you want to implement the second solution see the official migration guide for further details and examples: https://observablehq.com/@d3/d3v6-migration-guide#group.",
+      "unknownAccessPathQuestion": "Is this a call of the .nest method from the d3 package?"
+    },
+    "semanticPatchId": "2102",
+    "breakingChangeId": "751",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.{selection,selectionAll,brush,brushX,brushY,drag,zoom,transition}()**.on [2,3] 1:function",
+      "suggestedFixDescription": "This is only breaking if the second argument to $base.on() is being parsed the “index” (i) and “elements” (e) as arguments. \nThe signature of the listeners have been changed to now only take the event object and the “datum” (d) (which it already did).\nTo get the existing “index” and “elements” functionality you can inside the listener use\n    const selection = event.selection;\n    const e = selection.nodes();\n    const i = e.indexOf(this);\nFor further details see the official migration guide here: https://observablehq.com/@d3/d3v6-migration-guide#events.",
+      "unknownAccessPathQuestion": "Is this a call of an .on() method on either a selection, brush, drag, zoom og transition object from the d3 package?"
+    },
+    "semanticPatchId": "2109",
+    "breakingChangeId": "755",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2109",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-05T09:35:40.000Z",
+      "detectionPattern": "call <d3>.{select,selectAll,brush,brushX,brushY,drag,zoom,transition}()**.on [2,3] 1:function",
+      "suggestedFixDescription": "\nThis is only breaking if the second argument to .on() is being parsed the “index” (i) and “elements” (e) as arguments. \nThe signature of the listeners have been changed to now only take the event object and the “datum” (d) (which it already did).\nTo get the existing “index” and “elements” functionality you can inside the listener use\n    const selection = event.selection;\n    const e = selection.nodes();\n    const i = e.indexOf(this);\nFor further details see the official migration guide here: https://observablehq.com/@d3/d3v6-migration-guide#events. \n",
+      "unknownAccessPathQuestion": "Is this a call of an .on() method on either a selection, brush, drag, zoom og transition object from the d3 package?"
+    },
+    "semanticPatchId": "2109",
+    "breakingChangeId": "755",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <d3>.event",
+      "suggestedFixDescription": "If this reading of the d3.event property is inside an event listener, you can change `d3.event` to just be `event` and then parse the event object as the new first argument to the event listener. See the example: https://observablehq.com/@d3/d3v6-migration-guide#cell-427. \nIf you are reading d3.event outside of an event listener, there is no “good/clean” alternative.\nOur suggestion is to have your own variable containing the last event, which is then set inside the different event listener, from which you are trying to get the event using d3.event.\nSo an event listener on a drag object could look something like:\n    drag().on(\"start\", (event, d) => lastEvent = event; … )",
+      "unknownAccessPathQuestion": "is the code reading the d3.event property here?"
+    },
+    "semanticPatchId": "2110",
+    "breakingChangeId": "755",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<d3>.pointer($2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.clientPoint",
+      "unknownAccessPathQuestion": "Is this a call of the d3.clientPoint method?"
+    },
+    "semanticPatchId": "2111",
+    "breakingChangeId": "756",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.{mouse,touch,touches}",
+      "suggestedFixDescription": "The new d3.$prop[mouse=> pointer,touch=> pointer,touches=> pointers](event) method replaces the d3.$prop method.\nTo fix this change simply rename the method call, and then parse the `event` to the method instead of the current arguments.\nThis also means that if you are not already doing it, you need to parse the `event` as the first argument to the event listener. \nFor an example see the official migration guide here: https://observablehq.com/@d3/d3v6-migration-guide#pointer.",
+      "unknownAccessPathQuestion": "is this a call of either the .mouse(), the .touch() or the .touches() method from the d3 package?"
+    },
+    "semanticPatchId": "2112",
+    "breakingChangeId": "756",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.voronoi",
+      "suggestedFixDescription": "This change means that d3.voronoi is no longer part of the default d3 bundle, after becoming obsolete when the more robust d3.Delaunay module was made part of the default bundle. \nDepending on how complex your d3.voronoi implementation is, we recommend one of two solutions.\n1. If your implementation is complex: By importing the d3-voronoi bundle as a separate module, instead of as a part of the default d3 bundle, your current implementation will still work.\n2. If your implementation is not very complex: We would not be able to summarize a general move from d3.voronoi to d3.Delaunay here, since it is all case dependent.\nFor instance instead of d3.voronoi, you would use `d3.Delaunay().voronoi(bounds)`. The data you want in the voronoi diagram you would parse as an argument to `d3.Delaunay.from(data)`. The `.extend(bounds)` is replaced by the first argument to the `.voronoi() method`. \nSee the exhaustive documentation of d3.Delaunay here: https://devdocs.io/d3~6/d3-delaunay#new_delaunay.\nFor some specific Delaunay examples see the official d3 observable site: https://observablehq.com/collection/@d3/d3-delaunay.",
+      "unknownAccessPathQuestion": "Is this a constructor call of a d3.voronoi diagram?"
+    },
+    "semanticPatchId": "2113",
+    "breakingChangeId": "757",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<d3>.bin($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.histogram",
+      "unknownAccessPathQuestion": "Is this a constructor call of a d3.histogram?"
+    },
+    "semanticPatchId": "2114",
+    "breakingChangeId": "758",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "(() => {let tmp = d3.leastIndex($args); return (tmp === -1 ? undefined : tmp)})()",
+        "replacements": []
+      },
+      "detectionPattern": "call <d3>.scan",
+      "unknownAccessPathQuestion": "Is this a call of the d3.scan method?"
+    },
+    "semanticPatchId": "2115",
+    "breakingChangeId": "759",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.interpolateTransformCss",
+      "suggestedFixDescription": "This is only breaking if you are using relative units to define the different transforms. \nThe .interpolateTransformCss() method has been changed internally, making it necessary for it to now only accept absolute units. \nDepending on what relative unit you are using, gaining access to the parent node will sometimes make it possible to calculate the absolute unit for each specific case, equivalent to the current relative unit.\nIt’s also very probable that you are not completely dependent on the interpolate being consistent across platforms and devices, and that you can make do with absolute units for this.\nFor a list of both absolute and relative units see: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths.",
+      "unknownAccessPathQuestion": "Is this a call of the interpolateTransformCss method from the d3 package?"
+    },
+    "semanticPatchId": "2117",
+    "breakingChangeId": "760",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.format",
+      "suggestedFixDescription": "This can only be breaking in the case the `.format()` call returns a negative value. \nThe negative output from the `.format()` method has technically changed, since the unicode of the new “minus” (U+2212) is different from the old “hyphen-minus” (U+002D). \nThis could for instance break conditional statements like \n``` js\nif (d3.format(\"f\")(-20) === \"−20.000000) {...}\n```\nwhich would never be true after the update, since the minus in the output  is not equal to the hyphen minus used in the condition. Obviously you can change this manually.\nAnother solution is to use the d3.formatLocale() which is used to specify characters to use for instance for currency, decimals and also the minus symbol. Simply call this method before the `.format()` call and the output should be the same as the current output.\nSee the details about the `.formatLocale()` method here: https://devdocs.io/d3~6/d3-format#formatlocale.",
+      "unknownAccessPathQuestion": "Is this a call of the .format() method from the d3 package?"
+    },
+    "semanticPatchId": "2118",
+    "breakingChangeId": "761",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

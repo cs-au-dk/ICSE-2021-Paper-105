@@ -1,0 +1,46 @@
+[
+  {
+    "id": "260",
+    "packageVersion": "2.0.0",
+    "packageName": "dataloader",
+    "description": ".loadMany() now returns an array which may contain Error if one of the requested keys failed. ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "261",
+    "packageVersion": "2.0.0",
+    "packageName": "dataloader",
+    "description": "The timing of calls to batchLoadFn when { batch: false } has changed to the end of the run-loop tick. ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "262",
+    "packageVersion": "2.0.0",
+    "packageName": "dataloader",
+    "description": "Promises for cached values now wait to resolve until the rest of the batch resolves. \nPreviously when .load() encountered a cached value it would return an already resolved (or rejected) Promise. However when additional dependent loads happened after these, the difference in time between the cache hit value resolving and the cache miss value resolving would result in additional unnecessary network requests. As of this version when .load() encounters a cached value it returns a Promise which waits to resolve until the call to batchLoadFn also resolves. This should result in better whole-program performance and is the most significant conceptual change and improvement.\n\nThis changes the timing of when Promises are resolved and thus could introduce subtle behavioral change in your code, especially if your code is prone to race conditions. Please test carefully.\n\nThis also means each return of .load() is a new Promise instance. Where prior versions returned the same Promise instance for cached results, this version does not. This may break code which uses the returned Promise as a memoization key or in some other way assumed reference equality.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "400",
+    "packageVersion": "2.0.0",
+    "packageName": "dataloader",
+    "description": "The names of private class variables have changed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

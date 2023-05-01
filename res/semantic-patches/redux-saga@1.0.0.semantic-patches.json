@@ -1,0 +1,2837 @@
+[
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1429",
+      "comment": "call <redux-saga>.eventChannel [2,2] 2:function",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-23T11:11:54.000Z",
+      "detectionPattern": "call <redux-saga>.eventChannel [2,2] 2:function"
+    },
+    "semanticPatchId": "1429",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "call <redux-saga>.eventChannel [2,2] 2:function"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "import <redux-saga>.{utils,effects}",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/#1>",
+        "replacements": []
+      },
+      "detectionPattern": "import <redux-saga>.{utils,effects}"
+    },
+    "semanticPatchId": "1411",
+    "breakingChangeId": "275",
+    "enabled": true,
+    "comment": "import <redux-saga>.{utils,effects}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1411",
+      "comment": "import redux-saga.{utils,effects}",
+      "version": 0,
+      "creationDate": "2022-03-15T20:14:26.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/#1>",
+        "replacements": []
+      },
+      "detectionPattern": "import <redux-saga>.{utils,effects}"
+    },
+    "semanticPatchId": "1411",
+    "breakingChangeId": "275",
+    "enabled": true,
+    "comment": "import redux-saga.{utils,effects}"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1411",
+      "comment": "import redux-saga.{utils,effects} ",
+      "version": 1,
+      "creationDate": "2022-03-15T20:15:29.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/#1>",
+        "replacements": []
+      },
+      "detectionPattern": "import redux-saga.{utils,effects}"
+    },
+    "semanticPatchId": "1411",
+    "breakingChangeId": "275",
+    "enabled": true,
+    "comment": "import redux-saga.{utils,effects} "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.channel [0,0]",
+      "detectionPattern": "call <redux-saga>.channel [0,0]"
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "call <redux-saga>.channel [0,0]"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1428",
+      "comment": "Added unknown access path ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T18:44:14.000Z",
+      "detectionPattern": "read <redux-saga>.is",
+      "unknownAccessPathQuestion": "Is function called from redux-saga?"
+    },
+    "semanticPatchId": "1428",
+    "breakingChangeId": "289",
+    "enabled": true,
+    "comment": "Added unknown access path "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga>.put",
+      "primaryTemplate": {
+        "pattern": "try {$base.$callee} catch(err){}",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.put"
+    },
+    "semanticPatchId": "1412",
+    "breakingChangeId": "276",
+    "enabled": true,
+    "comment": "read <redux-saga>.put"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1412",
+      "comment": "read <redux-saga/effects>.put",
+      "version": 0,
+      "creationDate": "2022-03-16T14:02:41.000Z",
+      "primaryTemplate": {
+        "pattern": "try {$base.$callee} catch(err){}",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.put"
+    },
+    "semanticPatchId": "1412",
+    "breakingChangeId": "276",
+    "enabled": true,
+    "comment": "read <redux-saga/effects>.put"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1412",
+      "comment": "read <redux-saga/effects>.put ",
+      "version": 1,
+      "creationDate": "2022-03-16T14:05:53.000Z",
+      "primaryTemplate": {
+        "pattern": "try { $prop } catch(err){}",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.put"
+    },
+    "semanticPatchId": "1412",
+    "breakingChangeId": "276",
+    "enabled": true,
+    "comment": "read <redux-saga/effects>.put "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga>.delay",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/delay-p>.delay",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.delay"
+    },
+    "semanticPatchId": "1413",
+    "breakingChangeId": "277",
+    "enabled": true,
+    "comment": "read <redux-saga>.delay"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1420",
+      "comment": "call <redux-saga>.channel [0,0] ",
+      "version": 0,
+      "creationDate": "2022-03-20T10:12:10.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(<redux-saga>.buffers.fixed)",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga>.channel [0,0]"
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "call <redux-saga>.channel [0,0] "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga/effects>.{cancel,join} [1, ]",
+      "detectionPattern": "call <redux-saga/effects>.{cancel,join} [0, 1]"
+    },
+    "semanticPatchId": "1415",
+    "breakingChangeId": "278",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.{cancel,join} [1, ]"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1415",
+      "comment": "call <redux-saga/effects>.{cancel,join} [1, ] ",
+      "version": 0,
+      "creationDate": "2022-03-16T15:18:40.000Z",
+      "detectionPattern": "call <redux-saga/effects>.{cancel,join} [1, 1]"
+    },
+    "semanticPatchId": "1415",
+    "breakingChangeId": "278",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.{cancel,join} [1, ] "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1415",
+      "comment": "call <redux-saga/effects>.{cancel,join} [1, ]",
+      "version": 1,
+      "creationDate": "2022-03-16T15:19:06.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee([$args])",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.{cancel,join} [1, 1]"
+    },
+    "semanticPatchId": "1415",
+    "breakingChangeId": "278",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.{cancel,join} [1, ]"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1420",
+      "comment": "call <redux-saga>.channel [0,0]",
+      "version": 1,
+      "creationDate": "2022-03-20T10:17:37.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(<redux-saga>.buffers.fixed())",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga>.channel [0,0]"
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "call <redux-saga>.channel [0,0]"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "1",
+      "primaryTemplate": {
+        "pattern": "$callee($args, <redux-saga>.buffers.fixed())",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.actionChannel [1,1]"
+    },
+    "semanticPatchId": "1421",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "1"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1421",
+      "comment": "call <redux-saga/effects>.actionChannel [1,1]",
+      "version": 0,
+      "creationDate": "2022-03-20T10:29:46.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args, <redux-saga>.buffers.fixed())",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.actionChannel [1,1]"
+    },
+    "semanticPatchId": "1421",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.actionChannel [1,1]"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1412",
+      "comment": "call <redux-saga/effects>.put",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-17T19:23:43.000Z",
+      "primaryTemplate": {
+        "pattern": "try { $callee($args) } catch(err){}",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.put"
+    },
+    "semanticPatchId": "1412",
+    "breakingChangeId": "276",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.put"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga>.{takeEvery,takeLatest}",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.{takeEvery,takeLatest}"
+    },
+    "semanticPatchId": "1416",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "read <redux-saga>.{takeEvery,takeLatest}"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1420",
+      "comment": "read <redux-saga>.channel [0,0] - For when the method is passed as an argument",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-20T10:19:29.000Z",
+      "detectionPattern": "read <redux-saga>.channel [0,0]",
+      "suggestedFixDescription": "The default buffer used to be buffers.fixed()."
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "read <redux-saga>.channel [0,0] - For when the method is passed as an argument"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.channel [0,0] - For when the method is called directly",
+      "primaryTemplate": {
+        "pattern": "$callee(<redux-saga>.buffers.fixed())",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga>.channel [0,0]"
+    },
+    "semanticPatchId": "1422",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "call <redux-saga>.channel [0,0] - For when the method is called directly"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga>.arrayOfDeffered",
+      "primaryTemplate": {
+        "pattern": "$base.arrayOfDeferred",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.arrayOfDeffered"
+    },
+    "semanticPatchId": "1423",
+    "breakingChangeId": "282",
+    "enabled": true,
+    "comment": "read <redux-saga>.arrayOfDeffered"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "a",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/testing-utils>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/utils>.{createMockTask,cloneableGenerator}"
+    },
+    "semanticPatchId": "1424",
+    "breakingChangeId": "283",
+    "enabled": true,
+    "comment": "a"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1457",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-28T06:55:37.000Z",
+      "detectionPattern": "call <redux-saga>.runSaga",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1457",
+    "breakingChangeId": "318",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga>.{put.sync,takem}",
+      "detectionPattern": "read <redux-saga>.{put.sync,takem}"
+    },
+    "semanticPatchId": "1417",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "read <redux-saga>.{put.sync,takem}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1417",
+      "comment": "read <redux-saga/effects>.{put.sync,takem}",
+      "version": 0,
+      "creationDate": "2022-03-17T19:59:31.000Z",
+      "detectionPattern": "read <redux-saga/effects>.{put.sync,takem}"
+    },
+    "semanticPatchId": "1417",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "read <redux-saga/effects>.{put.sync,takem}"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1417",
+      "comment": "read <redux-saga/effects>.put.sync",
+      "version": 1,
+      "creationDate": "2022-03-17T20:00:15.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.put.sync"
+    },
+    "semanticPatchId": "1417",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "read <redux-saga/effects>.put.sync"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga/effects>.takem",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.takem"
+    },
+    "semanticPatchId": "1418",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "read <redux-saga/effects>.takem"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": " ",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.put.resolve"
+    },
+    "semanticPatchId": "1419",
+    "breakingChangeId": "280",
+    "enabled": true,
+    "comment": " "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1419",
+      "comment": " read <redux-saga/effects>.put.resolve",
+      "version": 0,
+      "creationDate": "2022-03-17T20:12:38.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.put.resolve"
+    },
+    "semanticPatchId": "1419",
+    "breakingChangeId": "280",
+    "enabled": true,
+    "comment": " read <redux-saga/effects>.put.resolve"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1419",
+      "comment": " read <redux-saga/effects>.put.resolve ",
+      "version": 1,
+      "creationDate": "2022-03-17T20:13:16.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.put"
+    },
+    "semanticPatchId": "1419",
+    "breakingChangeId": "280",
+    "enabled": true,
+    "comment": " read <redux-saga/effects>.put.resolve "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1419",
+      "comment": " read <redux-saga/effects>.put.resolve",
+      "version": 2,
+      "creationDate": "2022-03-17T20:19:32.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.put.resolve"
+    },
+    "semanticPatchId": "1419",
+    "breakingChangeId": "280",
+    "enabled": true,
+    "comment": " read <redux-saga/effects>.put.resolve"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1424",
+      "comment": "read <redux-saga/utils>.{createMockTask,cloneableGenerator}",
+      "version": 0,
+      "creationDate": "2022-03-20T12:06:36.000Z",
+      "primaryTemplate": {
+        "pattern": "<@redux-saga/testing-utils>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/utils>.{createMockTask,cloneableGenerator}"
+    },
+    "semanticPatchId": "1424",
+    "breakingChangeId": "283",
+    "enabled": true,
+    "comment": "read <redux-saga/utils>.{createMockTask,cloneableGenerator}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1426",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-22T14:22:40.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.takem",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1426",
+    "breakingChangeId": "287",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1411",
+      "comment": "read redux-saga.effects",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-15T20:16:32.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.effects",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.effects"
+    },
+    "semanticPatchId": "1411",
+    "breakingChangeId": "275",
+    "enabled": true,
+    "comment": "read redux-saga.effects"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1420",
+      "comment": "read <redux-saga>.channel - For when the method is passed as an argument",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-20T10:39:37.000Z",
+      "detectionPattern": "read <redux-saga>.channel",
+      "suggestedFixDescription": "The default buffer used to be buffers.fixed()."
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "read <redux-saga>.channel - For when the method is passed as an argument"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.eventChannel[2,2]",
+      "extraQuestion": "Is the second argument a matcher function?",
+      "detectionPattern": "call <redux-saga>.eventChannel[2,2]"
+    },
+    "semanticPatchId": "1425",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "call <redux-saga>.eventChannel[2,2]"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>?.cancelled",
+      "detectionPattern": "call <redux-saga>?.cancelled"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "call <redux-saga>?.cancelled"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1425",
+      "comment": "call <redux-saga>.eventChannel [3,3]",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-23T11:11:37.000Z",
+      "extraQuestion": "Is the second argument a matcher function?",
+      "detectionPattern": "call <redux-saga>.eventChannel [3,3]"
+    },
+    "semanticPatchId": "1425",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "call <redux-saga>.eventChannel [3,3]"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "",
+      "detectionPattern": "call <redux-saga/effects>.race"
+    },
+    "semanticPatchId": "1445",
+    "breakingChangeId": "309",
+    "enabled": true,
+    "comment": ""
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1445",
+      "comment": "call <redux-saga/effects>.race",
+      "version": 0,
+      "creationDate": "2022-03-24T18:43:30.000Z",
+      "detectionPattern": "call <redux-saga/effects>.race"
+    },
+    "semanticPatchId": "1445",
+    "breakingChangeId": "309",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.race"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.createSagaMiddleware",
+      "detectionPattern": "call <redux-saga>.createSagaMiddleware"
+    },
+    "semanticPatchId": "1446",
+    "breakingChangeId": "310",
+    "enabled": true,
+    "comment": "call <redux-saga>.createSagaMiddleware"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1446",
+      "comment": "call <redux-saga>.createSagaMiddleware ",
+      "version": 0,
+      "creationDate": "2022-03-24T19:17:13.000Z",
+      "detectionPattern": "call <redux-saga>.createSagaMiddleware [1,1]"
+    },
+    "semanticPatchId": "1446",
+    "breakingChangeId": "310",
+    "enabled": true,
+    "comment": "call <redux-saga>.createSagaMiddleware "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1446",
+      "comment": "call <redux-saga> [1,1]",
+      "version": 1,
+      "creationDate": "2022-03-24T19:17:53.000Z",
+      "detectionPattern": "call <redux-saga> [1,1]"
+    },
+    "semanticPatchId": "1446",
+    "breakingChangeId": "310",
+    "enabled": true,
+    "comment": "call <redux-saga> [1,1]"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1412",
+      "comment": "call <redux-saga/effects>.put ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-17T19:23:43.000Z",
+      "detectionPattern": "call <redux-saga/effects>.put"
+    },
+    "semanticPatchId": "1412",
+    "breakingChangeId": "276",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.put "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "call <redux-saga>?.cancelled",
+      "version": 1,
+      "creationDate": "2022-03-27T18:33:46.000Z",
+      "detectionPattern": "call <redux-saga>?**.cancelled"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "call <redux-saga>?.cancelled"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1427",
+      "comment": "read <redux-saga>?**.done",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-22T15:07:41.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.toPromise",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>?**.done",
+      "unknownAccessPathQuestion": "Is the receiver a Task object?"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "read <redux-saga>?**.done"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "  ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T14:10:34.000Z",
+      "detectionPattern": "call <redux-saga>.cancelled"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "  "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga/effects>.takem",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.takem"
+    },
+    "semanticPatchId": "1426",
+    "breakingChangeId": "287",
+    "enabled": true,
+    "comment": "read <redux-saga/effects>.takem"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga>.done",
+      "primaryTemplate": {
+        "pattern": "<redux-saga>.toPromise",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.done"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "read <redux-saga>.done"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1427",
+      "comment": "read <redux-saga>?**.done ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-27T18:37:11.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.toPromise",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>?**.done",
+      "unknownAccessPathQuestion": "Is this the result of running a Saga using fork, middleware.run or runSaga?"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "read <redux-saga>?**.done "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1445",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-24T18:48:45.000Z",
+      "detectionPattern": "call <redux-saga/effects>.race",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1445",
+    "breakingChangeId": "309",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1420",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-04-03T07:30:55.000Z",
+      "extraQuestion": "Is the channel called without being provided with a buffer?",
+      "detectionPattern": "reado <redux-saga>.channel",
+      "suggestedFixDescription": "The default buffer used to be buffers.fixed().",
+      "unknownAccessPathQuestion": "Is function called from redux-saga?"
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1452",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-27T19:37:41.000Z",
+      "detectionPattern": "call <redux-saga/effects>.fork [1,1]",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1452",
+    "breakingChangeId": "320",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1453",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-27T19:38:12.000Z",
+      "detectionPattern": "call <redux-saga>.fork [3,3]",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1453",
+    "breakingChangeId": "320",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1427",
+      "comment": "read <redux-saga>?.done",
+      "version": 0,
+      "creationDate": "2022-03-22T14:50:24.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga>.toPromise",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>?.done",
+      "unknownAccessPathQuestion": "Is the receiver a Task object?"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "read <redux-saga>?.done"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1411",
+      "comment": "read <redux-saga>.{effects, utils}",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-17T20:40:41.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.effects",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.{effects, utils}"
+    },
+    "semanticPatchId": "1411",
+    "breakingChangeId": "275",
+    "enabled": true,
+    "comment": "read <redux-saga>.{effects, utils}"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1411",
+      "comment": "read <redux-saga>.{effects, utils} ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-22T15:51:00.000Z",
+      "detectionPattern": "read <redux-saga>.{effects,utils}",
+      "suggestedFixDescription": "Import them from redux-saga/effects and redux-saga/utils"
+    },
+    "semanticPatchId": "1411",
+    "breakingChangeId": "275",
+    "enabled": true,
+    "comment": "read <redux-saga>.{effects, utils} "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga>.is",
+      "detectionPattern": "read <redux-saga>.is"
+    },
+    "semanticPatchId": "1428",
+    "breakingChangeId": "289",
+    "enabled": true,
+    "comment": "read <redux-saga>.is"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1428",
+      "comment": "read <redux-saga>.is ",
+      "version": 0,
+      "creationDate": "2022-03-22T15:55:37.000Z",
+      "detectionPattern": "read <redux-saga>.is"
+    },
+    "semanticPatchId": "1428",
+    "breakingChangeId": "289",
+    "enabled": true,
+    "comment": "read <redux-saga>.is "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1427",
+      "comment": "call <redux-saga>?**.done ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-27T18:42:27.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.toPromise($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga>?**.done",
+      "unknownAccessPathQuestion": "Is this the result of running a Saga using fork, middleware.run or runSaga?"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "call <redux-saga>?**.done "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1427",
+      "comment": "read <redux-saga>?**.done ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-27T19:19:32.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.toPromise",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>?**.done",
+      "unknownAccessPathQuestion": "Is this the result of running a Saga using fork, middleware.run or runSaga?"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "read <redux-saga>?**.done "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1430",
+      "comment": "reado <redux-saga>.runSaga",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-28T06:52:10.000Z",
+      "detectionPattern": "reado <redux-saga>.runSaga",
+      "suggestedFixDescription": "Create a channel using const channel = stdChannel() and communicate with it using put and take, i.e. emitter.on(\"action\", channel.put) - see example https://redux-saga.js.org/docs/advanced/UsingRunSaga"
+    },
+    "semanticPatchId": "1430",
+    "breakingChangeId": "290",
+    "enabled": true,
+    "comment": "reado <redux-saga>.runSaga"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1415",
+      "comment": "call <redux-saga/effects>.{cancel,join}",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-16T15:19:24.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee([$args])",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.{cancel,join}"
+    },
+    "semanticPatchId": "1415",
+    "breakingChangeId": "278",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.{cancel,join}"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>",
+      "detectionPattern": "call <redux-saga>"
+    },
+    "semanticPatchId": "1451",
+    "breakingChangeId": "318",
+    "enabled": true,
+    "comment": "call <redux-saga>"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1430",
+      "comment": "call <redux-saga>.runSaga",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-30T18:37:11.000Z",
+      "detectionPattern": "call <redux-saga>.runSaga",
+      "suggestedFixDescription": "Create a channel using const channel = stdChannel() and communicate with it using put and take, i.e. emitter.on(\"action\", channel.put) - see example https://redux-saga.js.org/docs/advanced/UsingRunSaga"
+    },
+    "semanticPatchId": "1430",
+    "breakingChangeId": "290",
+    "enabled": true,
+    "comment": "call <redux-saga>.runSaga"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1420",
+      "comment": "reado <redux-saga>.channel - For when the method is passed as an argument",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-21T08:50:07.000Z",
+      "detectionPattern": "reado <redux-saga>.channel",
+      "suggestedFixDescription": "The default buffer used to be buffers.fixed()."
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "reado <redux-saga>.channel - For when the method is passed as an argument"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga/effects>.fork [1,1]",
+      "detectionPattern": "call <redux-saga/effects>.fork [1,1]"
+    },
+    "semanticPatchId": "1452",
+    "breakingChangeId": "320",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.fork [1,1]"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.fork [3,3]",
+      "detectionPattern": "call <redux-saga>.fork [3,3]"
+    },
+    "semanticPatchId": "1453",
+    "breakingChangeId": "320",
+    "enabled": true,
+    "comment": "call <redux-saga>.fork [3,3]"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1420",
+      "comment": "reado <redux-saga>.channel - For when the method is passed as an argument, added question for removing unessessary matches ",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-04-03T07:30:55.000Z",
+      "extraQuestion": "Is the channel called without being provided with a buffer?",
+      "detectionPattern": "reado <redux-saga>.channel",
+      "suggestedFixDescription": "The default buffer used to be buffers.fixed()."
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "reado <redux-saga>.channel - For when the method is passed as an argument, added question for removing unessessary matches "
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1427",
+      "comment": "read <redux-saga>?**.done ",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-03-28T09:25:47.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.toPromise()",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>?**.done",
+      "unknownAccessPathQuestion": "Is the receiver the result of running a Saga using fork, middleware.run or runSaga?"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "read <redux-saga>?**.done "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1412",
+      "comment": "call <redux-saga/effects>.put - Added suggested fix",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-24T19:50:03.000Z",
+      "detectionPattern": "call <redux-saga/effects>.put",
+      "suggestedFixDescription": "Make sure errors are caught with a try/catch statement somewhere in the saga-chain."
+    },
+    "semanticPatchId": "1412",
+    "breakingChangeId": "276",
+    "enabled": true,
+    "comment": "call <redux-saga/effects>.put - Added suggested fix"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1454",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-27T19:52:38.000Z",
+      "detectionPattern": "read <redux-saga>.detach",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1454",
+    "breakingChangeId": "321",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1425",
+      "comment": "call <redux-saga>.eventChannel[2,3]",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-21T08:56:32.000Z",
+      "extraQuestion": "Is the second argument a matcher function?",
+      "detectionPattern": "call <redux-saga>.eventChannel[2,2]"
+    },
+    "semanticPatchId": "1425",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "call <redux-saga>.eventChannel[2,3]"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1425",
+      "comment": "call <redux-saga>.eventChannel[2,3] ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-23T11:09:36.000Z",
+      "extraQuestion": "Is the second argument a matcher function?",
+      "detectionPattern": "call <redux-saga>.eventChannel[2,3]"
+    },
+    "semanticPatchId": "1425",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "call <redux-saga>.eventChannel[2,3] "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1425",
+      "comment": "call <redux-saga>.eventChannel[2,3] 3:function",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-23T11:09:44.000Z",
+      "extraQuestion": "Is the second argument a matcher function?",
+      "detectionPattern": "call <redux-saga>.eventChannel[3,3] 3:function"
+    },
+    "semanticPatchId": "1425",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "call <redux-saga>.eventChannel[2,3] 3:function"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.eventChannel[2,2] 2:function",
+      "detectionPattern": "call <redux-saga>.eventChannel[2,2] 2:function"
+    },
+    "semanticPatchId": "1429",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "call <redux-saga>.eventChannel[2,2] 2:function"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1425",
+      "comment": "call <redux-saga>.eventChannel[3,3]",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-23T11:11:37.000Z",
+      "extraQuestion": "Is the second argument a matcher function?",
+      "detectionPattern": "call <redux-saga>.eventChannel[3,3]"
+    },
+    "semanticPatchId": "1425",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "call <redux-saga>.eventChannel[3,3]"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.detach",
+      "detectionPattern": "call <redux-saga>.detach"
+    },
+    "semanticPatchId": "1454",
+    "breakingChangeId": "321",
+    "enabled": true,
+    "comment": "call <redux-saga>.detach"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.detach",
+      "detectionPattern": "call <redux-saga>.detach"
+    },
+    "semanticPatchId": "1455",
+    "breakingChangeId": "321",
+    "enabled": true,
+    "comment": "call <redux-saga>.detach"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <redux-saga>.runSaga",
+      "detectionPattern": "read <redux-saga>.runSaga",
+      "suggestedFixDescription": "you should create a channel (preferably stdChannel), pass it as channel argument to the runSaga API and communicate with through it with take and put methods"
+    },
+    "semanticPatchId": "1430",
+    "breakingChangeId": "290",
+    "enabled": true,
+    "comment": "read <redux-saga>.runSaga"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1455",
+      "comment": "",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-03-27T19:46:26.000Z",
+      "detectionPattern": "call <redux-saga>.detach"
+    },
+    "semanticPatchId": "1455",
+    "breakingChangeId": "321",
+    "enabled": false,
+    "comment": ""
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1455",
+      "comment": "a",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-03-27T19:47:15.000Z",
+      "detectionPattern": "call <redux-saga/delete-this-please>"
+    },
+    "semanticPatchId": "1455",
+    "breakingChangeId": "321",
+    "enabled": false,
+    "comment": "a"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1454",
+      "comment": "call <redux-saga>.detac",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-27T19:46:21.000Z",
+      "detectionPattern": "call <redux-saga>.detach"
+    },
+    "semanticPatchId": "1454",
+    "breakingChangeId": "321",
+    "enabled": true,
+    "comment": "call <redux-saga>.detac"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1454",
+      "comment": "read <redux-saga>.detach",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-27T19:52:38.000Z",
+      "detectionPattern": "read <redux-saga>.detach"
+    },
+    "semanticPatchId": "1454",
+    "breakingChangeId": "321",
+    "enabled": true,
+    "comment": "read <redux-saga>.detach"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1415",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-22T15:59:29.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee([$args])",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.{cancel,join}",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1415",
+    "breakingChangeId": "278",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1422",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-20T10:40:27.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(<redux-saga>.buffers.fixed())",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga>.channel [0,0]",
+      "unknownAccessPathQuestion": "Is function called from redux-saga?"
+    },
+    "semanticPatchId": "1422",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1423",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-20T11:28:50.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.arrayOfDeferred",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.arrayOfDeffered",
+      "unknownAccessPathQuestion": "Is function call from redux-saga?"
+    },
+    "semanticPatchId": "1423",
+    "breakingChangeId": "282",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1429",
+      "comment": "added unknown acces path question ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T18:46:31.000Z",
+      "detectionPattern": "call <redux-saga>.eventChannel [2,2] 2:function",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1429",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "added unknown acces path question "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-04-05T19:02:36.000Z",
+      "detectionPattern": "call <redux-saga/effects>.cancelled ",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1413",
+      "comment": "Added unknown access path ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T18:29:17.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/delay-p>.delay",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.delay",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1413",
+    "breakingChangeId": "277",
+    "enabled": true,
+    "comment": "Added unknown access path "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1416",
+      "comment": "Added unknown access path ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T18:29:55.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.{takeEvery,takeLatest}",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga? "
+    },
+    "semanticPatchId": "1416",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "Added unknown access path "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1417",
+      "comment": "Added unknown access path ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-05T18:30:21.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.put.sync",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1417",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "Added unknown access path "
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-04-05T19:10:50.000Z",
+      "detectionPattern": "call <redux-saga>.cancelled",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1451",
+      "comment": "call <redux-saga> [1,1]",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-27T19:34:33.000Z",
+      "detectionPattern": "call <redux-saga> [1,1]"
+    },
+    "semanticPatchId": "1451",
+    "breakingChangeId": "318",
+    "enabled": true,
+    "comment": "call <redux-saga> [1,1]"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": " ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-27T18:33:46.000Z",
+      "detectionPattern": "call <redux-saga/effects>.cancel"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": " "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1424",
+      "comment": "Added unkown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-20T12:21:17.000Z",
+      "primaryTemplate": {
+        "pattern": "<@redux-saga/testing-utils>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/utils>.{createMockTask,cloneableGenerator}",
+      "unknownAccessPathQuestion": "Is function call from redux-saga?"
+    },
+    "semanticPatchId": "1424",
+    "breakingChangeId": "283",
+    "enabled": true,
+    "comment": "Added unkown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1426",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-22T14:22:40.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.takem",
+      "unknownAccessPathQuestion": "Is function call from redux-saga?"
+    },
+    "semanticPatchId": "1426",
+    "breakingChangeId": "287",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "   ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-05T18:57:17.000Z",
+      "detectionPattern": "call <redux-saga/effects>.cancelled"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "   "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1418",
+      "comment": "Added unknown access path ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T18:30:45.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.takem",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1418",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "Added unknown access path "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1419",
+      "comment": "Added unknown access path ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-05T18:46:08.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.put.resolve",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1419",
+    "breakingChangeId": "280",
+    "enabled": true,
+    "comment": "Added unknown access path "
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1420",
+      "comment": "Added unknown access path question ",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-04-05T18:51:18.000Z",
+      "extraQuestion": "Is the channel called without being provided with a buffer?",
+      "detectionPattern": "reado <redux-saga>.channel",
+      "suggestedFixDescription": "The default buffer used to be buffers.fixed().",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "Added unknown access path question "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1421",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-20T10:31:04.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args, <redux-saga>.buffers.fixed())",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.actionChannel [1,1]",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1421",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1422",
+      "comment": "Added unknown access path question ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T18:52:08.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(<redux-saga>.buffers.fixed())",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga>.channel [0,0]",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1422",
+    "breakingChangeId": "281",
+    "enabled": true,
+    "comment": "Added unknown access path question "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1446",
+      "comment": "Disable",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-04-05T19:13:48.000Z",
+      "detectionPattern": "call <redux-saga> [1,1]",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1446",
+    "breakingChangeId": "310",
+    "enabled": false,
+    "comment": "Disable"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.{takers,closed}",
+      "detectionPattern": "call <redux-saga>.{takers,closed}"
+    },
+    "semanticPatchId": "1433",
+    "breakingChangeId": "293",
+    "enabled": true,
+    "comment": "call <redux-saga>.{takers,closed}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1430",
+      "comment": "read <redux-saga>.runSaga ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-23T12:01:40.000Z",
+      "detectionPattern": "read <redux-saga>.runSaga",
+      "suggestedFixDescription": "Create a channel using const channel = stdChannel() and communicate with it using put and take, i.e. emmiter.on(\"action\", channel.put) - see example https://redux-saga.js.org/docs/advanced/UsingRunSaga"
+    },
+    "semanticPatchId": "1430",
+    "breakingChangeId": "290",
+    "enabled": true,
+    "comment": "read <redux-saga>.runSaga "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1430",
+      "comment": "read <redux-saga>.runSaga",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-28T06:51:50.000Z",
+      "detectionPattern": "read <redux-saga>.runSaga",
+      "suggestedFixDescription": "Create a channel using const channel = stdChannel() and communicate with it using put and take, i.e. emitter.on(\"action\", channel.put) - see example https://redux-saga.js.org/docs/advanced/UsingRunSaga"
+    },
+    "semanticPatchId": "1430",
+    "breakingChangeId": "290",
+    "enabled": true,
+    "comment": "read <redux-saga>.runSaga"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.runSaga",
+      "detectionPattern": "call <redux-saga>.runSaga"
+    },
+    "semanticPatchId": "1456",
+    "breakingChangeId": "310",
+    "enabled": true,
+    "comment": "call <redux-saga>.runSaga"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <redux-saga>.runSaga",
+      "detectionPattern": "call <redux-saga>.runSaga"
+    },
+    "semanticPatchId": "1457",
+    "breakingChangeId": "318",
+    "enabled": true,
+    "comment": "call <redux-saga>.runSaga"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1412",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-04-04T07:09:39.000Z",
+      "detectionPattern": "call <redux-saga/effects>.put",
+      "suggestedFixDescription": "Make sure errors are caught with a try/catch statement somewhere in the saga-chain.",
+      "unknownAccessPathQuestion": "Is function call from redux-saga?"
+    },
+    "semanticPatchId": "1412",
+    "breakingChangeId": "276",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-05T18:57:17.000Z",
+      "detectionPattern": "call <redux-saga/effects>.cancelled",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1411",
+      "comment": "Added unkown acces path",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-03-22T15:53:23.000Z",
+      "detectionPattern": "read <redux-saga>.{effects,utils}",
+      "suggestedFixDescription": "Import them from redux-saga/effects and redux-saga/utils",
+      "unknownAccessPathQuestion": "Is the receiver redux-saga?"
+    },
+    "semanticPatchId": "1411",
+    "breakingChangeId": "275",
+    "enabled": true,
+    "comment": "Added unkown acces path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1433",
+      "comment": "call <redux-saga>.{takers,closed} ",
+      "version": 0,
+      "creationDate": "2022-03-23T13:04:48.000Z",
+      "detectionPattern": "read <redux-saga>?.{takers,closed}"
+    },
+    "semanticPatchId": "1433",
+    "breakingChangeId": "293",
+    "enabled": true,
+    "comment": "call <redux-saga>.{takers,closed} "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1433",
+      "comment": "call <redux-saga>.{takers,closed}",
+      "version": 1,
+      "creationDate": "2022-03-23T13:17:21.000Z",
+      "detectionPattern": "read <redux-saga>.{takers,closed}"
+    },
+    "semanticPatchId": "1433",
+    "breakingChangeId": "293",
+    "enabled": true,
+    "comment": "call <redux-saga>.{takers,closed}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1413",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-16T14:37:00.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/delay-p>.delay",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.delay",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1413",
+    "breakingChangeId": "277",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1433",
+      "comment": "read <redux-saga>?**.{takers,closed} ",
+      "version": 3,
+      "creationDate": "2022-03-23T13:22:17.000Z",
+      "detectionPattern": "read <redux-saga>?**.{takers,closed}",
+      "unknownAccessPathQuestion": "Is the receiver a Channel object?"
+    },
+    "semanticPatchId": "1433",
+    "breakingChangeId": "293",
+    "enabled": true,
+    "comment": "read <redux-saga>?**.{takers,closed} "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1416",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-17T19:37:25.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.{takeEvery,takeLatest}",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga? "
+    },
+    "semanticPatchId": "1416",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1417",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-17T20:04:40.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.put.sync",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1417",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1418",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-17T20:05:13.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.takem",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1418",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1423",
+      "comment": "Added unknown access path question ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T18:55:33.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.arrayOfDeferred",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.arrayOfDeffered",
+      "unknownAccessPathQuestion": "Is function called from redux-saga?"
+    },
+    "semanticPatchId": "1423",
+    "breakingChangeId": "282",
+    "enabled": true,
+    "comment": "Added unknown access path question "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1424",
+      "comment": "Added unkown access path question ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T18:57:09.000Z",
+      "primaryTemplate": {
+        "pattern": "<@redux-saga/testing-utils>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/utils>.{createMockTask,cloneableGenerator}",
+      "unknownAccessPathQuestion": "Is function called from redux-saga?"
+    },
+    "semanticPatchId": "1424",
+    "breakingChangeId": "283",
+    "enabled": true,
+    "comment": "Added unkown access path question "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "Added unknown access path ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-05T19:00:30.000Z",
+      "detectionPattern": "call <redux-saga/effects>.cancel",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "Added unknown access path "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1433",
+      "comment": "read <redux-saga>?**.{takers,closed}",
+      "version": 3,
+      "creationDate": "2022-03-23T13:22:17.000Z",
+      "detectionPattern": "read <redux-saga>?**.{takers,closed}",
+      "unknownAccessPathQuestion": "Is the receiver a Channel?"
+    },
+    "semanticPatchId": "1433",
+    "breakingChangeId": "293",
+    "enabled": true,
+    "comment": "read <redux-saga>?**.{takers,closed}"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1427",
+      "comment": "read <redux-saga>?**.done",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-03-27T19:22:21.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.toPromise()",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>?**.done",
+      "unknownAccessPathQuestion": "Is this the result of running a Saga using fork, middleware.run or runSaga?"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "read <redux-saga>?**.done"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1428",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-22T15:55:56.000Z",
+      "detectionPattern": "read <redux-saga>.is",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1428",
+    "breakingChangeId": "289",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1425",
+      "comment": "added unknown acces path question",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-03-24T18:14:12.000Z",
+      "extraQuestion": "Is the second argument a matcher function?",
+      "detectionPattern": "call <redux-saga>.eventChannel [3,3]",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1425",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "added unknown acces path question"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1419",
+      "comment": "Added unknown access path",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-17T20:19:57.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.put.resolve",
+      "unknownAccessPathQuestion": "Is function called from redux-saga?"
+    },
+    "semanticPatchId": "1419",
+    "breakingChangeId": "280",
+    "enabled": true,
+    "comment": "Added unknown access path"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1429",
+      "comment": "added unknown acces path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-24T10:30:52.000Z",
+      "detectionPattern": "call <redux-saga>.eventChannel [2,2] 2:function",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1429",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "added unknown acces path question"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1426",
+      "comment": "Added unknown access path question ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T18:58:32.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.takem",
+      "unknownAccessPathQuestion": "Is function called from redux-saga?"
+    },
+    "semanticPatchId": "1426",
+    "breakingChangeId": "287",
+    "enabled": true,
+    "comment": "Added unknown access path question "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1423",
+      "comment": "Added unknown access path question  ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T19:00:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.arrayOfDeferred",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.arrayOfDeffered",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1423",
+    "breakingChangeId": "282",
+    "enabled": true,
+    "comment": "Added unknown access path question  "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1424",
+      "comment": "Added unkown access path question  ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-05T19:01:11.000Z",
+      "primaryTemplate": {
+        "pattern": "<@redux-saga/testing-utils>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/utils>.{createMockTask,cloneableGenerator}",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1424",
+    "breakingChangeId": "283",
+    "enabled": true,
+    "comment": "Added unkown access path question  "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1426",
+      "comment": "Added unknown access path question  ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-05T19:02:49.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga/effects>.takem",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1426",
+    "breakingChangeId": "287",
+    "enabled": true,
+    "comment": "Added unknown access path question  "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1428",
+      "comment": "Added unknown access path ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T18:44:14.000Z",
+      "detectionPattern": "read <redux-saga>.is",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1428",
+    "breakingChangeId": "289",
+    "enabled": true,
+    "comment": "Added unknown access path "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1433",
+      "comment": "read <redux-saga>?**.{takers,closed} ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-23T14:18:53.000Z",
+      "detectionPattern": "read <redux-saga>?**.{takers,closed}",
+      "unknownAccessPathQuestion": "Is the receiver a Channel from redux-saga?"
+    },
+    "semanticPatchId": "1433",
+    "breakingChangeId": "293",
+    "enabled": true,
+    "comment": "read <redux-saga>?**.{takers,closed} "
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1412",
+      "comment": "Added unknown access path question ",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-04-05T18:59:25.000Z",
+      "detectionPattern": "call <redux-saga/effects>.put",
+      "suggestedFixDescription": "Make sure errors are caught with a try/catch statement somewhere in the saga-chain.",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1412",
+    "breakingChangeId": "276",
+    "enabled": true,
+    "comment": "Added unknown access path question "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1430",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-30T18:40:24.000Z",
+      "detectionPattern": "call <redux-saga>.runSaga",
+      "suggestedFixDescription": "Create a channel using const channel = stdChannel() and communicate with it using put and take, i.e. emitter.on(\"action\", channel.put) - see example https://redux-saga.js.org/docs/advanced/UsingRunSaga",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1430",
+    "breakingChangeId": "290",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1445",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T18:50:54.000Z",
+      "detectionPattern": "call <redux-saga/effects>.race",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1445",
+    "breakingChangeId": "309",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1415",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-05T18:51:52.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee([$args])",
+        "replacements": []
+      },
+      "detectionPattern": "call <redux-saga/effects>.{cancel,join}",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1415",
+    "breakingChangeId": "278",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1451",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-27T19:57:14.000Z",
+      "detectionPattern": "call <redux-saga> [1,1]",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1451",
+    "breakingChangeId": "318",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1429",
+      "comment": "Fix type filter",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-05T19:05:13.000Z",
+      "detectionPattern": "call <redux-saga>.eventChannel [2,2] 1:function",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1429",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "Fix type filter"
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "Match on cancel + add suggested fix",
+      "enabled": true,
+      "version": 8,
+      "creationDate": "2022-04-05T19:12:36.000Z",
+      "detectionPattern": "call <redux-saga>.cancel",
+      "suggestedFixDescription": "Code in the finally block of the cancelled task should be wrapped in a try-catch or similar if it may somehow throw",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "Match on cancel + add suggested fix"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1445",
+      "comment": "Add <redux-saga>.effects import",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-05T19:09:23.000Z",
+      "detectionPattern": "call {<redux-saga/effects>,<redux-saga>.effects}.race",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1445",
+    "breakingChangeId": "309",
+    "enabled": true,
+    "comment": "Add <redux-saga>.effects import"
+  },
+  {
+    "version": 10,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "Fix detection pattern",
+      "enabled": true,
+      "version": 9,
+      "creationDate": "2022-04-12T13:51:59.000Z",
+      "detectionPattern": "call {<redux-saga/effects>,<redux-saga>.effects}.cancel",
+      "suggestedFixDescription": "Code in the finally block of the cancelled task should be wrapped in a try-catch or similar if it may somehow throw",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "Fix detection pattern"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1412",
+      "comment": "Fix detection pattern",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-04-05T19:08:51.000Z",
+      "detectionPattern": "call {<redux-saga/effects>,<redux-saga>.effects}.put",
+      "suggestedFixDescription": "Make sure errors are caught with a try/catch statement somewhere in the saga-chain.",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1412",
+    "breakingChangeId": "276",
+    "enabled": true,
+    "comment": "Fix detection pattern"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1417",
+      "comment": "Fix detection pattern",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-05T19:06:31.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "read {<redux-saga/effects>,<redux-saga>.effects}.put.sync",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1417",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "Fix detection pattern"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1418",
+      "comment": "Fix detection pattern",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T19:06:37.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read {<redux-saga/effects>,<redux-saga>.effects}.takem",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1418",
+    "breakingChangeId": "279",
+    "enabled": true,
+    "comment": "Fix detection pattern"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1419",
+      "comment": "Fix detection pattern",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-04-05T19:06:48.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.putResolve",
+        "replacements": []
+      },
+      "detectionPattern": "read {<redux-saga/effects>,<redux-saga>.effects}.put.resolve",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1419",
+    "breakingChangeId": "280",
+    "enabled": true,
+    "comment": "Fix detection pattern"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1426",
+      "comment": "Fix detection pattern",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-05T19:07:54.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.takeMaybe",
+        "replacements": []
+      },
+      "detectionPattern": "read {<redux-saga/effects>,<redux-saga>.effects}.takem",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1426",
+    "breakingChangeId": "287",
+    "enabled": true,
+    "comment": "Fix detection pattern"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1427",
+      "comment": "Update unknown access path question",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-04-04T06:15:46.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.toPromise()",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>?**.done",
+      "unknownAccessPathQuestion": "Is the receiver a saga task, i.e., the result of running a fork, middleware.run or runSaga from the saga library?"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "Update unknown access path question"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "read <redux-saga>?**.sagaStack",
+      "unknownAccessPathQuestion": "Is the receiver an error object from a saga onError handler?"
+    },
+    "semanticPatchId": "1521",
+    "breakingChangeId": "310",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1433",
+      "comment": "improve detection pattern",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-04-05T19:08:39.000Z",
+      "detectionPattern": "read {<redux-saga/effects>.actionChannel(),<redux-saga>.channel(),<redux-saga>.eventChannel()}.{__takers__,__closed__}",
+      "unknownAccessPathQuestion": "Is the receiver a Channel from redux-saga?"
+    },
+    "semanticPatchId": "1433",
+    "breakingChangeId": "293",
+    "enabled": true,
+    "comment": "improve detection pattern"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1445",
+      "comment": "Add suggested fix",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-12T14:17:00.000Z",
+      "detectionPattern": "call {<redux-saga/effects>,<redux-saga>.effects}.race",
+      "suggestedFixDescription": "Only relevant if any of the raced effects resolve with an END value. In most scenarios, this change can be ignored.",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1445",
+    "breakingChangeId": "309",
+    "enabled": true,
+    "comment": "Add suggested fix"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "callR {<redux-saga>.effects,<redux-saga/effects>}.cancel",
+      "unknownAccessPathQuestion": "Is the cancel function from the redux-saga library?"
+    },
+    "semanticPatchId": "1522",
+    "breakingChangeId": "373",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1522",
+      "comment": "enable",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-13T08:30:25.000Z",
+      "detectionPattern": "callR {<redux-saga>.effects,<redux-saga/effects>}.cancel",
+      "unknownAccessPathQuestion": "Is the cancel function from the redux-saga library?"
+    },
+    "semanticPatchId": "1522",
+    "breakingChangeId": "373",
+    "enabled": true,
+    "comment": "enable"
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1420",
+      "comment": "disabled since I (Martin) am not sure about the usage of channel, which this semantic patch is supposed to address?",
+      "enabled": false,
+      "version": 9,
+      "creationDate": "2022-04-11T18:17:09.000Z",
+      "extraQuestion": "Is the channel called without being provided with a buffer?",
+      "detectionPattern": "readO <redux-saga>.channel",
+      "suggestedFixDescription": "The default buffer used to be buffers.fixed().",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1420",
+    "breakingChangeId": "281",
+    "enabled": false,
+    "comment": "disabled since I (Martin) am not sure about the usage of channel, which this semantic patch is supposed to address?"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1425",
+      "comment": "changed to argument type constraint instead of extra question",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-04-05T18:45:43.000Z",
+      "detectionPattern": "call <redux-saga>.eventChannel [3,3] 2:function",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1425",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "changed to argument type constraint instead of extra question"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1425",
+      "comment": "Remove type filter (not required since 3 arguments implies that the last one is a function).",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-04-13T10:09:29.000Z",
+      "detectionPattern": "call <redux-saga>.eventChannel [3,3]",
+      "unknownAccessPathQuestion": "Is the function called from redux-saga?"
+    },
+    "semanticPatchId": "1425",
+    "breakingChangeId": "285",
+    "enabled": true,
+    "comment": "Remove type filter (not required since 3 arguments implies that the last one is a function)."
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1423",
+      "comment": "Fix detection pattern and semantic patch",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-05T19:07:35.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/utils>.arrayOfDeferred",
+        "replacements": []
+      },
+      "detectionPattern": "read {<redux-saga>.utils,<redux-saga/utils>}.arrayOfDeffered",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1423",
+    "breakingChangeId": "282",
+    "enabled": true,
+    "comment": "Fix detection pattern and semantic patch"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1451",
+      "comment": "Update suggested fix",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T19:14:07.000Z",
+      "detectionPattern": "call <redux-saga> [1,1] 0.logger:function",
+      "suggestedFixDescription": "Log error messages using the onError property on the options object instead. ",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1451",
+    "breakingChangeId": "318",
+    "enabled": true,
+    "comment": "Update suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1457",
+      "comment": "Update suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T19:10:16.000Z",
+      "detectionPattern": "call <redux-saga>.runSaga 0.logger:function",
+      "suggestedFixDescription": "Log error messages using the onError property on the options object instead. ",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1457",
+    "breakingChangeId": "318",
+    "enabled": true,
+    "comment": "Update suggested fix"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1411",
+      "comment": "Add code template",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-04-05T18:28:38.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.effects",
+      "unknownAccessPathQuestion": "Is the receiver redux-saga?"
+    },
+    "semanticPatchId": "1411",
+    "breakingChangeId": "275",
+    "enabled": true,
+    "comment": "Add code template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<redux-saga/utils>",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.utils",
+      "unknownAccessPathQuestion": "Is the utils property from the redux-saga library?"
+    },
+    "semanticPatchId": "1523",
+    "breakingChangeId": "275",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1428",
+      "comment": "Added template",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-05T19:08:11.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/is>",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.is",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1428",
+    "breakingChangeId": "289",
+    "enabled": true,
+    "comment": "Added template"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1416",
+      "comment": "Disabled since it is handled by the \"{effects, utils} aren't imported from 'redux-saga' anymore\" breaking change.",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-04-12T14:33:29.000Z",
+      "primaryTemplate": {
+        "pattern": "<redux-saga/effects>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read {<redux-saga>,<redux-saga/effects>,<redux-saga>.effects}.{takeEvery,takeLatest}",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga? "
+    },
+    "semanticPatchId": "1416",
+    "breakingChangeId": "279",
+    "enabled": false,
+    "comment": "Disabled since it is handled by the \"{effects, utils} aren't imported from 'redux-saga' anymore\" breaking change."
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1413",
+      "comment": "Add @ to package name in template",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T19:05:43.000Z",
+      "primaryTemplate": {
+        "pattern": "<@redux-saga/delay-p>.delay",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.delay",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1413",
+    "breakingChangeId": "277",
+    "enabled": true,
+    "comment": "Add @ to package name in template"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1413",
+      "comment": "Add version number to template.",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-15T10:48:43.000Z",
+      "primaryTemplate": {
+        "pattern": "<@redux-saga/delay-p@1.1.2>.delay",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.delay",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1413",
+    "breakingChangeId": "277",
+    "enabled": true,
+    "comment": "Add version number to template."
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1413",
+      "comment": "remove again",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-15T11:35:21.000Z",
+      "primaryTemplate": {
+        "pattern": "<@redux-saga/delay-p>.delay",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>.delay",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1413",
+    "breakingChangeId": "277",
+    "enabled": true,
+    "comment": "remove again"
+  },
+  {
+    "version": 11,
+    "semanticPatch": {
+      "id": "1449",
+      "comment": "Improve suggested fix",
+      "enabled": true,
+      "version": 10,
+      "creationDate": "2022-04-12T14:23:12.000Z",
+      "detectionPattern": "call {<redux-saga/effects>,<redux-saga>.effects}.cancel",
+      "suggestedFixDescription": "Code in the finally block of the cancelled task should be wrapped in a try-catch or similar if errors may appear in the finally block (NOTICE, in many cases, sufficient error handling is already in place).",
+      "unknownAccessPathQuestion": "Is the called function from redux-saga?"
+    },
+    "semanticPatchId": "1449",
+    "breakingChangeId": "315",
+    "enabled": true,
+    "comment": "Improve suggested fix"
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1427",
+      "comment": "Add base filter with Task type: https://redux-saga.js.org/docs/api#task",
+      "enabled": true,
+      "version": 8,
+      "creationDate": "2022-04-12T14:43:55.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.toPromise()",
+        "replacements": []
+      },
+      "detectionPattern": "read <redux-saga>?**.done base:Task",
+      "unknownAccessPathQuestion": "Is the receiver a saga task, i.e., the result of running a fork, middleware.run or runSaga from the saga library?"
+    },
+    "semanticPatchId": "1427",
+    "breakingChangeId": "288",
+    "enabled": true,
+    "comment": "Add base filter with Task type: https://redux-saga.js.org/docs/api#task"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1433",
+      "comment": "Add base filter with Channel type: https://redux-saga.js.org/docs/api#channel",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-04-13T05:14:45.000Z",
+      "detectionPattern": "read {<redux-saga/effects>.actionChannel(),<redux-saga>.channel(),<redux-saga>.eventChannel()}.{__takers__,__closed__} base:Channel",
+      "unknownAccessPathQuestion": "Is the receiver a Channel from redux-saga?"
+    },
+    "semanticPatchId": "1433",
+    "breakingChangeId": "293",
+    "enabled": true,
+    "comment": "Add base filter with Channel type: https://redux-saga.js.org/docs/api#channel"
+  }
+]

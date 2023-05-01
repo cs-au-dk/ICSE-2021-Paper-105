@@ -1,0 +1,68 @@
+[
+  {
+    "id": "474",
+    "packageVersion": "4.0.0",
+    "packageName": "react-leaflet",
+    "description": "ES2020 is the new compilation target version. Removed CommonJS and UMD distribution.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "475",
+    "packageVersion": "4.0.0",
+    "packageName": "react-leaflet",
+    "description": "React v18 and Leaflet v1.8 are now required as peer dependency.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "476",
+    "packageVersion": "4.0.0",
+    "packageName": "react-leaflet",
+    "description": "Removed useMapElement hook",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "480",
+    "packageVersion": "4.0.0",
+    "packageName": "react-leaflet",
+    "description": "Removed MapConsumer component. Please use another hook such as useMap to provide the Leaflet Map to any descedants of a MapContainer.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "481",
+    "packageVersion": "4.0.0",
+    "packageName": "react-leaflet",
+    "description": "Removed whenCreated property from the MapContainer component - a ref callback can be used instead: <MapContainer whenCreated={setMap}> becomes <MapContainer ref={setMap}>",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "482",
+    "packageVersion": "4.0.0",
+    "packageName": "react-leaflet",
+    "description": "Removed onOpen and onClose properties from Popup and Tooltip components.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

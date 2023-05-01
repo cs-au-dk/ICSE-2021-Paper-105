@@ -1,0 +1,529 @@
+[
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "2282",
+      "comment": "Initial",
+      "version": 3,
+      "creationDate": "2022-12-09T06:56:07.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "{ useDefaults: false }",
+            "propName": "contentSecurityPolicy",
+            "operation": "ADD_PROP"
+          },
+          {
+            "propName": "contentSecurityPolicy",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:{undefined,true}",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2282",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2282",
+      "comment": "Initial ",
+      "version": 2,
+      "creationDate": "2022-12-09T06:44:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:{undefined,true}",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2282",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "false",
+            "propName": "useDefaults",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet>.contentSecurityPolicy [1,1] 0.useDefaults:{undefined}",
+      "unknownAccessPathQuestion": "Is this a call of the contentSecurityPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2284",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    useDefaults : false,\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet>.contentSecurityPolicy [0,0]",
+      "unknownAccessPathQuestion": "Is this a call of the contentSecurityPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2283",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet>() [0,0]",
+      "unknownAccessPathQuestion": "Is this a call of the default method of the helmet package?"
+    },
+    "semanticPatchId": "2281",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2281",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-09T06:36:44.000Z",
+      "detectionPattern": "call <helmet> [0,0]",
+      "unknownAccessPathQuestion": "Is this a call of the default method of the helmet package?"
+    },
+    "semanticPatchId": "2281",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2281",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-12-09T06:37:20.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    contentSecurityPolicy: { useDefaults : false},\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [0,0]",
+      "unknownAccessPathQuestion": "Is this a call of the default method of the helmet package?"
+    },
+    "semanticPatchId": "2281",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:{undefined,true}",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2282",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2282",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-09T06:39:17.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "contentSecurityPolicy",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($1)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:{undefined,true}",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2282",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2282",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-12-09T06:44:37.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:{undefined,true}",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2282",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet> [0,0] ",
+      "suggestedFixDescription": "This is only breaking if you have a `form` from which you want to be able to target your own `url:port` with for instance inline javascript.\nThe [form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) property restricts the URLs which can be used as the target of form submissions (src: [MDN, CSP: form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)). \nThe `'self'` value protects the website from which the form was submitted from being directly affected by the `form action` (src: [MDN, CSP source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)). \nThis change was made as a security measure, hence we recommend keeping the change if possible.\nFor the reasons behind the change see the issue: https://github.com/helmetjs/helmet/issues/335.",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2288",
+    "breakingChangeId": "842",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:{undefined,true}",
+      "suggestedFixDescription": "This is only breaking if you have a `form` from which you want to be able to target your own `url:port` with for instance inline javascript.\nThe [form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) property restricts the URLs which can be used as the target of form submissions (src: [MDN, CSP: form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)). \nThe `'self'` value protects the website from which the form was submitted from being directly affected by the `form action` (src: [MDN, CSP source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)). \nThis change was made as a security measure, hence we recommend keeping the change if possible.\nFor the reasons behind the change see the issue: https://github.com/helmetjs/helmet/issues/335.",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2289",
+    "breakingChangeId": "842",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet>.contentSecurityPolicy [0,0]",
+      "suggestedFixDescription": "This is only breaking if you have a `form` from which you want to be able to target your own `url:port` with for instance inline javascript.\nThe [form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) property restricts the URLs which can be used as the target of form submissions (src: [MDN, CSP: form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)). \nThe `'self'` value protects the website from which the form was submitted from being directly affected by the `form action` (src: [MDN, CSP source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)). \nThis change was made as a security measure, hence we recommend keeping the change if possible.\nFor the reasons behind the change see the issue: https://github.com/helmetjs/helmet/issues/335.",
+      "unknownAccessPathQuestion": "Is this a call of the contentSecurityPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2290",
+    "breakingChangeId": "842",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet>.contentSecurityPolicy [1,1] 0.formaction:undefined",
+      "suggestedFixDescription": "This is only breaking if you have a `form` from which you want to be able to target your own `url:port` with for instance inline javascript.\nThe [form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) property restricts the URLs which can be used as the target of form submissions (src: [MDN, CSP: form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)). \nThe `'self'` value protects the website from which the form was submitted from being directly affected by the `form action` (src: [MDN, CSP source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)). \nThis change was made as a security measure, hence we recommend keeping the change if possible.\nFor the reasons behind the change see the issue: https://github.com/helmetjs/helmet/issues/335.",
+      "unknownAccessPathQuestion": "Is this a call of the contentSecurityPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2291",
+    "breakingChangeId": "842",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2291",
+      "comment": "this is missing the filter 0.form-action:undefined, which is currently not a legal filter because of the dash. ",
+      "version": 1,
+      "creationDate": "2022-12-10T08:59:26.000Z",
+      "detectionPattern": "call <helmet>.contentSecurityPolicy [1,1]",
+      "suggestedFixDescription": "This is only breaking if you have a `form` from which you want to be able to target your own `url:port` with for instance inline javascript.\nThe [form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) property restricts the URLs which can be used as the target of form submissions (src: [MDN, CSP: form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)). \nThe `'self'` value protects the website from which the form was submitted from being directly affected by the `form action` (src: [MDN, CSP source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)). \nThis change was made as a security measure, hence we recommend keeping the change if possible.\nFor the reasons behind the change see the issue: https://github.com/helmetjs/helmet/issues/335.",
+      "unknownAccessPathQuestion": "Is this a call of the contentSecurityPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2291",
+    "breakingChangeId": "842",
+    "enabled": true,
+    "comment": "this is missing the filter 0.form-action:undefined, which is currently not a legal filter because of the dash. "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    crossOriginEmbedderPolicy: false,\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [0,0]",
+      "unknownAccessPathQuestion": "Is this a call of the default method on the helmet object?"
+    },
+    "semanticPatchId": "2292",
+    "breakingChangeId": "845",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "false",
+            "propName": "crossOriginEmbedderPolicy",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.crossOriginEmbedderPolicy:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2293",
+    "breakingChangeId": "845",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2292",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-12-12T07:19:19.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    crossOriginEmbedderPolicy: false,\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [0,0]",
+      "unknownAccessPathQuestion": "Is this a call of the default method on the helmet object?"
+    },
+    "semanticPatchId": "2292",
+    "breakingChangeId": "845",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    crossOriginOpenerPolicy: false,\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [0,0] ",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the axios package?"
+    },
+    "semanticPatchId": "2294",
+    "breakingChangeId": "846",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2294",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-12T07:31:45.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    crossOriginOpenerPolicy: false,\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [0,0] ",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2294",
+    "breakingChangeId": "846",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "false",
+            "propName": "crossOriginOpenerPolicy",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.crossOriginOpenerPolicy:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2295",
+    "breakingChangeId": "846",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    crossOriginResourcePolicy: false,\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [0,0] ",
+      "unknownAccessPathQuestion": "is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2296",
+    "breakingChangeId": "847",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "false",
+            "propName": "crossOriginResourcePolicy",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.crossOriginResourcePolicy:undefined",
+      "unknownAccessPathQuestion": "is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2297",
+    "breakingChangeId": "847",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    originAgentCluster: false,\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [0,0] ",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2298",
+    "breakingChangeId": "848",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "false",
+            "propName": "originAgentCluster",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.originAgentCluster:undefined",
+      "unknownAccessPathQuestion": "is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2299",
+    "breakingChangeId": "848",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "false",
+            "propName": "useDefaults",
+            "operation": "ADD_PROP"
+          }
+        ],
+        "$1.contentSecurityPolicy": [
+          {
+            "value": "false",
+            "propName": "useDefaults",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:object 0.contentSecurityPolicy.useDefaults:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2303",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2303",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-13T07:52:24.000Z",
+      "objectModifiers": {
+        "$1.contentSecurityPolicy": [
+          {
+            "value": "false",
+            "propName": "useDefaults",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:object 0.contentSecurityPolicy.useDefaults:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2303",
+    "breakingChangeId": "840",
+    "enabled": true,
+    "comment": "Initial "
+  }
+]

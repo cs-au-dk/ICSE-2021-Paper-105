@@ -1,0 +1,16 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <react-dom/test-utils>.SimulateNative",
+      "suggestedFixDescription": "version of React. If you rely on it for testing, consider attaching the root DOM container to the document during the test, and then dispatching native browser events by calling `node.dispatchEvent()` on the DOM nodes. Make sure to set the `bubbles` flag to `true` when creating the native browser event",
+      "unknownAccessPathQuestion": "Is this a call to ReactTestUtils.SimulateNative?"
+    },
+    "semanticPatchId": "1556",
+    "breakingChangeId": "406",
+    "enabled": true,
+    "comment": "init"
+  }
+]

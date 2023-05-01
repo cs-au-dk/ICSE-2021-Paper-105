@@ -1,0 +1,297 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <commander>**.option [3,3]",
+      "suggestedFixDescription": "The behavior of the default value of an option has changed. Now the default value is used even for non-boolean options. If necessary you can use the new .preset() method to explicitly set the value of an option called without an argument (program_name --option_name) which before would have set the value of option_name to true. See the following comment for specifics on the behavior change https://github.com/tj/commander.js/pull/1652#issuecomment-992205815",
+      "unknownAccessPathQuestion": "Is the option method called on a program from commander?"
+    },
+    "semanticPatchId": "1593",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1593",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-06-23T09:43:38.000Z",
+      "detectionPattern": "call <commander>**.option [2,2]",
+      "suggestedFixDescription": "The behavior of the default value of an option has changed. Now the default value is used even for non-boolean options. If necessary you can use the new .preset() method to explicitly set the value of an option called without an argument (program_name --option_name) which before would have set the value of option_name to true. See the following comment for specifics on the behavior change https://github.com/tj/commander.js/pull/1652#issuecomment-992205815",
+      "unknownAccessPathQuestion": "Is the option method called on a program from commander?"
+    },
+    "semanticPatchId": "1593",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <commander>**.default",
+      "suggestedFixDescription": "The behavior of the default value of an option has changed. Now the default value is used even for non-boolean options. If necessary you can use the new .preset() method to explicitly set the value of an option called without an argument (program_name --option_name) which before would have set the value of option_name to true. See the following comment for specifics on the behavior change https://github.com/tj/commander.js/pull/1652#issuecomment-992205815",
+      "unknownAccessPathQuestion": "Is the default method called on a program from commander?"
+    },
+    "semanticPatchId": "1594",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "This can be breaking if your program or tests require your script to have a specific name and if you do not explicitly set this name. require.main.filename uses the absolute path of the script for the name, hence if this is breaking we recommend using the .executableDir() method together with the .name() method or giving the name as an argument for the Command constructor: new Command(script_name).;  ",
+      "unknownAccessPathQuestion": "Is the parse call made on a program from commander"
+    },
+    "semanticPatchId": "1595",
+    "breakingChangeId": "457",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1595",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-06-25T15:38:56.000Z",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "This can be breaking if your program or tests require your script to have a specific name and if you do not explicitly set this name. require.main.filename uses the absolute path of the script for the name, hence if this is breaking we recommend using the .executableDir() method together with the .name() method or giving the name as the argument for the Command constructor: new Command(script_name);.  ",
+      "unknownAccessPathQuestion": "Is the parse call made on a program from commander"
+    },
+    "semanticPatchId": "1595",
+    "breakingChangeId": "457",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1593",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-23T09:52:46.000Z",
+      "detectionPattern": "call <commander>**.option [2,2]",
+      "suggestedFixDescription": "If $1 is a non-boolean option it will now get the default value if the option is not parsed, where it before would just not have gotten a value. If the option is parsed when running the program, the option now gets the value `true` instead of the default value. If you want the option to get the default value when parsed to the program, change $callee($1,$2,$3) to $callee($1,$2).preset($3): https://github.com/tj/commander.js/tree/v9.0.0#more-configuration",
+      "unknownAccessPathQuestion": "Is the option method called on a program from commander?"
+    },
+    "semanticPatchId": "1593",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1594",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-23T09:54:21.000Z",
+      "detectionPattern": "call <commander>**.default",
+      "suggestedFixDescription": "If this is a non-boolean option it will now get the default value if the option is not parsed, where it before would just not have gotten a value. If the option is parsed when running the program, the option now gets the value `true` instead of the default value. If you want the option to get the default value when parsed to the program, use `.preset($1) `: https://github.com/tj/commander.js/tree/v9.0.0#more-configuration",
+      "unknownAccessPathQuestion": "Is the default method called on a program from commander?"
+    },
+    "semanticPatchId": "1594",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1595",
+      "comment": "Improved suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-25T15:40:35.000Z",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "Only relevant if you depend on commander auto-generating a specific name for your application, which is typically only the case if using standalone executable subcommands. In that case, you can always set the name manually using the `.name` method or specify the location of the executable subcommand using the `.executableDir` method. For a detail explanation of this problem see the PR: https://github.com/tj/commander.js/pull/1571",
+      "unknownAccessPathQuestion": "Is the parse call made on a program from commander"
+    },
+    "semanticPatchId": "1595",
+    "breakingChangeId": "457",
+    "enabled": true,
+    "comment": "Improved suggested fix"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1595",
+      "comment": "Improved suggested fix ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-15T19:37:54.000Z",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "Only relevant if you depend on commander auto-generating a specific name for your application, which is typically only the case if using standalone executable subcommands. In that case, you can always set the name manually using the `.name` method or specify the location of the executable subcommand using the `.executableDir` method. For a detailed explanation of this problem see the PR: https://github.com/tj/commander.js/pull/1571",
+      "unknownAccessPathQuestion": "Is the parse call made on a program from commander"
+    },
+    "semanticPatchId": "1595",
+    "breakingChangeId": "457",
+    "enabled": true,
+    "comment": "Improved suggested fix "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1595",
+      "comment": "Improved suggested fix",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-15T19:42:11.000Z",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "Only relevant if you depend on commander auto-generating a specific name for your application, which is typically only the case if you use standalone executable subcommands. In that case, you can always set the name manually using the `.name` method or specify the location of the executable subcommand using the `.executableDir` method. For a detailed explanation of this problem see the PR: https://github.com/tj/commander.js/pull/1571",
+      "unknownAccessPathQuestion": "Is the parse call made on a program from commander"
+    },
+    "semanticPatchId": "1595",
+    "breakingChangeId": "457",
+    "enabled": true,
+    "comment": "Improved suggested fix"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1593",
+      "comment": "Testing this BC with a code template",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-15T19:03:58.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1,$2).preset($3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.option [3,3]",
+      "suggestedFixDescription": "If $1 is a non-boolean option it will now get the default value if the option is not parsed, where it before would just not have gotten a value. If the option is parsed when running the program, the option now gets the value `true` instead of the default value. If you want the option to get the default value when parsed to the program, change $callee($1,$2,$3) to $callee($1,$2).preset($3): https://github.com/tj/commander.js/tree/v9.0.0#more-configuration",
+      "unknownAccessPathQuestion": "Is the option method called on a program from commander?"
+    },
+    "semanticPatchId": "1593",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Testing this BC with a code template"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1593",
+      "comment": "Testing this BC with a code template ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-17T08:35:25.000Z",
+      "primaryTemplate": {
+        "pattern": "$base\n  .addOption(new Option($args[0,-1]).preset($3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.option [3,3]",
+      "suggestedFixDescription": "If $1 is a non-boolean option it will now get the default value if the option is not parsed, where it before would just not have gotten a value. If the option is parsed when running the program, the option now gets the value `true` instead of the default value. If you want the option to get the default value when parsed to the program, change $callee($1,$2,$3) to $callee($1,$2).preset($3): https://github.com/tj/commander.js/tree/v9.0.0#more-configuration",
+      "unknownAccessPathQuestion": "Is the option method called on a program from commander?"
+    },
+    "semanticPatchId": "1593",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Testing this BC with a code template "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1593",
+      "comment": "Testing this BC with a code template",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-07-17T10:14:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base\n  .addOption(new <commander>.Option($args[0,-1]).preset($3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.option [3,3]",
+      "suggestedFixDescription": "If $1 is a non-boolean option it will now get the default value if the option is not parsed, where it before would just not have gotten a value. If the option is parsed when running the program, the option now gets the value `true` instead of the default value. If you want the option to get the default value when parsed to the program, change $callee($1,$2,$3) to $callee($1,$2).preset($3): https://github.com/tj/commander.js/tree/v9.0.0#more-configuration",
+      "unknownAccessPathQuestion": "Is the option method called on a program from commander?"
+    },
+    "semanticPatchId": "1593",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Testing this BC with a code template"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1593",
+      "comment": "Provided a transformation",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-07-17T11:24:01.000Z",
+      "primaryTemplate": {
+        "pattern": "$base\n  .addOption(new <commander>.Option($args[0,-1]).preset($3))",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.option [3,3]",
+      "suggestedFixDescription": "If $1 is a non-boolean option it will now get the default value if the option is not parsed, where it before would just not have gotten a value. If the option is parsed when running the program, the option now gets the value `true` instead of the default value. If you want the option to get the default value when parsed to the program, change $callee($1,$2,$3) to $callee($1,$2).preset($3): https://github.com/tj/commander.js/tree/v9.0.0#more-configuration",
+      "unknownAccessPathQuestion": "Is the option method called on a program from commander?"
+    },
+    "semanticPatchId": "1593",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Provided a transformation"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1594",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-07-15T19:15:05.000Z",
+      "detectionPattern": "call <commander>.Option**.default",
+      "suggestedFixDescription": "If this is a non-boolean option it will now get the default value if the option is not parsed, where it before would just not have gotten a value. If the option is parsed when running the program, the option now gets the value `true` instead of the default value. If you want the option to get the default value when parsed to the program, use `.preset($1) `: https://github.com/tj/commander.js/tree/v9.0.0#more-configuration",
+      "unknownAccessPathQuestion": "Is the default method called on a program from commander?"
+    },
+    "semanticPatchId": "1594",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1594",
+      "comment": "Minors in suggested fix",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-17T11:56:26.000Z",
+      "detectionPattern": "call <commander>.Option**.default",
+      "suggestedFixDescription": "If this is a non-boolean option it will now get the default value if the option is not set. In the previous version of commander, the option had no value if not set. If the option is set when running the program, the option now gets the value `true` instead of the default value. If you want the option to get the default value when set, use `.preset($1) `: https://github.com/tj/commander.js/tree/v9.0.0#more-configuration",
+      "unknownAccessPathQuestion": "Is the default method called on a program from commander?"
+    },
+    "semanticPatchId": "1594",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Minors in suggested fix"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1593",
+      "comment": "Provided a transformation (the suggested fix is not used). Default value can only be string or boolean: https://github.com/tj/commander.js/blob/v9.0.0/typings/index.d.ts#L514",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-07-17T12:14:56.000Z",
+      "primaryTemplate": {
+        "pattern": "$base\n  .addOption(new <commander>.Option($args[0,-1]).preset($3))",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.option [3,3] 2:string",
+      "suggestedFixDescription": "If $1 is a non-boolean option it will now get the default value if the option is not parsed, where it before would just not have gotten a value. If the option is parsed when running the program, the option now gets the value `true` instead of the default value. If you want the option to get the default value when parsed to the program, change $callee($1,$2,$3) to $callee($1,$2).preset($3): https://github.com/tj/commander.js/tree/v9.0.0#more-configuration",
+      "unknownAccessPathQuestion": "Is the option method called on a program from commander?"
+    },
+    "semanticPatchId": "1593",
+    "breakingChangeId": "456",
+    "enabled": true,
+    "comment": "Provided a transformation (the suggested fix is not used). Default value can only be string or boolean: https://github.com/tj/commander.js/blob/v9.0.0/typings/index.d.ts#L514"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "10",
+    "breakingChangeId": "48",
+    "title": "Express 4.0.0: Use of previously bundled middleware",
+    "description": "The favicon, logger and methodOverride middleware are removed from express in version 4 and should therefore be imported from individual packages instead.",
+    "codeExample": "const express = require('express');\nconst app = express();\napp.set('port', process.env.PORT || 3000);\napp.use(express.favicon());\napp.use(express.logger('dev'));\napp.use(express.methodOverride());"
+  }
+]

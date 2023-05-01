@@ -1,0 +1,285 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Init",
+      "detectionPattern": "read <downshift>.useSelect.selectedItem",
+      "suggestedFixDescription": "If the type of 'selectedItem', 'defaultSelectedItem' or 'initialSelectedItem' has been decalred anywhere, change this from 'Item' to 'Item | Null'",
+      "unknownAccessPathQuestion": "Is $base a part of downshift?"
+    },
+    "semanticPatchId": "1565",
+    "breakingChangeId": "421",
+    "enabled": true,
+    "comment": "Init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1565",
+      "comment": "Init ",
+      "version": 0,
+      "creationDate": "2022-06-01T13:49:51.000Z",
+      "detectionPattern": "write <downshift>.<Object>.{selectedItem,defaultSelectedItem,initialSelectedItem}",
+      "suggestedFixDescription": "If the type of 'selectedItem', 'defaultSelectedItem' or 'initialSelectedItem' has been decalred anywhere, change this from 'Item' to 'Item | Null'",
+      "unknownAccessPathQuestion": "Is $base a part of downshift?"
+    },
+    "semanticPatchId": "1565",
+    "breakingChangeId": "421",
+    "enabled": true,
+    "comment": "Init "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1565",
+      "comment": "Init  ",
+      "version": 1,
+      "creationDate": "2022-06-01T14:07:26.000Z",
+      "detectionPattern": "write <Object>.{selectedItem,defaultSelectedItem,initialSelectedItem}",
+      "suggestedFixDescription": "If the type of 'selectedItem', 'defaultSelectedItem' or 'initialSelectedItem' has been decalred anywhere, change this from 'Item' to 'Item | Null'",
+      "unknownAccessPathQuestion": "Is $base a part of downshift?"
+    },
+    "semanticPatchId": "1565",
+    "breakingChangeId": "421",
+    "enabled": true,
+    "comment": "Init  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1565",
+      "comment": "Init",
+      "version": 2,
+      "creationDate": "2022-06-01T14:07:41.000Z",
+      "detectionPattern": "write <Object>?**.selectedItem",
+      "suggestedFixDescription": "Related to selectedItem properties of downshift. If the type of 'selectedItem', 'defaultSelectedItem' or 'initialSelectedItem' has been declared anywhere, change this from 'Item' to 'Item | Null'",
+      "unknownAccessPathQuestion": "Is $base a part of downshift?"
+    },
+    "semanticPatchId": "1565",
+    "breakingChangeId": "421",
+    "enabled": true,
+    "comment": "Init"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1565",
+      "comment": "Init ",
+      "version": 3,
+      "creationDate": "2022-06-01T14:20:43.000Z",
+      "detectionPattern": "read <downshift>?**.{selectedItem,defaultSelectedItem,initialSelectedItem}",
+      "suggestedFixDescription": "If the type of 'selectedItem', 'defaultSelectedItem' or 'initialSelectedItem' has been declared anywhere, change this type from 'Item' to 'Item | Null'",
+      "unknownAccessPathQuestion": "Is $prop a part of downshift?"
+    },
+    "semanticPatchId": "1565",
+    "breakingChangeId": "421",
+    "enabled": true,
+    "comment": "Init "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1565",
+      "comment": "Init",
+      "version": 4,
+      "creationDate": "2022-06-01T14:49:03.000Z",
+      "detectionPattern": "read <downshift>?**.{selectedItem,defaultSelectedItem,initialSelectedItem}",
+      "suggestedFixDescription": "If the type of $prop' has been declared anywhere, change this type from 'Item' to 'Item | Null'",
+      "unknownAccessPathQuestion": "Is $prop a part of downshift?"
+    },
+    "semanticPatchId": "1565",
+    "breakingChangeId": "421",
+    "enabled": true,
+    "comment": "Init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "callR <downshift>.{useSelect,useCombobox}",
+      "unknownAccessPathQuestion": "Is $callee a call to a downshift functions?"
+    },
+    "semanticPatchId": "1566",
+    "breakingChangeId": "421",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "write <downshift>.itemToString",
+      "suggestedFixDescription": "If you declare the type of itemToString to be \"(item: Item) => string\" change this to \"(item: Item | null) => string\"  ",
+      "unknownAccessPathQuestion": "Is $prop a part of downshift?"
+    },
+    "semanticPatchId": "1567",
+    "breakingChangeId": "422",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1567",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-02T11:29:15.000Z",
+      "detectionPattern": "write <downshift>.itemToString",
+      "suggestedFixDescription": "(Only for Downshift, useSelect and useCombobox) - If you declare the type of itemToString to be \"(item: Item) => string\" change this to \"(item: Item | null) => string\"  ",
+      "unknownAccessPathQuestion": "Is $prop a part of downshift?"
+    },
+    "semanticPatchId": "1567",
+    "breakingChangeId": "422",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "write <Object>.{onInputValueChange,onHighlightedIndexChange,onSelectedItemChange,onIsOpenChange}",
+      "suggestedFixDescription": "This change is only breaking if you are declaring the type of $prop to be UseSelectState, then this should be change into UseSelectStateChange.",
+      "unknownAccessPathQuestion": "Is the $prop function a part of downshift?"
+    },
+    "semanticPatchId": "1569",
+    "breakingChangeId": "425",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1569",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-06-08T10:58:33.000Z",
+      "detectionPattern": "write <Object>.{onInputValueChange,onHighlightedIndexChange,onSelectedItemChange,onIsOpenChange}",
+      "suggestedFixDescription": "This change is only breaking if you are specifying that the changes property of $prop has type UseSelectState, then this should be change into UseSelectStateChange.",
+      "unknownAccessPathQuestion": "Is the $prop function a part of downshift?"
+    },
+    "semanticPatchId": "1569",
+    "breakingChangeId": "425",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1566",
+      "comment": "Disable since it matches too much and is caught by the TS compiler anyway  ",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-06-02T11:11:36.000Z",
+      "detectionPattern": "callR <downshift>.{useSelect,useCombobox}",
+      "suggestedFixDescription": "If you declare the type of selectedItem to be \"Item\" change this to \"Item | null\"  ",
+      "unknownAccessPathQuestion": "Is $callee a call to a downshift functions?"
+    },
+    "semanticPatchId": "1566",
+    "breakingChangeId": "421",
+    "enabled": false,
+    "comment": "Disable since it matches too much and is caught by the TS compiler anyway  "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1567",
+      "comment": "Disable since it matches too much and is caught by the TS compiler anyway ",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-06-18T12:10:47.000Z",
+      "detectionPattern": "write <Object>.itemToString",
+      "suggestedFixDescription": "(Only for Downshift, useSelect and useCombobox) - If you declare the type of itemToString to be \"(item: Item) => string\" change this to \"(item: Item | null) => string\"  ",
+      "unknownAccessPathQuestion": "Is $prop a part of downshift?"
+    },
+    "semanticPatchId": "1567",
+    "breakingChangeId": "422",
+    "enabled": false,
+    "comment": "Disable since it matches too much and is caught by the TS compiler anyway "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1569",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-08T11:06:18.000Z",
+      "detectionPattern": "write <Object>.{onInputValueChange,onHighlightedIndexChange,onSelectedItemChange,onIsOpenChange}",
+      "suggestedFixDescription": "This change is only breaking if you are specifying that the changes property of $prop has type UseSelectState, then this should be change into UseSelectStateChange. [test](www.goggle.com)",
+      "unknownAccessPathQuestion": "Is the $prop function a part of downshift?"
+    },
+    "semanticPatchId": "1569",
+    "breakingChangeId": "425",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1569",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-02T14:56:22.000Z",
+      "detectionPattern": "write <Object>.{onInputValueChange,onHighlightedIndexChange,onSelectedItemChange,onIsOpenChange}",
+      "suggestedFixDescription": "This change is only breaking if you are specifying that the changes property of $prop has type UseSelectState, then this should be change into UseSelectStateChange. [test](https://www.google.com)",
+      "unknownAccessPathQuestion": "Is the $prop function a part of downshift?"
+    },
+    "semanticPatchId": "1569",
+    "breakingChangeId": "425",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1569",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-02T14:57:18.000Z",
+      "detectionPattern": "write <Object>.{onInputValueChange,onHighlightedIndexChange,onSelectedItemChange,onIsOpenChange}",
+      "suggestedFixDescription": "test [test](https://www.google.com) This change is only breaking if you are specifying that the changes property of $prop has type UseSelectState, then this should be change into UseSelectStateChange. [test](https://www.google.com)",
+      "unknownAccessPathQuestion": "Is the $prop function a part of downshift?"
+    },
+    "semanticPatchId": "1569",
+    "breakingChangeId": "425",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1569",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-07-02T14:58:16.000Z",
+      "detectionPattern": "write <Object>.{onInputValueChange,onHighlightedIndexChange,onSelectedItemChange,onIsOpenChange}",
+      "suggestedFixDescription": "This change is only breaking if you are specifying that the changes property of $prop has type UseSelectState, then this should be change into UseSelectStateChange.",
+      "unknownAccessPathQuestion": "Is the $prop function a part of downshift?"
+    },
+    "semanticPatchId": "1569",
+    "breakingChangeId": "425",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1565",
+      "comment": "Disable since it matches too much and is caught by the TS compiler anyway ",
+      "enabled": false,
+      "version": 6,
+      "creationDate": "2022-06-01T16:15:17.000Z",
+      "detectionPattern": "read <downshift>?**.{selectedItem,defaultSelectedItem,initialSelectedItem}",
+      "suggestedFixDescription": "If the type of '$prop' has been declared anywhere, change this type from 'Item' to 'Item | Null'",
+      "unknownAccessPathQuestion": "Is $prop a part of downshift?"
+    },
+    "semanticPatchId": "1565",
+    "breakingChangeId": "421",
+    "enabled": false,
+    "comment": "Disable since it matches too much and is caught by the TS compiler anyway "
+  }
+]

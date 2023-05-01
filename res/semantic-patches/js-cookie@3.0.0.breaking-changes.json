@@ -1,0 +1,79 @@
+[
+  {
+    "id": "784",
+    "packageVersion": "3.0.0",
+    "packageName": "js-cookie",
+    "description": "Removed defaults in favor of a builder",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "790",
+    "packageVersion": "3.0.0",
+    "packageName": "js-cookie",
+    "description": "custom converters are now provided as objects and the “falsy fallback” is no longer an option.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "791",
+    "packageVersion": "3.0.0",
+    "packageName": "js-cookie",
+    "description": "Dropped support for IE < 10. js-cookie has dropped support for IE < 10 in exchange for using more modern notation (like the arrow function)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "792",
+    "packageVersion": "3.0.0",
+    "packageName": "js-cookie",
+    "description": "Removed built-in JSON support, i.e. getJSON() and automatic stringifying in set(): use Cookies.set('foo', JSON.stringify({ ... })) and JSON.parse(Cookies.get('foo')) instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "793",
+    "packageVersion": "3.0.0",
+    "packageName": "js-cookie",
+    "description": "Removed support for Bower.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "794",
+    "packageVersion": "3.0.0",
+    "packageName": "js-cookie",
+    "description": "Handle falsy arguments passed to getters - #399",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "795",
+    "packageVersion": "3.0.0",
+    "packageName": "js-cookie",
+    "description": "No longer support Node < 12",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

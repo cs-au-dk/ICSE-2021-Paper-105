@@ -1,0 +1,24 @@
+[
+  {
+    "id": "548",
+    "packageVersion": "4.0.0",
+    "packageName": "@google-cloud/firestore",
+    "description": "Drop Node 8 support",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "549",
+    "packageVersion": "4.0.0",
+    "packageName": "@google-cloud/firestore",
+    "description": "FirestoreDataConverter.fromFirestore() is now called with a QueryDocumentSnapshot instead of DocumentData",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

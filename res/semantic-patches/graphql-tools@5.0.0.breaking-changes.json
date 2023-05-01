@@ -1,0 +1,13 @@
+[
+  {
+    "id": "202",
+    "packageVersion": "5.0.0",
+    "packageName": "graphql-tools",
+    "description": "Rename addResolveFunctionsToSchema to addResolversToSchema and addMockFunctionsToSchema to addMocksToSchema",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "833",
+    "packageVersion": "3.0.0",
+    "packageName": "web-vitals",
+    "description": "Add a config object param to all metric functions",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "834",
+    "packageVersion": "3.0.0",
+    "packageName": "web-vitals",
+    "description": "Report TTFB after a bfcache restore.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": true,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "835",
+    "packageVersion": "3.0.0",
+    "packageName": "web-vitals",
+    "description": "Only include last LCP entry in metric entries.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "838",
+    "packageVersion": "3.0.0",
+    "packageName": "web-vitals",
+    "description": "Rename getXXX() functions to onXXX()",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

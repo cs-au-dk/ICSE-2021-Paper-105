@@ -1,0 +1,67 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "importD uuid",
+      "unknownAccessPathQuestion": "Is this default import of uuid used with Node.js?"
+    },
+    "semanticPatchId": "1578",
+    "breakingChangeId": "434",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1578",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-06-14T12:58:35.000Z",
+      "primaryTemplate": {
+        "pattern": "<uuid>.v4",
+        "replacements": []
+      },
+      "detectionPattern": "importD uuid",
+      "unknownAccessPathQuestion": "Is this default import of uuid used with Node.js?"
+    },
+    "semanticPatchId": "1578",
+    "breakingChangeId": "434",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "import uuid/**",
+      "suggestedFixDescription": "For ESM use something like \"import { v4 as uuidv4 } from 'uuid';\" and for CommonJs use something like \"const { v4: uuidv4 } = require('uuid');\"",
+      "unknownAccessPathQuestion": "Is this a deep import from uuid?"
+    },
+    "semanticPatchId": "1579",
+    "breakingChangeId": "435",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1579",
+      "comment": "code template added",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-14T13:20:25.000Z",
+      "primaryTemplate": {
+        "pattern": "<uuid>.#1",
+        "replacements": []
+      },
+      "detectionPattern": "import uuid/*",
+      "suggestedFixDescription": "For ESM use something like \"import { v4 as uuidv4 } from 'uuid';\" and for CommonJs use something like \"const { v4: uuidv4 } = require('uuid');\"",
+      "unknownAccessPathQuestion": "Is this a deep import from uuid?"
+    },
+    "semanticPatchId": "1579",
+    "breakingChangeId": "435",
+    "enabled": true,
+    "comment": "code template added"
+  }
+]

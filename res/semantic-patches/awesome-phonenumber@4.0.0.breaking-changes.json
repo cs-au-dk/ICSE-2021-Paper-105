@@ -1,0 +1,46 @@
+[
+  {
+    "id": "822",
+    "packageVersion": "4.0.0",
+    "packageName": "awesome-phonenumber",
+    "description": "The second argument to parsePhoneNumber is an object",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "823",
+    "packageVersion": "4.0.0",
+    "packageName": "awesome-phonenumber",
+    "description": "No functions on returned object",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "824",
+    "packageVersion": "4.0.0",
+    "packageName": "awesome-phonenumber",
+    "description": "No constructor",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "825",
+    "packageVersion": "4.0.0",
+    "packageName": "awesome-phonenumber",
+    "description": "The return value of `.parsePhoneNumber()` is now in a more reasonable JSON format.\nThis change will probably not be breaking for most users, combined with the other patches we provide for this package.\nThere is no easy way to restore the old format, but there also shouldn’t be any disadvantages to using the new format as long as all consumers of the return value are updated accordingly.\nTo see the new format and how to access properties without getter methods see: https://github.com/grantila/awesome-phonenumber#basic-usage.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

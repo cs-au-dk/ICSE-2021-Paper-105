@@ -1,0 +1,13 @@
+[
+  {
+    "id": "305",
+    "packageVersion": "12.0.0",
+    "packageName": "file-type",
+    "description": "Require Node.js 8",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

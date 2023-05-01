@@ -1,0 +1,2455 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.model().aggregate().cursor().exec"
+    },
+    "semanticPatchId": "1491",
+    "breakingChangeId": "348",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "objectModifiers": {
+        "$2": [
+          {
+            "propName": "useFindAndModify",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useNewUrlParser",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useUnifiedTopology",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useCreateIndex",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.connect 1:object"
+    },
+    "semanticPatchId": "1476",
+    "breakingChangeId": "328",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee($1, { maxPoolSize: 5 })",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>?**.openUri} [1, 1]"
+    },
+    "semanticPatchId": "1466",
+    "breakingChangeId": "325",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1466",
+      "comment": "Enabled",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-04T19:41:25.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, { maxPoolSize: 5 })",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>?**.openUri} [1, 1]"
+    },
+    "semanticPatchId": "1466",
+    "breakingChangeId": "325",
+    "enabled": true,
+    "comment": "Enabled"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": 5,
+            "operation": "RENAME_PROP",
+            "newPropName": "maxPoolSize",
+            "oldPropName": "poolSize!"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>.createConnection,<mongoose>?**.openUri} [2,99]"
+    },
+    "semanticPatchId": "1467",
+    "breakingChangeId": "325",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1467",
+      "comment": "Fix to objectModifier",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-04T19:51:14.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": 5,
+            "operation": "RENAME_PROP",
+            "newPropName": "maxPoolSize",
+            "oldPropName": "poolSize"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>.createConnection,<mongoose>?**.openUri} [2,99]"
+    },
+    "semanticPatchId": "1467",
+    "breakingChangeId": "325",
+    "enabled": true,
+    "comment": "Fix to objectModifier"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "useFindAndModify",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useNewUrlParser",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useUnifiedTopology",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useCreateIndex",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.createConnection 0:object"
+    },
+    "semanticPatchId": "1480",
+    "breakingChangeId": "328",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "objectModifiers": {
+        "$2": [
+          {
+            "propName": "useFindAndModify",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useNewUrlParser",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useUnifiedTopology",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useCreateIndex",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.createConnection 1:object"
+    },
+    "semanticPatchId": "1481",
+    "breakingChangeId": "328",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$callee($args).asPromise()",
+        "replacements": []
+      },
+      "detectionPattern": "callPromise <mongoose>.createConnection"
+    },
+    "semanticPatchId": "1482",
+    "breakingChangeId": "339",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "($callee($args), $base)",
+        "replacements": []
+      },
+      "detectionPattern": "callR <mongoose>.connect [3,3]"
+    },
+    "semanticPatchId": "1483",
+    "breakingChangeId": "341",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1467",
+      "comment": "Added unknownAccessPath question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-04T19:52:12.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": 5,
+            "operation": "RENAME_PROP",
+            "newPropName": "maxPoolSize",
+            "oldPropName": "poolSize"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>.createConnection,<mongoose>?**.openUri} [2,99]",
+      "unknownAccessPathQuestion": "Is the call to either mongoose's connect, createConnection or openUri function?"
+    },
+    "semanticPatchId": "1467",
+    "breakingChangeId": "325",
+    "enabled": true,
+    "comment": "Added unknownAccessPath question"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.$prop[n=>matchedCount,nModified=>modifiedCount,upserted=>upsertedCount]",
+        "replacements": []
+      },
+      "detectionPattern": "read <mongoose>?**.{updateOne,updateMany}().{n,nModified,upserted}",
+      "unknownAccessPathQuestion": "Is the property read on the result of an updateOne or updateMany call?"
+    },
+    "semanticPatchId": "1468",
+    "breakingChangeId": "326",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "callPromise <mongoose>?**.{replaceOne,count,countDocuments,createIndexes,deleteMany,deleteOne,distinct,estimatedDocumentCount,find,findById,findByIdAndDelete,findByIdAndRemove,findByIdAndUpdate,findOne,findOneAndDelete,findOneAndRemove,findOneAndReplace,findOneAndUpdate,remove,replaceOne,update,updateMany,updateOne} -1:function"
+    },
+    "semanticPatchId": "1485",
+    "breakingChangeId": "343",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1485",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T14:20:22.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args).clone()",
+        "replacements": []
+      },
+      "detectionPattern": "callPromise <mongoose>?**.{replaceOne,count,countDocuments,createIndexes,deleteMany,deleteOne,distinct,estimatedDocumentCount,find,findById,findByIdAndDelete,findByIdAndRemove,findByIdAndUpdate,findOne,findOneAndDelete,findOneAndRemove,findOneAndReplace,findOneAndUpdate,remove,replaceOne,update,updateMany,updateOne} -1:function"
+    },
+    "semanticPatchId": "1485",
+    "breakingChangeId": "343",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, { clone: false });",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.discriminator [2,2]"
+    },
+    "semanticPatchId": "1486",
+    "breakingChangeId": "344",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, { value: $3, clone: false });",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.discriminator [3,3]"
+    },
+    "semanticPatchId": "1487",
+    "breakingChangeId": "344",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.$prop[n=>deletedCount,ok=>acknowledged]",
+        "replacements": []
+      },
+      "detectionPattern": "read <mongoose>?**.{deleteOne,deleteMany}().{n,ok}"
+    },
+    "semanticPatchId": "1469",
+    "breakingChangeId": "327",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1469",
+      "comment": "Added unknownAccesssPath question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-04T20:27:38.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[n=>deletedCount,ok=>acknowledged]",
+        "replacements": []
+      },
+      "detectionPattern": "read <mongoose>?**.{deleteOne,deleteMany}().{n,ok}",
+      "unknownAccessPathQuestion": "Is the property read on the result of deleteOne or deleteMany?"
+    },
+    "semanticPatchId": "1469",
+    "breakingChangeId": "327",
+    "enabled": true,
+    "comment": "Added unknownAccesssPath question"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.set 0:{‘useFindAndModify’,’useNewUrlParser’,’useUnifiedTopology’,’useCreateIndex’}"
+    },
+    "semanticPatchId": "1470",
+    "breakingChangeId": "328",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1470",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-04T20:42:05.000Z",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.set 0:{\"useFindAndModify\",\"useNewUrlParser\",\"useUnifiedTopology\",\"useCreateIndex\"}"
+    },
+    "semanticPatchId": "1470",
+    "breakingChangeId": "328",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.isObjectIdOrHexString($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.isValidObjectId"
+    },
+    "semanticPatchId": "1488",
+    "breakingChangeId": "345",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1489",
+      "comment": "Initial  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T18:45:19.000Z",
+      "detectionPattern": "call <mongoose>?**.populate"
+    },
+    "semanticPatchId": "1489",
+    "breakingChangeId": "346",
+    "enabled": true,
+    "comment": "Initial  "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.populate"
+    },
+    "semanticPatchId": "1489",
+    "breakingChangeId": "346",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1489",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T18:41:40.000Z",
+      "detectionPattern": "call (<mongoose>?**\\<mongoose>.model()).populate"
+    },
+    "semanticPatchId": "1489",
+    "breakingChangeId": "346",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call {<mongoose>.Model,<mongoose>?**.model}().exists"
+    },
+    "semanticPatchId": "1495",
+    "breakingChangeId": "352",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.{toObject,toJSON}"
+    },
+    "semanticPatchId": "1496",
+    "breakingChangeId": "355",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1489",
+      "comment": "Initial   ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-05T20:35:25.000Z",
+      "detectionPattern": "call (<mongoose>?**\\<mongoose>.model()).populate"
+    },
+    "semanticPatchId": "1489",
+    "breakingChangeId": "346",
+    "enabled": true,
+    "comment": "Initial   "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.Subdocument",
+        "replacements": []
+      },
+      "detectionPattern": "read <mongoose>.Schema.Types.Embedded"
+    },
+    "semanticPatchId": "1490",
+    "breakingChangeId": "347",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>.createConnection}"
+    },
+    "semanticPatchId": "1502",
+    "breakingChangeId": "361",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "context",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.{findOneAndUpdate,update} [3,99]"
+    },
+    "semanticPatchId": "1492",
+    "breakingChangeId": "349",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "w",
+            "oldPropName": "safe"
+          }
+        ]
+      },
+      "detectionPattern": "call <mongoose>.Schema [2, 2] 1:object 1.safe:boolean",
+      "suggestedFixDescription": "$callee($args)"
+    },
+    "semanticPatchId": "1494",
+    "breakingChangeId": "350",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1494",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-06T07:12:09.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "w",
+            "oldPropName": "safe"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema [2, 2] 1:object 1.safe:boolean"
+    },
+    "semanticPatchId": "1494",
+    "breakingChangeId": "350",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.{replaceOne,findByIdAndUpdate,findOneAndReplace,findOneAndUpdate,replaceOne,update,updateMany,updateOne}"
+    },
+    "semanticPatchId": "1497",
+    "breakingChangeId": "356",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.default = (_doc) => $value()",
+        "replacements": []
+      },
+      "detectionPattern": "write <object>.default"
+    },
+    "semanticPatchId": "1498",
+    "breakingChangeId": "357",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1498",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-06T20:08:29.000Z",
+      "extraQuestion": "Is this a write to default on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "$base.default = (_doc) => $value()",
+        "replacements": []
+      },
+      "detectionPattern": "write <object>.default"
+    },
+    "semanticPatchId": "1498",
+    "breakingChangeId": "357",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1498",
+      "comment": "Initial  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-06T20:09:39.000Z",
+      "extraQuestion": "Is this a write to default on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "$base.default = (_doc) => $value()",
+        "replacements": []
+      },
+      "detectionPattern": "write <object>?.default"
+    },
+    "semanticPatchId": "1498",
+    "breakingChangeId": "357",
+    "enabled": true,
+    "comment": "Initial  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1498",
+      "comment": "Initial   ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-06T20:12:18.000Z",
+      "extraQuestion": "Is this a write to default on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "$base.default = (_doc) => $value()",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>?.default"
+    },
+    "semanticPatchId": "1498",
+    "breakingChangeId": "357",
+    "enabled": true,
+    "comment": "Initial   "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1498",
+      "comment": "Initial    ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-06T20:16:47.000Z",
+      "extraQuestion": "Is this a write to default on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "$base.default = (_doc) => $value()",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.default"
+    },
+    "semanticPatchId": "1498",
+    "breakingChangeId": "357",
+    "enabled": true,
+    "comment": "Initial    "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1495",
+      "comment": "Fixed detection pattern for mongoose models",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-06T19:31:38.000Z",
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.exists"
+    },
+    "semanticPatchId": "1495",
+    "breakingChangeId": "352",
+    "enabled": true,
+    "comment": "Fixed detection pattern for mongoose models"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1498",
+      "comment": "Removed code template, since JSFIX did not handle it correctly at the moment.",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-06T20:19:21.000Z",
+      "extraQuestion": "Is this a write to default on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.default"
+    },
+    "semanticPatchId": "1498",
+    "breakingChangeId": "357",
+    "enabled": true,
+    "comment": "Removed code template, since JSFIX did not handle it correctly at the moment."
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1498",
+      "comment": "Removed code template, since JSFIX did not handle it correctly at the moment. ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-04-07T06:12:40.000Z",
+      "extraQuestion": "Is this a write to default on a mongoose schema property?",
+      "detectionPattern": "write <Object>.default"
+    },
+    "semanticPatchId": "1498",
+    "breakingChangeId": "357",
+    "enabled": true,
+    "comment": "Removed code template, since JSFIX did not handle it correctly at the moment. "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.set 0:\"typePojoToMixed\""
+    },
+    "semanticPatchId": "1499",
+    "breakingChangeId": "358",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "extraQuestion": "Is this a write to typePojoToMixed on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.typePojoToMixed"
+    },
+    "semanticPatchId": "1500",
+    "breakingChangeId": "358",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1500",
+      "comment": "Disable template, since JSFIX cannot handle write patterns with empty templates atm.",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T06:21:51.000Z",
+      "extraQuestion": "Is this a write to typePojoToMixed on a mongoose schema property?",
+      "detectionPattern": "write <Object>.typePojoToMixed"
+    },
+    "semanticPatchId": "1500",
+    "breakingChangeId": "358",
+    "enabled": true,
+    "comment": "Disable template, since JSFIX cannot handle write patterns with empty templates atm."
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.populate"
+    },
+    "semanticPatchId": "1501",
+    "breakingChangeId": "360",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.execPopulate [0,0]"
+    },
+    "semanticPatchId": "1503",
+    "breakingChangeId": "362",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.execPopulate [1,2]"
+    },
+    "semanticPatchId": "1504",
+    "breakingChangeId": "362",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.populate().populate"
+    },
+    "semanticPatchId": "1505",
+    "breakingChangeId": "362",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.set"
+    },
+    "semanticPatchId": "1506",
+    "breakingChangeId": "363",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "extraQuestion": "Is this a write to isAsync on a mongoose schema property?",
+      "detectionPattern": "write <Object>.isAsync"
+    },
+    "semanticPatchId": "1507",
+    "breakingChangeId": "364",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1498",
+      "comment": "Readded code template, since JSFIX should now handle it correctly. ",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-04-07T06:13:50.000Z",
+      "extraQuestion": "Is this a write to default on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "$base.$prop = (_doc) => $value()",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.default",
+      "unknownAccessPathQuestion": "Is this a write to default on a mongoose schema property?"
+    },
+    "semanticPatchId": "1498",
+    "breakingChangeId": "357",
+    "enabled": true,
+    "comment": "Readded code template, since JSFIX should now handle it correctly. "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1500",
+      "comment": "Readded template, since JSFIX now should handle empty patterns correctly.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-07T06:27:33.000Z",
+      "extraQuestion": "Is this a write to typePojoToMixed on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.typePojoToMixed",
+      "unknownAccessPathQuestion": "Is this a write to typePojoToMixed on a mongoose schema property?"
+    },
+    "semanticPatchId": "1500",
+    "breakingChangeId": "358",
+    "enabled": true,
+    "comment": "Readded template, since JSFIX now should handle empty patterns correctly."
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "extraQuestion": "Is this a write to ref or refPath on a mongoose schema property?",
+      "detectionPattern": "write <Object>.{ref,refPath} value:function1",
+      "unknownAccessPathQuestion": "Is this a write to ref or refPath on a mongoose schema property?"
+    },
+    "semanticPatchId": "1508",
+    "breakingChangeId": "367",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "callR {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.create 0:empty_array",
+      "unknownAccessPathQuestion": "Is the call to the create method of a mongoose Model?"
+    },
+    "semanticPatchId": "1509",
+    "breakingChangeId": "368",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "extraQuestion": "Is this a write to timestamps on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "$base.createdAt = { type: Date, immutable: false }",
+        "replacements": []
+      },
+      "detectionPattern": "write <object>.timestamps value:true",
+      "unknownAccessPathQuestion": "Is this a write to timestamps on a mongoose schema property?"
+    },
+    "semanticPatchId": "1510",
+    "breakingChangeId": "369",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1510",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T21:55:38.000Z",
+      "extraQuestion": "Is this a write to timestamps on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "$base.createdAt = { type: Date, immutable: false }",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.timestamps value:true",
+      "unknownAccessPathQuestion": "Is this a write to timestamps on a mongoose schema property?"
+    },
+    "semanticPatchId": "1510",
+    "breakingChangeId": "369",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "extraQuestion": "Is this a write to set on a mongoose schema property?",
+      "detectionPattern": "write <Object>.set value:function2",
+      "unknownAccessPathQuestion": "Is this a write to set on a mongoose schema property?"
+    },
+    "semanticPatchId": "1511",
+    "breakingChangeId": "370",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "extraQuestion": "Is this a write to minimize on a mongoose schema property?",
+      "detectionPattern": "write <Object>.minimize value:boolean",
+      "unknownAccessPathQuestion": "Is this a write to minimize on a mongoose schema property?"
+    },
+    "semanticPatchId": "1512",
+    "breakingChangeId": "371",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "new $callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "callNotNew <mongoose>.Types.ObjectId",
+      "unknownAccessPathQuestion": "Is the call to mongoose.Types.ObjectId?"
+    },
+    "semanticPatchId": "1513",
+    "breakingChangeId": "372",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "w",
+            "sourceAstReference": "$2.safe.w"
+          },
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "j",
+            "sourceAstReference": "$2.safe.j"
+          },
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "wtimeout",
+            "sourceAstReference": "$2.safe.wtimeout"
+          },
+          {
+            "propName": "safe",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema [2, 2] 1:object 1.safe:object",
+      "unknownAccessPathQuestion": "Is the call to the Schema function in mongoose?"
+    },
+    "semanticPatchId": "1514",
+    "breakingChangeId": "350",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "w",
+            "oldPropName": "safe"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.save 0:object 0.safe:boolean",
+      "unknownAccessPathQuestion": "Is the call to a save method in mongoose?"
+    },
+    "semanticPatchId": "1515",
+    "breakingChangeId": "350",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "w",
+            "sourceAstReference": "$1.safe.w"
+          },
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "j",
+            "sourceAstReference": "$1.safe.j"
+          },
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "wtimeout",
+            "sourceAstReference": "$1.safe.wtimeout"
+          },
+          {
+            "propName": "safe",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.save 0:object 0.safe:object",
+      "unknownAccessPathQuestion": "Is the call to a save method in mongoose?"
+    },
+    "semanticPatchId": "1516",
+    "breakingChangeId": "350",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1494",
+      "comment": "Disabled - See semantic patch using write pattern instead.",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-04-06T07:13:56.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "w",
+            "oldPropName": "safe"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema [2, 2] 1:object 1.safe:boolean",
+      "unknownAccessPathQuestion": "Is the write to the Schema function from mongoose?"
+    },
+    "semanticPatchId": "1494",
+    "breakingChangeId": "350",
+    "enabled": false,
+    "comment": "Disabled - See semantic patch using write pattern instead."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1514",
+      "comment": "Disabled - See semantic patch using write pattern instead.",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-04-08T08:08:32.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "w",
+            "sourceAstReference": "$2.safe.w"
+          },
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "j",
+            "sourceAstReference": "$2.safe.j"
+          },
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "wtimeout",
+            "sourceAstReference": "$2.safe.wtimeout"
+          },
+          {
+            "propName": "safe",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.Schema [2, 2] 1:object 1.safe:object",
+      "unknownAccessPathQuestion": "Is the call to the Schema function in mongoose?"
+    },
+    "semanticPatchId": "1514",
+    "breakingChangeId": "350",
+    "enabled": false,
+    "comment": "Disabled - See semantic patch using write pattern instead."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1515",
+      "comment": "Disabled - See semantic patch using write pattern instead.",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-04-08T08:17:41.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "w",
+            "oldPropName": "safe"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.save 0:object 0.safe:boolean",
+      "unknownAccessPathQuestion": "Is the call to a save method in mongoose?"
+    },
+    "semanticPatchId": "1515",
+    "breakingChangeId": "350",
+    "enabled": false,
+    "comment": "Disabled - See semantic patch using write pattern instead."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1516",
+      "comment": "Disabled - See semantic patch using write pattern instead.",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-04-08T08:20:31.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "w",
+            "sourceAstReference": "$1.safe.w"
+          },
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "j",
+            "sourceAstReference": "$1.safe.j"
+          },
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "wtimeout",
+            "sourceAstReference": "$1.safe.wtimeout"
+          },
+          {
+            "propName": "safe",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.save 0:object 0.safe:object",
+      "unknownAccessPathQuestion": "Is the call to a save method in mongoose?"
+    },
+    "semanticPatchId": "1516",
+    "breakingChangeId": "350",
+    "enabled": false,
+    "comment": "Disabled - See semantic patch using write pattern instead."
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "extraQuestion": "Is the safe property written to an object that is used as a mongoose options object?",
+      "primaryTemplate": {
+        "pattern": "$base.w = $value",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.safe value:boolean",
+      "unknownAccessPathQuestion": "Is the safe property written to an object that is used as a mongoose options object?"
+    },
+    "semanticPatchId": "1517",
+    "breakingChangeId": "350",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Init",
+      "enabled": true,
+      "extraQuestion": "Is the safe property written to an object that is used as a mongoose options object?",
+      "objectModifiers": {
+        "$base": [
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "w",
+            "sourceAstReference": "$value.w"
+          },
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "j",
+            "sourceAstReference": "$value.j"
+          },
+          {
+            "value": "true",
+            "operation": "COPY_PROP",
+            "destPropName": "wtimeout",
+            "sourceAstReference": "$value.wtimeout"
+          },
+          {
+            "propName": "safe",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$base.$prop = $value",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.safe value:object",
+      "unknownAccessPathQuestion": "Is the safe property written to an object that is used as a mongoose options object?"
+    },
+    "semanticPatchId": "1518",
+    "breakingChangeId": "350",
+    "enabled": true,
+    "comment": "Init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.{updateOne,updateMany} -1:function",
+      "unknownAccessPathQuestion": "Is the function being called updateOne or updateMany from mongoose?"
+    },
+    "semanticPatchId": "1519",
+    "breakingChangeId": "326",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <mongoose>?**.{deleteOne,deleteMany} -1:function",
+      "unknownAccessPathQuestion": "Is the function being called deleteOne or deleteMany from mongoose?"
+    },
+    "semanticPatchId": "1520",
+    "breakingChangeId": "327",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1498",
+      "comment": "Added value filter to improve precision",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-04-07T16:01:07.000Z",
+      "extraQuestion": "Is this a write to default on a mongoose schema property?",
+      "primaryTemplate": {
+        "pattern": "$base.$prop = (_doc) => $value()",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.default value:function",
+      "unknownAccessPathQuestion": "Is this a write to default on a mongoose schema property?"
+    },
+    "semanticPatchId": "1498",
+    "breakingChangeId": "357",
+    "enabled": true,
+    "comment": "Added value filter to improve precision"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1470",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-04T20:44:36.000Z",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.set 0:{\"useFindAndModify\",\"useNewUrlParser\",\"useUnifiedTopology\",\"useCreateIndex\"}",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.set?"
+    },
+    "semanticPatchId": "1470",
+    "breakingChangeId": "328",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1476",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T07:37:49.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "propName": "useFindAndModify",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useNewUrlParser",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useUnifiedTopology",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useCreateIndex",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.connect 1:object",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.connect?"
+    },
+    "semanticPatchId": "1476",
+    "breakingChangeId": "328",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1480",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T12:18:30.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "useFindAndModify",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useNewUrlParser",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useUnifiedTopology",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useCreateIndex",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.createConnection 0:object",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.createConnection?"
+    },
+    "semanticPatchId": "1480",
+    "breakingChangeId": "328",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1481",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T12:20:22.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "propName": "useFindAndModify",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useNewUrlParser",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useUnifiedTopology",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "propName": "useCreateIndex",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.createConnection 1:object",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.createConnection?"
+    },
+    "semanticPatchId": "1481",
+    "breakingChangeId": "328",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1466",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-04T19:43:50.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, { maxPoolSize: 5 })",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>?**.openUri} [1, 1]",
+      "unknownAccessPathQuestion": "Is this a call to connect or openUri from mongoose?"
+    },
+    "semanticPatchId": "1466",
+    "breakingChangeId": "325",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1482",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T12:25:24.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args).asPromise()",
+        "replacements": []
+      },
+      "detectionPattern": "callPromise <mongoose>.createConnection",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.createConnection?"
+    },
+    "semanticPatchId": "1482",
+    "breakingChangeId": "339",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1483",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T12:30:29.000Z",
+      "primaryTemplate": {
+        "pattern": "($callee($args), $base)",
+        "replacements": []
+      },
+      "detectionPattern": "callR <mongoose>.connect [3,3]",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.connect?"
+    },
+    "semanticPatchId": "1483",
+    "breakingChangeId": "341",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1485",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-05T14:22:50.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args).clone()",
+        "replacements": []
+      },
+      "detectionPattern": "callPromise <mongoose>?**.{replaceOne,count,countDocuments,createIndexes,deleteMany,deleteOne,distinct,estimatedDocumentCount,find,findById,findByIdAndDelete,findByIdAndRemove,findByIdAndUpdate,findOne,findOneAndDelete,findOneAndRemove,findOneAndReplace,findOneAndUpdate,remove,replaceOne,update,updateMany,updateOne} -1:function",
+      "unknownAccessPathQuestion": "Is this a call to a mongoose query function?"
+    },
+    "semanticPatchId": "1485",
+    "breakingChangeId": "343",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1486",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T16:48:03.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, { clone: false });",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.discriminator [2,2]",
+      "unknownAccessPathQuestion": "Is this a call to the discriminator method from mongoose?"
+    },
+    "semanticPatchId": "1486",
+    "breakingChangeId": "344",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1487",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T16:49:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, { value: $3, clone: false });",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.discriminator [3,3]",
+      "unknownAccessPathQuestion": "Is this a call to the discriminator method from mongoose?"
+    },
+    "semanticPatchId": "1487",
+    "breakingChangeId": "344",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1488",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T16:54:24.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.isObjectIdOrHexString($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.isValidObjectId",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.isValidObjectId?"
+    },
+    "semanticPatchId": "1488",
+    "breakingChangeId": "345",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1489",
+      "comment": "Updated detection pattern for excluding models, and added unknown access path question.",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-05T20:36:09.000Z",
+      "detectionPattern": "call (<mongoose>?**\\{<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}).populate",
+      "unknownAccessPathQuestion": "Is this a call to populate from mongoose and not a call to Model.populate() on a POJO?"
+    },
+    "semanticPatchId": "1489",
+    "breakingChangeId": "346",
+    "enabled": true,
+    "comment": "Updated detection pattern for excluding models, and added unknown access path question."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1490",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T20:39:52.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.Subdocument",
+        "replacements": []
+      },
+      "detectionPattern": "read <mongoose>.Schema.Types.Embedded",
+      "unknownAccessPathQuestion": "Is this a read of mongoose.Schema.Types.Embedded?"
+    },
+    "semanticPatchId": "1490",
+    "breakingChangeId": "347",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1491",
+      "comment": "Model.aggregate(pipeline).cursor().exec()",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T20:41:51.000Z",
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.model().aggregate().cursor().exec",
+      "unknownAccessPathQuestion": "Is this a call to Model.aggregate(...).cursor().exec from mongoose?"
+    },
+    "semanticPatchId": "1491",
+    "breakingChangeId": "348",
+    "enabled": true,
+    "comment": "Model.aggregate(pipeline).cursor().exec()"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1492",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-05T20:56:08.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "context",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.{findOneAndUpdate,update} [3,99]",
+      "unknownAccessPathQuestion": "Is this a call to findOneAndUpdate or update from mongoose?"
+    },
+    "semanticPatchId": "1492",
+    "breakingChangeId": "349",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1495",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-07T06:04:47.000Z",
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.exists",
+      "unknownAccessPathQuestion": "Is this a call to Model.exists from mongoose?"
+    },
+    "semanticPatchId": "1495",
+    "breakingChangeId": "352",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1496",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-06T19:45:27.000Z",
+      "detectionPattern": "call <mongoose>?**.{toObject,toJSON}",
+      "unknownAccessPathQuestion": "Is this a call to toObject or toJSON from mongoose?"
+    },
+    "semanticPatchId": "1496",
+    "breakingChangeId": "355",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1497",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-06T19:52:15.000Z",
+      "detectionPattern": "call <mongoose>?**.{replaceOne,findByIdAndUpdate,findOneAndReplace,findOneAndUpdate,replaceOne,update,updateMany,updateOne}",
+      "unknownAccessPathQuestion": "Is this a call to a mongoose update or replace function?"
+    },
+    "semanticPatchId": "1497",
+    "breakingChangeId": "356",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1499",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T06:17:40.000Z",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.set 0:\"typePojoToMixed\"",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.set?"
+    },
+    "semanticPatchId": "1499",
+    "breakingChangeId": "358",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1501",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T06:36:54.000Z",
+      "detectionPattern": "call <mongoose>?**.populate",
+      "unknownAccessPathQuestion": "Is this a call to populate from mongoose?"
+    },
+    "semanticPatchId": "1501",
+    "breakingChangeId": "360",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1502",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T06:40:12.000Z",
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>.createConnection}",
+      "unknownAccessPathQuestion": "Is this a call to connect or createConnection from mongoose?"
+    },
+    "semanticPatchId": "1502",
+    "breakingChangeId": "361",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1503",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T06:52:38.000Z",
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.execPopulate [0,0]",
+      "unknownAccessPathQuestion": "Is this a call to execPopulate from mongoose?"
+    },
+    "semanticPatchId": "1503",
+    "breakingChangeId": "362",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1504",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T06:54:06.000Z",
+      "detectionPattern": "call <mongoose>?**.execPopulate [1,2]",
+      "unknownAccessPathQuestion": "Is this a call to execPopulate from mongoose?"
+    },
+    "semanticPatchId": "1504",
+    "breakingChangeId": "362",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1505",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T06:55:26.000Z",
+      "detectionPattern": "call <mongoose>?**.populate().populate",
+      "unknownAccessPathQuestion": "Is this a chained call to populate (i.e., populate().populate()) from mongoose?"
+    },
+    "semanticPatchId": "1505",
+    "breakingChangeId": "362",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1506",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T07:30:10.000Z",
+      "detectionPattern": "call <mongoose>?**.set",
+      "unknownAccessPathQuestion": "Is this a call to 'set' on a mongoose document?"
+    },
+    "semanticPatchId": "1506",
+    "breakingChangeId": "363",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1507",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T07:34:50.000Z",
+      "extraQuestion": "Is this a write to isAsync on a mongoose schema property?",
+      "detectionPattern": "write <Object>.isAsync",
+      "unknownAccessPathQuestion": "Is this a write to isAsync on a mongoose schema property?"
+    },
+    "semanticPatchId": "1507",
+    "breakingChangeId": "364",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1492",
+      "comment": "Changed to a write pattern",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:34:42.000Z",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "write <Object>.context value:'query'",
+      "unknownAccessPathQuestion": "Is this write to a query options object for mongoose?"
+    },
+    "semanticPatchId": "1492",
+    "breakingChangeId": "349",
+    "enabled": true,
+    "comment": "Changed to a write pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1519",
+      "comment": "Updated type filter to match function2, since the result is the second argument to the callback.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T18:55:56.000Z",
+      "detectionPattern": "call <mongoose>?**.{updateOne,updateMany} -1:function2",
+      "unknownAccessPathQuestion": "Is the function being called updateOne or updateMany from mongoose?"
+    },
+    "semanticPatchId": "1519",
+    "breakingChangeId": "326",
+    "enabled": true,
+    "comment": "Updated type filter to match function2, since the result is the second argument to the callback."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1520",
+      "comment": "Updated type filter to match function2, since the result is the second argument to the callback.",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-08T22:09:58.000Z",
+      "detectionPattern": "call <mongoose>?**.{deleteOne,deleteMany} -1:function2",
+      "unknownAccessPathQuestion": "Is the function being called deleteOne or deleteMany from mongoose?"
+    },
+    "semanticPatchId": "1520",
+    "breakingChangeId": "327",
+    "enabled": true,
+    "comment": "Updated type filter to match function2, since the result is the second argument to the callback."
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1482",
+      "comment": "Added arg number filter to createConnection to avoid matches with 0 arguments.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:13:29.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args).asPromise()",
+        "replacements": []
+      },
+      "detectionPattern": "callPromise <mongoose>.createConnection [1, 3]",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.createConnection?"
+    },
+    "semanticPatchId": "1482",
+    "breakingChangeId": "339",
+    "enabled": true,
+    "comment": "Added arg number filter to createConnection to avoid matches with 0 arguments."
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1510",
+      "comment": "Disabled template since it was not correct, and added suggested fix instead.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-07T21:56:37.000Z",
+      "extraQuestion": "Is this a write to timestamps on a mongoose schema property?",
+      "detectionPattern": "write <Object>.timestamps value:true",
+      "suggestedFixDescription": "Insert createdAt: { type: Date, immutable: false } in the schema definition, and remove the timestamps property from schema options.",
+      "unknownAccessPathQuestion": "Is this a write to timestamps on a mongoose schema property?"
+    },
+    "semanticPatchId": "1510",
+    "breakingChangeId": "369",
+    "enabled": true,
+    "comment": "Disabled template since it was not correct, and added suggested fix instead."
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1485",
+      "comment": "Disabled code template and added suggested fix.",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-09T08:14:32.000Z",
+      "detectionPattern": "callPromise <mongoose>?**.{replaceOne,count,countDocuments,createIndexes,deleteMany,deleteOne,distinct,estimatedDocumentCount,find,findById,findByIdAndDelete,findByIdAndRemove,findByIdAndUpdate,findOne,findOneAndDelete,findOneAndRemove,findOneAndReplace,findOneAndUpdate,remove,replaceOne,update,updateMany,updateOne} -1:function",
+      "suggestedFixDescription": "Add .clone() after the call.",
+      "unknownAccessPathQuestion": "Is this a call to a mongoose query function?"
+    },
+    "semanticPatchId": "1485",
+    "breakingChangeId": "343",
+    "enabled": true,
+    "comment": "Disabled code template and added suggested fix."
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1466",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-09T08:11:38.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, { maxPoolSize: 5 })",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>?**.openUri} [1, 1] base:{Mongoose,Connection}",
+      "unknownAccessPathQuestion": "Is this a call to connect or openUri from mongoose?"
+    },
+    "semanticPatchId": "1466",
+    "breakingChangeId": "325",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1467",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-04T20:03:02.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": 5,
+            "operation": "RENAME_PROP",
+            "newPropName": "maxPoolSize",
+            "oldPropName": "poolSize"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>.createConnection,<mongoose>?**.openUri} [2,99] base:{Mongoose,Connection}",
+      "unknownAccessPathQuestion": "Is the call to either mongoose's connect, createConnection or openUri function?"
+    },
+    "semanticPatchId": "1467",
+    "breakingChangeId": "325",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1485",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-10T13:20:51.000Z",
+      "detectionPattern": "callPromise <mongoose>?**.{replaceOne,count,countDocuments,createIndexes,deleteMany,deleteOne,distinct,estimatedDocumentCount,find,findById,findByIdAndDelete,findByIdAndRemove,findByIdAndUpdate,findOne,findOneAndDelete,findOneAndRemove,findOneAndReplace,findOneAndUpdate,remove,replaceOne,update,updateMany,updateOne} -1:function base:{Query,Model,Document}",
+      "suggestedFixDescription": "Add .clone() after the call.",
+      "unknownAccessPathQuestion": "Is this a call to a mongoose query function?"
+    },
+    "semanticPatchId": "1485",
+    "breakingChangeId": "343",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1495",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-04-09T08:35:24.000Z",
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.exists base:Model",
+      "unknownAccessPathQuestion": "Is this a call to Model.exists from mongoose?"
+    },
+    "semanticPatchId": "1495",
+    "breakingChangeId": "352",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1486",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:15:28.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, { clone: false });",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.discriminator [2,2] base:{Model,DocumentArrayPath}",
+      "unknownAccessPathQuestion": "Is this a call to the discriminator method from mongoose?"
+    },
+    "semanticPatchId": "1486",
+    "breakingChangeId": "344",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1487",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:15:48.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, { value: $3, clone: false });",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.discriminator [3,3] base:{Model,DocumentArrayPath}",
+      "unknownAccessPathQuestion": "Is this a call to the discriminator method from mongoose?"
+    },
+    "semanticPatchId": "1487",
+    "breakingChangeId": "344",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1496",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:35:58.000Z",
+      "detectionPattern": "call <mongoose>?**.{toObject,toJSON} base:Document",
+      "unknownAccessPathQuestion": "Is this a call to toObject or toJSON from mongoose?"
+    },
+    "semanticPatchId": "1496",
+    "breakingChangeId": "355",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1497",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:37:05.000Z",
+      "detectionPattern": "call <mongoose>?**.{replaceOne,findByIdAndUpdate,findOneAndReplace,findOneAndUpdate,replaceOne,update,updateMany,updateOne} base:{Model,Query}",
+      "unknownAccessPathQuestion": "Is this a call to a mongoose update or replace function?"
+    },
+    "semanticPatchId": "1497",
+    "breakingChangeId": "356",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1489",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-04-09T08:24:07.000Z",
+      "detectionPattern": "call (<mongoose>?**\\{<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}).populate base:Query",
+      "unknownAccessPathQuestion": "Is this a call to populate from mongoose and not a call to Model.populate() on a POJO?"
+    },
+    "semanticPatchId": "1489",
+    "breakingChangeId": "346",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1491",
+      "comment": "Fix detection pattern for Model to include all ways a model can be created.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:33:55.000Z",
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.aggregate().cursor().exec",
+      "unknownAccessPathQuestion": "Is this a call to Model.aggregate(...).cursor().exec from mongoose?"
+    },
+    "semanticPatchId": "1491",
+    "breakingChangeId": "348",
+    "enabled": true,
+    "comment": "Fix detection pattern for Model to include all ways a model can be created."
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1501",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:38:46.000Z",
+      "detectionPattern": "call <mongoose>?**.populate base:{Model,Query}",
+      "unknownAccessPathQuestion": "Is this a call to populate from mongoose?"
+    },
+    "semanticPatchId": "1501",
+    "breakingChangeId": "360",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1509",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-04-07T21:39:37.000Z",
+      "detectionPattern": "callR {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.create 0:empty_array base:Model",
+      "unknownAccessPathQuestion": "Is the call to the create method of a mongoose Model?"
+    },
+    "semanticPatchId": "1509",
+    "breakingChangeId": "368",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1506",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:42:01.000Z",
+      "detectionPattern": "call <mongoose>?**.set base:Document",
+      "unknownAccessPathQuestion": "Is this a call to 'set' on a mongoose document?"
+    },
+    "semanticPatchId": "1506",
+    "breakingChangeId": "363",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1488",
+      "comment": "Changed $base to <mongoose> such that the patch also works when $base is not available",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:16:18.000Z",
+      "primaryTemplate": {
+        "pattern": "<mongoose>.isObjectIdOrHexString($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>.isValidObjectId",
+      "unknownAccessPathQuestion": "Is this a call to mongoose.isValidObjectId?"
+    },
+    "semanticPatchId": "1488",
+    "breakingChangeId": "345",
+    "enabled": true,
+    "comment": "Changed $base to <mongoose> such that the patch also works when $base is not available"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1467",
+      "comment": "Updated object modifier to use string representation of the value",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-05-08T07:04:02.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "5",
+            "operation": "RENAME_PROP",
+            "newPropName": "maxPoolSize",
+            "oldPropName": "poolSize"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.connect,<mongoose>.createConnection,<mongoose>?**.openUri} [2,99] base:{Mongoose,Connection}",
+      "unknownAccessPathQuestion": "Is the call to either mongoose's connect, createConnection or openUri function?"
+    },
+    "semanticPatchId": "1467",
+    "breakingChangeId": "325",
+    "enabled": true,
+    "comment": "Updated object modifier to use string representation of the value"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1519",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-12T07:22:20.000Z",
+      "detectionPattern": "call <mongoose>?**.{updateOne,updateMany} -1:function2 base:{Model,Document,Query}",
+      "unknownAccessPathQuestion": "Is the function being called updateOne or updateMany from mongoose?"
+    },
+    "semanticPatchId": "1519",
+    "breakingChangeId": "326",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1520",
+      "comment": "Updated type filter to match function2, since the result is the second argument to the callback. Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T18:56:38.000Z",
+      "detectionPattern": "call <mongoose>?**.{deleteOne,deleteMany} -1:function2 base:{Query,Model}",
+      "unknownAccessPathQuestion": "Is the function being called deleteOne or deleteMany from mongoose?"
+    },
+    "semanticPatchId": "1520",
+    "breakingChangeId": "327",
+    "enabled": true,
+    "comment": "Updated type filter to match function2, since the result is the second argument to the callback. Added base filter"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1491",
+      "comment": "Fix detection pattern for Model to include all ways a model can be created. Added base filter for: https://mongoosejs.com/docs/api.html#aggregationcursor_AggregationCursor",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-09T13:22:18.000Z",
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "call {<mongoose>.Model(),<mongoose>?**.model(),<mongoose>?**.model}.aggregate().cursor().exec base:AggregationCursor",
+      "unknownAccessPathQuestion": "Is this a call to Model.aggregate(...).cursor().exec from mongoose?"
+    },
+    "semanticPatchId": "1491",
+    "breakingChangeId": "348",
+    "enabled": true,
+    "comment": "Fix detection pattern for Model to include all ways a model can be created. Added base filter for: https://mongoosejs.com/docs/api.html#aggregationcursor_AggregationCursor"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1503",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:39:46.000Z",
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "call <mongoose>?**.execPopulate [0,0] base:Document",
+      "unknownAccessPathQuestion": "Is this a call to execPopulate from mongoose?"
+    },
+    "semanticPatchId": "1503",
+    "breakingChangeId": "362",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1504",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-09T08:40:07.000Z",
+      "detectionPattern": "call <mongoose>?**.execPopulate [1,2] base:Document",
+      "unknownAccessPathQuestion": "Is this a call to execPopulate from mongoose?"
+    },
+    "semanticPatchId": "1504",
+    "breakingChangeId": "362",
+    "enabled": true,
+    "comment": "Added base filter"
+  }
+]

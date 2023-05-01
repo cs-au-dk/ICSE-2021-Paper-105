@@ -1,0 +1,35 @@
+[
+  {
+    "id": "742",
+    "packageVersion": "5.0.0",
+    "packageName": "d3",
+    "description": "D3 now uses Promises instead of asynchronous callbacks to load data",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "743",
+    "packageVersion": "5.0.0",
+    "packageName": "d3",
+    "description": "D3 5.0 deprecates and removes the d3-queue module",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "744",
+    "packageVersion": "5.0.0",
+    "packageName": "d3",
+    "description": "D3 no longer provides the d3.schemeCategory20* categorical color schemes",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,743 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <commander>",
+      "unknownAccessPathQuestion": "Is this a constructor call to commander?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "import <commander>.program",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Disabled. I made the other patch after, and i think it works better",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-06-15T17:09:59.000Z",
+      "detectionPattern": "call <commander>.Command",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a constructor call to commander?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled. I made the other patch after, and i think it works better"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-06-15T17:12:10.000Z",
+      "detectionPattern": "import commander",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Initial  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-15T17:16:41.000Z",
+      "detectionPattern": "import commander",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Initial  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Disabled",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-06-15T17:17:26.000Z",
+      "detectionPattern": "call <Command>.option",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Disabled ",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-06-15T17:59:19.000Z",
+      "detectionPattern": "import commander",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Disabled",
+      "enabled": false,
+      "version": 4,
+      "creationDate": "2022-06-15T18:01:27.000Z",
+      "detectionPattern": "read <commander>.program.option",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Disabled, does not work as intended",
+      "enabled": false,
+      "version": 5,
+      "creationDate": "2022-06-15T18:58:00.000Z",
+      "detectionPattern": "read <commander>**.program.option",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled, does not work as intended"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Disabled, does not work as intended yet",
+      "enabled": false,
+      "version": 6,
+      "creationDate": "2022-06-15T19:00:27.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program.{option}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled, does not work as intended yet"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Disabled, does not work as intended yet ",
+      "enabled": false,
+      "version": 7,
+      "creationDate": "2022-06-15T19:10:35.000Z",
+      "extraQuestion": "Is it correct that $base does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program.{option}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled, does not work as intended yet "
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Disabled, does not work as intended yet",
+      "enabled": false,
+      "version": 8,
+      "creationDate": "2022-06-15T19:15:58.000Z",
+      "extraQuestion": "Is it correct that $base does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program.{command,option,action,description,version}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled, does not work as intended yet"
+  },
+  {
+    "version": 10,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Disabled, does not work as intended yet ",
+      "enabled": false,
+      "version": 9,
+      "creationDate": "2022-06-15T19:17:36.000Z",
+      "extraQuestion": "Is it correct that $base does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program.{command,option,requiredOption,action,description,version}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled, does not work as intended yet "
+  },
+  {
+    "version": 11,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\")",
+      "enabled": true,
+      "version": 11,
+      "creationDate": "2022-06-15T19:21:43.000Z",
+      "extraQuestion": "Is it correct that $base does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program.{command,addCommand,arguments,option,requiredOption,addOption,action,description,version}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\")"
+  },
+  {
+    "version": 12,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "This is not perfect. Would like to only match once per call \"chain\"",
+      "enabled": true,
+      "version": 11,
+      "creationDate": "2022-06-15T19:21:43.000Z",
+      "extraQuestion": "Is it correct that $base does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program**.{option,helpOption,requiredOption}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "This is not perfect. Would like to only match once per call \"chain\""
+  },
+  {
+    "version": 13,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "This is not perfect. Would like to only match once per call \"chain\" ",
+      "enabled": true,
+      "version": 12,
+      "creationDate": "2022-06-16T13:03:38.000Z",
+      "extraQuestion": "Is it correct that this program does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program**.{option,helpOption,requiredOption}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this an import of commander.program?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "This is not perfect. Would like to only match once per call \"chain\" "
+  },
+  {
+    "version": 14,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\") ",
+      "enabled": true,
+      "version": 11,
+      "creationDate": "2022-06-15T19:21:43.000Z",
+      "extraQuestion": "Is it correct that $base does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program.{command,addCommand,arguments,option,requiredOption,addOption,action,description,version}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.option?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\") "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Init",
+      "detectionPattern": "call <commander>.program.action",
+      "suggestedFixDescription": "If you access any \"option\" properties through a \"command\" argument, you would need to seperate these into two seperate arguments, i.e. \".action((filename, cmd)...\" would be \".action((filename, options, cmd)...\"",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.action?"
+    },
+    "semanticPatchId": "1582",
+    "breakingChangeId": "438",
+    "enabled": true,
+    "comment": "Init"
+  },
+  {
+    "version": 15,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\")  ",
+      "enabled": true,
+      "version": 14,
+      "creationDate": "2022-06-16T16:20:26.000Z",
+      "extraQuestion": "Is it correct that $base does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program**.{option,requiredOption,addOption}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.option?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\")  "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1582",
+      "comment": "Init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-16T16:20:47.000Z",
+      "detectionPattern": "call <commander>.program**.action",
+      "suggestedFixDescription": "If you access any \"option\" properties through a \"command\" argument, you would need to seperate these into two seperate arguments, i.e. \".action((filename, cmd)...\" would be \".action((filename, options, cmd)...\"",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.action?"
+    },
+    "semanticPatchId": "1582",
+    "breakingChangeId": "438",
+    "enabled": true,
+    "comment": "Init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <commander>.program**.passCommandToAction",
+      "suggestedFixDescription": "passCommandToAction() is no longer needed since both options and command will be passed to action as default. To migrate: Include the command argument in the action handler.",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.passCommandToAction?"
+    },
+    "semanticPatchId": "1583",
+    "breakingChangeId": "440",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial ",
+      "detectionPattern": "call <commander>.program**.action",
+      "suggestedFixDescription": "There is now an error if there are too many command-arguments on the command line. If your program expects extra arguments you can declare these with .arguments() or you can allow excess arguments with .allowExcessArguments()",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.action?"
+    },
+    "semanticPatchId": "1584",
+    "breakingChangeId": "441",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1584",
+      "comment": "Initial",
+      "version": 0,
+      "creationDate": "2022-06-16T17:39:44.000Z",
+      "detectionPattern": "call <commander>.program**.action",
+      "suggestedFixDescription": "If your program expects extra arguments you can declare these with .arguments() or you can allow excess arguments with .allowExcessArguments()",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.action?"
+    },
+    "semanticPatchId": "1584",
+    "breakingChangeId": "441",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 16,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\")",
+      "enabled": true,
+      "version": 15,
+      "creationDate": "2022-06-16T16:25:13.000Z",
+      "extraQuestion": "Is it correct that program does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>.program**.{option,requiredOption,addOption}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.option?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\")"
+  },
+  {
+    "version": 17,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\") ",
+      "enabled": true,
+      "version": 16,
+      "creationDate": "2022-06-16T17:52:15.000Z",
+      "extraQuestion": "Is it correct that program does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($1)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.{option,requiredOption,addOption}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.option?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\") "
+  },
+  {
+    "version": 18,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\")",
+      "enabled": true,
+      "version": 17,
+      "creationDate": "2022-06-17T05:12:26.000Z",
+      "extraQuestion": "Is it correct that program does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$callee($args)\n  .storeOptionsAsProperties(true)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.{option,requiredOption,addOption}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.option?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "Is not perfect. would like to only match when the option/requiredOption/addOption was in the chain of calls, and still only match once per program (or like now, once per call \"chain\")"
+  },
+  {
+    "version": 19,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "Disabled. An 'affects all clients' breaking change was used instead",
+      "enabled": false,
+      "version": 19,
+      "creationDate": "2022-06-19T15:01:02.000Z",
+      "extraQuestion": "Is it correct that program does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$base\n  .storeOptionsAsProperties(true)\n  .$prop($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.{option,requiredOption,addOption}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.option?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Disabled. An 'affects all clients' breaking change was used instead"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1584",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-16T17:41:24.000Z",
+      "detectionPattern": "call <commander>.program**.action",
+      "suggestedFixDescription": "If your program expects extra arguments you can declare these with .arguments() or you can revert this change by allowing excess arguments with .allowExcessArguments()",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.action?"
+    },
+    "semanticPatchId": "1584",
+    "breakingChangeId": "441",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial ",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-06-27T10:12:40.000Z",
+      "detectionPattern": "read <commander>**.**",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a constructor call to commander?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial "
+  },
+  {
+    "version": 20,
+    "semanticPatch": {
+      "id": "1581",
+      "comment": "usage added",
+      "enabled": true,
+      "version": 19,
+      "creationDate": "2022-06-19T15:01:02.000Z",
+      "extraQuestion": "Is it correct that program does NOT call the storeOptionsAsProperties(false) method? (Don't say yes more than once per program)",
+      "primaryTemplate": {
+        "pattern": "$base\n  .storeOptionsAsProperties(true)\n  .$prop($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.{option,requiredOption,addOption,usage}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a call to commander.program.option?"
+    },
+    "semanticPatchId": "1581",
+    "breakingChangeId": "437",
+    "enabled": true,
+    "comment": "usage added"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-06-15T17:09:59.000Z",
+      "detectionPattern": "read <commander>**.*",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a constructor call to commander?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-06-27T10:13:09.000Z",
+      "detectionPattern": "read <commander>.**\\<commander>*.{CommanderError,Option}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a constructor call to commander?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial ",
+      "enabled": false,
+      "version": 4,
+      "creationDate": "2022-06-27T10:17:38.000Z",
+      "detectionPattern": "read <commander>.**\\ <commander>*.{CommanderError,Option,ParseOptions,Command,args,commands,version,command,createCommand,addCommand,arguments,addHelpCommand,exitOverride,action,option,requiredOption,storeOptionsAsProperties,passCommandToAction,combineFlagAndOptionalValue,allowUnknownOption,parse,parseAsync,parseOptions,opts,description,alias,aliases,usage,name,outputHelp,helpOption,on,CommandOptions,ExecutableCommandOptions,CommanderStatic,ParseOptionsResult}",
+      "suggestedFixDescription": "Either use the \"program.storeOptionsAsProperties();\" to revert this behaviour, or use the \"program.opts();\" when accessing the option properties.",
+      "unknownAccessPathQuestion": "Is this a constructor call to commander?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial",
+      "enabled": false,
+      "version": 5,
+      "creationDate": "2022-06-27T10:18:46.000Z",
+      "detectionPattern": "read <commander>.**\\ <commander>*.{CommanderError,Option,ParseOptions,Command,args,commands,version,command,createCommand,addCommand,arguments,addHelpCommand,exitOverride,action,option,requiredOption,storeOptionsAsProperties,passCommandToAction,combineFlagAndOptionalValue,allowUnknownOption,parse,parseAsync,parseOptions,opts,description,alias,aliases,usage,name,outputHelp,helpOption,on,CommandOptions,ExecutableCommandOptions,CommanderStatic,ParseOptionsResult}",
+      "unknownAccessPathQuestion": "Is $prop an option property on a commander program?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial ",
+      "enabled": false,
+      "version": 6,
+      "creationDate": "2022-06-27T10:20:10.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.opts().$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <commander>.**\\ <commander>*.{CommanderError,Option,ParseOptions,Command,args,commands,version,command,createCommand,addCommand,arguments,addHelpCommand,exitOverride,action,option,requiredOption,storeOptionsAsProperties,passCommandToAction,combineFlagAndOptionalValue,allowUnknownOption,parse,parseAsync,parseOptions,opts,description,alias,aliases,usage,name,outputHelp,helpOption,on,CommandOptions,ExecutableCommandOptions,CommanderStatic,ParseOptionsResult}",
+      "unknownAccessPathQuestion": "Is $prop an option property on a commander program?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial "
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial",
+      "enabled": false,
+      "version": 7,
+      "creationDate": "2022-06-27T10:21:10.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.opts().$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <commander>**.*\\ <commander>*.{CommanderError,Option,ParseOptions,Command,args,commands,version,command,createCommand,addCommand,arguments,addHelpCommand,exitOverride,action,option,requiredOption,storeOptionsAsProperties,passCommandToAction,combineFlagAndOptionalValue,allowUnknownOption,parse,parseAsync,parseOptions,opts,description,alias,aliases,usage,name,outputHelp,helpOption,on,CommandOptions,ExecutableCommandOptions,CommanderStatic,ParseOptionsResult}",
+      "unknownAccessPathQuestion": "Is $prop an option property on a commander program?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial"
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial",
+      "enabled": false,
+      "version": 9,
+      "creationDate": "2022-06-27T10:40:41.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.opts().$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <commander>**.*\\ <commander>**.{CommanderError,Option,ParseOptions,Command,args,commands,version,command,createCommand,addCommand,arguments,addHelpCommand,exitOverride,action,option,requiredOption,storeOptionsAsProperties,passCommandToAction,combineFlagAndOptionalValue,allowUnknownOption,parse,parseAsync,parseOptions,opts,description,alias,aliases,usage,name,outputHelp,helpOption,on,CommandOptions,ExecutableCommandOptions,CommanderStatic,ParseOptionsResult}",
+      "unknownAccessPathQuestion": "Is $prop an option property on a commander program?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial"
+  },
+  {
+    "version": 10,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial ",
+      "enabled": false,
+      "version": 9,
+      "creationDate": "2022-06-27T10:40:41.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.opts().$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <commander>**.{event,payloadPath} \\ <commander>**.{CommanderError,Option,ParseOptions,Command,args,commands,version,command,createCommand,addCommand,arguments,addHelpCommand,exitOverride,action,option,requiredOption,storeOptionsAsProperties,passCommandToAction,combineFlagAndOptionalValue,allowUnknownOption,parse,parseAsync,parseOptions,opts,description,alias,aliases,usage,name,outputHelp,helpOption,on,CommandOptions,ExecutableCommandOptions,CommanderStatic,ParseOptionsResult}",
+      "unknownAccessPathQuestion": "Is $prop an option property on a commander program?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial "
+  },
+  {
+    "version": 11,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Initial",
+      "enabled": false,
+      "version": 10,
+      "creationDate": "2022-06-27T10:45:44.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.opts().$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <commander>**.*\\ <commander>**.{CommanderError,Option,ParseOptions,Command,args,commands,version,command,createCommand,addCommand,arguments,addHelpCommand,exitOverride,action,option,requiredOption,storeOptionsAsProperties,passCommandToAction,combineFlagAndOptionalValue,allowUnknownOption,parse,parseAsync,parseOptions,opts,description,alias,aliases,usage,name,outputHelp,helpOption,on,CommandOptions,ExecutableCommandOptions,CommanderStatic,ParseOptionsResult}",
+      "unknownAccessPathQuestion": "Is $prop an option property on a commander program?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Initial"
+  },
+  {
+    "version": 12,
+    "semanticPatch": {
+      "id": "1580",
+      "comment": "Not done, instead of {event,payloadPath} we should use *, since this is currently useless. \n\nnew pattern:read (<commander>** \\ <commander>*.{CommanderError,Option,…,_knownProps}*)\n\nold pattern for reference: read (<commander>**\\<commander>**.{usage,option}).{event,payloadPath}",
+      "enabled": false,
+      "version": 12,
+      "creationDate": "2022-07-14T08:06:34.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.opts().$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read (<commander>**\\<commander>**.{usage,option}).{event,payloadPath}",
+      "unknownAccessPathQuestion": "Is $prop an option property on a commander program?"
+    },
+    "semanticPatchId": "1580",
+    "breakingChangeId": "437",
+    "enabled": false,
+    "comment": "Not done, instead of {event,payloadPath} we should use *, since this is currently useless. \n\nnew pattern:read (<commander>** \\ <commander>*.{CommanderError,Option,…,_knownProps}*)\n\nold pattern for reference: read (<commander>**\\<commander>**.{usage,option}).{event,payloadPath}"
+  }
+]

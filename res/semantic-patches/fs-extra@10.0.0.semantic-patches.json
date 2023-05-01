@@ -1,0 +1,366 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "extraQuestion": "Are you copying a symlink here?",
+      "detectionPattern": "call <fs-extra>.{copy,copySync}",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1548",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-05-18T15:28:28.000Z",
+      "extraQuestion": "Are you copying a symlink here?",
+      "detectionPattern": "call <fs-extra>.{copy,copySync}",
+      "suggestedFixDescription": "If the intended link path is known, the fs-extra function pathExists() can be used to check the validity.",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1548",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-05-18T15:44:29.000Z",
+      "extraQuestion": "Are you copying a symlink here?",
+      "detectionPattern": "call <fs-extra>.{copy,copySync}",
+      "suggestedFixDescription": "If the intended link path is known, the fs-extra function 'pathExists()' can be used to check the validity.",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1548",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-18T15:44:57.000Z",
+      "extraQuestion": "Are you copying a symlink here, and depending on it not being broken?",
+      "detectionPattern": "call <fs-extra>.{copy,copySync}",
+      "suggestedFixDescription": "If the intended link path is known, the fs-extra function 'pathExists()' can be used to check the validity.",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1548",
+      "comment": "Initial  ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-05-20T15:14:57.000Z",
+      "extraQuestion": "Are you copying a symlink here, and depending on it not being broken?",
+      "detectionPattern": "call <fs-extra>.{copy,copySync}",
+      "suggestedFixDescription": "If the intended link path is known, the fs-extra function 'ensureSymlink()' can be used to check the validity.",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Initial  "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1548",
+      "comment": "Initial",
+      "enabled": false,
+      "version": 5,
+      "creationDate": "2022-05-20T15:47:31.000Z",
+      "extraQuestion": "Are you copying a symlink here, and depending on it not being broken?",
+      "primaryTemplate": {
+        "pattern": "$callee($base.ensureSymlink($1,$2), $-1)",
+        "replacements": []
+      },
+      "detectionPattern": "call <fs-extra>.copy",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": false,
+    "comment": "Initial"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1548",
+      "comment": "Initial ",
+      "enabled": false,
+      "version": 5,
+      "creationDate": "2022-05-20T15:47:31.000Z",
+      "extraQuestion": "Are you copying a symlink here, and depending on it not being broken?",
+      "primaryTemplate": {
+        "pattern": "$callee($base.ensureSymlink($1,$2), $args[1, -1])",
+        "replacements": []
+      },
+      "detectionPattern": "call <fs-extra>.copy",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": false,
+    "comment": "Initial "
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1548",
+      "comment": "Added code template",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-05-20T15:50:32.000Z",
+      "extraQuestion": "Are you copying a symlink here, and depending on it not being broken?",
+      "primaryTemplate": {
+        "pattern": "$callee($base.ensureSymlink($1,$2), $args[1])",
+        "replacements": []
+      },
+      "detectionPattern": "call <fs-extra>.copy",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Added code template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "extraQuestion": "Are you copying a symlink here, and depending on it not being broken?",
+      "primaryTemplate": {
+        "pattern": "$callee($base.ensureLinkSync($1,$2), $args[1])",
+        "replacements": []
+      },
+      "detectionPattern": "call <fs-extra>.copySync",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1552",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1552",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-20T15:54:58.000Z",
+      "extraQuestion": "Are you copying a symlink here, and depending on it not being broken?",
+      "primaryTemplate": {
+        "pattern": "$callee($base.ensureSymlinkSync($1,$2), $args[1])",
+        "replacements": []
+      },
+      "detectionPattern": "call <fs-extra>.copySync",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1552",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1552",
+      "comment": "copySync patch was merged with copy patch",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-05-20T15:58:37.000Z",
+      "extraQuestion": "Are you copying a symlink here, and depending on it not being broken?",
+      "detectionPattern": "call <fs-extra>.copySync",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1552",
+    "breakingChangeId": "402",
+    "enabled": false,
+    "comment": "copySync patch was merged with copy patch"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1548",
+      "comment": "Added suggested fix",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-05-20T15:52:02.000Z",
+      "extraQuestion": "Are you copying a symlink here, and depending on it not being broken?",
+      "detectionPattern": "call <fs-extra>.{copy,copySync}",
+      "suggestedFixDescription": "If the link destination is known, the fs-extra function 'ensureSymlink()' can be used to check the link.",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Added suggested fix"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <fs-extra>.{ensureLink,ensureSymlink,ensureLinkSync,ensureSymlinkSync}",
+      "suggestedFixDescription": "This is technically breaking if ensureLink / ensureSymlink is used on a link between two files of two different types",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1553",
+    "breakingChangeId": "403",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1553",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-21T06:29:44.000Z",
+      "detectionPattern": "call <fs-extra>.{ensureLink,ensureSymlink,ensureLinkSync,ensureSymlinkSync}",
+      "suggestedFixDescription": "This is technically breaking if ensureLink / ensureSymlink is used on a link between two files of two different types",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1553",
+    "breakingChangeId": "403",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <fs-extra>.{copy,copySync}",
+      "suggestedFixDescription": "Although technically a bug fix, this change can be breaking if you are not expecting an error when copying an unknown file type.",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1554",
+    "breakingChangeId": "404",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <fs-extra>.remove[2,3] 1:object",
+      "suggestedFixDescription": "fs-extra.remove() no longer supports an 'option' argument. As default both the options 'recursive' and 'force' is set to true",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1555",
+    "breakingChangeId": "405",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1555",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-21T08:17:44.000Z",
+      "detectionPattern": "call <fs-extra>.remove [2,3] 1:object",
+      "suggestedFixDescription": "fs-extra.remove() no longer supports an 'option' argument. As default both the options 'recursive' and 'force' is set to true",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1555",
+    "breakingChangeId": "405",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1548",
+      "comment": "Change suggested fix",
+      "enabled": true,
+      "version": 8,
+      "creationDate": "2022-05-21T06:24:40.000Z",
+      "extraQuestion": "Will this copy call sometimes copy symlinks?",
+      "detectionPattern": "call <fs-extra>.{copy,copySync}",
+      "suggestedFixDescription": "You can use the exists and existsSync functions https://nodejs.org/api/fs.html#fsexistspath-callback from the fs module to check if a symlink is broken.",
+      "unknownAccessPathQuestion": "Is this call to copy or copySync from the fs-extra package?"
+    },
+    "semanticPatchId": "1548",
+    "breakingChangeId": "402",
+    "enabled": true,
+    "comment": "Change suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1553",
+      "comment": "Improve suggested fix ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-21T06:31:50.000Z",
+      "detectionPattern": "call <fs-extra>.{ensureLink,ensureSymlink,ensureLinkSync,ensureSymlinkSync}",
+      "suggestedFixDescription": "The function will throw if $1 and $2 are of different types. For example if $1 is a directory and $2 is a file. You may use fs.stats/fs.statsSync to get a stats object and call, e.g., .isDirectory() on the stats object to get the file type.",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1553",
+    "breakingChangeId": "403",
+    "enabled": true,
+    "comment": "Improve suggested fix "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1554",
+      "comment": "Update suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-21T06:49:12.000Z",
+      "detectionPattern": "call <fs-extra>.{copy,copySync}",
+      "suggestedFixDescription": "This is only relevant if $1 may refer to a socket, a FIFO pipe or some other file type not recognized by the fs module.",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1554",
+    "breakingChangeId": "404",
+    "enabled": true,
+    "comment": "Update suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1555",
+      "comment": "Minor in suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-21T08:22:22.000Z",
+      "detectionPattern": "call <fs-extra>.remove [2,3] 1:object",
+      "suggestedFixDescription": "fs-extra.remove() no longer supports an 'option' argument. As default both the options 'recursive' and 'force' are set to true",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1555",
+    "breakingChangeId": "405",
+    "enabled": true,
+    "comment": "Minor in suggested fix"
+  }
+]

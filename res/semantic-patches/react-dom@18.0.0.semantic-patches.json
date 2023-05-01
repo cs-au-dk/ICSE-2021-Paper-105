@@ -1,0 +1,104 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <react-dom>.hydrate",
+      "suggestedFixDescription": "hydrate has been replaced with hydrateRoot in React 18 (https://reactjs.org/docs/react-dom-client.html#hydrateroot)",
+      "unknownAccessPathQuestion": "Is this a call to react-dom.hydrate?"
+    },
+    "semanticPatchId": "1540",
+    "breakingChangeId": "385",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <react-dom>.render",
+      "suggestedFixDescription": "render has been replaced with createRoot in React 18 and is now deprecated",
+      "unknownAccessPathQuestion": "Is this a call to react-dom/render?"
+    },
+    "semanticPatchId": "1539",
+    "breakingChangeId": "384",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1539",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-14T09:45:10.000Z",
+      "detectionPattern": "call <react-dom>.render",
+      "suggestedFixDescription": "render has been replaced with createRoot in React 18",
+      "unknownAccessPathQuestion": "Is this a call to react-dom/render?"
+    },
+    "semanticPatchId": "1539",
+    "breakingChangeId": "384",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1539",
+      "comment": "Add link to suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-14T09:46:04.000Z",
+      "detectionPattern": "call <react-dom>.render",
+      "suggestedFixDescription": "render has been replaced with createRoot in React 18 (https://reactjs.org/docs/react-dom-client.html#createroot)",
+      "unknownAccessPathQuestion": "Is this a call to react-dom/render?"
+    },
+    "semanticPatchId": "1539",
+    "breakingChangeId": "384",
+    "enabled": true,
+    "comment": "Add link to suggested fix"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <react-dom>.unmountComponentAtNode",
+      "suggestedFixDescription": "unmountComponentAtNode has been replaced with root.unmount() in React 18 (https://reactjs.org/docs/react-dom-client.html#createroot)",
+      "unknownAccessPathQuestion": "Is this a call to react-dom.unmountComponentAtNode?"
+    },
+    "semanticPatchId": "1541",
+    "breakingChangeId": "386",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <react-dom>.renderSubtreeIntoContainer",
+      "unknownAccessPathQuestion": "Is this a call to react-dom.renderSubtreeIntoContainer?"
+    },
+    "semanticPatchId": "1542",
+    "breakingChangeId": "387",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <react-dom/server>.renderToNodeStream",
+      "unknownAccessPathQuestion": "Is this a call to react-dom/server.renderToNodeStream?"
+    },
+    "semanticPatchId": "1543",
+    "breakingChangeId": "388",
+    "enabled": true,
+    "comment": "init"
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "498",
+    "packageVersion": "2.0.0",
+    "packageName": "uuid",
+    "description": "Removed uuid.BufferClass",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

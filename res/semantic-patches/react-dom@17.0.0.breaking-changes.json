@@ -1,0 +1,13 @@
+[
+  {
+    "id": "406",
+    "packageVersion": "17.0.0",
+    "packageName": "react-dom",
+    "description": "Deprecate the undocumented and misleading ReactTestUtils.SimulateNative API",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

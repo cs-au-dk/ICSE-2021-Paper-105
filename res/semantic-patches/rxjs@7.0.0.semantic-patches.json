@@ -1,0 +1,830 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <rxjs>?**.next [0,0]",
+      "suggestedFixDescription": "Pass undefined to preserve old behavior.",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1380",
+    "breakingChangeId": "245",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init (note, there may be more internal modules that have been moved/removed)",
+      "primaryTemplate": {
+        "pattern": "<rxjs>",
+        "replacements": []
+      },
+      "detectionPattern": "import <rxjs/internal/{Observable,types}"
+    },
+    "semanticPatchId": "1381",
+    "breakingChangeId": "246",
+    "enabled": true,
+    "comment": "init (note, there may be more internal modules that have been moved/removed)"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1381",
+      "comment": "init (note, there may be more internal modules that have been moved/removed) ",
+      "version": 0,
+      "creationDate": "2022-02-17T09:29:54.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>",
+        "replacements": []
+      },
+      "detectionPattern": "import rxjs/internal/{Observable,types}"
+    },
+    "semanticPatchId": "1381",
+    "breakingChangeId": "246",
+    "enabled": true,
+    "comment": "init (note, there may be more internal modules that have been moved/removed) "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1381",
+      "comment": "init (note, there may be more internal modules that have been moved/removed)",
+      "version": 1,
+      "creationDate": "2022-02-17T09:33:45.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.#1",
+        "replacements": []
+      },
+      "detectionPattern": "import rxjs/internal/{Observable,types}"
+    },
+    "semanticPatchId": "1381",
+    "breakingChangeId": "246",
+    "enabled": true,
+    "comment": "init (note, there may be more internal modules that have been moved/removed)"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1381",
+      "comment": "init (note, there may be more internal modules that have been moved/removed) ",
+      "version": 2,
+      "creationDate": "2022-02-17T09:37:23.000Z",
+      "primaryTemplate": {
+        "pattern": "rxjs",
+        "replacements": []
+      },
+      "detectionPattern": "import rxjs/internal/{observable,types}"
+    },
+    "semanticPatchId": "1381",
+    "breakingChangeId": "246",
+    "enabled": true,
+    "comment": "init (note, there may be more internal modules that have been moved/removed) "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1380",
+      "comment": "Updated question text and wrote code template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-16T14:27:03.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(undefined)",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs>?**.next [0,0]",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs Subject?"
+    },
+    "semanticPatchId": "1380",
+    "breakingChangeId": "245",
+    "enabled": true,
+    "comment": "Updated question text and wrote code template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<rxjs>.lastValueFrom($base)",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs{,/**/*}>?**.toPromise",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1352",
+    "breakingChangeId": "215",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "callR <rxjs{,/**/*}>?**.subscribe().add"
+    },
+    "semanticPatchId": "1353",
+    "breakingChangeId": "216",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<rxjs>.Subscriber.create($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs>.Subscriber"
+    },
+    "semanticPatchId": "1354",
+    "breakingChangeId": "217",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1354",
+      "comment": "Initial version fixup",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-08T14:17:34.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee.create($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs>.Subscriber"
+    },
+    "semanticPatchId": "1354",
+    "breakingChangeId": "217",
+    "enabled": true,
+    "comment": "Initial version fixup"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "(() => {\n  $base.unsubscribe();\n  return <rxjs>.Subscriber.create();\n})()",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs{,/**/*}>?**._unsubscribeAndRecycle"
+    },
+    "semanticPatchId": "1355",
+    "breakingChangeId": "220",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs>.VirtualTimeScheduler.sortActions"
+    },
+    "semanticPatchId": "1356",
+    "breakingChangeId": "221",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs>.Notification.createNext"
+    },
+    "semanticPatchId": "1357",
+    "breakingChangeId": "222",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "new $callee($1, $2).pipe(<rxjs/operators>.observeOn($3))",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs>.ReplaySubject [3,3]"
+    },
+    "semanticPatchId": "1358",
+    "breakingChangeId": "223",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "rxjs",
+        "replacements": []
+      },
+      "detectionPattern": "import rxjs/Rx"
+    },
+    "semanticPatchId": "1359",
+    "breakingChangeId": "224",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.count 0:function3"
+    },
+    "semanticPatchId": "1360",
+    "breakingChangeId": "225",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.race"
+    },
+    "semanticPatchId": "1361",
+    "breakingChangeId": "226",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <this>.unsubscribe"
+    },
+    "semanticPatchId": "1362",
+    "breakingChangeId": "227",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs>.defer"
+    },
+    "semanticPatchId": "1363",
+    "breakingChangeId": "228",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.map [1,1]"
+    },
+    "semanticPatchId": "1364",
+    "breakingChangeId": "229",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.mergeScan"
+    },
+    "semanticPatchId": "1365",
+    "breakingChangeId": "230",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs>.pairs"
+    },
+    "semanticPatchId": "1366",
+    "breakingChangeId": "231",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.repeat"
+    },
+    "semanticPatchId": "1367",
+    "breakingChangeId": "232",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.retry"
+    },
+    "semanticPatchId": "1368",
+    "breakingChangeId": "233",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.single"
+    },
+    "semanticPatchId": "1369",
+    "breakingChangeId": "234",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.skipLast"
+    },
+    "semanticPatchId": "1370",
+    "breakingChangeId": "235",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.take"
+    },
+    "semanticPatchId": "1371",
+    "breakingChangeId": "236",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/operators>.takeLast"
+    },
+    "semanticPatchId": "1372",
+    "breakingChangeId": "237",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs>.throwError"
+    },
+    "semanticPatchId": "1373",
+    "breakingChangeId": "238",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs>.zip"
+    },
+    "semanticPatchId": "1374",
+    "breakingChangeId": "239",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs>.zip [1,1]"
+    },
+    "semanticPatchId": "1375",
+    "breakingChangeId": "240",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/ajax>.ajax 0:object"
+    },
+    "semanticPatchId": "1376",
+    "breakingChangeId": "241",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/ajax>.ajax 0:object"
+    },
+    "semanticPatchId": "1377",
+    "breakingChangeId": "242",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/ajax>.ajax"
+    },
+    "semanticPatchId": "1378",
+    "breakingChangeId": "243",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial version",
+      "enabled": true,
+      "detectionPattern": "call <rxjs/ajax>.ajax"
+    },
+    "semanticPatchId": "1379",
+    "breakingChangeId": "244",
+    "enabled": true,
+    "comment": "Initial version"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "This will only show in the PR if it's the only active Semantic Patch",
+      "enabled": true,
+      "detectionPattern": "call <rxjs>.throwError",
+      "suggestedFixDescription": "This patch is used for testing and should not be enabled for a PR"
+    },
+    "semanticPatchId": "1493",
+    "breakingChangeId": "236",
+    "enabled": true,
+    "comment": "This will only show in the PR if it's the only active Semantic Patch"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1371",
+      "comment": "Should be enabled for the PR     ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-06T04:03:37.000Z",
+      "detectionPattern": "call <rxjs/operators>.take"
+    },
+    "semanticPatchId": "1371",
+    "breakingChangeId": "236",
+    "enabled": true,
+    "comment": "Should be enabled for the PR     "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1373",
+      "comment": "Should be enabled for the PR ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-04-06T03:58:09.000Z",
+      "detectionPattern": "call <rxjs>.throwError"
+    },
+    "semanticPatchId": "1373",
+    "breakingChangeId": "238",
+    "enabled": true,
+    "comment": "Should be enabled for the PR "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1493",
+      "comment": "Dummy semantic patch for a test   ",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-04-06T04:13:23.000Z",
+      "detectionPattern": "call <rxjs>.throwError",
+      "suggestedFixDescription": "This patch is used for testing and should not be enabled for a PR"
+    },
+    "semanticPatchId": "1493",
+    "breakingChangeId": "236",
+    "enabled": false,
+    "comment": "Dummy semantic patch for a test   "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1493",
+      "comment": "Dummy semantic patch for a test     ",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-04-07T16:11:13.000Z",
+      "detectionPattern": "call <rxjs>.throwError",
+      "suggestedFixDescription": "This patch is used for testing and should not be enabled for a PR",
+      "unknownAccessPathQuestion": "Is the receiver rxjs?"
+    },
+    "semanticPatchId": "1493",
+    "breakingChangeId": "236",
+    "enabled": false,
+    "comment": "Dummy semantic patch for a test     "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1352",
+      "comment": "Add base type filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-08T13:56:55.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.lastValueFrom($base)",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs{,/**/*}>?**.toPromise base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1352",
+    "breakingChangeId": "215",
+    "enabled": true,
+    "comment": "Add base type filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1355",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-08T18:30:24.000Z",
+      "primaryTemplate": {
+        "pattern": "(() => {\n  $base.unsubscribe();\n  return <rxjs>.Subscriber.create();\n})()",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs{,/**/*}>?**._unsubscribeAndRecycle base:Subscriber",
+      "unknownAccessPathQuestion": "Is $base an rxjs subscriber?"
+    },
+    "semanticPatchId": "1355",
+    "breakingChangeId": "220",
+    "enabled": true,
+    "comment": "Add base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1380",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-02-18T07:56:21.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(undefined)",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs>?**.next [0,0] base:Subject",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs Subject?"
+    },
+    "semanticPatchId": "1380",
+    "breakingChangeId": "245",
+    "enabled": true,
+    "comment": "Add base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1366",
+      "comment": "Add template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-09T08:43:30.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.from(Object.entries($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs>.pairs",
+      "unknownAccessPathQuestion": "Is the call to $prop a call to the from operator from rxjs?"
+    },
+    "semanticPatchId": "1366",
+    "breakingChangeId": "231",
+    "enabled": true,
+    "comment": "Add template"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1369",
+      "comment": "Add suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-09T08:49:04.000Z",
+      "detectionPattern": "call <rxjs/operators>.single",
+      "suggestedFixDescription": "See https://rxjs.dev/api/index/function/single for more information on updated error types.",
+      "unknownAccessPathQuestion": "Is $prop the single operator from rxjs?"
+    },
+    "semanticPatchId": "1369",
+    "breakingChangeId": "234",
+    "enabled": true,
+    "comment": "Add suggested fix"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1364",
+      "comment": "fix patch",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-09T08:33:53.000Z",
+      "detectionPattern": "call <rxjs/operators>.map [1,1] 0:function",
+      "unknownAccessPathQuestion": "is $prop the map function from the rxjs library?"
+    },
+    "semanticPatchId": "1364",
+    "breakingChangeId": "229",
+    "enabled": true,
+    "comment": "fix patch"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1364",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-19T07:39:41.000Z",
+      "detectionPattern": "call <rxjs/operators>.map [1,1] 0:function base:Observable",
+      "unknownAccessPathQuestion": "is $prop the map function from the rxjs library?"
+    },
+    "semanticPatchId": "1364",
+    "breakingChangeId": "229",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1365",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-09T08:35:49.000Z",
+      "detectionPattern": "call <rxjs/operators>.mergeScan base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1365",
+    "breakingChangeId": "230",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1356",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-08T18:47:50.000Z",
+      "detectionPattern": "call <rxjs>.VirtualTimeScheduler.sortActions base:VirtualTimeScheduler",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs.VirtualTimeScheduler?"
+    },
+    "semanticPatchId": "1356",
+    "breakingChangeId": "221",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1357",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-08T18:50:54.000Z",
+      "detectionPattern": "call <rxjs>.Notification.createNext base:Notification",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs Notification?"
+    },
+    "semanticPatchId": "1357",
+    "breakingChangeId": "222",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1361",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-08T20:30:15.000Z",
+      "detectionPattern": "call <rxjs/operators>.race base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1361",
+    "breakingChangeId": "226",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1362",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-09T08:28:38.000Z",
+      "detectionPattern": "call <this>.unsubscribe base:{Observable,Subscription}",
+      "unknownAccessPathQuestion": "Is this a call of the unsubscribe method from the rxjs package?"
+    },
+    "semanticPatchId": "1362",
+    "breakingChangeId": "227",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1369",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-19T05:43:27.000Z",
+      "detectionPattern": "call <rxjs/operators>.single base:Observable",
+      "suggestedFixDescription": "See https://rxjs.dev/api/index/function/single for more information on updated error types.",
+      "unknownAccessPathQuestion": "Is $prop the single operator from rxjs?"
+    },
+    "semanticPatchId": "1369",
+    "breakingChangeId": "234",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1367",
+      "comment": "Add base type filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-09T08:45:11.000Z",
+      "detectionPattern": "call <rxjs/operators>.repeat base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1367",
+    "breakingChangeId": "232",
+    "enabled": true,
+    "comment": "Add base type filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1368",
+      "comment": "Add base type filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-09T08:46:44.000Z",
+      "detectionPattern": "call <rxjs/operators>.retry base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1368",
+    "breakingChangeId": "233",
+    "enabled": true,
+    "comment": "Add base type filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1353",
+      "comment": "Add base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-19T05:14:43.000Z",
+      "detectionPattern": "callR <rxjs{,/**/*}>?**.subscribe().add base:Subscription",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs subscription?"
+    },
+    "semanticPatchId": "1353",
+    "breakingChangeId": "216",
+    "enabled": true,
+    "comment": "Add base filter"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "565",
+    "packageVersion": "3.0.0",
+    "packageName": "zod",
+    "description": "The minimum TypeScript version is now 4.1 (up from 3.7 for Zod 2). ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "570",
+    "packageVersion": "3.0.0",
+    "packageName": "zod",
+    "description": "Type guards (the .check() method) have been removed. Type guards interact with transformers in unintuitive ways so they were removed. Use .safeParse instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "574",
+    "packageVersion": "3.0.0",
+    "packageName": "zod",
+    "description": "Object merging now behaves differently. If you merge two object schema (A.merge(B)), the fields of B will overwrite the fields of A if there are shared keys.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "575",
+    "packageVersion": "3.0.0",
+    "packageName": "zod",
+    "description": "There have been small internal changes to the ZodIssue subtypes.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "576",
+    "packageVersion": "3.0.0",
+    "packageName": "zod",
+    "description": "Under the hood, all refinements and transformations are executed inside a dedicated \"ZodEffects\" class.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "577",
+    "packageVersion": "3.0.0",
+    "packageName": "zod",
+    "description": "default value logic is now implemented inside a ZodDefault class, instead of using transformers.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "569",
+    "packageVersion": "3.0.0",
+    "packageName": "zod",
+    "description": "Changed the syntax of `.transform()` and removed `.transformers()`",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

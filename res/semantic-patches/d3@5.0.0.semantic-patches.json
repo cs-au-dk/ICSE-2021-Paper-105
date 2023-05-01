@@ -1,0 +1,232 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.request [1,1]",
+      "suggestedFixDescription": "The d3.request package has been replaced by the new d3.fetch package. \nThe big change involved in this is the use of promises instead of asynchronous callbacks. \nTo fix this you first need to use the specific function for your MIME type. So for instance instead of `d3.request(path).mimeType(\"text/csv\")` you would use `d3.csv(path)`.",
+      "unknownAccessPathQuestion": "Is this a call of the request function from the d3 package?"
+    },
+    "semanticPatchId": "1988",
+    "breakingChangeId": "742",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.request [2,2]",
+      "suggestedFixDescription": "The d3.request package has been replaced by the new d3.fetch package. \nThe big change involved in this is the use of promises instead of asynchronous callbacks. \nTo fix this you first off need to use the specific function for your MIME type. So for instance instead of `d3.request(path).mimeType(\"text/csv\")` you would use `d3.csv(path)`.\nAlso instead of $2 you would use the returned promise, using the .then() method instead of the callback and the .catch() method if you are catching errors in the current callback. For an example see: https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50",
+      "unknownAccessPathQuestion": "Is this a call of the request method from the d3 package?"
+    },
+    "semanticPatchId": "1989",
+    "breakingChangeId": "742",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.request()**.{get,post,send} [2,2] 1:function",
+      "suggestedFixDescription": "This change makes it no longer possible to parse a callback function to $prop. \nThere is no general fix for this, other than rewriting the callback given to $prop to use promises.\nuse the .then() method instead of the callback and the .catch() method if you are catching errors in the current callback. For an example see: https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50",
+      "unknownAccessPathQuestion": "is this a call of either the request.get(), request.post() or request.send method from the d3 package?"
+    },
+    "semanticPatchId": "1990",
+    "breakingChangeId": "742",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1990",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-01T16:33:07.000Z",
+      "detectionPattern": "call <d3>.request()**.{get,post,send} [2,2] 1:function",
+      "suggestedFixDescription": "This change makes it no longer possible to parse a callback function to $prop. \nThere is no general fix for this, other than rewriting the callback given to $prop to use promises.\nuse the .then() method instead of the callback and the .catch() method if you are catching errors in the current callback. \nFor an example see: https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50",
+      "unknownAccessPathQuestion": "is this a call of either the request.get(), request.post() or request.send method from the d3 package?"
+    },
+    "semanticPatchId": "1990",
+    "breakingChangeId": "742",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.request()**.{get,post} [1,1] 0:function",
+      "suggestedFixDescription": "This change makes it no longer possible to parse a callback function to $prop. \nThere is no general fix for this, other than rewriting the callback given to $prop to use promises.\nuse the .then() method instead of the callback and the .catch() method if you are catching errors in the current callback. \nFor an example see: https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50.",
+      "unknownAccessPathQuestion": "Is this a call of either the request.get() or request.post method from the d3 package?"
+    },
+    "semanticPatchId": "1991",
+    "breakingChangeId": "742",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.request()**.{send} [3,3] 2:function",
+      "suggestedFixDescription": "This change makes it no longer possible to parse a callback function to $prop. \nThere is no general fix for this, other than rewriting the callback given to $prop to use promises.\nuse the .then() method instead of the callback and the .catch() method if you are catching errors in the current callback. \nFor an example see: https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50",
+      "unknownAccessPathQuestion": "Is this a call of the request .send() mehod from the d3 package?"
+    },
+    "semanticPatchId": "1992",
+    "breakingChangeId": "742",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.request()**.{response}",
+      "suggestedFixDescription": "This change makes it no longer possible to parse a callback function to $prop. \nThere is no general fix for this, other than rewriting the callback given to $prop to use promises.\nuse the .then() method instead of the callback and the .catch() method if you are catching errors in the current callback. \nFor an example see: https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50.",
+      "unknownAccessPathQuestion": "Is this a call of the request.response method from the d3 package?"
+    },
+    "semanticPatchId": "1993",
+    "breakingChangeId": "742",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.request()**.{csv,html,json,text,tsv,xml} [2,2] 1:function",
+      "suggestedFixDescription": "This change makes it no longer possible to parse a callback function to $prop. \nThere is no general fix for this, other than rewriting the callback given to $prop to use promises.\nuse the .then() method instead of the callback and the .catch() method if you are catching errors in the current callback. \nFor an example see: https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50.",
+      "unknownAccessPathQuestion": "Is this a call of either the request.csv(), request.html(), request.json(), request.text(), request.tsv() or request.xml() method from the d3 package?"
+    },
+    "semanticPatchId": "1994",
+    "breakingChangeId": "742",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.{csv,tsv} [3,3] 2:function",
+      "suggestedFixDescription": "This change makes it no longer possible to parse a callback function to $prop. \nThere is no general fix for this, other than rewriting the callback given to $prop to use promises.\nuse the .then() method instead of the callback and the .catch() method if you are catching errors in the current callback. \nFor an example see: https://github.com/d3/d3/blob/main/CHANGES.md#changes-in-d3-50.",
+      "unknownAccessPathQuestion": "Is this a call of either the d3.csv or d3.tsv method?"
+    },
+    "semanticPatchId": "1995",
+    "breakingChangeId": "742",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.queue",
+      "suggestedFixDescription": "As an alternative to this module you can either use Promise.all to run multiple promises and process the result or another external module like `p-queue`.\nPromise.all is rather simple to use and simply requires you to run it with an array of each promise currently parsed to a .defer() method, and then instead of queue.await you use the .then() method on the returned promise.\n For an example and documentation see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all.",
+      "unknownAccessPathQuestion": "Is this a call of the queue method from the d3 package?"
+    },
+    "semanticPatchId": "2039",
+    "breakingChangeId": "743",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2039",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-02T04:57:30.000Z",
+      "detectionPattern": "call <d3>.queue",
+      "suggestedFixDescription": "As an alternative to this module you can either use Promise.all to run multiple promises and process the result or another external module like `p-queue`.\nPromise.all is rather simple to use and simply requires you to run it with an array of each promise currently parsed to a .defer() method, and then instead of queue.await you use the .then() method on the returned promise.\nFor an example and documentation see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all.",
+      "unknownAccessPathQuestion": "Is this a call of the queue method from the d3 package?"
+    },
+    "semanticPatchId": "2039",
+    "breakingChangeId": "743",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "initial",
+      "detectionPattern": "call <d3>.queue()**.defer",
+      "suggestedFixDescription": "This breaking change is related to the comment inserted at the constructor call of the d3.queue(). If you decided to use Promise.all to fix this change, then $1 will be one of the promises going into the array argument parsed to Promise.all().",
+      "unknownAccessPathQuestion": "Is this a call of tthe queue.defer() method from the d3 package?"
+    },
+    "semanticPatchId": "2040",
+    "breakingChangeId": "743",
+    "enabled": true,
+    "comment": "initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <d3>.queue()**.await",
+      "suggestedFixDescription": "This breaking change is related to the comment inserted at the constructor call of the d3.queue(). \nIf you decided to use Promise.all to fix this change, then $1 will essentially be the argument parsed to the .then() method after promise.all(). \nThe only difference is that promise.All combines each result of the queues promise into a single value, like if you were currently using .awaitAll() instead of .await(). \nSee awaitAll() to rewrite this using Promise.all(): https://devdocs.io/d3~4/d3-queue#queue_awaitAll. ",
+      "unknownAccessPathQuestion": "Is this a call of the queue.await method from the d3 package?"
+    },
+    "semanticPatchId": "2041",
+    "breakingChangeId": "743",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "initial",
+      "detectionPattern": "call <d3>.queue()**.awaitAll",
+      "suggestedFixDescription": "This breaking change is related to the comment inserted at the constructor call of the d3.queue(). If you decided to use Promise.all to fix this change, then $1 will be the argument parsed to the .then() method after promise.all().",
+      "unknownAccessPathQuestion": "Is this a call of the queue.awaitAll method from the d3 package?"
+    },
+    "semanticPatchId": "2042",
+    "breakingChangeId": "743",
+    "enabled": true,
+    "comment": "initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <d3>.{schemeCategory20,schemeCategory20b,schemeCategory20c}",
+      "suggestedFixDescription": "These colors were removed due to a few internal flaws and there is no direct alternative for $prop. \nWe suggest you either take some time to implement the new d3-scale-chromatic, which implements excellent schemes from ColorBrewer and works pretty much the same as $1. For the documentation and examples see: https://github.com/d3/d3-scale-chromatic/blob/main/README.md#d3-scale-chromatic. \nOtherwise you can parse an array of rbg strings directly to something like d3.scaleOrdinal(), but unless you need the exact same 20 colors as before, we recommend the first option",
+      "unknownAccessPathQuestion": "Is this reading one of the 20-color color schemes from the d3 package"
+    },
+    "semanticPatchId": "2043",
+    "breakingChangeId": "744",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2043",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-02T05:47:35.000Z",
+      "detectionPattern": "read <d3>.{schemeCategory20,schemeCategory20b,schemeCategory20c}",
+      "suggestedFixDescription": "These colors were removed due to a few internal flaws and there is no direct alternative for the 20-color color schemes. \nWe suggest you either take some time to implement the new d3-scale-chromatic, which implements excellent schemes from ColorBrewer and works pretty much the same as your current color scheme. For the documentation and examples see: https://github.com/d3/d3-scale-chromatic/blob/main/README.md#d3-scale-chromatic. \nOtherwise you can parse an array of rbg strings directly to something like d3.scaleOrdinal(), but unless you need the exact same 20 colors as before, we recommend the first option",
+      "unknownAccessPathQuestion": "Is this reading one of the 20-color color schemes from the d3 package"
+    },
+    "semanticPatchId": "2043",
+    "breakingChangeId": "744",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "import d3-queue",
+      "suggestedFixDescription": "As an alternative to this module you can either use Promise.all to run multiple promises and process the result or another external module like `p-queue`.\nPromise.all is rather simple to use and simply requires you to run it with an array of each promise currently parsed to a .defer() method, and then instead of queue.await you use the .then() method on the returned promise.\nFor an example and documentation see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all",
+      "unknownAccessPathQuestion": "Is this an import of d3-queue?"
+    },
+    "semanticPatchId": "2146",
+    "breakingChangeId": "743",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

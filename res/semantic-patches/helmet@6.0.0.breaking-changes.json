@@ -1,0 +1,46 @@
+[
+  {
+    "id": "850",
+    "packageVersion": "6.0.0",
+    "packageName": "helmet",
+    "description": "Breaking: helmet.contentSecurityPolicy no longer sets block-all-mixed-content directive by default",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "851",
+    "packageVersion": "6.0.0",
+    "packageName": "helmet",
+    "description": "Breaking: helmet.expectCt is no longer set by default. It can, however, be explicitly enabled. It will be removed in Helmet 7. See #310",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "852",
+    "packageVersion": "6.0.0",
+    "packageName": "helmet",
+    "description": "Dropped support for Node 12 and 13. Node 14+ is now required",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "853",
+    "packageVersion": "6.0.0",
+    "packageName": "helmet",
+    "description": "Increase TypeScript strictness around some arguments. Only affects TypeScript users",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "469",
+    "packageVersion": "8.0.0",
+    "packageName": "react-minimal-pie-chart",
+    "description": "Chart component exposed as named export instead of default.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "470",
+    "packageVersion": "8.0.0",
+    "packageName": "react-minimal-pie-chart",
+    "description": "Version 16.8.0 or greater is now required for both react and react-dom",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "471",
+    "packageVersion": "8.0.0",
+    "packageName": "react-minimal-pie-chart",
+    "description": "Minimum typescript version increased to ^3.8.0 (due to import type). Meaning in case typescript is used, ensure that the version is 3.8.0 or greater",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "472",
+    "packageVersion": "8.0.0",
+    "packageName": "react-minimal-pie-chart",
+    "description": "The ‘label’ property of PieChart can no longer be a boolean or ReactElement. Instead of label = true, we recommend using label = {({ dataEntry }) => dataEntry.value}. Except for this change the label property now also works just like [render properties](https://reactjs.org/docs/render-props.html), meaning you also no longer need the ‘dataIndex’ property to access the data of the label. For an example of the new way to access the data see https://github.com/toomuchdesign/react-minimal-pie-chart/blob/v8.2.0/stories/index.tsx#L81-L139 ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

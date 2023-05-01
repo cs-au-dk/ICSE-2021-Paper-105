@@ -1,0 +1,13 @@
+[
+  {
+    "id": "529",
+    "packageVersion": "9.0.0",
+    "packageName": "firebase-admin",
+    "description": "Dropped Node 8 support. firebase-admin version 9.0.0 uses @google-cloud/firestore version 4.0.0 and @google-cloud/storage version 5.0.0, which has both dropped support for Node 8, hence if you are currently using node 8, and want to upgrade to firebase-admin version 9.0.0, you will also need at least Node 10.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

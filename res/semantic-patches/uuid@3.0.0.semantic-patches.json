@@ -1,0 +1,16 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<uuid-parse>.$prop($args)"
+      },
+      "detectionPattern": "call <uuid>.{parse,unparse}",
+      "unknownAccessPathQuestion": "Is the receiver the uuid module object?"
+    },
+    "semanticPatchId": "1294",
+    "breakingChangeId": "163",
+    "enabled": true,
+    "comment": "database default"
+  }
+]

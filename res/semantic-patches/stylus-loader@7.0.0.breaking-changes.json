@@ -1,0 +1,13 @@
+[
+  {
+    "id": "517",
+    "packageVersion": "7.0.0",
+    "packageName": "stylus-loader",
+    "description": "minimum supported Node.js version is 14.15.0",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

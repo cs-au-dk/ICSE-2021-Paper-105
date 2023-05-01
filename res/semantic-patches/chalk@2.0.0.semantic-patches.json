@@ -1,0 +1,44 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<strip-ansi@3.0.0>"
+      },
+      "detectionPattern": "read <chalk>.stripColor",
+      "unknownAccessPathQuestion": "Is the receiver the chalk module object?"
+    },
+    "semanticPatchId": "1019",
+    "breakingChangeId": "19",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<has-ansi@2.0.0>"
+      },
+      "detectionPattern": "read <chalk>.hasColor",
+      "unknownAccessPathQuestion": "Is the receiver the chalk module object?"
+    },
+    "semanticPatchId": "1018",
+    "breakingChangeId": "18",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<ansi-styles@2.2.1>"
+      },
+      "detectionPattern": "read <chalk>.styles",
+      "unknownAccessPathQuestion": "Is the receiver the chalk module object?"
+    },
+    "semanticPatchId": "1020",
+    "breakingChangeId": "20",
+    "enabled": true,
+    "comment": "database default"
+  }
+]

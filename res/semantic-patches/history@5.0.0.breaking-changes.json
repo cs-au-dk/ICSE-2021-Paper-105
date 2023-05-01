@@ -1,0 +1,123 @@
+[
+  {
+    "id": "492",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "React Router versions 4.x and 5.x are not compatible with history version 5.x. Meaning if you are using react router you will probably have to stay on history version 4 or also update react router to ^6.0.0.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "486",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "Removed support for browsers that do not support the HTML5 history API. It is unlikely that this will be a problem for you since most modern browsers support the HTML5 history API. If you are not sure see a list of the compatible browsers here: https://caniuse.com/history ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "494",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "canGo() is removed (was only available for histories created using createMemoryHistory)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "488",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "Removed getUserConfirmation",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "489",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "Removed keyLength",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "490",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "Remove hashType",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "491",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "Removed the export of sub modules. Use the named import instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "495",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "goBack() and goForward() renamed to back() and forward()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "496",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "History.length value was removed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "497",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "the history.entries value has been removed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "487",
+    "packageVersion": "5.0.0",
+    "packageName": "history",
+    "description": "Removed relative pathname support in hash history and memory history",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

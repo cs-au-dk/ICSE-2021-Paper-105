@@ -1,0 +1,440 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "detectionPattern": "call <fs-extra>.outputJson",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1545",
+    "breakingChangeId": "398",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <fs-extra>.{ensureDir,mkdirp,mkdirs,ensureDirSync,mkdirpSync,mkdirsSync}",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1544",
+    "breakingChangeId": "397",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1544",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-05-18T12:35:36.000Z",
+      "detectionPattern": "call <fs-extra>.{ensureDir,mkdirp,mkdirs,ensureDirSync,mkdirpSync,mkdirsSync}",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1544",
+    "breakingChangeId": "397",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "callR <fs-extra>.{outputJson,readJson,writeJson,outputJsonSync,readJsonSync,writeJsonSync}",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1546",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-18T14:38:08.000Z",
+      "detectionPattern": "callR <fs-extra>.{outputJson,readJson,writeJson,outputJsonSync,readJsonSync,writeJsonSync}",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1546",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-18T14:38:15.000Z",
+      "detectionPattern": "call <fs-extra>.{outputJson,readJson,writeJson,outputJsonSync,readJsonSync,writeJsonSync}",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1544",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-18T14:00:22.000Z",
+      "detectionPattern": "callR <fs-extra>.{ensureDir,mkdirp,mkdirs,ensureDirSync,mkdirpSync,mkdirsSync}",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1544",
+    "breakingChangeId": "397",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1546",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-18T14:47:37.000Z",
+      "detectionPattern": "call <fs-extra>.{outputJson,readJson,writeJson,outputJsonSync,readJsonSync,writeJsonSync}",
+      "suggestedFixDescription": "Instead of having option = Null just leave it empty (undefined), since this gives the same end result",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1545",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-18T13:54:09.000Z",
+      "detectionPattern": "call <fs-extra>.{outputJson,outputJsonSync}",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1545",
+    "breakingChangeId": "398",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1546",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-05-18T14:55:08.000Z",
+      "detectionPattern": "call <fs-extra>.{outputJson,writeJson} [3,4] 2:object",
+      "suggestedFixDescription": "Instead of having option = Null just leave it empty (undefined), since this gives the same end result",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1546",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-05-18T16:34:29.000Z",
+      "extraQuestion": "Is \"null\" being passed as an options parameter?",
+      "detectionPattern": "call <fs-extra>.{outputJson,writeJson} [3,4] 2:object",
+      "suggestedFixDescription": "Instead of having option = Null just leave it empty (undefined), since this gives the same end result",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1546",
+      "comment": "Initial  ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-05-18T16:39:19.000Z",
+      "extraQuestion": "Is \"null\" being passed as an options parameter?",
+      "detectionPattern": "call <fs-extra>.{outputJson,writeJson} [3,4] 2:object",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial  "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "extraQuestion": "Is \"null\" being passed as an options parameter?",
+      "detectionPattern": "call <fs-extra>.readJson [2,3] 1:object",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1549",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "extraQuestion": "Is \"null\" being passed as an options parameter?",
+      "detectionPattern": "call <fs-extra>.{outputJsonSync,writeJsonSync} [3,3]",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1550",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1550",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-18T16:53:52.000Z",
+      "extraQuestion": "Is \"null\" being passed as an options parameter?",
+      "detectionPattern": "call <fs-extra>.{outputJsonSync,writeJsonSync} [3,3]",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1550",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "enabled": true,
+      "extraQuestion": "Is \"null\" being passed as an options parameter?",
+      "detectionPattern": "call <fs-extra>.readJsonSync [2,2] ",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1551",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1544",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-18T14:00:22.000Z",
+      "detectionPattern": "callR <fs-extra>.{ensureDir,mkdirp,mkdirs,ensureDirSync,mkdirpSync,mkdirsSync}",
+      "suggestedFixDescription": "The returned promise no longer includes the path of the new directory",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1544",
+    "breakingChangeId": "397",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1544",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-05-23T12:01:54.000Z",
+      "detectionPattern": "callR <fs-extra>.{ensureDir,mkdirp,mkdirs}",
+      "suggestedFixDescription": "The returned promise no longer includes the path of the new directory",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1544",
+    "breakingChangeId": "397",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1545",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-18T15:26:14.000Z",
+      "detectionPattern": "call <fs-extra>.{outputJson}",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1545",
+    "breakingChangeId": "398",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1546",
+      "comment": "Use null type  ",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-05-18T16:41:27.000Z",
+      "extraQuestion": "Is \"null\" being passed as an options parameter?",
+      "detectionPattern": "call <fs-extra>.{outputJson,writeJson} [3,4] 2:null",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Use null type  "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1549",
+      "comment": "Add null type to parameter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-18T16:48:31.000Z",
+      "detectionPattern": "call <fs-extra>.readJson [2,3] 1:null",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1549",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Add null type to parameter"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1546",
+      "comment": "remove extra question",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-05-24T11:07:38.000Z",
+      "detectionPattern": "call <fs-extra>.{outputJson,writeJson} [3,4] 2:null",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "remove extra question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1549",
+      "comment": "Add null type to parameter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-24T11:09:31.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <fs-extra>.readJson [2,3] 1:null",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1549",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "Add null type to parameter "
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1546",
+      "comment": "remove extra question ",
+      "enabled": true,
+      "version": 8,
+      "creationDate": "2022-05-24T11:10:02.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, $4)",
+        "replacements": []
+      },
+      "detectionPattern": "call <fs-extra>.{outputJson,writeJson} [3,4] 2:null",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1546",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "remove extra question "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1551",
+      "comment": "remove extra question ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-24T11:27:14.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1)",
+        "replacements": []
+      },
+      "detectionPattern": "call <fs-extra>.readJsonSync [2,2] 1:null",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1551",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "remove extra question "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1550",
+      "comment": "remove extra question ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-24T11:32:25.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <fs-extra>.{outputJsonSync,writeJsonSync} [3,3] 2:null",
+      "unknownAccessPathQuestion": "Is this a call made to fs-extra?"
+    },
+    "semanticPatchId": "1550",
+    "breakingChangeId": "399",
+    "enabled": true,
+    "comment": "remove extra question "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1545",
+      "comment": "minors",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-24T09:30:06.000Z",
+      "detectionPattern": "call <fs-extra>.outputJson",
+      "suggestedFixDescription": "You can ignore this breaking change if you don't later modify $1",
+      "unknownAccessPathQuestion": "Is the outputJson function from the fs-extra package?"
+    },
+    "semanticPatchId": "1545",
+    "breakingChangeId": "398",
+    "enabled": true,
+    "comment": "minors"
+  }
+]

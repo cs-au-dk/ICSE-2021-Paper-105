@@ -1,0 +1,57 @@
+[
+  {
+    "id": "2",
+    "packageVersion": "3.0.0",
+    "packageName": "async",
+    "description": "during and doDuring have been removed, and instead whilst, doWhilst, until and doUntil now have asynchronous test functions. (#850, #1557)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "3",
+    "packageVersion": "3.0.0",
+    "packageName": "async",
+    "description": "memoize no longer memoizes errors (#1465, #1466)",
+    "deprecation": false,
+    "askBeforePatch": true,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "4",
+    "packageVersion": "3.0.0",
+    "packageName": "async",
+    "description": "applyEach/applyEachSeries have a simpler interface, to make them more easily type-able. It always returns a function that takes in a single callback argument. If that callback is omitted, a promise is returned, making it awaitable. (#1228, #1640)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "1",
+    "packageVersion": "3.0.0",
+    "packageName": "async",
+    "description": "In queue, priorityQueue, cargo and cargoQueue, the \"event\"-style methods, like q.drain and q.saturated are now methods that register a callback, rather than properties you assign a callback to. They are now of the form q.drain(callback). If you do not pass a callback a Promise will be returned for the next occurrence of the event, making them await-able, e.g. await q.drain(). (#1586, #1641)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "185",
+    "packageVersion": "3.0.0",
+    "packageName": "async",
+    "description": "Dropped support for Node 4 and earlier, and many old versions of browsers.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": true,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

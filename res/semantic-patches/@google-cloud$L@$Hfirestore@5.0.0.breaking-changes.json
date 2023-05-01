@@ -1,0 +1,13 @@
+[
+  {
+    "id": "553",
+    "packageVersion": "5.0.0",
+    "packageName": "@google-cloud/firestore",
+    "description": "Upgrade Typescript to v4.1.5 and add converter and typing upgrades",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

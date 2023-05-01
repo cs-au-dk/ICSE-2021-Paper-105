@@ -1,0 +1,13 @@
+[
+  {
+    "id": "459",
+    "packageVersion": "4.0.0",
+    "packageName": "detect-browser",
+    "description": "the bot boolean flag has been removed for all \"non-bot\" detection results.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "306",
+    "packageVersion": "11.0.0",
+    "packageName": "file-type",
+    "description": "Return undefined instead of null when there's no match",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "304",
+    "packageVersion": "11.0.0",
+    "packageName": "file-type",
+    "description": "Drop faking ESM default export support",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  }
+]

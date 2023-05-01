@@ -1,0 +1,13 @@
+[
+  {
+    "id": "163",
+    "packageVersion": "3.0.0",
+    "packageName": "uuid",
+    "description": "remove .parse and .unparse",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

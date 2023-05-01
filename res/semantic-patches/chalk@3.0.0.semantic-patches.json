@@ -1,0 +1,30 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.level > 0",
+        "replacements": []
+      },
+      "detectionPattern": "read <chalk>.enabled"
+    },
+    "semanticPatchId": "1330",
+    "breakingChangeId": "195",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "new $base.Instance($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <chalk>.constructor"
+    },
+    "semanticPatchId": "1331",
+    "breakingChangeId": "196",
+    "enabled": true,
+    "comment": "database default"
+  }
+]

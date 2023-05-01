@@ -1,0 +1,13 @@
+[
+  {
+    "id": "509",
+    "packageVersion": "13.0.0",
+    "packageName": "@testing-library/react",
+    "description": "Drop support for React 17 and earlier. For more information about what this means for the package see: https://github.com/testing-library/react-testing-library/releases/tag/v13.0.0",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

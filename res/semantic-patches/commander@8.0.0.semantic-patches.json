@@ -1,0 +1,333 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee.map(a => { term: a.name(), description: a.description})",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.visibleArguments",
+      "unknownAccessPathQuestion": "Is this a call to the Help method .visibleArguments() from commander?"
+    },
+    "semanticPatchId": "1585",
+    "breakingChangeId": "443",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1585",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-17T16:54:49.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1).map(a => { term: a.name(), description: a.description})",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.visibleArguments",
+      "unknownAccessPathQuestion": "Is this a call to the Help method .visibleArguments() from commander?"
+    },
+    "semanticPatchId": "1585",
+    "breakingChangeId": "443",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1585",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-17T17:03:16.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1).map(a => { term: a.name(), description: a.description })",
+        "replacements": []
+      },
+      "detectionPattern": "call <commander>**.visibleArguments",
+      "unknownAccessPathQuestion": "Is this a call to the Help method .visibleArguments() from commander?"
+    },
+    "semanticPatchId": "1585",
+    "breakingChangeId": "443",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <commander>**.{invalidOptionArgument,invalidOptionArgumentError}",
+      "unknownAccessPathQuestion": "Is the invalidOptionArgument error part of commander?"
+    },
+    "semanticPatchId": "1586",
+    "breakingChangeId": "447",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1586",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-06-18T12:51:43.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[invalidOptionArgument => invalidArgument, InvalidOptionArgumentError => InvalidArgumentError]",
+        "replacements": []
+      },
+      "detectionPattern": "read <commander>**.{invalidOptionArgument,InvalidOptionArgumentError}",
+      "unknownAccessPathQuestion": "Is the invalidOptionArgument error part of commander?"
+    },
+    "semanticPatchId": "1586",
+    "breakingChangeId": "447",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <commander>.program**.addTextHelp",
+      "suggestedFixDescription": "Only if the 2nd argument 'text' of addTextHelp() might return undefined: The type of addTextHelp() has been changed. To accommodate this return an appropriate string instead.",
+      "unknownAccessPathQuestion": "Is the addTextHelp() call made on a program from commander?"
+    },
+    "semanticPatchId": "1590",
+    "breakingChangeId": "452",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1590",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-06-22T09:48:30.000Z",
+      "detectionPattern": "call <commander>**.addHelpText",
+      "suggestedFixDescription": "Only if the 2nd argument 'text' of addHelpText() might return undefined: The type of addHelpText() has been changed. To accommodate this return an appropriate string instead.",
+      "unknownAccessPathQuestion": "Is the addTextHelp() call made on a program from commander?"
+    },
+    "semanticPatchId": "1590",
+    "breakingChangeId": "452",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <commander>**.description",
+      "suggestedFixDescription": "Using the second argument of description is still available, but is from @8.0.0 deprecated. We suggest using the new .argument() function (meant for declaring program arguments) instead.",
+      "unknownAccessPathQuestion": "Is the description call made on a program from commander?"
+    },
+    "semanticPatchId": "1591",
+    "breakingChangeId": "453",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1591",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-22T10:13:46.000Z",
+      "detectionPattern": "call <commander>**.description",
+      "suggestedFixDescription": "Using the second argument of description() is still available, but is from @8.0.0 deprecated. We suggest using the new .argument() function (meant for declaring program arguments) instead.",
+      "unknownAccessPathQuestion": "Is the description call made on a program from commander?"
+    },
+    "semanticPatchId": "1591",
+    "breakingChangeId": "453",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1591",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-22T10:14:14.000Z",
+      "detectionPattern": "call <commander>**.description",
+      "suggestedFixDescription": "Using the second argument of description() is still available, but is from @8.0.0 deprecated. We suggest using the new .argument(name, description) function (meant for declaring program arguments) instead.",
+      "unknownAccessPathQuestion": "Is the description call made on a program from commander?"
+    },
+    "semanticPatchId": "1591",
+    "breakingChangeId": "453",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1591",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-06-22T10:15:52.000Z",
+      "detectionPattern": "call <commander>**.description [2,2]",
+      "suggestedFixDescription": "Using the second argument of description() is still available, but is from @8.0.0 deprecated. We suggest using the new .argument(name, description) function (meant for declaring program arguments) instead.",
+      "unknownAccessPathQuestion": "Is the description call made on a program from commander?"
+    },
+    "semanticPatchId": "1591",
+    "breakingChangeId": "453",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<commander>.program",
+        "replacements": []
+      },
+      "detectionPattern": "importD commander",
+      "unknownAccessPathQuestion": "Is this the default import of commander?"
+    },
+    "semanticPatchId": "1592",
+    "breakingChangeId": "454",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1592",
+      "comment": "Enabled after testing this client https://github.com/muhammadsammy/tailwindcss-classnames/blob/0d2fee5f3566d95513e483470bdc397789ef630a/src/cli/index.ts#L3",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-22T10:40:09.000Z",
+      "primaryTemplate": {
+        "pattern": "<commander>.program",
+        "replacements": []
+      },
+      "detectionPattern": "importD commander",
+      "unknownAccessPathQuestion": "Is this the default import of commander?"
+    },
+    "semanticPatchId": "1592",
+    "breakingChangeId": "454",
+    "enabled": true,
+    "comment": "Enabled after testing this client https://github.com/muhammadsammy/tailwindcss-classnames/blob/0d2fee5f3566d95513e483470bdc397789ef630a/src/cli/index.ts#L3"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "This will probably only be a problem regarding some of your tests, hence changing these tests to match the new behavior should resolve the issue.",
+      "unknownAccessPathQuestion": "Is this program.parse call made to a progam from commander?"
+    },
+    "semanticPatchId": "1596",
+    "breakingChangeId": "458",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1590",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-22T09:53:59.000Z",
+      "detectionPattern": "call <commander>**.addHelpText",
+      "suggestedFixDescription": "Only breaking if the 2nd argument 'text' of addHelpText() might return undefined: The type of addHelpText() has been changed. To accommodate this return an appropriate string instead.",
+      "unknownAccessPathQuestion": "Is the addTextHelp() call made on a program from commander?"
+    },
+    "semanticPatchId": "1590",
+    "breakingChangeId": "452",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1591",
+      "comment": "Update suggested fix",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-06-22T10:16:12.000Z",
+      "detectionPattern": "call <commander>**.description [2,2]",
+      "suggestedFixDescription": "Passing a second argument to description is deprecated after 8.0.0. We suggest using the argument API (for example, new ...$prop($1).argument(name, description)), which is meant for declaring program arguments instead.",
+      "unknownAccessPathQuestion": "Is the description call made on a program from commander?"
+    },
+    "semanticPatchId": "1591",
+    "breakingChangeId": "453",
+    "enabled": true,
+    "comment": "Update suggested fix"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1596",
+      "comment": "Improved suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-26T07:33:45.000Z",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "If you at any point parse your program with missing arguments, this `.parse` will have to be changed to match the new behaviour. e.g. if your users tries to run your program with missing arguments, you could show them the `.help` info like shown here: https://github.com/tj/commander.js/blob/master/CHANGELOG.md#migration-tips",
+      "unknownAccessPathQuestion": "Is this program.parse call made to a progam from commander?"
+    },
+    "semanticPatchId": "1596",
+    "breakingChangeId": "458",
+    "enabled": true,
+    "comment": "Improved suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1596",
+      "comment": "Improved suggested fix again",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-07-15T08:16:43.000Z",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "The program is both called when you use the `program.parse()` function and when your users run the program. Makes sure to only call the `.parse()` function with the correct amount of arguments, and potentially show the users the `program.help()` info if they use the wrong amount of arguments like shown here: https://github.com/tj/commander.js/blob/master/CHANGELOG.md#migration-tips",
+      "unknownAccessPathQuestion": "Is this program.parse call made to a progam from commander?"
+    },
+    "semanticPatchId": "1596",
+    "breakingChangeId": "458",
+    "enabled": true,
+    "comment": "Improved suggested fix again"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1596",
+      "comment": "Improved suggested fix again ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-15T17:52:34.000Z",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "The program is both called when you use the `program.parse()` function and when your users run the program. Make sure to only call the `.parse()` function with the correct amount of arguments, and potentially show the users the `program.help()` info if they use the wrong amount of arguments like shown here: https://github.com/tj/commander.js/blob/master/CHANGELOG.md#migration-tips",
+      "unknownAccessPathQuestion": "Is this program.parse call made to a progam from commander?"
+    },
+    "semanticPatchId": "1596",
+    "breakingChangeId": "458",
+    "enabled": true,
+    "comment": "Improved suggested fix again "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1596",
+      "comment": "Improved suggested fix again",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-15T17:55:33.000Z",
+      "detectionPattern": "call <commander>**.parse",
+      "suggestedFixDescription": "Make sure to only call the `.parse()` function with the correct amount of arguments, and potentially show the users the `program.help()` info if they use the wrong amount of arguments like shown in [the migration tip](https://github.com/tj/commander.js/blob/master/CHANGELOG.md#migration-tips)",
+      "unknownAccessPathQuestion": "Is this program.parse call made to a progam from commander?"
+    },
+    "semanticPatchId": "1596",
+    "breakingChangeId": "458",
+    "enabled": true,
+    "comment": "Improved suggested fix again"
+  }
+]

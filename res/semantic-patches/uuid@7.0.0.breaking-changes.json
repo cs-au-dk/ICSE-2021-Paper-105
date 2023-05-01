@@ -1,0 +1,46 @@
+[
+  {
+    "id": "427",
+    "packageVersion": "7.0.0",
+    "packageName": "uuid",
+    "description": "The default export, which used to be the v4() method but which was already discouraged in v3.x of this library, has been removed.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "428",
+    "packageVersion": "7.0.0",
+    "packageName": "uuid",
+    "description": "Explicitly note that deep imports of the different uuid version functions are deprecated and no longer encouraged and that ECMAScript module named imports should be used instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "433",
+    "packageVersion": "7.0.0",
+    "packageName": "uuid",
+    "description": "Remove support for generating v3 and v5 UUIDs in Node.js<4.x",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "432",
+    "packageVersion": "7.0.0",
+    "packageName": "uuid",
+    "description": "Only relevant when used in a browser if that browser does not support Crypto.getRandomValues() (see https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues#browser_compatibility).\nYou will need to provide the uuidv1 and uuidv4 with the options.rng property as an alternative random number generator. The new function call would look something like uuid({rng: function}), where the function should return an array of 16 byte values (0-255). For security reasons we highly recommend you using an already tested secure number generator (For example, use http://bitwiseshiftleft.github.io/sjcl/doc/sjcl.prng.html).",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

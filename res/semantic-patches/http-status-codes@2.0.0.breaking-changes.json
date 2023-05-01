@@ -1,0 +1,35 @@
+[
+  {
+    "id": "781",
+    "packageVersion": "2.0.0",
+    "packageName": "http-status-codes",
+    "description": "Change the reason phrase \"Server Error\" to the correct one, \"Internal Server Error\"",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "783",
+    "packageVersion": "2.0.0",
+    "packageName": "http-status-codes",
+    "description": "Rename \"getStatusText\" -> \"getReasonPhrase\" to make the API more consistent",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "782",
+    "packageVersion": "2.0.0",
+    "packageName": "http-status-codes",
+    "description": "TypeScript enums \"StatusCodes\" and \"ReasonPhrases\"",
+    "deprecation": true,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

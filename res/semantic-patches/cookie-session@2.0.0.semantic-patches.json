@@ -1,0 +1,327 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "If both the name and key property is undefined, the default name, express:sess, is used",
+      "detectionPattern": "call <cookie-session> 0.name:undefined 0.key:undefined",
+      "unknownAccessPathQuestion": "Is the caller the default function from cookie-session?"
+    },
+    "semanticPatchId": "1680",
+    "breakingChangeId": "567",
+    "enabled": true,
+    "comment": "If both the name and key property is undefined, the default name, express:sess, is used"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "COPY_PROP",
+            "destPropName": "name",
+            "sourceAstReference": "$1.key"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <cookie-session> 0.key:any 0.name:undefined",
+      "unknownAccessPathQuestion": "Is the caller the default function from cookie-session and is it called with an option object where the key property is defined?"
+    },
+    "semanticPatchId": "1681",
+    "breakingChangeId": "568",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1681",
+      "comment": "init ",
+      "version": 0,
+      "creationDate": "2022-09-18T19:02:41.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "operation": "RENAME_PROP",
+            "newPropName": "name",
+            "oldPropName": "key"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <cookie-session> 0.key:any 0.name:undefined",
+      "unknownAccessPathQuestion": "Is the caller the default function from cookie-session and is it called with an option object where the key property is defined?"
+    },
+    "semanticPatchId": "1681",
+    "breakingChangeId": "568",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "read <cookie-session>?.session.populated",
+      "unknownAccessPathQuestion": "Is the populated property read off the session property of a request object created by cookie-session?"
+    },
+    "semanticPatchId": "1685",
+    "breakingChangeId": "566",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "read <cookie-session>?.session.length",
+      "suggestedFixDescription": "If used to determine if the cookie has been populated, use the  boolean .isPopulated property instead. ",
+      "unknownAccessPathQuestion": "Is the session property read off a request object and created by cookie-session?"
+    },
+    "semanticPatchId": "1686",
+    "breakingChangeId": "572",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1686",
+      "comment": "added test",
+      "version": 0,
+      "creationDate": "2022-09-19T14:57:06.000Z",
+      "detectionPattern": "read <cookie-session>?.session.length",
+      "suggestedFixDescription": "If used to determine if the cookie has been populated, use the boolean .isPopulated property instead. ",
+      "unknownAccessPathQuestion": "Is the session property read off a request object and created by cookie-session?"
+    },
+    "semanticPatchId": "1686",
+    "breakingChangeId": "572",
+    "enabled": true,
+    "comment": "added test"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "read <cookie-session>?.sessionKey",
+      "suggestedFixDescription": "The sessionKey property was the name of the cookie, and if it's not specified it defaulted to express:sess.",
+      "unknownAccessPathQuestion": "Is the sessionKey property read off a request object?"
+    },
+    "semanticPatchId": "1687",
+    "breakingChangeId": "573",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1685",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-19T14:47:08.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.isPopulated",
+        "replacements": []
+      },
+      "detectionPattern": "read <cookie-session>?.session.populated",
+      "unknownAccessPathQuestion": "Is the populated property read off the session property of a request object created by cookie-session?"
+    },
+    "semanticPatchId": "1685",
+    "breakingChangeId": "566",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1680",
+      "comment": "If both the name and key property is undefined, the default name, express:sess, is used ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-18T11:57:00.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "express:sess",
+            "propName": "name",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <cookie-session> 0.name:undefined 0.key:undefined",
+      "unknownAccessPathQuestion": "Is the caller the default function from cookie-session?"
+    },
+    "semanticPatchId": "1680",
+    "breakingChangeId": "567",
+    "enabled": true,
+    "comment": "If both the name and key property is undefined, the default name, express:sess, is used "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <cookie-session>?.session.save",
+      "unknownAccessPathQuestion": "Is the save method called from the session property?"
+    },
+    "semanticPatchId": "1704",
+    "breakingChangeId": "591",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1704",
+      "comment": "updated unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-27T16:23:16.000Z",
+      "detectionPattern": "call <cookie-session>?.session.save",
+      "unknownAccessPathQuestion": "Is the save method called from the session property defined by cookie-session?"
+    },
+    "semanticPatchId": "1704",
+    "breakingChangeId": "591",
+    "enabled": true,
+    "comment": "updated unknown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1704",
+      "comment": "Added suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-01T12:12:37.000Z",
+      "detectionPattern": "call <cookie-session>?.session.save",
+      "suggestedFixDescription": "This is done automatically if there has been a change made to the session when the Node.js response headers are being written to the client and the session was not destroyed.",
+      "unknownAccessPathQuestion": "Is the save method called from the session property defined by cookie-session?"
+    },
+    "semanticPatchId": "1704",
+    "breakingChangeId": "591",
+    "enabled": true,
+    "comment": "Added suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1680",
+      "comment": "Updated object modifier to use string representation of the value to add",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-22T06:29:43.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "\"express:sess\"",
+            "propName": "name",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <cookie-session> 0.name:undefined 0.key:undefined",
+      "unknownAccessPathQuestion": "Is the caller the default function from cookie-session?"
+    },
+    "semanticPatchId": "1680",
+    "breakingChangeId": "567",
+    "enabled": true,
+    "comment": "Updated object modifier to use string representation of the value to add"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1680",
+      "comment": "Use single quotes in object modifier value",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-10-10T08:23:58.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "'express:sess'",
+            "propName": "name",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <cookie-session> 0.name:undefined 0.key:undefined",
+      "unknownAccessPathQuestion": "Is the caller the default function from cookie-session?"
+    },
+    "semanticPatchId": "1680",
+    "breakingChangeId": "567",
+    "enabled": true,
+    "comment": "Use single quotes in object modifier value"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1704",
+      "comment": "Added ** to detectionPattern",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-10-01T12:14:42.000Z",
+      "detectionPattern": "call <cookie-session>**?.session.save",
+      "suggestedFixDescription": "This is done automatically if there has been a change made to the session when the Node.js response headers are being written to the client and the session was not destroyed.",
+      "unknownAccessPathQuestion": "Is the save method called from the session property defined by cookie-session?"
+    },
+    "semanticPatchId": "1704",
+    "breakingChangeId": "591",
+    "enabled": true,
+    "comment": "Added ** to detectionPattern"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1686",
+      "comment": "Added ** to detection pattern",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-19T14:58:27.000Z",
+      "detectionPattern": "read <cookie-session>**?.session.length",
+      "suggestedFixDescription": "If used to determine if the cookie has been populated, use the boolean .isPopulated property instead. ",
+      "unknownAccessPathQuestion": "Is the session property read off a request object and created by cookie-session?"
+    },
+    "semanticPatchId": "1686",
+    "breakingChangeId": "572",
+    "enabled": true,
+    "comment": "Added ** to detection pattern"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1685",
+      "comment": "Updated detection pattern",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-22T06:26:17.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.isPopulated",
+        "replacements": []
+      },
+      "detectionPattern": "read <cookie-session>**?.session.populated",
+      "unknownAccessPathQuestion": "Is the populated property read off the session property of a request object created by cookie-session?"
+    },
+    "semanticPatchId": "1685",
+    "breakingChangeId": "566",
+    "enabled": true,
+    "comment": "Updated detection pattern"
+  }
+]

@@ -1,0 +1,199 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Init",
+      "detectionPattern": "import uuid.**",
+      "unknownAccessPathQuestion": "Is this a deep import from uuid?"
+    },
+    "semanticPatchId": "1571",
+    "breakingChangeId": "428",
+    "enabled": true,
+    "comment": "Init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Init",
+      "primaryTemplate": {
+        "pattern": "<uuid>.v4",
+        "replacements": []
+      },
+      "detectionPattern": "importD uuid",
+      "unknownAccessPathQuestion": "Is this a default import from uuid?"
+    },
+    "semanticPatchId": "1570",
+    "breakingChangeId": "427",
+    "enabled": true,
+    "comment": "Init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1570",
+      "comment": "Init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-13T11:22:19.000Z",
+      "primaryTemplate": {
+        "pattern": "<uuid>.v4",
+        "replacements": []
+      },
+      "detectionPattern": "importD uuid",
+      "unknownAccessPathQuestion": "Is this a default import from uuid?"
+    },
+    "semanticPatchId": "1570",
+    "breakingChangeId": "427",
+    "enabled": true,
+    "comment": "Init "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1571",
+      "comment": "Init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-13T11:38:35.000Z",
+      "detectionPattern": "import uuid/**",
+      "unknownAccessPathQuestion": "Is this a deep import from uuid?"
+    },
+    "semanticPatchId": "1571",
+    "breakingChangeId": "428",
+    "enabled": true,
+    "comment": "Init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "initial",
+      "detectionPattern": "import uuid/{v3,v5}",
+      "suggestedFixDescription": "There is no easy fix for this. You will either need to update Node.js to atleast version 4 or use another UUID version.",
+      "unknownAccessPathQuestion": "Is this an import from uuid?"
+    },
+    "semanticPatchId": "1576",
+    "breakingChangeId": "433",
+    "enabled": true,
+    "comment": "initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1576",
+      "comment": "initial ",
+      "version": 0,
+      "creationDate": "2022-06-13T13:30:18.000Z",
+      "detectionPattern": "readO <uuid>.{v5,v3}",
+      "suggestedFixDescription": "There is no easy fix for this. You will either need to update Node.js to atleast version 4 or use another UUID version.",
+      "unknownAccessPathQuestion": "Is this an import from uuid?"
+    },
+    "semanticPatchId": "1576",
+    "breakingChangeId": "433",
+    "enabled": true,
+    "comment": "initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Inital",
+      "detectionPattern": "import uuid/{v3,v5}",
+      "suggestedFixDescription": "There is no easy fix for this. You will either need to update Node.js to atleast version 4 or use another UUID version.",
+      "unknownAccessPathQuestion": "Is this an import from uuid?"
+    },
+    "semanticPatchId": "1577",
+    "breakingChangeId": "433",
+    "enabled": true,
+    "comment": "Inital"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1577",
+      "comment": "This is not used, since it's matches is covered by the other semantic patch ",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-06-13T13:44:21.000Z",
+      "detectionPattern": "import uuid/{v3,v5}",
+      "unknownAccessPathQuestion": "Is this an import from uuid?"
+    },
+    "semanticPatchId": "1577",
+    "breakingChangeId": "433",
+    "enabled": false,
+    "comment": "This is not used, since it's matches is covered by the other semantic patch "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1577",
+      "comment": "Init ",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-06-13T13:44:21.000Z",
+      "detectionPattern": "import uuid/{v3,v5}",
+      "suggestedFixDescription": "There is no easy fix for this. You will either need to update Node.js to atleast version 4 or use another UUID version.",
+      "unknownAccessPathQuestion": "Is this an import from uuid?"
+    },
+    "semanticPatchId": "1577",
+    "breakingChangeId": "433",
+    "enabled": false,
+    "comment": "Init "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1571",
+      "comment": "Init",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-13T12:37:36.000Z",
+      "detectionPattern": "import uuid/**",
+      "suggestedFixDescription": "For ESM use something like \"import { v4 as uuidv4 } from 'uuid';\" and for CommonJs use something like \"const { v4: uuidv4 } = require('uuid');\"",
+      "unknownAccessPathQuestion": "Is this a deep import from uuid?"
+    },
+    "semanticPatchId": "1571",
+    "breakingChangeId": "428",
+    "enabled": true,
+    "comment": "Init"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1571",
+      "comment": "code template added",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-06-14T13:23:20.000Z",
+      "primaryTemplate": {
+        "pattern": "<uuid>.#1",
+        "replacements": []
+      },
+      "detectionPattern": "import uuid/*",
+      "suggestedFixDescription": "For ESM use something like \"import { v4 as uuidv4 } from 'uuid';\" and for CommonJs use something like \"const { v4: uuidv4 } = require('uuid');\"",
+      "unknownAccessPathQuestion": "Is this a deep import from uuid?"
+    },
+    "semanticPatchId": "1571",
+    "breakingChangeId": "428",
+    "enabled": true,
+    "comment": "code template added"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1571",
+      "comment": "Removed suggested fix, since we have a code template for this semantic patch ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-06-20T09:59:46.000Z",
+      "primaryTemplate": {
+        "pattern": "<uuid>.#1",
+        "replacements": []
+      },
+      "detectionPattern": "import uuid/*",
+      "unknownAccessPathQuestion": "Is this a deep import from uuid?"
+    },
+    "semanticPatchId": "1571",
+    "breakingChangeId": "428",
+    "enabled": true,
+    "comment": "Removed suggested fix, since we have a code template for this semantic patch "
+  }
+]

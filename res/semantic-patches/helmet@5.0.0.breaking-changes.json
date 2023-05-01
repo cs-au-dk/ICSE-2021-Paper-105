@@ -1,0 +1,79 @@
+[
+  {
+    "id": "840",
+    "packageVersion": "5.0.0",
+    "packageName": "helmet",
+    "description": " helmet.contentSecurityPolicy: useDefaults option now defaults to true",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "842",
+    "packageVersion": "5.0.0",
+    "packageName": "helmet",
+    "description": "helmet.contentSecurityPolicy: form-action directive is now set to 'self' by default",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "845",
+    "packageVersion": "5.0.0",
+    "packageName": "helmet",
+    "description": "Breaking: helmet.crossOriginEmbedderPolicy is enabled by default",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "846",
+    "packageVersion": "5.0.0",
+    "packageName": "helmet",
+    "description": "Breaking: helmet.crossOriginOpenerPolicy is enabled by default",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "847",
+    "packageVersion": "5.0.0",
+    "packageName": "helmet",
+    "description": "Breaking: helmet.crossOriginResourcePolicy is enabled by default",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "848",
+    "packageVersion": "5.0.0",
+    "packageName": "helmet",
+    "description": "Breaking: helmet.originAgentCluster is enabled by default",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "849",
+    "packageVersion": "5.0.0",
+    "packageName": "helmet",
+    "description": "Breaking: Drop support for Node 10 and 11. Node 12+ is now required",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

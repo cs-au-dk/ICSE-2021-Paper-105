@@ -1,0 +1,77 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <mustache>.{to_html,render}",
+      "suggestedFixDescription": "Only breaking if you include primitive types (like Array.length or String.length) in your template: These primitive types used to not be included, but will be from version 3.0.0. Previously these types had no impact on the template, hence you can just remove these, if you don’t want to include the value.For an example see: https://github.com/janl/mustache.js/blob/master/CHANGELOG.md#rendering-properties-of-primitive-types  ",
+      "unknownAccessPathQuestion": "Is this a call of the to_html() or render method of the mustache package?"
+    },
+    "semanticPatchId": "1654",
+    "breakingChangeId": "534",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <mustache>.parse [2:4]",
+      "suggestedFixDescription": "Instead of using the second argument of .parse() to provide custom delimiters, you should now use the fourth argument of the .render() function. If you still need to pre-parse the template and use custom delimiters at the same time, ensure to provide the custom delimiters as an argument to .render() as well.To not use the third optional ‘partials’ argument for .render() parse an empty object ‘{}’ instead.",
+      "unknownAccessPathQuestion": "Is this a call of the parse() method of the mustache package?"
+    },
+    "semanticPatchId": "1655",
+    "breakingChangeId": "535",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1655",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-08-31T11:16:00.000Z",
+      "detectionPattern": "call <mustache>.parse [2:2]",
+      "suggestedFixDescription": "Instead of using the second argument of .parse() to provide custom delimiters, you should now use the fourth argument of the .render() function. If you still need to pre-parse the template and use custom delimiters at the same time, ensure to provide the custom delimiters as an argument to .render() as well.To not use the third optional ‘partials’ argument for .render() parse an empty object ‘{}’ instead.",
+      "unknownAccessPathQuestion": "Is this a call of the parse() method of the mustache package?"
+    },
+    "semanticPatchId": "1655",
+    "breakingChangeId": "535",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1655",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-08-31T11:16:31.000Z",
+      "detectionPattern": "call <mustache>.parse [2,2]",
+      "suggestedFixDescription": "Instead of using the second argument of .parse() to provide custom delimiters, you should now use the fourth argument of the .render() function. If you still need to pre-parse the template and use custom delimiters at the same time, ensure to provide the custom delimiters as an argument to .render() as well.To not use the third optional ‘partials’ argument for .render() parse an empty object ‘{}’ instead.",
+      "unknownAccessPathQuestion": "Is this a call of the parse() method of the mustache package?"
+    },
+    "semanticPatchId": "1655",
+    "breakingChangeId": "535",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1654",
+      "comment": "Fixed typo in suggested fix description",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-08-31T10:53:09.000Z",
+      "detectionPattern": "call <mustache>.{to_html,render}",
+      "suggestedFixDescription": "Only breaking if you include primitive types (like Array.length or String.length) in your template: These primitive types used to not be included, but will be from version 3.0.0. Previously these types had no impact on the template, hence you can just remove these, if you don’t want to include the value. For an example see: https://github.com/janl/mustache.js/blob/master/CHANGELOG.md#rendering-properties-of-primitive-types.",
+      "unknownAccessPathQuestion": "Is this a call of the to_html() or render method of the mustache package?"
+    },
+    "semanticPatchId": "1654",
+    "breakingChangeId": "534",
+    "enabled": true,
+    "comment": "Fixed typo in suggested fix description"
+  }
+]

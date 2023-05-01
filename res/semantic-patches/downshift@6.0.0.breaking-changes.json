@@ -1,0 +1,57 @@
+[
+  {
+    "id": "421",
+    "packageVersion": "6.0.0",
+    "packageName": "downshift",
+    "description": "Update TS typings for selectedItem to accept null in both useSelect and useCombobox",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "422",
+    "packageVersion": "6.0.0",
+    "packageName": "downshift",
+    "description": "Update TS typings for itemToString to accept null for the item parameter, in useSelect and useCombobox + in Downshift where this was missing",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "425",
+    "packageVersion": "6.0.0",
+    "packageName": "downshift",
+    "description": "Pass type to the onChange (onInputValueChange, onHighlightedIndexChange, onSelectedItemChange, onIsOpenChange) handler parameters, as specified in the documentation.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "445",
+    "packageVersion": "6.0.0",
+    "packageName": "downshift",
+    "description": "[useCombobox behaviour]: When an item is highlighted by keyboard and user closes the menu using mouse/touch, the item is not selected anymore. The only selection on Blur happens using either Tab / Shift+Tab. See PR for more information: https://github.com/downshift-js/downshift/pull/1109",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "446",
+    "packageVersion": "6.0.0",
+    "packageName": "downshift",
+    "description": "[useCombobox & downshift behaviour]: When pressing Escape and the menu is open, only close the menu. When the menu is closed and there is an item selected and/or text in the input, clear the selectedItem and the inputValue. See PR for more information: https://github.com/downshift-js/downshift/issues/719",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "836",
+    "packageVersion": "1.0.0",
+    "packageName": "axios",
+    "description": "Added enhanced toFormData implementation with additional options",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "837",
+    "packageVersion": "1.0.0",
+    "packageName": "axios",
+    "description": "Added enhanced toFormData implementation with additional options (unlikely breaking change)",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "839",
+    "packageVersion": "1.0.0",
+    "packageName": "axios",
+    "description": "Removed incorrect argument for NetworkError constructor",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "844",
+    "packageVersion": "1.0.0",
+    "packageName": "axios",
+    "description": "Axiom v1.x conflicts with Jest.\nThis can only be breaking if you are using jest to run your tests.\nThis is due to jest not supporting the `exports` field in the package.json (see [jest issue](https://github.com/facebook/jest/issues/9771)).\nInstead of waiting for `resolve` to support the `exports` field (see [resolve issue](https://github.com/browserify/resolve/issues/222)) there are some things you can try yourself to be able to use axiom v1.x:\n(1) If possible, update jest to version >29.2.1 (see [comment proposing solution](https://github.com/axios/axios/issues/5026#issuecomment-1288528794))\n(2) Add `--transformIgnorePatterns \\\"node_modules/(?!axios)/\\\"\"` as an inline argument to the jest script in the package.json (see [comment proposing solution](https://github.com/axios/axios/issues/5026#issuecomment-1271194848))\n(3) Add `transformIgnorePatterns: ['/node_modules/(?!(axios)/)']` to the jest config, either in the `jest.config.js` or you can add this to the `package.json` directly under the `jest` field (see [comment proposing solution](https://github.com/axios/axios/issues/5026#issuecomment-1271953176))\n(4) Adding `'^axios$': require.resolve('axios'),` to the [moduleNameMapper](https://jestjs.io/docs/configuration#modulenamemapper-objectstring-string--arraystring) configuration in jest. Again either in `jest.config.js` or `package.json`. Potentially combine this with solution 5 (see [comment proposing solution](https://github.com/axios/axios/issues/5101#issuecomment-1276572468))\n(5) If nothing else has helped, try upgrading to `axios@1.2.0-alpha.1`. (see [comment proposing solution](https://github.com/axios/axios/issues/5026#issuecomment-1310793004))",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

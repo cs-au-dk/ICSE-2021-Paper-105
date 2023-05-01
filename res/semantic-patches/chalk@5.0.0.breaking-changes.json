@@ -1,0 +1,57 @@
+[
+  {
+    "id": "252",
+    "packageVersion": "5.0.0",
+    "packageName": "chalk",
+    "description": "Require Node.js 12.20",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "254",
+    "packageVersion": "5.0.0",
+    "packageName": "chalk",
+    "description": "Move some properties off the default export to individual named exports",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "255",
+    "packageVersion": "5.0.0",
+    "packageName": "chalk",
+    "description": "Remove .keyword(), .hsl(), .hsv(), .hwb(), and .ansi() coloring methods\nThese were not commonly used and added a lot of bloat to Chalk. ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "256",
+    "packageVersion": "5.0.0",
+    "packageName": "chalk",
+    "description": "The tagged template literal support moved into a separate package: chalk-template",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "253",
+    "packageVersion": "5.0.0",
+    "packageName": "chalk",
+    "description": "This package is now pure ESM.\nIf you use TypeScript, you will want to stay on Chalk 4 until TypeScript 4.6 is out.\nIf you use a bundler, make sure it supports ESM and that you have correctly configured it for ESM.\nThe Chalk issue tracker is not a support channel for your favorite build/bundler tool.\nIt's totally fine to stay on Chalk v4. It's been stable for years.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

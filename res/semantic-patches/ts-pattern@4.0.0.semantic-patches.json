@@ -1,0 +1,561 @@
+[
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1600",
+      "comment": "Removed ",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-07-03T14:59:54.000Z",
+      "detectionPattern": "read <removed>.a",
+      "unknownAccessPathQuestion": "Is the \"__\" function from ts-pattern?"
+    },
+    "semanticPatchId": "1600",
+    "breakingChangeId": "461",
+    "enabled": false,
+    "comment": "Removed "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <ts-pattern>.__.NaN",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "NaN",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.NaN",
+      "unknownAccessPathQuestion": "Is the \"__\" function from ts-pattern?"
+    },
+    "semanticPatchId": "1605",
+    "breakingChangeId": "464",
+    "enabled": true,
+    "comment": "read <ts-pattern>.__.NaN"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <ts-pattern>.Pattern",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.Pattern",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.Pattern",
+      "unknownAccessPathQuestion": "Is the type Pattern from ts-pattern?"
+    },
+    "semanticPatchId": "1606",
+    "breakingChangeId": "465",
+    "enabled": true,
+    "comment": "read <ts-pattern>.Pattern"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <ts-pattern>.__.string",
+      "detectionPattern": "read <ts-pattern>.__.string",
+      "unknownAccessPathQuestion": "is hte wildcard (__) function from ts-pattern"
+    },
+    "semanticPatchId": "1599",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "read <ts-pattern>.__.string"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1599",
+      "comment": "made code template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-29T15:14:02.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.Pattern.string",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.string",
+      "unknownAccessPathQuestion": "Is the wildcard (__) function from ts-pattern"
+    },
+    "semanticPatchId": "1599",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "made code template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <ts-pattern>.__.number",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.Pattern.number",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.number",
+      "unknownAccessPathQuestion": "Is the wildcard function (__) from ts-pattern?"
+    },
+    "semanticPatchId": "1600",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "read <ts-pattern>.__.number"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1600",
+      "comment": "made test",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-29T15:19:26.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.Pattern.number",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.number",
+      "unknownAccessPathQuestion": "Is the wildcard function (__) from ts-pattern?"
+    },
+    "semanticPatchId": "1600",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "made test"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <ts-pattern>.__",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.any",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__",
+      "unknownAccessPathQuestion": "Is the export \"__\" from ts-pattern"
+    },
+    "semanticPatchId": "1601",
+    "breakingChangeId": "462",
+    "enabled": true,
+    "comment": "read <ts-pattern>.__"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1601",
+      "comment": "made test",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-29T15:25:44.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.any",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__",
+      "unknownAccessPathQuestion": "Is the export \"__\" from ts-pattern"
+    },
+    "semanticPatchId": "1601",
+    "breakingChangeId": "462",
+    "enabled": true,
+    "comment": "made test"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <ts-pattern>.select",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.select",
+        "replacements": []
+      },
+      "detectionPattern": "call <ts-pattern>.select",
+      "unknownAccessPathQuestion": "Is the select function from ts-pattern?"
+    },
+    "semanticPatchId": "1602",
+    "breakingChangeId": "463",
+    "enabled": true,
+    "comment": "call <ts-pattern>.select"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1602",
+      "comment": "update code template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-29T15:32:33.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.select($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <ts-pattern>.select",
+      "unknownAccessPathQuestion": "Is the select function from ts-pattern?"
+    },
+    "semanticPatchId": "1602",
+    "breakingChangeId": "463",
+    "enabled": true,
+    "comment": "update code template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <ts-pattern>.not",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.not($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <ts-pattern>.not",
+      "unknownAccessPathQuestion": "Is the not function from ts-pattern?"
+    },
+    "semanticPatchId": "1603",
+    "breakingChangeId": "463",
+    "enabled": true,
+    "comment": "call <ts-pattern>.not"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <ts-pattern>.when",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.when($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <ts-pattern>.when",
+      "unknownAccessPathQuestion": "Is the when function from ts-pattern?"
+    },
+    "semanticPatchId": "1604",
+    "breakingChangeId": "463",
+    "enabled": true,
+    "comment": "call <ts-pattern>.when"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1602",
+      "comment": "update semantic patch",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-29T15:39:12.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.select",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.select",
+      "unknownAccessPathQuestion": "Is the select function from ts-pattern?"
+    },
+    "semanticPatchId": "1602",
+    "breakingChangeId": "463",
+    "enabled": true,
+    "comment": "update semantic patch"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1603",
+      "comment": "update semantic patch",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-29T15:40:50.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.not",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.not",
+      "unknownAccessPathQuestion": "Is the not function from ts-pattern?"
+    },
+    "semanticPatchId": "1603",
+    "breakingChangeId": "463",
+    "enabled": true,
+    "comment": "update semantic patch"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1604",
+      "comment": "update semantic patch",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-29T15:47:57.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.when",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.when",
+      "unknownAccessPathQuestion": "Is the when function from ts-pattern?"
+    },
+    "semanticPatchId": "1604",
+    "breakingChangeId": "463",
+    "enabled": true,
+    "comment": "update semantic patch"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1606",
+      "comment": "read <ts-pattern>.Pattern ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-29T17:13:24.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.Pattern",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.Pattern",
+      "unknownAccessPathQuestion": "Is the type Pattern from ts-pattern?"
+    },
+    "semanticPatchId": "1606",
+    "breakingChangeId": "465",
+    "enabled": true,
+    "comment": "read <ts-pattern>.Pattern "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1599",
+      "comment": "made code template ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-29T15:17:54.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.Pattern.string",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.string",
+      "unknownAccessPathQuestion": "Is the wildcard (__) function from ts-pattern?"
+    },
+    "semanticPatchId": "1599",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "made code template "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1599",
+      "comment": "made code template  ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-06-29T17:14:42.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.Pattern.string",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.string",
+      "unknownAccessPathQuestion": "Is the \"__\" function from ts-pattern?"
+    },
+    "semanticPatchId": "1599",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "made code template  "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1600",
+      "comment": "updated question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-29T15:23:12.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.Pattern.number",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.number",
+      "unknownAccessPathQuestion": "Is the \"__\" function from ts-pattern?"
+    },
+    "semanticPatchId": "1600",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "updated question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1601",
+      "comment": "Updated question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-29T15:26:43.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.any",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__",
+      "unknownAccessPathQuestion": "Is the export \"__\" from ts-pattern?"
+    },
+    "semanticPatchId": "1601",
+    "breakingChangeId": "462",
+    "enabled": true,
+    "comment": "Updated question"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1599",
+      "comment": "merged the semantic patches",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-06-29T17:15:17.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.Pattern.#0",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.{string,number,boolean,nullish}",
+      "unknownAccessPathQuestion": "Is the \"__\" function from ts-pattern?"
+    },
+    "semanticPatchId": "1599",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "merged the semantic patches"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1599",
+      "comment": "merged the semantic patches ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-07-03T14:51:02.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.#1",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.{string,number,boolean,nullish}",
+      "unknownAccessPathQuestion": "Is the \"__\" function from ts-pattern?"
+    },
+    "semanticPatchId": "1599",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "merged the semantic patches "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1599",
+      "comment": "merged the semantic patches",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-07-03T14:55:21.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.__.{string,number,boolean,nullish}",
+      "unknownAccessPathQuestion": "Is the \"__\" function from ts-pattern?"
+    },
+    "semanticPatchId": "1599",
+    "breakingChangeId": "461",
+    "enabled": true,
+    "comment": "merged the semantic patches"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1600",
+      "comment": "Removed",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-06-29T17:15:41.000Z",
+      "detectionPattern": "read <ts.pattern>.a",
+      "unknownAccessPathQuestion": "Is the \"__\" function from ts-pattern?"
+    },
+    "semanticPatchId": "1600",
+    "breakingChangeId": "461",
+    "enabled": false,
+    "comment": "Removed"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1602",
+      "comment": "merged sematic patches ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-03T15:00:53.000Z",
+      "primaryTemplate": {
+        "pattern": "<ts-pattern>.P.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <ts-pattern>.{select,not,when}",
+      "unknownAccessPathQuestion": "Is the select function from ts-pattern?"
+    },
+    "semanticPatchId": "1602",
+    "breakingChangeId": "463",
+    "enabled": true,
+    "comment": "merged sematic patches "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1603",
+      "comment": "Removed",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-29T15:52:22.000Z",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "read <rem>.not",
+      "unknownAccessPathQuestion": "Is the not function from ts-pattern?"
+    },
+    "semanticPatchId": "1603",
+    "breakingChangeId": "463",
+    "enabled": true,
+    "comment": "Removed"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1604",
+      "comment": "Removed",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-06-29T15:53:12.000Z",
+      "detectionPattern": "read <rem>.when",
+      "unknownAccessPathQuestion": "Is the when function from ts-pattern?"
+    },
+    "semanticPatchId": "1604",
+    "breakingChangeId": "463",
+    "enabled": false,
+    "comment": "Removed"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <ts-pattern>.with 0:{object,array}",
+      "detectionPattern": "call <ts-pattern>.with 0:{object,array}",
+      "unknownAccessPathQuestion": "Is the with functions from ts-pattern and does it contain an array?"
+    },
+    "semanticPatchId": "1612",
+    "breakingChangeId": "466",
+    "enabled": true,
+    "comment": "call <ts-pattern>.with 0:{object,array}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1612",
+      "comment": "call <ts-pattern>.match.with 0:{object,array}",
+      "version": 0,
+      "creationDate": "2022-07-03T15:15:05.000Z",
+      "detectionPattern": "call <ts-pattern>.match.with 0:{object,array}",
+      "unknownAccessPathQuestion": "Is the with functions from ts-pattern and does it contain an array?"
+    },
+    "semanticPatchId": "1612",
+    "breakingChangeId": "466",
+    "enabled": true,
+    "comment": "call <ts-pattern>.match.with 0:{object,array}"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1612",
+      "comment": "call <ts-pattern>.match().with 0:{object,array} ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-03T15:24:21.000Z",
+      "detectionPattern": "call <ts-pattern>.match().with 0:{object,array} ",
+      "unknownAccessPathQuestion": "Is the with functions from ts-pattern and does it contain an array?"
+    },
+    "semanticPatchId": "1612",
+    "breakingChangeId": "466",
+    "enabled": true,
+    "comment": "call <ts-pattern>.match().with 0:{object,array} "
+  }
+]

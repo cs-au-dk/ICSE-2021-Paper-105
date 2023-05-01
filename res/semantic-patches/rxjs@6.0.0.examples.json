@@ -1,0 +1,9 @@
+[
+  {
+    "id": "12",
+    "breakingChangeId": "160",
+    "title": "Rxjs 6.0.0: Introducing pipe",
+    "description": "In version 6 of rxjs, chaining operators where removed, i.e., the take and map methods in the code. Instead the operators should be called through a pipe call, where the operators are then given as argument.",
+    "codeExample": "import { Subject } from 'rxjs';\n(new Subject()).take(1).map(x => x);"
+  }
+]

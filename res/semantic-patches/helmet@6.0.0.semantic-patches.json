@@ -1,0 +1,538 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    contentSecurityPolicy:{ block-all-mixed-content: [] },\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [0,0]",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2300",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "{ block-all-mixed-content: [] }",
+            "propName": "contentSecurityPolicy",
+            "operation": "ADD_PROP"
+          },
+          {
+            "propName": "contentSecurityPolicy",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0:contentSecurityPolicy:{undefined,true}",
+      "unknownAccessPathQuestion": "Is this a call of the default helmet method?"
+    },
+    "semanticPatchId": "2301",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2301",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-13T07:24:17.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "{ block-all-mixed-content: [] }",
+            "propName": "contentSecurityPolicy",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0:contentSecurityPolicy:{undefined,true}",
+      "unknownAccessPathQuestion": "Is this a call of the default helmet method?"
+    },
+    "semanticPatchId": "2301",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2301",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-12-13T07:24:50.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "{ 'block-all-mixed-content': [] }",
+            "propName": "contentSecurityPolicy",
+            "operation": "ADD_PROP"
+          },
+          {
+            "propName": "contentSecurityPolicy",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:{undefined,true}",
+      "unknownAccessPathQuestion": "Is this a call of the default helmet method?"
+    },
+    "semanticPatchId": "2301",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1.value": [
+          {
+            "value": "[]",
+            "propName": "block-all-mixed-content",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0:contentSecurityPolicy:object ",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2302",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2302",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-13T07:30:46.000Z",
+      "objectModifiers": {
+        "$1.value": [
+          {
+            "value": "[]",
+            "propName": "block-all-mixed-content",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:object ",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2302",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2302",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-12-13T07:31:59.000Z",
+      "objectModifiers": {
+        "$1.0": [
+          {
+            "value": "[]",
+            "propName": "block-all-mixed-content",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:object ",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2302",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    expectCt: true,\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [0,0] ",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2306",
+    "breakingChangeId": "851",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2302",
+      "comment": "This ObjMod currently doesn't work. I'm not sure how to get the reference to the object of a property in an arguments object (see test)",
+      "version": 3,
+      "creationDate": "2022-12-13T07:41:35.000Z",
+      "objectModifiers": {
+        "0.value": [
+          {
+            "value": "[]",
+            "propName": "'block-all-mixed-content'",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:object ",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2302",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "This ObjMod currently doesn't work. I'm not sure how to get the reference to the object of a property in an arguments object (see test)"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "2302",
+      "comment": "Initial",
+      "version": 3,
+      "creationDate": "2022-12-13T07:41:35.000Z",
+      "objectModifiers": {
+        "$1.contentSecurityPolicy": [
+          {
+            "value": "[]",
+            "propName": "'block-all-mixed-content'",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.contentSecurityPolicy:object ",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2302",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee({\n    ‘block-all-mixed-content’: [],\n  }\n)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet>.contentSecurityPolicy [0,0]",
+      "unknownAccessPathQuestion": "Is this a call of the contentSecurityPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2304",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2304",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-13T07:55:56.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee({\n   'block-all-mixed-content': [],\n})",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet>.contentSecurityPolicy [0,0]",
+      "unknownAccessPathQuestion": "Is this a call of the contentSecurityPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2304",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "This is missing the filter: 0.block-all-mixed-content:undefined",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "[]",
+            "propName": "'block-all-mixed-content'",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet>.contentSecurityPolicy [1,1]",
+      "unknownAccessPathQuestion": "Is this a call of the contentSecurityPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2305",
+    "breakingChangeId": "850",
+    "enabled": true,
+    "comment": "This is missing the filter: 0.block-all-mixed-content:undefined"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "true",
+            "propName": "expectCt",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <helmet> [1,1] 0.expectCt:undefined",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2307",
+    "breakingChangeId": "851",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet> [1,1] 0.crossOriginEmbedderPolicy.policy:!require-corp ",
+      "unknownAccessPathQuestion": "Is this a call of the default helmet method?"
+    },
+    "semanticPatchId": "2308",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2308",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-13T08:27:31.000Z",
+      "detectionPattern": "call <helmet> [1,1] 0.crossOriginEmbedderPolicy.policy:!\"require-corp\"",
+      "unknownAccessPathQuestion": "Is this a call of the default helmet method?"
+    },
+    "semanticPatchId": "2308",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2308",
+      "comment": "Initial  ",
+      "version": 1,
+      "creationDate": "2022-12-13T08:27:40.000Z",
+      "detectionPattern": "call <helmet> [1,1] 0.crossOriginEmbedderPolicy.policy:string",
+      "suggestedFixDescription": "This is only breaking if $1.crossOriginEmbedderPolicy.policy is either \"require-corp\" or \"credentialless\". These two values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the default helmet method?"
+    },
+    "semanticPatchId": "2308",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2308",
+      "comment": "Initial ",
+      "version": 2,
+      "creationDate": "2022-12-13T08:40:48.000Z",
+      "detectionPattern": "call <helmet> [1,1] 0.crossOriginEmbedderPolicy.policy:string",
+      "suggestedFixDescription": "This is only breaking if the crossOriginEmbedderPolicy `policy` is not either \"require-corp\" or \"credentialless\". \nThese two values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the default helmet method?"
+    },
+    "semanticPatchId": "2308",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet>.crossOriginEmbedderPolicy [1,1] 0.policy:string",
+      "suggestedFixDescription": "This is only breaking if the crossOriginEmbedderPolicy `policy` is not either \"require-corp\" or \"credentialless\".",
+      "unknownAccessPathQuestion": "Is this a call of the crossOriginEmbedderPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2309",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet> [1,1] 0.CrossOriginOpenerPolicy.policy:string",
+      "suggestedFixDescription": "This is only breaking if the CrossOriginOpenerPolicy `policy` is not either \"same-origin\", \"same-origin-allow-popups\" or \"unsafe-none\". \nThese three values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2310",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2309",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-12-13T08:43:45.000Z",
+      "detectionPattern": "call <helmet>.crossOriginEmbedderPolicy [1,1] 0.policy:string",
+      "suggestedFixDescription": "This is only breaking if the crossOriginEmbedderPolicy `policy` is not either \"require-corp\" or \"credentialless\". \nThese two values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the crossOriginEmbedderPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2309",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet>.CrossOriginOpenerPolicy [1,1] 0.policy:string",
+      "suggestedFixDescription": "This is only breaking if the CrossOriginOpenerPolicy `policy` is not either \"same-origin\", \"same-origin-allow-popups\" or \"unsafe-none\". \nThese three values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the CrossOriginOpenerPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2311",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet> [1,1] 0.CrossOriginResourcePolicy.policy:string",
+      "suggestedFixDescription": "This is only breaking if the CrossOriginResourcePolicy `policy` is not either \"same-origin\",  \"same-site\" or  \"cross-origin\". \nThese three values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the default method from the helmet package?"
+    },
+    "semanticPatchId": "2312",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet>.CrossOriginResourcePolicy [1,1] 0.policy:string",
+      "suggestedFixDescription": "This is only breaking if the CrossOriginResourcePolicy `policy` is not either \"same-origin\",  \"same-site\" or  \"cross-origin\". \nThese three values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "is this a call of the CrossOriginResourcePolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2313",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet> [1,1] 0.ReferrerPolicy.policy:string",
+      "suggestedFixDescription": "This is only breaking if the ReferrerPolicy `policy` is not one of the following string values:\n\"no-referrer\", \"no-referrer-when-downgrade\", \"same-origin\", \"origin\", \"strict-origin\", \"origin-when-cross-origin\", \"strict-origin-when-cross-origin\", \"unsafe-url\" or \"\".\nThese string values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the default helmet method?"
+    },
+    "semanticPatchId": "2314",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet>.ReferrerPolicy [1,1] 0.policy:string",
+      "suggestedFixDescription": "This is only breaking if the ReferrerPolicy `policy` is not one of the following string values:\n\"no-referrer\", \"no-referrer-when-downgrade\", \"same-origin\", \"origin\", \"strict-origin\", \"origin-when-cross-origin\", \"strict-origin-when-cross-origin\", \"unsafe-url\" or \"\".\nThese string values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the ReferrerPolicy method from the helmet package?"
+    },
+    "semanticPatchId": "2315",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet> [1,1] 0.permittedCrossDomainPolicies.policy:string",
+      "suggestedFixDescription": "This is only breaking if the permittedCrossDomainPolicies `policy` is not either \"none\", \"master-only\", \"by-content-type\" or \"all\". \nThese four string values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the default method fromt he helmet package?"
+    },
+    "semanticPatchId": "2316",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <helmet>.permittedCrossDomainPolicies [1,1] 0.policy:string",
+      "suggestedFixDescription": "This is only breaking if the permittedCrossDomainPolicies `policy` is not either \"none\", \"master-only\", \"by-content-type\" or \"all\". \nThese four string values are the only possible values for this policy, and now any other string value will produce a type error for typescript users.",
+      "unknownAccessPathQuestion": "Is this a call of the permittedCrossDomainPolicies method from the helmet package?"
+    },
+    "semanticPatchId": "2317",
+    "breakingChangeId": "853",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

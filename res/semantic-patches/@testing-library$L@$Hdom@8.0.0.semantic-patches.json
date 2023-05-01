@@ -1,0 +1,622 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$base.waitFor(() => {}, $args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.waitForDomChange",
+      "unknownAccessPathQuestion": "Is this a call to the waitForDomChange method from @testing-library/dom?"
+    },
+    "semanticPatchId": "1634",
+    "breakingChangeId": "511",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1634",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-31T17:12:20.000Z",
+      "primaryTemplate": {
+        "pattern": "<@testing-library/dom>.waitFor(() => {}, $args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.waitForDomChange",
+      "unknownAccessPathQuestion": "Is this a call to the waitForDomChange method from @testing-library/dom?"
+    },
+    "semanticPatchId": "1634",
+    "breakingChangeId": "511",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<@testing-library/dom>.waitFor($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom/>.waitForElement",
+      "unknownAccessPathQuestion": "Is this a call of the waitForElement method from @testing-library/dom?"
+    },
+    "semanticPatchId": "1635",
+    "breakingChangeId": "512",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1635",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-31T17:27:44.000Z",
+      "primaryTemplate": {
+        "pattern": "<@testing-library/dom>.waitFor($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.waitForElement",
+      "unknownAccessPathQuestion": "Is this a call of the waitForElement method from @testing-library/dom?"
+    },
+    "semanticPatchId": "1635",
+    "breakingChangeId": "512",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <@testing-library/dom/>.waitFor [2,2] $2.timeout:number",
+      "unknownAccessPathQuestion": "Is this a call of the waitFor method with the timeout option set from @testing-library/dom?"
+    },
+    "semanticPatchId": "1636",
+    "breakingChangeId": "513",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1636",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-08-01T06:31:45.000Z",
+      "detectionPattern": "call <@testing-library/dom>.waitFor [2,2] $1.timeout:number",
+      "unknownAccessPathQuestion": "Is this a call of the waitFor method with the timeout option set from @testing-library/dom?"
+    },
+    "semanticPatchId": "1636",
+    "breakingChangeId": "513",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1636",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-08-01T06:42:39.000Z",
+      "detectionPattern": "call <@testing-library/dom>.waitFor [2,2] $1.timeout:number",
+      "suggestedFixDescription": "We suggest you use the timeout value timeout: Number.POSITIVE_INFINITY, and then rely on your test runner to timeout considering real timers. Otherwise you should go through the waitFor calls and test that the timeout values are still appropriate for what timeout functionality you want.",
+      "unknownAccessPathQuestion": "Is this a call of the waitFor method with the timeout option set from @testing-library/dom?"
+    },
+    "semanticPatchId": "1636",
+    "breakingChangeId": "513",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "objectModifiers": {
+        "$1": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDom",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1637",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1637",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-08-01T08:02:53.000Z",
+      "objectModifiers": {
+        "$-1": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,3] $-1:object",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1637",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1637",
+      "comment": "Initial  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-08-01T08:15:53.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,3] $2:object",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1637",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1637",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-08-01T09:10:31.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,3] $2:object",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1637",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1637",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-08-01T09:11:19.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [3,3] $2:object",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1637",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,2] $1:object",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1638",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1638",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-08-01T09:43:42.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ],
+        "$3": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,2] $1:object",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1638",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1638",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-08-01T09:45:03.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,2] $1:object",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1638",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee($args,  { filterNode: () => true })",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [1,2] $2:number",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1639",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1639",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-08-01T09:51:48.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args,  { filterNode: () => true })",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [1,2] $1:number",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1639",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1639",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-08-01T09:53:26.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args,  { filterNode: () => true })",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,2] $1:number",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1639",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1639",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-08-01T09:55:56.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args,  { filterNode: () => true })",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,2] 1:number",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1639",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1638",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-08-01T09:46:38.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,2] 1:object",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1638",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1637",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-08-01T09:38:43.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "() => true",
+            "propName": "filterNode",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [3,3] 2:object",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1637",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1639",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-08-01T10:03:13.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args,  { filterNode: () => true })",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [1,2] -1:number",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1639",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1639",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-08-01T10:04:46.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args,  { filterNode: () => true })",
+        "replacements": []
+      },
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [2,2] 1:number",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1639",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [1,1] 0:object",
+      "suggestedFixDescription": "To get prettyDOM to not ignore any nodes (like previous) use the new filterNode option by adding. If $1 is an html element / document use $callee($1, { filterNode: () => true }) and otherwise add filterNode: () => true to $1.",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1640",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1640",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-08-01T10:09:23.000Z",
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [1,1] 0:object",
+      "suggestedFixDescription": "To get prettyDOM to not ignore any nodes (like previous) use the new filterNode option. If $1 is an html element / document use $callee($1, { filterNode: () => true }) and otherwise add filterNode: () => true to $1.",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1640",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1640",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-08-01T10:11:23.000Z",
+      "detectionPattern": "call <@testing-library/dom>.prettyDOM [1,1] 0:object",
+      "suggestedFixDescription": "To get prettyDOM to not ignore any nodes (like previous) use the new filterNode option. If $1 is an html element / document use $callee($1, { filterNode: () => true }) and otherwise, when $1 is an options object, add filterNode: () => true to $1.",
+      "unknownAccessPathQuestion": "Is this a call of the prettyDom function from @testing-library/dom?"
+    },
+    "semanticPatchId": "1640",
+    "breakingChangeId": "514",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1636",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-08-01T06:47:00.000Z",
+      "detectionPattern": "call <@testing-library/dom>.waitFor [2,2] $1.timeout:number",
+      "suggestedFixDescription": "We suggest you use the timeout value timeout: Number.POSITIVE_INFINITY, and then rely on your test runner to timeout using a real/non-mocked clock. Otherwise you should go through the waitFor calls and test that the timeout values are still appropriate for what timeout functionality you want.",
+      "unknownAccessPathQuestion": "Is this a call of the waitFor method with the timeout option set from @testing-library/dom?"
+    },
+    "semanticPatchId": "1636",
+    "breakingChangeId": "513",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1636",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-08-02T14:47:46.000Z",
+      "detectionPattern": "call <@testing-library/dom>.waitFor [2,2] $1.timeout:number",
+      "suggestedFixDescription": "This is only breaking if you have mocked out the global clock! We suggest you use the timeout value timeout: Number.POSITIVE_INFINITY, and then rely on your test runner to timeout using a real/non-mocked clock. Otherwise you should go through the waitFor calls and test that the timeout values are still appropriate for what timeout functionality you want.",
+      "unknownAccessPathQuestion": "Is this a call of the waitFor method with the timeout option set from @testing-library/dom?"
+    },
+    "semanticPatchId": "1636",
+    "breakingChangeId": "513",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1636",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-08-02T14:59:22.000Z",
+      "detectionPattern": "call <@testing-library/dom>.waitFor [2,2] $1.timeout:number",
+      "suggestedFixDescription": "This is only breaking if you have mocked out the global clock! We suggest you use the timeout value timeout: Number.POSITIVE_INFINITY, and then rely on your test runner to timeout using a real/non-mocked clock. Otherwise, you should go through the waitFor calls and test that the timeout values are still appropriate for what timeout functionality you want.",
+      "unknownAccessPathQuestion": "Is this a call of the waitFor method with the timeout option set from @testing-library/dom?"
+    },
+    "semanticPatchId": "1636",
+    "breakingChangeId": "513",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1636",
+      "comment": "minor in suggeste fix",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-08-02T14:59:54.000Z",
+      "detectionPattern": "call <@testing-library/dom>.waitFor [2,2] $1.timeout:number",
+      "suggestedFixDescription": "This is only breaking if you have mocked out the global clock! We suggest you use the timeout value timeout: Number.POSITIVE_INFINITY, and then rely on your test runner to timeout using a real/non-mocked clock. Otherwise, you should go through the waitFor calls and test that the timeout values are still appropriate for the timeout functionality you require.",
+      "unknownAccessPathQuestion": "Is this a call of the waitFor method with the timeout option set from @testing-library/dom?"
+    },
+    "semanticPatchId": "1636",
+    "breakingChangeId": "513",
+    "enabled": true,
+    "comment": "minor in suggeste fix"
+  }
+]

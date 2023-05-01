@@ -1,0 +1,1615 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.iif"
+      },
+      "detectionPattern": "import rxjs/**/if"
+    },
+    "semanticPatchId": "1272",
+    "breakingChangeId": "151",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs/websocket>.#3"
+      },
+      "detectionPattern": "import rxjs/**/*observable/dom/{WebSocket,WebSocketSubject}{,*,/**/*}"
+    },
+    "semanticPatchId": "1239",
+    "breakingChangeId": "140",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "import rxjs/**/distinct"
+    },
+    "semanticPatchId": "1325",
+    "breakingChangeId": "191",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "rxjs/ajax"
+      },
+      "detectionPattern": "import rxjs/**/*observable/dom/ajax"
+    },
+    "semanticPatchId": "1249",
+    "breakingChangeId": "148",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.pairs"
+      },
+      "detectionPattern": "read <rxjs/**/observable/PairsObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver PairsObservable from rxjs?"
+    },
+    "semanticPatchId": "1267",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.from"
+      },
+      "detectionPattern": "read <rxjs{,/**/*}>.Observable.fromPromise",
+      "unknownAccessPathQuestion": "Is the receiver rxjs.Observable.fromPromise?"
+    },
+    "semanticPatchId": "1286",
+    "breakingChangeId": "158",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "const $locName = (Symbol && Symbol.observable) || '@@observable';"
+      },
+      "detectionPattern": "importD symbol-observable"
+    },
+    "semanticPatchId": "1293",
+    "breakingChangeId": "162",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the request a CORS request and the crossDomain flag NOT set?",
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign({}, $1, {crossDomain: true})"
+      },
+      "detectionPattern": "call <rxjs/**/operator/ajax{,*,/**/*}> 0:object",
+      "unknownAccessPathQuestion": "Is the called function the ajax function from rxjs?"
+    },
+    "semanticPatchId": "1282",
+    "breakingChangeId": "156",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.pipe(<rxjs/operators>.$prop($args))",
+        "cleanupPattern": {
+          "toPattern": "$base:callee($base:args, $args)",
+          "fromPattern": "<rxjs{,/**/*}>?**.pipe().pipe"
+        }
+      },
+      "detectionPattern": "call (<rxjs{,/**/*}>?**\\<rxjs{,/**/*}/operators>).{flatMap,map,mapTo,filter,take,takeUntil,takeWhile,delay,last,null,do,catch,finally,switch,withLatestFrom,startWith,timeout,defaultIfEmpty,scan,debounceTime,throttleTime,share,mergeMap,retryWhen,timestamp,mergeMapTo,distinctUntilChanged,switchMap,bufferToggle,concatMap,windowWhen,concatAll,first,toArray,isEmpty,mergeAll,groupBy,reduce,buffer}",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1288",
+    "breakingChangeId": "160",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.never"
+      },
+      "detectionPattern": "read <rxjs/**/observable/NeverObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver NeverObservable from rxjs?"
+    },
+    "semanticPatchId": "1266",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.from"
+      },
+      "detectionPattern": "read <rxjs/**/observable/{ArrayLikeObservable,FromObservable,IteratorObservable,PromiseObservable}>.create",
+      "unknownAccessPathQuestion": "Is the receiver one of ArrayLikeObservable, FromObservable, IteratorObservable or PromiseObservable from rxjs?"
+    },
+    "semanticPatchId": "1253",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.$prop($base, $args)"
+      },
+      "detectionPattern": "call (<rxjs{,/**/*}>?**\\<rxjs{,/**/*}>.Observable).{merge,concat,zip,onErrorResumeNext,race}",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1275",
+    "breakingChangeId": "152",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.of"
+      },
+      "detectionPattern": "read <rxjs/**/observable/{ArrayObservable,ScalarObservable}>.create",
+      "unknownAccessPathQuestion": "Is the receiver ArrayObservable or ScalarObservable from rxjs?"
+    },
+    "semanticPatchId": "1254",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs/operators>.#1"
+      },
+      "detectionPattern": "import rxjs/operator/{audit,combineAll,debounceTime,do,findIndex,map,mergeScan,publishBehavior,retry,single,switchMap,timeInterval,windowTime,auditTime,combineLatest,defaultIfEmpty,elementAt,find,mapTo,min,publish,retryWhen,skip,switchMapTo,timeout,windowToggle,bufferCount,concatAll,delay,every,first,materialize,multicast,publishLast,sample,skipLast,take,timeoutWith,windowWhen,buffer,concat,delayWhen,exhaust,groupBy,max,observeOn,publishReplay,sampleTime,skipUntil,takeLast,timestamp,withLatestFrom,bufferTime,concatMap,dematerialize,exhaustMap,ignoreElements,mergeAll,onErrorResumeNext,race,scan,skipWhile,takeUntil,toArray,zipAll,bufferToggle,concatMapTo,distinct,expand,isEmpty,merge,pairwise,reduce,sequenceEqual,startWith,takeWhile,toPromise,zip,bufferWhen,count,distinctUntilChanged,filter,last,mergeMap,partition,repeat,share,subscribeOn,throttle,windowCount,catch,debounce,distinctUntilKeyChanged,finally,let,mergeMapTo,pluck,repeatWhen,shareReplay,switch,throttleTime,window}"
+    },
+    "semanticPatchId": "1248",
+    "breakingChangeId": "147",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import rxjs/add{,/**/*}"
+    },
+    "semanticPatchId": "1289",
+    "breakingChangeId": "160",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign({}, $1, {serializer: x => x}))"
+      },
+      "detectionPattern": "call <rxjs/**/observable/dom/{webSocket,WebSocketSubject}{,*,/**/*}> 0:object",
+      "unknownAccessPathQuestion": "Is the called function the webSocket or WebSocketSubject function from rxjs?"
+    },
+    "semanticPatchId": "1284",
+    "breakingChangeId": "157",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.bindNodeCallback"
+      },
+      "detectionPattern": "read <rxjs/**/observable/BoundNodeCallbackObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver BoundNodeCallbackObservable from rxjs?"
+    },
+    "semanticPatchId": "1256",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import rxjs/symbol/*"
+    },
+    "semanticPatchId": "1244",
+    "breakingChangeId": "144",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "rxjs"
+      },
+      "detectionPattern": "import rxjs/{Observable,Subject,ReplaySubject,BehaviorSubject,Subscription,Subscriber}"
+    },
+    "semanticPatchId": "1246",
+    "breakingChangeId": "145",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.empty"
+      },
+      "detectionPattern": "read <rxjs/**/observable/EmptyObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver EmptyObservable from rxjs?"
+    },
+    "semanticPatchId": "1258",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee({url: $1, serializer: x => x})"
+      },
+      "detectionPattern": "call <rxjs/**/observable/dom/{webSocket,WebSocketSubject}{,*,/**/*}> 0:string",
+      "unknownAccessPathQuestion": "Is the called function the webSocket or WebSocketSubject function from rxjs?"
+    },
+    "semanticPatchId": "1283",
+    "breakingChangeId": "157",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the request a CORS request and the crossDomain flag NOT set?",
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign({}, $1, {crossDomain: true})"
+      },
+      "detectionPattern": "call {<rxjs{,/**/*}>,<rxjs{,/**/*}>.Observable}.ajax 0:object",
+      "unknownAccessPathQuestion": "Is the called function the ajax function from rxjs?"
+    },
+    "semanticPatchId": "1280",
+    "breakingChangeId": "156",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.throwError"
+      },
+      "detectionPattern": "read <rxjs/**/observable/throw>._throw",
+      "unknownAccessPathQuestion": "Is the receiver from rxjs?"
+    },
+    "semanticPatchId": "1271",
+    "breakingChangeId": "150",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the request a CORS request and the crossDomain flag NOT set?",
+      "primaryTemplate": {
+        "pattern": "$callee({ url: $1, crossDomain: true})"
+      },
+      "detectionPattern": "call {<rxjs{,/**/*}>,<rxjs{,/**/*}>.Observable}.ajax 0:string",
+      "unknownAccessPathQuestion": "Is the called function the ajax function from rxjs?"
+    },
+    "semanticPatchId": "1279",
+    "breakingChangeId": "156",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.from"
+      },
+      "detectionPattern": "import rxjs/observable/fromPromise"
+    },
+    "semanticPatchId": "1285",
+    "breakingChangeId": "158",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "import rxjs/**/*testing/{HotObservable,ColdObservable}{,*,/**/*}"
+    },
+    "semanticPatchId": "1241",
+    "breakingChangeId": "142",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "import rxjs/**/*util/{isArray,applyMixins,ArgumentOutOfRangeError,EmptyError,errorObject,identity,Immediate,isDate,isNumeric,isObject,isFunction,isPromise,isScheduler,noop,not,ObjectUnsubscribedError,pipe,root,SubscribeToResult,TimeoutError,toSubscriber,tryCatch,UnsubscriptionError}{,*,/**/*}"
+    },
+    "semanticPatchId": "1240",
+    "breakingChangeId": "141",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "rxjs/throwError"
+      },
+      "detectionPattern": "import rxjs/**/throw"
+    },
+    "semanticPatchId": "1291",
+    "breakingChangeId": "161",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1287",
+      "primaryTemplate": {
+        "pattern": "rxjs",
+        "replacements": []
+      },
+      "detectionPattern": "importD rxjs{,/Rx}"
+    },
+    "semanticPatchId": "1287",
+    "breakingChangeId": "159",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$prop[do => tap, catch => catchError, switch => switchAll, finally => finalize]"
+      },
+      "detectionPattern": "read <rxjs{,/**/*}>?**.{do,catch,switch,finally}",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1290",
+    "breakingChangeId": "161",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import rxjs/**/observable/{ArrayLikeObservable,BoundNodeCallbackObservable,DeferObservable,ForkJoinObservable,RangeObservable,TimerObservable,ArrayObservable,FromObservable,IfObservable,PairsObservable,ScalarObservable,FromEventObservable,NeverObservable,PromiseObservable,SubscribeOnObservable,UsingObservable,ConnectableObservable,ErrorObservable,IntervalObservable,BoundCallbackObservable,FromEventPatternObservable,GenerateObservable,IteratorObservable}"
+    },
+    "semanticPatchId": "1252",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Did the user depend on RxJS polyfilling Symbol.observable?",
+      "primaryTemplate": {
+        "pattern": "((Symbol && Symbol.observable) || '@@observable')"
+      },
+      "detectionPattern": "read <Symbol>.observable",
+      "unknownAccessPathQuestion": "Is the receiver the builtin Symbol constructor?"
+    },
+    "semanticPatchId": "1276",
+    "breakingChangeId": "153",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.throwError"
+      },
+      "detectionPattern": "read <rxjs{,/**/*}>.Observable.throw",
+      "unknownAccessPathQuestion": "Is the receiver rxjs.Observable.throw?"
+    },
+    "semanticPatchId": "1292",
+    "breakingChangeId": "161",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.$prop[fromPromise => from, throw => throwError]"
+      },
+      "detectionPattern": "read <rxjs{,/**/*}>.Observable.{from,fromPromise,of,combineLatest,fromEvent,timer,interval,merge,bindCallback,bindNodeCallback,empty,if,throw,defer,concat,combineAll,concatAll,endWith,forkJoin,mergeAll,pairwise,race,startWith,withLatestFrom,zip,ajax,generate,range}",
+      "unknownAccessPathQuestion": "Is the receiver rxjs.Observable?"
+    },
+    "semanticPatchId": "1242",
+    "breakingChangeId": "143",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.$propScheduler"
+      },
+      "detectionPattern": "read <rxjs>.Scheduler.{async,virtualTime,animationFrame,asap,queue}",
+      "unknownAccessPathQuestion": "Is the receiver rxjs.Scheduler?"
+    },
+    "semanticPatchId": "1247",
+    "breakingChangeId": "146",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.throwError"
+      },
+      "detectionPattern": "read <rxjs/**/observable/ErrorObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver ErrorObservable from rxjs?"
+    },
+    "semanticPatchId": "1259",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.fromEventPattern"
+      },
+      "detectionPattern": "read <rxjs/**/observable/FromEventPatternObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver FromEventPatternObservable from rxjs?"
+    },
+    "semanticPatchId": "1262",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.generate"
+      },
+      "detectionPattern": "read <rxjs/**/observable/GenerateObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver GenerateObservable from rxjs?"
+    },
+    "semanticPatchId": "1263",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "Symbol.$prop[$$observable => observable]"
+      },
+      "detectionPattern": "read <rxjs/symbol/*>.$$observable",
+      "unknownAccessPathQuestion": "Is the receiver from rxjs/symbol?"
+    },
+    "semanticPatchId": "1245",
+    "breakingChangeId": "144",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import rxjs/**/observable/EmptyObservable"
+    },
+    "semanticPatchId": "1250",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.range"
+      },
+      "detectionPattern": "read <rxjs/**/observable/RangeObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver RangeObservable from rxjs?"
+    },
+    "semanticPatchId": "1268",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.never"
+      },
+      "detectionPattern": "import rxjs/**/never"
+    },
+    "semanticPatchId": "1278",
+    "breakingChangeId": "155",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.forkJoin"
+      },
+      "detectionPattern": "read <rxjs/**/observable/ForkJoinObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver ForkJoinObservable from rxjs?"
+    },
+    "semanticPatchId": "1260",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.iif"
+      },
+      "detectionPattern": "read <rxjs>.Observable.if",
+      "unknownAccessPathQuestion": "Is the receiver rxjs.Observable.if?"
+    },
+    "semanticPatchId": "1273",
+    "breakingChangeId": "151",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": ""
+      },
+      "detectionPattern": "import rxjs/operator/{merge,concat,zip,onErrorResumeNext,race}{,/**/*}"
+    },
+    "semanticPatchId": "1274",
+    "breakingChangeId": "152",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.fromEvent"
+      },
+      "detectionPattern": "read <rxjs/**/observable/FromEventObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver FromEventObservable from rxjs?"
+    },
+    "semanticPatchId": "1261",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "rxjs"
+      },
+      "detectionPattern": "import rxjs/Rx"
+    },
+    "semanticPatchId": "1277",
+    "breakingChangeId": "154",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.interval"
+      },
+      "detectionPattern": "read <rxjs/**/observable/IntervalObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver IntervalObservable from rxjs?"
+    },
+    "semanticPatchId": "1265",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.bindCallback"
+      },
+      "detectionPattern": "read <rxjs/**/observable/BoundCallbackObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver BoundCallbackObservable from rxjs?"
+    },
+    "semanticPatchId": "1255",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the request a CORS request and the crossDomain flag NOT set?",
+      "primaryTemplate": {
+        "pattern": "$callee({ url: $1, crossDomain: true})"
+      },
+      "detectionPattern": "call <rxjs/**/operator/ajax{,*,/**/*}> 0:string",
+      "unknownAccessPathQuestion": "Is the called function the ajax function from rxjs?"
+    },
+    "semanticPatchId": "1281",
+    "breakingChangeId": "156",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "rxjs/create/#1"
+      },
+      "detectionPattern": "import rxjs/observable/{from,fromPromise,of,combineLatest,fromEvent,timer,interval,merge,bindCallback,bindNodeCallback,empty,if,throw,defer,concat,combineAll,concatAll,endWith,forkJoin,mergeAll,pairwise,race,startWith,withLatestFrom,zip,ajax,generate,range}"
+    },
+    "semanticPatchId": "1243",
+    "breakingChangeId": "143",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.timer"
+      },
+      "detectionPattern": "read <rxjs/**/observable/TimerObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver TimerObservable from rxjs?"
+    },
+    "semanticPatchId": "1269",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.EMPTY"
+      },
+      "detectionPattern": "call <rxjs{,/**/*}>.EmptyObservable.create",
+      "unknownAccessPathQuestion": "Is the receiver EmptyObservable from rxjs?"
+    },
+    "semanticPatchId": "1251",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.using"
+      },
+      "detectionPattern": "read <rxjs/**/observable/UsingObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver UsingObservable from rxjs?"
+    },
+    "semanticPatchId": "1270",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.defer"
+      },
+      "detectionPattern": "read <rxjs/**/observable/DeferObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver DeferObservable from rxjs?"
+    },
+    "semanticPatchId": "1257",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<rxjs>.iif"
+      },
+      "detectionPattern": "read <rxjs/**/observable/IfObservable>.create",
+      "unknownAccessPathQuestion": "Is the receiver IfObservable from rxjs?"
+    },
+    "semanticPatchId": "1264",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <rxjs{,/**/*}>?**.distinct"
+    },
+    "semanticPatchId": "1326",
+    "breakingChangeId": "191",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1327",
+      "detectionPattern": "import rxjs/**/groupBy"
+    },
+    "semanticPatchId": "1327",
+    "breakingChangeId": "192",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <rxjs{,/**/*}>?**.groupBy"
+    },
+    "semanticPatchId": "1328",
+    "breakingChangeId": "192",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "read <rxjs>.Scheduler.asap"
+    },
+    "semanticPatchId": "1329",
+    "breakingChangeId": "193",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1288",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.pipe(<rxjs/operators>.$prop($args))",
+        "replacements": [],
+        "cleanupPattern": {
+          "toPattern": "$base:callee($base:args, $args)",
+          "fromPattern": "<rxjs{,/**/*}>?**.pipe().pipe"
+        }
+      },
+      "detectionPattern": "call (<rxjs{,/**/*}>?**\\<rxjs{,/**/*}/operators>).{flatMap,map,mapTo,filter,take,takeUntil,takeWhile,delay,last,null,do,catch,finally,switch,withLatestFrom,startWith,timeout,defaultIfEmpty,scan,debounceTime,throttleTime,share,mergeMap,retryWhen,timestamp,mergeMapTo,distinctUntilChanged,switchMap,bufferToggle,concatMap,windowWhen,concatAll,first,toArray,isEmpty,mergeAll,groupBy,reduce,buffer} base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1288",
+    "breakingChangeId": "160",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1275",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.$prop($base, $args)",
+        "replacements": []
+      },
+      "detectionPattern": "call (<rxjs{,/**/*}>?**\\<rxjs{,/**/*}>.Observable).{merge,concat,zip,onErrorResumeNext,race} base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver an rxjs observable?"
+    },
+    "semanticPatchId": "1275",
+    "breakingChangeId": "152",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1255",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.bindCallback",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/BoundCallbackObservable>.create base:BoundCallbackObservable",
+      "unknownAccessPathQuestion": "Is the receiver BoundCallbackObservable from rxjs?"
+    },
+    "semanticPatchId": "1255",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1254",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:09:22.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.of",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/{ArrayObservable,ScalarObservable}>.create base:{ArrayObservable,ScalarObservable}",
+      "unknownAccessPathQuestion": "Is the receiver ArrayObservable or ScalarObservable from rxjs?"
+    },
+    "semanticPatchId": "1254",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1279",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T05:54:13.000Z",
+      "extraQuestion": "Is the request a CORS request and the crossDomain flag NOT set?",
+      "primaryTemplate": {
+        "pattern": "$callee({ url: $1, crossDomain: true})",
+        "replacements": []
+      },
+      "detectionPattern": "call {<rxjs{,/**/*}>,<rxjs{,/**/*}>.Observable}.ajax 0:string base:Observable",
+      "unknownAccessPathQuestion": "Is the called function the ajax function from rxjs?"
+    },
+    "semanticPatchId": "1279",
+    "breakingChangeId": "156",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1280",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T05:54:18.000Z",
+      "extraQuestion": "Is the request a CORS request and the crossDomain flag NOT set?",
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign({}, $1, {crossDomain: true})",
+        "replacements": []
+      },
+      "detectionPattern": "call {<rxjs{,/**/*}>,<rxjs{,/**/*}>.Observable}.ajax 0:object base:Observable",
+      "unknownAccessPathQuestion": "Is the called function the ajax function from rxjs?"
+    },
+    "semanticPatchId": "1280",
+    "breakingChangeId": "156",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1286",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T05:55:12.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.from",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs{,/**/*}>.Observable.fromPromise base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver rxjs.Observable.fromPromise?"
+    },
+    "semanticPatchId": "1286",
+    "breakingChangeId": "158",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1242",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T05:55:58.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.$prop[fromPromise => from, throw => throwError]",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs{,/**/*}>.Observable.{from,fromPromise,of,combineLatest,fromEvent,timer,interval,merge,bindCallback,bindNodeCallback,empty,if,throw,defer,concat,combineAll,concatAll,endWith,forkJoin,mergeAll,pairwise,race,startWith,withLatestFrom,zip,ajax,generate,range} base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver rxjs.Observable?"
+    },
+    "semanticPatchId": "1242",
+    "breakingChangeId": "143",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1251",
+      "comment": "database default ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.EMPTY",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs{,/**/*}>.EmptyObservable.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver EmptyObservable from rxjs?"
+    },
+    "semanticPatchId": "1251",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1251",
+      "comment": "database default",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:00:38.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.EMPTY",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs{,/**/*}>.EmptyObservable.create base:EmptyObservable ",
+      "unknownAccessPathQuestion": "Is the receiver EmptyObservable from rxjs?"
+    },
+    "semanticPatchId": "1251",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1253",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.from",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/{ArrayLikeObservable,FromObservable,IteratorObservable,PromiseObservable}>.create base:{ArrayLikeObservable,FromObservable,IteratorObservable,PromiseObservable}",
+      "unknownAccessPathQuestion": "Is the receiver one of ArrayLikeObservable, FromObservable, IteratorObservable or PromiseObservable from rxjs?"
+    },
+    "semanticPatchId": "1253",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1261",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:13:45.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.fromEvent",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/FromEventObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver FromEventObservable from rxjs?"
+    },
+    "semanticPatchId": "1261",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1256",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.bindNodeCallback",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/BoundNodeCallbackObservable>.create base:BoundNodeCallbackObservable",
+      "unknownAccessPathQuestion": "Is the receiver BoundNodeCallbackObservable from rxjs?"
+    },
+    "semanticPatchId": "1256",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1257",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.defer",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/DeferObservable>.create base:DeferObservable",
+      "unknownAccessPathQuestion": "Is the receiver DeferObservable from rxjs?"
+    },
+    "semanticPatchId": "1257",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1258",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.empty",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/EmptyObservable>.create base:EmptyObservable",
+      "unknownAccessPathQuestion": "Is the receiver EmptyObservable from rxjs?"
+    },
+    "semanticPatchId": "1258",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1259",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.throwError",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/ErrorObservable>.create base:ErrorObservable",
+      "unknownAccessPathQuestion": "Is the receiver ErrorObservable from rxjs?"
+    },
+    "semanticPatchId": "1259",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1260",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.forkJoin",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/ForkJoinObservable>.create base:ForkJoinObservable",
+      "unknownAccessPathQuestion": "Is the receiver ForkJoinObservable from rxjs?"
+    },
+    "semanticPatchId": "1260",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1261",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.fromEvent",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/FromEventObservable>.create base:FromEventObservable",
+      "unknownAccessPathQuestion": "Is the receiver FromEventObservable from rxjs?"
+    },
+    "semanticPatchId": "1261",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1262",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.fromEventPattern",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/FromEventPatternObservable>.create base:FromEventPatternObservable",
+      "unknownAccessPathQuestion": "Is the receiver FromEventPatternObservable from rxjs?"
+    },
+    "semanticPatchId": "1262",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1251",
+      "comment": "database default ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-10T06:02:23.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.EMPTY",
+        "replacements": []
+      },
+      "detectionPattern": "call <rxjs{,/**/*}>.EmptyObservable.create base:Observable ",
+      "unknownAccessPathQuestion": "Is the receiver EmptyObservable from rxjs?"
+    },
+    "semanticPatchId": "1251",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "database default "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1253",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:05:05.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.from",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/{ArrayLikeObservable,FromObservable,IteratorObservable,PromiseObservable}>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver one of ArrayLikeObservable, FromObservable, IteratorObservable or PromiseObservable from rxjs?"
+    },
+    "semanticPatchId": "1253",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1254",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:09:22.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.of",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/{ArrayObservable,ScalarObservable}>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver ArrayObservable or ScalarObservable from rxjs?"
+    },
+    "semanticPatchId": "1254",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1255",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:09:53.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.bindCallback",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/BoundCallbackObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver BoundCallbackObservable from rxjs?"
+    },
+    "semanticPatchId": "1255",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1256",
+      "comment": "Added base filter  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:10:16.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.bindNodeCallback",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/BoundNodeCallbackObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver BoundNodeCallbackObservable from rxjs?"
+    },
+    "semanticPatchId": "1256",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter  "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1257",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:10:28.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.defer",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/DeferObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver DeferObservable from rxjs?"
+    },
+    "semanticPatchId": "1257",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1258",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:11:16.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.empty",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/EmptyObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver EmptyObservable from rxjs?"
+    },
+    "semanticPatchId": "1258",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1259",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:13:07.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.throwError",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/ErrorObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver ErrorObservable from rxjs?"
+    },
+    "semanticPatchId": "1259",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1260",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:13:33.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.forkJoin",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/ForkJoinObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver ForkJoinObservable from rxjs?"
+    },
+    "semanticPatchId": "1260",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1262",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:16:30.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.fromEventPattern",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/FromEventPatternObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver FromEventPatternObservable from rxjs?"
+    },
+    "semanticPatchId": "1262",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1263",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.generate",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/GenerateObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver GenerateObservable from rxjs?"
+    },
+    "semanticPatchId": "1263",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1264",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.iif",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/IfObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver IfObservable from rxjs?"
+    },
+    "semanticPatchId": "1264",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1265",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.interval",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/IntervalObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver IntervalObservable from rxjs?"
+    },
+    "semanticPatchId": "1265",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1266",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.never",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/NeverObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver NeverObservable from rxjs?"
+    },
+    "semanticPatchId": "1266",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1267",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.pairs",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/PairsObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver PairsObservable from rxjs?"
+    },
+    "semanticPatchId": "1267",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1268",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.range",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/RangeObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver RangeObservable from rxjs?"
+    },
+    "semanticPatchId": "1268",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1269",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.timer",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/TimerObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver TimerObservable from rxjs?"
+    },
+    "semanticPatchId": "1269",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1270",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.using",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/UsingObservable>.create base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver UsingObservable from rxjs?"
+    },
+    "semanticPatchId": "1270",
+    "breakingChangeId": "149",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1273",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:31:38.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.iif",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs>.Observable.if base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver rxjs.Observable.if?"
+    },
+    "semanticPatchId": "1273",
+    "breakingChangeId": "151",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1292",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:30:21.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.throwError",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs{,/**/*}>.Observable.throw base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver rxjs.Observable.throw?"
+    },
+    "semanticPatchId": "1292",
+    "breakingChangeId": "161",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1271",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-10T06:28:51.000Z",
+      "primaryTemplate": {
+        "pattern": "<rxjs>.throwError",
+        "replacements": []
+      },
+      "detectionPattern": "read <rxjs/**/observable/throw>._throw base:Observable",
+      "unknownAccessPathQuestion": "Is the receiver from rxjs?"
+    },
+    "semanticPatchId": "1271",
+    "breakingChangeId": "150",
+    "enabled": true,
+    "comment": "Added base filter"
+  }
+]

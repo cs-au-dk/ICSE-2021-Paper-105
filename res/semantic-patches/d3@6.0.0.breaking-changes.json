@@ -1,0 +1,145 @@
+[
+  {
+    "id": "745",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Replace d3.keys, d3.values and d3.entries with Object.keys, Object.values and Object.entries.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "746",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Remove d3.set(); use new Set().",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "747",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Remove d3.map(); use new Map().",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "751",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Remove d3.nest; use d3.group and d3.rollup",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "755",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Remove d3.event and changed the interface for the listeners parsed to .on() methods",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "756",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "d3.mouse, d3.touch, d3.touches and d3.clientPoint has been removed. use d3.pointer(s) instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "757",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Remove d3.voronoi; use d3.Delaunay",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "758",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Rename d3.histogram to d3.bin.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "759",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Rename d3.scan to d3.leastIndex.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "761",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Change d3.format to default to the minus sign instead of hyphen-minus for negative values.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "760",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Change d3.interpolateTransformCss to require absolute units",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "762",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "D3 now requires a browser that supports ES2015. For older browsers, you must bring your own transpiler. Most modern browsers do support ES2015 (also called ES6), but if you need support for older browsers without ES2015 support you will need to use a transpiler such as [Babel](https://babeljs.io/setup). For a list of browsers and the versions required to support ES2015 see: https://caniuse.com/es6.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "763",
+    "packageVersion": "6.0.0",
+    "packageName": "d3",
+    "description": "Support for Bower has been dropped; D3 is now exclusively published to npm and GitHub.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

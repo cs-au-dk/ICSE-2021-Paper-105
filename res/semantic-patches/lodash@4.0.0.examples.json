@@ -1,0 +1,30 @@
+[
+  {
+    "id": "3",
+    "breakingChangeId": "114",
+    "title": "Aliases removed example 2",
+    "description": "any is renamed to some",
+    "codeExample": "var l = require('lodash');\nl.any([1, 3, -2, 11], x => x < 0);"
+  },
+  {
+    "id": "2",
+    "breakingChangeId": "114",
+    "title": "Aliases removed example 1",
+    "description": "all is renamed to every",
+    "codeExample": "var l = require('lodash');\nl.all([1, 5, 8], (x) => x > 0);"
+  },
+  {
+    "id": "11",
+    "breakingChangeId": "93",
+    "title": "Lodash 4.0.0: Using sum",
+    "description": "Previous to version 4 of lodash, the sum function could take a second argument that would be called for each element of the first argument. In version 4 of lodash, calls to sum with a second argument, should instead be calls to the sumBy method.",
+    "codeExample": "const _ = require('lodash');\n_.sum([1]);\n_.sum([1, 2], x => x);"
+  },
+  {
+    "id": "1",
+    "breakingChangeId": "67",
+    "title": "Lodash 4.0.0: Removal of thisArg",
+    "description": "A small example with the thisArg removal",
+    "codeExample": "var l = require('lodash');\nfunction f () {\n    l.reduce([1, 2, 3], (t, n) => t + n, 0, this);\n}"
+  }
+]

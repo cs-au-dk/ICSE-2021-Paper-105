@@ -1,0 +1,9 @@
+[
+  {
+    "id": "13",
+    "breakingChangeId": "164",
+    "title": "Winston 3.0.0: Creating a logger",
+    "description": "In v2 of winston, a logger was created using the constructor winston.Logger, but in v3, a logger is created using the createLogger method.",
+    "codeExample": "const winston = require('winston');\nfunction createLogger(transports) {\n  return new winston.Logger({ transports });\n}"
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.formatByString($1, $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <@date-io/moment>().format [2,2]",
+      "unknownAccessPathQuestion": "Is this a call to parse function on date-io adapter?"
+    },
+    "semanticPatchId": "1561",
+    "breakingChangeId": "414",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.formats.$prop[yearFormat => year, yearMonthFormat => monthAndYear, dateTime12hFormat => fullDateTime12h, dateTime24hFormat => fullDateTime24h, time12hFormat => fullTime12h, time24hFormat => fullTime12h, dateFormat => fullDate]",
+        "replacements": []
+      },
+      "detectionPattern": "read <@date-io@moment>().{yearFormat,yearMonthFormat,dateTime12hFormat,dateTime24hFormat,time12hFormat,time24hFormat,dateFormat}",
+      "unknownAccessPathQuestion": "Is this a property on an momentAdapter from @date-io/moment?"
+    },
+    "semanticPatchId": "1562",
+    "breakingChangeId": "416",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1562",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-30T07:30:58.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.formats.$prop[yearFormat => year, yearMonthFormat => monthAndYear, dateTime12hFormat => fullDateTime12h, dateTime24hFormat => fullDateTime24h, time12hFormat => fullTime12h, time24hFormat => fullTime12h, dateFormat => fullDate]",
+        "replacements": []
+      },
+      "detectionPattern": "read <@date-io/moment>().{yearFormat,yearMonthFormat,dateTime12hFormat,dateTime24hFormat,time12hFormat,time24hFormat,dateFormat}",
+      "unknownAccessPathQuestion": "Is this a property on an momentAdapter from @date-io/moment?"
+    },
+    "semanticPatchId": "1562",
+    "breakingChangeId": "416",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.formats.$prop[yearFormat => year, yearMonthFormat => monthAndYear, dateTime12hFormat => fullDateTime12h, dateTime24hFormat => fullDateTime24h, time12hFormat => fullTime12h, time24hFormat => fullTime12h, dateFormat => fullDate]",
+        "replacements": []
+      },
+      "detectionPattern": "read <@date-io/moment>().{yearFormat,yearMonthFormat,dateTime12hFormat,dateTime24hFormat,time12hFormat,time24hFormat,dateFormat}",
+      "unknownAccessPathQuestion": "Is this a property on an momentAdapter from @date-io/moment?"
+    },
+    "semanticPatchId": "1563",
+    "breakingChangeId": "416",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1563",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-30T07:51:55.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.formats.$prop[yearFormat => year, yearMonthFormat => monthAndYear, dateTime12hFormat => fullDateTime12h, dateTime24hFormat => fullDateTime24h, time12hFormat => fullTime12h, time24hFormat => fullTime12h, dateFormat => fullDate]",
+        "replacements": []
+      },
+      "detectionPattern": "write <@date-io/moment>().{yearFormat,yearMonthFormat,dateTime12hFormat,dateTime24hFormat,time12hFormat,time24hFormat,dateFormat}",
+      "unknownAccessPathQuestion": "Is this a property on an momentAdapter from @date-io/moment?"
+    },
+    "semanticPatchId": "1563",
+    "breakingChangeId": "416",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1563",
+      "comment": "init  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-30T07:52:29.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.formats.$prop[yearFormat => year, yearMonthFormat => monthAndYear, dateTime12hFormat => fullDateTime12h, dateTime24hFormat => fullDateTime24h, time12hFormat => fullTime12h, time24hFormat => fullTime12h, dateFormat => fullDate] = $value",
+        "replacements": []
+      },
+      "detectionPattern": "write <@date-io/moment>().{yearFormat,yearMonthFormat,dateTime12hFormat,dateTime24hFormat,time12hFormat,time24hFormat,dateFormat}",
+      "unknownAccessPathQuestion": "Is this a property on an momentAdapter from @date-io/moment?"
+    },
+    "semanticPatchId": "1563",
+    "breakingChangeId": "416",
+    "enabled": true,
+    "comment": "init  "
+  }
+]

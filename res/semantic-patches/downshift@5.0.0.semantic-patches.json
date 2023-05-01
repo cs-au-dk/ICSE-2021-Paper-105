@@ -1,0 +1,210 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <downshift>.useSelect.stateChangeTypes.FunctionClearKeysSoFar ",
+      "unknownAccessPathQuestion": "Is the FunctionClearKeysSoFar imported from downshift?"
+    },
+    "semanticPatchId": "1560",
+    "breakingChangeId": "413",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1560",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-05-27T09:05:06.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.FunctionSetInputValue if (action.inputValue == '') { $props }",
+        "replacements": []
+      },
+      "detectionPattern": "read <downshift>.useSelect.stateChangeTypes.FunctionClearKeysSoFar ",
+      "unknownAccessPathQuestion": "Is the FunctionClearKeysSoFar imported from downshift?"
+    },
+    "semanticPatchId": "1560",
+    "breakingChangeId": "413",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1560",
+      "comment": "Initial  ",
+      "version": 1,
+      "creationDate": "2022-05-27T09:31:07.000Z",
+      "detectionPattern": "read <downshift>.useSelect.stateChangeTypes.FunctionClearKeysSoFar ",
+      "suggestedFixDescription": "Check for FunctionSetInputValue with empty string as inputValue instead of checking for FunctionClearKeysSoFar in stateReducer.",
+      "unknownAccessPathQuestion": "Is the FunctionClearKeysSoFar imported from downshift?"
+    },
+    "semanticPatchId": "1560",
+    "breakingChangeId": "413",
+    "enabled": true,
+    "comment": "Initial  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1560",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-27T09:37:54.000Z",
+      "detectionPattern": "read <downshift>.useSelect.stateChangeTypes.FunctionClearKeysSoFar ",
+      "suggestedFixDescription": "FunctionClearKeysSoFar has been removed. To get the same functionality use FunctionSetInputValue and check that state.inputValue  is the empty string ",
+      "unknownAccessPathQuestion": "Is the FunctionClearKeysSoFar imported from downshift?"
+    },
+    "semanticPatchId": "1560",
+    "breakingChangeId": "413",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1560",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-05-31T08:36:14.000Z",
+      "detectionPattern": "read <downshift>.useSelect.stateChangeTypes.FunctionClearKeysSoFar ",
+      "suggestedFixDescription": "FunctionClearKeysSoFar has been removed. To get the same functionality use FunctionSetInputValue and check that state.inputValue is the empty string ",
+      "unknownAccessPathQuestion": "Is the FunctionClearKeysSoFar imported from downshift?"
+    },
+    "semanticPatchId": "1560",
+    "breakingChangeId": "413",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <downshift>.useSelect.{getA11ySelectionMessage,  getA11yStatusMessage}.items",
+      "unknownAccessPathQuestion": "Does the A11y message function come from downshift?"
+    },
+    "semanticPatchId": "1564",
+    "breakingChangeId": "420",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1564",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-31T09:35:12.000Z",
+      "detectionPattern": "read <downshift>.{useSelect, useCombobox}.{getA11ySelectionMessage,  getA11yStatusMessage}.items",
+      "unknownAccessPathQuestion": "Does the A11y message function come from downshift?"
+    },
+    "semanticPatchId": "1564",
+    "breakingChangeId": "420",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1564",
+      "comment": "Initial  ",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-05-31T10:04:06.000Z",
+      "detectionPattern": "write <Object>.getA11yStatusMessage",
+      "unknownAccessPathQuestion": "Does the A11y message function come from downshift?"
+    },
+    "semanticPatchId": "1564",
+    "breakingChangeId": "420",
+    "enabled": false,
+    "comment": "Initial  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1564",
+      "comment": "Initial",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-05-31T11:28:29.000Z",
+      "detectionPattern": "write <Object>.{getA11yStatusMessage, getA11yStatusMessage}",
+      "unknownAccessPathQuestion": "Does the A11y message function come from downshift?"
+    },
+    "semanticPatchId": "1564",
+    "breakingChangeId": "420",
+    "enabled": false,
+    "comment": "Initial"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1564",
+      "comment": "Initial ",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-05-31T11:29:03.000Z",
+      "detectionPattern": "write <Object>.{getA11ySelectionMessage,getA11yStatusMessage}",
+      "unknownAccessPathQuestion": "Does the A11y message function come from downshift?"
+    },
+    "semanticPatchId": "1564",
+    "breakingChangeId": "420",
+    "enabled": false,
+    "comment": "Initial "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1564",
+      "comment": "Added suggested fix",
+      "enabled": false,
+      "version": 4,
+      "creationDate": "2022-05-31T11:30:40.000Z",
+      "detectionPattern": "write <Object>.{getA11ySelectionMessage,getA11yStatusMessage}",
+      "suggestedFixDescription": "This change is only breaking if you access the items or selectedItem property of an \"a11y\" message function. The change introduces a resultCount property to get the amount of items.",
+      "unknownAccessPathQuestion": "Does the A11y message function come from downshift?"
+    },
+    "semanticPatchId": "1564",
+    "breakingChangeId": "420",
+    "enabled": false,
+    "comment": "Added suggested fix"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1564",
+      "comment": "Added suggested fix ",
+      "enabled": false,
+      "version": 5,
+      "creationDate": "2022-05-31T12:06:23.000Z",
+      "detectionPattern": "write <Object>.{getA11ySelectionMessage,getA11yStatusMessage}",
+      "suggestedFixDescription": "This change is only breaking if you access the \"items\" or \"selectedItem\" property of an \"a11y\" message function. The change introduces a resultCount property to get the amount of items.",
+      "unknownAccessPathQuestion": "Does the A11y message function come from downshift?"
+    },
+    "semanticPatchId": "1564",
+    "breakingChangeId": "420",
+    "enabled": false,
+    "comment": "Added suggested fix "
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1564",
+      "comment": "Minor changes to suggested fix",
+      "enabled": false,
+      "version": 6,
+      "creationDate": "2022-06-01T16:52:54.000Z",
+      "detectionPattern": "write <Object>.{getA11ySelectionMessage,getA11yStatusMessage}",
+      "suggestedFixDescription": "This change is only breaking if you access the \"items\" or \"selectedItem\" properties of the getA11ySelectionMessage or getA11yStatusMessage functions. The change introduces a resultCount property, which can be used instead of items.length.",
+      "unknownAccessPathQuestion": "Does the A11y message function come from downshift?"
+    },
+    "semanticPatchId": "1564",
+    "breakingChangeId": "420",
+    "enabled": false,
+    "comment": "Minor changes to suggested fix"
+  }
+]

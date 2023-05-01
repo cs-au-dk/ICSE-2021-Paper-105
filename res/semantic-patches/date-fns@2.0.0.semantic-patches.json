@@ -1,0 +1,4227 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/addMilliseconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_milliseconds",
+      "unknownAccessPathQuestion": "Is the import module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1930",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/addMinutes",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_minutes",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1931",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/addMonths",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_months",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1932",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "$base$prop[areRangesOverlapping=>areIntervalsOverlapping]($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.areRangesOverlapping",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1781",
+    "breakingChangeId": "656",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1781",
+      "comment": "init ",
+      "version": 0,
+      "creationDate": "2022-10-07T10:56:22.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.areIntervalsOverlapping({ start: $1, end: $2 }, { start: $3, end: $4 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.areRangesOverlapping [4,4]",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1781",
+    "breakingChangeId": "656",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call {<date-fns>,<date-fns/{min,max}>}",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1809",
+    "breakingChangeId": "675",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <date-fns>.format [2:3] 1:string",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1814",
+    "breakingChangeId": "679",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <date-fns>.*",
+      "unknownAccessPathQuestion": "Is the function called from date-fns and called with a string argument?"
+    },
+    "semanticPatchId": "1808",
+    "breakingChangeId": "674",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1808",
+      "comment": "added suggested fix",
+      "version": 0,
+      "creationDate": "2022-10-13T18:32:32.000Z",
+      "detectionPattern": "call <date-fns>.*",
+      "suggestedFixDescription": "he input string should now be parsed beforehand. Use parse or parseISO (if you’re using ISO 8601) to parse your strings.",
+      "unknownAccessPathQuestion": "Is the function called from date-fns and called with a string argument?"
+    },
+    "semanticPatchId": "1808",
+    "breakingChangeId": "674",
+    "enabled": true,
+    "comment": "added suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1808",
+      "comment": "changed detection pattern",
+      "version": 1,
+      "creationDate": "2022-10-13T18:33:04.000Z",
+      "detectionPattern": "call {<date-fns>,<date-fns/*>}** 0:string",
+      "suggestedFixDescription": "The input string should now be parsed beforehand. Use parse or parseISO (if you’re using ISO 8601) to parse your strings.",
+      "unknownAccessPathQuestion": "Is the function called from date-fns and called with a string argument?"
+    },
+    "semanticPatchId": "1808",
+    "breakingChangeId": "674",
+    "enabled": true,
+    "comment": "changed detection pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1809",
+      "comment": "init ",
+      "version": 0,
+      "creationDate": "2022-10-13T19:17:31.000Z",
+      "detectionPattern": "call {<date-fns>.{min,max},<date-fns/{min,max}>}",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1809",
+    "breakingChangeId": "675",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call {<date-fns>.{format},<date-fns/format>} [1,2] 1:object",
+      "unknownAccessPathQuestion": "Is function called from date-fns?"
+    },
+    "semanticPatchId": "1810",
+    "breakingChangeId": "676",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1810",
+      "comment": "init ",
+      "version": 0,
+      "creationDate": "2022-10-13T19:29:51.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args, 'YYYY-MM-DDTHH:mm:ss.SSSZ')",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.{format},<date-fns/format>} [1,1]",
+      "unknownAccessPathQuestion": "Is function called from date-fns?"
+    },
+    "semanticPatchId": "1810",
+    "breakingChangeId": "676",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "$callee($1, 'YYYY-MM-DDTHH:mm:ss.SSSZ', $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.{format},<date-fns/format>} [2,2] 1:object",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1811",
+    "breakingChangeId": "676",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "$base[addISOYears=>addISOWeekYears,differenceInCalenderISOYears=>differenceInCalenderISOWeekYears,differenceInISOYears=>differenceInISOWeekYears,endOfISOYear=>endOfISOWeekYear,getISOYear=>getISOWeekYear,isSameISOYear=>isSameISOWeekYear,lastDayOfISOYear=>lastDayOfISOWeekYear,setISOYear=>setISOWeekYear,subISOYears=>subISOWeekYears]($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.{addISOYears,differenceInCalendarISOYears,differenceInISOYears,endOfISOYear,getISOYear,isSameISOYear,lastDayOfISOYear,setISOYear,subISOYears}",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1813",
+    "breakingChangeId": "678",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "$callee({ start: $1, end: $2 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.eachDay",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1815",
+    "breakingChangeId": "656",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1815",
+      "comment": "new detection pattern",
+      "version": 0,
+      "creationDate": "2022-10-14T09:36:34.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee({ start: $1, end: $2 })",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.eachDay,<date-fns/eachDay>}",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1815",
+    "breakingChangeId": "656",
+    "enabled": true,
+    "comment": "new detection pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1813",
+      "comment": "new detection pattern",
+      "version": 0,
+      "creationDate": "2022-10-14T07:37:10.000Z",
+      "primaryTemplate": {
+        "pattern": "$base[addISOYears=>addISOWeekYears,differenceInCalenderISOYears=>differenceInCalenderISOWeekYears,differenceInISOYears=>differenceInISOWeekYears,endOfISOYear=>endOfISOWeekYear,getISOYear=>getISOWeekYear,isSameISOYear=>isSameISOWeekYear,lastDayOfISOYear=>lastDayOfISOWeekYear,setISOYear=>setISOWeekYear,subISOYears=>subISOWeekYears]($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.{addISOYears,differenceInCalendarISOYears,differenceInISOYears,endOfISOYear,getISOYear,isSameISOYear,lastDayOfISOYear,setISOYear,subISOYears},<date-fns/{addISOYears,differenceInCalendarISOYears,differenceInISOYears,endOfISOYear,getISOYear,isSameISOYear,lastDayOfISOYear,setISOYear,subISOYears}>}",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1813",
+    "breakingChangeId": "678",
+    "enabled": true,
+    "comment": "new detection pattern"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns/getOverlappingDaysInIntervals>({ start: $1, end: $2 }, { start: $3, end: $4 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/getOverlappingDaysInRanges>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1896",
+    "breakingChangeId": "720",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns>.isWithinInterval($1, { start: $2, end: $3 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.isWithinRange",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1897",
+    "breakingChangeId": "721",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns/isWithinInterval>($1, { start: $2, end: $3 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/isWithinRange>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1898",
+    "breakingChangeId": "721",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1781",
+      "comment": "new code template",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-07T11:26:11.000Z",
+      "primaryTemplate": {
+        "pattern": "<date-fns>.areIntervalsOverlapping({ start: $1, end: $2 }, { start: $3, end: $4 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.areRangesOverlapping [4,4]",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1781",
+    "breakingChangeId": "656",
+    "enabled": true,
+    "comment": "new code template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns>.eachDayOfInterval({ start: $1, end: $2 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.eachDay",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1893",
+    "breakingChangeId": "719",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns/eachDayInInterval>({ start: $1, end: $2 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/eachDay>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1894",
+    "breakingChangeId": "719",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns>.getOverlappingDaysInIntervals({ start: $1, end: $2 }, { start: $3, end: $4 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.getOverlappingDaysInRanges ",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1895",
+    "breakingChangeId": "720",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1813",
+      "comment": "changed to read pattern",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-14T07:46:52.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addISOYears=>addISOWeekYears,differenceInCalenderISOYears=>differenceInCalenderISOWeekYears,differenceInISOYears=>differenceInISOWeekYears,endOfISOYear=>endOfISOWeekYear,getISOYear=>getISOWeekYear,isSameISOYear=>isSameISOWeekYear,lastDayOfISOYear=>lastDayOfISOWeekYear,setISOYear=>setISOWeekYear,subISOYears=>subISOWeekYears]",
+        "replacements": []
+      },
+      "detectionPattern": "read <date-fns>.{addISOYears,differenceInCalendarISOYears,differenceInISOYears,endOfISOYear,getISOYear,isSameISOYear,lastDayOfISOYear,setISOYear,subISOYears}",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1813",
+    "breakingChangeId": "678",
+    "enabled": true,
+    "comment": "changed to read pattern"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <date-fns/{addISOYears,differenceInCalendarISOYears,differenceInISOYears,endOfISOYear,getISOYear,isSameISOYear,lastDayOfISOYear,setISOYear,subISOYears}>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1903",
+    "breakingChangeId": "678",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1813",
+      "comment": "Made the template more readable",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-10-26T08:25:25.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addISOYears => addISOWeekYears, differenceInCalenderISOYears => differenceInCalenderISOWeekYears, differenceInISOYears => differenceInISOWeekYears, endOfISOYear => endOfISOWeekYear, getISOYear => getISOWeekYear, isSameISOYear => isSameISOWeekYear, lastDayOfISOYear => lastDayOfISOWeekYear, setISOYear => setISOWeekYear, subISOYears => subISOWeekYears]",
+        "replacements": []
+      },
+      "detectionPattern": "read <date-fns>.{addISOYears,differenceInCalendarISOYears,differenceInISOYears,endOfISOYear,getISOYear,isSameISOYear,lastDayOfISOYear,setISOYear,subISOYears}",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1813",
+    "breakingChangeId": "678",
+    "enabled": true,
+    "comment": "Made the template more readable"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1813",
+      "comment": "Made the template more readable ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-10-26T08:52:14.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addISOYears => addISOWeekYears, differenceInCalenderISOYears => differenceInCalenderISOWeekYears, differenceInISOYears => differenceInISOWeekYears, endOfISOYear => endOfISOWeekYear, getISOYear => getISOWeekYear, isSameISOYear => isSameISOWeekYear, lastDayOfISOYear => lastDayOfISOWeekYear, setISOYear => setISOWeekYear, subISOYears => subISOWeekYears]",
+        "replacements": []
+      },
+      "detectionPattern": "read {<date-fns>,<date-fns/{addISOYears,differenceInCalendarISOYears,differenceInISOYears,endOfISOYear,getISOYear,isSameISOYear,lastDayOfISOYear,setISOYear,subISOYears}>}.{addISOYears,differenceInCalendarISOYears,differenceInISOYears,endOfISOYear,getISOYear,isSameISOYear,lastDayOfISOYear,setISOYear,subISOYears}",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1813",
+    "breakingChangeId": "678",
+    "enabled": true,
+    "comment": "Made the template more readable "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1813",
+      "comment": "Made the template more readable",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-10-26T08:54:22.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[addISOYears => addISOWeekYears, differenceInCalenderISOYears => differenceInCalenderISOWeekYears, differenceInISOYears => differenceInISOWeekYears, endOfISOYear => endOfISOWeekYear, getISOYear => getISOWeekYear, isSameISOYear => isSameISOWeekYear, lastDayOfISOYear => lastDayOfISOWeekYear, setISOYear => setISOWeekYear, subISOYears => subISOWeekYears]",
+        "replacements": []
+      },
+      "detectionPattern": "read <date-fns>.{addISOYears,differenceInCalendarISOYears,differenceInISOYears,endOfISOYear,getISOYear,isSameISOYear,lastDayOfISOYear,setISOYear,subISOYears}",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1813",
+    "breakingChangeId": "678",
+    "enabled": true,
+    "comment": "Made the template more readable"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1903",
+      "comment": "should be deleted",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-10-26T08:41:33.000Z",
+      "detectionPattern": "call <date-fns>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1903",
+    "breakingChangeId": "678",
+    "enabled": false,
+    "comment": "should be deleted"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1894",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-10-25T17:11:34.000Z",
+      "primaryTemplate": {
+        "pattern": "<date-fns/eachDayInInterval>({ start: $1, end: $2 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/each_day>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1894",
+    "breakingChangeId": "719",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1896",
+      "comment": "changed detection pattern",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-10-25T17:27:28.000Z",
+      "primaryTemplate": {
+        "pattern": "<date-fns/getOverlappingDaysInIntervals>({ start: $1, end: $2 }, { start: $3, end: $4 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/get_overlapping_days_in_ranges>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1896",
+    "breakingChangeId": "720",
+    "enabled": true,
+    "comment": "changed detection pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1898",
+      "comment": "Changed detection pattern",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-10-25T17:50:30.000Z",
+      "primaryTemplate": {
+        "pattern": "<date-fns/isWithinInterval>($1, { start: $2, end: $3 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/is_within_range>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1898",
+    "breakingChangeId": "721",
+    "enabled": true,
+    "comment": "Changed detection pattern"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1815",
+      "comment": "new detection pattern ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-10-14T09:40:49.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee({ start: $1, end: $2 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/are_ranges_overlapping>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1815",
+    "breakingChangeId": "656",
+    "enabled": true,
+    "comment": "new detection pattern "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1815",
+      "comment": "new template",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-10-26T20:15:41.000Z",
+      "primaryTemplate": {
+        "pattern": "<date-fns/areIntervalsOverlapping>({ start: $1, end: $2 }, { start: $3, end: $4 })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/are_ranges_overlapping>",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1815",
+    "breakingChangeId": "656",
+    "enabled": true,
+    "comment": "new template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "import date-fns/$prop[each_day => eachDay, some-test => someTest]",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/{each_day,some-test}",
+      "unknownAccessPathQuestion": "Is the import from a submodule of date-fns?"
+    },
+    "semanticPatchId": "1927",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1927",
+      "comment": "init ",
+      "version": 0,
+      "creationDate": "2022-10-30T15:01:12.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/addDays",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_days",
+      "unknownAccessPathQuestion": "Is the import from a submodule of date-fns?"
+    },
+    "semanticPatchId": "1927",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/addHours",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_hours",
+      "unknownAccessPathQuestion": "Is it an import statement from a submodule of date-fns?"
+    },
+    "semanticPatchId": "1928",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/addISOWeekYears",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_iso_years",
+      "unknownAccessPathQuestion": "Is the import statement a submodule of date-fns?"
+    },
+    "semanticPatchId": "1929",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/addQuarters",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_quarters",
+      "unknownAccessPathQuestion": "is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1933",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/addSeconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_seconds",
+      "unknownAccessPathQuestion": "is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1934",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/addWeeks",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_weeks",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1935",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/addYears",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/add_years",
+      "unknownAccessPathQuestion": "is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1936",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/areIntervalsOverlapping",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/are_ranges_overlapping",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1937",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/closestIndexTo",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/closest_index_to",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1938",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/closestTo",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/closest_to",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1939",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/compareAsc",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/compare_asc",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1940",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/compareDesc",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/compare_desc",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1941",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInCalendarDays",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_calendar_days",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1942",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInCalenderISOWeeks",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_calendar_iso_weeks",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1943",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1943",
+      "comment": "init ",
+      "version": 0,
+      "creationDate": "2022-10-30T16:16:07.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInCalendarISOWeeks",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_calendar_iso_weeks",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1943",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInCalendarISOWeekYears",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_calendar_iso_years",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1944",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInCalendarMonths",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_calendar_months",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1945",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInCalendarQuarters",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_calendar_quarters",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1946",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInCalendarWeeks",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_calendar_weeks",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1947",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInCalendarYears",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_calendar_years",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1948",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInDays",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_days",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1949",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInHours",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_hours",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1950",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInISOWeekYears",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_iso_years",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1951",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInMilliseconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_milliseconds",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1952",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInMinutes",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_minutes",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1953",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInMonths",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_months",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1954",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInQuarters",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_quarters",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1955",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInSeconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_seconds",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1956",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInWeeks",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_weeks",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1957",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/differenceInYears",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/difference_in_years",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1958",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/distanceInWords",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/distance_in_words",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1959",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/distanceInWordsStrict",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/distance_in_words_strict",
+      "unknownAccessPathQuestion": "is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1960",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/distanceInWordsToNow",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/distance_in_words_to_now",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1961",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/eachDayOfInterval",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/each_day",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1962",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfDay",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_day",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1963",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfHour",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_hour",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1964",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfISOWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_iso_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1965",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfISOWeekYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_iso_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1966",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfMinute",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_minute",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1967",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1968",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfQuarter",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_quarter",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1969",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfSecond",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_second",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1970",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfToday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_today",
+      "unknownAccessPathQuestion": "is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1971",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfTomorrow",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_tomorrow",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1972",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1973",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1974",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/endOfYesterday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/end_of_yesterday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1975",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getDate",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_date",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1976",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getDay",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_day",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1977",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getDayOfYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_day_of_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1978",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getDaysInMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_days_in_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1979",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getDaysInYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_days_in_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1980",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getHours",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_hours",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1981",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getISODay",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_iso_day",
+      "unknownAccessPathQuestion": "Is the module a submodule from date-fns?"
+    },
+    "semanticPatchId": "1982",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getISOWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_iso_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1983",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getISOWeeksInYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_iso_weeks_in_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1984",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getISOWeekYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_iso_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1985",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getMilliseconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_milliseconds",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1986",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getMinutes",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_minutes",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1987",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1996",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getOverlappingDaysInRanges",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_overlapping_days_in_ranges",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1997",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getQuarter",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_quarter",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1998",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getSeconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_seconds",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1999",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getTime",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_time",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2000",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/getYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2001",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isAfter",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_after",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2002",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isBefore",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_before",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2003",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isDate",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_date",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2004",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isEqual",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_equal",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2005",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isFirstDayOfMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_first_day_of_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2006",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isFriday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_friday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2007",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isFuture",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_future",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2008",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isLastDayOfMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_last_day_of_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2009",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isLeapYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_leap_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2010",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isMonday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_monday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2011",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isPast",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_past",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2012",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameDay",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_day",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2013",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameHour",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_hour",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2014",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameISOWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_iso_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2015",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameISOWeekYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_iso_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2016",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameMinute",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_minute",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2017",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2018",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameQuarter",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_quarter",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2019",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameSecond",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_second",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2020",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2021",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSameYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_same_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2022",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSaturday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_saturday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2023",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isSunday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_sunday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2024",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isThisHour",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_this_hour",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2025",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isThisISOWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_this_iso_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2026",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isThisMinute",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_this_minute",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2027",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isThisMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_this_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2028",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isThisQuarter",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_this_quarter",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2029",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isThisSecond",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_this_second",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2030",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isThisWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_this_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2031",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init ",
+      "primaryTemplate": {
+        "pattern": "date-fns/isThisYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_this_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2032",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isThursday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_thursday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2033",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isToday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_today",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2034",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isTomorrow",
+        "replacements": []
+      },
+      "detectionPattern": "import dtae-fns/is_tomorrow",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2035",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2035",
+      "comment": "init ",
+      "version": 0,
+      "creationDate": "2022-11-01T17:41:50.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/isTomorrow",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_tomorrow",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2035",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isTuesday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_tuesday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2036",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isValid",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_valid",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2037",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isWednesday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_wednesday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2038",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setMinutes",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_minutes",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2061",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isWeekend",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_weekend",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2044",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isWithinInterval",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_within_range",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2045",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/isYesterday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_yesterday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2046",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/lastDayOfISOWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/last_day_of_iso_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2047",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/lastDayOfISOWeekYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/last_day_of_iso_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2048",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/lastDayOfMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/last_day_of_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2049",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/lastDayOfQuarter",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/last_day_of_quarter",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2050",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/lastDayOfWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/last_day_of_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2051",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/lastDayOfYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/last_day_of_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2052",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setDate",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_date",
+      "unknownAccessPathQuestion": "is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2053",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setDay",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_day",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2054",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setDayOfYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_day_of_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2055",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setHours",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_hours",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2056",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setISODay",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_iso_day",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2057",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setISOWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_iso_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2058",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setISOWeekYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_iso_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2059",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setMilliseconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_milliseconds",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2060",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2062",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setQuarter",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_quarter",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2063",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setSeconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_seconds",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2064",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/setYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/set_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2065",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfDay",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_day",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2066",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfHour",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_hour",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2067",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfISOWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_iso_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2068",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfISOWeekYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_iso_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2069",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfMinute",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_minute",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2070",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfMonth",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_month",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2071",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfQuarter",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_quarter",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2072",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfSecond",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_second",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2073",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfToday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_today",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2074",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfTomorrow",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_tomorrow",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2075",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfWeek",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_week",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2076",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfYear",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_year",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2077",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/startOfYesterday",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/start_of_yesterday",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2078",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subDays",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_days",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2079",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subHours",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_hours",
+      "unknownAccessPathQuestion": "Is the moduel a submodule of date-fns?"
+    },
+    "semanticPatchId": "2080",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subISOWeekYears",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_iso_years",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2081",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subMilliseconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_milliseconds",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2082",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subMinutes",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_minutes",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2083",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subMonths",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_months",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2084",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subQuarters",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_quarters",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2085",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subSeconds",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_seconds",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2086",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subWeeks",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_weeks",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2087",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "date-fns/subYears",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/sub_years",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2088",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns>.formatDistance",
+        "replacements": []
+      },
+      "detectionPattern": "read <date-fns>.distanceInWords",
+      "unknownAccessPathQuestion": "Is the method called from date-fns?"
+    },
+    "semanticPatchId": "2099",
+    "breakingChangeId": "748",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "$base.formatDistanceStrict",
+        "replacements": []
+      },
+      "detectionPattern": "read <date-fns>.distanceInWordsStrict",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2100",
+    "breakingChangeId": "749",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "$base.formatDistanceToNow",
+        "replacements": []
+      },
+      "detectionPattern": "read <date-fns>.distanceInWordsToNow",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2101",
+    "breakingChangeId": "750",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2099",
+      "comment": "updated unknown access path question",
+      "version": 0,
+      "creationDate": "2022-11-03T13:34:32.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.formatDistance",
+        "replacements": []
+      },
+      "detectionPattern": "read <date-fns>.distanceInWords",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2099",
+    "breakingChangeId": "748",
+    "enabled": true,
+    "comment": "updated unknown access path question"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "round",
+            "operation": "RENAME_PROP",
+            "newPropName": "roundingMethod",
+            "oldPropName": "partialMethod"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.formatDistanceStrict [3,3]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2105",
+    "breakingChangeId": "754",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2100",
+      "comment": "Updated to also change the order of arguments",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-03T13:44:32.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "'round'",
+            "operation": "RENAME_PROP",
+            "newPropName": "roundingMethod",
+            "oldPropName": "partialMethod"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$base.formatDistanceStrict($2, $1, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.distanceInWordsStrict [3,3]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2100",
+    "breakingChangeId": "749",
+    "enabled": true,
+    "comment": "Updated to also change the order of arguments"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns>.formatDistanceStrict($2, $1, { roundingMethod: 'round' })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.distanceInWordsStrict [2,2]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2106",
+    "breakingChangeId": "749",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns/formatDistanceStrict>($2, $1, { roundingMethod: 'round' })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/distanceInWordsStrict> [2,2]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns/distanceInWordsStrict?"
+    },
+    "semanticPatchId": "2107",
+    "breakingChangeId": "749",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "'round'",
+            "operation": "RENAME_PROP",
+            "newPropName": "roundingMethod",
+            "oldPropName": "partialMethod"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "<date-fns/formatDistanceStrict>($2, $1, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/distanceInWordsStrict> [3,3]",
+      "unknownAccessPathQuestion": "Is the calle from date-fns/distanceInWordsStrict?"
+    },
+    "semanticPatchId": "2108",
+    "breakingChangeId": "749",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2108",
+      "comment": "Fixed a typo in unknown access path question",
+      "version": 0,
+      "creationDate": "2022-11-04T12:55:16.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "'round'",
+            "operation": "RENAME_PROP",
+            "newPropName": "roundingMethod",
+            "oldPropName": "partialMethod"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "<date-fns/formatDistanceStrict>($2, $1, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/distanceInWordsStrict> [3,3]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns/distanceInWordsStrict?"
+    },
+    "semanticPatchId": "2108",
+    "breakingChangeId": "749",
+    "enabled": true,
+    "comment": "Fixed a typo in unknown access path question"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2100",
+      "comment": "Updated template",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-04T12:35:20.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "'round'",
+            "operation": "RENAME_PROP",
+            "newPropName": "roundingMethod",
+            "oldPropName": "partialMethod"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "<date-fns>.formatDistanceStrict($2, $1, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.distanceInWordsStrict [3,3]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2100",
+    "breakingChangeId": "749",
+    "enabled": true,
+    "comment": "Updated template"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call {<date-fns>.isValid,<date-fns/isValid>}",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2129",
+    "breakingChangeId": "773",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call {<date-fns>.*,<date-fns/*>} -1:object",
+      "unknownAccessPathQuestion": "Is the callee called with an options object and from date-fns?"
+    },
+    "semanticPatchId": "2130",
+    "breakingChangeId": "774",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns/formatDistance>($2, $1, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/distanceInWords> [2,3]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2116",
+    "breakingChangeId": "748",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2099",
+      "comment": "new detection pattern and template",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-03T13:50:17.000Z",
+      "primaryTemplate": {
+        "pattern": "<date-fns>.formatDistance($2, $1, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.distanceInWords [2,3]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2099",
+    "breakingChangeId": "748",
+    "enabled": true,
+    "comment": "new detection pattern and template"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1997",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-11-05T10:31:04.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/getOverlappingDaysInIntervals",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/get_overlapping_days_in_ranges",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1997",
+    "breakingChangeId": "741",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1959",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-11-06T15:47:54.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/formatDistance",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/distance_in_words",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1959",
+    "breakingChangeId": "741",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1961",
+      "comment": "enabled",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-03T13:25:20.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/formatDIstanceToNow",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/distance_in_words_to_now",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1961",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "enabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1937",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-10-30T15:56:30.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/areIntervalsOverlapping",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/are_ranges_overlapping",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1937",
+    "breakingChangeId": "741",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1962",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-10-30T17:28:04.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/eachDayOfInterval",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/each_day",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1962",
+    "breakingChangeId": "741",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2045",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-11-02T16:47:53.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/isWithinInterval",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/is_within_range",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "2045",
+    "breakingChangeId": "741",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init test with replacement",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": [
+          {
+            "source": "$callee",
+            "newName": "$newCallee",
+            "substitutes": [
+              "<date-fns>.parse => <date-fns>.toDate",
+              "<date-fns/parse> => <date-fns/toDate>"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "call {<date-fns>.parse,<date-fns/parse>} 0:string",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2124",
+    "breakingChangeId": "766",
+    "enabled": true,
+    "comment": "init test with replacement"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2124",
+      "comment": "test with replacement",
+      "version": 0,
+      "creationDate": "2022-11-09T16:59:40.000Z",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": [
+          {
+            "source": "$callee",
+            "newName": "$newCallee",
+            "substitutes": [
+              "<date-fns>.parse => <date-fns>.toDate",
+              "<date-fns/parse> => <date-fns/toDate>"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "call {<date-fns>.parse,<date-fns/parse>} 0:number",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2124",
+    "breakingChangeId": "766",
+    "enabled": true,
+    "comment": "test with replacement"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2124",
+      "comment": "splitting up the SP",
+      "version": 1,
+      "creationDate": "2022-11-09T17:00:23.000Z",
+      "primaryTemplate": {
+        "pattern": "<date-fns>.toDate($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.parse 0:number",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2124",
+    "breakingChangeId": "766",
+    "enabled": true,
+    "comment": "splitting up the SP"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "<date-fns/toDate>($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/parse> 0:number",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2125",
+    "breakingChangeId": "766",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call <date-fns/parse> 0:string",
+      "alternativeTemplate": {
+        "pattern": "<date-fns/parseISO>($args)",
+        "replacements": []
+      },
+      "transformationQuestion": "Is the argument NOT a string in ISO 8601 format?",
+      "suggestedFixDescription": "To use parse, two additional arguments must be provided. The syntax is now parse(dateString, formatString, referenceDate, [options]), where 'formatString' is a string describing the format of 'dateString'. For additional information see https://date-fns.org/v2.29.3/docs/parse.",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2126",
+    "breakingChangeId": "766",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call {<date-fns>.{closestTo,closestIndexTo},<date-fns/{closestTo,closestIndexTo}>}",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2127",
+    "breakingChangeId": "771",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[en=>en-US,zh_cn=>zh-CN,zh_tw=>zh-TW]",
+        "replacements": []
+      },
+      "detectionPattern": "read <date-fns/locale>.{en,zh_cn,zh_tw}",
+      "unknownAccessPathQuestion": "Is the object from a locale from date-fns?"
+    },
+    "semanticPatchId": "2128",
+    "breakingChangeId": "772",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2128",
+      "comment": "Added replacement",
+      "version": 0,
+      "creationDate": "2022-11-10T20:39:52.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/locale/#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "en=>en-US",
+              "zh_cn=>zh-CN",
+              "zh_tw=>zh-TW"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import date-fns/locale/{en,zh_cn,zh_tw}",
+      "unknownAccessPathQuestion": "Is the object from a locale from date-fns?"
+    },
+    "semanticPatchId": "2128",
+    "breakingChangeId": "772",
+    "enabled": true,
+    "comment": "Added replacement"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2130",
+      "comment": "init",
+      "version": 1,
+      "creationDate": "2022-11-11T08:36:40.000Z",
+      "detectionPattern": "call {<date-fns>.*,<date-fns/*>} -1:object",
+      "unknownAccessPathQuestion": "Is the callee called with an options object and from date-fns?"
+    },
+    "semanticPatchId": "2130",
+    "breakingChangeId": "774",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call {<date-fns>.{format,distanceInWords,distanceInWordsStrict},<date-fns/{format,distanceInWords,distanceInWordsStrict}>}",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2131",
+    "breakingChangeId": "776",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2126",
+      "comment": "Removed transformation question and updated suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-09T18:00:44.000Z",
+      "detectionPattern": "call <date-fns/parse> 0:string",
+      "alternativeTemplate": {
+        "pattern": "<date-fns/parseISO>($args)",
+        "replacements": []
+      },
+      "suggestedFixDescription": "If the string is in ISO 8601 format use parseISO instead. Otherwise, to use parse, two additional arguments must be provided. The syntax is now parse(dateString, formatString, referenceDate, [options]), where 'formatString' is a string describing the format of 'dateString'. For additional information see https://date-fns.org/v2.29.3/docs/parse.",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2126",
+    "breakingChangeId": "766",
+    "enabled": true,
+    "comment": "Removed transformation question and updated suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1961",
+      "comment": "fixed typo",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-03T13:25:20.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/formatDistanceToNow",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/distance_in_words_to_now",
+      "unknownAccessPathQuestion": "Is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1961",
+    "breakingChangeId": "741",
+    "enabled": true,
+    "comment": "fixed typo"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1808",
+      "comment": "removed matches to parse",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-10-13T18:59:05.000Z",
+      "detectionPattern": "call ({<date-fns>,<date-fns/*>}**\\{<date-fns>.parse,<date-fns/parse>}) 0:string",
+      "suggestedFixDescription": "The input string should now be parsed beforehand. Use parse or parseISO (if you’re using ISO 8601) to parse your strings.",
+      "unknownAccessPathQuestion": "Is the function called from date-fns and called with a string argument?"
+    },
+    "semanticPatchId": "1808",
+    "breakingChangeId": "674",
+    "enabled": true,
+    "comment": "removed matches to parse"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1814",
+      "comment": "Added suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-10-14T09:06:36.000Z",
+      "detectionPattern": "call <date-fns>.format [2:3] 1:string",
+      "suggestedFixDescription": "The tokens have changed, so e.g. instead of using YYYY/YY or DD/D use yyyy/yy and dd/d. For more details see https://date-fns.org/v2.29.3/docs/format",
+      "unknownAccessPathQuestion": "Is the function called from date-fns?"
+    },
+    "semanticPatchId": "1814",
+    "breakingChangeId": "679",
+    "enabled": true,
+    "comment": "Added suggested fix"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2105",
+      "comment": "Disabled",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-11-04T11:47:19.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "'round'",
+            "operation": "RENAME_PROP",
+            "newPropName": "roundingMethod",
+            "oldPropName": "partialMethod"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns>.formatDistanceStrict [3,3]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2105",
+    "breakingChangeId": "754",
+    "enabled": false,
+    "comment": "Disabled"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distanceInWordsStrict>} [3,3] 2.unit:string",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2139",
+    "breakingChangeId": "785",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2139",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-11-15T16:39:09.000Z",
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distanceInWordsStrict>} [3,3] 2.unit:string",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2139",
+    "breakingChangeId": "785",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2131",
+      "comment": "enabled",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-19T11:51:26.000Z",
+      "detectionPattern": "call {<date-fns>.{format,distanceInWords,distanceInWordsStrict},<date-fns/{format,distanceInWords,distanceInWordsStrict}>}",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2131",
+    "breakingChangeId": "776",
+    "enabled": true,
+    "comment": "enabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2107",
+      "comment": "changed detection pattern",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-04T12:52:21.000Z",
+      "primaryTemplate": {
+        "pattern": "<date-fns/formatDistanceStrict>($2, $1, { roundingMethod: 'round' })",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/distance_in_words_strict> [2,2]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns/distanceInWordsStrict?"
+    },
+    "semanticPatchId": "2107",
+    "breakingChangeId": "749",
+    "enabled": true,
+    "comment": "changed detection pattern"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2108",
+      "comment": "corrected the detection pattern",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-04T12:55:47.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "'round'",
+            "operation": "RENAME_PROP",
+            "newPropName": "roundingMethod",
+            "oldPropName": "partialMethod"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "<date-fns/formatDistanceStrict>($2, $1, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/distance_in_words_strict> [3,3]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns/distanceInWordsStrict?"
+    },
+    "semanticPatchId": "2108",
+    "breakingChangeId": "749",
+    "enabled": true,
+    "comment": "corrected the detection pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2116",
+      "comment": "updated detection pattern",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-06T16:21:50.000Z",
+      "primaryTemplate": {
+        "pattern": "<date-fns/formatDistance>($2, $1, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <date-fns/distance_in_words> [2,3]",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2116",
+    "breakingChangeId": "748",
+    "enabled": true,
+    "comment": "updated detection pattern"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1960",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-11-03T13:24:09.000Z",
+      "primaryTemplate": {
+        "pattern": "date-fns/formatDistanceStrict",
+        "replacements": []
+      },
+      "detectionPattern": "import date-fns/distance_in_words_strict",
+      "unknownAccessPathQuestion": "is the module a submodule of date-fns?"
+    },
+    "semanticPatchId": "1960",
+    "breakingChangeId": "741",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2139",
+      "comment": "Added object modifiers",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-11-15T16:39:21.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "value": "'second'",
+            "propName": "unit",
+            "operation": "ADD_PROP"
+          },
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'s'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2139",
+    "breakingChangeId": "785",
+    "enabled": false,
+    "comment": "Added object modifiers"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2139",
+      "comment": "Modified add modifier",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-11-24T16:38:50.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'second'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'s'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2139",
+    "breakingChangeId": "785",
+    "enabled": false,
+    "comment": "Modified add modifier"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'minute'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'m'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2228",
+    "breakingChangeId": "785",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'hour'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'h'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2229",
+    "breakingChangeId": "785",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'day'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'d'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2230",
+    "breakingChangeId": "785",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'month'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'M'",
+      "unknownAccessPathQuestion": "is the callee from date-fns?"
+    },
+    "semanticPatchId": "2231",
+    "breakingChangeId": "785",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'year'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'Y'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2232",
+    "breakingChangeId": "785",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2228",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-11-24T16:46:50.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'minute'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'m'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2228",
+    "breakingChangeId": "785",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2229",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-11-24T16:48:01.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'hour'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'h'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2229",
+    "breakingChangeId": "785",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2230",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-11-24T16:48:46.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'day'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'d'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2230",
+    "breakingChangeId": "785",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2231",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-11-24T16:49:27.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'month'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'M'",
+      "unknownAccessPathQuestion": "is the callee from date-fns?"
+    },
+    "semanticPatchId": "2231",
+    "breakingChangeId": "785",
+    "enabled": false,
+    "comment": "disabled"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2232",
+      "comment": "disabled",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-11-24T16:50:14.000Z",
+      "objectModifiers": {
+        "$3": [
+          {
+            "propName": "unit",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "'year'",
+            "propName": "unit ",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<date-fns>.distanceInWordsStrict,<date-fns/distance_in_words_strict>} [3,3] 2.unit:'Y'",
+      "unknownAccessPathQuestion": "Is the callee from date-fns?"
+    },
+    "semanticPatchId": "2232",
+    "breakingChangeId": "785",
+    "enabled": false,
+    "comment": "disabled"
+  }
+]

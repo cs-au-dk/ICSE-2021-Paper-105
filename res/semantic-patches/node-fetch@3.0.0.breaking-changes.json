@@ -1,0 +1,134 @@
+[
+  {
+    "id": "272",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "Changed default user agent\nThe default user agent has been changed from node-fetch/1.0 (+https://github.com/node-fetch/node-fetch) to node-fetch (+https://github.com/node-fetch/node-fetch).",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "264",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "Minimum supported Node.js version is now 12.20",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "265",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "A stream pipeline is now used to forward errors",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "266",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "Dropped the res.textConverted() function",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "271",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "Response.statusText no longer sets a default message derived from the HTTP status code",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "267",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "The timeout option was removed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "270",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "req.body can no longer be a string",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "268",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "JSON parsing errors from res.json() are of type SyntaxError instead of FetchError",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "269",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "node-fetch is not intended to be used client side (in the browser). Consider switching to cross-fetch or similar as an alternative if your code may run in a browser.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "273",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "Arbitrary (relative) URLs are no longer supported\nSince in 3.x we are using the WHATWG's new URL(), arbitrary (relative) URL parsing will fail due to lack of base. ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "383",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "Promise property removed from default export. Custom Promise no longer allowed.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "377",
+    "packageVersion": "3.0.0",
+    "packageName": "node-fetch",
+    "description": "Converted to ESM only package. Alternative import for CommonJS is: const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

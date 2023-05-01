@@ -1,0 +1,46 @@
+[
+  {
+    "id": "20",
+    "packageVersion": "2.0.0",
+    "packageName": "chalk",
+    "description": "Removed chalk.styles. Use the ansi-styles package directly instead. 8702496",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "19",
+    "packageVersion": "2.0.0",
+    "packageName": "chalk",
+    "description": "Removed chalk.stripColor(). Use the strip-ansi package directly instead. 04cae22",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "18",
+    "packageVersion": "2.0.0",
+    "packageName": "chalk",
+    "description": "Removed chalk.hasColor(). Use the has-ansi package directly instead. 04cae22",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "188",
+    "packageVersion": "2.0.0",
+    "packageName": "chalk",
+    "description": "Requires Node.js 4 or later.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <cash-dom>**.on 0:”focus”",
+      "suggestedFixDescription": "This can be breaking if this event listener is set on a parent element, and you are calling the `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` method on a child element.\n**old behavior:** The `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` call would not trigger this event listener, since it is placed on the parent element.\n**new behavior:** The `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` call will now “bubble up” to the parent element, and trigger this event listener.",
+      "unknownAccessPathQuestion": "Is this a call of the cash-dom.on method?"
+    },
+    "semanticPatchId": "2153",
+    "breakingChangeId": "808",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2153",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-23T05:07:41.000Z",
+      "detectionPattern": "call <cash-dom>**.on 0:focus",
+      "suggestedFixDescription": "This can be breaking if this event listener is set on a parent element, and you are calling the `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` method on a child element.\n**old behavior:** The `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` call would not trigger this event listener, since it is placed on the parent element.\n**new behavior:** The `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` call will now “bubble up” to the parent element, and trigger this event listener.",
+      "unknownAccessPathQuestion": "Is this a call of the cash-dom.on method?"
+    },
+    "semanticPatchId": "2153",
+    "breakingChangeId": "808",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2153",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-23T05:08:51.000Z",
+      "detectionPattern": "call <cash-dom>**.on 0:\"focus\"",
+      "suggestedFixDescription": "This can be breaking if this event listener is set on a parent element, and you are calling the `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` method on a child element.\n**old behavior:** The `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` call would not trigger this event listener, since it is placed on the parent element.\n**new behavior:** The `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` call will now “bubble up” to the parent element, and trigger this event listener.",
+      "unknownAccessPathQuestion": "Is this a call of the cash-dom.on method?"
+    },
+    "semanticPatchId": "2153",
+    "breakingChangeId": "808",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2153",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-23T05:15:05.000Z",
+      "detectionPattern": "call <cash-dom>**.on 0:\"focus\"",
+      "suggestedFixDescription": "This can be breaking if this event listener is set on a parent element, and you are calling the `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` method on a child element.\n**old behavior:** The `$.trigger(focusin)` call would not trigger this event listener, since it is placed on the parent element.\n**new behavior:** The `$.trigger(focusin)` call will now “bubble up” to the parent element, and trigger this event listener.",
+      "unknownAccessPathQuestion": "Is this a call of the cash-dom.on method?"
+    },
+    "semanticPatchId": "2153",
+    "breakingChangeId": "808",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <cash-dom>**.on 0:”mouseenter”",
+      "suggestedFixDescription": "This can be breaking if this event listener is set on a parent element, and you are calling the `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` method on a child element.\n**old behavior:** The `$.trigger(mouseover)` call would not trigger this event listener, since it is placed on the parent element.\n**new behavior:** The `$.trigger(mouseover)` call will now “bubble up” to the parent element, and trigger this event listener.",
+      "unknownAccessPathQuestion": "Is this a call of the cash-dom.on method?"
+    },
+    "semanticPatchId": "2154",
+    "breakingChangeId": "808",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2154",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-23T05:17:31.000Z",
+      "detectionPattern": "call <cash-dom>**.on 0:\"mouseenter\"",
+      "suggestedFixDescription": "This can be breaking if this event listener is set on a parent element, and you are calling the `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` method on a child element.\n**old behavior:** The `$.trigger(mouseover)` call would not trigger this event listener, since it is placed on the parent element.\n**new behavior:** The `$.trigger(mouseover)` call will now “bubble up” to the parent element, and trigger this event listener.",
+      "unknownAccessPathQuestion": "Is this a call of the cash-dom.on method?"
+    },
+    "semanticPatchId": "2154",
+    "breakingChangeId": "808",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <cash-dom>**.on 0:\"mouseleave\"",
+      "suggestedFixDescription": "This can be breaking if this event listener is set on a parent element, and you are calling the `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` method on a child element.\n**old behavior:** The `$.trigger(mouseout)` call would not trigger this event listener, since it is placed on the parent element.\n**new behavior:** The `$.trigger(mouseout)` call will now “bubble up” to the parent element, and trigger this event listener.",
+      "unknownAccessPathQuestion": "Is this a call of the cash-dom.on method?"
+    },
+    "semanticPatchId": "2155",
+    "breakingChangeId": "808",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <cash-dom>**.on 0:”blur”",
+      "suggestedFixDescription": "This can be breaking if this event listener is set on a parent element, and you are calling the `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` method on a child element.\n**old behavior:** The `$.trigger(focusout)` call would not trigger this event listener, since it is placed on the parent element.\n**new behavior:** The `$.trigger(focusout)` call will now “bubble up” to the parent element, and trigger this event listener.",
+      "unknownAccessPathQuestion": "Is this a call of the cash-dom.on method?"
+    },
+    "semanticPatchId": "2156",
+    "breakingChangeId": "808",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2156",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-23T05:21:04.000Z",
+      "detectionPattern": "call <cash-dom>**.on 0:\"blur\"",
+      "suggestedFixDescription": "This can be breaking if this event listener is set on a parent element, and you are calling the `$.trigger($1[focus=> focusin,blur=> focusout,mouseenter=> mouseover,mouseleave=> mouseout])` method on a child element.\n**old behavior:** The `$.trigger(focusout)` call would not trigger this event listener, since it is placed on the parent element.\n**new behavior:** The `$.trigger(focusout)` call will now “bubble up” to the parent element, and trigger this event listener.",
+      "unknownAccessPathQuestion": "Is this a call of the cash-dom.on method?"
+    },
+    "semanticPatchId": "2156",
+    "breakingChangeId": "808",
+    "enabled": true,
+    "comment": "Initial "
+  }
+]

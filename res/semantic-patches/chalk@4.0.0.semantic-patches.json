@@ -1,0 +1,35 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <chalk>.Level.None",
+      "primaryTemplate": {
+        "pattern": "$base.level > 0",
+        "replacements": []
+      },
+      "detectionPattern": "read <chalk>.Level.None"
+    },
+    "semanticPatchId": "1386",
+    "breakingChangeId": "251",
+    "enabled": true,
+    "comment": "read <chalk>.Level.None"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1386",
+      "comment": "read <chalk>.Level.{None,Basic,Ansi256,TrueColor}",
+      "version": 0,
+      "creationDate": "2022-02-21T08:09:49.000Z",
+      "primaryTemplate": {
+        "pattern": "$prop[None => 0,Basic => 1,Ansi256 => 2,TrueColor => 3]",
+        "replacements": []
+      },
+      "detectionPattern": "read <chalk>.Level.{None,Basic,Ansi256,TrueColor}"
+    },
+    "semanticPatchId": "1386",
+    "breakingChangeId": "251",
+    "enabled": true,
+    "comment": "read <chalk>.Level.{None,Basic,Ansi256,TrueColor}"
+  }
+]

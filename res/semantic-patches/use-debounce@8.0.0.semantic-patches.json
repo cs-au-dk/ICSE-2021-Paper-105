@@ -1,0 +1,110 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<use-debounce>.useDebounceCallback($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <use-debounce/{esm,lib}/useDebounceCallback>",
+      "unknownAccessPathQuestion": "Is this a call to useDebounceCallback from use-debounce?"
+    },
+    "semanticPatchId": "1608",
+    "breakingChangeId": "473",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<use-debounce>.useThrottledCallback($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <use-debounce/{esm,lib}/useThrottledCallback>",
+      "unknownAccessPathQuestion": "Is this a call to useThrottledCallback from use-debounce?"
+    },
+    "semanticPatchId": "1609",
+    "breakingChangeId": "473",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<use-debounce>.useDebounce($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<use-debounce/{esm,lib}/useDebounce>,<use-debounce/{esm,lib}>}",
+      "unknownAccessPathQuestion": "Is this a call to useDebounce from use-debounce?"
+    },
+    "semanticPatchId": "1610",
+    "breakingChangeId": "473",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "<use-debounce>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <use-debounce/{esm,lib}/useDebouncedCallback>.{ControlFunctions,DebouncedState,Options}",
+      "unknownAccessPathQuestion": "Is this an interface from use-debounce?"
+    },
+    "semanticPatchId": "1621",
+    "breakingChangeId": "473",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1621",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-07-08T12:00:27.000Z",
+      "primaryTemplate": {
+        "pattern": "<use-debounce/dist/useDebouncedCallback>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <use-debounce/{esm,lib}/useDebouncedCallback>.{ControlFunctions,DebouncedState,Options}",
+      "unknownAccessPathQuestion": "Is this an interface from use-debounce?"
+    },
+    "semanticPatchId": "1621",
+    "breakingChangeId": "473",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1621",
+      "comment": "init  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-07-08T12:06:40.000Z",
+      "primaryTemplate": {
+        "pattern": "<use-debounce/dist/useDebouncedCallback>.$prop",
+        "replacements": []
+      },
+      "detectionPattern": "read <use-debounce/{esm,lib}/useDebouncedCallback>.{ControlFunctions,DebouncedState,Options,DebouncedState}",
+      "unknownAccessPathQuestion": "Is this an interface from use-debounce?"
+    },
+    "semanticPatchId": "1621",
+    "breakingChangeId": "473",
+    "enabled": true,
+    "comment": "init  "
+  }
+]

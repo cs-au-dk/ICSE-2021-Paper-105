@@ -1,0 +1,18 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<react-minimal-pie-chart>.PieChart",
+        "replacements": []
+      },
+      "detectionPattern": "importD react-minimal-pie-chart",
+      "unknownAccessPathQuestion": "Is this import a default import of react-minimal-pie-chart"
+    },
+    "semanticPatchId": "1607",
+    "breakingChangeId": "469",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

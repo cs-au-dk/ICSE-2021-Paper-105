@@ -1,0 +1,35 @@
+[
+  {
+    "id": "413",
+    "packageVersion": "5.0.0",
+    "packageName": "downshift",
+    "description": "Removed FunctionClearKeysSoFar from state change types and TS typings.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "420",
+    "packageVersion": "5.0.0",
+    "packageName": "downshift",
+    "description": "Both getA11yStatusMessage and getA11ySelectionMessage will be called with the same props as the getA11yStatusMessage in <Downshift>, apart from previousResultCount",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "444",
+    "packageVersion": "5.0.0",
+    "packageName": "downshift",
+    "description": "Only when server-side rendering (SSR): If you get a checksum error because of the automatically generated id's from downshift, simply call resetIdCounter before ReactDOM.renderToString.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

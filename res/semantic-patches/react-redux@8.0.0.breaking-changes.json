@@ -1,0 +1,35 @@
+[
+  {
+    "id": "409",
+    "packageVersion": "8.0.0",
+    "packageName": "react-redux",
+    "description": "If you are using Typescript, React-Redux is now written in TS and includes its own types. You should remove any dependencies on @types/react-redux.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "410",
+    "packageVersion": "8.0.0",
+    "packageName": "react-redux",
+    "description": "The connectAdvanced API is now deprecated ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "408",
+    "packageVersion": "8.0.0",
+    "packageName": "react-redux",
+    "description": "The pure option for connect has been removed.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

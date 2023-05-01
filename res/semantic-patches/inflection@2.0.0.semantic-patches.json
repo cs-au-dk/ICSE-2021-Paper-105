@@ -1,0 +1,134 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee($1, parseFloat($2,10),$3,$4);",
+        "replacements": []
+      },
+      "detectionPattern": "call <inflection>.inflect 1:string",
+      "unknownAccessPathQuestion": "Is this a call of the inflect method from the inflection package?"
+    },
+    "semanticPatchId": "2147",
+    "breakingChangeId": "802",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee($1, parseFloat($2,10),$3,$4);",
+        "replacements": []
+      },
+      "detectionPattern": "call <inflection>.inflect 1:string",
+      "unknownAccessPathQuestion": "Is this a call of the inflect method from the inflection package?"
+    },
+    "semanticPatchId": "2148",
+    "breakingChangeId": "802",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2148",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-22T05:30:51.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, parseFloat($2,10),$3);",
+        "replacements": []
+      },
+      "detectionPattern": "call <inflection>.inflect 1:string [2,3]",
+      "unknownAccessPathQuestion": "Is this a call of the inflect method from the inflection package?"
+    },
+    "semanticPatchId": "2148",
+    "breakingChangeId": "802",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee($1, parseFloat($2,10),$3, $4);",
+        "replacements": []
+      },
+      "detectionPattern": "call <inflection>.inflect 1:string [4,4]",
+      "unknownAccessPathQuestion": "Is this a call of the inflect method from the inflection package?"
+    },
+    "semanticPatchId": "2149",
+    "breakingChangeId": "802",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <inflection>.version",
+      "suggestedFixDescription": "The `inflection.version` variable has been removed and there is no real alternative to this variable. If you are only using this variable one place, we recommend just hardcoding your current version of inflection. If you are using the variable multiple places, you should declare a constant with the version integer.",
+      "unknownAccessPathQuestion": "Is this reading the .version variable from the inflection package?"
+    },
+    "semanticPatchId": "2150",
+    "breakingChangeId": "803",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2150",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-11-22T16:42:47.000Z",
+      "detectionPattern": "read <inflection>.version",
+      "suggestedFixDescription": "The `inflection.version` variable has been removed and there is no real alternative to this variable. \nf you are only using this variable one place, we recommend just hardcoding your current version of inflection. \nIf you are using the variable multiple places, you should declare a constant with the version integer.",
+      "unknownAccessPathQuestion": "Is this reading the .version variable from the inflection package?"
+    },
+    "semanticPatchId": "2150",
+    "breakingChangeId": "803",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2150",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-11-22T16:43:17.000Z",
+      "detectionPattern": "read <inflection>.version",
+      "suggestedFixDescription": "The `inflection.version` variable has been removed and there is no real alternative to this variable. \nIf you are only using this variable one place, we recommend just hardcoding your current version of inflection. \nIf you are using the variable multiple places, you should declare a constant with the version integer.",
+      "unknownAccessPathQuestion": "Is this reading the .version variable from the inflection package?"
+    },
+    "semanticPatchId": "2150",
+    "breakingChangeId": "803",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2147",
+      "comment": "Disabled. Patch handled by the two other patches for this breaking change",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-11-22T05:30:51.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, parseFloat($2,10),$3,$4);",
+        "replacements": []
+      },
+      "detectionPattern": "call <inflection>.inflect 1:string",
+      "unknownAccessPathQuestion": "Is this a call of the inflect method from the inflection package?"
+    },
+    "semanticPatchId": "2147",
+    "breakingChangeId": "802",
+    "enabled": false,
+    "comment": "Disabled. Patch handled by the two other patches for this breaking change"
+  }
+]

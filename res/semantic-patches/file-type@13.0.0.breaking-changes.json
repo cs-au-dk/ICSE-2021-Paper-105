@@ -1,0 +1,35 @@
+[
+  {
+    "id": "300",
+    "packageVersion": "13.0.0",
+    "packageName": "file-type",
+    "description": "Browser supports was moved into a sub-module",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "307",
+    "packageVersion": "13.0.0",
+    "packageName": "file-type",
+    "description": "Require Node.js 10",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "311",
+    "packageVersion": "13.0.0",
+    "packageName": "file-type",
+    "description": "Rewrite the API and make it async",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

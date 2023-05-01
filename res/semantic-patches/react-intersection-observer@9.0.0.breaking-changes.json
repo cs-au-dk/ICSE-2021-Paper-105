@@ -1,0 +1,13 @@
+[
+  {
+    "id": "411",
+    "packageVersion": "9.0.0",
+    "packageName": "react-intersection-observer",
+    "description": "Removed the default export of the InView component. Use the named InView import instead",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

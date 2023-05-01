@@ -1,0 +1,35 @@
+[
+  {
+    "id": "796",
+    "packageVersion": "8.0.0",
+    "packageName": "node-sass",
+    "description": "Set rejectUnauthorized to true by default (@scott-ut, #3149).\nThis change solves a security issue, [rejecting any connection which is not authorized with a certificate authority](https://nodejs.org/docs/latest/api/tls.html#tls_tls_createserver_options_secureconnectionlistener). This can be breaking if you are compiling data from hosts with self-signed certificates, in which case some hosts might be rejected. To override this new default `rejectUnauthorized` value, you can set the new `sass_reject_unauthorized` variable to false. This variable can be declared in [three different ways](https://github.com/sass/node-sass#binary-configuration-parameters), where we recommend either parsing it directly in the command line as `--sass-reject-unauthorized=false` if you are using the CLI or declaring it in either a local or global .npmrc configuration file as `sass_reject_unauthorized=false` ([see guide](https://stackabuse.com/the-ultimate-guide-to-configuring-npm/)).",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "797",
+    "packageVersion": "8.0.0",
+    "packageName": "node-sass",
+    "description": "Drop support for Node 12 (@nschonni). To use node-sass v. ^8.0.0 you have to use node v. 14,16,18 or 19.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "798",
+    "packageVersion": "8.0.0",
+    "packageName": "node-sass",
+    "description": "Drop support for Node 17 (@nschonni). To use node-sass v. ^8.0.0 you have to use node v. 14,16,18 or 19.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <node-fetch>.{_clone,_decode,_convert}",
+      "unknownAccessPathQuestion": "Is the receiver the node-fetch module object?"
+    },
+    "semanticPatchId": "1231",
+    "breakingChangeId": "132",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the header name valid?",
+      "primaryTemplate": {
+        "pattern": "try {\n\t$callee($args)\n} catch (_e) {}"
+      },
+      "detectionPattern": "call <node-fetch>?**.{set,append,has,delete} [1, 2] 0:string",
+      "unknownAccessPathQuestion": "Is the receiver a node-fetch headers object?"
+    },
+    "semanticPatchId": "1234",
+    "breakingChangeId": "135",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the response text NOT encoded in UTF-8?",
+      "primaryTemplate": {
+        "pattern": "$base.textConverted($args)"
+      },
+      "detectionPattern": "call <node-fetch>?**.text",
+      "unknownAccessPathQuestion": "Is the receiver a node-fetch response?"
+    },
+    "semanticPatchId": "1229",
+    "breakingChangeId": "130",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Is the second argument a GET or HEAD Request with non-null body?",
+      "primaryTemplate": {
+        "pattern": "$callee($1, Object.assign($2, {body: null}))"
+      },
+      "detectionPattern": "call <node-fetch> [2, 2]",
+      "unknownAccessPathQuestion": "Is the function being called node-fetch?"
+    },
+    "semanticPatchId": "1232",
+    "breakingChangeId": "133",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "detectionPattern": "call <node-fetch>?**.getAll",
+      "unknownAccessPathQuestion": "Is the receiver a node-fetch headers object?"
+    },
+    "semanticPatchId": "1233",
+    "breakingChangeId": "134",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<node-fetch>.#new2",
+        "replacements": [
+          {
+            "source": "#2",
+            "newName": "#new2",
+            "substitutes": [
+              "fetch-error => FetchError",
+              "response => Response",
+              "request => Request",
+              "body => Body",
+              "headers => Headers"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import node-fetch/lib/**/*"
+    },
+    "semanticPatchId": "1228",
+    "breakingChangeId": "129",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "undefined"
+      },
+      "detectionPattern": "read <node-fetch>?**.arrayBuffer",
+      "unknownAccessPathQuestion": "Is the receiver a node-fetch request or response object?"
+    },
+    "semanticPatchId": "1235",
+    "breakingChangeId": "136",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "Object.defineProperty($base, 'url', {value: $value})"
+      },
+      "detectionPattern": "write <node-fetch>?**.url",
+      "unknownAccessPathQuestion": "Is the receiver a node-fetch request?"
+    },
+    "semanticPatchId": "1236",
+    "breakingChangeId": "137",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Can the response code be 204?",
+      "primaryTemplate": {
+        "pattern": "($base.status === 204 ? {} : $base.json())"
+      },
+      "detectionPattern": "call <node-fetch>?**.json",
+      "unknownAccessPathQuestion": "Is the receiver a node-fetch response?"
+    },
+    "semanticPatchId": "1230",
+    "breakingChangeId": "131",
+    "enabled": true,
+    "comment": "database default"
+  }
+]

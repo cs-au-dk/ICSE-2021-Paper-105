@@ -1,0 +1,24 @@
+[
+  {
+    "id": "564",
+    "packageVersion": "14.0.0",
+    "packageName": "serve",
+    "description": "The core library is now an ES Module.  This is only breaking if your project is not already using ES Modules (`import` instead of older CommonJS `require` mechanism). The Process of migrating from CommonJS to an ES module includes a lot of small changes, and since serve v. 14.0.0 does not fix any immediate security or functionality flaw, you may stay on version 13. If you want to upgrade, we recommend following one of the many guides available, for instance: https://electerious.medium.com/from-commonjs-to-es-modules-how-to-modernize-your-node-js-app-ad8cdd4fb662. You may also use a dynamic import to load the ES module if you want to continue to use CommonJS https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "563",
+    "packageVersion": "14.0.0",
+    "packageName": "serve",
+    "description": "Drops support for Node.js 12 (reached end of life). You will need atleast Node version 14 to use serve v. 14.x. If possible, we recommend updating Node to its “Current” version. If you are in doubt which versions are still being maintained and which are active see: https://endoflife.date/nodejs.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

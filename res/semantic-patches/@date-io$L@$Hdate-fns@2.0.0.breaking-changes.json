@@ -1,0 +1,35 @@
+[
+  {
+    "id": "429",
+    "packageVersion": "2.0.0",
+    "packageName": "@date-io/date-fns",
+    "description": "format method now has signature (date: TDate, formatKey: keyof IDateIOFormat) => string in order to simplify formatting using new format keys",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "430",
+    "packageVersion": "2.0.0",
+    "packageName": "@date-io/date-fns",
+    "description": "Do not update if you are using @material-ui/pickers v3",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "431",
+    "packageVersion": "2.0.0",
+    "packageName": "@date-io/date-fns",
+    "description": "Introduce new object for cross utils formatting. It is overridable via constructor formats prop and provides easy localization formatting",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

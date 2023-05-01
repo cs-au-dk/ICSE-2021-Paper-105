@@ -1,0 +1,46 @@
+[
+  {
+    "id": "582",
+    "packageVersion": "7.0.0",
+    "packageName": "electron-store",
+    "description": "Fix compatibility with Electron 12. This is only breaking if you are currently only creating a store (with `new Store();`) in the renderer process, and not in the Main process. In this case you will have to call `Store.initRenderer()` in the Main process (See: [Store.initRenderer()](https://github.com/MehediH/electron-store/blob/master/readme.md#initrenderer)). The renderer process is defined in a separate js file (usually `renderer.js`). For more information on the entire Process Model including the renderer process see: https://www.electronjs.org/docs/latest/tutorial/process-model.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "583",
+    "packageVersion": "7.0.0",
+    "packageName": "electron-store",
+    "description": "Update ajv to version 7",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "579",
+    "packageVersion": "7.0.0",
+    "packageName": "electron-store",
+    "description": "Require Electron 11. electron-store@7.0.0 requires you to have installed Electron ^11, where it previously was Electron 9",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "580",
+    "packageVersion": "7.0.0",
+    "packageName": "electron-store",
+    "description": "Make the clearInvalidConfig option false by default",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

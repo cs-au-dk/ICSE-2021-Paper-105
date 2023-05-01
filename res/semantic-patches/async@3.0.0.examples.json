@@ -1,0 +1,9 @@
+[
+  {
+    "id": "4",
+    "breakingChangeId": "1",
+    "title": "Async@3.0.0: Writing to drain and saturated property of an async queue",
+    "description": "In v2 of async drain and saturated were properties of a queue that you could write an event handler to. In v3 of async, the drain and saturated properties are methods and the event handler should then be used as argument to these methods.",
+    "codeExample": "var async = require('async');\nvar q = async.queue();\nq.drain = () => console.log(\"drained\");\nq.saturated = () => console.log(\"saturated\");"
+  }
+]

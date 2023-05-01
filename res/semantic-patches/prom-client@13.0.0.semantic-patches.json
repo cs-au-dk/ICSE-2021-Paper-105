@@ -1,0 +1,217 @@
+[
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1390",
+      "comment": "call <prom-client>.register.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-02-26T15:47:12.000Z",
+      "detectionPattern": "call <prom-client>.register.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}",
+      "suggestedFixDescription": "If your metrics server has a line like res.send(register.metrics()), you should change it to res.send(await register.metrics())."
+    },
+    "semanticPatchId": "1390",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "call <prom-client>.register.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <prom-client>.Registry().{registerCollector,collectors}",
+      "detectionPattern": "call <prom-client>.Registry().{registerCollector,collectors}"
+    },
+    "semanticPatchId": "1406",
+    "breakingChangeId": "259",
+    "enabled": true,
+    "comment": "call <prom-client>.Registry().{registerCollector,collectors}"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <prom-client>.Registry().clusterMetrics 0:function",
+      "detectionPattern": "call <prom-client>.Registry().clusterMetrics 0:function"
+    },
+    "semanticPatchId": "1407",
+    "breakingChangeId": "258",
+    "enabled": true,
+    "comment": "call <prom-client>.Registry().clusterMetrics 0:function"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <prom-client>.Registry().{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}",
+      "detectionPattern": "call <prom-client>.Registry().{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}"
+    },
+    "semanticPatchId": "1408",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "call <prom-client>.Registry().{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1390",
+      "comment": "call <prom-client>.register.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString} ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-02-21T09:50:44.000Z",
+      "detectionPattern": "call <prom-client>.register.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}"
+    },
+    "semanticPatchId": "1390",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "call <prom-client>.register.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString} "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <prom-client>.Registry.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}",
+      "primaryTemplate": {
+        "pattern": "await $callee",
+        "replacements": []
+      },
+      "detectionPattern": "call <prom-client>.Registry.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}"
+    },
+    "semanticPatchId": "1390",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "call <prom-client>.Registry.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1390",
+      "comment": "call <prom-client>.register.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}",
+      "version": 0,
+      "creationDate": "2022-02-21T09:26:38.000Z",
+      "primaryTemplate": {
+        "pattern": "await $callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <prom-client>.register.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}"
+    },
+    "semanticPatchId": "1390",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "call <prom-client>.register.{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <prom-client>.register.clusterMetric 0:function",
+      "detectionPattern": "call <prom-client>.register.clusterMetric 0:function"
+    },
+    "semanticPatchId": "1391",
+    "breakingChangeId": "258",
+    "enabled": true,
+    "comment": "call <prom-client>.register.clusterMetric 0:function"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1391",
+      "comment": "call <prom-client>.register.clusterMetrics 0:function",
+      "version": 0,
+      "creationDate": "2022-02-21T09:51:45.000Z",
+      "detectionPattern": "call <prom-client>.register.clusterMetrics 0:function"
+    },
+    "semanticPatchId": "1391",
+    "breakingChangeId": "258",
+    "enabled": true,
+    "comment": "call <prom-client>.register.clusterMetrics 0:function"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <prom-client>.register.{registerCollector,collectors}",
+      "detectionPattern": "call <prom-client>.register.{registerCollector,collectors}"
+    },
+    "semanticPatchId": "1392",
+    "breakingChangeId": "259",
+    "enabled": true,
+    "comment": "call <prom-client>.register.{registerCollector,collectors}"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1408",
+      "comment": "Add suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-14T08:43:19.000Z",
+      "detectionPattern": "call <prom-client>.Registry().{metrics,getMetricsAsJSON,getMetricsAsArray,getSingleMetricAsString}",
+      "suggestedFixDescription": "If your metrics server has a line like res.send(register.metrics()), you should change it to res.send(await register.metrics()).",
+      "unknownAccessPathQuestion": "Is this a call to metrics, getMetricsAsJSON, getMetricsAsArray, or getSingleMetricAsString on a prom-client.Registry object?"
+    },
+    "semanticPatchId": "1408",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "Add suggested fix"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Add semantic patch handling the metric.get() case (notice, this case is missing in the changelog)",
+      "enabled": true,
+      "detectionPattern": "call <prom-client>**.get",
+      "suggestedFixDescription": "Use await in front of $base.$callee(...) or `.then` on the result to wait for the promise to resolve.",
+      "unknownAccessPathQuestion": "Is the receiver a prom-client metric, e.g., a Counter, a Gauge, etc. (See https://github.com/siimon/prom-client/tree/master/lib for the full list)"
+    },
+    "semanticPatchId": "1597",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "Add semantic patch handling the metric.get() case (notice, this case is missing in the changelog)"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1597",
+      "comment": "Add semantic patch handling the metric.get() case (notice, this case is missing in the changelog) (fix suggested fix)",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-06-28T13:38:35.000Z",
+      "detectionPattern": "call <prom-client>**.get",
+      "suggestedFixDescription": "Use await in front of $callee(...) or `.then` on the result to wait for the promise to resolve.",
+      "unknownAccessPathQuestion": "Is the receiver a prom-client metric, e.g., a Counter, a Gauge, etc. (See https://github.com/siimon/prom-client/tree/master/lib for the full list)"
+    },
+    "semanticPatchId": "1597",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "Add semantic patch handling the metric.get() case (notice, this case is missing in the changelog) (fix suggested fix)"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1597",
+      "comment": "Add semantic patch handling the metric.get() case (notice, this case is missing in the changelog) (fix suggested fix) (add question mark)",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-28T13:41:07.000Z",
+      "detectionPattern": "call <prom-client>?**.get",
+      "suggestedFixDescription": "Use await in front of $callee(...) or `.then` on the result to wait for the promise to resolve.",
+      "unknownAccessPathQuestion": "Is the receiver a prom-client metric, e.g., a Counter, a Gauge, etc. (See https://github.com/siimon/prom-client/tree/master/lib for the full list)"
+    },
+    "semanticPatchId": "1597",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "Add semantic patch handling the metric.get() case (notice, this case is missing in the changelog) (fix suggested fix) (add question mark)"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1597",
+      "comment": "Make detection pattern more specific",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-06-28T13:46:37.000Z",
+      "detectionPattern": "call <prom-client>.{Counter,Gauge,Summary,Histogram,Summary}().get",
+      "suggestedFixDescription": "Use await in front of $callee(...) or `.then` on the result to wait for the promise to resolve.",
+      "unknownAccessPathQuestion": "Is the receiver a prom-client metric, e.g., a Counter, a Gauge, etc. (See https://github.com/siimon/prom-client/tree/master/lib for the full list)"
+    },
+    "semanticPatchId": "1597",
+    "breakingChangeId": "257",
+    "enabled": true,
+    "comment": "Make detection pattern more specific"
+  }
+]

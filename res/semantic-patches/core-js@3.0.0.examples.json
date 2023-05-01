@@ -1,0 +1,9 @@
+[
+  {
+    "id": "9",
+    "breakingChangeId": "39",
+    "title": "Core-js 3.0.0: Updating imports",
+    "description": "The es6 and es7 part in the following imports should be replaced by es",
+    "codeExample": "import 'core-js/modules/es6.promise'\nimport 'core-js/modules/es6.symbol'\nimport 'core-js/modules/es6.array.iterator'\nimport 'core-js/modules/es6.array.from'\nimport 'core-js/modules/es6.array.find'\nimport 'core-js/modules/es6.array.find-index'\nimport 'core-js/modules/es6.object.assign'\nimport 'core-js/modules/es7.object.values'\nrequire('core-js/modules/es7.object.entries')\nrequire('core-js/modules/es7.array.includes')"
+  }
+]

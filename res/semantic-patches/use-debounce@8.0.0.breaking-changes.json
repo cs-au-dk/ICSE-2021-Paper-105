@@ -1,0 +1,13 @@
+[
+  {
+    "id": "473",
+    "packageVersion": "8.0.0",
+    "packageName": "use-debounce",
+    "description": "useDebounce changed its build system to microbundle.\nindex.js is for commonJS approach index.modern.js for esnext module system index.umd.js for UMD. All the files are in dist folder.\nIf you have any paths which have esm or lib, please, replace them to dist.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "484",
+    "packageVersion": "8.0.0",
+    "packageName": "react-textarea-autosize",
+    "description": "The package has been rewritten in TypeScript so type definitions are now included in the package itself. There is no need to install separate types from the DefinitelyTyped.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "485",
+    "packageVersion": "8.0.0",
+    "packageName": "react-textarea-autosize",
+    "description": "The package now requier React version  ^16.8.0 as a peer dependency.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

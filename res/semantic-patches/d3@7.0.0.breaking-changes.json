@@ -1,0 +1,57 @@
+[
+  {
+    "id": "765",
+    "packageVersion": "7.0.0",
+    "packageName": "d3",
+    "description": "D3 requires >=Node.js 12",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "767",
+    "packageVersion": "7.0.0",
+    "packageName": "d3",
+    "description": "Adopt InternMap for ordinal scale domains",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "768",
+    "packageVersion": "7.0.0",
+    "packageName": "d3",
+    "description": "d3.ascending and d3.descending no longer consider null comparable",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "769",
+    "packageVersion": "7.0.0",
+    "packageName": "d3",
+    "description": "d3.bin now ignores nulls",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "764",
+    "packageVersion": "7.0.0",
+    "packageName": "d3",
+    "description": "D3 now ships as pure ESM. ESM is different from CommonJS mainly in the fact that you use `import` instead of `require()`. This means a normal `require()` call can no longer be used to require the D3 module. Transforming your own application to be an ES module can be a big task, but luckily there are some excellent guides for this (we link two below this). Besides using ESM yourself you can either choose to stay on the existing version of D3 until you are ready to move to ESM or if you use D3 in an async context, you can use a [[dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) instead of `require()`.\nGuide from Sindre Sorhus: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c.\nGuide from Tobias Reich: https://electerious.medium.com/from-commonjs-to-es-modules-how-to-modernize-your-node-js-app-ad8cdd4fb662. \n**Note:** Additionally if you are testing using [jest](https://jestjs.io/), you will have to migrate this as well. see guide: https://jestjs.io/docs/ecmascript-modules.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

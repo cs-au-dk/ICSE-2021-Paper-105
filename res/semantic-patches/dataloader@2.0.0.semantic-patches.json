@@ -1,0 +1,217 @@
+[
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1393",
+      "comment": "call <dataloader>().loadMany",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-02-27T19:56:26.000Z",
+      "primaryTemplate": {
+        "pattern": "Promise.all($1.map((k) => $base.load(k)))",
+        "replacements": []
+      },
+      "detectionPattern": "call <dataloader>().loadMany"
+    },
+    "semanticPatchId": "1393",
+    "breakingChangeId": "260",
+    "enabled": true,
+    "comment": "call <dataloader>().loadMany"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <dataloader>.batchLoadFn",
+      "detectionPattern": "read <dataloader>.batchLoadFn"
+    },
+    "semanticPatchId": "1395",
+    "breakingChangeId": "262",
+    "enabled": true,
+    "comment": "read <dataloader>.batchLoadFn"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1395",
+      "comment": "read <dataloader>.load",
+      "version": 0,
+      "creationDate": "2022-02-28T14:07:04.000Z",
+      "detectionPattern": "read <dataloader>.load"
+    },
+    "semanticPatchId": "1395",
+    "breakingChangeId": "262",
+    "enabled": true,
+    "comment": "read <dataloader>.load"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <dataloader>.load",
+      "detectionPattern": "read <dataloader>.load"
+    },
+    "semanticPatchId": "1396",
+    "breakingChangeId": "261",
+    "enabled": true,
+    "comment": "read <dataloader>.load"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <dataloader>.loadMany",
+      "primaryTemplate": {
+        "pattern": "Promise.all([$base.load($args[1]), ... ])",
+        "replacements": []
+      },
+      "detectionPattern": "call <dataloader>.loadMany"
+    },
+    "semanticPatchId": "1393",
+    "breakingChangeId": "260",
+    "enabled": true,
+    "comment": "call <dataloader>.loadMany"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1393",
+      "comment": "call <dataloader>.loadMany ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-24T20:18:14.000Z",
+      "primaryTemplate": {
+        "pattern": "Promise.all(() => {var list = []; $args.forEach(function (k) {list.push($base.load(k))})})",
+        "replacements": []
+      },
+      "detectionPattern": "call <dataloader>.loadMany"
+    },
+    "semanticPatchId": "1393",
+    "breakingChangeId": "260",
+    "enabled": true,
+    "comment": "call <dataloader>.loadMany "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1393",
+      "comment": "call <dataloader>().loadMany ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-02-27T19:50:51.000Z",
+      "primaryTemplate": {
+        "pattern": "Promise.all(() => {var list = []; $args.forEach(function (k) {list.push($base.load(k))})})",
+        "replacements": []
+      },
+      "detectionPattern": "call <dataloader>().loadMany"
+    },
+    "semanticPatchId": "1393",
+    "breakingChangeId": "260",
+    "enabled": true,
+    "comment": "call <dataloader>().loadMany "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1393",
+      "comment": "Require loadMany to be called with at least 1 argument",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-02-28T10:11:15.000Z",
+      "primaryTemplate": {
+        "pattern": "Promise.all($1.map((k) => $base.load(k)))",
+        "replacements": []
+      },
+      "detectionPattern": "call <dataloader>().loadMany [1,1]",
+      "unknownAccessPathQuestion": "Is this a call to loadMany method on a dataloader object?"
+    },
+    "semanticPatchId": "1393",
+    "breakingChangeId": "260",
+    "enabled": true,
+    "comment": "Require loadMany to be called with at least 1 argument"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "_cacheMap",
+        "replacements": []
+      },
+      "detectionPattern": "read <dataloader>()._promiseCache",
+      "unknownAccessPathQuestion": "Are you reading the private variable _promiseCache on a dataloader object?"
+    },
+    "semanticPatchId": "1547",
+    "breakingChangeId": "400",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1547",
+      "comment": "init ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-05-18T14:55:37.000Z",
+      "primaryTemplate": {
+        "pattern": "$base._cacheMap",
+        "replacements": []
+      },
+      "detectionPattern": "read <dataloader>()._promiseCache",
+      "unknownAccessPathQuestion": "Are you reading the private variable _promiseCache on a dataloader object?"
+    },
+    "semanticPatchId": "1547",
+    "breakingChangeId": "400",
+    "enabled": true,
+    "comment": "init "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1396",
+      "comment": "Update suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-02-28T14:15:42.000Z",
+      "detectionPattern": "read <dataloader>.load",
+      "suggestedFixDescription": "From changelog: \"      Previously when batching was disabled the batchLoadFn would be called immediately when .load() is called. This differed from the batchLoadFn being called at the end of the tick of the run-loop for when batching was enabled. This timing difference could lead to subtle race conditions for code which dynamically toggled batching on or off. As a simplification, the batchLoadFn is now always called at the end of the run-loop tick regardless of whether batching is disabled.      Hopefully this will not break your code. It could cause issues for any code which relied on this synchronous call to batchLoadFn for loaders where batching was disabled.\"",
+      "unknownAccessPathQuestion": "is $prop from the dataloader package?"
+    },
+    "semanticPatchId": "1396",
+    "breakingChangeId": "261",
+    "enabled": true,
+    "comment": "Update suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1396",
+      "comment": "Change from read to call",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-27T13:01:15.000Z",
+      "detectionPattern": "call <dataloader>.load",
+      "suggestedFixDescription": "From changelog: \"      Previously when batching was disabled the batchLoadFn would be called immediately when .load() is called. This differed from the batchLoadFn being called at the end of the tick of the run-loop for when batching was enabled. This timing difference could lead to subtle race conditions for code which dynamically toggled batching on or off. As a simplification, the batchLoadFn is now always called at the end of the run-loop tick regardless of whether batching is disabled.      Hopefully this will not break your code. It could cause issues for any code which relied on this synchronous call to batchLoadFn for loaders where batching was disabled.\"",
+      "unknownAccessPathQuestion": "is $prop from the dataloader package?"
+    },
+    "semanticPatchId": "1396",
+    "breakingChangeId": "261",
+    "enabled": true,
+    "comment": "Change from read to call"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1395",
+      "comment": "Change detection pattern from read to call",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-02-28T14:14:32.000Z",
+      "detectionPattern": "call <dataloader>.load",
+      "unknownAccessPathQuestion": "Is this a call to dataloader.load?"
+    },
+    "semanticPatchId": "1395",
+    "breakingChangeId": "262",
+    "enabled": true,
+    "comment": "Change detection pattern from read to call"
+  }
+]

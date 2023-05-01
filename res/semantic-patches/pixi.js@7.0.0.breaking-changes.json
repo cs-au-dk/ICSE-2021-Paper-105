@@ -1,0 +1,189 @@
+[
+  {
+    "id": "871",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "The buttonMode property has been removed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "856",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Polyfills have been removed.\nThis will most likely be breaking for IE users, where some of the newer functionality is not implemented from default.\nIf you need compatibility for a browser not supporting one or more of the removed functionality, you will now have to add polyfills yourself. See [polyfill.io](https://www.npmjs.com/package/polyfill-library)\nYou can see which browsers support a specific function here: https://caniuse.com/.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "857",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Extensions now Self-Install, users do not need to call extensions.add anymore",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "858",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Remove the @pixi/loaders packages and related plugins",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "859",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Set PREFER_ENV default to WEBGL2 for all devices. \nWEBGL2 has a few more features than WEBGL1 but unfortunately not all older mobile devices support this standard. \nIf you need to support a mobile device without support for WEBGL2 you can fallback to using WEBGL1 by changing the value of the PREFER_ENV property like:\n   `pixi.settings.PREFER_ENV = 1;`\nTo see a list of which mobile devices support which of the two standards see: https://gist.github.com/TimvanScherpenzeel/f8efeeb1dbed38a5c5dc0c29768a0413",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "860",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Auto-transform to identity when using generateTexture",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "855",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Pixi No longer transpiled to ES5. Pixi now targets ES2017 for browsers and ES2020 for module distribution. \nThis change can break some features in older browsers not supporting the new features of ES2016+.\nFor instance a browser like IE pre. version 11 would have problems using es6 packages. \nIf you need to target a browser not supporting es6, you can use something like [barbel](https://babeljs.io/) which is capable or porting the package to ES5.\nTo see the different browser versions not supporting es6 see: https://caniuse.com/?search=es6. \nTo see which node-/browser versions supporting the different ES2016+ features see: https://kangax.github.io/compat-table/es2016plus/.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "861",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Install BatchRenderer By Default",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "862",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Renderer.registerPlugin has been removed.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "863",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Convert Prepare, Extract to Systems",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "864",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Remove Graphics.nextRoundedRectBehavior and Text.nextLineHeightBehavior",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "865",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "`nextRoundedRectBehavior = true` is now the default behavior",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "866",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "`nextLineHeightBehavior = true` is now the default behavior",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "867",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Remove AbstractBatchRenderer and BatchPluginFactory",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "868",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Interactive Property Handlers are Removed\t",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "869",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "Using hitTest with events has changed",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "870",
+    "packageVersion": "7.0.0",
+    "packageName": "pixi.js",
+    "description": "CanvasExtract.base64(), CanvasExtract.image(), Extract.base64(), Extract.image() are now async methods",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

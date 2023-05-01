@@ -1,0 +1,13 @@
+[
+  {
+    "id": "527",
+    "packageVersion": "8.0.0",
+    "packageName": "inquirer",
+    "description": "Drop support for Node 10, use Node 12 or higher.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

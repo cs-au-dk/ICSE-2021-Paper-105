@@ -1,0 +1,24 @@
+[
+  {
+    "id": "534",
+    "packageVersion": "3.0.0",
+    "packageName": "mustache",
+    "description": "Allow rendering properties of primitive types that are not objects",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": true
+  },
+  {
+    "id": "535",
+    "packageVersion": "3.0.0",
+    "packageName": "mustache",
+    "description": "Writer.prototype.parse to cache by tags in addition to template string",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

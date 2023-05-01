@@ -1,0 +1,4357 @@
+[
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1179",
+      "comment": "args missing",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.isEqual($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.eq",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1179",
+    "breakingChangeId": "104",
+    "enabled": true,
+    "comment": "args missing"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1200",
+      "comment": "changed function from sortOrderBy to sortByOrder",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.orderBy($1, $2, $3.map(e => e ? 'asc' : 'desc'))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.sortByOrder [3, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1200",
+    "breakingChangeId": "111",
+    "enabled": true,
+    "comment": "changed function from sortOrderBy to sortByOrder"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1201",
+      "comment": "changed function from sortOrderBy to sortByOrder",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<lodash/orderBy>($1, $2, $3.map(e => e ? 'asc' : 'desc'))",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/collections/sortByOrder> [3, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1201",
+    "breakingChangeId": "111",
+    "enabled": true,
+    "comment": "changed function from sortOrderBy to sortByOrder"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1207",
+      "comment": "Changed collection to collections",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2021-11-03T18:36:43.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[all => every, any => some, backflow => flowRight, callback => iteratee, collect => map, compose => flowRight, contains => includes, detect => find, foldl => reduce, foldr => reduceRight, include => includes, inject => reduce, methods => functions, run => value, select => filter, unique => uniq]",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/{collections,number,chain,function,math,array,date,lang,object,string,utility}>,<lodash>()**,<lodash>.chain()**}.{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,#run,select,unique}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1207",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "Changed collection to collections"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1208",
+      "comment": "Changed collection to collections",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2021-11-03T07:37:26.000Z",
+      "primaryTemplate": {
+        "pattern": "lodash/#new2",
+        "replacements": [
+          {
+            "source": "#2",
+            "newName": "#new2",
+            "substitutes": [
+              "all => every",
+              "any => some",
+              "backflow => flowRight",
+              "callback => iteratee",
+              "collect => map",
+              "compose => flowRight",
+              "contains => includes",
+              "detect => find",
+              "foldl => reduce",
+              "foldr => reduceRight",
+              "include => includes",
+              "inject => reduce",
+              "methods => functions",
+              "select => filter",
+              "unique => uniq"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import lodash/{collections,number,chain,function,math,array,date,lang,object,string,utility}/{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,#run,select,unique}"
+    },
+    "semanticPatchId": "1208",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "Changed collection to collections"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/filter"
+      },
+      "detectionPattern": "import lodash/collections/where"
+    },
+    "semanticPatchId": "1107",
+    "breakingChangeId": "71",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/orderBy>($1, $2, $3.map(e => e ? 'asc' : 'desc'))"
+      },
+      "detectionPattern": "call <lodash/collections/sortOrderBy> [3, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1201",
+    "breakingChangeId": "111",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/isEqual>($args)"
+      },
+      "detectionPattern": "call <lodash/lang/eq>",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1180",
+    "breakingChangeId": "104",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2.bind($3))"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,unzipWith,zipWith,tap,thru,countBy,every,all,filter,select,find,findLast,forEach,each,forEachRight,forEachRight,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,cloneDeep,max,min,sum,findKey,findLastKey,forIn,forInRight,forOwn,forOwnRight,mapKeys,mapValues,omit,pick,times} [3, 3] 1:function",
+      "unknownAccessPathQuestion": "Is the receiver a lodash module object?"
+    },
+    "semanticPatchId": "1091",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($3 ? $base.$prop[indexOf => sortedIndexOf, lastIndexOf => sortedLastIndexOf]($1, $2) \n\t: $callee($args))"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{indexOf,lastIndexOf} [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1132",
+    "breakingChangeId": "84",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, [$2, $3])"
+      },
+      "detectionPattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,countBy,every,all,filter,select,find,detect,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,max,min,findKey,findLastKey,mapValues,uniq,unique}> [3, 3] 1:string",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1167",
+    "breakingChangeId": "99",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.sortedUniq : $callee)($1)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.uniq [2, 2] 1:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1152",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.cloneDeepWith($1) : $base.cloneWith($1))"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.clone [2, 2] 1:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1190",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$prop[trimLeft => trimStart, trimRight => trimEnd]"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/string>}.{trimLeft,trimRight}",
+      "unknownAccessPathQuestion": "Is the receiver a lodash module object?"
+    },
+    "semanticPatchId": "1124",
+    "breakingChangeId": "80",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/math/#1[min => minBy, max => maxBy]>($args)"
+      },
+      "detectionPattern": "call <lodash/math/{min,max}> [2, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1102",
+    "breakingChangeId": "68",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/sortBy>($args)"
+      },
+      "detectionPattern": "call <lodash/collections/sortByAll>",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1161",
+    "breakingChangeId": "96",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.cloneWith($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.clone [2, 3] 1:function",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1189",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.toPairs"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/object>}.pairs",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1116",
+    "breakingChangeId": "76",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, $3.bind($4))"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{sortedIndex,sortedLastIndex,uniq,unique,clone,isEqual,eq,isMatch,transform} [4, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1095",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$prop[all => every, any => some, backflow => flowRight, callback => iteratee, collect => map, compose => flowRight, contains => includes, detect => find, foldl => reduce, foldr => reduceRight, include => includes, inject => reduce, methods => functions, object => fromPairs, run => value, select => filter, unique => uniq]"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>,<lodash>()**,<lodash>.chain()**}.{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,object,#run,select,unique}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1207",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, $3.bind($4))"
+      },
+      "detectionPattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{sortedIndex,sortedLastIndex,uniq,unique,clone,isEqual,eq,isMatch,transform}> [4, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1098",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/#2"
+      },
+      "detectionPattern": "import lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/*"
+    },
+    "semanticPatchId": "1087",
+    "breakingChangeId": "65",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.uniqBy($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.uniq [2, 3] 1:function",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1153",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Do the argument contain '/'?",
+      "primaryTemplate": {
+        "pattern": "$callee($args).replace('/', '\\/')"
+      },
+      "detectionPattern": "call <lodash/string/escapeRegExp> [1, 1]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1203",
+    "breakingChangeId": "112",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {chain: $3})"
+      },
+      "detectionPattern": "call <lodash/{function,utility}/mixin> [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1199",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/rest"
+      },
+      "detectionPattern": "import lodash/function/restParam"
+    },
+    "semanticPatchId": "1121",
+    "breakingChangeId": "78",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, [$3, $4])"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{sortedIndex,uniq,unique} [4, 4] 2:string",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1168",
+    "breakingChangeId": "99",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1184",
+      "extraQuestion": "Is the min function here sometimes called with an empty array?",
+      "primaryTemplate": {
+        "pattern": "($callee($args) || Infinity)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.min"
+    },
+    "semanticPatchId": "1184",
+    "breakingChangeId": "106",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1174",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map($1, v => +v !== NaN ? +v : 0), $args[1,])",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2, 3]"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash/values>($1), $args[1,])"
+      },
+      "detectionPattern": "call <lodash/math>.{max,min,sum} 0:{string,object}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1205",
+    "breakingChangeId": "113",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? <lodash/invertBy>($1) : $callee($1))"
+      },
+      "detectionPattern": "call <lodash/object/invert> [2, 2]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1135",
+    "breakingChangeId": "85",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.sortedLastIndexBy($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.sortedLastIndex [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1148",
+    "breakingChangeId": "92",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.functionsIn($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.{methods,functions}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1181",
+    "breakingChangeId": "105",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? <lodash/sortedUniq> : $callee)($1)"
+      },
+      "detectionPattern": "call <lodash/array/uniq> [2, 2] 1:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1155",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.orderBy"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.sortByOrder",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1122",
+    "breakingChangeId": "79",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.invokeMap"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.invoke",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1110",
+    "breakingChangeId": "73",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/lang/cloneWith>($args)"
+      },
+      "detectionPattern": "call <lodash/lang/clone> [2, 3] 1:function",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1192",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.sortedUniqBy : $base.uniqBy)($1, $args[2,])"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.uniq [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1154",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.rest"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/function>}.restParam",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1120",
+    "breakingChangeId": "78",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/sortedIndexBy>($args)"
+      },
+      "detectionPattern": "call <lodash/array/sortedIndex> [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1147",
+    "breakingChangeId": "91",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/sortedLastIndexBy>($args)"
+      },
+      "detectionPattern": "call <lodash/array/sortedLastIndex> [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1149",
+    "breakingChangeId": "92",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2.bind($4), $3)"
+      },
+      "detectionPattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{reduce,foldl,reduceRight,foldr}> [4, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1099",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash/values>($1), $args[1,])"
+      },
+      "detectionPattern": "call <lodash/math/{max,min,sum}> 0:{string,object}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1206",
+    "breakingChangeId": "113",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? <lodash/cloneDeepWith>($1, $args[2,]) \n\t: <lodash/cloneWith>($1, $args[2,]))"
+      },
+      "detectionPattern": "call <lodash/lang/clone> [3, 4] 1:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1191",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($base.values($1), $args[1,])"
+      },
+      "detectionPattern": "call <lodash>.{max,min,sum} 0:{string,object}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1204",
+    "breakingChangeId": "113",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, [$2, $3])"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,countBy,every,all,filter,select,find,detect,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,max,min,findKey,findLastKey,mapValues,uniq,unique} [3, 3] 1:string",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1166",
+    "breakingChangeId": "99",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/overArgs"
+      },
+      "detectionPattern": "import lodash/function/modArgs"
+    },
+    "semanticPatchId": "1113",
+    "breakingChangeId": "74",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.sortedIndexBy($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.sortedIndex [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1146",
+    "breakingChangeId": "91",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "padLeft => padStart",
+              "padRight => padEnd"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import lodash/string/{padLeft,padRight}"
+    },
+    "semanticPatchId": "1115",
+    "breakingChangeId": "75",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/tail"
+      },
+      "detectionPattern": "import lodash/array/rest"
+    },
+    "semanticPatchId": "1119",
+    "breakingChangeId": "77",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? <lodash/cloneDeep>($1) : $callee($1))"
+      },
+      "detectionPattern": "call <lodash/lang/clone> [2, 2] 1:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1193",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/map"
+      },
+      "detectionPattern": "import lodash/collection/pluck"
+    },
+    "semanticPatchId": "1089",
+    "breakingChangeId": "66",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2.bind($4), $3)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{reduce,foldl,reduceRight,foldr} [4, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1096",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1183",
+      "extraQuestion": "Is the max function here sometimes called with an empty array?",
+      "primaryTemplate": {
+        "pattern": "($callee($args) || -Infinity)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.max"
+    },
+    "semanticPatchId": "1183",
+    "breakingChangeId": "106",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/invokeMap"
+      },
+      "detectionPattern": "import lodash/collections/invoke"
+    },
+    "semanticPatchId": "1111",
+    "breakingChangeId": "73",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Does this call use a customizer function?",
+      "primaryTemplate": {
+        "pattern": "$callee($args[0, -2], $-2.bind($-1))"
+      },
+      "detectionPattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{assign,extend,merge}> [4, 99]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1100",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/upperFirst>($args)"
+      },
+      "detectionPattern": "call <lodash/string/capitalize> [0, 1]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1178",
+    "breakingChangeId": "103",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/find"
+      },
+      "detectionPattern": "import lodash/collections/findWhere"
+    },
+    "semanticPatchId": "1105",
+    "breakingChangeId": "70",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2.bind($3))"
+      },
+      "detectionPattern": "call <lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,unzipWith,zipWith,tap,thru,countBy,every,all,filter,select,find,findLast,forEach,each,forEachRight,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,cloneDeep,max,min,sum,findKey,findLastKey,forIn,forInRight,forOwn,forOwnRight,mapKeys,mapValues,omit,pick,times}> [3, 3] 1:function",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1093",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {chain: $3})"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/{function,utility}>}.mixin [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1198",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($args).value()"
+      },
+      "detectionPattern": "call <lodash>()**.words",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1187",
+    "breakingChangeId": "107",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1.bind($2))"
+      },
+      "detectionPattern": "call {<lodash>(),<lodash>.chain()}**.{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,unzipWith,zipWith,tap,thru,countBy,every,all,filter,select,find,findLast,forEach,each,forEachRight,forEachRight,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,cloneDeep,max,min,sum,findKey,findLastKey,forIn,forInRight,forOwn,forOwnRight,mapKeys,mapValues,omit,pick,times} [2, 2] 0:function",
+      "unknownAccessPathQuestion": "Is the receiver a lodash chain?"
+    },
+    "semanticPatchId": "1092",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.invertBy($1) : $callee($1))"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.invert [2, 2]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1134",
+    "breakingChangeId": "85",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base"
+      },
+      "detectionPattern": "call <lodash>()**.{times,forEach,forEachRight,forIn,forInRight,forOwn,forOwnRight}().value [0, 0]",
+      "unknownAccessPathQuestion": "Is the receiver a lodash implicit chain?"
+    },
+    "semanticPatchId": "1086",
+    "breakingChangeId": "64",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.upperFirst($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/string>}.capitalize [0, 1]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1177",
+    "breakingChangeId": "103",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {leading: $3})"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/{function,utility}>}.{debounce,throttle} [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1196",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1332",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $2.bind($3)), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [3,3]"
+    },
+    "semanticPatchId": "1332",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/#1[omit => omitBy, pick => pickBy]>($args)"
+      },
+      "detectionPattern": "call <lodash/object/{omit,pick}> [2, 2] 1:function",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1143",
+    "breakingChangeId": "89",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/fromPairs>($args)"
+      },
+      "detectionPattern": "call <lodash/array/zipObject> [1, 1]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1159",
+    "breakingChangeId": "95",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/cloneDeepWith>($args)"
+      },
+      "detectionPattern": "call <lodash/lang/cloneDeep> [2, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1131",
+    "breakingChangeId": "83",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, <lodash>.keysIn($1).filter(k => typeof $1[k] === 'function'))"
+      },
+      "detectionPattern": "call <lodash/function/bindAll> [1, 1]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1195",
+    "breakingChangeId": "109",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/#new1",
+        "replacements": [
+          {
+            "source": "#1",
+            "newName": "#new1",
+            "substitutes": [
+              "trimLeft => trimStart",
+              "trimRight => trimEnd"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import lodash/string/{trimLeft,trimRight}"
+    },
+    "semanticPatchId": "1125",
+    "breakingChangeId": "80",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/lang/isMatchWith>($args)"
+      },
+      "detectionPattern": "call <lodash/lang/isMatch> [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1139",
+    "breakingChangeId": "87",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/uniqBy>($args)"
+      },
+      "detectionPattern": "call <lodash/array/uniq> [2, 3] 1:function",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1156",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Does the argument contain a '/'?",
+      "primaryTemplate": {
+        "pattern": "$callee($args).replace('/', '\\/')"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/string>}.escapeRegExp [1, 1]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1202",
+    "breakingChangeId": "112",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, <lodash>.keysIn($1).filter(k => typeof $1[k] === 'function'))"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/function>}.bindAll [1, 1]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1194",
+    "breakingChangeId": "109",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.sumBy($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.sum [2, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1150",
+    "breakingChangeId": "93",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((() => { function* getIndex() {\n\t\tconst keys = Object.keys($1);\n\t\t for (var k of keys) {\n\t\t\t yield k; \n\t\t}}\n\treturn $callee($1, val => ($2).call(this, val, getIndex()));})())"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.{sortBy,countBy,groupBy,indexBy} [2, 3] 1:{function2,function3}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1172",
+    "breakingChangeId": "101",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/sumBy>($args)"
+      },
+      "detectionPattern": "call <lodash/math/sum> [2, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1151",
+    "breakingChangeId": "93",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Does this call to assign use a customizer function?",
+      "primaryTemplate": {
+        "pattern": "$base.assignWith($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.assign [3, 99]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1128",
+    "breakingChangeId": "82",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.overArgs"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/function>}.modArgs",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1112",
+    "breakingChangeId": "74",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.map"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collection>,<lodash>()**,<lodash>.chain()**}.pluck",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1088",
+    "breakingChangeId": "66",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.sampleSize($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.sample [2, 2]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1144",
+    "breakingChangeId": "90",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/bindAll"
+      },
+      "detectionPattern": "import lodash/function/bindAll"
+    },
+    "semanticPatchId": "1165",
+    "breakingChangeId": "98",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/util>.bindAll"
+      },
+      "detectionPattern": "read <lodash/function>.bindAll",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1164",
+    "breakingChangeId": "98",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$prop[omit => omitBy, pick => pickBy]($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.{omit,pick} [2, 2] 1:function",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1142",
+    "breakingChangeId": "89",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/object>.at"
+      },
+      "detectionPattern": "read <lodash/collections>.at",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1162",
+    "breakingChangeId": "97",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.isMatchWith($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.isMatch [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1138",
+    "breakingChangeId": "87",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.find"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.findWhere",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1104",
+    "breakingChangeId": "70",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/toPairs"
+      },
+      "detectionPattern": "import lodash/object/pairs"
+    },
+    "semanticPatchId": "1117",
+    "breakingChangeId": "76",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.isEqualWith($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.isEqual [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1136",
+    "breakingChangeId": "86",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/keyBy"
+      },
+      "detectionPattern": "import lodash/collections/indexBy"
+    },
+    "semanticPatchId": "1109",
+    "breakingChangeId": "72",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.cloneDeepWith($1, $args[2,]) : $base.cloneWith($1, $args[2,]))"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.clone [3, 4] 1:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1188",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.tail"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/array>}.rest",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1118",
+    "breakingChangeId": "77",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($3 ? <lodash/array/#1[indexOf => sortedIndexOf, lastIndexOf => sortedLastIndexOf]>($1, $2) \n\t: $callee($args))"
+      },
+      "detectionPattern": "call <lodash/array/{indexOf,lastIndexOf}> [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1133",
+    "breakingChangeId": "84",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.filter"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.where",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1106",
+    "breakingChangeId": "71",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/lang/isEqualWith>($args)"
+      },
+      "detectionPattern": "call <lodash/lang/isEqual> [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1137",
+    "breakingChangeId": "86",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($base.support || ($base.support = {}))"
+      },
+      "detectionPattern": "read <lodash>.support",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1103",
+    "breakingChangeId": "69",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.keyBy"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.indexBy",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1108",
+    "breakingChangeId": "72",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/at"
+      },
+      "detectionPattern": "import lodash/collections/at"
+    },
+    "semanticPatchId": "1163",
+    "breakingChangeId": "97",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {leading: $3})"
+      },
+      "detectionPattern": "call <lodash/{function,utility}/{debounce,throttle}> [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1197",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "((() => { function* getIndex() {\n\t\t const keys = Object.keys($1);\n\t\t for (var k of keys) {\n\t\t\t yield k;\n\t\t }}\n\treturn $callee($1, val => ($2).call(this, val, getIndex()));})())"
+      },
+      "detectionPattern": "call <lodash/collections/{sortBy,countBy,groupBy,indexBy}> [2, 3] 1:{function2,function3}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1173",
+    "breakingChangeId": "101",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.zipObject [1, 1]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1158",
+    "breakingChangeId": "95",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/truncate"
+      },
+      "detectionPattern": "import lodash/string/trunc"
+    },
+    "semanticPatchId": "1127",
+    "breakingChangeId": "81",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.cloneDeepWith($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.cloneDeep [2, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1130",
+    "breakingChangeId": "83",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/orderBy"
+      },
+      "detectionPattern": "import lodash/collections/sortByOrder"
+    },
+    "semanticPatchId": "1123",
+    "breakingChangeId": "79",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "lodash/#new2",
+        "replacements": [
+          {
+            "source": "#2",
+            "newName": "#new2",
+            "substitutes": [
+              "all => every",
+              "any => some",
+              "backflow => flowRight",
+              "callback => iteratee",
+              "collect => map",
+              "compose => flowRight",
+              "contains => includes",
+              "detect => find",
+              "foldl => reduce",
+              "foldr => reduceRight",
+              "include => includes",
+              "inject => reduce",
+              "methods => functions",
+              "object => fromPairs",
+              "select => filter",
+              "unique => uniq"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,object,#run,select,unique}"
+    },
+    "semanticPatchId": "1208",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, [$3, $4])"
+      },
+      "detectionPattern": "call <lodash/array/{sortedIndex,uniq,unique}> [4, 4] 2:string",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1169",
+    "breakingChangeId": "99",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1.bind($2))"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/utility>}.{callback,iteratee} [2, 2]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1090",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/sampleSize>($args)"
+      },
+      "detectionPattern": "call <lodash/collections/sample> [2, 2]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1145",
+    "breakingChangeId": "90",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "extraQuestion": "Does this call to assign use a customizer function?",
+      "primaryTemplate": {
+        "pattern": "<lodash/assignWith>($args)"
+      },
+      "detectionPattern": "call <lodash/object/assign> [3, 99]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1129",
+    "breakingChangeId": "82",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$prop[padLeft => padStart, padRight => padEnd]"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/string>}.{padLeft,padRight}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1114",
+    "breakingChangeId": "75",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1176",
+      "extraQuestion": "Is one of the arguments sometimes a non-number value?",
+      "primaryTemplate": {
+        "pattern": "$callee(+$1, +$2)",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.add,<lodash/math/{add}>}"
+    },
+    "semanticPatchId": "1176",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.isEqual"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.eq",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1179",
+    "breakingChangeId": "104",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.sortBy($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.sortByAll",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1160",
+    "breakingChangeId": "96",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "<lodash/functionsIn>($args)"
+      },
+      "detectionPattern": "call <lodash/object/functions>",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1182",
+    "breakingChangeId": "105",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.$prop[max => maxBy, min => minBy]($args)"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.{max,min} [2, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1101",
+    "breakingChangeId": "68",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.truncate"
+      },
+      "detectionPattern": "read {<lodash>,<lodash/string>}.trunc",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1126",
+    "breakingChangeId": "81",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "($2 ? <lodash/sortedUniqBy> : <lodash/uniqBy>)($1, $args[2,])"
+      },
+      "detectionPattern": "call <lodash/array/uniq> [3, 4]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1157",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee($1.bind($2))"
+      },
+      "detectionPattern": "call <lodash/utility/{callback,iteratee}> [2, 2]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1094",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$base.orderBy($1, $2, $3.map(e => e ? 'asc' : 'desc'))"
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.sortOrderBy [3, 3]",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1200",
+    "breakingChangeId": "111",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1141",
+      "extraQuestion": "Does this call to <lodash>.merge take a customizer function (last or second to last argument)?",
+      "primaryTemplate": {
+        "pattern": "<lodash/object/mergeWith>($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/object/merge> [3, 99]"
+    },
+    "semanticPatchId": "1141",
+    "breakingChangeId": "88",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1140",
+      "extraQuestion": "Does this call to <lodash>.merge take a customizer function (last or second to last argument)?",
+      "primaryTemplate": {
+        "pattern": "$base.mergeWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.merge [3, 99]"
+    },
+    "semanticPatchId": "1140",
+    "breakingChangeId": "88",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1097",
+      "extraQuestion": "Does this call take a customizer function AND a this argument for that customizer?",
+      "primaryTemplate": {
+        "pattern": "$callee($args[0, -2], $-2.bind($-1))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{assign,extend,merge} [4, 99]"
+    },
+    "semanticPatchId": "1097",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1170",
+      "extraQuestion": "Does any property on the source object have the value undefined without that property existing in the destination object?",
+      "primaryTemplate": {
+        "pattern": "((() => {\n\tconst origKeys = Object.keys($1);\n\tconst res = $callee($args);\n\tObject.keys(res)\n\t\t.filter(k => res[k] === undefined && !origKeys.includes(k))\n\t\t.forEach(k => delete res[k])\n\treturn res;\n})())",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.merge"
+    },
+    "semanticPatchId": "1170",
+    "breakingChangeId": "100",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1171",
+      "extraQuestion": "Does any property on the source object have the value undefined without that property existing in the destination object?",
+      "primaryTemplate": {
+        "pattern": "((() => {\n\tconst origKeys = Object.keys($1);\n\tconst res = $callee($args);\n\tObject.keys(res)\n\t\t.filter(k => res[k] === undefined && !origKeys.includes(k))\n\t\t.forEach(k => delete res[k])\n\treturn res;\n})())",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/object/merge>"
+    },
+    "semanticPatchId": "1171",
+    "breakingChangeId": "100",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1185",
+      "extraQuestion": "Is the max function here sometimes called with an empty array?",
+      "primaryTemplate": {
+        "pattern": "($callee($args) || -Infinity)",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/math/max>"
+    },
+    "semanticPatchId": "1185",
+    "breakingChangeId": "106",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1186",
+      "extraQuestion": "Is the min function here sometimes called with an empty array?",
+      "primaryTemplate": {
+        "pattern": "($callee($args) || Infinity)",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/math/min>"
+    },
+    "semanticPatchId": "1186",
+    "breakingChangeId": "106",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "id": "1175",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map($1, v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [1, 1]"
+    },
+    "semanticPatchId": "1175",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1174",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $2), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2,2]"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $2.bind($3)), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [3,3]"
+    },
+    "semanticPatchId": "1332",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1174",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $args[2, ]), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2,2]"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1332",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $2.bind($3)), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [3,3]"
+    },
+    "semanticPatchId": "1332",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1174",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $args[2, ]), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2,3]"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1174",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $args[1, ]), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2,3]"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1174",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $args[1, ]), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2, 3]"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1332",
+      "enabled": false,
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $2.bind($3)), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [3,3]"
+    },
+    "semanticPatchId": "1332",
+    "breakingChangeId": "102",
+    "enabled": false,
+    "comment": "database default"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1174",
+      "enabled": true,
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $args[1, ]), v => +v).filter(v => v === v))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2, 3]"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1174",
+      "enabled": true,
+      "extraQuestion": "Do the function supplied as the second argument (in some cases generated from a shorthand string) sometimes produce non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $args[1, ]), v => +v).filter(v => v === v))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2, 3]"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1207",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.$prop[all => every, any => some, backflow => flowRight, callback => iteratee, collect => map, compose => flowRight, contains => includes, detect => find, foldl => reduce, foldr => reduceRight, include => includes, inject => reduce, methods => functions, run => value, select => filter, unique => uniq]",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>,<lodash>()**,<lodash>.chain()**}.{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,#run,select,unique}"
+    },
+    "semanticPatchId": "1207",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1208",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "lodash/#new2",
+        "replacements": [
+          {
+            "source": "#2",
+            "newName": "#new2",
+            "substitutes": "all => every,any => some,backflow => flowRight,callback => iteratee,collect => map,compose => flowRight,contains => includes,detect => find,foldl => reduce,foldr => reduceRight,include => includes,inject => reduce,methods => functions,select => filter,unique => uniq"
+          }
+        ]
+      },
+      "detectionPattern": "import lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,#run,select,unique}"
+    },
+    "semanticPatchId": "1208",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>,<lodash>()**,<lodash>.chain()**}.{object} [1, 1]"
+    },
+    "semanticPatchId": "1333",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs([$1, $2])",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>,<lodash>()**,<lodash>.chain()**}.{object} [2, 2]"
+    },
+    "semanticPatchId": "1334",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1334",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs(<lodash>.zip($1, $2))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>,<lodash>()**,<lodash>.chain()**}.{object} [2, 2]"
+    },
+    "semanticPatchId": "1334",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1174",
+      "enabled": true,
+      "extraQuestion": "Does the function supplied as the second argument (in some cases generated from a shorthand string) sometimes produce non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $args[1, ]), v => +v).filter(v => v === v))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2, 3]"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "When using chained versions of object, another number of arguments should be used in the detection patterns",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs()",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>()**,<lodash>.chain()**}.{object} [0, 0]"
+    },
+    "semanticPatchId": "1335",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "When using chained versions of object, another number of arguments should be used in the detection patterns"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1333",
+      "comment": "Removed chained uses of lodash from this semantic patch since they should be treated differently using another semantic patch",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{object} [1, 1]"
+    },
+    "semanticPatchId": "1333",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "Removed chained uses of lodash from this semantic patch since they should be treated differently using another semantic patch"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1334",
+      "comment": "Removed chained uses of lodash from this semantic patch since they should be treated differently using another semantic patch",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs(<lodash>.zip($1, $2))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{object} [2, 2]"
+    },
+    "semanticPatchId": "1334",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "Removed chained uses of lodash from this semantic patch since they should be treated differently using another semantic patch"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "When using chained versions of object, the semantic patch should be different from the original one",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "$base.zip($1).fromPairs()",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>()**,<lodash>.chain()**}.{object} [1,1]"
+    },
+    "semanticPatchId": "1336",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "When using chained versions of object, the semantic patch should be different from the original one"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Added missing import pattern for object",
+      "enabled": true,
+      "primaryTemplate": {
+        "pattern": "lodash/fromPairs",
+        "replacements": []
+      },
+      "detectionPattern": "import lodash/arrays/object"
+    },
+    "semanticPatchId": "1337",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "Added missing import pattern for object"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1337",
+      "comment": "Import path should include array instead of arrays",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2021-11-02T11:44:59.000Z",
+      "primaryTemplate": {
+        "pattern": "lodash/fromPairs",
+        "replacements": []
+      },
+      "detectionPattern": "import lodash/array/object"
+    },
+    "semanticPatchId": "1337",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "Import path should include array instead of arrays"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1208",
+      "comment": "Resave semantic patch after fixing issue where substitutes in replacements were saved as a string instead of an array",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "lodash/#new2",
+        "replacements": [
+          {
+            "source": "#2",
+            "newName": "#new2",
+            "substitutes": [
+              "all => every",
+              "any => some",
+              "backflow => flowRight",
+              "callback => iteratee",
+              "collect => map",
+              "compose => flowRight",
+              "contains => includes",
+              "detect => find",
+              "foldl => reduce",
+              "foldr => reduceRight",
+              "include => includes",
+              "inject => reduce",
+              "methods => functions",
+              "select => filter",
+              "unique => uniq"
+            ]
+          }
+        ]
+      },
+      "detectionPattern": "import lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}/{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,#run,select,unique}"
+    },
+    "semanticPatchId": "1208",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "Resave semantic patch after fixing issue where substitutes in replacements were saved as a string instead of an array"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1198",
+      "comment": "Merge the two semantic patches describing the mixin function in lodash",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {chain: $3})",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/{function,utility}>}.mixin,<lodash/{function,utility}/mixin>} [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1198",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "Merge the two semantic patches describing the mixin function in lodash"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1199",
+      "comment": "This has been merged into semantic patch 1198",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {chain: $3})",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/{function,utility}/mixin> [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1199",
+    "breakingChangeId": "110",
+    "enabled": false,
+    "comment": "This has been merged into semantic patch 1198"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1196",
+      "comment": "Merged in semantic patch id 1197",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {leading: $3})",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/{function,utility}>}.{debounce,throttle},<lodash/{function,utility}/{debounce,throttle}>} [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1196",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "Merged in semantic patch id 1197"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1197",
+      "comment": "Disabled since it is merged into semantic patch with id 1196",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {leading: $3})",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/{function,utility}/{debounce,throttle}> [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1197",
+    "breakingChangeId": "110",
+    "enabled": false,
+    "comment": "Disabled since it is merged into semantic patch with id 1196"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1207",
+      "comment": "Added unknown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[all => every, any => some, backflow => flowRight, callback => iteratee, collect => map, compose => flowRight, contains => includes, detect => find, foldl => reduce, foldr => reduceRight, include => includes, inject => reduce, methods => functions, run => value, select => filter, unique => uniq]",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>,<lodash>()**,<lodash>.chain()**}.{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,#run,select,unique}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1207",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "Added unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1154",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.sortedUniqBy : $base.uniqBy)($1, $args[2,])",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.uniq [3, 4] base:{LoDashStatic,Collection,CollectionChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1154",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1179",
+      "comment": "args missing. added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-22T08:53:48.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.isEqual($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.eq base:{LoDashStatic,LoDashImplicitWrapperBase,LoDashImplicitWrapperBase}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1179",
+    "breakingChangeId": "104",
+    "enabled": true,
+    "comment": "args missing. added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1088",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.map",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collection>,<lodash>()**,<lodash>.chain()**}.pluck base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1088",
+    "breakingChangeId": "66",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1138",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.isMatchWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.isMatch [3, 4] base:{LoDashStatic,LoDashImplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1138",
+    "breakingChangeId": "87",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1166",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, [$2, $3])",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,countBy,every,all,filter,select,find,detect,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,max,min,findKey,findLastKey,mapValues,uniq,unique} [3, 3] 1:string base:{LoDashStatic,Collection,CollectionChain,String,Object,StringChain,CollectionChain,ObjectChain,StringNullableChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1166",
+    "breakingChangeId": "99",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1168",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, [$3, $4])",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{sortedIndex,uniq,unique} [4, 4] 2:string base:{LoDashStatic,Collection,CollectionChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1168",
+    "breakingChangeId": "99",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1181",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.functionsIn($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.{methods,functions} base:{LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1181",
+    "breakingChangeId": "105",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1162",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<lodash/object>.at",
+        "replacements": []
+      },
+      "detectionPattern": "read <lodash/collections>.at base:{LoDashStatic,Object,Collection,ObjectChain,CollectionChain}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1162",
+    "breakingChangeId": "97",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1101",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[max => maxBy, min => minBy]($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.{max,min} [2, 3] base:{LoDashStatic,Collection,CollectionChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1101",
+    "breakingChangeId": "68",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1144",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.sampleSize($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.sample [2, 2] base:{LoDashStatic,String,Collection,Object,StringChain,StringNullableChain,CollectionChain,ObjectChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1144",
+    "breakingChangeId": "90",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1140",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Does this call to <lodash>.merge take a customizer function (last or second to last argument)?",
+      "primaryTemplate": {
+        "pattern": "$base.mergeWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.merge [3, 99] base:{LoDashStatic,Object,ObjectChain}",
+      "unknownAccessPathQuestion": "Is this a call to the object.merge method from the lodash package?"
+    },
+    "semanticPatchId": "1140",
+    "breakingChangeId": "88",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1160",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.sortBy($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.sortByAll base:{LoDashStatic,Collection,Object,CollectionChain,ObjectChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1160",
+    "breakingChangeId": "96",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1110",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.invokeMap",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.invoke base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitWrapper,}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1110",
+    "breakingChangeId": "73",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1196",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2021-11-03T14:54:56.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {leading: $3})",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/{function,utility}>}.{debounce,throttle},<lodash/{function,utility}/{debounce,throttle}>} [3, 3] 2:boolean base:{LoDashStatic,Function,FunctionChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1196",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1198",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2021-11-03T14:52:31.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {chain: $3})",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/{function,utility}>}.mixin,<lodash/{function,utility}/mixin>} [3, 3] 2:boolean base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1198",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1188",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.cloneDeepWith($1, $args[2,]) : $base.cloneWith($1, $args[2,]))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.clone [3, 4] 1:boolean base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1188",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1189",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.cloneWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.clone [2, 3] 1:function base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1189",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1190",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.cloneDeepWith($1) : $base.cloneWith($1))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.clone [2, 2] 1:boolean base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1190",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1124",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[trimLeft => trimStart, trimRight => trimEnd]",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/string>}.{trimLeft,trimRight} base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver a lodash module object?"
+    },
+    "semanticPatchId": "1124",
+    "breakingChangeId": "80",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1128",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Does this call to assign use a customizer function?",
+      "primaryTemplate": {
+        "pattern": "$base.assignWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.assign [3, 99] base:{LoDashStatic,Object,ObjectChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1128",
+    "breakingChangeId": "82",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1183",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the max function here sometimes called with an empty array?",
+      "primaryTemplate": {
+        "pattern": "($callee($args) || -Infinity)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.max base:{LoDashStatic,Collection,CollectionChain}",
+      "unknownAccessPathQuestion": "Is this a call of the math.max method from the lodash package?"
+    },
+    "semanticPatchId": "1183",
+    "breakingChangeId": "106",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1103",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "($base.support || ($base.support = {}))",
+        "replacements": []
+      },
+      "detectionPattern": "read <lodash>.support base:{LoDashStatic}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1103",
+    "breakingChangeId": "69",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1152",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.sortedUniq : $callee)($1)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.uniq [2, 2] 1:boolean base:{LoDashStatic,Collection,CollectionChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1152",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1153",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.uniqBy($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.uniq [2, 3] 1:function base:{LoDashStatic,Collection,CollectionChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1153",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1116",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.toPairs",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/object>}.pairs base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1116",
+    "breakingChangeId": "76",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1130",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.cloneDeepWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.cloneDeep [2, 3] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1130",
+    "breakingChangeId": "83",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1130",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:29:00.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.cloneDeepWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.cloneDeep [2, 3] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1130",
+    "breakingChangeId": "83",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1122",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.orderBy",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.sortByOrder base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1122",
+    "breakingChangeId": "79",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1148",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.sortedLastIndexBy($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.sortedLastIndex [3, 4] base:{LoDashStatic,Collection,CollectionChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1148",
+    "breakingChangeId": "92",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1122",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:31:55.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.orderBy",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.sortByOrder base:{LoDashStatic,Collection,Object,CollectionChain,ObjectChain}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1122",
+    "breakingChangeId": "79",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1130",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-15T05:29:41.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.cloneDeepWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.cloneDeep [2, 3] base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1130",
+    "breakingChangeId": "83",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1132",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "($3 ? $base.$prop[indexOf => sortedIndexOf, lastIndexOf => sortedLastIndexOf]($1, $2) \n\t: $callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{indexOf,lastIndexOf} [3, 3] 2:boolean base:{LoDashStatic,Collection,CollectionChain}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1132",
+    "breakingChangeId": "84",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1132",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:39:49.000Z",
+      "primaryTemplate": {
+        "pattern": "($3 ? $base.$prop[indexOf => sortedIndexOf, lastIndexOf => sortedLastIndexOf]($1, $2) \n\t: $callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{indexOf,lastIndexOf} [3, 3] 2:boolean base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1132",
+    "breakingChangeId": "84",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1112",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:43:01.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.overArgs",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/function>}.modArgs base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1112",
+    "breakingChangeId": "74",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1166",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-14T17:08:17.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, [$2, $3])",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/{collection,number,chain,function,math,array,date,lang,object,string,utility}>}.{dropRightWhile,dropWhile,findIndex,findLastIndex,remove,takeRightWhile,takeWhile,countBy,every,all,filter,select,find,detect,groupBy,indexBy,map,collect,partition,reject,some,any,sortBy,max,min,findKey,findLastKey,mapValues,uniq,unique} [3, 3] 1:string base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashImplicitStringWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1166",
+    "breakingChangeId": "99",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1168",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T04:49:44.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, [$3, $4])",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{sortedIndex,uniq,unique} [4, 4] 2:string base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1168",
+    "breakingChangeId": "99",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1181",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T04:52:06.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.functionsIn($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.{methods,functions} base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1181",
+    "breakingChangeId": "105",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1162",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T04:54:20.000Z",
+      "primaryTemplate": {
+        "pattern": "<lodash/object>.at",
+        "replacements": []
+      },
+      "detectionPattern": "read <lodash/collections>.at base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper,LoDashImplicitArrayWrapper,LoDashExplicitArrayWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1162",
+    "breakingChangeId": "97",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1101",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T04:55:18.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[max => maxBy, min => minBy]($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.{max,min} [2, 3] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1101",
+    "breakingChangeId": "68",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1144",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T04:57:06.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.sampleSize($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.sample [2, 2] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1144",
+    "breakingChangeId": "90",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1140",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T04:59:14.000Z",
+      "extraQuestion": "Does this call to <lodash>.merge take a customizer function (last or second to last argument)?",
+      "primaryTemplate": {
+        "pattern": "$base.mergeWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.merge [3, 99] base:{LoDashStatic,LoDashImplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call to the object.merge method from the lodash package?"
+    },
+    "semanticPatchId": "1140",
+    "breakingChangeId": "88",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1160",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:02:02.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.sortBy($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.sortByAll base:{LoDashStatic,LoDashImplicitArrayWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1160",
+    "breakingChangeId": "96",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1110",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:04:34.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.invokeMap",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.invoke base:{LoDashStatic}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1110",
+    "breakingChangeId": "73",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1196",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-15T05:06:34.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {leading: $3})",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/{function,utility}>}.{debounce,throttle},<lodash/{function,utility}/{debounce,throttle}>} [3, 3] 2:boolean base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1196",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1198",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-15T05:10:51.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, $2, {chain: $3})",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/{function,utility}>}.mixin,<lodash/{function,utility}/mixin>} [3, 3] 2:boolean base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1198",
+    "breakingChangeId": "110",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1188",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:13:03.000Z",
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.cloneDeepWith($1, $args[2,]) : $base.cloneWith($1, $args[2,]))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.clone [3, 4] 1:boolean base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1188",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1189",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:14:45.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.cloneWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.clone [2, 3] 1:function base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1189",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1190",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:15:02.000Z",
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.cloneDeepWith($1) : $base.cloneWith($1))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.clone [2, 2] 1:boolean base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1190",
+    "breakingChangeId": "108",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1128",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:18:29.000Z",
+      "extraQuestion": "Does this call to assign use a customizer function?",
+      "primaryTemplate": {
+        "pattern": "$base.assignWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.assign [3, 99] base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1128",
+    "breakingChangeId": "82",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1183",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:21:07.000Z",
+      "extraQuestion": "Is the max function here sometimes called with an empty array?",
+      "primaryTemplate": {
+        "pattern": "($callee($args) || -Infinity)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.max base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of the math.max method from the lodash package?"
+    },
+    "semanticPatchId": "1183",
+    "breakingChangeId": "106",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1184",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the min function here sometimes called with an empty array?",
+      "primaryTemplate": {
+        "pattern": "($callee($args) || Infinity)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.min base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of a math.min method from lodash?"
+    },
+    "semanticPatchId": "1184",
+    "breakingChangeId": "106",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1152",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:26:33.000Z",
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.sortedUniq : $callee)($1)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.uniq [2, 2] 1:boolean base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1152",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1153",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:26:50.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.uniqBy($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.uniq [2, 3] 1:function base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1153",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1154",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:26:57.000Z",
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.sortedUniqBy : $base.uniqBy)($1, $args[2,])",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.uniq [3, 4] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1154",
+    "breakingChangeId": "94",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1130",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-11-15T05:37:44.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.cloneDeepWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.cloneDeep [2, 3] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1130",
+    "breakingChangeId": "83",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1122",
+      "comment": "Added base filter  ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-15T05:34:58.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.orderBy",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.sortByOrder base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1122",
+    "breakingChangeId": "79",
+    "enabled": true,
+    "comment": "Added base filter  "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1148",
+      "comment": "Added base filter ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T05:33:50.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.sortedLastIndexBy($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.sortedLastIndex [3, 4] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1148",
+    "breakingChangeId": "92",
+    "enabled": true,
+    "comment": "Added base filter "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1132",
+      "comment": "Added base filter  ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-11-15T05:42:03.000Z",
+      "primaryTemplate": {
+        "pattern": "($3 ? $base.$prop[indexOf => sortedIndexOf, lastIndexOf => sortedLastIndexOf]($1, $2) \n\t: $callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{indexOf,lastIndexOf} [3, 3] 2:boolean base:{LoDashStatic,LoDashImplicitArrayWrapper,,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1132",
+    "breakingChangeId": "84",
+    "enabled": true,
+    "comment": "Added base filter  "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1133",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "($3 ? <lodash/array/#1[indexOf => sortedIndexOf, lastIndexOf => sortedLastIndexOf]>($1, $2) \n\t: $callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/array/{indexOf,lastIndexOf}> [3, 3] 2:boolean base:{LoDashStatic,LoDashImplicitArrayWrapper,,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1133",
+    "breakingChangeId": "84",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1133",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-15T15:54:17.000Z",
+      "primaryTemplate": {
+        "pattern": "($3 ? <lodash/array/#1[indexOf => sortedIndexOf, lastIndexOf => sortedLastIndexOf]>($1, $2) \n\t: $callee($args))",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/array/{indexOf,lastIndexOf}> [3, 3] 2:boolean",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1133",
+    "breakingChangeId": "84",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1136",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.isEqualWith($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/lang>}.isEqual [3, 4] base:{LoDashStatic,LoDashImplicitWrapperBase,LoDashExplicitWrapperBase}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1136",
+    "breakingChangeId": "86",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 9,
+    "semanticPatch": {
+      "id": "1174",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 8,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Does the function supplied as the second argument (in some cases generated from a shorthand string) sometimes produce non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $args[1, ]), v => +v).filter(v => v === v))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [2, 3] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of a max, min or sum method from the math sub-module of lodash?"
+    },
+    "semanticPatchId": "1174",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1175",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map($1, v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [1, 1] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of a math.max, math.min or math.sum method from lodash?"
+    },
+    "semanticPatchId": "1175",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1176",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is one of the arguments sometimes a non-number value?",
+      "primaryTemplate": {
+        "pattern": "$callee(+$1, +$2)",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.add,<lodash/math/{add}>} base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of the math.add method from lodash?"
+    },
+    "semanticPatchId": "1176",
+    "breakingChangeId": "102",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1332",
+      "comment": "Added base filter",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Is the first argument a lodash collection (array, object, or string) that may contain non-number values?",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash>.map(<lodash>.map($1, $2.bind($3)), v => +v !== NaN ? +v : 0))",
+        "replacements": []
+      },
+      "detectionPattern": "call {{<lodash>,<lodash/math>}.{max,min,sum},<lodash/math/{max,min,sum}>} [3,3] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "is this a call of math.min, math.max or math.sum from lodash?"
+    },
+    "semanticPatchId": "1332",
+    "breakingChangeId": "102",
+    "enabled": false,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1164",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "<lodash/util>.bindAll",
+        "replacements": []
+      },
+      "detectionPattern": "read <lodash/function>.bindAll base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1164",
+    "breakingChangeId": "98",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1104",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.find",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.findWhere base:LoDashStatic ",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1104",
+    "breakingChangeId": "70",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1207",
+      "comment": "Changed collection to collections ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-22T09:20:38.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[all => every, any => some, backflow => flowRight, callback => iteratee, collect => map, compose => flowRight, contains => includes, detect => find, foldl => reduce, foldr => reduceRight, include => includes, inject => reduce, methods => functions, run => value, select => filter, unique => uniq]",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/{collections,number,chain,function,math,array,date,lang,object,string,utility}>,<lodash>()**,<lodash>.chain()**}.{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,run,select,unique}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1207",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "Changed collection to collections "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1207",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-11-15T16:14:19.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[all => every, any => some, backflow => flowRight, callback => iteratee, collect => map, compose => flowRight, contains => includes, detect => find, foldl => reduce, foldr => reduceRight, include => includes, inject => reduce, methods => functions, run => value, select => filter, unique => uniq]",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/{collections,number,chain,function,math,array,date,lang,object,string,utility}>,<lodash>()**,<lodash>.chain()**}.{all,any,backflow,callback,collect,compose,contains,detect,foldl,foldr,include,inject,methods,run,select,unique} base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper,LoDashImplicitWrapper,LoDashExplicitWrapper,LoDashWrapperBase}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1207",
+    "breakingChangeId": "114",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1126",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.truncate",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/string>}.trunc base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1126",
+    "breakingChangeId": "81",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1134",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "($2 ? $base.invertBy($1) : $callee($1))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.invert [2, 2] base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1134",
+    "breakingChangeId": "85",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1118",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.tail",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/array>}.rest base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1118",
+    "breakingChangeId": "77",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1187",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args).value()",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash>()**.words base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1187",
+    "breakingChangeId": "107",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1114",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[padLeft => padStart, padRight => padEnd]",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/string>}.{padLeft,padRight} base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1114",
+    "breakingChangeId": "75",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1086",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash>()**.{times,forEach,forEachRight,forIn,forInRight,forOwn,forOwnRight}().value [0, 0] base:LoDashWrapperBase",
+      "unknownAccessPathQuestion": "Is the receiver a lodash implicit chain?"
+    },
+    "semanticPatchId": "1086",
+    "breakingChangeId": "64",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1170",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Does any property on the source object have the value undefined without that property existing in the destination object?",
+      "primaryTemplate": {
+        "pattern": "((() => {\n\tconst origKeys = Object.keys($1);\n\tconst res = $callee($args);\n\tObject.keys(res)\n\t\t.filter(k => res[k] === undefined && !origKeys.includes(k))\n\t\t.forEach(k => delete res[k])\n\treturn res;\n})())",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.merge base:{LoDashStatic,LoDashImplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of object.merge from lodash?"
+    },
+    "semanticPatchId": "1170",
+    "breakingChangeId": "100",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1150",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.sumBy($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/math>}.sum [2, 3] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1150",
+    "breakingChangeId": "93",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1200",
+      "comment": "changed function from sortOrderBy to sortByOrder. Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-22T09:08:31.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.orderBy($1, $2, $3.map(e => e ? 'asc' : 'desc'))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.sortByOrder [3, 3] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1200",
+    "breakingChangeId": "111",
+    "enabled": true,
+    "comment": "changed function from sortOrderBy to sortByOrder. Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1108",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.keyBy",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.indexBy base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1108",
+    "breakingChangeId": "72",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1172",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "((() => { function* getIndex() {\n\t\tconst keys = Object.keys($1);\n\t\t for (var k of keys) {\n\t\t\t yield k; \n\t\t}}\n\treturn $callee($1, val => ($2).call(this, val, getIndex()));})())",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/collections>}.{sortBy,countBy,groupBy,indexBy} [2, 3] 1:{function2,function3} base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1172",
+    "breakingChangeId": "101",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1177",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.upperFirst($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/string>}.capitalize [0, 1] base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1177",
+    "breakingChangeId": "103",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1202",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "extraQuestion": "Does the argument contain a '/'?",
+      "primaryTemplate": {
+        "pattern": "$callee($args).replace('/', '\\/')",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/string>}.escapeRegExp [1, 1] base:{LoDashStatic,LoDashImplicitWrapper,LoDashExplicitWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1202",
+    "breakingChangeId": "112",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1194",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, <lodash>.keysIn($1).filter(k => typeof $1[k] === 'function'))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/function>}.bindAll [1, 1] base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1194",
+    "breakingChangeId": "109",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1120",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.rest",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/function>}.restParam base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1120",
+    "breakingChangeId": "78",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1158",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.zipObject [1, 1] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1158",
+    "breakingChangeId": "95",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1146",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.sortedIndexBy($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.sortedIndex [3, 4] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1146",
+    "breakingChangeId": "91",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1106",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.filter",
+        "replacements": []
+      },
+      "detectionPattern": "read {<lodash>,<lodash/collections>}.where base:{LoDashStatic,LoDashImplicitArrayWrapper}",
+      "unknownAccessPathQuestion": "Is the receiver lodash?"
+    },
+    "semanticPatchId": "1106",
+    "breakingChangeId": "71",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1204",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($base.values($1), $args[1,])",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash>.{max,min,sum} 0:{string,object} base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1204",
+    "breakingChangeId": "113",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1205",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(<lodash/values>($1), $args[1,])",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/math>.{max,min,sum} 0:{string,object} base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1205",
+    "breakingChangeId": "113",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1142",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[omit => omitBy, pick => pickBy]($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/object>}.{omit,pick} [2, 2] 1:function base:{LoDashStatic,LoDashImplicitObjectWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1142",
+    "breakingChangeId": "89",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1333",
+      "comment": "Removed chained uses of lodash from this semantic patch since they should be treated differently using another semantic patch. Added base filter",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2021-11-02T07:17:28.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{object} [1, 1] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of the array.object method from lodash?"
+    },
+    "semanticPatchId": "1333",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "Removed chained uses of lodash from this semantic patch since they should be treated differently using another semantic patch. Added base filter"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1334",
+      "comment": "Removed chained uses of lodash from this semantic patch since they should be treated differently using another semantic patch. Added base filter",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2021-11-02T07:24:20.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs(<lodash>.zip($1, $2))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/array>}.{object} [2, 2] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of array.object from lodash?"
+    },
+    "semanticPatchId": "1334",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "Removed chained uses of lodash from this semantic patch since they should be treated differently using another semantic patch. Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1335",
+      "comment": "When using chained versions of object, another number of arguments should be used in the detection patterns. Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2021-11-02T07:16:29.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.fromPairs()",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>()**,<lodash>.chain()**}.{object} [0, 0] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of _.object from lodash?"
+    },
+    "semanticPatchId": "1335",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "When using chained versions of object, another number of arguments should be used in the detection patterns. Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1336",
+      "comment": "When using chained versions of object, the semantic patch should be different from the original one. Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2021-11-02T07:25:20.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.zip($1).fromPairs()",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>()**,<lodash>.chain()**}.{object} [1,1] base:{LoDashStatic,LoDashImplicitArrayWrapper,LoDashImplicitObjectWrapper,LoDashExplicitArrayWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is this a call of _.object from lodash?"
+    },
+    "semanticPatchId": "1336",
+    "breakingChangeId": "200",
+    "enabled": true,
+    "comment": "When using chained versions of object, the semantic patch should be different from the original one. Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1090",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1.bind($2))",
+        "replacements": []
+      },
+      "detectionPattern": "call {<lodash>,<lodash/utility>}.{callback,iteratee} [2, 2] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1090",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "Added base filter"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1094",
+      "comment": "Added base filter",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2020-01-31T22:59:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1.bind($2))",
+        "replacements": []
+      },
+      "detectionPattern": "call <lodash/utility/{callback,iteratee}> [2, 2] base:{LoDashStatic,LoDashImplicitWrapper,LoDashImplicitObjectWrapper,LoDashExplicitWrapper,LoDashExplicitObjectWrapper}",
+      "unknownAccessPathQuestion": "Is the called function from lodash?"
+    },
+    "semanticPatchId": "1094",
+    "breakingChangeId": "67",
+    "enabled": true,
+    "comment": "Added base filter"
+  }
+]

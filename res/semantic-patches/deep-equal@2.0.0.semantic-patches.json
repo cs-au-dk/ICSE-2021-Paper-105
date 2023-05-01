@@ -1,0 +1,450 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <deep-equal>.deepEqual",
+      "suggestedFixDescription": "This is only breaking if you are using the `deepEqual()` method to compare either sets or maps. Previously deep-equal did not support maps or sets correctly, meaning it would return true even when the elements of a set were not equal. Comparing these two types with `deepEqual()` will now sometimes give a different result compared to before. It should not be a problem to fix this, since the new behaviour is also what you would expect from the `deepEqual()`method. ",
+      "unknownAccessPathQuestion": "Is this a call of the deepEquals method from the deep-equal package?"
+    },
+    "semanticPatchId": "1658",
+    "breakingChangeId": "538",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial (array, object)",
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign({}, $1), $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <deep.equal> 1:array 2:object",
+      "unknownAccessPathQuestion": "Is this a call of the deep-equal function, with an array as the first parameter and an object as the second?"
+    },
+    "semanticPatchId": "1659",
+    "breakingChangeId": "539",
+    "enabled": true,
+    "comment": "Initial (array, object)"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1659",
+      "comment": "Initial (array, object) ",
+      "version": 0,
+      "creationDate": "2022-09-01T15:34:35.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign({}, $1), $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <deep-equal> 0:array 1:object",
+      "unknownAccessPathQuestion": "Is this a call of the deep-equal function, with an array as the first parameter and an object as the second?"
+    },
+    "semanticPatchId": "1659",
+    "breakingChangeId": "539",
+    "enabled": true,
+    "comment": "Initial (array, object) "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial (object, array) ",
+      "primaryTemplate": {
+        "pattern": "$callee( $1, Object.assign({}, $2))",
+        "replacements": []
+      },
+      "detectionPattern": "call <deep-equal> 0:object 1:array",
+      "unknownAccessPathQuestion": "Is this a call of the deep-equal function, with an object as the first parameter and an array as the second?"
+    },
+    "semanticPatchId": "1660",
+    "breakingChangeId": "539",
+    "enabled": true,
+    "comment": "Initial (object, array) "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1660",
+      "comment": "Initial (object, array)",
+      "version": 0,
+      "creationDate": "2022-09-01T15:38:27.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, Object.assign({}, $2))",
+        "replacements": []
+      },
+      "detectionPattern": "call <deep-equal> 0:object 1:array",
+      "unknownAccessPathQuestion": "Is this a call of the deep-equal function, with an object as the first parameter and an array as the second?"
+    },
+    "semanticPatchId": "1660",
+    "breakingChangeId": "539",
+    "enabled": true,
+    "comment": "Initial (object, array)"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1659",
+      "comment": "Initial (array, object)",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-01T15:36:59.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign({}, $1), $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <deep-equal> 0:!array 1:object",
+      "unknownAccessPathQuestion": "Is this a call of the deep-equal function, with an array as the first parameter and an object as the second?"
+    },
+    "semanticPatchId": "1659",
+    "breakingChangeId": "539",
+    "enabled": true,
+    "comment": "Initial (array, object)"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1659",
+      "comment": "Initial (array, object) ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-09-02T15:12:19.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign({}, $1), $2)",
+        "replacements": []
+      },
+      "detectionPattern": "call <deep-equal> 0:array 1:object",
+      "unknownAccessPathQuestion": "Is this a call of the deep-equal function, with an array as the first parameter and an object as the second?"
+    },
+    "semanticPatchId": "1659",
+    "breakingChangeId": "539",
+    "enabled": true,
+    "comment": "Initial (array, object) "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <deep-equal>",
+      "suggestedFixDescription": "This could be breaking if you are comparing Dates with `strict=true`or if you are comparing non-date objects whose prototype is not the same. If you are comparing non-date objects with deep-equal they will now have to have the same prototype, to be equal. This could result in some of your comparisons returning false where they used to return true. The same thing will happen if you are using Dates and parse the ‘strict=true’ option.",
+      "unknownAccessPathQuestion": "Is this a call to the default function from deep-equal?"
+    },
+    "semanticPatchId": "1661",
+    "breakingChangeId": "540",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1661",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-09-02T15:47:20.000Z",
+      "detectionPattern": "call <deep-equal>",
+      "suggestedFixDescription": "This could be breaking if you are comparing Dates with `strict=true`or if you are comparing non-date objects whose prototype is not the same. If you are comparing non-date objects with deep-equal they will now have to have the same prototype to be equal. This could result in some of your comparisons returning false where they used to return true. The same thing will happen if you are using Dates and parse the ‘strict=true’ option.",
+      "unknownAccessPathQuestion": "Is this a call to the default function from deep-equal?"
+    },
+    "semanticPatchId": "1661",
+    "breakingChangeId": "540",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1660",
+      "comment": "Initial (object, array) ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-01T15:39:19.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($1, Object.assign({}, $2), $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <deep-equal> 0:object 1:array",
+      "unknownAccessPathQuestion": "Is this a call of the deep-equal function, with an object as the first parameter and an array as the second?"
+    },
+    "semanticPatchId": "1660",
+    "breakingChangeId": "539",
+    "enabled": true,
+    "comment": "Initial (object, array) "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1659",
+      "comment": "Initial (array, object)",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-09-02T15:12:34.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee(Object.assign({}, $1), $2, $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <deep-equal> 0:array 1:object",
+      "unknownAccessPathQuestion": "Is this a call of the deep-equal function, with an array as the first parameter and an object as the second?"
+    },
+    "semanticPatchId": "1659",
+    "breakingChangeId": "539",
+    "enabled": true,
+    "comment": "Initial (array, object)"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial (object, object)",
+      "primaryTemplate": {
+        "pattern": "deepEqual(<unbox-primitive>($1), <unbox-primitive>($2), $3)",
+        "replacements": []
+      },
+      "detectionPattern": "call <deep-equal> 0:object 1:object",
+      "transformationQuestion": "Are both $1 and $2 boxed/wrapped primitive types? Like Boolean(false) or Object(\"string\")",
+      "unknownAccessPathQuestion": "Is this a call of the default method from deep-equal?"
+    },
+    "semanticPatchId": "1662",
+    "breakingChangeId": "541",
+    "enabled": true,
+    "comment": "Initial (object, object)"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <deep-equal> 0:object 1:object",
+      "suggestedFixDescription": "This is only breaking if you are changing the `Symbol.toStringTag` of either `$1` or `$2`. This `toStringTag` property is now also considered when comparing objects, hence two objects that before were considered to be equal, might not be after upgrading to version 2.x. But again, this is only if you use something like `$1[Symbol.toStringTag] = “new tag”;` anywhere. One of many possible fixes to this problem would be to make sure both `$1` and `$2` have the same `Symbol.toStringTag` value. You can log this property with `console.log(Object.prototype.toString.call($1))`.",
+      "unknownAccessPathQuestion": "is this a call to the default method of the deep-equal package?"
+    },
+    "semanticPatchId": "1663",
+    "breakingChangeId": "542",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1663",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-09-04T17:26:16.000Z",
+      "detectionPattern": "call <deep-equal> 0:object 1:object",
+      "suggestedFixDescription": "This is only breaking if you are changing the `Symbol.toStringTag` of either `$1` or `$2`. This `toStringTag` property is now also considered when comparing objects, hence two objects that before were considered to be equal, might not be after upgrading to version 2.x. But again, this is only if you use something like `$1[Symbol.toStringTag] = “new tag”;` anywhere. One of many possible fixes to this problem would be to make sure both `$1` and `$2` have the same `Symbol.toStringTag` value before using deep-equal. You can log this property with `console.log(Object.prototype.toString.call($1))`.",
+      "unknownAccessPathQuestion": "is this a call to the default method of the deep-equal package?"
+    },
+    "semanticPatchId": "1663",
+    "breakingChangeId": "542",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <deep-equal> 0:object 1:object",
+      "suggestedFixDescription": "This can only be breaking if you are comparing a type of Error object. Before version 2.0.0 error objects was not compared correctly and their behavior was unpredictable. Now errors are equal if they are of the same type, so `new Error()` is not equal to `new TypeError()`, and if they have the same message, so `new Error(“A”)` is not equal to `new Error(“B”)`. There is not really a quick fix for this, except for making sure the hopefully few times you are comparing error objects behave as you expected.",
+      "unknownAccessPathQuestion": "Is this a call of the deep-equal function, with an array as the first parameter and an object as the second?"
+    },
+    "semanticPatchId": "1664",
+    "breakingChangeId": "543",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<object-keys>",
+        "replacements": []
+      },
+      "detectionPattern": "import <deep-equal/lib/keys",
+      "unknownAccessPathQuestion": "Is this an import of the `module deep-equal/lib/keys`?"
+    },
+    "semanticPatchId": "1665",
+    "breakingChangeId": "544",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1665",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-09-05T11:27:39.000Z",
+      "primaryTemplate": {
+        "pattern": "<object-keys>",
+        "replacements": []
+      },
+      "detectionPattern": "import <deep-equal/lib/keys>",
+      "unknownAccessPathQuestion": "Is this an import of the `module deep-equal/lib/keys`?"
+    },
+    "semanticPatchId": "1665",
+    "breakingChangeId": "544",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1665",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-09-05T11:28:08.000Z",
+      "primaryTemplate": {
+        "pattern": "object-keys",
+        "replacements": []
+      },
+      "detectionPattern": "import deep-equal/lib/keys",
+      "unknownAccessPathQuestion": "Is this an import of the `module deep-equal/lib/keys`?"
+    },
+    "semanticPatchId": "1665",
+    "breakingChangeId": "544",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "is-arguments",
+        "replacements": []
+      },
+      "detectionPattern": "import deep-equal/lib/is_arguments",
+      "unknownAccessPathQuestion": "Is this an import of the `module deep-equal/lib/is_arguments`?"
+    },
+    "semanticPatchId": "1666",
+    "breakingChangeId": "544",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial ([], false)",
+      "detectionPattern": "call <deep-equal> 0:array 1:boolean",
+      "suggestedFixDescription": "Before version 2.0.0 deep-equal would return true when comparing an empty array with the boolean value `false`. This is no longer the case, hence if $1 is false and $0 is an empty array you will have to change this comparison. One quick fix would be to manually check if $0 is an empty array, and then handle the result as you would the deep-equal check.",
+      "unknownAccessPathQuestion": "Is this a call of the default function from the deep-equal package?"
+    },
+    "semanticPatchId": "1668",
+    "breakingChangeId": "545",
+    "enabled": true,
+    "comment": "Initial ([], false)"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial (false, [])",
+      "detectionPattern": "call <deep-equal> 0:boolean 1:array",
+      "suggestedFixDescription": "Previous to version 2.0.0 deep-equal would return true when comparing an empty array with the boolean value `false`. This is no longer the case, hence if $0 is false and $1 is an empty array you will have to change this comparison. One quick fix would be to manually check if $1 is an empty array, and then handle the result as you would the deep-equal check.",
+      "unknownAccessPathQuestion": "Is this a call of the default function from the deepa-equal package?"
+    },
+    "semanticPatchId": "1669",
+    "breakingChangeId": "545",
+    "enabled": true,
+    "comment": "Initial (false, [])"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1669",
+      "comment": "Initial (false, []) ",
+      "version": 0,
+      "creationDate": "2022-09-06T15:22:40.000Z",
+      "detectionPattern": "call <deep-equal> 0:boolean 1:array",
+      "suggestedFixDescription": "Previous to version 2.0.0 deep-equal would return true when comparing an empty array with the boolean value `false`. This is no longer the case, hence if $0 is false and $1 is an empty array you will have to change this comparison. One quick fix would be to manually check if $1 is an empty array, and then handle the result as you would the deep-equal check.",
+      "unknownAccessPathQuestion": "Is this a call of the default function from the deepa-equal package?"
+    },
+    "semanticPatchId": "1669",
+    "breakingChangeId": "545",
+    "enabled": true,
+    "comment": "Initial (false, []) "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1668",
+      "comment": "Initial ([], false) ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-09-06T15:20:44.000Z",
+      "detectionPattern": "call <deep-equal> 0:array 1:boolean",
+      "suggestedFixDescription": "Before version 2.0.0 deep-equal would return true when comparing an empty array with the boolean value `false`. This is no longer the case, hence if `$2` is false and `$1` is an empty array you will have to change this comparison. One quick fix would be to manually check if `$1` is an empty array, and then handle the result as you would the deep-equal check.",
+      "unknownAccessPathQuestion": "Is this a call of the default function from the deep-equal package?"
+    },
+    "semanticPatchId": "1668",
+    "breakingChangeId": "545",
+    "enabled": true,
+    "comment": "Initial ([], false) "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1669",
+      "comment": "Initial (false, [])  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-06T15:23:58.000Z",
+      "detectionPattern": "call <deep-equal> 0:boolean 1:array",
+      "suggestedFixDescription": "Previous to version 2.0.0 deep-equal would return true when comparing an empty array with the boolean value `false`. This is no longer the case, hence if `$1` is false and `$2` is an empty array you will have to change this comparison. One quick fix would be to manually check if `$2` is an empty array, and then handle the result as you would the deep-equal check.",
+      "unknownAccessPathQuestion": "Is this a call of the default function from the deepa-equal package?"
+    },
+    "semanticPatchId": "1669",
+    "breakingChangeId": "545",
+    "enabled": true,
+    "comment": "Initial (false, [])  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1669",
+      "comment": "Initial (false, [])",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-09-06T15:28:53.000Z",
+      "detectionPattern": "call <deep-equal> 0:boolean 1:array",
+      "suggestedFixDescription": "Previous to version 2.0.0 deep-equal would return true when comparing an empty array with the boolean value `false`. This is no longer the case, hence if `$1 ` is false and `$2 ` is an empty array you will have to change this comparison. One quick fix would be to manually check if `$2 ` is an empty array, and then handle the result as you would the deep-equal check.",
+      "unknownAccessPathQuestion": "Is this a call of the default function from the deepa-equal package?"
+    },
+    "semanticPatchId": "1669",
+    "breakingChangeId": "545",
+    "enabled": true,
+    "comment": "Initial (false, [])"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1668",
+      "comment": "Initial ([], false)",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-06T15:27:16.000Z",
+      "detectionPattern": "call <deep-equal> 0:array 1:boolean",
+      "suggestedFixDescription": "Before version 2.0.0 deep-equal would return true when comparing an empty array with the boolean value `false`. This is no longer the case, hence if `$2 ` is false and `$1 ` is an empty array you will have to change this comparison. One quick fix would be to manually check if `$1 ` is an empty array, and then handle the result as you would the deep-equal check.",
+      "unknownAccessPathQuestion": "Is this a call of the default function from the deep-equal package?"
+    },
+    "semanticPatchId": "1668",
+    "breakingChangeId": "545",
+    "enabled": true,
+    "comment": "Initial ([], false)"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1658",
+      "comment": "Initial should have a filter for map and set and then the this does not need to be unliekly.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-09-01T11:22:57.000Z",
+      "detectionPattern": "call <deep-equal>",
+      "suggestedFixDescription": "This is only breaking if you are using the `deepEqual()` method to compare either sets or maps. Previously deep-equal did not support maps or sets correctly, meaning it would return true even when the elements of a set were not equal. Comparing these two types with `deepEqual()` will now sometimes give a different result compared to before. It should not be a problem to fix this, since the new behaviour is also what you would expect from the `deepEqual()`method. ",
+      "unknownAccessPathQuestion": "Is this a call of the deepEquals method from the deep-equal package?"
+    },
+    "semanticPatchId": "1658",
+    "breakingChangeId": "538",
+    "enabled": true,
+    "comment": "Initial should have a filter for map and set and then the this does not need to be unliekly."
+  }
+]

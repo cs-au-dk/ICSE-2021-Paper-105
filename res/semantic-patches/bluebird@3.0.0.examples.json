@@ -1,0 +1,16 @@
+[
+  {
+    "id": "7",
+    "breakingChangeId": "11",
+    "title": "Bluebird 3.0.0: Promisify with multiple return values",
+    "description": "The function resulting from the defaults call in line 2 have multiple resolved values, so in v3 of bluebird, an object should be passed as the second argument where the multiArgs option is set. The analysis cannot determine that the function resolves to multiple values, so the user have to answer yes to this question to make the correct patch. ",
+    "codeExample": "var bluebird = require(\"bluebird\");\nvar request = bluebird.promisify(require(\"request\").defaults({ jar: true }));"
+  },
+  {
+    "id": "5",
+    "breakingChangeId": "10",
+    "title": "Bluebird 3.0.0: Passing context as argument to promisify",
+    "description": "Calling Promise.promisify with a second context argument",
+    "codeExample": "const redis = require(\"redis\");\nconst client = redis.createClient();\nconst Promise = require('bluebird');\nPromise.promisify(redisClient.get, redisClient);"
+  }
+]

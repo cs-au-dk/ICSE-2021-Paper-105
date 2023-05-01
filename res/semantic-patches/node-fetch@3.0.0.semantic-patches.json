@@ -1,0 +1,828 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>.Body().textConverted",
+      "primaryTemplate": {
+        "pattern": "<fetch-charset-detection>.convertBody($base, $base.headers)",
+        "replacements": []
+      },
+      "detectionPattern": "read <node-fetch>.Body().textConverted"
+    },
+    "semanticPatchId": "1397",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "read <node-fetch>.Body().textConverted"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1397",
+      "comment": "read <node-fetch>?.textConverted",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-01T20:24:39.000Z",
+      "detectionPattern": "read <node-fetch>?.textConverted",
+      "suggestedFixDescription": "If you want charset encoding detection, please use the fetch-charset-detection package.",
+      "unknownAccessPathQuestion": "Is the "
+    },
+    "semanticPatchId": "1397",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "read <node-fetch>?.textConverted"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>.{Reponse, Request}.textConverted",
+      "detectionPattern": "read <node-fetch>.{Reponse, Request}.textConverted"
+    },
+    "semanticPatchId": "1398",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Reponse, Request}.textConverted"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1398",
+      "comment": "read <node-fetch>.{Reponse, Request}.textConverted ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-09T19:30:15.000Z",
+      "detectionPattern": "read <node-fetch>.{Reponse, Request}.textConverted",
+      "suggestedFixDescription": "If you want charset encoding detection, please use the fetch-charset-detection package."
+    },
+    "semanticPatchId": "1398",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Reponse, Request}.textConverted "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1398",
+      "comment": "read <node-fetch>.{Reponse, Request}.textConverted  ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-09T19:31:03.000Z",
+      "detectionPattern": "read <node-fetch>.{Reponse(), Request()}.textConverted",
+      "suggestedFixDescription": "If you want charset encoding detection, please use the fetch-charset-detection package."
+    },
+    "semanticPatchId": "1398",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Reponse, Request}.textConverted  "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1398",
+      "comment": "read <node-fetch>.{Response, Request}.textConverted  ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-09T19:34:19.000Z",
+      "detectionPattern": "read <node-fetch>.{Response(), Request()}.textConverted",
+      "suggestedFixDescription": "If you want charset encoding detection, please use the fetch-charset-detection package."
+    },
+    "semanticPatchId": "1398",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Response, Request}.textConverted  "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>?.body.on",
+      "primaryTemplate": {
+        "pattern": "$base.once",
+        "replacements": []
+      },
+      "detectionPattern": "read <node-fetch>?.body.on"
+    },
+    "semanticPatchId": "1414",
+    "breakingChangeId": "265",
+    "enabled": true,
+    "comment": "read <node-fetch>?.body.on"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1414",
+      "comment": "read <node-fetch>?.body.on ",
+      "version": 0,
+      "creationDate": "2022-03-16T15:16:08.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.once",
+        "replacements": []
+      },
+      "detectionPattern": "read <node-fetch>?.body.on",
+      "unknownAccessPathQuestion": "Is the reciever a Response object?"
+    },
+    "semanticPatchId": "1414",
+    "breakingChangeId": "265",
+    "enabled": true,
+    "comment": "read <node-fetch>?.body.on "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <node-fetch>() [2, ]",
+      "detectionPattern": "call <node-fetch>()"
+    },
+    "semanticPatchId": "1399",
+    "breakingChangeId": "267",
+    "enabled": true,
+    "comment": "call <node-fetch>() [2, ]"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1399",
+      "comment": "call <node-fetch>() [2]",
+      "version": 0,
+      "creationDate": "2022-03-09T19:46:20.000Z",
+      "detectionPattern": "call <node-fetch>() [2, 2]"
+    },
+    "semanticPatchId": "1399",
+    "breakingChangeId": "267",
+    "enabled": true,
+    "comment": "call <node-fetch>() [2]"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1399",
+      "comment": "call <node-fetch> [2, 2]",
+      "version": 1,
+      "creationDate": "2022-03-09T19:46:54.000Z",
+      "detectionPattern": "call <node-fetch> [2, 2]"
+    },
+    "semanticPatchId": "1399",
+    "breakingChangeId": "267",
+    "enabled": true,
+    "comment": "call <node-fetch> [2, 2]"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1398",
+      "comment": "read <node-fetch>.{Response, Request}().textConverted",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-09T19:44:05.000Z",
+      "detectionPattern": "read <node-fetch>.{Response,Request}().textConverted",
+      "suggestedFixDescription": "If you want charset encoding detection, please use the fetch-charset-detection package."
+    },
+    "semanticPatchId": "1398",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Response, Request}().textConverted"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1397",
+      "comment": "read <node-fetch>?.textConverted ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-09T19:26:54.000Z",
+      "detectionPattern": "read <node-fetch>?.textConverted",
+      "suggestedFixDescription": "If you want charset encoding detection, please use the fetch-charset-detection package.",
+      "unknownAccessPathQuestion": "Is the method textConverted called on a Response or Request object?"
+    },
+    "semanticPatchId": "1397",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "read <node-fetch>?.textConverted "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>?.{Response, Request}().json",
+      "detectionPattern": "read <node-fetch>?.{Response, Request}().json"
+    },
+    "semanticPatchId": "1400",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "read <node-fetch>?.{Response, Request}().json"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1400",
+      "comment": "read <node-fetch>.{Response, Request}().json",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-09T20:01:08.000Z",
+      "detectionPattern": "read <node-fetch>.{Response, Request}().json"
+    },
+    "semanticPatchId": "1400",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Response, Request}().json"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1400",
+      "comment": "read <node-fetch>.{Response,Request}().json",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-09T20:08:21.000Z",
+      "detectionPattern": "read <node-fetch>.{Response,Request}().json"
+    },
+    "semanticPatchId": "1400",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Response,Request}().json"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>?.json",
+      "detectionPattern": "read <node-fetch>?.json"
+    },
+    "semanticPatchId": "1401",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "read <node-fetch>?.json"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>?.body",
+      "detectionPattern": "read <node-fetch>?.body",
+      "unknownAccessPathQuestion": "Is body a property of a Request object "
+    },
+    "semanticPatchId": "1402",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "read <node-fetch>?.body"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1402",
+      "comment": "read <node-fetch>?.body",
+      "version": 1,
+      "creationDate": "2022-03-09T20:27:10.000Z",
+      "detectionPattern": "read <node-fetch>?.body",
+      "unknownAccessPathQuestion": "Is body a property of a Request object?"
+    },
+    "semanticPatchId": "1402",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "read <node-fetch>?.body"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>?.statusText",
+      "detectionPattern": "read <node-fetch>?.statusText",
+      "unknownAccessPathQuestion": "Is the statusText method called on a Response object?"
+    },
+    "semanticPatchId": "1403",
+    "breakingChangeId": "271",
+    "enabled": true,
+    "comment": "read <node-fetch>?.statusText"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>.Response().body.on",
+      "primaryTemplate": {
+        "pattern": "$base.once",
+        "replacements": []
+      },
+      "detectionPattern": "read <node-fetch>.Response().body.on"
+    },
+    "semanticPatchId": "1394",
+    "breakingChangeId": "265",
+    "enabled": true,
+    "comment": "read <node-fetch>.Response().body.on"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>.Request().body",
+      "detectionPattern": "read <node-fetch>.Request().body"
+    },
+    "semanticPatchId": "1404",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "read <node-fetch>.Request().body"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1404",
+      "comment": "read <node-fetch>.{Response,Request}().body",
+      "version": 1,
+      "creationDate": "2022-03-09T20:40:13.000Z",
+      "detectionPattern": "read <node-fetch>.{Response,Request}().body"
+    },
+    "semanticPatchId": "1404",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Response,Request}().body"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "read <node-fetch>?.body",
+      "detectionPattern": "read <node-fetch>?.body",
+      "unknownAccessPathQuestion": "Is the body property retrieved from a Request object? "
+    },
+    "semanticPatchId": "1405",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "read <node-fetch>?.body"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1404",
+      "comment": "read <node-fetch>.{Response,Request}().json",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-09T20:40:13.000Z",
+      "detectionPattern": "read <node-fetch>.{Response,Request}().json"
+    },
+    "semanticPatchId": "1404",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Response,Request}().json"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1404",
+      "comment": "read <node-fetch>.{Response,Request}().body",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-09T20:46:22.000Z",
+      "detectionPattern": "read <node-fetch>.{Response,Request}().body"
+    },
+    "semanticPatchId": "1404",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "read <node-fetch>.{Response,Request}().body"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1400",
+      "comment": "Added unkown access path question",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-09T20:10:10.000Z",
+      "detectionPattern": "read <node-fetch>.{Response,Request}().json",
+      "unknownAccessPathQuestion": "Is the json method called on a Response or Request object from node-fetch?"
+    },
+    "semanticPatchId": "1400",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "Added unkown access path question"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": " ",
+      "detectionPattern": "read <node-fetch>.Promise",
+      "unknownAccessPathQuestion": "Is Promise property read from the default object from node-fetch?"
+    },
+    "semanticPatchId": "1537",
+    "breakingChangeId": "383",
+    "enabled": true,
+    "comment": " "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1537",
+      "comment": "  ",
+      "version": 0,
+      "creationDate": "2022-05-02T06:44:42.000Z",
+      "detectionPattern": "write <node-fetch>.Promise",
+      "unknownAccessPathQuestion": "Is Promise property read from the default object from node-fetch?"
+    },
+    "semanticPatchId": "1537",
+    "breakingChangeId": "383",
+    "enabled": true,
+    "comment": "  "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "",
+      "detectionPattern": "read <node-fetch>.Promise",
+      "unknownAccessPathQuestion": "Is the Promise property read from the default object from node-fetch?"
+    },
+    "semanticPatchId": "1538",
+    "breakingChangeId": "383",
+    "enabled": true,
+    "comment": ""
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1397",
+      "comment": "Fixed detection to use result of call from node-fetch instead of node-fetch as receiver.",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-09T19:55:52.000Z",
+      "detectionPattern": "read <node-fetch>()?.textConverted",
+      "suggestedFixDescription": "If you want charset encoding detection, please use the fetch-charset-detection package.",
+      "unknownAccessPathQuestion": "Is the method textConverted called on a Response or Request object?"
+    },
+    "semanticPatchId": "1397",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "Fixed detection to use result of call from node-fetch instead of node-fetch as receiver."
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1403",
+      "comment": "read <node-fetch>?.statusText base:Response",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-09T20:28:42.000Z",
+      "detectionPattern": "read <node-fetch>?.statusText",
+      "unknownAccessPathQuestion": "Is the statusText method called on a Response object?"
+    },
+    "semanticPatchId": "1403",
+    "breakingChangeId": "271",
+    "enabled": true,
+    "comment": "read <node-fetch>?.statusText base:Response"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1404",
+      "comment": "Wrong index in the filter",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-06-17T13:19:14.000Z",
+      "detectionPattern": "read <node-fetch>.Request [2,2] 1.body:string",
+      "unknownAccessPathQuestion": "Is the receiver a Request constructor called with an options object, where body is a string?"
+    },
+    "semanticPatchId": "1404",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "Wrong index in the filter"
+  },
+  {
+    "version": 8,
+    "semanticPatch": {
+      "id": "1404",
+      "comment": "Changed to a call pattern",
+      "enabled": true,
+      "version": 7,
+      "creationDate": "2022-06-17T13:19:54.000Z",
+      "detectionPattern": "call <node-fetch>.Request [2,2] 1.body:string",
+      "unknownAccessPathQuestion": "Is the receiver a Request constructor called with an options object, where body is a string?"
+    },
+    "semanticPatchId": "1404",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "Changed to a call pattern"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1405",
+      "comment": "Updated index in filter",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-06-17T13:10:23.000Z",
+      "detectionPattern": "call <node-fetch> [2,2] 1.body:string",
+      "unknownAccessPathQuestion": "Is the receiver the default method from node-fetch, and is it called with options where the body property is a string?"
+    },
+    "semanticPatchId": "1405",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "Updated index in filter"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1399",
+      "comment": "Changed to check if the second argument is an object",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-09T19:48:44.000Z",
+      "detectionPattern": "call <node-fetch> [2, 2] 2:object",
+      "suggestedFixDescription": "Use timeout-signal as a workaround: https://github.com/node-fetch/node-fetch/blob/main/docs/v3-UPGRADE-GUIDE.md#the-timeout-option-was-removed",
+      "unknownAccessPathQuestion": "Is the method called the default method from node-fetch? "
+    },
+    "semanticPatchId": "1399",
+    "breakingChangeId": "267",
+    "enabled": true,
+    "comment": "Changed to check if the second argument is an object"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1399",
+      "comment": "Changed to detect if the timeout option is set",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-06-17T12:23:09.000Z",
+      "detectionPattern": "call <node-fetch> [2, 2] 1.timeout:any",
+      "suggestedFixDescription": "Use timeout-signal as a workaround: https://github.com/node-fetch/node-fetch/blob/main/docs/v3-UPGRADE-GUIDE.md#the-timeout-option-was-removed",
+      "unknownAccessPathQuestion": "Is the method called the default method from node-fetch? "
+    },
+    "semanticPatchId": "1399",
+    "breakingChangeId": "267",
+    "enabled": true,
+    "comment": "Changed to detect if the timeout option is set"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1397",
+      "comment": "Added a link to the changelog in the suggested fix",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-05-14T10:21:44.000Z",
+      "detectionPattern": "read <node-fetch>()?.textConverted",
+      "suggestedFixDescription": "If you want charset encoding detection, please use the fetch-charset-detection package: https://github.com/node-fetch/node-fetch/blob/main/docs/v3-UPGRADE-GUIDE.md#dropped-the-restextconverted-function",
+      "unknownAccessPathQuestion": "Is the method textConverted called on a Response or Request object?"
+    },
+    "semanticPatchId": "1397",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "Added a link to the changelog in the suggested fix"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1398",
+      "comment": "Added a link to the changelog in the suggested fix",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-09T19:51:26.000Z",
+      "detectionPattern": "read <node-fetch>.{Response,Request}().textConverted",
+      "suggestedFixDescription": "If you want charset encoding detection, please use the fetch-charset-detection package: https://github.com/node-fetch/node-fetch/blob/main/docs/v3-UPGRADE-GUIDE.md#dropped-the-restextconverted-function",
+      "unknownAccessPathQuestion": "Is the receiver a Respone or Request object from node-fetch?"
+    },
+    "semanticPatchId": "1398",
+    "breakingChangeId": "266",
+    "enabled": true,
+    "comment": "Added a link to the changelog in the suggested fix"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1401",
+      "comment": "Addded a unknown access path question",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-09T20:11:14.000Z",
+      "detectionPattern": "read <node-fetch>?.json",
+      "unknownAccessPathQuestion": "Is the json method called on a Response or Request object from node-fetch?"
+    },
+    "semanticPatchId": "1401",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "Addded a unknown access path question"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1405",
+      "comment": "matching on calls to the default method with an object as second parameter, and the body property sat to string.",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-09T20:43:39.000Z",
+      "detectionPattern": "call <node-fetch> [2,2] 2.body:string",
+      "unknownAccessPathQuestion": "Is the body property retrieved from a Request object? "
+    },
+    "semanticPatchId": "1405",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "matching on calls to the default method with an object as second parameter, and the body property sat to string."
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1405",
+      "comment": "Added unkown access path question",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-17T13:08:56.000Z",
+      "detectionPattern": "call <node-fetch> [2,2] 2.body:string",
+      "unknownAccessPathQuestion": "Is the receiver the default method from node-fetch, and is it called with options where the body property is a string?"
+    },
+    "semanticPatchId": "1405",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "Added unkown access path question"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1404",
+      "comment": "Changed to detect Request constructors instead",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-09T20:48:20.000Z",
+      "detectionPattern": "read <node-fetch>.Request [2,2] 2.body:string",
+      "unknownAccessPathQuestion": "Is the receiver a Request constructor called with an options object, where body is a string?"
+    },
+    "semanticPatchId": "1404",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "Changed to detect Request constructors instead"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1402",
+      "comment": "To be removed",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-03-09T20:27:10.000Z",
+      "detectionPattern": "call <node-fetch>",
+      "unknownAccessPathQuestion": "I have no question"
+    },
+    "semanticPatchId": "1402",
+    "breakingChangeId": "270",
+    "enabled": false,
+    "comment": "To be removed"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1404",
+      "comment": "Wrong index in the filter",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-06-17T13:16:07.000Z",
+      "detectionPattern": "read <node-fetch>.Request [2,2] 1.body:string",
+      "unknownAccessPathQuestion": "Is the receiver a Request constructor called with an options object, where body is a string?"
+    },
+    "semanticPatchId": "1404",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "Wrong index in the filter"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1404",
+      "comment": "Wrong index in the filter ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-06-17T13:18:48.000Z",
+      "detectionPattern": "read <node-fetch>.Request [2,2] $1.body:string",
+      "unknownAccessPathQuestion": "Is the receiver a Request constructor called with an options object, where body is a string?"
+    },
+    "semanticPatchId": "1404",
+    "breakingChangeId": "270",
+    "enabled": true,
+    "comment": "Wrong index in the filter "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1400",
+      "comment": "Added suggested fix",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-04-20T15:55:34.000Z",
+      "detectionPattern": "read <node-fetch>.{Response,Request}().json",
+      "suggestedFixDescription": "This is only relevant, if you expect the error to have a specific type.",
+      "unknownAccessPathQuestion": "Is the json method called on a Response or Request object from node-fetch?"
+    },
+    "semanticPatchId": "1400",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "Added suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1401",
+      "comment": "Added suggested fix",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-17T12:45:37.000Z",
+      "detectionPattern": "read <node-fetch>?.json",
+      "suggestedFixDescription": "This is only relevant, if you expect the error to have a specific type.",
+      "unknownAccessPathQuestion": "Is the json method called on a Response or Request object from node-fetch?"
+    },
+    "semanticPatchId": "1401",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "Added suggested fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1414",
+      "comment": "Update to call pattern",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-16T15:16:37.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.once($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <node-fetch>?.body.on",
+      "unknownAccessPathQuestion": "Is the reciever a Response object?"
+    },
+    "semanticPatchId": "1414",
+    "breakingChangeId": "265",
+    "enabled": true,
+    "comment": "Update to call pattern"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1403",
+      "comment": "Added () before ?, since the response is the result of the fetch call.",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-06-01T19:09:51.000Z",
+      "detectionPattern": "read <node-fetch>()?.statusText",
+      "unknownAccessPathQuestion": "Is the statusText method called on a Response object?"
+    },
+    "semanticPatchId": "1403",
+    "breakingChangeId": "271",
+    "enabled": true,
+    "comment": "Added () before ?, since the response is the result of the fetch call."
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1401",
+      "comment": "Added () to detection pattern since the response is the result of calling node-fetch.",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-06-18T18:54:25.000Z",
+      "detectionPattern": "read <node-fetch>()?.json",
+      "suggestedFixDescription": "This is only relevant, if you expect the error to have a specific type.",
+      "unknownAccessPathQuestion": "Is the json method called on a Response or Request object from node-fetch?"
+    },
+    "semanticPatchId": "1401",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "Added () to detection pattern since the response is the result of calling node-fetch."
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1401",
+      "comment": "Added ** since <node-fetch>() returns a promise, which when resolved gives a response with the .json property",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-10-18T12:11:14.000Z",
+      "detectionPattern": "read <node-fetch>()?**.json",
+      "suggestedFixDescription": "This is only relevant, if you expect the error to have a specific type.",
+      "unknownAccessPathQuestion": "Is the json method called on a Response or Request object from node-fetch?"
+    },
+    "semanticPatchId": "1401",
+    "breakingChangeId": "268",
+    "enabled": true,
+    "comment": "Added ** since <node-fetch>() returns a promise, which when resolved gives a response with the .json property"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1414",
+      "comment": "Added ()** to <node-fetch>, since the response is the result from the call.",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-06-28T12:26:48.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.once($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <node-fetch>()**?.body.on",
+      "unknownAccessPathQuestion": "Is the reciever a Response object?"
+    },
+    "semanticPatchId": "1414",
+    "breakingChangeId": "265",
+    "enabled": true,
+    "comment": "Added ()** to <node-fetch>, since the response is the result from the call."
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1403",
+      "comment": "Added **, since it should also match on chaining .then or .catch calls.",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-10-18T12:10:10.000Z",
+      "detectionPattern": "read <node-fetch>()**?.statusText",
+      "unknownAccessPathQuestion": "Is the statusText method called on a Response object?"
+    },
+    "semanticPatchId": "1403",
+    "breakingChangeId": "271",
+    "enabled": true,
+    "comment": "Added **, since it should also match on chaining .then or .catch calls."
+  }
+]

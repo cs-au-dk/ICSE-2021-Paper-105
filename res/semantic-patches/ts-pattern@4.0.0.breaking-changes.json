@@ -1,0 +1,68 @@
+[
+  {
+    "id": "461",
+    "packageVersion": "4.0.0",
+    "packageName": "ts-pattern",
+    "description": "type-specific wildcard patterns have moved from __.<pattern> to a new Pattern qualified module, also exported as P by ts-pattern.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "462",
+    "packageVersion": "4.0.0",
+    "packageName": "ts-pattern",
+    "description": "The top level __ export was moved to P._ and P.any.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "463",
+    "packageVersion": "4.0.0",
+    "packageName": "ts-pattern",
+    "description": "Function to create patterns have been moved to the P module.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "464",
+    "packageVersion": "4.0.0",
+    "packageName": "ts-pattern",
+    "description": "The __.NaN pattern has been replaced by simply using the NaN value in the pattern.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "465",
+    "packageVersion": "4.0.0",
+    "packageName": "ts-pattern",
+    "description": "the Pattern type which used to be exported at the toplevel is now accessible at P.Pattern.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "466",
+    "packageVersion": "4.0.0",
+    "packageName": "ts-pattern",
+    "description": "The syntax for matching on a list of elements with an unknown length has changed from [subpattern] to P.array(subpattern).",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "418",
+    "packageVersion": "4.0.0",
+    "packageName": "@tinymce/tinymce-react",
+    "description": "Removed outputFormat prop. If text output is required call editor.getContent({ format: 'text' }) in any of the event callbacks.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "417",
+    "packageVersion": "4.0.0",
+    "packageName": "@tinymce/tinymce-react",
+    "description": "Changed default cloudChannel to '6'. This change is only relevant if you use the 'cloud' version of TinyMCE, i.e., don't host it yourself. The change 'upgrades' TinyMCE to version 6 (see changes here https://www.tiny.cloud/docs/release-notes/6.0-upcoming-changes/). If you want to continue to use TinyMCE version 5, initialize the editor with a specific channel: <Editor  init={{ cloudChannel: '5' }} />",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "419",
+    "packageVersion": "4.0.0",
+    "packageName": "@tinymce/tinymce-react",
+    "description": "License changed to MIT (from Apache 2) this matches TinyMCE 6 license",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

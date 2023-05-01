@@ -1,0 +1,46 @@
+[
+  {
+    "id": "786",
+    "packageVersion": "3.0.0",
+    "packageName": "url-template",
+    "description": "Support for Bower has been dropped, use NPM or another package manager instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "787",
+    "packageVersion": "3.0.0",
+    "packageName": "url-template",
+    "description": "Support for CommonJS modules has been dropped, use the ES module import instead.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "788",
+    "packageVersion": "3.0.0",
+    "packageName": "url-template",
+    "description": "The default export has been changed to a named export. Import parseTemplate with a named import instead of calling the parse method from the previous default object. See https://github.com/bramstein/url-template/releases/tag/v3.0.0 for details.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "789",
+    "packageVersion": "3.0.0",
+    "packageName": "url-template",
+    "description": "Some functions that were already marked as private are now no longer available",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]

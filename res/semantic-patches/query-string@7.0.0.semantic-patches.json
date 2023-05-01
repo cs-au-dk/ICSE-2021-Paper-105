@@ -1,0 +1,163 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "true",
+            "propName": "skipNull",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <query-string>.stringify [2,2] 1.arrayFormat:\"comma\" 1.skipNull:null 1.skipEmptyString:boolean",
+      "unknownAccessPathQuestion": "Is the callee from query-string?"
+    },
+    "semanticPatchId": "2285",
+    "breakingChangeId": "841",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2285",
+      "comment": "detection pattern test",
+      "version": 0,
+      "creationDate": "2022-12-09T13:11:12.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "true",
+            "propName": "skipNull",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <query-string>.stringify [2,2] 1.arrayFormat:{\"comma\",\"separator\"} 1.skipNull:null 1.skipEmptyString:boolean",
+      "unknownAccessPathQuestion": "Is the callee from query-string?"
+    },
+    "semanticPatchId": "2285",
+    "breakingChangeId": "841",
+    "enabled": true,
+    "comment": "detection pattern test"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2285",
+      "comment": "updated from null to undefined",
+      "version": 1,
+      "creationDate": "2022-12-09T13:15:57.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "true",
+            "propName": "skipNull",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <query-string>.stringify [2,2] 1.arrayFormat:{\"comma\",\"separator\"} 1.skipNull:undefined 1.skipEmptyString:boolean",
+      "unknownAccessPathQuestion": "Is the callee from query-string?"
+    },
+    "semanticPatchId": "2285",
+    "breakingChangeId": "841",
+    "enabled": true,
+    "comment": "updated from null to undefined"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "true",
+            "propName": "skipEmptyString",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "detectionPattern": "call <query-string>.stringify [2,2] 1.arrayFormat:{\"comma\",\"separator\"} 1.skipNull:boolean 1.skipEmptyString:undefined",
+      "unknownAccessPathQuestion": "Is the callee from query-string?"
+    },
+    "semanticPatchId": "2286",
+    "breakingChangeId": "841",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "true",
+            "propName": "skipEmptyString",
+            "operation": "ADD_PROP"
+          },
+          {
+            "value": "true",
+            "propName": "skipNull",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <query-string>.stringify [2,2] 1.arrayFormat:{\"comma\",\"separator\"} 1.skipNull:undefined 1.skipEmptyString:undefined",
+      "unknownAccessPathQuestion": "Is the callee from query-string?"
+    },
+    "semanticPatchId": "2287",
+    "breakingChangeId": "841",
+    "enabled": true,
+    "comment": "init"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2286",
+      "comment": "added a template",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-12-09T13:22:03.000Z",
+      "objectModifiers": {
+        "$2": [
+          {
+            "value": "true",
+            "propName": "skipEmptyString",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "primaryTemplate": {
+        "pattern": "$callee($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <query-string>.stringify [2,2] 1.arrayFormat:{\"comma\",\"separator\"} 1.skipNull:boolean 1.skipEmptyString:undefined",
+      "unknownAccessPathQuestion": "Is the callee from query-string?"
+    },
+    "semanticPatchId": "2286",
+    "breakingChangeId": "841",
+    "enabled": true,
+    "comment": "added a template"
+  }
+]

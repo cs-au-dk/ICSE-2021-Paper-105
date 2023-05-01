@@ -1,0 +1,35 @@
+[
+  {
+    "id": "195",
+    "packageVersion": "3.0.0",
+    "packageName": "chalk",
+    "description": "Remove the .enabled property in favor of .level (#356) ",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "196",
+    "packageVersion": "3.0.0",
+    "packageName": "chalk",
+    "description": "Remove chalk.constructor() in favor of chalk.Instance()",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "194",
+    "packageVersion": "3.0.0",
+    "packageName": "chalk",
+    "description": "Require Node.js 8",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": true,
+    "unlikelyBreakingChange": false
+  }
+]

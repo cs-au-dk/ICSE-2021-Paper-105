@@ -1,0 +1,259 @@
+[
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1444",
+      "comment": "Changed the detection pattern to specify each function",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-03-28T09:36:06.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args) || null;",
+        "replacements": []
+      },
+      "detectionPattern": "call <file-type>"
+    },
+    "semanticPatchId": "1444",
+    "breakingChangeId": "306",
+    "enabled": true,
+    "comment": "Changed the detection pattern to specify each function"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1443",
+      "comment": "More specific quistion",
+      "enabled": false,
+      "version": 2,
+      "creationDate": "2022-03-25T06:36:08.000Z",
+      "extraQuestion": "Is file-type used for TypeScript and imported with \"import fileType from 'file-type';\"?",
+      "detectionPattern": "import file-type",
+      "suggestedFixDescription": "You need to change import fileType from 'file-type'; to import fileType = require('file-type');"
+    },
+    "semanticPatchId": "1443",
+    "breakingChangeId": "304",
+    "enabled": false,
+    "comment": "More specific quistion"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "import fileType from 'file-type';",
+      "enabled": false,
+      "detectionPattern": "import fileType from 'file-type';"
+    },
+    "semanticPatchId": "1443",
+    "breakingChangeId": "304",
+    "enabled": false,
+    "comment": "import fileType from 'file-type';"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1444",
+      "comment": "Changed detection to default and stream function",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-03-28T13:02:34.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args) || null;",
+        "replacements": []
+      },
+      "detectionPattern": "call {<file-type>,<file-type>.stream}"
+    },
+    "semanticPatchId": "1444",
+    "breakingChangeId": "306",
+    "enabled": true,
+    "comment": "Changed detection to default and stream function"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "call <fileType>",
+      "detectionPattern": "call <fileType>"
+    },
+    "semanticPatchId": "1444",
+    "breakingChangeId": "306",
+    "enabled": true,
+    "comment": "call <fileType>"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1443",
+      "comment": "import 'file-type';",
+      "enabled": false,
+      "version": 0,
+      "creationDate": "2022-03-24T16:47:06.000Z",
+      "extraQuestion": "Is this used for TypeScript?",
+      "detectionPattern": "import 'file-type';"
+    },
+    "semanticPatchId": "1443",
+    "breakingChangeId": "304",
+    "enabled": false,
+    "comment": "import 'file-type';"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1443",
+      "comment": "import file-type",
+      "enabled": false,
+      "version": 1,
+      "creationDate": "2022-03-25T06:33:56.000Z",
+      "extraQuestion": "Is this used for TypeScript?",
+      "detectionPattern": "import file-type",
+      "suggestedFixDescription": "You need to change import fileType from 'file-type'; to import fileType = require('file-type');"
+    },
+    "semanticPatchId": "1443",
+    "breakingChangeId": "304",
+    "enabled": false,
+    "comment": "import file-type"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1444",
+      "comment": "call <fileType>?**",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-24T17:14:09.000Z",
+      "detectionPattern": "call <fileType>?**"
+    },
+    "semanticPatchId": "1444",
+    "breakingChangeId": "306",
+    "enabled": true,
+    "comment": "call <fileType>?**"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1443",
+      "comment": "Fixed question",
+      "enabled": false,
+      "version": 3,
+      "creationDate": "2022-03-28T13:08:23.000Z",
+      "extraQuestion": "Does the import use commonjs import style e.g. \"require('file-type)\"?",
+      "detectionPattern": "import file-type",
+      "suggestedFixDescription": "You need to change import fileType from 'file-type'; to import fileType = require('file-type');"
+    },
+    "semanticPatchId": "1443",
+    "breakingChangeId": "304",
+    "enabled": false,
+    "comment": "Fixed question"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1444",
+      "comment": "Added question",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-03-28T16:03:18.000Z",
+      "extraQuestion": "Does the code check if the return value is null and not just falsy?",
+      "primaryTemplate": {
+        "pattern": "$callee($args) || null;",
+        "replacements": []
+      },
+      "detectionPattern": "call {<file-type>,<file-type>.stream}"
+    },
+    "semanticPatchId": "1444",
+    "breakingChangeId": "306",
+    "enabled": true,
+    "comment": "Added question"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1443",
+      "comment": "Enabled patch",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-03-30T10:45:06.000Z",
+      "extraQuestion": "Does the import use ECS import style e.g. \"import FileType from 'file-type'\"?",
+      "detectionPattern": "import file-type",
+      "suggestedFixDescription": "You need to change import fileType from 'file-type'; to import fileType = require('file-type');"
+    },
+    "semanticPatchId": "1443",
+    "breakingChangeId": "304",
+    "enabled": true,
+    "comment": "Enabled patch"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1444",
+      "comment": "Template added",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-26T08:45:44.000Z",
+      "primaryTemplate": {
+        "pattern": "() => {\n    let tmp = $callee($args);\n    return tmp === undefined ? null : tmp;\n}();",
+        "replacements": []
+      },
+      "detectionPattern": "call <fileType>?**"
+    },
+    "semanticPatchId": "1444",
+    "breakingChangeId": "306",
+    "enabled": true,
+    "comment": "Template added"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1444",
+      "comment": "Template simplified",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-28T09:13:04.000Z",
+      "primaryTemplate": {
+        "pattern": "$callee($args) || null;",
+        "replacements": []
+      },
+      "detectionPattern": "call <fileType>?**"
+    },
+    "semanticPatchId": "1444",
+    "breakingChangeId": "306",
+    "enabled": true,
+    "comment": "Template simplified"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1444",
+      "comment": "Added Unknown access path quistion",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-03-31T12:21:13.000Z",
+      "extraQuestion": "Does the code check if the return value is null and not just falsy?",
+      "primaryTemplate": {
+        "pattern": "$callee($args) || null;",
+        "replacements": []
+      },
+      "detectionPattern": "call {<file-type>,<file-type>.stream}",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1444",
+    "breakingChangeId": "306",
+    "enabled": true,
+    "comment": "Added Unknown access path quistion"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1443",
+      "comment": "Added unknown access path quistion",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-03-30T10:45:06.000Z",
+      "extraQuestion": "Does the import use ECS import style e.g. \"import FileType from 'file-type'\"?",
+      "detectionPattern": "import file-type",
+      "suggestedFixDescription": "You need to change import fileType from 'file-type'; to import fileType = require('file-type');",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1443",
+    "breakingChangeId": "304",
+    "enabled": true,
+    "comment": "Added unknown access path quistion"
+  }
+]

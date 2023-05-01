@@ -1,0 +1,232 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <open-graph-scraper> [1,1] 0.retry:number",
+      "unknownAccessPathQuestion": "Is this a call of the open-graph-scraper method?"
+    },
+    "semanticPatchId": "2258",
+    "breakingChangeId": "826",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2258",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-30T05:45:00.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "retry",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "{ limit: $1.retry }",
+            "propName": "retry",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "detectionPattern": "call <open-graph-scraper> [1,1] 0.retry:number",
+      "unknownAccessPathQuestion": "Is this a call of the open-graph-scraper method?"
+    },
+    "semanticPatchId": "2258",
+    "breakingChangeId": "826",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2258",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-30T06:01:42.000Z",
+      "objectModifiers": {
+        "$1": [
+          {
+            "propName": "retry",
+            "operation": "REMOVE_PROP"
+          },
+          {
+            "value": "{ limit: oldRetryValue }",
+            "propName": "retry",
+            "operation": "ADD_PROP"
+          }
+        ]
+      },
+      "detectionPattern": "call <open-graph-scraper> [1,1] 0.retry:{number,string}",
+      "suggestedFixDescription": "This means that you can no longer declare the retry option without wrapping the value in an object.\nFor instance would the call:\n  ogs({\n    url: 'https://github.com/jshemas/openGraphScraper',\n    retry: 5\n  }).then(...)\nbecome the new call:\n  ogs({\n    url: 'https://github.com/jshemas/openGraphScraper',\n    retry: {limit: 5}\n  }).then(...)",
+      "unknownAccessPathQuestion": "Is this a call of the open-graph-scraper method?"
+    },
+    "semanticPatchId": "2258",
+    "breakingChangeId": "826",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "2258",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-11-30T11:12:09.000Z",
+      "detectionPattern": "call <open-graph-scraper> [1,1] 0.retry:{number,string}",
+      "suggestedFixDescription": "This means that you can no longer declare the retry option without wrapping the value in an object.\nFor instance would the call:\n  ogs({\n    url: 'https://github.com/jshemas/openGraphScraper',\n    retry: 5\n  }).then(...)\nbecome the new call:\n  ogs({\n    url: 'https://github.com/jshemas/openGraphScraper',\n    retry: {limit: 5}\n  }).then(...)",
+      "unknownAccessPathQuestion": "Is this a call of the open-graph-scraper method?"
+    },
+    "semanticPatchId": "2258",
+    "breakingChangeId": "826",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <open-graph-scraper> [1,1] 0.timeout:number",
+      "suggestedFixDescription": "This means that you can no longer declare the timeout option without wrapping the value in an object.\nFor instance would the call:\n\togs({\n  url: 'https://github.com/jshemas/openGraphScraper',\n  timeout: 5000\n});\nbecome the new call:\nogs({\n  url: 'https://github.com/jshemas/openGraphScraper',\n  timeout: {request: 5000}\n});",
+      "unknownAccessPathQuestion": "Is this a call of open-graph-scraper?"
+    },
+    "semanticPatchId": "2259",
+    "breakingChangeId": "827",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "2258",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-11-30T11:12:09.000Z",
+      "detectionPattern": "call <open-graph-scraper> [1,2] 0.retry:{number,string}",
+      "suggestedFixDescription": "This means that you can no longer declare the retry option without wrapping the value in an object.\nFor instance would the call:\n  ogs({\n    url: 'https://github.com/jshemas/openGraphScraper',\n    retry: 5\n  }).then(...)\nbecome the new call:\n  ogs({\n    url: 'https://github.com/jshemas/openGraphScraper',\n    retry: {limit: 5}\n  }).then(...)",
+      "unknownAccessPathQuestion": "Is this a call of the open-graph-scraper method?"
+    },
+    "semanticPatchId": "2258",
+    "breakingChangeId": "826",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2259",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-11-30T11:16:31.000Z",
+      "detectionPattern": "call <open-graph-scraper> [1,2] 0.timeout:number",
+      "suggestedFixDescription": "This means that you can no longer declare the timeout option without wrapping the value in an object.\nFor instance would the call:\n\togs({\n  url: 'https://github.com/jshemas/openGraphScraper',\n  timeout: 5000\n});\nbecome the new call:\nogs({\n  url: 'https://github.com/jshemas/openGraphScraper',\n  timeout: {request: 5000}\n});",
+      "unknownAccessPathQuestion": "Is this a call of open-graph-scraper?"
+    },
+    "semanticPatchId": "2259",
+    "breakingChangeId": "827",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "$callee($1).then(({ error, result, response }) => {($2)(error, result, response)}); ",
+        "replacements": []
+      },
+      "detectionPattern": "call <open-graph-scraper> [2,2]",
+      "unknownAccessPathQuestion": "is this a call of the defualt open-graph-scraper method?"
+    },
+    "semanticPatchId": "2260",
+    "breakingChangeId": "828",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "write <open-graph-scraper>.0.encoding",
+      "unknownAccessPathQuestion": "Is this a call of the default open-graph-scraper method with the encoding option?"
+    },
+    "semanticPatchId": "2261",
+    "breakingChangeId": "831",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "2261",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-12-01T06:41:48.000Z",
+      "detectionPattern": "call <open-graph-scraper> 0.encoding:{string,object}",
+      "suggestedFixDescription": "The encoding option was previously deprecated, still able to be parsed but it wasn’t used. \nNow it can no longer be parsed to the open-graph-scraper method. \nSince it wasn’t used you should be able to remove this option without losing functionality.",
+      "unknownAccessPathQuestion": "Is this a call of the default open-graph-scraper method with the encoding option?"
+    },
+    "semanticPatchId": "2261",
+    "breakingChangeId": "831",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "2258",
+      "comment": "minors in sfd",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-11-30T11:39:22.000Z",
+      "detectionPattern": "call <open-graph-scraper> [1,2] 0.retry:{number,string}",
+      "suggestedFixDescription": "This means that you can no longer declare the retry option without wrapping the value in an object.\nFor instance the call:\n  $callee({\n    url: 'https://github.com/jshemas/openGraphScraper',\n    retry: 5\n  }).then(...)\nshould be changed to:\n  $callee({\n    url: 'https://github.com/jshemas/openGraphScraper',\n    retry: {limit: 5}\n  }).then(...)",
+      "unknownAccessPathQuestion": "Is this a call of the open-graph-scraper method?"
+    },
+    "semanticPatchId": "2258",
+    "breakingChangeId": "826",
+    "enabled": true,
+    "comment": "minors in sfd"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2259",
+      "comment": "minors in sfd ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-11-30T11:39:30.000Z",
+      "detectionPattern": "call <open-graph-scraper> [1,2] 0.timeout:number",
+      "suggestedFixDescription": "This change means that you can no longer declare the timeout option without wrapping the value in an object.\nFor instance, the call:\n\t$callee({\n  url: 'https://github.com/jshemas/openGraphScraper',\n  timeout: 5000\n});\nshould be changed to:\n$callee({\n  url: 'https://github.com/jshemas/openGraphScraper',\n  timeout: {request: 5000}\n});",
+      "unknownAccessPathQuestion": "Is this a call of open-graph-scraper?"
+    },
+    "semanticPatchId": "2259",
+    "breakingChangeId": "827",
+    "enabled": true,
+    "comment": "minors in sfd "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "2261",
+      "comment": "Minors in sfd",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-12-01T06:48:49.000Z",
+      "detectionPattern": "call <open-graph-scraper> 0.encoding:{string,object}",
+      "suggestedFixDescription": "The encoding option was previously deprecated - you could still pass it, but it had no effect. \nNow it can no longer be passed to the open-graph-scraper method. \nSince it wasn’t used previously, it should be possible to remove this option without affecting the behavior of open-graph-scraper.",
+      "unknownAccessPathQuestion": "Is this a call of the default open-graph-scraper method with the encoding option?"
+    },
+    "semanticPatchId": "2261",
+    "breakingChangeId": "831",
+    "enabled": true,
+    "comment": "Minors in sfd"
+  }
+]

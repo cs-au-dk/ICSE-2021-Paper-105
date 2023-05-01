@@ -1,0 +1,145 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "database default",
+      "primaryTemplate": {
+        "pattern": "file-type",
+        "replacements": []
+      },
+      "detectionPattern": "import <filetype/browser>"
+    },
+    "semanticPatchId": "1431",
+    "breakingChangeId": "291",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1431",
+      "comment": "Added dash in file-type",
+      "version": 0,
+      "creationDate": "2022-03-23T12:45:40.000Z",
+      "primaryTemplate": {
+        "pattern": "file-type",
+        "replacements": []
+      },
+      "detectionPattern": "import <file-type/browser>"
+    },
+    "semanticPatchId": "1431",
+    "breakingChangeId": "291",
+    "enabled": true,
+    "comment": "Added dash in file-type"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1431",
+      "comment": "removed <> around import path",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-23T12:46:44.000Z",
+      "primaryTemplate": {
+        "pattern": "file-type",
+        "replacements": []
+      },
+      "detectionPattern": "import file-type/browser"
+    },
+    "semanticPatchId": "1431",
+    "breakingChangeId": "291",
+    "enabled": true,
+    "comment": "removed <> around import path"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "database default",
+      "primaryTemplate": {
+        "pattern": "<file-type>.$prop[fromBuffer = > fileTypeFromBuffer, fromFile => fileTypeFromFile, fromStream => fileTypeFromStream, fromTokenizer => fileTypeFromTokenizer, stream => fileTypeStream, extensions => supportedExtensions, mimeTypes => supportedMimeTypes]",
+        "replacements": []
+      },
+      "detectionPattern": "read <file-type>.{fromBuffer, fromFile, fromStream, fromTokenizer, stream, extensions, mimeTypes}"
+    },
+    "semanticPatchId": "1432",
+    "breakingChangeId": "292",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1432",
+      "comment": "only doing fromBuffer",
+      "version": 0,
+      "creationDate": "2022-03-23T12:59:35.000Z",
+      "primaryTemplate": {
+        "pattern": "<file-type>.fileTypeFromBuffer",
+        "replacements": []
+      },
+      "detectionPattern": "read <file-type>.fromBuffer"
+    },
+    "semanticPatchId": "1432",
+    "breakingChangeId": "292",
+    "enabled": true,
+    "comment": "only doing fromBuffer"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1432",
+      "comment": "doing everything again",
+      "version": 1,
+      "creationDate": "2022-03-23T13:42:57.000Z",
+      "primaryTemplate": {
+        "pattern": "<file-type>.$prop[fromBuffer => fileTypeFromBuffer, fromFile => fileTypeFromFile, fromStream => fileTypeFromStream, fromTokenizer => fileTypeFromTokenizer, stream => fileTypeStream, extensions => supportedExtensions, mimeTypes => supportedMimeTypes]",
+        "replacements": []
+      },
+      "detectionPattern": "read <file-type>.{fromBuffer,fromFile,fromStream,fromTokenizer,stream,extensions,mimeTypes}"
+    },
+    "semanticPatchId": "1432",
+    "breakingChangeId": "292",
+    "enabled": true,
+    "comment": "doing everything again"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1431",
+      "comment": "Added unknown access path quistion",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-23T12:49:42.000Z",
+      "primaryTemplate": {
+        "pattern": "file-type",
+        "replacements": []
+      },
+      "detectionPattern": "import file-type/browser",
+      "unknownAccessPathQuestion": "Is the import for file-type?"
+    },
+    "semanticPatchId": "1431",
+    "breakingChangeId": "291",
+    "enabled": true,
+    "comment": "Added unknown access path quistion"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1432",
+      "comment": "Added unknown access path quistion",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-23T13:47:26.000Z",
+      "primaryTemplate": {
+        "pattern": "<file-type>.$prop[fromBuffer => fileTypeFromBuffer, fromFile => fileTypeFromFile, fromStream => fileTypeFromStream, fromTokenizer => fileTypeFromTokenizer, stream => fileTypeStream, extensions => supportedExtensions, mimeTypes => supportedMimeTypes]",
+        "replacements": []
+      },
+      "detectionPattern": "read <file-type>.{fromBuffer,fromFile,fromStream,fromTokenizer,stream,extensions,mimeTypes}",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1432",
+    "breakingChangeId": "292",
+    "enabled": true,
+    "comment": "Added unknown access path quistion"
+  }
+]

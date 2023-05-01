@@ -1,0 +1,715 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <history>.{createMemoryHistory,createHashHistory}.{push,replace,createHref,block}",
+      "unknownAccessPathQuestion": "Is $prop a function call on either a createMemoryHistory or createHashHistory object from the history package?"
+    },
+    "semanticPatchId": "1615",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1615",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-06T05:55:23.000Z",
+      "detectionPattern": "call <history>**.{push,replace,createHref,block}",
+      "unknownAccessPathQuestion": "Is $prop a function call on either a createMemoryHistory or createHashHistory object from the history package?"
+    },
+    "semanticPatchId": "1615",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1615",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-07-06T06:21:07.000Z",
+      "detectionPattern": "call <history>**.{push,replace,createHref,block}",
+      "suggestedFixDescription": "Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead.",
+      "unknownAccessPathQuestion": "Is $prop a function call on either a createMemoryHistory or createHashHistory object from the history package?"
+    },
+    "semanticPatchId": "1615",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <history>**.getUserConfirmation",
+      "unknownAccessPathQuestion": "Is this using the getUserConfirmation property of the history package?"
+    },
+    "semanticPatchId": "1616",
+    "breakingChangeId": "488",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1616",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-06T09:29:09.000Z",
+      "detectionPattern": "read <history>.**",
+      "suggestedFixDescription": "You can no longer use the getUserConfirmation property to set the default message for the history to display. Instead we recommend using either [window.confirmation](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) or something similar.",
+      "unknownAccessPathQuestion": "Is this using the getUserConfirmation property of the history package?"
+    },
+    "semanticPatchId": "1616",
+    "breakingChangeId": "488",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1616",
+      "comment": "Initial",
+      "version": 1,
+      "creationDate": "2022-07-06T09:47:55.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createHashHistory} [1,1]",
+      "suggestedFixDescription": "You can no longer use the getUserConfirmation property to set the default message for the history to display. Instead we recommend using either [window.confirmation](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) or something similar.",
+      "unknownAccessPathQuestion": "Is this using the getUserConfirmation property of the history package?"
+    },
+    "semanticPatchId": "1616",
+    "breakingChangeId": "488",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1616",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-06T10:12:58.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createHashHistory} [1,1]",
+      "suggestedFixDescription": "This change is breaking if you use the getUserConfirmation property in your constructor call. You can no longer use the getUserConfirmation property to set the default message for the history to display. Instead we recommend using either [window.confirmation](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) or something similar.",
+      "unknownAccessPathQuestion": "Is this using the getUserConfirmation property of the history package?"
+    },
+    "semanticPatchId": "1616",
+    "breakingChangeId": "488",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1616",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-06T10:14:16.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createHashHistory} [1,1]",
+      "suggestedFixDescription": "This change is breaking if you use the `getUserConfirmation` property in your constructor call. You can no longer use the getUserConfirmation property to set the default message for the history to display. Instead we recommend using either [window.confirmation](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) or something similar. See an example of how to use `window.confirmation` here: https://github.com/remix-run/history/blob/105b64a99359c4a438abbc8e6735fa277b5640f5/docs/Blocking.md#blocking-transitions",
+      "unknownAccessPathQuestion": "Is this using the getUserConfirmation property of the history package?"
+    },
+    "semanticPatchId": "1616",
+    "breakingChangeId": "488",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1616",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-07-06T10:19:43.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createHashHistory} [1,1] 0.getUserConfirmation:function",
+      "suggestedFixDescription": "This change is breaking if you use the `getUserConfirmation` property in your constructor call. You can no longer use the getUserConfirmation property to set the default message for the history to display. Instead we recommend using either [window.confirmation](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) or something similar. See an example of how to use `window.confirmation` here: https://github.com/remix-run/history/blob/105b64a99359c4a438abbc8e6735fa277b5640f5/docs/Blocking.md#blocking-transitions",
+      "unknownAccessPathQuestion": "Is this using the getUserConfirmation property of the history package?"
+    },
+    "semanticPatchId": "1616",
+    "breakingChangeId": "488",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1616",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-07-06T14:29:53.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createHashHistory} [1,1] 0.getUserConfirmation:function",
+      "suggestedFixDescription": "You can no longer use the getUserConfirmation property to set the default message for the history to display. Instead we recommend using either window.confirmation (https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) or something similar. See an example of how to use `window.confirmation` here: https://github.com/remix-run/history/blob/105b64a99359c4a438abbc8e6735fa277b5640f5/docs/Blocking.md#blocking-transitions",
+      "unknownAccessPathQuestion": "Is this using the getUserConfirmation property of the history package?"
+    },
+    "semanticPatchId": "1616",
+    "breakingChangeId": "488",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <history>.createMemoryHistory [1,2]",
+      "suggestedFixDescription": "Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead.",
+      "unknownAccessPathQuestion": "Is this a constructor call to createMemoryHistory from history?"
+    },
+    "semanticPatchId": "1617",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1617",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-06T14:46:56.000Z",
+      "detectionPattern": "call <history>.createMemoryHistory [1,1] 0.initialEntries:array",
+      "suggestedFixDescription": "Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead.",
+      "unknownAccessPathQuestion": "Is this a constructor call to createMemoryHistory from history?"
+    },
+    "semanticPatchId": "1617",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <history>.{createBrowserHistory,createMemoryHistory} [1,1] 0.keyLength:number",
+      "unknownAccessPathQuestion": "Is this a constructor call with the keyLength property set?"
+    },
+    "semanticPatchId": "1618",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1618",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-06T15:01:30.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createMemoryHistory} [1,1] 0.keyLength:number",
+      "suggestedFixDescription": "The keyLength property has been removed, meaning you can no longer specify the length of the location.key. This might require you to rewrite other places, if the length of the key was used, the new default is 8.",
+      "unknownAccessPathQuestion": "Is this a constructor call with the keyLength property set?"
+    },
+    "semanticPatchId": "1618",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <history>.createHashHistory [1,1] 0.hashType:string",
+      "suggestedFixDescription": "The hashType property has been removed, meaning you can no longer specify the hash formating for createHashHistory. By default createHashHistory uses a leading slash in hash-based URLs. This means that history.push('/home'); would result in window.location.hash to have the value #/home",
+      "unknownAccessPathQuestion": "Is this a createHashHistory constructor call with the hashType property set?"
+    },
+    "semanticPatchId": "1619",
+    "breakingChangeId": "490",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "primaryTemplate": {
+        "pattern": "<history>.#1",
+        "replacements": []
+      },
+      "detectionPattern": "importD history/{createBrowserHistory,createHashHistory,createMemoryHistory}",
+      "unknownAccessPathQuestion": "Is this an import of a sub module from the history package?"
+    },
+    "semanticPatchId": "1620",
+    "breakingChangeId": "491",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1615",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-06T06:26:02.000Z",
+      "detectionPattern": "call <history>**.{push,replace,createHref,block}",
+      "suggestedFixDescription": "This is only breaking if you are using a relative path. Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead.",
+      "unknownAccessPathQuestion": "Is $prop a function call on either a createMemoryHistory or createHashHistory object from the history package?"
+    },
+    "semanticPatchId": "1615",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <history>.createMemoryHistory.canGo",
+      "unknownAccessPathQuestion": "Is this a call to canGo on an createMemoryHistory object from history?"
+    },
+    "semanticPatchId": "1623",
+    "breakingChangeId": "494",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1623",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-11T06:39:20.000Z",
+      "detectionPattern": "call <history>**.canGo",
+      "suggestedFixDescription": "Instead of history.canGo(n) we recommend you use something like history.index + n > 0 && history.index + n < history.entries.length, which would give the exact same result.",
+      "unknownAccessPathQuestion": "Is this a call to canGo on an createMemoryHistory object from history?"
+    },
+    "semanticPatchId": "1623",
+    "breakingChangeId": "494",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "call <history>**.{goBack,goForward}",
+      "suggestedFixDescription": "{goBack => back, goForward => forward}",
+      "unknownAccessPathQuestion": "Is this either a call to goBack or goForward on a history object?"
+    },
+    "semanticPatchId": "1624",
+    "breakingChangeId": "495",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1624",
+      "comment": "Initial ",
+      "version": 0,
+      "creationDate": "2022-07-11T16:45:34.000Z",
+      "primaryTemplate": {
+        "pattern": "$base.$prop[goBack => back, goForward => forward]()",
+        "replacements": []
+      },
+      "detectionPattern": "call <history>**.{goBack,goForward}",
+      "unknownAccessPathQuestion": "Is this either a call to goBack or goForward on a history object?"
+    },
+    "semanticPatchId": "1624",
+    "breakingChangeId": "495",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <history>**.length",
+      "suggestedFixDescription": "The history.length value was removed from all the history objects. If this value was used in a test you would have to remove this test.",
+      "unknownAccessPathQuestion": "Are you reading the history.length value here?"
+    },
+    "semanticPatchId": "1625",
+    "breakingChangeId": "496",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1623",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-07-11T06:43:06.000Z",
+      "detectionPattern": "call <history>**.canGo",
+      "suggestedFixDescription": "Instead of history.canGo(n) we recommend you catch the potential error thrown when using go() / forward() / go(), and then continue as if canGo(n) had returned false.",
+      "unknownAccessPathQuestion": "Is this a call to canGo on an createMemoryHistory object from history?"
+    },
+    "semanticPatchId": "1623",
+    "breakingChangeId": "494",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1623",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-13T07:12:45.000Z",
+      "detectionPattern": "call <history>**.canGo",
+      "suggestedFixDescription": "Instead of history.canGo(n) we recommend you make sure the history.index has changed after go(n) / back() / forward() function. ",
+      "unknownAccessPathQuestion": "Is this a call to canGo on an createMemoryHistory object from history?"
+    },
+    "semanticPatchId": "1623",
+    "breakingChangeId": "494",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <history>**.entries",
+      "suggestedFixDescription": "As a result of this you can no longer access an entry with history.entries[n]. Instead you can use something like history.go(n - history.index) followed by history.location.",
+      "unknownAccessPathQuestion": "Is the entries value a part of a history object?"
+    },
+    "semanticPatchId": "1626",
+    "breakingChangeId": "497",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1623",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-13T07:21:40.000Z",
+      "detectionPattern": "call <history>**.canGo",
+      "suggestedFixDescription": "Instead of history.canGo(n) we recommend you make sure the history.index has changed after go(n) / back() / forward() function using the history.index value. ",
+      "unknownAccessPathQuestion": "Is this a call to canGo on an createMemoryHistory object from history?"
+    },
+    "semanticPatchId": "1623",
+    "breakingChangeId": "494",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1623",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-07-14T08:24:38.000Z",
+      "detectionPattern": "call <history>**.canGo",
+      "suggestedFixDescription": "Instead of history.canGo(n) we recommend you make sure the history.index has changed after the go(n) / back() / forward() function using the history.index value. ",
+      "unknownAccessPathQuestion": "Is this a call to canGo on an createMemoryHistory object from history?"
+    },
+    "semanticPatchId": "1623",
+    "breakingChangeId": "494",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1625",
+      "comment": "minor in suggested fix",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-07-12T09:57:50.000Z",
+      "detectionPattern": "read <history>**.length",
+      "suggestedFixDescription": "The history.length value was removed from all the history objects. Unfortunately, there is no way to get this value anymore. If this value was used in a test you would have to rewrite/remove the test.",
+      "unknownAccessPathQuestion": "Are you reading the history.length value here?"
+    },
+    "semanticPatchId": "1625",
+    "breakingChangeId": "496",
+    "enabled": true,
+    "comment": "minor in suggested fix"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1615",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-08T09:41:24.000Z",
+      "detectionPattern": "call <history>.{createMemoryHistory,createHashHistory}**.{push,replace,createHref,block}",
+      "suggestedFixDescription": "This is only breaking if you are using a relative path. Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead.",
+      "unknownAccessPathQuestion": "Is $prop a function call on either a createMemoryHistory or createHashHistory object from the history package?"
+    },
+    "semanticPatchId": "1615",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1623",
+      "comment": "Provided example for suggest fix",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-07-14T08:24:54.000Z",
+      "detectionPattern": "call <history>**.canGo",
+      "suggestedFixDescription": "Instead of history.canGo($1) we recommend you make sure the history.index has changed after the go(n) / back() / forward() function using the history.index value. This can be done by changing $callee($1) to const x === $base.index followed by $base.go($1) followed by the check that $base.index !== x.",
+      "unknownAccessPathQuestion": "Is this a call to canGo on an createMemoryHistory object from history?"
+    },
+    "semanticPatchId": "1623",
+    "breakingChangeId": "494",
+    "enabled": true,
+    "comment": "Provided example for suggest fix"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1618",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-07-06T15:03:32.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createMemoryHistory} [1,1] 0.keyLength:number",
+      "suggestedFixDescription": "The keyLength property has been removed, meaning you can no longer specify the length of the location.key. This might require you to rewrite other places, if the length of the key was used, the new default is 6.",
+      "unknownAccessPathQuestion": "Is this a constructor call with the keyLength property set?"
+    },
+    "semanticPatchId": "1618",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "read <history>.{createBrowserHistory,createMemoryHistory}.location.key.length",
+      "unknownAccessPathQuestion": "Is this reading the value of the length of the key of a location?"
+    },
+    "semanticPatchId": "1627",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1618",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-18T09:13:34.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createMemoryHistory} [1,1] 0.keyLength:number",
+      "suggestedFixDescription": "The keyLength property has been removed, meaning you can no longer specify the length of the location.key. This might require you to rewrite other places, if the length of the key was used, the new default is 8.",
+      "unknownAccessPathQuestion": "Is this a constructor call with the keyLength property set?"
+    },
+    "semanticPatchId": "1618",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1627",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-07-18T09:17:35.000Z",
+      "detectionPattern": "read <history>.{createBrowserHistory,createMemoryHistory}().location.key.length",
+      "suggestedFixDescription": "The keyLength property of the createBrowserHistory and the createMemoryHistory constructors have been removed, and the $base.$prop will now always be 6.",
+      "unknownAccessPathQuestion": "Is this reading the value of the length of the key of a location?"
+    },
+    "semanticPatchId": "1627",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1627",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-07-18T09:27:45.000Z",
+      "detectionPattern": "read <history>.{createBrowserHistory,createMemoryHistory}().location.key.length",
+      "suggestedFixDescription": "The keyLength property of the createBrowserHistory and the createMemoryHistory constructors have been removed, and the $base.$prop will now always be 8.",
+      "unknownAccessPathQuestion": "Is this reading the value of the length of the key of a location?"
+    },
+    "semanticPatchId": "1627",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1618",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-18T09:20:50.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createMemoryHistory} [1,1] 0.keyLength:number",
+      "suggestedFixDescription": "The keyLength property has been removed, meaning you can no longer specify the length of the location.key. The new default is 8.If you access history.location.key.length anywhere, these locations might need to be changed.",
+      "unknownAccessPathQuestion": "Is this a constructor call with the keyLength property set?"
+    },
+    "semanticPatchId": "1618",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1626",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-07-13T07:47:13.000Z",
+      "detectionPattern": "read <history>**.entries",
+      "suggestedFixDescription": "As a result of this you can no longer access an entry with $base.$prop [n]. Instead you can use something like $base.go(n - $base.index) followed by $base.location.",
+      "unknownAccessPathQuestion": "Is the entries value a part of a history object?"
+    },
+    "semanticPatchId": "1626",
+    "breakingChangeId": "497",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1615",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-07-17T12:03:11.000Z",
+      "detectionPattern": "call <history>.{createMemoryHistory,createHashHistory}**.{push,replace,createHref,block}",
+      "suggestedFixDescription": "This is only breaking if $1 is a relative path. Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead.",
+      "unknownAccessPathQuestion": "Is $prop a function call on either a createMemoryHistory or createHashHistory object from the history package?"
+    },
+    "semanticPatchId": "1615",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1617",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-08T09:41:52.000Z",
+      "detectionPattern": "call <history>.createMemoryHistory [1,1] 0.initialEntries:array",
+      "suggestedFixDescription": "This is only breaking if you are using a relative path. Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead.",
+      "unknownAccessPathQuestion": "Is this a constructor call to createMemoryHistory from history?"
+    },
+    "semanticPatchId": "1617",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1627",
+      "comment": "minor in suggested fix",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-07-18T09:28:22.000Z",
+      "detectionPattern": "read <history>.{createBrowserHistory,createMemoryHistory}().location.key.length",
+      "suggestedFixDescription": "The keyLength property of the createBrowserHistory and the createMemoryHistory constructors has been removed, and the $base.$prop will now always be 8.",
+      "unknownAccessPathQuestion": "Is this reading the value of the length of the key of a location?"
+    },
+    "semanticPatchId": "1627",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "minor in suggested fix"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1618",
+      "comment": "minor in suggested fix",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-07-18T09:40:25.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createMemoryHistory} [1,1] 0.keyLength:number",
+      "suggestedFixDescription": "The keyLength property has been removed, meaning you can no longer specify the length of the location.key. The new default is 8. If you access history.location.key.length anywhere, these locations may need to be changed.",
+      "unknownAccessPathQuestion": "Is this a constructor call with the keyLength property set?"
+    },
+    "semanticPatchId": "1618",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "minor in suggested fix"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1615",
+      "comment": "Fixed typo in suggested fix",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-07-18T09:52:08.000Z",
+      "detectionPattern": "call <history>.{createMemoryHistory,createHashHistory}**.{push,replace,createHref,block}",
+      "suggestedFixDescription": "This is only breaking if $1 is a relative path. Relative paths are no longer supported by the hash/memory history, hence we recommend using the entire path name instead.",
+      "unknownAccessPathQuestion": "Is $prop a function call on either a createMemoryHistory or createHashHistory object from the history package?"
+    },
+    "semanticPatchId": "1615",
+    "breakingChangeId": "487",
+    "enabled": true,
+    "comment": "Fixed typo in suggested fix"
+  },
+  {
+    "version": 7,
+    "semanticPatch": {
+      "id": "1616",
+      "comment": "Changed window.confirmation to window.confirm in suggested fix description.",
+      "enabled": true,
+      "version": 6,
+      "creationDate": "2022-07-06T14:33:52.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createHashHistory} [1,1] 0.getUserConfirmation:function",
+      "suggestedFixDescription": "You can no longer use the getUserConfirmation property to set the default message for the history to display. Instead we recommend using either window.confirm (https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) or something similar. See an example of how to use `window.confirm` here: https://github.com/remix-run/history/blob/105b64a99359c4a438abbc8e6735fa277b5640f5/docs/Blocking.md#blocking-transitions",
+      "unknownAccessPathQuestion": "Is this using the getUserConfirmation property of the history package?"
+    },
+    "semanticPatchId": "1616",
+    "breakingChangeId": "488",
+    "enabled": true,
+    "comment": "Changed window.confirmation to window.confirm in suggested fix description."
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1627",
+      "comment": "minors in suggested fix",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-07-19T10:26:56.000Z",
+      "detectionPattern": "read <history>.{createBrowserHistory,createMemoryHistory}().location.key.length",
+      "suggestedFixDescription": "The keyLength property of the createBrowserHistory and the createMemoryHistory constructors have been removed, and the $base.$prop will now always be 6.",
+      "unknownAccessPathQuestion": "Is this reading the value of the length of the key of a location?"
+    },
+    "semanticPatchId": "1627",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "minors in suggested fix"
+  },
+  {
+    "version": 6,
+    "semanticPatch": {
+      "id": "1618",
+      "comment": "minor in suggested fix ",
+      "enabled": true,
+      "version": 5,
+      "creationDate": "2022-07-19T10:27:41.000Z",
+      "detectionPattern": "call <history>.{createBrowserHistory,createMemoryHistory} [1,1] 0.keyLength:number",
+      "suggestedFixDescription": "The keyLength property has been removed, meaning you can no longer specify the length of the location.key. The new default is 6. If you access history.location.key.length anywhere, these locations may need to be changed.",
+      "unknownAccessPathQuestion": "Is this a constructor call with the keyLength property set?"
+    },
+    "semanticPatchId": "1618",
+    "breakingChangeId": "489",
+    "enabled": true,
+    "comment": "minor in suggested fix "
+  }
+]

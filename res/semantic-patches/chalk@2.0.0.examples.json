@@ -1,0 +1,9 @@
+[
+  {
+    "id": "8",
+    "breakingChangeId": "18",
+    "title": "Chalk 2.0.0: Using chalk.hasColor",
+    "description": "Usages of chalk.hasColor in v2 of chalk should be updated to use the has-ansi package instead",
+    "codeExample": "const chalk = require('chalk');\nchalk.hasColor(\"x\");"
+  }
+]

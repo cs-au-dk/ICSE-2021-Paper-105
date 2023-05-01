@@ -1,0 +1,15 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "init",
+      "enabled": true,
+      "detectionPattern": "call <object-hash>.{hash,sha1,keys,MD5,keysMD5,writeToStream}",
+      "unknownAccessPathQuestion": "Is this a call to a function from object-hash?"
+    },
+    "semanticPatchId": "1568",
+    "breakingChangeId": "423",
+    "enabled": true,
+    "comment": "init"
+  }
+]

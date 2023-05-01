@@ -1,0 +1,153 @@
+[
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1447",
+      "comment": "Improve suggested fix description",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-26T10:45:10.000Z",
+      "detectionPattern": "call <file-type>?**",
+      "suggestedFixDescription": "The function now returns a promise. Use 'await' if in an async context or handle the result in a .then method call."
+    },
+    "semanticPatchId": "1447",
+    "breakingChangeId": "311",
+    "enabled": true,
+    "comment": "Improve suggested fix description"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1447",
+      "comment": "Changed the detection pattern",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-27T09:04:27.000Z",
+      "detectionPattern": "call <file-type>.{fromBuffer,fromFile,fromStream,fromTokenizer,stream}",
+      "suggestedFixDescription": "The function now returns a promise. Use 'await' if in an async context or handle the result in a .then method call."
+    },
+    "semanticPatchId": "1447",
+    "breakingChangeId": "311",
+    "enabled": true,
+    "comment": "Changed the detection pattern"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "database default",
+      "detectionPattern": "call <file-type>?**",
+      "suggestedFixDescription": "Rewrite call to an async call"
+    },
+    "semanticPatchId": "1447",
+    "breakingChangeId": "311",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "database default",
+      "primaryTemplate": {
+        "pattern": "<file-type>.fromBuffer",
+        "replacements": []
+      },
+      "detectionPattern": "call <file-type>"
+    },
+    "semanticPatchId": "1448",
+    "breakingChangeId": "311",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1448",
+      "comment": "Added arguments to call",
+      "version": 0,
+      "creationDate": "2022-03-26T10:47:18.000Z",
+      "primaryTemplate": {
+        "pattern": "<file-type>.fromBuffer($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <file-type>"
+    },
+    "semanticPatchId": "1448",
+    "breakingChangeId": "311",
+    "enabled": true,
+    "comment": "Added arguments to call"
+  },
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "database default",
+      "extraQuestion": "Is file-type used in a browser?",
+      "primaryTemplate": {
+        "pattern": "file-type/browser",
+        "replacements": []
+      },
+      "detectionPattern": "import file-type"
+    },
+    "semanticPatchId": "1439",
+    "breakingChangeId": "300",
+    "enabled": true,
+    "comment": "database default"
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1439",
+      "comment": "Added unknown access path quistion",
+      "enabled": true,
+      "version": 0,
+      "creationDate": "2022-03-23T14:30:10.000Z",
+      "extraQuestion": "Is file-type used in a browser?",
+      "primaryTemplate": {
+        "pattern": "file-type/browser",
+        "replacements": []
+      },
+      "detectionPattern": "import file-type",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1439",
+    "breakingChangeId": "300",
+    "enabled": true,
+    "comment": "Added unknown access path quistion"
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1448",
+      "comment": "Added unknown access path quistion",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-03-26T10:48:05.000Z",
+      "primaryTemplate": {
+        "pattern": "<file-type>.fromBuffer($args)",
+        "replacements": []
+      },
+      "detectionPattern": "call <file-type>",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1448",
+    "breakingChangeId": "311",
+    "enabled": true,
+    "comment": "Added unknown access path quistion"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1447",
+      "comment": "Added unknown access path quistion",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-03-31T09:06:11.000Z",
+      "detectionPattern": "call <file-type>.{fromBuffer,fromFile,fromStream,fromTokenizer,stream}",
+      "suggestedFixDescription": "The function now returns a promise. Use 'await' if in an async context or handle the result in a .then method call.",
+      "unknownAccessPathQuestion": "Is the called function from File-type?"
+    },
+    "semanticPatchId": "1447",
+    "breakingChangeId": "311",
+    "enabled": true,
+    "comment": "Added unknown access path quistion"
+  }
+]

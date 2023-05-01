@@ -1,0 +1,110 @@
+[
+  {
+    "version": 0,
+    "semanticPatch": {
+      "comment": "Initial",
+      "detectionPattern": "importD InView",
+      "unknownAccessPathQuestion": "Is this an import from react-intersection-observer?"
+    },
+    "semanticPatchId": "1559",
+    "breakingChangeId": "411",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 4,
+    "semanticPatch": {
+      "id": "1559",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 3,
+      "creationDate": "2022-05-24T12:04:32.000Z",
+      "detectionPattern": "importD react-intersection-observer",
+      "unknownAccessPathQuestion": "Is this an import from react-intersection-observer?"
+    },
+    "semanticPatchId": "1559",
+    "breakingChangeId": "411",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 1,
+    "semanticPatch": {
+      "id": "1559",
+      "comment": "Initial ",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-24T10:13:30.000Z",
+      "primaryTemplate": {
+        "pattern": "<react-intersection-observer>.#1",
+        "replacements": []
+      },
+      "detectionPattern": "importD react-intersection-observer",
+      "unknownAccessPathQuestion": "Is this an import from react-intersection-observer?"
+    },
+    "semanticPatchId": "1559",
+    "breakingChangeId": "411",
+    "enabled": true,
+    "comment": "Initial "
+  },
+  {
+    "version": 2,
+    "semanticPatch": {
+      "id": "1559",
+      "comment": "Added code templade",
+      "enabled": true,
+      "version": 1,
+      "creationDate": "2022-05-24T10:13:30.000Z",
+      "primaryTemplate": {
+        "pattern": "<react-intersection-observer>.InView",
+        "replacements": []
+      },
+      "detectionPattern": "importD react-intersection-observer",
+      "unknownAccessPathQuestion": "Is this an import from react-intersection-observer?"
+    },
+    "semanticPatchId": "1559",
+    "breakingChangeId": "411",
+    "enabled": true,
+    "comment": "Added code templade"
+  },
+  {
+    "version": 3,
+    "semanticPatch": {
+      "id": "1559",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 2,
+      "creationDate": "2022-05-24T10:24:26.000Z",
+      "primaryTemplate": {
+        "pattern": "",
+        "replacements": []
+      },
+      "detectionPattern": "importD react-intersection-observer",
+      "unknownAccessPathQuestion": "Is this an import from react-intersection-observer?"
+    },
+    "semanticPatchId": "1559",
+    "breakingChangeId": "411",
+    "enabled": true,
+    "comment": "Initial"
+  },
+  {
+    "version": 5,
+    "semanticPatch": {
+      "id": "1559",
+      "comment": "Initial",
+      "enabled": true,
+      "version": 4,
+      "creationDate": "2022-05-24T12:05:02.000Z",
+      "primaryTemplate": {
+        "pattern": "<react-intersection-observer>.InView",
+        "replacements": []
+      },
+      "detectionPattern": "importD react-intersection-observer",
+      "unknownAccessPathQuestion": "Is this an import from react-intersection-observer?"
+    },
+    "semanticPatchId": "1559",
+    "breakingChangeId": "411",
+    "enabled": true,
+    "comment": "Initial"
+  }
+]

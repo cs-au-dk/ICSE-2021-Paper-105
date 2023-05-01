@@ -1,0 +1,24 @@
+[
+  {
+    "id": "434",
+    "packageVersion": "8.0.0",
+    "packageName": "uuid",
+    "description": "For native ECMAScript Module (ESM) usage in Node.js only named exports are exposed, there is no more default export.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  },
+  {
+    "id": "435",
+    "packageVersion": "8.0.0",
+    "packageName": "uuid",
+    "description": "Deep requiring specific algorithms of this library like require('uuid/v4'), which has been deprecated in uuid@7, is no longer supported.",
+    "deprecation": false,
+    "askBeforePatch": false,
+    "unknownPatchLocation": false,
+    "affectsAllClients": false,
+    "unlikelyBreakingChange": false
+  }
+]
